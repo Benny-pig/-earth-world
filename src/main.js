@@ -1,4 +1,5 @@
 import * as THREE from "three";
+import { createStarfield } from "/src/scene/starfield.js";
 
 const container = document.getElementById("app");
 
@@ -26,6 +27,9 @@ export function start() {
   const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.01, 100);
   camera.position.set(0, 0, 3.2);
 
+  const starfield = createStarfield();
+  scene.add(starfield.object);
+
   const renderer = new THREE.WebGLRenderer({ antialias: true });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
   renderer.setSize(window.innerWidth, window.innerHeight);
@@ -42,6 +46,7 @@ export function start() {
   const clock = new THREE.Clock();
   function loop() {
     const dt = clock.getDelta();
+    starfield.update(clock.getElapsedTime());
     renderer.render(scene, camera);
     requestAnimationFrame(loop);
   }
