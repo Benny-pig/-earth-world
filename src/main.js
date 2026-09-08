@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import { createStarfield } from "/src/scene/starfield.js";
+import { createGlobe } from "/src/scene/globe.js";
 
 const container = document.getElementById("app");
 
@@ -30,12 +31,16 @@ export function start() {
   const starfield = createStarfield();
   scene.add(starfield.object);
 
+  const globe = createGlobe();
+  scene.add(globe.object);
+
   const renderer = new THREE.WebGLRenderer({ antialias: true });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
   renderer.setSize(window.innerWidth, window.innerHeight);
   container.appendChild(renderer.domElement);
 
   window.__earth = { scene, camera, renderer };
+  window.__earth.globe = globe;
 
   window.addEventListener("resize", () => {
     camera.aspect = window.innerWidth / window.innerHeight;
@@ -47,6 +52,7 @@ export function start() {
   function loop() {
     const dt = clock.getDelta();
     starfield.update(clock.getElapsedTime());
+    globe.update(dt);
     renderer.render(scene, camera);
     requestAnimationFrame(loop);
   }
