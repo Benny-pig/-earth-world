@@ -18,21 +18,22 @@ const fragmentShader = `
   uniform float uIntensity;
   void main() {
     vec3 viewDir = normalize(-vPosV);
-    // back-side sphere: strongest where the surface faces away from the camera => limb
-    float rim = 1.0 - abs(dot(viewDir, normalize(vNormalV)));
-    rim = pow(clamp(rim, 0.0, 1.0), 1.5);
+    float raw = 1.0 - abs(dot(viewDir, normalize(vNormalV)));
+    raw = clamp(raw, 0.0, 1.0);
+    // faint near the globe silhouette, builds through the annulus, fades to 0 by the shell limb => soft on BOTH edges
+    float rim = pow(raw, 2.5) * (1.0 - smoothstep(0.82, 1.0, raw));
     gl_FragColor = vec4(uColor * rim * uIntensity, rim);
   }
 `;
 
-export function createAtmosphere({ radius = 1.028 } = {}) {
+export function createAtmosphere({ radius = 1.16 } = {}) {
   const geometry = new THREE.SphereGeometry(radius, 96, 96);
   const material = new THREE.ShaderMaterial({
     vertexShader,
     fragmentShader,
     uniforms: {
       uColor: { value: new THREE.Color(0x5aa9ff) },
-      uIntensity: { value: 1.3 },
+      uIntensity: { value: 1.1 },
     },
     side: THREE.BackSide,
     blending: THREE.AdditiveBlending,
