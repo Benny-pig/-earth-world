@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>地球世界</title>
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #05060d; }
+  #app { position: fixed; inset: 0; }
+  canvas { display: block; }
+  #error-banner {
+    position: fixed; left: 50%; top: 24px; transform: translateX(-50%);
+    max-width: 80vw; padding: 12px 18px; border-radius: 8px;
+    background: rgba(140, 20, 30, 0.92); color: #fff; font: 14px/1.5 system-ui, "Microsoft JhengHei", sans-serif;
+    z-index: 50; display: none;
+  }
+  #webgl-fallback {
+    position: fixed; inset: 0; display: none; place-content: center;
+    color: #cdd3e0; font: 16px/1.6 system-ui, "Microsoft JhengHei", sans-serif; text-align: center;
+    padding: 40px;
+  }
+</style>
+</head>
+<body>
+  <div id="app"></div>
+  <div id="error-banner"></div>
+  <div id="webgl-fallback">你的瀏覽器不支援 WebGL,無法顯示地球世界。<br>請改用較新版本的 Chrome / Edge / Firefox。</div>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/",
+      "earcut": "https://cdn.jsdelivr.net/npm/earcut@3.0.1/+esm"
+    }
+  }
+  </script>
+  <script type="module">
+    import { start } from "/src/main.js";
+    start();
+  </script>
+</body>
+</html>
