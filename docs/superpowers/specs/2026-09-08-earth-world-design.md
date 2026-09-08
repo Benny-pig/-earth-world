@@ -41,8 +41,9 @@
 **國家偵測與高亮 — 採方案 A:隱形國家多邊形層 + 射線偵測**
 
 將 GeoJSON 國界多邊形以 earcut 三角化,頂點由經緯度轉為球面座標(半徑較地表大 0.002),
-組成近乎透明的 mesh,全部掛在一個 Group 下。每幀以 three.js `Raycaster` 對游標做一次偵測:
-命中則該國 mesh `emissive` 亮起 + 顯示 tooltip;點擊命中則觸發鏡頭飛行 + 開側欄。
+組成近乎透明的 mesh(`MeshBasicMaterial` + `transparent`,靜態 `opacity` 約 0.001),
+全部掛在一個 Group 下。每幀以 three.js `Raycaster` 對游標做一次偵測:命中則把該國 mesh
+的 `opacity` 提到約 0.28、`color` 轉為淡青作高亮 + 顯示 tooltip;點擊命中則觸發鏡頭飛行 + 開側欄。
 國界另以 `LineSegments` 畫細白線常駐。
 
 - 被否決的方案 B(GPU 顏色 ID pickmap):渲染管線較複雜、高亮需另做一套、飛到該國較難。
@@ -113,8 +114,8 @@ earth-world\
 
 - 載入 `data/countries.geo.json`(FeatureCollection)。對每個 feature:
   - 逐多邊形:外環 + 洞,以 earcut 三角化(經緯度平面),頂點再映射到球面(半徑 1.002)。
-  - 建立一個 `Mesh`,材質 `MeshBasicMaterial`,`transparent`、`opacity` 約 0.001(近乎隱形),
-    `emissive` 概念以顏色 + `opacity` 切換模擬:hover 時 `opacity` 提到約 0.28、色淡青。
+  - 建立一個 `Mesh`,材質 `MeshBasicMaterial`,`transparent`、靜態 `opacity` 約 0.001(近乎隱形)。
+    hover 高亮:把該 mesh 的 `opacity` 提到約 0.28、`color` 轉為淡青;離開時還原。
   - `mesh.userData = { code, feature }`。
 - `borders.js`:每個外環轉 `LineSegments`(`LineBasicMaterial`,白、`opacity` 0.35),常駐。
 - 每幀:`raycaster.setFromCamera(pointer, camera)` → `intersectObjects(countryGroup.children)`。
