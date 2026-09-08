@@ -8,6 +8,7 @@ import { createStarfield } from "/src/scene/starfield.js";
 import { createGlobe } from "/src/scene/globe.js";
 import { createAtmosphere } from "/src/scene/atmosphere.js";
 import { createCameraRig } from "/src/scene/camera-controls.js";
+import { buildBorders } from "/src/countries/borders.js";
 
 const container = document.getElementById("app");
 
@@ -41,6 +42,17 @@ export function start() {
   const globe = createGlobe();
   scene.add(globe.object);
   scene.add(globe.lightRig);
+
+  // 非同步載入 Natural Earth 110m 國界,掛在地球 group 上跟著自轉
+  fetch("/data/countries.geo.json")
+    .then((r) => { if (!r.ok) throw new Error("國界資料載入失敗 " + r.status); return r.json(); })
+    .then((geojson) => {
+      window.__earth.geojson = geojson;
+      const borders = buildBorders(geojson);
+      globe.object.add(borders);
+      window.__earth.borders = borders;
+    })
+    .catch((err) => showError(err.message));
 
   const atmosphere = createAtmosphere();
   scene.add(atmosphere);
