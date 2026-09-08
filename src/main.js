@@ -63,8 +63,8 @@ export function start() {
   );
   composer.addPass(bloomPass);
   const smaaPass = new SMAAPass(
-    window.innerWidth * composer.getPixelRatio(),
-    window.innerHeight * composer.getPixelRatio()
+    window.innerWidth * renderer.getPixelRatio(),
+    window.innerHeight * renderer.getPixelRatio()
   );
   composer.addPass(smaaPass);
   composer.addPass(new OutputPass());
