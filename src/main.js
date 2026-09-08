@@ -33,10 +33,13 @@ export function start() {
 
   const globe = createGlobe();
   scene.add(globe.object);
+  scene.add(globe.lightRig);
 
   const renderer = new THREE.WebGLRenderer({ antialias: true });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
   renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.15;
   container.appendChild(renderer.domElement);
 
   window.__earth = { scene, camera, renderer };
