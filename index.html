@@ -19,12 +19,21 @@
     color: #cdd3e0; font: 16px/1.6 system-ui, "Microsoft JhengHei", sans-serif; text-align: center;
     padding: 40px;
   }
+  #tooltip {
+    position: fixed; z-index: 40; pointer-events: none; display: none;
+    padding: 6px 10px; border-radius: 6px; background: rgba(8, 12, 24, 0.82);
+    color: #eaf1ff; font: 13px/1.2 system-ui, "Microsoft JhengHei", sans-serif;
+    border: 1px solid rgba(120, 180, 255, 0.35); white-space: nowrap;
+  }
+  #tooltip .zh { font-size: 15px; font-weight: 700; }
+  #tooltip .en { font-size: 11px; opacity: 0.7; margin-left: 6px; }
 </style>
 </head>
 <body>
   <div id="app"></div>
   <div id="error-banner"></div>
   <div id="webgl-fallback">你的瀏覽器不支援 WebGL,無法顯示地球世界。<br>請改用較新版本的 Chrome / Edge / Firefox。</div>
+  <div id="tooltip"></div>
 
   <script type="importmap">
   {

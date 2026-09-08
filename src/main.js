@@ -9,6 +9,8 @@ import { createGlobe } from "/src/scene/globe.js";
 import { createAtmosphere } from "/src/scene/atmosphere.js";
 import { createCameraRig } from "/src/scene/camera-controls.js";
 import { buildBorders } from "/src/countries/borders.js";
+import { buildCountryLayer } from "/src/countries/country-layer.js";
+import { createTooltip } from "/src/ui/tooltip.js";
 
 const container = document.getElementById("app");
 
@@ -51,6 +53,9 @@ export function start() {
       const borders = buildBorders(geojson);
       globe.object.add(borders);
       window.__earth.borders = borders;
+      const countryLayer = buildCountryLayer(geojson);
+      globe.object.add(countryLayer.group);
+      window.__earth.countryLayer = countryLayer;
     })
     .catch((err) => showError(err.message));
 
@@ -101,6 +106,10 @@ export function start() {
   window.__earth.pointer = pointer;
   window.__earth.raycaster = raycaster;
 
+  const tooltip = createTooltip();
+  let pointerPx = { x: -100, y: -100 };
+  renderer.domElement.addEventListener("pointermove", (e) => { pointerPx = { x: e.clientX, y: e.clientY }; });
+
   window.addEventListener("resize", () => {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
@@ -115,7 +124,14 @@ export function start() {
     globe.update(dt);
 
     raycaster.setFromCamera(pointer, camera);
-    const hitGlobe = raycaster.intersectObject(globe.mesh, false).length > 0;
+    let hovered = null;
+    if (window.__earth.countryLayer) hovered = window.__earth.countryLayer.pick(raycaster);
+    const hitGlobe = hovered || raycaster.intersectObject(globe.mesh, false).length > 0;
+
+    if (window.__earth.countryLayer) window.__earth.countryLayer.setHover(hovered ? hovered.code : null);
+    if (hovered) tooltip.show(pointerPx.x, pointerPx.y, hovered.names);
+    else tooltip.hide();
+
     if (hitGlobe) {
       globe.setSpinPaused(true);
       if (resumeTimer) { clearTimeout(resumeTimer); resumeTimer = null; }
