@@ -12,7 +12,7 @@ const vertexShader = `
     vTwinkle = 0.55 + 0.45 * sin(uTime * 1.6 + aPhase);
     vec4 mv = modelViewMatrix * vec4(position, 1.0);
     gl_Position = projectionMatrix * mv;
-    gl_PointSize = aSize * (300.0 / -mv.z) * (0.7 + 0.6 * vTwinkle);
+    gl_PointSize = aSize * (90.0 / -mv.z) * (0.85 + 0.3 * vTwinkle);
   }
 `;
 
@@ -22,7 +22,7 @@ const fragmentShader = `
   void main() {
     float d = length(gl_PointCoord - vec2(0.5));
     if (d > 0.5) discard;
-    float glow = smoothstep(0.5, 0.0, d);
+    float glow = smoothstep(0.5, 0.12, d);
     gl_FragColor = vec4(vColor * glow * vTwinkle, glow);
   }
 `;
@@ -43,7 +43,7 @@ export function createStarfield({ count = 14000, radius = 60 } = {}) {
     positions[i * 3 + 2] = r * Math.cos(phi);
     // most stars small; a few large & bright
     const t = Math.random();
-    sizes[i] = t > 0.97 ? 2.2 + Math.random() * 1.6 : 0.5 + Math.random() * 1.1;
+    sizes[i] = t > 0.98 ? 1.6 + Math.random() * 1.0 : 0.4 + Math.random() * 0.7;
     phases[i] = Math.random() * Math.PI * 2;
     // colour: mostly white-blue, some warm
     const warm = Math.random() > 0.85;

@@ -20,19 +20,19 @@ const fragmentShader = `
     vec3 viewDir = normalize(-vPosV);
     // back-side sphere: strongest where the surface faces away from the camera => limb
     float rim = 1.0 - abs(dot(viewDir, normalize(vNormalV)));
-    rim = pow(clamp(rim, 0.0, 1.0), 2.2);
+    rim = pow(clamp(rim, 0.0, 1.0), 1.5);
     gl_FragColor = vec4(uColor * rim * uIntensity, rim);
   }
 `;
 
-export function createAtmosphere({ radius = 1.015 } = {}) {
+export function createAtmosphere({ radius = 1.028 } = {}) {
   const geometry = new THREE.SphereGeometry(radius, 96, 96);
   const material = new THREE.ShaderMaterial({
     vertexShader,
     fragmentShader,
     uniforms: {
       uColor: { value: new THREE.Color(0x5aa9ff) },
-      uIntensity: { value: 1.15 },
+      uIntensity: { value: 1.3 },
     },
     side: THREE.BackSide,
     blending: THREE.AdditiveBlending,
