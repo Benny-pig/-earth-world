@@ -7,6 +7,7 @@ import { SMAAPass } from "three/addons/postprocessing/SMAAPass.js";
 import { createStarfield } from "/src/scene/starfield.js";
 import { createGlobe } from "/src/scene/globe.js";
 import { createAtmosphere } from "/src/scene/atmosphere.js";
+import { createCameraRig } from "/src/scene/camera-controls.js";
 
 const container = document.getElementById("app");
 
@@ -74,6 +75,20 @@ export function start() {
   window.__earth.atmosphere = atmosphere;
   window.__earth.composer = composer;
 
+  const rig = createCameraRig({ camera, domElement: renderer.domElement });
+  window.__earth.rig = rig;
+
+  // hover 暫停:用 raycaster 判斷游標是否指到地球(Task 7 會擴充成國家偵測,這裡先做地球層級)
+  const raycaster = new THREE.Raycaster();
+  const pointer = new THREE.Vector2(-2, -2);
+  let resumeTimer = null;
+  renderer.domElement.addEventListener("pointermove", (e) => {
+    pointer.x = (e.clientX / window.innerWidth) * 2 - 1;
+    pointer.y = -(e.clientY / window.innerHeight) * 2 + 1;
+  });
+  window.__earth.pointer = pointer;
+  window.__earth.raycaster = raycaster;
+
   window.addEventListener("resize", () => {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
@@ -86,6 +101,17 @@ export function start() {
     const dt = clock.getDelta();
     starfield.update(clock.getElapsedTime());
     globe.update(dt);
+
+    raycaster.setFromCamera(pointer, camera);
+    const hitGlobe = raycaster.intersectObject(globe.mesh, false).length > 0;
+    if (hitGlobe) {
+      globe.setSpinPaused(true);
+      if (resumeTimer) { clearTimeout(resumeTimer); resumeTimer = null; }
+    } else if (!resumeTimer) {
+      resumeTimer = setTimeout(() => { globe.setSpinPaused(false); resumeTimer = null; }, 1500);
+    }
+    rig.update(dt);
+
     composer.render();
     requestAnimationFrame(loop);
   }
