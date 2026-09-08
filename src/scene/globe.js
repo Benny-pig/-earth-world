@@ -21,15 +21,13 @@ export function createGlobe() {
 
   // 非同步套貼圖;失敗就保留純色球
   (async () => {
-    const [color, normal, spec, night] = await Promise.all([
+    const [color, normal, night] = await Promise.all([
       load("/assets/earth-color-8k.jpg", THREE.SRGBColorSpace),
       load("/assets/earth-normal.jpg"),
-      load("/assets/earth-spec.jpg"),
       load("/assets/earth-night-8k.jpg", THREE.SRGBColorSpace),
     ]);
     if (color) { material.map = color; material.color.set(0xffffff); color.anisotropy = 8; }
     if (normal) { material.normalMap = normal; material.normalScale.set(0.8, 0.8); }
-    if (spec) { material.roughnessMap = spec; material.roughness = 0.9; }
     if (night) {
       material.emissiveMap = night;
       material.emissive.set(0xffee88);

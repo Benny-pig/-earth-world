@@ -3,8 +3,10 @@ import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
 import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
 import { UnrealBloomPass } from "three/addons/postprocessing/UnrealBloomPass.js";
 import { OutputPass } from "three/addons/postprocessing/OutputPass.js";
+import { SMAAPass } from "three/addons/postprocessing/SMAAPass.js";
 import { createStarfield } from "/src/scene/starfield.js";
 import { createGlobe } from "/src/scene/globe.js";
+import { createAtmosphere } from "/src/scene/atmosphere.js";
 
 const container = document.getElementById("app");
 
@@ -39,6 +41,9 @@ export function start() {
   scene.add(globe.object);
   scene.add(globe.lightRig);
 
+  const atmosphere = createAtmosphere();
+  scene.add(atmosphere);
+
   const renderer = new THREE.WebGLRenderer({ antialias: true });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
   renderer.setSize(window.innerWidth, window.innerHeight);
@@ -57,10 +62,16 @@ export function start() {
     0.92    // threshold — high: only the brightest pixels (city lights, star cores) bloom, NOT the lit earth face
   );
   composer.addPass(bloomPass);
+  const smaaPass = new SMAAPass(
+    window.innerWidth * composer.getPixelRatio(),
+    window.innerHeight * composer.getPixelRatio()
+  );
+  composer.addPass(smaaPass);
   composer.addPass(new OutputPass());
 
   window.__earth = { scene, camera, renderer };
   window.__earth.globe = globe;
+  window.__earth.atmosphere = atmosphere;
   window.__earth.composer = composer;
 
   window.addEventListener("resize", () => {
