@@ -22,25 +22,27 @@ export function createGlobe() {
   // 非同步套貼圖;失敗就保留純色球
   (async () => {
     const [color, normal, spec, night] = await Promise.all([
-      load("/assets/earth-color.jpg", THREE.SRGBColorSpace),
+      load("/assets/earth-color-8k.jpg", THREE.SRGBColorSpace),
       load("/assets/earth-normal.jpg"),
       load("/assets/earth-spec.jpg"),
-      load("/assets/earth-night.png", THREE.SRGBColorSpace),
+      load("/assets/earth-night-8k.jpg", THREE.SRGBColorSpace),
     ]);
-    if (color) { material.map = color; material.color.set(0xffffff); }
+    if (color) { material.map = color; material.color.set(0xffffff); color.anisotropy = 8; }
     if (normal) { material.normalMap = normal; material.normalScale.set(0.8, 0.8); }
     if (spec) { material.roughnessMap = spec; material.roughness = 0.9; }
     if (night) {
       material.emissiveMap = night;
       material.emissive.set(0xffee88);
       material.emissiveIntensity = 1.1;
+      night.anisotropy = 8;
     }
     material.needsUpdate = true;
   })();
 
-  const sun = new THREE.DirectionalLight(0xffffff, 3.2);
+  const sun = new THREE.DirectionalLight(0xffffff, 1.5);
   sun.position.set(-3, 1.2, 2.5);
   lightRig.add(sun);
+  lightRig.add(new THREE.HemisphereLight(0x7c9fd6, 0x0b1020, 0.6));
   lightRig.add(new THREE.AmbientLight(0x334466, 0.35));
 
   let paused = false;

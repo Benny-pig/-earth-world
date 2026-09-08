@@ -1,4 +1,8 @@
 import * as THREE from "three";
+import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
+import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
+import { UnrealBloomPass } from "three/addons/postprocessing/UnrealBloomPass.js";
+import { OutputPass } from "three/addons/postprocessing/OutputPass.js";
 import { createStarfield } from "/src/scene/starfield.js";
 import { createGlobe } from "/src/scene/globe.js";
 
@@ -39,16 +43,31 @@ export function start() {
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
-  renderer.toneMappingExposure = 1.15;
+  renderer.toneMappingExposure = 1.0;
   container.appendChild(renderer.domElement);
+
+  const composer = new EffectComposer(renderer);
+  composer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  composer.setSize(window.innerWidth, window.innerHeight);
+  composer.addPass(new RenderPass(scene, camera));
+  const bloomPass = new UnrealBloomPass(
+    new THREE.Vector2(window.innerWidth, window.innerHeight),
+    0.42,   // strength — gentle
+    0.4,    // radius
+    0.92    // threshold — high: only the brightest pixels (city lights, star cores) bloom, NOT the lit earth face
+  );
+  composer.addPass(bloomPass);
+  composer.addPass(new OutputPass());
 
   window.__earth = { scene, camera, renderer };
   window.__earth.globe = globe;
+  window.__earth.composer = composer;
 
   window.addEventListener("resize", () => {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
+    composer.setSize(window.innerWidth, window.innerHeight);
   });
 
   const clock = new THREE.Clock();
@@ -56,7 +75,7 @@ export function start() {
     const dt = clock.getDelta();
     starfield.update(clock.getElapsedTime());
     globe.update(dt);
-    renderer.render(scene, camera);
+    composer.render();
     requestAnimationFrame(loop);
   }
   loop();

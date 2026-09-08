@@ -1,0 +1,12 @@
+# 地球世界 (Earth World)
+
+3D 互動地球儀:在星空中緩慢自轉的貼圖地球,搭配柔光照明與溫和的 Bloom 後製,營造寧靜、深邃的太空氛圍。
+
+## 開發
+
+- 前端純 ES Modules,無建置工具;`three@0.160.0` 透過 importmap 載入。
+- 本機開發伺服器:`serve.ps1`(預設 http://localhost:8760/)。
+
+## 資料來源
+
+- 8K 地球貼圖:Solar System Scope (https://www.solarsystemscope.com/textures/), CC BY 4.0
