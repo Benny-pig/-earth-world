@@ -1,0 +1,5 @@
+# 本機服務暫存
+*.log
+# 編輯器
+.vscode/
+.DS_Store

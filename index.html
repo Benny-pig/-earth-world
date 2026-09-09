@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>地球世界</title>
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #05060d; }
+  [hidden] { display: none !important; }
+  #app { position: fixed; inset: 0; }
+  canvas { display: block; }
+  #error-banner {
+    position: fixed; left: 50%; top: 24px; transform: translateX(-50%);
+    max-width: 80vw; padding: 12px 18px; border-radius: 8px;
+    background: rgba(140, 20, 30, 0.92); color: #fff; font: 14px/1.5 system-ui, "Microsoft JhengHei", sans-serif;
+    z-index: 50; display: none;
+  }
+  #webgl-fallback {
+    position: fixed; inset: 0; display: none; place-content: center;
+    color: #cdd3e0; font: 16px/1.6 system-ui, "Microsoft JhengHei", sans-serif; text-align: center;
+    padding: 40px;
+  }
+  #tooltip {
+    position: fixed; z-index: 40; pointer-events: none; display: none;
+    padding: 6px 10px; border-radius: 6px; background: rgba(8, 12, 24, 0.82);
+    color: #eaf1ff; font: 13px/1.2 system-ui, "Microsoft JhengHei", sans-serif;
+    border: 1px solid rgba(120, 180, 255, 0.35); white-space: nowrap;
+  }
+  #tooltip .zh { font-size: 15px; font-weight: 700; }
+  #tooltip .en { font-size: 11px; opacity: 0.7; margin-left: 6px; }
+  #country-labels { position: fixed; inset: 0; pointer-events: none; z-index: 37; overflow: hidden; }
+  #country-labels .c-label {
+    position: absolute; left: 0; top: 0; will-change: transform, opacity;
+    transform: translate(-9999px, -9999px);
+    text-align: center; white-space: nowrap;
+    color: #eef4ff; text-shadow: 0 0 5px rgba(4,10,24,0.95), 0 1px 3px rgba(0,0,0,0.9);
+    font: 500 12.5px/1.15 system-ui, "Microsoft JhengHei", sans-serif;
+    transition: opacity 0.3s linear;
+  }
+  #country-labels .c-label .zh { display: block; font-size: 13px; letter-spacing: 0.08em; }
+  #country-labels .c-label .en { display: block; font-size: 9px; letter-spacing: 0.06em; opacity: 0.7; margin-top: 1px; }
+  #ocean-labels { position: fixed; inset: 0; pointer-events: none; z-index: 38; overflow: hidden; }
+  #ocean-labels .ocean-label {
+    position: absolute; left: 0; top: 0; will-change: transform, opacity;
+    transform: translate(-9999px, -9999px);
+    text-align: center; white-space: nowrap;
+    color: #cfe3ff; text-shadow: 0 0 6px rgba(10,20,40,0.9), 0 1px 2px rgba(0,0,0,0.8);
+    font: 400 15px/1.2 system-ui, "Microsoft JhengHei", sans-serif;
+    letter-spacing: 0.25em;
+    transition: opacity 0.25s linear;
+  }
+  #ocean-labels .ocean-label .zh { display: block; font-size: 16px; }
+  #ocean-labels .ocean-label .en { display: block; font-size: 10px; letter-spacing: 0.15em; opacity: 0.75; margin-top: 2px; }
+  #side-panel {
+    position: fixed; top: 0; right: 0; height: 100%; width: 380px; max-width: 86vw;
+    transform: translateX(105%); transition: transform .45s cubic-bezier(.22,.61,.36,1);
+    background: rgba(10, 14, 26, 0.82); backdrop-filter: blur(14px);
+    border-left: 1px solid rgba(120, 170, 255, 0.25); color: #e7edfb;
+    font: 14px/1.7 system-ui, "Microsoft JhengHei", sans-serif; z-index: 45;
+    overflow-y: auto; padding: 28px 26px 40px;
+  }
+  #side-panel.open { transform: translateX(0); }
+  #side-panel h2 { margin: 0; font-size: 26px; }
+  #side-panel .flag { display: block; width: 108px; height: auto; border-radius: 4px; margin-bottom: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.5); }
+  #side-panel .en { color: #9fb2d8; font-size: 13px; margin: 2px 0 14px; }
+  #side-panel .meta { color: #b9c6e6; font-size: 12.5px; margin-bottom: 18px; }
+  #side-panel h3 { font-size: 14px; letter-spacing: .05em; color: #8fd4ff; margin: 22px 0 8px; }
+  #side-panel .months { display: grid; grid-template-columns: repeat(6, 1fr); gap: 4px; margin: 6px 0; }
+  #side-panel .months span { text-align: center; font-size: 11px; padding: 5px 0; border-radius: 4px;
+    background: rgba(255,255,255,.06); color: #93a3c4; }
+  #side-panel .months span.best { background: #2f6df6; color: #fff; }
+  #side-panel .close { position: absolute; top: 14px; right: 16px; cursor: pointer;
+    background: none; border: none; color: #cdd8f0; font-size: 22px; line-height: 1; }
+  #clock-weather {
+    position: fixed; top: 18px; right: 18px; z-index: 42;
+    padding: 12px 16px; border-radius: 10px; text-align: right;
+    background: rgba(10, 14, 26, 0.7); backdrop-filter: blur(10px);
+    border: 1px solid rgba(120, 170, 255, 0.22); color: #e7edfb;
+    font: 13px/1.5 system-ui, "Microsoft JhengHei", sans-serif; min-width: 180px;
+  }
+  #clock-weather .cw-country { font-size: 13px; color: #8fd4ff; }
+  #clock-weather .cw-date { font-size: 12px; color: #b9c6e6; }
+  #clock-weather .cw-time { font-size: 22px; font-variant-numeric: tabular-nums; letter-spacing: .02em; }
+  #clock-weather .cw-weather { font-size: 13px; margin-top: 4px; }
+  #clock-weather .cw-hint { font-size: 12px; color: #9fb2d8; }
+  #audio-ui {
+    position: fixed; left: 18px; bottom: 18px; z-index: 42; display: flex; align-items: center; gap: 8px;
+    padding: 8px 12px; border-radius: 10px; background: rgba(10, 14, 26, 0.7); backdrop-filter: blur(10px);
+    border: 1px solid rgba(120, 170, 255, 0.22); color: #e7edfb;
+    font: 13px system-ui, "Microsoft JhengHei", sans-serif;
+  }
+  #audio-ui button { background: none; border: none; color: #dfe8ff; font-size: 18px; cursor: pointer; line-height: 1; }
+  #audio-ui input[type=range] { width: 92px; accent-color: #4da3ff; }
+</style>
+</head>
+<body>
+  <div id="app"></div>
+  <div id="error-banner"></div>
+  <div id="webgl-fallback">你的瀏覽器不支援 WebGL,無法顯示地球世界。<br>請改用較新版本的 Chrome / Edge / Firefox。</div>
+  <div id="tooltip"></div>
+  <div id="country-labels"></div>
+  <div id="ocean-labels"></div>
+  <div id="side-panel"><button class="close" aria-label="關閉">×</button><div id="side-panel-body"></div></div>
+  <div id="clock-weather"><div class="cw-hint">將滑鼠移到國家並點擊,看當地時間與天氣</div></div>
+  <div id="audio-ui">
+    <button id="audio-toggle" aria-label="背景音樂開關" title="背景音樂">🔊</button>
+    <input id="audio-vol" type="range" min="0" max="100" value="55" aria-label="音量">
+  </div>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/",
+      "earcut": "https://cdn.jsdelivr.net/npm/earcut@3.0.1/+esm"
+    }
+  }
+  </script>
+  <script type="module">
+    import { start } from "/src/main.js";
+    start();
+  </script>
+</body>
+</html>
