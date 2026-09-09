@@ -13,6 +13,7 @@ import { buildCountryLayer } from "/src/countries/country-layer.js";
 import { setZhHantNames } from "/src/countries/country-names.js";
 import { createTooltip } from "/src/ui/tooltip.js";
 import { createOceanLabels } from "/src/scene/ocean-labels.js";
+import { createCountryLabels } from "/src/scene/country-labels.js";
 import { createSidePanel } from "/src/ui/side-panel.js";
 
 const container = document.getElementById("app");
@@ -62,6 +63,8 @@ export function start() {
       const countryLayer = buildCountryLayer(geojson);
       globe.object.add(countryLayer.group);
       window.__earth.countryLayer = countryLayer;
+      const countryLabels = createCountryLabels({ geojson, globeObject: globe.object, camera, renderer });
+      window.__earth.countryLabels = countryLabels;
     })
     .catch((err) => showError(err.message));
 
@@ -176,6 +179,7 @@ export function start() {
     rig.update(dt);
 
     oceanLabels.update();
+    if (window.__earth.countryLabels) window.__earth.countryLabels.update();
 
     composer.render();
     requestAnimationFrame(loop);

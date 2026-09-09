@@ -27,6 +27,17 @@
   }
   #tooltip .zh { font-size: 15px; font-weight: 700; }
   #tooltip .en { font-size: 11px; opacity: 0.7; margin-left: 6px; }
+  #country-labels { position: fixed; inset: 0; pointer-events: none; z-index: 37; overflow: hidden; }
+  #country-labels .c-label {
+    position: absolute; left: 0; top: 0; will-change: transform, opacity;
+    transform: translate(-9999px, -9999px);
+    text-align: center; white-space: nowrap;
+    color: #eef4ff; text-shadow: 0 0 5px rgba(4,10,24,0.95), 0 1px 3px rgba(0,0,0,0.9);
+    font: 500 12.5px/1.15 system-ui, "Microsoft JhengHei", sans-serif;
+    transition: opacity 0.3s linear;
+  }
+  #country-labels .c-label .zh { display: block; font-size: 13px; letter-spacing: 0.08em; }
+  #country-labels .c-label .en { display: block; font-size: 9px; letter-spacing: 0.06em; opacity: 0.7; margin-top: 1px; }
   #ocean-labels { position: fixed; inset: 0; pointer-events: none; z-index: 38; overflow: hidden; }
   #ocean-labels .ocean-label {
     position: absolute; left: 0; top: 0; will-change: transform, opacity;
@@ -65,6 +76,7 @@
   <div id="error-banner"></div>
   <div id="webgl-fallback">你的瀏覽器不支援 WebGL,無法顯示地球世界。<br>請改用較新版本的 Chrome / Edge / Firefox。</div>
   <div id="tooltip"></div>
+  <div id="country-labels"></div>
   <div id="ocean-labels"></div>
   <div id="side-panel"><button class="close" aria-label="關閉">×</button><div id="side-panel-body"></div></div>
 
