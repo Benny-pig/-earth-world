@@ -1,0 +1,254 @@
+{
+  "name_zh": "澳洲",
+  "name_en": "Australia",
+  "summary": "澳洲是唯一獨佔一整塊大陸的國家,位於南半球,四面環海,內陸多為乾旱沙漠與莽原。其原住民文化被視為世界上延續最久的文化之一;現代澳洲則是英語系移民社會,人口約二千七百萬,經濟以礦產、農業、教育與服務業為主。",
+  "founding": [
+    "澳洲原住民與托雷斯海峽島民的祖先在數萬年前渡海抵達這塊大陸,是人類最早的遠洋遷徙之一。他們發展出數百種語言、以口傳與藝術記錄的「夢創」宇宙觀,以及用火與季節管理土地的方式,長期適應乾旱多變的環境。",
+    "十七世紀荷蘭船隻多次目擊西岸與北岸,稱之為「新荷蘭」,但未殖民。一七七0年英國航海家庫克測繪東岸並宣示主權,一七八八年一月二十六日「第一艦隊」抵達雪梨灣,建立流放罪犯的殖民地,這一天後來成為國慶日,對原住民而言則是失去土地的開始。",
+    "殖民地沿海岸擴張,與原住民爆發長期的邊疆衝突,原住民人口因暴力、疾病與土地剝奪而銳減。一八五0年代的淘金熱吸引大量移民,推動人口與經濟成長,並催生代議政治與工會運動。",
+    "十九世紀後期六個自治殖民地協商聯合,一九0一年一月一日組成澳大利亞聯邦,採聯邦制與議會內閣制,英王為國家元首。聯邦初期實施限制非歐洲移民的「白澳政策」。",
+    "澳洲在兩次世界大戰中派兵支援英國,一九一五年加里波利戰役成為國族記憶的一部分。二戰後大規模引進歐洲移民,一九七0年代廢除白澳政策轉向多元文化。一九六七年公投使原住民納入人口普查,一九九二年馬博案確立原住民土地權,二00八年聯邦政府就「被偷走的一代」正式道歉。",
+    "當代澳洲是穩定的民主聯邦,與亞太地區關係日深,經濟高度依賴對亞洲出口鐵礦、煤、天然氣與農產品。國內持續討論共和議題、原住民憲法承認,以及乾旱、野火與珊瑚礁白化等氣候挑戰。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "澳大利亞聯邦",
+    "area_km2": 7692024,
+    "languages": [
+      "英語(事實上的官方語言)"
+    ],
+    "religion": "以基督宗教為主,無宗教者接近四成,無國教",
+    "currency": "澳洲元(AUD)",
+    "government": "聯邦制議會內閣制君主立憲"
+  },
+  "animals": [
+    {
+      "zh": "紅袋鼠",
+      "en": "Red kangaroo",
+      "note": "世界最大的有袋類,棲於乾旱內陸,跳躍時速可逾五十公里。",
+      "image": "animals-kangaroo.jpg"
+    },
+    {
+      "zh": "無尾熊",
+      "en": "Koala",
+      "note": "以尤加利葉為食的樹棲有袋類,多數時間在睡眠,分佈於東部森林。"
+    },
+    {
+      "zh": "鴨嘴獸",
+      "en": "Platypus",
+      "note": "會下蛋的哺乳類,具鴨狀嘴與蹼足,雄性後腳有毒距。",
+      "image": "animals-platypus.jpg"
+    },
+    {
+      "zh": "笑翠鳥",
+      "en": "Laughing kookaburra",
+      "note": "體型最大的翠鳥,清晨齊聲鳴叫聲似人類大笑。"
+    },
+    {
+      "zh": "鴯鶓",
+      "en": "Emu",
+      "note": "澳洲最大鳥類、世界第二高鳥,不會飛,與袋鼠同列國徽。"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "肉派",
+      "en": "Meat pie",
+      "note": "掌心大小的酥皮絞肉派,是看球賽與外帶的國民點心。",
+      "image": "foods-meat-pie.jpg"
+    },
+    {
+      "zh": "維吉麥醬",
+      "en": "Vegemite",
+      "note": "以酵母萃取物製成的深色鹹味抹醬,薄塗於奶油吐司上。"
+    },
+    {
+      "zh": "紐澳軍團餅乾",
+      "en": "Anzac biscuit",
+      "note": "以燕麥、椰絲與金黃糖漿烤成的耐存餅乾,與一戰紀念相連。"
+    },
+    {
+      "zh": "拉明頓蛋糕",
+      "en": "Lamington",
+      "note": "海綿蛋糕方塊裹巧克力醬再沾椰絲,常見於募款義賣。"
+    },
+    {
+      "zh": "澳白咖啡",
+      "en": "Flat white",
+      "note": "濃縮咖啡加細緻蒸奶,澳洲與紐西蘭都聲稱是其發源地。"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "烏魯魯",
+      "en": "Uluru",
+      "note": "中部沙漠中的巨型紅色砂岩獨石,阿南古人的聖地。",
+      "latlon": [
+        -25.3444,
+        131.0369
+      ],
+      "image": "landmarks-uluru.jpg"
+    },
+    {
+      "zh": "雪梨歌劇院",
+      "en": "Sydney Opera House",
+      "note": "帆狀貝殼屋頂的表演藝術中心,一九七三年啟用,列世界遺產。",
+      "latlon": [
+        -33.8568,
+        151.2153
+      ],
+      "image": "landmarks-sydney-opera.jpg"
+    },
+    {
+      "zh": "大堡礁",
+      "en": "Great Barrier Reef",
+      "note": "昆士蘭外海全長逾二千公里的珊瑚礁系統,可從太空辨識。",
+      "latlon": [
+        -18.2871,
+        147.6992
+      ]
+    },
+    {
+      "zh": "十二使徒岩",
+      "en": "Twelve Apostles",
+      "note": "維多利亞大洋路旁的海蝕石柱群,由南冰洋侵蝕形成。",
+      "latlon": [
+        -38.6662,
+        143.1044
+      ],
+      "image": "landmarks-twelve-apostles.jpg"
+    },
+    {
+      "zh": "藍山",
+      "en": "Blue Mountains",
+      "note": "雪梨西郊的砂岩高原與尤加利林,以三姊妹岩與藍色霧氣聞名。",
+      "latlon": [
+        -33.7333,
+        150.3119
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "史蒂夫·厄文",
+      "en": "Steve Irwin",
+      "note": "「鱷魚先生」電視主持人與保育家,二00六年潛水時遇刺魟身亡。"
+    },
+    {
+      "zh": "凱西·弗里曼",
+      "en": "Cathy Freeman",
+      "note": "原住民短跑選手,二000年雪梨奧運四百公尺奪金並點燃聖火。",
+      "image": "people-cathy-freeman.jpg"
+    },
+    {
+      "zh": "霍華德·弗洛里",
+      "en": "Howard Florey",
+      "note": "藥理學家,將青黴素開發成可量產藥物,一九四五年獲諾貝爾獎。"
+    },
+    {
+      "zh": "派屈克·懷特",
+      "en": "Patrick White",
+      "note": "小說家,一九七三年獲諾貝爾文學獎,澳洲迄今唯一得主。"
+    },
+    {
+      "zh": "凱特·布蘭琪",
+      "en": "Cate Blanchett",
+      "note": "演員,兩度獲奧斯卡獎,曾任雪梨劇團藝術總監。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "乾季的大堡礁與凱恩斯",
+      "note": "六至十月天氣乾爽、能見度高、水母較少,適合浮潛與潛水;八至九月常見小矮人小鬚鯨。"
+    },
+    {
+      "zh": "春季的西澳野花",
+      "note": "八至十月自珀斯往北,曠野開滿數千種原生野花,國內外少見的大規模花海。"
+    },
+    {
+      "zh": "夏季的塔斯馬尼亞",
+      "note": "十二月至二月氣候溫和,適合搖籃山健行、酒莊與 MONA 美術館,永晝般的長日照利於行程。"
+    }
+  ],
+  "events": [
+    {
+      "year": 1770,
+      "zh": "英國航海家庫克測繪澳洲東岸並代英國宣示主權。"
+    },
+    {
+      "year": 1788,
+      "zh": "第一艦隊抵達雪梨灣,建立流放殖民地。"
+    },
+    {
+      "year": 1851,
+      "zh": "新南威爾斯與維多利亞相繼發現金礦,掀起淘金移民潮。"
+    },
+    {
+      "year": 1901,
+      "zh": "六個殖民地聯合組成澳大利亞聯邦。"
+    },
+    {
+      "year": 1915,
+      "zh": "紐澳軍團登陸加里波利,成為國族記憶的一部分。"
+    },
+    {
+      "year": 1967,
+      "zh": "公投高票通過將原住民納入人口普查並允許聯邦立法。"
+    },
+    {
+      "year": 2008,
+      "zh": "聯邦政府就「被偷走的一代」向原住民正式道歉。"
+    }
+  ],
+  "credits": [
+    {
+      "file": "animals-kangaroo.jpg",
+      "title": "Red kangaroos at Sturt National Park",
+      "author": "PotMart186",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Red_Kangaroos_at_Sturt_National_Park_NSW.jpg"
+    },
+    {
+      "file": "animals-platypus.jpg",
+      "title": "Duck-billed platypus, Scottsdale",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Duck-billed_platypus_(Ornithorhynchus_anatinus)_Scottsdale.jpg"
+    },
+    {
+      "file": "foods-meat-pie.jpg",
+      "title": "Aussie meat pie",
+      "author": "Finbar.concaig",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Aussie_meat_pie_(cropped).jpg"
+    },
+    {
+      "file": "landmarks-uluru.jpg",
+      "title": "Uluru, Uluru-Kata Tjuta National Park",
+      "author": "Dietmar Rabich",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Petermann_Ranges_(AU),_Uluru-Kata_Tjuta_National_Park,_Uluru_--_2019_--_3688.jpg"
+    },
+    {
+      "file": "landmarks-sydney-opera.jpg",
+      "title": "Sydney Opera House and Harbour Bridge at dusk",
+      "author": "Benh LIEU SONG",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sydney_Opera_House_and_Harbour_Bridge_Dusk_(2)_2019-06-21.jpg"
+    },
+    {
+      "file": "landmarks-twelve-apostles.jpg",
+      "title": "Twelve Apostles, Port Campbell National Park",
+      "author": "Dietmar Rabich",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Princetown_(AU),_Port_Campbell_National_Park,_Twelve_Apostles_--_2019_--_1020.jpg"
+    },
+    {
+      "file": "people-cathy-freeman.jpg",
+      "title": "Cathy Freeman",
+      "author": "Jason Pini/AusAID",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Cathy_Freeman_(cropped).jpg"
+    }
+  ],
+  "code": "AU"
+}

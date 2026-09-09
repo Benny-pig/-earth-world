@@ -1,0 +1,272 @@
+{
+  "name_zh": "紐西蘭",
+  "name_en": "New Zealand",
+  "summary": "紐西蘭是位於太平洋西南部的島國,主要由南、北兩大島構成,以山脈、峽灣、火山與牧場地景聞名。它是地球上最後一批有人定居的大型陸地之一,人口約五百萬,英語、毛利語與紐西蘭手語並列官方語言,社會兼具英國傳統與毛利文化。",
+  "founding": [
+    "紐西蘭是人類最晚定居的主要陸塊之一。約公元十三世紀,來自東波利尼西亞的航海者乘雙體獨木舟抵達,成為毛利人的祖先。他們在孤立環境中發展出以部落(iwi)與次部落(hapū)為單位的社會、精細的木雕與紋面藝術,以及獵捕巨型恐鳥等適應方式。",
+    "一六四二年荷蘭航海家塔斯曼成為首位看見紐西蘭的歐洲人,但未登陸。一七六九年英國航海家庫克環繞並詳細測繪兩島,此後獵海豹者、捕鯨人與傳教士陸續到來,帶進槍械、金屬工具與傳染病,改變了毛利社會與部落間的戰爭型態。",
+    "一八四0年二月六日,英國王室代表與眾多毛利酋長在懷唐伊簽訂《懷唐伊條約》,英方視之為取得主權的依據,毛利文本則保留部落對土地與資源的權威;兩種文本的落差成為此後長期爭議的根源。同年英國將紐西蘭納為殖民地。",
+    "移民湧入與土地買賣糾紛,引發一八四0至一八七0年代的紐西蘭土地戰爭,王室沒收大片毛利土地,毛利人口與經濟嚴重受挫。與此同時,殖民地逐步取得自治,一八九三年成為世界上第一個給予婦女普選權的自治國家。",
+    "一九0七年紐西蘭升格為自治領,一九四七年正式採納《西敏法令》取得完整立法主權。二十世紀建立起完善的福利制度;一九七五年設立懷唐伊仲裁庭處理歷史性條約索賠,一九八七年立法宣布無核區並將毛利語列為官方語言,推動雙文化政策。",
+    "當代紐西蘭是單一制議會內閣制君主立憲國家,經濟以乳製品、肉品、園藝、觀光與影視產業為主,對外政策強調太平洋認同與自由貿易。國家持續處理條約履行、毛利語復振與氣候、生態保育等議題。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "紐西蘭",
+    "area_km2": 268021,
+    "languages": [
+      "英語",
+      "毛利語",
+      "紐西蘭手語"
+    ],
+    "religion": "以基督宗教為主,無宗教者已過半,無國教",
+    "currency": "紐西蘭元(NZD)",
+    "government": "單一制議會內閣制君主立憲"
+  },
+  "animals": [
+    {
+      "zh": "奇異鳥",
+      "en": "Kiwi",
+      "note": "夜行性的不會飛鳥類,鼻孔長在喙尖,是紐西蘭的國家象徵。",
+      "image": "animals-kiwi.jpg"
+    },
+    {
+      "zh": "啄羊鸚鵡",
+      "en": "Kea",
+      "note": "南島高山的大型鸚鵡,聰明好奇,常翻找登山客的背包與車輛。",
+      "image": "animals-kea.jpg"
+    },
+    {
+      "zh": "喙頭蜥",
+      "en": "Tuatara",
+      "note": "外形似蜥蜴的爬行動物,是喙頭目唯一現存物種,被稱為活化石。"
+    },
+    {
+      "zh": "鴞鸚鵡",
+      "en": "Kākāpō",
+      "note": "世界最重、不會飛的夜行鸚鵡,極度瀕危,靠嚴密保育回穩。"
+    },
+    {
+      "zh": "恐鳥",
+      "en": "Moa",
+      "note": "已滅絕的巨型不飛鳥,最高逾三公尺,約在毛利人抵達後數百年內消失。"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "帕芙洛娃",
+      "en": "Pavlova",
+      "note": "蛋白霜為底、外脆內軟,鋪鮮奶油與奇異果、莓果的節慶甜點。",
+      "image": "foods-pavlova.jpg"
+    },
+    {
+      "zh": "毛利地窯料理",
+      "en": "Hāngī",
+      "note": "把肉與根莖類放在燒熱石頭上、覆土燜蒸數小時的傳統烹法。"
+    },
+    {
+      "zh": "奇異果",
+      "en": "Kiwifruit",
+      "note": "自中國引進後在紐西蘭商業化,以品牌行銷全球,又稱紐西蘭奇異果。"
+    },
+    {
+      "zh": "綠殼貽貝",
+      "en": "Greenshell mussel",
+      "note": "紐西蘭特有的大型青口,馬爾堡峽灣為主要養殖區。"
+    },
+    {
+      "zh": "炸魚薯條",
+      "en": "Fish and chips",
+      "note": "承襲英國的國民外帶食物,常用當地的 hoki 或藍鱈。"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "米爾福德峽灣",
+      "en": "Milford Sound",
+      "note": "峽灣國家公園內的冰蝕峽灣,兩側千米崖壁與瀑布直落海面。",
+      "latlon": [
+        -44.6414,
+        167.8974
+      ],
+      "image": "landmarks-milford-sound.jpg"
+    },
+    {
+      "zh": "庫克山",
+      "en": "Aoraki / Mount Cook",
+      "note": "紐西蘭最高峰,海拔約三七二四公尺,毛利語意為「破雲者」。",
+      "latlon": [
+        -43.595,
+        170.1418
+      ],
+      "image": "landmarks-aoraki.jpg"
+    },
+    {
+      "zh": "羅托魯瓦地熱區",
+      "en": "Rotorua geothermal area",
+      "note": "北島火山帶上的溫泉、噴泉與泥漿池,也是毛利文化重鎮。",
+      "latlon": [
+        -38.137,
+        176.251
+      ],
+      "image": "landmarks-rotorua.jpg"
+    },
+    {
+      "zh": "哈比屯電影場景",
+      "en": "Hobbiton Movie Set",
+      "note": "馬塔馬塔附近牧場中保留的《魔戒》《哈比人》夏爾外景。",
+      "latlon": [
+        -37.8721,
+        175.6828
+      ],
+      "image": "landmarks-hobbiton.jpg"
+    },
+    {
+      "zh": "懷唐伊條約園區",
+      "en": "Waitangi Treaty Grounds",
+      "note": "一八四0年簽署《懷唐伊條約》之地,設有毛利會所與大型戰船。",
+      "latlon": [
+        -35.265,
+        174.085
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "艾德蒙·希拉里",
+      "en": "Edmund Hillary",
+      "note": "與雪巴人丹增於一九五三年首度登上聖母峰,登山家與慈善家。",
+      "image": "people-hillary.jpg"
+    },
+    {
+      "zh": "厄尼斯特·拉塞福",
+      "en": "Ernest Rutherford",
+      "note": "物理學家,提出原子核模型並首次實現人工核反應,被稱為核物理之父。",
+      "image": "people-rutherford.jpg"
+    },
+    {
+      "zh": "彼得·傑克森",
+      "en": "Peter Jackson",
+      "note": "電影導演,在紐西蘭拍攝《魔戒》三部曲,帶動當地影視產業。"
+    },
+    {
+      "zh": "姬莉·蒂·卡納瓦",
+      "en": "Kiri Te Kanawa",
+      "note": "毛利裔女高音,活躍於世界各大歌劇院,曾於英國王室婚禮演唱。"
+    },
+    {
+      "zh": "凱瑟琳·曼斯菲爾德",
+      "en": "Katherine Mansfield",
+      "note": "現代主義短篇小說家,作品多以威靈頓的童年為背景。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "夏季的南島大環線",
+      "note": "十二月至二月日照長、氣候穩定,適合皇后鎮、瓦納卡、峽灣國家公園的健行與公路旅行。"
+    },
+    {
+      "zh": "初秋的中奧塔哥",
+      "note": "四至五月葡萄園與白楊轉金,亞羅鎮秋葉節與克倫威爾一帶的黑皮諾酒莊值得停留。"
+    },
+    {
+      "zh": "二月六日的懷唐伊日",
+      "note": "在北島島嶼灣的條約園區有紀念儀式、傳統獨木舟下水與市集,是理解毛利與王室關係的場合。"
+    }
+  ],
+  "events": [
+    {
+      "year": 1642,
+      "zh": "荷蘭航海家塔斯曼成為首位目擊紐西蘭的歐洲人。"
+    },
+    {
+      "year": 1769,
+      "zh": "英國航海家庫克環繞並測繪南北兩島。"
+    },
+    {
+      "year": 1840,
+      "zh": "英國王室與眾多毛利酋長簽訂《懷唐伊條約》,同年紐西蘭成為英國殖民地。"
+    },
+    {
+      "year": 1863,
+      "zh": "王室軍隊入侵懷卡托,紐西蘭土地戰爭進入高峰,大片毛利土地遭沒收。"
+    },
+    {
+      "year": 1893,
+      "zh": "成為世界第一個賦予婦女普選權的自治國家。"
+    },
+    {
+      "year": 1907,
+      "zh": "紐西蘭由殖民地升格為自治領。"
+    },
+    {
+      "year": 1987,
+      "zh": "立法宣布為無核區,並將毛利語列為官方語言。"
+    }
+  ],
+  "credits": [
+    {
+      "file": "animals-kiwi.jpg",
+      "title": "North Island brown kiwi",
+      "author": "Tony Steer",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Apteryx_mantelli_1841361.jpg"
+    },
+    {
+      "file": "animals-kea.jpg",
+      "title": "Kea (Nestor notabilis)",
+      "author": "Bernard Spragg. NZ",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:The_Kea._Nestor_notabilis._(8100926666).jpg"
+    },
+    {
+      "file": "foods-pavlova.jpg",
+      "title": "Pavlova with fruit",
+      "author": "Alice Batt",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pavlova_Dessert_with_Fruit.jpg"
+    },
+    {
+      "file": "landmarks-milford-sound.jpg",
+      "title": "Milford Sound, Fiordland",
+      "author": "Krzysztof Golik",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Milford_Sound_in_Fiordland_National_Park_08.jpg"
+    },
+    {
+      "file": "landmarks-aoraki.jpg",
+      "title": "Aoraki / Mount Cook",
+      "author": "Michal Klajban",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Aoraki_-_Mt_Cook,_Aoraki_-_Mount_Cook_National_Park,_New_Zealand.jpg"
+    },
+    {
+      "file": "landmarks-rotorua.jpg",
+      "title": "Geyser at Whakarewarewa, Rotorua",
+      "author": "scott1346",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Geyser_at_whakarewarewa_(32820488027).jpg"
+    },
+    {
+      "file": "landmarks-hobbiton.jpg",
+      "title": "Hobbiton Movie Set, Matamata",
+      "author": "Andres Iga",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Hobbiton_Movie_Set,_Matamata.jpg"
+    },
+    {
+      "file": "people-hillary.jpg",
+      "title": "Edmund Hillary and Tenzing Norgay",
+      "author": "Jamling Tenzing Norgay",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Edmund_Hillary_and_Tenzing_Norgay.jpg"
+    },
+    {
+      "file": "people-rutherford.jpg",
+      "title": "Ernest Rutherford, Nobel portrait",
+      "author": "Unknown author (Nobel Foundation)",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Ernest_Rutherford_(Nobel).jpg"
+    }
+  ],
+  "code": "NZ"
+}

@@ -1,0 +1,278 @@
+{
+  "name_zh": "巴西",
+  "name_en": "Brazil",
+  "summary": "巴西是南美洲面積最大、人口最多的國家,國土約佔南美洲一半,兼有亞馬遜雨林、熱帶莽原與綿長海岸線。它是全球唯一以葡萄牙語為官方語言的大型國家,人口逾二億,種族與文化高度混合,為區域經濟與農業出口大國。",
+  "founding": [
+    "在葡萄牙人抵達前,今日巴西境內居住著圖皮、瓜拉尼等數百個原住民族群,以農耕、漁獵與採集維生,語言與社會組織多樣,人口估計達數百萬。",
+    "一五00年,葡萄牙航海家卡布拉爾的船隊抵達巴伊亞海岸,葡萄牙據此宣示主權。殖民初期以砍伐巴西紅木為主,其後在東北沿海發展大規模甘蔗種植園,並自非洲輸入大量奴隸;巴西成為美洲輸入非洲奴隸人數最多的地區。十八世紀米納斯吉拉斯的金礦熱潮又把經濟重心南移。",
+    "一八0七年拿破崙入侵葡萄牙,葡萄牙王室渡海遷都里約熱內盧,巴西地位大幅提升。一八二二年攝政王佩德羅宣布獨立,建立巴西帝國,是拉丁美洲少見以君主制完成獨立且維持領土完整的例子。",
+    "帝國時期咖啡取代蔗糖成為出口主力。一八八八年頒布《金律法》廢除奴隸制,為美洲最後廢奴的國家;隔年一八八九年軍人發動政變推翻帝制,建立共和。此後歷經寡頭共和、瓦爾加斯的威權統治與民粹動員。",
+    "一九六0年首都由里約遷往內陸新建的巴西利亞。一九六四至一九八五年為軍政府時期,一九八五年恢復文人政府,一九八八年頒布現行民主憲法,擴大社會權利並強化聯邦體制。",
+    "當代巴西是聯邦制總統制共和國,經濟以農牧出口(大豆、牛肉、咖啡、蔗糖乙醇)、礦業、工業與服務業為主,是金磚國家成員。國家長期面對貧富與區域差距、都市治安,以及亞馬遜森林砍伐與原住民土地權等環境課題。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "巴西聯邦共和國",
+    "area_km2": 8515767,
+    "languages": [
+      "葡萄牙語"
+    ],
+    "religion": "以天主教為主,福音派新教快速成長,政教分離,無國教",
+    "currency": "巴西雷亞爾(BRL)",
+    "government": "聯邦制總統制共和"
+  },
+  "animals": [
+    {
+      "zh": "美洲豹",
+      "en": "Jaguar",
+      "note": "潘塔納爾濕地是全球最易觀察野生美洲豹的地區。",
+      "image": "animals-jaguar.jpg"
+    },
+    {
+      "zh": "巨嘴鳥",
+      "en": "Toco toucan",
+      "note": "巨大橙色喙的雨林鳥類,是巴西最具代表性的鳥。",
+      "image": "animals-toucan.jpg"
+    },
+    {
+      "zh": "水豚",
+      "en": "Capybara",
+      "note": "世界最大的囓齒動物,群居於河湖岸邊,性情溫馴。",
+      "image": "animals-capybara.jpg"
+    },
+    {
+      "zh": "金獅面狨",
+      "en": "Golden lion tamarin",
+      "note": "全身金色的小型猴,僅棲於里約州大西洋森林,曾瀕臨絕種。"
+    },
+    {
+      "zh": "亞馬遜河豚",
+      "en": "Amazon river dolphin",
+      "note": "又稱粉紅河豚,成年偏粉紅色,是亞馬遜與奧里諾科水系特有。"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "黑豆燉肉",
+      "en": "Feijoada",
+      "note": "黑豆與多種豬肉部位慢燉,配飯、木薯粉與柑橘,常在週末食用。",
+      "image": "foods-feijoada.jpg"
+    },
+    {
+      "zh": "巴西烤肉",
+      "en": "Churrasco",
+      "note": "源自南部高喬牧人的炭烤大塊肉,以長鐵籤串烤、現場切食。"
+    },
+    {
+      "zh": "起司麵包",
+      "en": "Pão de queijo",
+      "note": "以木薯粉與乳酪做成的小圓麵包,外脆內軟,源自米納斯吉拉斯。"
+    },
+    {
+      "zh": "巴西莓碗",
+      "en": "Açaí na tigela",
+      "note": "亞馬遜巴西莓打成冰沙,加香蕉與燕麥,常見於海灘攤販。"
+    },
+    {
+      "zh": "卡琵莉亞調酒",
+      "en": "Caipirinha",
+      "note": "以甘蔗酒 cachaça、萊姆與糖調製的國民雞尾酒。"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "救世基督像",
+      "en": "Christ the Redeemer",
+      "note": "矗立科科瓦多山頂的裝飾藝術風格耶穌像,一九三一年落成。",
+      "latlon": [
+        -22.9519,
+        -43.2105
+      ],
+      "image": "landmarks-christ-redeemer.jpg"
+    },
+    {
+      "zh": "糖麵包山",
+      "en": "Sugarloaf Mountain",
+      "note": "里約瓜納巴拉灣口的花崗岩巨峰,有百年纜車直達山頂。",
+      "latlon": [
+        -22.9486,
+        -43.1567
+      ],
+      "image": "landmarks-sugarloaf.jpg"
+    },
+    {
+      "zh": "伊瓜蘇瀑布",
+      "en": "Iguaçu Falls",
+      "note": "巴西與阿根廷邊界上的巨大瀑布群,以「魔鬼咽喉」最震撼。",
+      "latlon": [
+        -25.6953,
+        -54.4367
+      ],
+      "image": "landmarks-iguacu.jpg"
+    },
+    {
+      "zh": "巴西利亞主教座堂",
+      "en": "Cathedral of Brasília",
+      "note": "尼邁耶設計的雙曲面混凝土教堂,首都現代主義建築群一員。",
+      "latlon": [
+        -15.7983,
+        -47.8757
+      ],
+      "image": "landmarks-brasilia-cathedral.jpg"
+    },
+    {
+      "zh": "亞馬遜雨林與河水交匯",
+      "en": "Amazon rainforest / Meeting of Waters",
+      "note": "馬瑙斯外內格羅河與索里蒙伊斯河兩色水並流數公里不混。",
+      "latlon": [
+        -3.1362,
+        -59.904
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "比利",
+      "en": "Pelé",
+      "note": "足球傳奇,三度隨巴西奪世界盃,被譽為「球王」。",
+      "image": "people-pele.jpg"
+    },
+    {
+      "zh": "艾爾頓·冼拿",
+      "en": "Ayrton Senna",
+      "note": "一級方程式賽車手,三屆世界冠軍,一九九四年比賽中喪生。",
+      "image": "people-senna.jpg"
+    },
+    {
+      "zh": "奧斯卡·尼邁耶",
+      "en": "Oscar Niemeyer",
+      "note": "現代主義建築師,主導巴西利亞的公共建築設計。"
+    },
+    {
+      "zh": "安東尼奧·卡洛斯·裘賓",
+      "en": "Antônio Carlos Jobim",
+      "note": "作曲家,巴薩諾瓦代表人物,〈伊帕內瑪的女孩〉作者之一。"
+    },
+    {
+      "zh": "保羅·科爾賀",
+      "en": "Paulo Coelho",
+      "note": "小說家,《牧羊少年奇幻之旅》譯成數十種語言暢銷全球。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "二至三月的里約狂歡節",
+      "note": "四旬期前的週末,森巴學校在專用大道 Sambódromo 競演,全城遊行與街頭 bloco 派對不斷。"
+    },
+    {
+      "zh": "乾季的潘塔納爾濕地",
+      "note": "七至十月水位下降,動物聚集水塘,是觀察美洲豹、水豚與大量水鳥的最佳季節。"
+    },
+    {
+      "zh": "旱季的亞馬遜與馬瑙斯",
+      "note": "六至十一月雨少、蚊蟲較少,適合搭船進雨林、看粉紅河豚與兩色河水交匯。"
+    }
+  ],
+  "events": [
+    {
+      "year": 1500,
+      "zh": "葡萄牙船隊抵達巴伊亞海岸,葡萄牙宣示對巴西的主權。"
+    },
+    {
+      "year": 1808,
+      "zh": "葡萄牙王室為躲避拿破崙渡海遷都里約熱內盧。"
+    },
+    {
+      "year": 1822,
+      "zh": "佩德羅一世宣布獨立,建立巴西帝國。"
+    },
+    {
+      "year": 1888,
+      "zh": "頒布《金律法》廢除奴隸制,為美洲最後廢奴的國家。"
+    },
+    {
+      "year": 1889,
+      "zh": "軍人政變推翻帝制,建立巴西共和國。"
+    },
+    {
+      "year": 1960,
+      "zh": "首都由里約熱內盧遷至新建的內陸城市巴西利亞。"
+    },
+    {
+      "year": 1985,
+      "zh": "軍政府結束,恢復文人執政,三年後頒布民主憲法。"
+    }
+  ],
+  "credits": [
+    {
+      "file": "animals-jaguar.jpg",
+      "title": "Jaguar in the Pantanal",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Jaguar_(Panthera_onca_palustris)_male_Rio_Negro_2.JPG"
+    },
+    {
+      "file": "animals-toucan.jpg",
+      "title": "Toco toucan close-up",
+      "author": "AntanO",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Toco_toucan_(Ramphastos_toco)_close-up.jpg"
+    },
+    {
+      "file": "animals-capybara.jpg",
+      "title": "Capybara group",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Capybara_(Hydrochoerus_hydrochaeris)_group.JPG"
+    },
+    {
+      "file": "foods-feijoada.jpg",
+      "title": "Feijoada à brasileira",
+      "author": "Bradleyzm",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Feijoada_à_brasileira_-02.jpg"
+    },
+    {
+      "file": "landmarks-christ-redeemer.jpg",
+      "title": "Christ the Redeemer, Rio de Janeiro",
+      "author": "Arne Müseler",
+      "license": "CC BY-SA 3.0 de",
+      "source": "https://commons.wikimedia.org/wiki/File:Christ_the_Redeemer_-_Cristo_Redentor.jpg"
+    },
+    {
+      "file": "landmarks-sugarloaf.jpg",
+      "title": "Sugarloaf Mountain, Rio de Janeiro",
+      "author": "Helder Ribeiro",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sugarloaf_mountain_in_Rio_de_Janeiro.jpg"
+    },
+    {
+      "file": "landmarks-iguacu.jpg",
+      "title": "Devil's Throat, Iguazu Falls",
+      "author": "Mariordo (Mario Roberto Durán Ortiz)",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Devil's_Throat_Iguazu_Falls_09_2009_AR_7222.jpg"
+    },
+    {
+      "file": "landmarks-brasilia-cathedral.jpg",
+      "title": "Cathedral of Brasília",
+      "author": "Arian Zwegers",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Brasilia,_Cathedral_of_Brasilia_(15309099334).jpg"
+    },
+    {
+      "file": "people-pele.jpg",
+      "title": "Pelé in Turin, 1963",
+      "author": "Unknown author",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Pelé_-_Turin,_1963_-_Juventus_FC_v_Santos_FC.jpg"
+    },
+    {
+      "file": "people-senna.jpg",
+      "title": "Ayrton Senna, 1988",
+      "author": "Paul Lannuier",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ayrton_Senna_1988_Canada.jpg"
+    }
+  ],
+  "code": "BR"
+}

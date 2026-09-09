@@ -1,0 +1,263 @@
+{
+  "name_zh": "墨西哥",
+  "name_en": "Mexico",
+  "summary": "墨西哥位於北美洲南部,北接美國,南鄰瓜地馬拉與貝里斯,兼濱太平洋與墨西哥灣。它是古代中美洲文明的核心地帶,今日人口逾一億三千萬,以西班牙語為主要語言,是拉丁美洲重要的工業與文化大國。",
+  "founding": [
+    "墨西哥中南部是中美洲文明的搖籃。約公元前一二00年起,奧爾梅克文明在墨西哥灣沿岸興起,其後馬雅、薩波特克、特奧蒂瓦坎等文明相繼繁盛,發展出曆法、文字、金字塔建築與大規模城市。",
+    "十四世紀,墨西加人(阿茲特克人)在特斯科科湖中的島上建立特諾奇提特蘭,並透過三方同盟建立橫跨中部高原的貢賦帝國,城市規模與工程技術在當時世界名列前茅。",
+    "一五一九年西班牙人科爾特斯登陸,結合被阿茲特克壓迫的城邦與傳染病的衝擊,於一五二一年攻陷特諾奇提特蘭。此後三百年墨西哥成為「新西班牙」總督轄區,天主教、西班牙語與莊園制度深植社會,並形成複雜的種族階序。",
+    "一八一0年神父伊達爾戈發出「多洛雷斯呼聲」,揭開獨立戰爭序幕;歷經十餘年戰事,一八二一年墨西哥正式脫離西班牙。獨立後政局動盪,先後經歷帝制、共和、與美國的戰爭(一八四六至四八年喪失北方大片領土)、改革戰爭與法國扶植的短暫帝制。",
+    "十九世紀末迪亞斯長期獨裁下經濟現代化但貧富懸殊,一九一0年爆發墨西哥革命,長期內戰後於一九一七年頒布進步的憲法。其後由革命制度黨長期執政,直到二000年首度出現和平政黨輪替。",
+    "當代墨西哥是聯邦制總統制共和國,經濟以製造業、石油、農業、旅遊與僑匯為支柱,與美國、加拿大簽有自由貿易協定。國內仍面對貧富差距、治安與販毒集團暴力等挑戰,而其飲食、藝術與節慶文化在全球具高度影響力。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "墨西哥合眾國",
+    "area_km2": 1964375,
+    "languages": [
+      "西班牙語",
+      "納瓦特爾語等原住民語言"
+    ],
+    "religion": "以天主教為主,基督新教增長,憲法規定政教分離,無國教",
+    "currency": "墨西哥披索(MXN)",
+    "government": "聯邦制總統制共和"
+  },
+  "animals": [
+    {
+      "zh": "墨西哥鈍口螈",
+      "en": "Axolotl",
+      "note": "俗稱六角恐龍,終生保幼態、能再生肢體,野外僅存於霍奇米爾科。",
+      "image": "animals-axolotl.jpg"
+    },
+    {
+      "zh": "美洲豹",
+      "en": "Jaguar",
+      "note": "美洲最大貓科動物,在古代文明中象徵權力與夜晚。"
+    },
+    {
+      "zh": "帝王斑蝶",
+      "en": "Monarch butterfly",
+      "note": "每年由北美遷徙數千公里,到米卻肯州冷杉林群聚越冬。"
+    },
+    {
+      "zh": "金鵰",
+      "en": "Golden eagle",
+      "note": "墨西哥國徽上叼蛇立於仙人掌的鷹即以牠為原型。"
+    },
+    {
+      "zh": "加灣鼠海豚",
+      "en": "Vaquita",
+      "note": "僅見於加利福尼亞灣北端的小型鼠海豚,是全球最瀕危的海洋哺乳類。"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "塔可餅",
+      "en": "Taco",
+      "note": "玉米或麵粉薄餅包裹肉類與莎莎醬,牧羊人塔可為經典口味。",
+      "image": "foods-tacos.jpg"
+    },
+    {
+      "zh": "莫雷醬",
+      "en": "Mole",
+      "note": "混合辣椒、香料與巧克力等數十種食材燉煮的濃醬,普埃布拉最著名。"
+    },
+    {
+      "zh": "塔馬利",
+      "en": "Tamale",
+      "note": "玉米麵團包餡以玉米葉或香蕉葉蒸熟,源自前哥倫布時期。"
+    },
+    {
+      "zh": "酪梨醬",
+      "en": "Guacamole",
+      "note": "以酪梨、洋蔥、辣椒與萊姆搗成,阿茲特克時代即已食用。"
+    },
+    {
+      "zh": "龍舌蘭酒",
+      "en": "Tequila",
+      "note": "以哈利斯科州藍色龍舌蘭釀製的蒸餾酒,受原產地名稱保護。"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "奇琴伊察",
+      "en": "Chichén Itzá",
+      "note": "馬雅-托爾特克古城,以羽蛇神金字塔「城堡」聞名。",
+      "latlon": [
+        20.6843,
+        -88.5678
+      ],
+      "image": "landmarks-chichen-itza.jpg"
+    },
+    {
+      "zh": "特奧蒂瓦坎",
+      "en": "Teotihuacan",
+      "note": "墨西哥城東北的巨型古城遺址,有太陽與月亮金字塔。",
+      "latlon": [
+        19.6925,
+        -98.8438
+      ],
+      "image": "landmarks-teotihuacan.jpg"
+    },
+    {
+      "zh": "憲法廣場",
+      "en": "Zócalo",
+      "note": "墨西哥城中心大廣場,旁為建於阿茲特克神廟遺址上的大都會主教座堂。",
+      "latlon": [
+        19.4326,
+        -99.1332
+      ],
+      "image": "landmarks-zocalo.jpg"
+    },
+    {
+      "zh": "帕倫克",
+      "en": "Palenque",
+      "note": "恰帕斯叢林中的馬雅城邦,以碑銘神廟與巴加爾王陵著稱。",
+      "latlon": [
+        17.4839,
+        -92.046
+      ],
+      "image": "landmarks-palenque.jpg"
+    },
+    {
+      "zh": "瓜納華托歷史城區",
+      "en": "Historic town of Guanajuato",
+      "note": "銀礦致富的殖民山城,彩色房屋沿陡坡與地下隧道分佈。",
+      "latlon": [
+        21.019,
+        -101.2574
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "芙烈達·卡蘿",
+      "en": "Frida Kahlo",
+      "note": "畫家,以自畫像與強烈民族色彩描繪傷痛與身份。",
+      "image": "people-frida-kahlo.jpg"
+    },
+    {
+      "zh": "迪亞哥·里維拉",
+      "en": "Diego Rivera",
+      "note": "壁畫大師,作品描繪墨西哥歷史與勞動人民。",
+      "image": "people-diego-rivera.jpg"
+    },
+    {
+      "zh": "貝尼托·胡亞雷斯",
+      "en": "Benito Juárez",
+      "note": "薩波特克裔總統,推動政教分離改革,抵抗法國干預。"
+    },
+    {
+      "zh": "奧克塔維奧·帕斯",
+      "en": "Octavio Paz",
+      "note": "詩人與評論家,《孤獨的迷宮》作者,一九九0年獲諾貝爾文學獎。"
+    },
+    {
+      "zh": "吉勒摩·戴托羅",
+      "en": "Guillermo del Toro",
+      "note": "電影導演,以《羊男的迷宮》《水底情深》獲多項奧斯卡獎。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "十月底至十一月初的亡靈節",
+      "note": "十一月一、二日前後,瓦哈卡與墨西哥城的墓園、遊行與萬壽菊祭壇最為盛大,是體驗生死觀的最佳時機。"
+    },
+    {
+      "zh": "冬季的猶加敦半島",
+      "note": "十二月至四月乾季少雨,適合走訪奇琴伊察、烏斯馬爾等馬雅遺址,並在天然井 cenote 游泳。"
+    },
+    {
+      "zh": "冬末的米卻肯帝王斑蝶保護區",
+      "note": "十一月至三月數以百萬計的帝王斑蝶群聚冷杉林,二至三月天氣回暖時飛舞最為壯觀。"
+    }
+  ],
+  "events": [
+    {
+      "year": -1200,
+      "zh": "奧爾梅克文明在墨西哥灣沿岸興起,為中美洲最早的主要文明。"
+    },
+    {
+      "year": 1325,
+      "zh": "墨西加人建立特諾奇提特蘭,日後發展為阿茲特克帝國的首都。"
+    },
+    {
+      "year": 1521,
+      "zh": "西班牙人科爾特斯攻陷特諾奇提特蘭,阿茲特克帝國滅亡。"
+    },
+    {
+      "year": 1810,
+      "zh": "伊達爾戈發出「多洛雷斯呼聲」,獨立戰爭爆發。"
+    },
+    {
+      "year": 1821,
+      "zh": "墨西哥依《科多巴條約》正式脫離西班牙獨立。"
+    },
+    {
+      "year": 1910,
+      "zh": "墨西哥革命爆發,終結迪亞斯長期獨裁,引發十年內戰。"
+    },
+    {
+      "year": 1917,
+      "zh": "頒布現行憲法,確立土地與勞工權利等改革。"
+    }
+  ],
+  "credits": [
+    {
+      "file": "animals-axolotl.jpg",
+      "title": "Axolotl (Ambystoma mexicanum)",
+      "author": "Kristof Magnusson",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Axolotl_Ambystoma_mexicanum_Aquarium_Zoo_Berlin,_2007.jpg"
+    },
+    {
+      "file": "foods-tacos.jpg",
+      "title": "Tacos al pastor with pineapple",
+      "author": "Koffermejia",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tacos_al_pastor_con_piña.jpg"
+    },
+    {
+      "file": "landmarks-chichen-itza.jpg",
+      "title": "El Castillo, Chichén Itzá",
+      "author": "Daniel Schwen",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Chichen_Itza_3.jpg"
+    },
+    {
+      "file": "landmarks-teotihuacan.jpg",
+      "title": "Pyramid of the Sun, Teotihuacan",
+      "author": "Daniel Case",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pyramid_of_the_Sun,_Teotihuacan,_from_path_to_parking_lot.jpg"
+    },
+    {
+      "file": "landmarks-zocalo.jpg",
+      "title": "Mexico City Metropolitan Cathedral",
+      "author": "ProtoplasmaKid",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Catedral_Metropolitana_de_la_Ciudad_de_México_1.jpg"
+    },
+    {
+      "file": "landmarks-palenque.jpg",
+      "title": "Temple of the Inscriptions, Palenque",
+      "author": "Strobilomyces",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Palenque_Temple_of_Inscriptions.JPG"
+    },
+    {
+      "file": "people-frida-kahlo.jpg",
+      "title": "Frida Kahlo, 1932",
+      "author": "Guillermo Kahlo",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Guillermo_Kahlo,_Frida_Kahlo,_1932.jpg"
+    },
+    {
+      "file": "people-diego-rivera.jpg",
+      "title": "Diego Rivera, 1932",
+      "author": "Carl Van Vechten",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Diego_Rivera_1932.jpg"
+    }
+  ],
+  "code": "MX"
+}

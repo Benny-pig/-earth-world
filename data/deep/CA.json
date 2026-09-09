@@ -1,0 +1,279 @@
+{
+  "name_zh": "加拿大",
+  "name_en": "Canada",
+  "summary": "加拿大是位於北美洲北部的聯邦國家,國土面積居世界第二,西臨太平洋、東濱大西洋、北抵北冰洋。人口約四千萬,多集中在美加邊境一帶,以英語與法語並列官方語言,是高度都市化、資源豐富的移民社會。",
+  "founding": [
+    "在歐洲人抵達之前,今日加拿大的土地已有原住民族生活數千年,包括分佈於森林與平原的第一民族(First Nations)、北極圈的因紐特人,以及後來形成的梅蒂人。各族群發展出多樣的語言、貿易網絡與社會制度,對土地與資源的知識深刻影響了日後的探險與拓殖。",
+    "十六世紀起,法國探險家卡蒂埃沿聖羅倫斯河深入內陸,一六0八年尚普蘭建立魁北克城,開啟「新法蘭西」的皮草貿易殖民時代。英國勢力則沿大西洋岸與哈德遜灣擴張,兩國在北美長期競逐,最終在七年戰爭後由一七六三年的《巴黎條約》將新法蘭西割讓予英國。",
+    "英國統治下,說法語的天主教居民與後來湧入的英語新教移民並存,一七九一年憲法法案將殖民地分為上下加拿大。十九世紀中葉,面對美國擴張壓力與內部治理需求,數個英屬北美殖民地推動聯合。",
+    "一八六七年七月一日,《英屬北美法案》生效,安大略、魁北克、新斯科細亞與新伯倫瑞克合組加拿大自治領,採聯邦制與議會內閣制,此後透過購地與新省加入逐步向西擴展至太平洋岸。一八八五年橫貫大陸的太平洋鐵路完工,鞏固了東西聯繫。",
+    "二十世紀,加拿大在兩次世界大戰中付出重大犧牲,國際地位提升。一九三一年《西敏法令》確認其立法自主,一九八二年憲法「本土化」並納入《權利與自由憲章},切斷了英國國會對加拿大修憲的角色。",
+    "當代加拿大是議會制君主立憲國家,奉行多元文化政策,英法雙語並行,經濟以能源、礦產、林業、農業與服務業為主。它是七大工業國組織與大英國協成員,並持續處理與原住民族的和解、土地權與條約義務等課題。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "加拿大",
+    "area_km2": 9984670,
+    "languages": [
+      "英語",
+      "法語"
+    ],
+    "religion": "以基督宗教為主(天主教、新教),無宗教者比例快速上升,無國教",
+    "currency": "加拿大元(CAD)",
+    "government": "聯邦制議會內閣制君主立憲"
+  },
+  "animals": [
+    {
+      "zh": "北美河狸",
+      "en": "North American beaver",
+      "note": "加拿大的國家動物,曾因皮草貿易大量獵捕。",
+      "image": "animals-beaver.jpg"
+    },
+    {
+      "zh": "駝鹿",
+      "en": "Moose",
+      "note": "北方針葉林常見的大型鹿科動物,雄性有寬大掌狀角。",
+      "image": "animals-moose.jpg"
+    },
+    {
+      "zh": "北極熊",
+      "en": "Polar bear",
+      "note": "分佈於哈德遜灣與北極海岸,加拿大擁有全球約三分之二族群。"
+    },
+    {
+      "zh": "加拿大雁",
+      "en": "Canada goose",
+      "note": "黑頸白頰的候鳥,遷徙時排成 V 字隊形,已引入多國。"
+    },
+    {
+      "zh": "普通潛鳥",
+      "en": "Common loon",
+      "note": "叫聲淒清的湖泊水鳥,印在一元硬幣上,俗稱 loonie。"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "楓糖漿",
+      "en": "Maple syrup",
+      "note": "以糖楓樹液熬煮而成,魁北克產量佔全球多數。",
+      "image": "foods-maple-syrup.jpg"
+    },
+    {
+      "zh": "肉汁乳酪薯條",
+      "en": "Poutine",
+      "note": "炸薯條淋上肉汁與新鮮乳酪凝乳,源自一九五0年代魁北克。",
+      "image": "foods-poutine.jpg"
+    },
+    {
+      "zh": "魁北克肉派",
+      "en": "Tourtière",
+      "note": "耶誕與新年食用的香料絞肉餡餅,魁北克傳統菜。"
+    },
+    {
+      "zh": "奶油塔",
+      "en": "Butter tart",
+      "note": "酥皮盛裝奶油、糖與蛋液烤成的甜塔,被視為加拿大代表甜點。"
+    },
+    {
+      "zh": "納奈莫條",
+      "en": "Nanaimo bar",
+      "note": "免烤三層冷藏甜點,得名自卑詩省納奈莫市。"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "尼加拉瀑布",
+      "en": "Niagara Falls",
+      "note": "美加邊界上的巨型瀑布,加拿大側的馬蹄瀑布最為壯觀。",
+      "latlon": [
+        43.0799,
+        -79.0747
+      ],
+      "image": "landmarks-niagara.jpg"
+    },
+    {
+      "zh": "加拿大國家電視塔",
+      "en": "CN Tower",
+      "note": "多倫多地標高塔,一九七六年落成,曾為世界最高自立建物。",
+      "latlon": [
+        43.6426,
+        -79.3871
+      ],
+      "image": "landmarks-cn-tower.jpg"
+    },
+    {
+      "zh": "夢蓮湖",
+      "en": "Moraine Lake",
+      "note": "班夫國家公園內的冰川湖,湖水因岩粉呈鮮豔藍綠色。",
+      "latlon": [
+        51.3217,
+        -116.186
+      ],
+      "image": "landmarks-moraine-lake.jpg"
+    },
+    {
+      "zh": "國會山莊",
+      "en": "Parliament Hill",
+      "note": "渥太華的哥德復興式國會建築群,面向渥太華河。",
+      "latlon": [
+        45.4236,
+        -75.7009
+      ],
+      "image": "landmarks-parliament-hill.jpg"
+    },
+    {
+      "zh": "芳堤娜城堡飯店",
+      "en": "Château Frontenac",
+      "note": "矗立魁北克舊城的城堡式大飯店,舊城區列世界遺產。",
+      "latlon": [
+        46.8119,
+        -71.2048
+      ],
+      "image": "landmarks-chateau-frontenac.jpg"
+    }
+  ],
+  "people": [
+    {
+      "zh": "泰瑞·福克斯",
+      "en": "Terry Fox",
+      "note": "截肢後跨國義跑為癌症研究募款,成為全國英雄。"
+    },
+    {
+      "zh": "韋恩·格雷茨基",
+      "en": "Wayne Gretzky",
+      "note": "冰球史上得分紀錄保持者,綽號「偉大的那位」。",
+      "image": "people-gretzky.jpg"
+    },
+    {
+      "zh": "詹姆斯·奈史密斯",
+      "en": "James Naismith",
+      "note": "一八九一年發明籃球運動的體育教師,生於安大略。"
+    },
+    {
+      "zh": "弗雷德里克·班廷",
+      "en": "Frederick Banting",
+      "note": "與團隊分離出胰島素,一九二三年獲諾貝爾生理醫學獎。"
+    },
+    {
+      "zh": "瑪格麗特·愛特伍",
+      "en": "Margaret Atwood",
+      "note": "小說家,《使女的故事》作者,兩度獲布克獎。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "秋季的洛磯山脈",
+      "note": "九至十月班夫與傑士伯國家公園天氣穩定、遊客較少,湖泊與落葉松金黃相映,適合健行與開車遊冰原大道。"
+    },
+    {
+      "zh": "初秋的魁北克市與東城區",
+      "note": "九月下旬至十月楓紅漸盛,舊城石板街道涼爽宜人,可搭配聖羅倫斯河沿岸賞鯨行程。"
+    },
+    {
+      "zh": "隆冬的育空看極光",
+      "note": "十二月至三月夜長天清,白馬市周邊常見綠色極光,並可體驗狗拉雪橇與溫泉。"
+    }
+  ],
+  "events": [
+    {
+      "year": 1534,
+      "zh": "法國探險家卡蒂埃抵達加斯佩,為法國宣示對此地的主權。"
+    },
+    {
+      "year": 1608,
+      "zh": "尚普蘭建立魁北克城,成為新法蘭西的核心據點。"
+    },
+    {
+      "year": 1763,
+      "zh": "七年戰爭結束,《巴黎條約》將新法蘭西割讓給英國。"
+    },
+    {
+      "year": 1867,
+      "zh": "《英屬北美法案》生效,四省合組加拿大自治領。"
+    },
+    {
+      "year": 1885,
+      "zh": "橫貫大陸的加拿大太平洋鐵路完工,連結東西兩岸。"
+    },
+    {
+      "year": 1931,
+      "zh": "《西敏法令》確認加拿大在立法上完全自主。"
+    },
+    {
+      "year": 1982,
+      "zh": "憲法本土化,納入《權利與自由憲章》。"
+    }
+  ],
+  "credits": [
+    {
+      "file": "animals-beaver.jpg",
+      "title": "North American Beaver in Killarney, Ontario",
+      "author": "Ryan Hodnett",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:North_American_Beaver_(Castor_canadensis)_-_Killarney,_Ontario.jpg"
+    },
+    {
+      "file": "animals-moose.jpg",
+      "title": "Bull Moose (Alces alces)",
+      "author": "GlacierNPS",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Bull_Moose_(Alces_alces)_(29771391948).jpg"
+    },
+    {
+      "file": "foods-maple-syrup.jpg",
+      "title": "Maple syrup",
+      "author": "Miguel Andrade",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Maple_syrup.jpg"
+    },
+    {
+      "file": "foods-poutine.jpg",
+      "title": "Poutine from Windsor, Ontario",
+      "author": "Antonydstevens",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Poutine_from_Windsor,_ON.jpg"
+    },
+    {
+      "file": "landmarks-niagara.jpg",
+      "title": "Horseshoe Falls view",
+      "author": "Helen Filatova",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Niagara-Falls-Horseshoe-Falls-view.jpg"
+    },
+    {
+      "file": "landmarks-cn-tower.jpg",
+      "title": "Toronto skyline at sunset",
+      "author": "Jchmrt",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sunset_Toronto_Skyline_Panorama_Crop_from_Snake_Island.jpg"
+    },
+    {
+      "file": "landmarks-moraine-lake.jpg",
+      "title": "Moraine Lake",
+      "author": "Gorgo",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Moraine_Lake_17092005.jpg"
+    },
+    {
+      "file": "landmarks-parliament-hill.jpg",
+      "title": "Centre Block, Parliament Hill",
+      "author": "Saffron Blaze",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Centre_Block_-_Parliament_Hill.jpg"
+    },
+    {
+      "file": "landmarks-chateau-frontenac.jpg",
+      "title": "Château Frontenac, Quebec City",
+      "author": "Wilfredor",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Château_Frontenac,_Quebec_city,_Canada.jpg"
+    },
+    {
+      "file": "people-gretzky.jpg",
+      "title": "Wayne Gretzky, 1997",
+      "author": "Rick Dikeman",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Wayne_Gretzky_1997.jpg"
+    }
+  ],
+  "code": "CA"
+}
