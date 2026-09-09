@@ -46,6 +46,7 @@ export function createClockWeather({ onForecast } = {}) {
   }
 
   async function fetchWeather(c) {
+    if (!Array.isArray(c.latlon)) { weatherHtml = "天氣 —"; renderTick(); emitForecast(c.code, null); return; }
     const hit = cache.get(c.code);
     if (hit && Date.now() - hit.at < TEN_MIN) {
       weatherHtml = hit.html; renderTick();

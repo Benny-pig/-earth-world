@@ -173,16 +173,19 @@ export function start() {
     if (!hit) return;
     const c = (window.__earth.content || {})[hit.code];
     const [lon, lat] = hit.centroidLatLon;
-    const flyLat = c ? c.capital_latlon[0] : lat;
-    const flyLon = c ? c.capital_latlon[1] : lon;
-    rig.flyTo(flyLat, flyLon, { distance: 1.7, ms: 1000 });
+    // 有些條目(南極洲、法屬南部領地)有內容但沒有首都座標與聚落 → 飛到國家質心、不顯示天氣
+    const cll = c && Array.isArray(c.capital_latlon) ? c.capital_latlon : null;
+    const noSettlement = !!c && !cll;
+    const anchor = cll || [lat, lon];
+    rig.flyTo(anchor[0], anchor[1], { distance: 1.7, ms: 1000 });
     sidePanel.open({
       code: hit.code,
       names: hit.names,
-      capital: c ? { zh: c.capital_zh, en: c.capital_en } : null,
+      capital: c && c.capital_zh ? { zh: c.capital_zh, en: c.capital_en } : null,
       timezone: c ? c.timezone : null,
-      latlon: c ? c.capital_latlon : [lat, lon],
+      latlon: cll || [lat, lon],
       population: c && c.population != null ? c.population : hit.pop,
+      showForecast: !noSettlement,
       features: c ? c.features : [],
       food: c ? c.food : null,
       travel: c ? c.travel_months : null,
@@ -192,7 +195,7 @@ export function start() {
       code: hit.code,
       name_zh: hit.names.zh,
       timezone: c ? c.timezone : null,
-      latlon: c ? c.capital_latlon : [lat, lon],
+      latlon: noSettlement ? null : (cll || [lat, lon]),
     });
     window.__earth.countryLayer.setSelected(hit.code);
   });

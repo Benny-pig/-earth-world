@@ -53,7 +53,7 @@ export function createSidePanel({ onClose }) {
       : "";
     let html = `${flag}<h2>${esc(p.names.zh)}</h2><div class="en">${esc(p.names.en)}</div>`;
     const meta = [];
-    if (p.capital) meta.push(`首都:${esc(p.capital.zh)}${p.capital.en ? ` (${esc(p.capital.en)})` : ""}`);
+    if (p.capital && p.capital.zh) meta.push(`首都:${esc(p.capital.zh)}${p.capital.en ? ` (${esc(p.capital.en)})` : ""}`);
     if (p.population != null && p.population !== "") meta.push(`人口:${fmtPop(p.population)}`);
     if (p.timezone) meta.push(`時區:${esc(p.timezone)}`);
     if (p.latlon) meta.push(`位置:${p.latlon[0].toFixed(1)}, ${p.latlon[1].toFixed(1)}`);
@@ -72,8 +72,9 @@ export function createSidePanel({ onClose }) {
       html += section("美食", f);
     }
 
-    // 未來一週天氣:所有國家都顯示(座標一定有,沿用質心後援)
-    html += section("未來一週天氣", `<div class="forecast" id="sp-forecast">${forecastHtml(p.forecast)}</div>`);
+    // 未來一週天氣:有聚落的國家都顯示(座標沿用質心後援);南極洲、法屬南部領地等無聚落者略過
+    if (p.showForecast !== false)
+      html += section("未來一週天氣", `<div class="forecast" id="sp-forecast">${forecastHtml(p.forecast)}</div>`);
 
     if (p.travel) {
       const cells = MONTH_LABELS.map((m, i) =>
