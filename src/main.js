@@ -125,7 +125,7 @@ export function start() {
 
     raycaster.setFromCamera(pointer, camera);
     let hovered = null;
-    if (window.__earth.countryLayer) hovered = window.__earth.countryLayer.pick(raycaster);
+    if (window.__earth.countryLayer) hovered = window.__earth.countryLayer.pick(raycaster, globe.mesh);
     const hitGlobe = hovered || raycaster.intersectObject(globe.mesh, false).length > 0;
 
     if (window.__earth.countryLayer) window.__earth.countryLayer.setHover(hovered ? hovered.code : null);

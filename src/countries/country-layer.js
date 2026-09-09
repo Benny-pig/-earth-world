@@ -73,9 +73,15 @@ export function buildCountryLayer(geojson, { radius = 1.002 } = {}) {
     }
   }
 
-  function pick(raycaster) {
+  function pick(raycaster, occluder) {
     const hits = raycaster.intersectObjects(group.children, true);
     if (!hits.length) return null;
+    if (occluder) {
+      const occ = raycaster.intersectObject(occluder, false)[0];
+      // country layer sits at radius 1.002 vs globe 1.0, so a legit near-side
+      // country hit is only ~0.002-0.02 in front of the globe surface hit
+      if (occ && hits[0].distance > occ.distance + 0.02) return null;
+    }
     let node = hits[0].object;
     while (node && !node.userData.code) node = node.parent;
     if (!node) return null;
