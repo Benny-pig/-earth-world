@@ -2,12 +2,12 @@
 const LS_KEY = "earth-world.track";
 
 export const TRACKS = [
-  { id: "earth-world",  name: "地球世界(原創)",      src: "/assets/music.wav",
-    credit: "原創配樂 · Claude" },
-  { id: "invariance",   name: "Invariance · 沉浸宇宙", src: "/assets/music/invariance.mp3",
-    credit: "Kevin MacLeod (incompetech.com) · CC BY 4.0" },
-  { id: "achaidh",      name: "Achaidh Cheide · 溫暖民謠", src: "/assets/music/achaidh-cheide.mp3",
-    credit: "Kevin MacLeod (incompetech.com) · CC BY 4.0" },
+  { id: "earth-world", name: "地球世界(原創)",   src: "/assets/music/earth-world.wav", credit: "原創配樂 · Claude" },
+  { id: "crystal",     name: "水晶空靈",          src: "/assets/music/crystal.wav",     credit: "原創配樂 · Claude" },
+  { id: "spa",         name: "SPA 療養",          src: "/assets/music/spa.wav",         credit: "原創配樂 · Claude" },
+  { id: "deepspace",   name: "深空冥想",          src: "/assets/music/deepspace.wav",   credit: "原創配樂 · Claude" },
+  { id: "nebula",      name: "星塵電子",          src: "/assets/music/nebula.wav",      credit: "原創配樂 · Claude" },
+  { id: "invariance",  name: "Invariance · 沉浸宇宙", src: "/assets/music/invariance.mp3", credit: "Kevin MacLeod (incompetech.com) · CC BY 4.0" },
 ];
 
 export function createMusic({ defaultVolume = 0.55 } = {}) {

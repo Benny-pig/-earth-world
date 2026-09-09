@@ -38,8 +38,10 @@
 - 8K 地球貼圖:Solar System Scope (https://www.solarsystemscope.com/textures/), CC BY 4.0
 - 雲層貼圖:Solar System Scope (https://www.solarsystemscope.com/textures/), CC BY 4.0(縮至 2K)
 - 銀河星空全景:ESO / Serge Brunier — "The Milky Way panorama" (eso0932a), CC BY 4.0
-- 背景音樂(左下角可切換,選擇會記住):
-  - 「地球世界」— 原創配樂,`assets/music.wav`,由 `tools/compose-music.py` 生成(D 大調流行 + 宇宙氛圍,無縫循環)
+- 背景音樂(左下角可切換,選擇會記住;預設「地球世界」):
+  - **原創配樂**(`tools/compose-music.py` 用 numpy/scipy 合成,無縫循環):
+    「地球世界」流行宇宙 · 「水晶空靈」玻璃鐘 + 超長殘響 · 「SPA 療養」暖 pad + 五聲慢旋律 + 水聲 ·
+    「深空冥想」低頻 drone + 稀疏高音 · 「星塵電子」十六分琶音 + 旋律 lead(atmospheric melodic electronic)
   - 「Invariance」— Kevin MacLeod (incompetech.com), CC BY 4.0(沉浸式宇宙 ambient)
-  - 「Achaidh Cheide」— Kevin MacLeod (incompetech.com), CC BY 4.0(溫暖民謠;拉格納洛克 Prontera 主題本身有版權不能用,這首是同調性的免費替代)
-  - 要新增曲目:把檔案放進 `assets/music/`,在 `src/audio/music.js` 的 `TRACKS` 加一列
+  - 重算原創曲:`python tools/compose-music.py [preset ...]`。新增曲目:檔案放 `assets/music/`,在 `src/audio/music.js` 的 `TRACKS` 加一列
+  - (拉格納洛克 Prontera 主題有版權,不能用)
