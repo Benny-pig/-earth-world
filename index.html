@@ -110,6 +110,54 @@
   #side-panel .fc-note { font-size: 10.5px; line-height: 1.5; color: #8093b5; margin: 8px 0 0; }
   #side-panel .close { position: absolute; top: 14px; right: 16px; cursor: pointer;
     background: none; border: none; color: #cdd8f0; font-size: 22px; line-height: 1; }
+  #encyclopedia {
+    position: fixed; inset: 0; z-index: 60; display: flex; flex-direction: column;
+    background: rgba(6, 9, 18, 0.94); backdrop-filter: blur(18px); color: #e7edfb;
+    font: 14px/1.75 system-ui, "Microsoft JhengHei", sans-serif;
+    transform: translateY(100%); transition: transform .5s cubic-bezier(.22,.61,.36,1);
+    will-change: transform;
+  }
+  #encyclopedia.open { transform: translateY(0); }
+  #encyclopedia .enc-topbar {
+    flex: 0 0 auto; display: flex; align-items: center; gap: 14px;
+    padding: 14px 22px; border-bottom: 1px solid rgba(120,170,255,.18);
+    background: rgba(10,14,26,.6);
+  }
+  #encyclopedia .enc-title { flex: 1; font-size: 16px; font-weight: 700; letter-spacing: .04em; }
+  #encyclopedia .enc-topbar button {
+    background: none; border: 1px solid rgba(120,170,255,.28); color: #dfe8ff;
+    border-radius: 7px; padding: 5px 12px; font: inherit; cursor: pointer;
+  }
+  #encyclopedia .enc-topbar button:hover { background: rgba(77,163,255,.18); }
+  #encyclopedia .enc-close { font-size: 18px; line-height: 1; padding: 2px 10px; }
+  #encyclopedia .enc-scroll { flex: 1; overflow-y: auto; overscroll-behavior: contain; }
+  #encyclopedia #enc-body { max-width: 920px; margin: 0 auto; padding: 26px 24px 120px; }
+  #encyclopedia h2 { font-size: 30px; margin: 0 0 4px; }
+  #encyclopedia .enc-en { color: #9fb2d8; font-size: 14px; margin-bottom: 14px; }
+  #encyclopedia h3 {
+    font-size: 15px; letter-spacing: .06em; color: #8fd4ff;
+    margin: 34px 0 12px; padding-bottom: 6px; border-bottom: 1px solid rgba(120,170,255,.15);
+  }
+  #encyclopedia p { margin: 0 0 12px; }
+  #encyclopedia .enc-facts { display: grid; grid-template-columns: max-content 1fr; gap: 4px 16px; font-size: 13px; }
+  #encyclopedia .enc-facts dt { color: #8fd4ff; }
+  #encyclopedia .enc-facts dd { margin: 0; color: #dbe4f7; }
+  #encyclopedia .enc-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 16px; }
+  #encyclopedia .enc-card { background: rgba(255,255,255,.04); border: 1px solid rgba(120,170,255,.14); border-radius: 10px; overflow: hidden; }
+  #encyclopedia .enc-card img { display: block; width: 100%; height: 132px; object-fit: cover; background: rgba(255,255,255,.05); }
+  #encyclopedia .enc-card .enc-card-body { padding: 10px 12px 12px; }
+  #encyclopedia .enc-card b { font-size: 14px; }
+  #encyclopedia .enc-card .enc-card-en { color: #9fb2d8; font-size: 12px; }
+  #encyclopedia .enc-card p { font-size: 12.5px; margin: 6px 0 0; color: #cdd8ef; }
+  #encyclopedia .enc-timeline { list-style: none; padding: 0; margin: 0; }
+  #encyclopedia .enc-timeline li { display: grid; grid-template-columns: 68px 1fr; gap: 12px; padding: 7px 0; border-bottom: 1px dashed rgba(120,170,255,.12); }
+  #encyclopedia .enc-timeline .enc-year { color: #8fd4ff; font-variant-numeric: tabular-nums; }
+  #encyclopedia .enc-credits { font-size: 11.5px; color: #8093b5; }
+  #encyclopedia .enc-credits li { margin: 3px 0; }
+  #encyclopedia .enc-dim { color: #9fb2d8; }
+  @media (prefers-reduced-motion: reduce) {
+    #encyclopedia { transition: none; }
+  }
   #tw-clock {
     position: fixed; top: 18px; left: 18px; z-index: 42;
     padding: 10px 14px; border-radius: 10px; text-align: left;
@@ -181,6 +229,14 @@
   <div id="webgl-fallback">你的瀏覽器不支援 WebGL,無法顯示地球世界。<br>請改用較新版本的 Chrome / Edge / Firefox。</div>
   <div id="tooltip"></div>
   <div id="tw-clock"></div>
+  <div id="encyclopedia" aria-hidden="true">
+    <div class="enc-topbar">
+      <button class="enc-back" aria-label="返回地球">‹ 返回</button>
+      <span class="enc-title"></span>
+      <button class="enc-close" aria-label="關閉">×</button>
+    </div>
+    <div class="enc-scroll"><div id="enc-body"></div></div>
+  </div>
   <div id="country-search">
     <input type="text" placeholder="搜尋國家(中 / English)" aria-label="搜尋國家" autocomplete="off" spellcheck="false">
     <ul hidden></ul>

@@ -19,6 +19,7 @@ import { createClockWeather } from "/src/ui/clock-weather.js";
 import { createTwClock } from "/src/ui/tw-clock.js";
 import { createCountrySearch } from "/src/ui/country-search.js";
 import { createMusic } from "/src/audio/music.js";
+import { createEncyclopedia } from "/src/ui/encyclopedia.js";
 
 const container = document.getElementById("app");
 
@@ -220,6 +221,9 @@ export function start() {
     if (window.__earth.clouds) window.__earth.clouds.setSpinPaused(false);
   } });
   window.__earth.sidePanel = sidePanel;
+
+  const encyclopedia = createEncyclopedia();
+  window.__earth.encyclopedia = encyclopedia;
 
   // 開啟一個國家:滑鼠點擊與搜尋欄共用。hit = { code, names, centroidLatLon, pop }
   function openCountry(hit) {
