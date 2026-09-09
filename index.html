@@ -70,6 +70,18 @@
   #side-panel .months span.best { background: #2f6df6; color: #fff; }
   #side-panel .close { position: absolute; top: 14px; right: 16px; cursor: pointer;
     background: none; border: none; color: #cdd8f0; font-size: 22px; line-height: 1; }
+  #clock-weather {
+    position: fixed; top: 18px; right: 18px; z-index: 42;
+    padding: 12px 16px; border-radius: 10px; text-align: right;
+    background: rgba(10, 14, 26, 0.7); backdrop-filter: blur(10px);
+    border: 1px solid rgba(120, 170, 255, 0.22); color: #e7edfb;
+    font: 13px/1.5 system-ui, "Microsoft JhengHei", sans-serif; min-width: 180px;
+  }
+  #clock-weather .cw-country { font-size: 13px; color: #8fd4ff; }
+  #clock-weather .cw-date { font-size: 12px; color: #b9c6e6; }
+  #clock-weather .cw-time { font-size: 22px; font-variant-numeric: tabular-nums; letter-spacing: .02em; }
+  #clock-weather .cw-weather { font-size: 13px; margin-top: 4px; }
+  #clock-weather .cw-hint { font-size: 12px; color: #9fb2d8; }
 </style>
 </head>
 <body>
@@ -80,6 +92,7 @@
   <div id="country-labels"></div>
   <div id="ocean-labels"></div>
   <div id="side-panel"><button class="close" aria-label="關閉">×</button><div id="side-panel-body"></div></div>
+  <div id="clock-weather"><div class="cw-hint">將滑鼠移到國家並點擊,看當地時間與天氣</div></div>
 
   <script type="importmap">
   {

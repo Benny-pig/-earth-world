@@ -15,6 +15,7 @@ import { createTooltip } from "/src/ui/tooltip.js";
 import { createOceanLabels } from "/src/scene/ocean-labels.js";
 import { createCountryLabels } from "/src/scene/country-labels.js";
 import { createSidePanel } from "/src/ui/side-panel.js";
+import { createClockWeather } from "/src/ui/clock-weather.js";
 
 const container = document.getElementById("app");
 
@@ -124,7 +125,10 @@ export function start() {
   let pointerPx = { x: -100, y: -100 };
   renderer.domElement.addEventListener("pointermove", (e) => { pointerPx = { x: e.clientX, y: e.clientY }; });
 
-  const sidePanel = createSidePanel({ onClose: () => rig.resetView() });
+  const clockWeather = createClockWeather();
+  window.__earth.clockWeather = clockWeather;
+
+  const sidePanel = createSidePanel({ onClose: () => { rig.resetView(); clockWeather.clear(); } });
   window.__earth.sidePanel = sidePanel;
 
   let downPos = null;
@@ -153,6 +157,12 @@ export function start() {
       features: c ? c.features : [],
       travel: c ? c.travel_months : null,
       history: c ? c.history : [],
+    });
+    clockWeather.setCountry({
+      code: hit.code,
+      name_zh: hit.names.zh,
+      timezone: c ? c.timezone : null,
+      latlon: c ? c.capital_latlon : [lat, lon],
     });
   });
 
