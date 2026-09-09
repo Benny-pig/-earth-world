@@ -37,6 +37,7 @@ export function createClockWeather({ onForecast } = {}) {
       tmax: Math.round(daily.temperature_2m_max?.[i]),
       tmin: Math.round(daily.temperature_2m_min?.[i]),
       pop: daily.precipitation_probability_max?.[i] ?? null,
+      precip: daily.precipitation_sum?.[i] ?? null,
     }));
   }
 
@@ -56,7 +57,7 @@ export function createClockWeather({ onForecast } = {}) {
     const [lat, lon] = c.latlon;
     const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}` +
       `&current=temperature_2m,weather_code` +
-      `&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max` +
+      `&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,precipitation_sum` +
       `&forecast_days=7&timezone=auto`;
     const ctrl = new AbortController();
     const timer = setTimeout(() => ctrl.abort(), 3000);

@@ -27,17 +27,27 @@ export function createSidePanel({ onClose }) {
   function forecastHtml(days) {
     if (days === null) return `<p class="dim">未來一週天氣暫時取得不到。</p>`;
     if (!days || !days.length) return `<p class="dim">載入中…</p>`;
-    const cells = days.map((d) => {
+    const cells = days.map((d, i) => {
       const { icon } = weatherCodeToIcon(d.code);
+      const md = (() => {
+        if (!d.date) return "";
+        const [mo, dy] = d.date.slice(5).split("-");
+        return `${Number(mo)}/${Number(dy)}`;
+      })();
       const pop = (d.pop == null || Number.isNaN(d.pop))
         ? "" : `<span class="fc-pop">☔ ${d.pop}%</span>`;
+      const mm = (d.precip != null && d.precip >= 0.5)
+        ? `<span class="fc-mm">${d.precip.toFixed(d.precip < 10 ? 1 : 0)}mm</span>` : "";
       const tmax = Number.isNaN(d.tmax) ? "—" : `${d.tmax}°`;
       const tmin = Number.isNaN(d.tmin) ? "—" : `${d.tmin}°`;
-      return `<div class="fc-day"><span class="fc-wd">${weekdayFromISODate(d.date)}</span>` +
+      return `<div class="fc-day${i === 0 ? " fc-today" : ""}">` +
+        `<span class="fc-wd">${i === 0 ? "今天" : weekdayFromISODate(d.date)}</span>` +
+        `<span class="fc-date">${md}</span>` +
         `<span class="fc-icon">${icon}</span>` +
-        `<span class="fc-temp">${tmax}<i>${tmin}</i></span>${pop}</div>`;
+        `<span class="fc-temp">${tmax}<i>${tmin}</i></span>${pop}${mm}</div>`;
     }).join("");
-    return `<div class="fc-grid">${cells}</div>`;
+    return `<div class="fc-grid">${cells}</div>` +
+      `<p class="fc-note">資料 Open-Meteo(多模式綜合)。預報愈後段誤差愈大;長期旅遊規劃請參考下方「適合旅遊月份」。</p>`;
   }
 
   function renderForecast(days) {
