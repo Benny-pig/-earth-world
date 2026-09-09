@@ -6,7 +6,7 @@ import { OutputPass } from "three/addons/postprocessing/OutputPass.js";
 import { SMAAPass } from "three/addons/postprocessing/SMAAPass.js";
 import { createStarfield } from "/src/scene/starfield.js";
 import { createGlobe } from "/src/scene/globe.js";
-import { createAtmosphere } from "/src/scene/atmosphere.js";
+import { createClouds } from "/src/scene/clouds.js";
 import { createCameraRig } from "/src/scene/camera-controls.js";
 import { buildBorders } from "/src/countries/borders.js";
 import { buildCountryLayer } from "/src/countries/country-layer.js";
@@ -61,8 +61,8 @@ export function start() {
     })
     .catch((err) => showError(err.message));
 
-  const atmosphere = createAtmosphere();
-  scene.add(atmosphere);
+  const clouds = createClouds();
+  scene.add(clouds.object);
 
   const renderer = new THREE.WebGLRenderer({ antialias: true });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -91,7 +91,7 @@ export function start() {
 
   window.__earth = { scene, camera, renderer };
   window.__earth.globe = globe;
-  window.__earth.atmosphere = atmosphere;
+  window.__earth.clouds = clouds;
   window.__earth.composer = composer;
 
   const rig = createCameraRig({ camera, domElement: renderer.domElement });
@@ -151,6 +151,7 @@ export function start() {
     const dt = clock.getDelta();
     starfield.update(clock.getElapsedTime());
     globe.update(dt);
+    clouds.update(dt);
 
     raycaster.setFromCamera(pointer, camera);
     let hovered = null;
@@ -163,9 +164,10 @@ export function start() {
 
     if (hitGlobe) {
       globe.setSpinPaused(true);
+      clouds.setSpinPaused(true);
       if (resumeTimer) { clearTimeout(resumeTimer); resumeTimer = null; }
     } else if (!resumeTimer) {
-      resumeTimer = setTimeout(() => { globe.setSpinPaused(false); resumeTimer = null; }, 1500);
+      resumeTimer = setTimeout(() => { globe.setSpinPaused(false); clouds.setSpinPaused(false); resumeTimer = null; }, 1500);
     }
     rig.update(dt);
 
