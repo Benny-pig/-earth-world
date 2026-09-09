@@ -23,15 +23,30 @@
 - 左鍵拖曳:轉動地球;滾輪:縮放
 - 移到地球上:暫停自轉;移到國家:高亮 + 名稱
 - 點擊國家:鏡頭飛入 + 該國抬起 + 右側介紹面板;Esc 或關閉鈕:回全球視角
-- 左下角:背景音樂靜音 / 音量(第一次點畫面後開始播放)
+- 側欄「詳細介紹 ›」:開啟整頁「國家大百科」(見下)
+- 頂部搜尋欄:輸入中/英名或代碼跳到該國
+- 左下角:背景音樂靜音 / 音量 / 曲目切換(第一次點畫面後開始播放)
+
+## 國家大百科
+
+側欄的「詳細介紹 ›」會開啟一頁全螢幕大百科:國旗、總覽、**國家的生成與發展**、
+**重大歷史事蹟**年表、**特色動物 / 特色食物 / 著名景點 / 著名名人**(圖文卡片)、
+**推薦玩法**、**圖片來源**。Esc / 返回 收起、回到地球(側欄保留)。
+
+- 內容每國一檔:`data/deep/<CODE>.json`,**點「詳細介紹」時才載入**(Map 快取;沒有該檔 → 顯示「建置中」)。
+- 目前有 20 個重點國:`JP TW US KR CN TH VN IN FR IT ES DE GB GR EG CA MX BR AU NZ`。其餘之後分批補。
+- 圖片:`assets/deep/<CODE>/*.jpg`,全部來自 **Wikimedia Commons**,授權限 **CC0 / 公有領域 / CC BY / CC BY-SA**,
+  每張都在該國 JSON 的 `credits` 標註作者 / 授權 / 來源網址,大百科頁底列出。
+- 加新國家:內容 subagent 依 `.superpowers/sdd/country-encyclopedia/content-brief-template.md` 產 `batch-deep-N.json`
+  → `node .superpowers/sdd/country-encyclopedia/deep-merge.mjs batch-deep-N.json`(驗授權 + 抓圖 + Pillow 縮到 1024/q82)。
 
 ## 開發
 
 - 前端純 ES Modules,無建置工具;`three@0.160.0` 透過 importmap 載入。
 - 本機開發伺服器:`serve.ps1`(預設 http://localhost:8760/)。
 - 純函式測試:`F:\Claude\ai-tools\node-v22.14.0-win-x64\node.exe --test`(在 repo 根目錄執行)
-- 設計文件:`docs/superpowers/specs/2026-09-08-earth-world-design.md`
-- 實作計畫:`docs/superpowers/plans/2026-09-08-earth-world.md`
+- 設計文件:`docs/superpowers/specs/2026-09-08-earth-world-design.md`、`…/2026-09-09-earth-world-encyclopedia-design.md`
+- 實作計畫:`docs/superpowers/plans/2026-09-08-earth-world.md`、`…/2026-09-09-earth-world-encyclopedia.md`
 
 ## 資料來源
 
@@ -45,3 +60,4 @@
   - 「Invariance」— Kevin MacLeod (incompetech.com), CC BY 4.0(沉浸式宇宙 ambient)
   - 重算原創曲:`python tools/compose-music.py [preset ...]`。新增曲目:檔案放 `assets/music/`,在 `src/audio/music.js` 的 `TRACKS` 加一列
   - (拉格納洛克 Prontera 主題有版權,不能用)
+- 大百科圖片:Wikimedia Commons,各張授權見 `data/deep/<CODE>.json` 的 `credits`(CC0 / 公有領域 / CC BY / CC BY-SA)
