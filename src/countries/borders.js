@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import { latLonToXYZ } from "/src/lib/geo.js";
+import { zhHantName } from "/src/countries/country-names.js";
 
 export function countryCode(feature) {
   const p = feature.properties || {};
@@ -11,7 +12,11 @@ export function countryCode(feature) {
 
 export function countryNames(feature) {
   const p = feature.properties || {};
-  return { zh: p.NAME_ZH || p.NAME || "未知", en: p.NAME || "" };
+  const code = countryCode(feature);
+  return {
+    zh: zhHantName(code) || p.NAME_ZH || p.NAME || "未知",
+    en: p.NAME || "",
+  };
 }
 
 export function iterCountryPolygons(feature) {

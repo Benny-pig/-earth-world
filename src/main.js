@@ -10,6 +10,7 @@ import { createClouds } from "/src/scene/clouds.js";
 import { createCameraRig } from "/src/scene/camera-controls.js";
 import { buildBorders } from "/src/countries/borders.js";
 import { buildCountryLayer } from "/src/countries/country-layer.js";
+import { setZhHantNames } from "/src/countries/country-names.js";
 import { createTooltip } from "/src/ui/tooltip.js";
 import { createOceanLabels } from "/src/scene/ocean-labels.js";
 import { createSidePanel } from "/src/ui/side-panel.js";
@@ -48,9 +49,12 @@ export function start() {
   scene.add(globe.lightRig);
 
   // 非同步載入 Natural Earth 110m 國界,掛在地球 group 上跟著自轉
-  fetch("/data/countries.geo.json")
-    .then((r) => { if (!r.ok) throw new Error("國界資料載入失敗 " + r.status); return r.json(); })
-    .then((geojson) => {
+  Promise.all([
+    fetch("/data/countries.geo.json").then((r) => { if (!r.ok) throw new Error("國界資料載入失敗 " + r.status); return r.json(); }),
+    fetch("/data/country-names-zh-hant.json").then((r) => (r.ok ? r.json() : {})).catch(() => ({})),
+  ])
+    .then(([geojson, zhHant]) => {
+      setZhHantNames(zhHant);
       window.__earth.geojson = geojson;
       const borders = buildBorders(geojson);
       globe.object.add(borders);
