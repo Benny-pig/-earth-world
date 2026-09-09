@@ -40,6 +40,15 @@ export function start() {
     return;
   }
 
+  let reportedGlobalError = false;
+  function reportGlobalError() {
+    if (reportedGlobalError) return;
+    reportedGlobalError = true;
+    showError("發生未預期的錯誤,詳情請看主控台。");
+  }
+  window.addEventListener("error", reportGlobalError);
+  window.addEventListener("unhandledrejection", reportGlobalError);
+
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1500);
   camera.position.set(0, 0, 3.2);
@@ -47,7 +56,7 @@ export function start() {
   const starfield = createStarfield();
   scene.add(starfield.object);
 
-  const globe = createGlobe();
+  const globe = createGlobe({ onAllTexturesFailed: () => showError("地球貼圖載入失敗,已改用純色地球。") });
   scene.add(globe.object);
   scene.add(globe.lightRig);
 
@@ -191,7 +200,7 @@ export function start() {
 
   const clock = new THREE.Clock();
   function loop() {
-    const dt = clock.getDelta();
+    const dt = Math.min(clock.getDelta(), 0.1);
     starfield.update(clock.getElapsedTime());
     globe.update(dt);
     clouds.update(dt);

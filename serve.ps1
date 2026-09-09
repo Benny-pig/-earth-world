@@ -14,6 +14,8 @@ $mime = @{
   ".jpg"  = "image/jpeg"
   ".png"  = "image/png"
   ".css"  = "text/css; charset=utf-8"
+  ".mp3"  = "audio/mpeg"
+  ".wav"  = "audio/wav"
 }
 
 while ($listener.IsListening) {

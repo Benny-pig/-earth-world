@@ -2,7 +2,7 @@ import * as THREE from "three";
 
 const SPIN_RATE = (2 * Math.PI) / 60; // 一圈 60 秒
 
-export function createGlobe() {
+export function createGlobe({ onAllTexturesFailed } = {}) {
   const object = new THREE.Group();   // 自轉:只放 mesh(以及後續 Task 的邊界/國家圖層)
   const lightRig = new THREE.Group(); // 世界固定:太陽光方向本階段不隨地球轉
   const loader = new THREE.TextureLoader();
@@ -35,6 +35,8 @@ export function createGlobe() {
       night.anisotropy = 8;
     }
     material.needsUpdate = true;
+    const loaded = [color, normal, night].filter(Boolean).length;
+    if (loaded === 0 && typeof onAllTexturesFailed === "function") onAllTexturesFailed();
   })();
 
   const sun = new THREE.DirectionalLight(0xffffff, 1.5);
