@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { latLonToXYZ, xyzToLatLon, ringCentroid, formatZonedTime, weatherCodeToIcon } from "../src/lib/geo.js";
+import { latLonToXYZ, xyzToLatLon, ringCentroid, formatZonedTime, weatherCodeToIcon, weekdayFromISODate } from "../src/lib/geo.js";
 
 const near = (a, b, eps = 1e-9) => assert.ok(Math.abs(a - b) < eps, `${a} ≈ ${b}`);
 
@@ -39,6 +39,13 @@ test("formatZonedTime 依時區給出日期時間與星期", () => {
   assert.equal(tokyo.date, "2026/01/15");
   assert.equal(tokyo.time, "09:00:00");
   assert.equal(tokyo.weekday, "週四");
+});
+
+test("weekdayFromISODate 由 ISO 日期字串給出星期(不受 UTC 位移影響)", () => {
+  assert.equal(weekdayFromISODate("2026-09-09"), "週三");
+  assert.equal(weekdayFromISODate("2026-01-15"), "週四");
+  assert.equal(weekdayFromISODate("2026-01-01"), "週四");
+  assert.equal(weekdayFromISODate("bad"), "—");
 });
 
 test("weatherCodeToIcon 對應已知碼", () => {

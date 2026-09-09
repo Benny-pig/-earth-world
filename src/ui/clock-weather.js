@@ -3,9 +3,9 @@ import { formatZonedTime, weatherCodeToIcon } from "/src/lib/geo.js";
 const TEN_MIN = 10 * 60 * 1000;
 const HINT = "將滑鼠移到國家並點擊,看當地時間與天氣";
 
-export function createClockWeather() {
+export function createClockWeather({ onForecast } = {}) {
   const el = document.getElementById("clock-weather");
-  const cache = new Map();   // code -> { at:number, html:string }
+  const cache = new Map();   // code -> { at:number, html:string, forecast:Array|null }
   let current = null;        // { code, name_zh, timezone, latlon }
   let weatherHtml = "";
 
@@ -29,11 +29,34 @@ export function createClockWeather() {
       `<div class="cw-weather">${weatherHtml || "天氣 —"}</div>`;
   }
 
+  function parseForecast(daily) {
+    if (!daily || !Array.isArray(daily.time)) return null;
+    return daily.time.map((iso, i) => ({
+      date: iso,
+      code: daily.weather_code?.[i],
+      tmax: Math.round(daily.temperature_2m_max?.[i]),
+      tmin: Math.round(daily.temperature_2m_min?.[i]),
+      pop: daily.precipitation_probability_max?.[i] ?? null,
+    }));
+  }
+
+  // 只有 current 仍是同一國時才把預報交給側欄(與 weatherHtml 的防競態一致)
+  function emitForecast(code, days) {
+    if (onForecast && current && current.code === code) onForecast(code, days);
+  }
+
   async function fetchWeather(c) {
     const hit = cache.get(c.code);
-    if (hit && Date.now() - hit.at < TEN_MIN) { weatherHtml = hit.html; renderTick(); return; }
+    if (hit && Date.now() - hit.at < TEN_MIN) {
+      weatherHtml = hit.html; renderTick();
+      emitForecast(c.code, hit.forecast);
+      return;
+    }
     const [lat, lon] = c.latlon;
-    const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,weather_code`;
+    const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}` +
+      `&current=temperature_2m,weather_code` +
+      `&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max` +
+      `&forecast_days=7&timezone=auto`;
     const ctrl = new AbortController();
     const timer = setTimeout(() => ctrl.abort(), 3000);
     try {
@@ -43,11 +66,14 @@ export function createClockWeather() {
       const t = Math.round(j.current.temperature_2m);
       const { icon, label } = weatherCodeToIcon(j.current.weather_code);
       const html = `${icon} ${label} ${t}°C`;
-      cache.set(c.code, { at: Date.now(), html });   // A 的資料對 A 永遠有效,照存
+      const forecast = parseForecast(j.daily);
+      cache.set(c.code, { at: Date.now(), html, forecast });   // A 的資料對 A 永遠有效,照存
       if (current && current.code === c.code) weatherHtml = html;
+      emitForecast(c.code, forecast);
     } catch (e) {
       console.warn("[clock-weather] 天氣抓取失敗:", e.message);
       if (current && current.code === c.code) weatherHtml = "天氣 —";
+      emitForecast(c.code, null);
     } finally {
       clearTimeout(timer);
       // 舊請求回來時 current 已換人:不覆寫共用狀態、也不重繪

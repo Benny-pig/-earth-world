@@ -135,7 +135,9 @@ export function start() {
   let pointerPx = { x: -100, y: -100 };
   renderer.domElement.addEventListener("pointermove", (e) => { pointerPx = { x: e.clientX, y: e.clientY }; });
 
-  const clockWeather = createClockWeather();
+  const clockWeather = createClockWeather({
+    onForecast: (code, days) => window.__earth.sidePanel?.setForecast(code, days),
+  });
   window.__earth.clockWeather = clockWeather;
 
   const music = createMusic();
@@ -181,6 +183,7 @@ export function start() {
       timezone: c ? c.timezone : null,
       latlon: c ? c.capital_latlon : [lat, lon],
       features: c ? c.features : [],
+      food: c ? c.food : null,
       travel: c ? c.travel_months : null,
       history: c ? c.history : [],
     });

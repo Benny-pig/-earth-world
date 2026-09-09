@@ -45,6 +45,12 @@ export function formatZonedTime(date, timeZone) {
   return { date: dp, time: tp, weekday: WEEKDAYS[wdIndex] };
 }
 
+export function weekdayFromISODate(iso) {
+  const [y, m, d] = String(iso).split("-").map(Number);
+  if (!y || !m || !d) return "—";
+  return WEEKDAYS[new Date(y, m - 1, d).getDay()];
+}
+
 export function weatherCodeToIcon(code) {
   const table = [
     [[0], "☀️", "晴"],
