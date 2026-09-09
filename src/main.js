@@ -16,6 +16,7 @@ import { createOceanLabels } from "/src/scene/ocean-labels.js";
 import { createCountryLabels } from "/src/scene/country-labels.js";
 import { createSidePanel } from "/src/ui/side-panel.js";
 import { createClockWeather } from "/src/ui/clock-weather.js";
+import { createMusic } from "/src/audio/music.js";
 
 const container = document.getElementById("app");
 
@@ -127,6 +128,16 @@ export function start() {
 
   const clockWeather = createClockWeather();
   window.__earth.clockWeather = clockWeather;
+
+  const music = createMusic();
+  window.__earth.music = music;
+  const audioToggle = document.getElementById("audio-toggle");
+  const audioVol = document.getElementById("audio-vol");
+  audioToggle.addEventListener("click", () => {
+    const m = music.toggleMute();
+    audioToggle.textContent = m ? "🔇" : "🔊";
+  });
+  audioVol.addEventListener("input", () => music.setVolume(audioVol.value / 100));
 
   const sidePanel = createSidePanel({ onClose: () => {
     rig.resetView();

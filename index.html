@@ -82,6 +82,14 @@
   #clock-weather .cw-time { font-size: 22px; font-variant-numeric: tabular-nums; letter-spacing: .02em; }
   #clock-weather .cw-weather { font-size: 13px; margin-top: 4px; }
   #clock-weather .cw-hint { font-size: 12px; color: #9fb2d8; }
+  #audio-ui {
+    position: fixed; left: 18px; bottom: 18px; z-index: 42; display: flex; align-items: center; gap: 8px;
+    padding: 8px 12px; border-radius: 10px; background: rgba(10, 14, 26, 0.7); backdrop-filter: blur(10px);
+    border: 1px solid rgba(120, 170, 255, 0.22); color: #e7edfb;
+    font: 13px system-ui, "Microsoft JhengHei", sans-serif;
+  }
+  #audio-ui button { background: none; border: none; color: #dfe8ff; font-size: 18px; cursor: pointer; line-height: 1; }
+  #audio-ui input[type=range] { width: 92px; accent-color: #4da3ff; }
 </style>
 </head>
 <body>
@@ -93,6 +101,10 @@
   <div id="ocean-labels"></div>
   <div id="side-panel"><button class="close" aria-label="關閉">×</button><div id="side-panel-body"></div></div>
   <div id="clock-weather"><div class="cw-hint">將滑鼠移到國家並點擊,看當地時間與天氣</div></div>
+  <div id="audio-ui">
+    <button id="audio-toggle" aria-label="背景音樂開關" title="背景音樂">🔊</button>
+    <input id="audio-vol" type="range" min="0" max="100" value="55" aria-label="音量">
+  </div>
 
   <script type="importmap">
   {
