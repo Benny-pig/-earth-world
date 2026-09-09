@@ -8,6 +8,13 @@ function esc(s) {
   ));
 }
 
+function fmtPop(v) {
+  if (typeof v !== "number" || !Number.isFinite(v)) return esc(String(v));
+  if (v >= 1e8) return `約 ${(v / 1e8).toFixed(v >= 1e9 ? 1 : 2)} 億`;
+  if (v >= 1e4) return `約 ${Math.round(v / 1e4).toLocaleString("en-US")} 萬`;
+  return `約 ${Math.round(v).toLocaleString("en-US")} 人`;
+}
+
 export function createSidePanel({ onClose }) {
   const el = document.getElementById("side-panel");
   const body = document.getElementById("side-panel-body");
@@ -47,6 +54,7 @@ export function createSidePanel({ onClose }) {
     let html = `${flag}<h2>${esc(p.names.zh)}</h2><div class="en">${esc(p.names.en)}</div>`;
     const meta = [];
     if (p.capital) meta.push(`首都:${esc(p.capital.zh)}${p.capital.en ? ` (${esc(p.capital.en)})` : ""}`);
+    if (p.population != null && p.population !== "") meta.push(`人口:${fmtPop(p.population)}`);
     if (p.timezone) meta.push(`時區:${esc(p.timezone)}`);
     if (p.latlon) meta.push(`位置:${p.latlon[0].toFixed(1)}, ${p.latlon[1].toFixed(1)}`);
     if (meta.length) html += `<div class="meta">${meta.join("　·　")}</div>`;

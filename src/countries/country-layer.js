@@ -197,8 +197,9 @@ export function buildCountryLayer(geojson, { radius = 1.002 } = {}) {
     let node = hits[0].object;
     while (node && !node.userData.code) node = node.parent;
     if (!node) return null;
-    const { code, names, centroidLatLon } = node.userData;
-    return { code, names, centroidLatLon };
+    const { code, names, centroidLatLon, feature } = node.userData;
+    const pop = feature && feature.properties ? feature.properties.POP_EST : null;
+    return { code, names, centroidLatLon, pop: Number.isFinite(pop) ? pop : null };
   }
 
   return { group, pick, setHover, setSelected, hasSelection: () => selectedCode != null, meshByCode };

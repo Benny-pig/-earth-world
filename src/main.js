@@ -182,6 +182,7 @@ export function start() {
       capital: c ? { zh: c.capital_zh, en: c.capital_en } : null,
       timezone: c ? c.timezone : null,
       latlon: c ? c.capital_latlon : [lat, lon],
+      population: c && c.population != null ? c.population : hit.pop,
       features: c ? c.features : [],
       food: c ? c.food : null,
       travel: c ? c.travel_months : null,
