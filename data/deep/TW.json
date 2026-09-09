@@ -1,0 +1,281 @@
+{
+  "name_zh": "臺灣",
+  "name_en": "Taiwan",
+  "summary": "臺灣是位於東亞、夾在太平洋與臺灣海峽之間的島嶼,主島面積約3.6萬平方公里,人口約2300萬,首都與最大都會區為臺北。目前由中華民國政府統治,自1980年代末解除戒嚴後完成民主轉型,並以半導體製造與代工在全球產業鏈中扮演關鍵角色。",
+  "founding": [
+    "臺灣的南島語族原住民在島上生活已有數千年,分布於平原與山區,發展出多元的語言與部落社會。十六世紀葡萄牙船隻經過時稱之為「Formosa」（美麗之島）。1624年荷蘭東印度公司在今臺南一帶建立據點,1626年西班牙人也短暫佔領北部的基隆與淡水,1642年被荷蘭逐出。荷蘭統治期間招募大量漢人移民開墾,種植稻米與甘蔗。",
+    "1662年,南明將領鄭成功率軍擊敗荷蘭,在臺灣建立以反清復明為號召的政權,推行屯墾與漢式教育。1683年清將施琅在澎湖海戰擊敗鄭氏,清朝將臺灣納入版圖,隸屬福建省,並長期採取限制移民的政策。十九世紀後期,隨開港通商與列強覬覦,清廷態度轉趨積極,1885年臺灣建省,由劉銘傳推動鐵路、電報等新政。",
+    "1895年清朝於甲午戰爭戰敗,依《馬關條約》將臺灣與澎湖割讓予日本,展開五十年的日治時期。日本在臺建立戶籍、土地與貨幣制度,興建鐵公路、港口、水利設施並發展糖業,同時實施差別待遇與同化政策;戰爭後期更推行皇民化並徵召臺灣人投入戰場。這段時期奠定了臺灣現代基礎建設與公共衛生的雛形。",
+    "1945年第二次世界大戰結束,日本放棄臺灣,中華民國政府代表盟軍接管臺灣。接管初期因治理失當與物價惡化,於1947年爆發二二八事件與後續鎮壓。1949年,中國國民黨在國共內戰中失利,中華民國中央政府遷至臺北,並自同年起在臺灣、澎湖、金門、馬祖實施長達38年的戒嚴。",
+    "1950至1980年代,臺灣在美援與出口導向政策下,由農業社會轉型為工業經濟,締造「臺灣經濟奇蹟」,並發展加工出口區與電子代工。政治上長期由國民黨一黨主政,黨外運動與1979年美麗島事件逐步促使反對力量集結,1986年民主進步黨成立。",
+    "1987年政府宣布解除戒嚴,隨後開放黨禁、報禁與赴中國大陸探親。1991年終止動員戡亂時期,1992年立法院全面改選,1996年舉行首次總統公民直選。2000年出現首次政黨輪替,此後政權多次在主要政黨之間和平轉移,2019年並成為亞洲首個立法承認同性婚姻的地區。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "中華民國",
+    "area_km2": 36197,
+    "languages": [
+      "中華民國國語（臺灣華語）",
+      "臺灣台語",
+      "客家語",
+      "臺灣原住民族語"
+    ],
+    "religion": "以佛教、道教與民間信仰為主,信仰自由,無國教",
+    "currency": "新臺幣（TWD）",
+    "government": "半總統制民主共和（中央政府設五院）"
+  },
+  "animals": [
+    {
+      "zh": "臺灣黑熊",
+      "en": "Formosan black bear",
+      "note": "臺灣唯一的原生熊類,胸前有V形白斑,為瀕危保育類。",
+      "image": "animals-formosan-black-bear.jpg"
+    },
+    {
+      "zh": "臺灣獼猴",
+      "en": "Formosan rock macaque",
+      "note": "臺灣特有種獼猴,群居於中低海拔山林,適應力強。"
+    },
+    {
+      "zh": "臺灣藍鵲",
+      "en": "Taiwan blue magpie",
+      "note": "特有種,長尾寶藍、喙腳鮮紅,俗稱「長尾山娘」。",
+      "image": "animals-taiwan-blue-magpie.jpg"
+    },
+    {
+      "zh": "帝雉",
+      "en": "Mikado pheasant",
+      "note": "特有種長尾雉,雄鳥羽色深藍近黑,曾印於千元鈔票。",
+      "image": "animals-mikado-pheasant.jpg"
+    },
+    {
+      "zh": "櫻花鉤吻鮭",
+      "en": "Formosan landlocked salmon",
+      "note": "冰河孑遺的陸封型鮭魚,主要棲息於雪山山脈的七家灣溪。"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "牛肉麵",
+      "en": "Beef noodle soup",
+      "note": "濃郁牛骨湯配燉牛腱與麵條,紅燒、清燉各有擁護者。",
+      "image": "foods-beef-noodle-soup.jpg"
+    },
+    {
+      "zh": "珍珠奶茶",
+      "en": "Bubble tea",
+      "note": "1980年代發源於臺中,奶茶加入嚼勁十足的粉圓,已風行全球。",
+      "image": "foods-bubble-tea.jpg"
+    },
+    {
+      "zh": "滷肉飯",
+      "en": "Braised pork rice",
+      "note": "白飯淋上滷得油亮的碎豬肉與醬汁,是最庶民的日常主食。"
+    },
+    {
+      "zh": "小籠包",
+      "en": "Xiaolongbao",
+      "note": "薄皮包裹肉餡與湯汁的蒸點,鼎泰豐使它揚名國際。",
+      "image": "foods-xiaolongbao.jpg"
+    },
+    {
+      "zh": "蚵仔煎",
+      "en": "Oyster omelette",
+      "note": "鮮蚵、蛋與番薯粉漿煎成,淋上甜鹹醬料,是夜市經典。"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "臺北101",
+      "en": "Taipei 101",
+      "note": "高508公尺的地標摩天樓,曾為世界第一高樓,跨年煙火聞名。",
+      "latlon": [
+        25.0339,
+        121.5645
+      ],
+      "image": "landmarks-taipei-101.jpg"
+    },
+    {
+      "zh": "太魯閣峽谷",
+      "en": "Taroko Gorge",
+      "note": "立霧溪切穿大理岩形成的深邃峽谷,位於花蓮,以壯麗岩壁著稱。",
+      "latlon": [
+        24.1735,
+        121.49
+      ],
+      "image": "landmarks-taroko-gorge.jpg"
+    },
+    {
+      "zh": "日月潭",
+      "en": "Sun Moon Lake",
+      "note": "臺灣最大的天然湖泊,潭面因形似日、月而得名,環湖景致優美。",
+      "latlon": [
+        23.865,
+        120.915
+      ]
+    },
+    {
+      "zh": "阿里山",
+      "en": "Alishan",
+      "note": "以日出、雲海、神木與百年森林鐵路著稱的高山遊憩區。",
+      "latlon": [
+        23.51,
+        120.8028
+      ],
+      "image": "landmarks-alishan.jpg"
+    },
+    {
+      "zh": "國立故宮博物院",
+      "en": "National Palace Museum",
+      "note": "典藏近70萬件中華文物,翠玉白菜、肉形石為知名鎮館之寶。",
+      "latlon": [
+        25.1024,
+        121.5485
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "李登輝",
+      "en": "Lee Teng-hui",
+      "note": "首位臺灣出身、也是首位公民直選產生的中華民國總統,推動民主化,有「民主先生」之稱。",
+      "image": "people-lee-teng-hui.jpg"
+    },
+    {
+      "zh": "李安",
+      "en": "Ang Lee",
+      "note": "電影導演,以《臥虎藏龍》《斷背山》《少年Pi的奇幻漂流》多次獲奧斯卡獎。"
+    },
+    {
+      "zh": "鄧麗君",
+      "en": "Teresa Teng",
+      "note": "華語流行樂傳奇歌手,歌聲風靡整個東亞與東南亞。"
+    },
+    {
+      "zh": "張忠謀",
+      "en": "Morris Chang",
+      "note": "創辦台積電（TSMC），開創晶圓專業代工模式,重塑全球半導體產業。"
+    },
+    {
+      "zh": "侯孝賢",
+      "en": "Hou Hsiao-hsien",
+      "note": "臺灣新電影代表導演,《悲情城市》獲威尼斯影展金獅獎。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "春季的阿里山",
+      "note": "3月下旬至4月櫻花與紫藤盛開;清晨搭祝山線小火車看日出雲海,再步行巨木群棧道。"
+    },
+    {
+      "zh": "夏季的花東縱谷與海岸",
+      "note": "6至8月可騎行縱谷稻浪、參加臺東熱氣球嘉年華,沿台11線飽覽太平洋與三仙台。"
+    },
+    {
+      "zh": "冬季泡溫泉",
+      "note": "11月至2月走訪北投、烏來、礁溪與臺南關子嶺,泉質各異,可搭配山區健行。"
+    }
+  ],
+  "events": [
+    {
+      "year": 1624,
+      "zh": "荷蘭東印度公司在大員（今臺南）建立據點,開始有系統的統治與開墾。"
+    },
+    {
+      "year": 1662,
+      "zh": "鄭成功擊退荷蘭人,在臺灣建立明鄭政權。"
+    },
+    {
+      "year": 1683,
+      "zh": "清朝擊敗鄭氏,將臺灣正式納入版圖,隸屬福建省。"
+    },
+    {
+      "year": 1895,
+      "zh": "清朝依《馬關條約》割讓臺灣、澎湖予日本,進入日治時期。"
+    },
+    {
+      "year": 1945,
+      "zh": "第二次世界大戰結束,中華民國政府接管臺灣。"
+    },
+    {
+      "year": 1949,
+      "zh": "國共內戰失利,中華民國中央政府遷往臺北,並在臺實施戒嚴。"
+    },
+    {
+      "year": 1987,
+      "zh": "政府宣布解除戒嚴,隨後推動民主化,1996年舉行首次總統公民直選。"
+    }
+  ],
+  "credits": [
+    {
+      "file": "animals-formosan-black-bear.jpg",
+      "title": "Formosan black bear",
+      "author": "Smartneddy (Wikimedia)",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Formosan_Black_Bear01.jpg"
+    },
+    {
+      "file": "animals-taiwan-blue-magpie.jpg",
+      "title": "Taiwan blue magpie (Urocissa caerulea), Xindian",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Taiwan_blue_magpie_(Urocissa_caerulea)_Xindian.jpg"
+    },
+    {
+      "file": "animals-mikado-pheasant.jpg",
+      "title": "Male Mikado pheasant, Taiwan",
+      "author": "Francesco Veronesi",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mikado_Pheasant_-_Taiwan_S4E8655_(14927917543).jpg"
+    },
+    {
+      "file": "foods-beef-noodle-soup.jpg",
+      "title": "Taiwanese beef noodle soup",
+      "author": "Jjj84206 (Wikimedia)",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Taiwanese_Beef_Noodle_Soup.jpg"
+    },
+    {
+      "file": "foods-bubble-tea.jpg",
+      "title": "Pearl milk tea at Chun Shui Tang",
+      "author": "Battlesnake1 (Wikimedia)",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pearl_Milk_Tea_in_Chun_Shui_Tang.jpg"
+    },
+    {
+      "file": "foods-xiaolongbao.jpg",
+      "title": "Xiaolongbao with dipping sauce",
+      "author": "stu_spivack",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Xiao_long_bao_and_sauce_by_stu_spivack_in_Cleveland,_OH.jpg"
+    },
+    {
+      "file": "landmarks-taipei-101.jpg",
+      "title": "Taipei 101 seen from Xiangshan",
+      "author": "Sinsyuan (Wikimedia)",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Taipei_101_from_Xiangshan_20250731.jpg"
+    },
+    {
+      "file": "landmarks-taroko-gorge.jpg",
+      "title": "Taroko Gorge, Hualien",
+      "author": "Fred Hsu",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Taiwan_2009_HuaLien_Taroko_Gorge_FRD_5467.jpg"
+    },
+    {
+      "file": "landmarks-alishan.jpg",
+      "title": "Alishan Forest Railway",
+      "author": "Uwe Aranas / CEphoto",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Alishan_Taiwan_Alishan-Forest-Railway-04.jpg"
+    },
+    {
+      "file": "people-lee-teng-hui.jpg",
+      "title": "Official portrait of Lee Teng-hui",
+      "author": "李登輝基金會 (Lee Teng-hui Foundation)",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Lee_Teng-hui_official_portrait.png"
+    }
+  ],
+  "code": "TW"
+}

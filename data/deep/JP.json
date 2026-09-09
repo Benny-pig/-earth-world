@@ -1,52 +1,286 @@
 {
-  "code": "JP",
-  "name_zh": "日本", "name_en": "Japan",
-  "summary": "東亞的弧狀島國,由四大島與數千小島組成,融合古老傳統與尖端科技。",
+  "name_zh": "日本",
+  "name_en": "Japan",
+  "summary": "日本是位於東亞、由四大島與數千座小島組成的島國,人口約1.2億,首都東京的都會區為全球規模最大的都市圈之一。它同時保有悠久的天皇制傳統與戰後建立的議會民主體制,是全球主要經濟體,並在科技、動漫、電玩與飲食文化上具有廣泛影響力。",
   "founding": [
-    "傳說神武天皇於西元前 660 年建國;考古上,繩文、彌生文化之後,大和政權於古墳時代(3–6 世紀)逐步統一列島。",
-    "7 世紀大化改新引入唐制,建立律令國家;平安時代發展出假名與宮廷文學。",
-    "12 世紀鎌倉幕府開啟武家政治,延續近七百年;江戶時代長期鎖國,町人文化繁盛。",
-    "1868 年明治維新推動現代化;二戰戰敗後在和平憲法下重建,成為經濟與科技大國。"
+    "日本列島在舊石器時代已有人居,約一萬多年前進入以繩紋陶器聞名的繩文時代,居民以採集與漁獵維生。西元前數世紀起,水稻農業與金屬器由朝鮮半島與中國大陸傳入,開啟彌生時代,聚落擴大、社會出現階層分化。三世紀前後,以近畿地區為中心的大和政權逐漸興起,傳說中的初代天皇神武被後世追溯為這個王權的起點。",
+    "六至八世紀,日本大量吸收中國隋唐的制度與文化:採用漢字、傳入佛教,並透過大化革新確立中央集權的律令國家,先後定都平城京（奈良）與平安京（京都）。平安時代貴族文化鼎盛,女作家紫式部的《源氏物語》即成書於此時。九世紀以後,朝政實權逐漸由天皇轉移到攝關家族藤原氏手中。",
+    "十二世紀末武士階層崛起,源賴朝在鎌倉開設幕府,展開約七百年的武家政治。歷經鎌倉、室町幕府與戰國時代的長期內戰後,織田信長、豐臣秀吉相繼推動統一,最終德川家康於1603年建立江戶幕府,以江戶（今東京）為政治中心。江戶時代兩百餘年大致維持和平,實施鎖國政策,商業與町人文化如浮世繪、歌舞伎蓬勃發展。",
+    "1853年美國培理艦隊來航,迫使日本結束鎖國。內外壓力下幕府垮台,1868年明治維新展開,還政天皇、廢藩置縣、殖產興業,快速推動工業化與軍事現代化,並頒布憲法、設立國會。日本隨後在甲午戰爭與日俄戰爭中獲勝,躋身列強,並先後將琉球、臺灣與朝鮮納入版圖,走向對外擴張。",
+    "二十世紀前期軍國主義抬頭,日本發動侵華戰爭並加入第二次世界大戰,1945年在廣島、長崎遭原子彈轟炸後宣布無條件投降。戰後在盟軍佔領下推行民主化改革,1947年施行新憲法,天皇成為「國家象徵」,並於憲法第九條放棄以戰爭作為解決國際爭端的手段。",
+    "戰後日本專注經濟建設,1950至1980年代創造「經濟奇蹟」,一度成為僅次於美國的經濟體,並在汽車與電子產業居世界領先。1990年代初資產泡沫破滅後,日本長期面臨低成長與人口高齡化的挑戰,但仍是七大工業國組織成員與聯合國主要出資國,並以動漫、電玩與飲食等軟實力持續影響全球。"
   ],
   "quick_facts": {
     "official_name_zh": "日本國",
     "area_km2": 377975,
-    "languages": ["日語"],
-    "religion": "神道與佛教並行,無國教",
-    "currency": "日圓(JPY)",
-    "government": "議會內閣制君主立憲"
+    "languages": [
+      "日語"
+    ],
+    "religion": "神道與佛教並行,信仰自由,無國教",
+    "currency": "日圓（JPY）",
+    "government": "議會內閣制、君主立憲（天皇為國家象徵）"
   },
   "animals": [
-    { "zh": "日本獼猴", "en": "Japanese macaque", "note": "分布最北的靈長類,以雪地泡溫泉聞名。" },
-    { "zh": "丹頂鶴", "en": "Red-crowned crane", "note": "北海道濕原的象徵,古來視為長壽吉兆。" },
-    { "zh": "日本鹿", "en": "Sika deer", "note": "奈良公園的野鹿與神社文化緊密相連。" }
+    {
+      "zh": "日本獼猴",
+      "en": "Japanese macaque",
+      "note": "又稱雪猴,是分布最北的野生靈長類,冬季會泡溫泉取暖。",
+      "image": "animals-macaque.jpg"
+    },
+    {
+      "zh": "梅花鹿",
+      "en": "Sika deer",
+      "note": "奈良公園的野生鹿群親近人群,自古被視為神的使者。",
+      "image": "animals-sika-deer.jpg"
+    },
+    {
+      "zh": "丹頂鶴",
+      "en": "Red-crowned crane",
+      "note": "北海道釧路濕原的留鳥,舞姿優雅,象徵長壽與吉祥。",
+      "image": "animals-red-crowned-crane.jpg"
+    },
+    {
+      "zh": "綠雉",
+      "en": "Green pheasant",
+      "note": "日本特有種,雄鳥羽色鮮豔,被定為日本的國鳥。"
+    },
+    {
+      "zh": "錦鯉",
+      "en": "Koi",
+      "note": "由食用鯉魚選育出的觀賞魚,體色斑斕,象徵好運。"
+    }
   ],
   "foods": [
-    { "zh": "壽司", "en": "Sushi", "note": "醋飯配生鮮魚貝,江戶前握壽司為代表。" },
-    { "zh": "拉麵", "en": "Ramen", "note": "鹼水麵配長時間熬煮高湯,各地湯頭差異極大。" },
-    { "zh": "天婦羅", "en": "Tempura", "note": "海鮮蔬菜裹薄衣油炸,講究酥而不膩。" }
+    {
+      "zh": "壽司",
+      "en": "Sushi",
+      "note": "以醋飯搭配生魚片或海鮮,握壽司是最具代表性的形式。",
+      "image": "foods-sushi.jpg"
+    },
+    {
+      "zh": "拉麵",
+      "en": "Ramen",
+      "note": "源自中華麵食的湯麵,依湯底分醬油、味噌、豚骨等流派。",
+      "image": "foods-ramen.jpg"
+    },
+    {
+      "zh": "天婦羅",
+      "en": "Tempura",
+      "note": "海鮮與蔬菜裹上薄麵衣油炸,講究酥脆而不油膩。"
+    },
+    {
+      "zh": "味噌湯",
+      "en": "Miso soup",
+      "note": "以發酵豆醬與高湯煮成,是日式定食的基本湯品。"
+    },
+    {
+      "zh": "和牛",
+      "en": "Wagyu beef",
+      "note": "油花細緻的高級牛肉,以神戶牛、松阪牛最負盛名。"
+    }
   ],
   "landmarks": [
-    { "zh": "富士山", "en": "Mount Fuji", "note": "海拔 3776 公尺的活火山,日本精神象徵。", "latlon": [35.36, 138.73] },
-    { "zh": "京都清水寺", "en": "Kiyomizu-dera", "note": "懸空木造舞台,春櫻秋楓名所。", "latlon": [34.99, 135.78] },
-    { "zh": "嚴島神社", "en": "Itsukushima Shrine", "note": "海上大鳥居,漲潮時彷彿浮於水面。", "latlon": [34.30, 132.32] }
-  ],
-  "recommended": [
-    { "zh": "3–4 月的京都", "note": "櫻花與寺院庭園相映,建議清晨避開人潮。" },
-    { "zh": "冬季的北海道", "note": "雪祭、滑雪與流冰;函館夜景值得一訪。" }
+    {
+      "zh": "富士山",
+      "en": "Mount Fuji",
+      "note": "標高3776公尺的活火山與日本最高峰,是重要的信仰與美學象徵。",
+      "latlon": [
+        35.3606,
+        138.7274
+      ],
+      "image": "landmarks-fuji.jpg"
+    },
+    {
+      "zh": "伏見稻荷大社",
+      "en": "Fushimi Inari Taisha",
+      "note": "京都稻荷信仰的總本社,以綿延山徑的千本鳥居聞名。",
+      "latlon": [
+        34.9671,
+        135.7727
+      ],
+      "image": "landmarks-fushimi-inari.jpg"
+    },
+    {
+      "zh": "金閣寺（鹿苑寺）",
+      "en": "Kinkaku-ji",
+      "note": "京都的臨濟宗禪寺,主殿外牆貼滿金箔,倒映於鏡湖池。",
+      "latlon": [
+        35.0394,
+        135.7292
+      ],
+      "image": "landmarks-kinkakuji.jpg"
+    },
+    {
+      "zh": "嚴島神社",
+      "en": "Itsukushima Shrine",
+      "note": "廣島縣宮島的海上神社,漲潮時大鳥居宛如浮在海面上。",
+      "latlon": [
+        34.2961,
+        132.3199
+      ],
+      "image": "landmarks-itsukushima.jpg"
+    },
+    {
+      "zh": "姬路城",
+      "en": "Himeji Castle",
+      "note": "保存完整的江戶初期木造城堡,以白牆得名「白鷺城」。",
+      "latlon": [
+        34.8394,
+        134.6939
+      ]
+    }
   ],
   "people": [
-    { "zh": "宮崎駿", "en": "Hayao Miyazaki", "note": "吉卜力工作室動畫導演,《神隱少女》奪奧斯卡。" },
-    { "zh": "村上春樹", "en": "Haruki Murakami", "note": "當代最具國際知名度的日本小說家之一。" },
-    { "zh": "大谷翔平", "en": "Shohei Ohtani", "note": "投打二刀流的棒球選手,多次美職 MVP。" }
+    {
+      "zh": "宮崎駿",
+      "en": "Hayao Miyazaki",
+      "note": "吉卜力工作室動畫導演,《神隱少女》奪下奧斯卡最佳動畫長片。",
+      "image": "people-miyazaki.jpg"
+    },
+    {
+      "zh": "黑澤明",
+      "en": "Akira Kurosawa",
+      "note": "國際影響深遠的電影導演,代表作《七武士》與《羅生門》。"
+    },
+    {
+      "zh": "村上春樹",
+      "en": "Haruki Murakami",
+      "note": "當代最暢銷的日本小說家,作品已譯成逾50種語言。"
+    },
+    {
+      "zh": "紫式部",
+      "en": "Murasaki Shikibu",
+      "note": "平安時代女作家,著有被視為世界最早長篇小說的《源氏物語》。",
+      "image": "people-murasaki-shikibu.jpg"
+    },
+    {
+      "zh": "手塚治虫",
+      "en": "Osamu Tezuka",
+      "note": "有「漫畫之神」之稱,《原子小金剛》奠定日本現代動漫的基礎。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "3至4月的京都",
+      "note": "櫻花沿鴨川、哲學之道與各寺院盛放;建議清晨賞花避開人潮,傍晚再走訪祇園與八坂神社一帶。"
+    },
+    {
+      "zh": "11月中下旬的日光與京都",
+      "note": "楓紅層層疊疊,配合寺社庭園與夜間點燈,是一年中最適合攝影的季節。"
+    },
+    {
+      "zh": "冬季的北海道",
+      "note": "2月有札幌雪祭與小樽雪燈之路,可搭配二世谷粉雪滑雪,以及登別、洞爺的溫泉。"
+    }
   ],
   "events": [
-    { "year": 794, "zh": "遷都平安京(今京都),平安時代開始。" },
-    { "year": 1192, "zh": "源賴朝就任征夷大將軍,鎌倉幕府成立。" },
-    { "year": 1854, "zh": "《神奈川條約》結束鎖國。" },
-    { "year": 1868, "zh": "明治維新,推動現代化與工業化。" },
-    { "year": 1945, "zh": "二戰戰敗,其後在和平憲法下重建。" },
-    { "year": 2011, "zh": "東日本大震災與福島核災。" }
+    {
+      "year": 645,
+      "zh": "大化革新展開,仿唐制推動中央集權的律令國家。"
+    },
+    {
+      "year": 794,
+      "zh": "桓武天皇遷都平安京（今京都），開啟平安時代。"
+    },
+    {
+      "year": 1192,
+      "zh": "源賴朝就任征夷大將軍,建立鎌倉幕府,武家政治開始。"
+    },
+    {
+      "year": 1603,
+      "zh": "德川家康開設江戶幕府,日本進入兩百餘年的鎖國與相對和平。"
+    },
+    {
+      "year": 1868,
+      "zh": "明治維新展開,還政天皇並全面推動現代化與工業化。"
+    },
+    {
+      "year": 1945,
+      "zh": "廣島、長崎遭原子彈轟炸後宣布投降,第二次世界大戰結束。"
+    },
+    {
+      "year": 1964,
+      "zh": "東京舉辦亞洲首屆夏季奧運,東海道新幹線同年通車,象徵戰後復興。"
+    }
   ],
-  "credits": []
+  "credits": [
+    {
+      "file": "animals-macaque.jpg",
+      "title": "Japanese snow monkey (macaque) mother grooming her young",
+      "author": "Rocktendo & Adam Gman",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Japanese_Snow_Monkey_(Macaque)_Mother_Grooms_Her_Young.jpg"
+    },
+    {
+      "file": "animals-sika-deer.jpg",
+      "title": "A deer in Nara Park",
+      "author": "Takashi Hososhima",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:A_deer_in_Nara_park_(15323765146).jpg"
+    },
+    {
+      "file": "animals-red-crowned-crane.jpg",
+      "title": "Red-crowned cranes (Grus japonensis) in Hokkaido, Japan",
+      "author": "Alastair Rae",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Grus_japonensis_-Hokkaido,_Japan_-several-8_(1).jpg"
+    },
+    {
+      "file": "foods-sushi.jpg",
+      "title": "Assorted nigiri sushi",
+      "author": "City Foodsters",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Assorted_Nigiri_-1_(9865149266).jpg"
+    },
+    {
+      "file": "foods-ramen.jpg",
+      "title": "Shoyu ramen",
+      "author": "Guilhem Vellut",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Shoyu_Ramen.jpg"
+    },
+    {
+      "file": "landmarks-fuji.jpg",
+      "title": "Mount Fuji from Lake Kawaguchi",
+      "author": "Subramaniam K V",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mount_Fuji_from_Lake_Kawaguchi.jpg"
+    },
+    {
+      "file": "landmarks-fushimi-inari.jpg",
+      "title": "Senbon torii at Fushimi Inari Taisha, Kyoto",
+      "author": "Immanuelle",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Fushimi_Inari_Taisha_Torii_17.jpg"
+    },
+    {
+      "file": "landmarks-kinkakuji.jpg",
+      "title": "Kinkaku-ji (Golden Pavilion), Kyoto",
+      "author": "Dmitrij Rodionov",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Kinkaku-ji_(Golden_Pavillon).jpg"
+    },
+    {
+      "file": "landmarks-itsukushima.jpg",
+      "title": "Torii and Itsukushima Shrine",
+      "author": "Bernard Gagnon",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Torii_and_Itsukushima_Shrine.jpg"
+    },
+    {
+      "file": "people-miyazaki.jpg",
+      "title": "Hayao Miyazaki at Comic-Con International, July 2009",
+      "author": "Natasha Baucas",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:HayaoMiyazakiCCJuly09.jpg"
+    },
+    {
+      "file": "people-murasaki-shikibu.jpg",
+      "title": "Portrait of Murasaki Shikibu by Tosa Mitsuoki",
+      "author": "Tosa Mitsuoki",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Tosa_Mitsuoki_001.jpg"
+    }
+  ],
+  "code": "JP"
 }

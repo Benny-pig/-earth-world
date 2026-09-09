@@ -1,0 +1,294 @@
+{
+  "name_zh": "美國",
+  "name_en": "United States",
+  "summary": "美國是位於北美洲、由50州與一個聯邦特區組成的聯邦共和國,面積逾980萬平方公里,人口約3.4億,居世界第三。它是全球最大的經濟體與主要軍事強權,並在科技、金融、高等教育與流行文化上具有主導性的影響力。",
+  "founding": [
+    "在歐洲人抵達之前,北美洲已有數以百計的原住民族群居住,發展出從東部林地、西南普韋布洛到大平原游獵等多樣文化。十五世紀末起,西班牙、法國、荷蘭與英國相繼在北美建立殖民地。英國於1607年在維吉尼亞建立詹姆斯敦,是它在北美的首個永久殖民地,此後沿大西洋岸逐步形成十三個殖民地。",
+    "十八世紀中葉,英國為償還戰爭債務對殖民地加徵稅賦,激起「無代表,不納稅」的反彈。衝突於1775年升高為獨立戰爭,第二屆大陸會議於1776年7月4日通過《獨立宣言》,揭示天賦人權與人民主權的理念。在法國援助下,1781年約克鎮戰役決定戰局,1783年《巴黎和約》中英國正式承認美國獨立。",
+    "初期的邦聯體制過於鬆散,1787年費城會議制定聯邦憲法,確立三權分立與聯邦制,1789年喬治·華盛頓就任首任總統,保障人民權利的《權利法案》十條修正案於1791年生效。此後美國透過購買與戰爭快速向西擴張:1803年向法國購入路易斯安那,國土幾乎倍增,並持續推進至太平洋岸,過程中大量原住民被迫遷徙。",
+    "十九世紀,南方與北方在奴隸制與州權問題上的矛盾激化,1861年南方多州脫離聯邦,引爆南北戰爭。1863年林肯發布《解放奴隸宣言》,戰爭於1865年以聯邦獲勝結束,憲法增修條文廢除奴隸制。戰後歷經「重建時期」,加上鐵路擴張、快速工業化與大規模歐洲移民,使美國在十九世紀末成為世界最大的工業國。",
+    "二十世紀,美國兩度介入世界大戰並成為決定性力量;二戰後與蘇聯進入冷戰,主導成立聯合國、北約與布列敦森林體系。國內則經歷1930年代的經濟大蕭條與新政、1950至60年代的民權運動,1964年《民權法案》終結法律上的種族隔離,1969年阿波羅11號首次將人類送上月球。",
+    "冷戰於1991年隨蘇聯解體而結束,美國成為唯一的超級強權。進入二十一世紀,美國先後面對2001年九一一恐怖攻擊、2008年金融海嘯與國內政治極化等挑戰,但仍是全球最大經濟體、主要科技創新中心,以及美元這一世界主要儲備貨幣的發行國。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "美利堅合眾國",
+    "area_km2": 9833517,
+    "languages": [
+      "英語"
+    ],
+    "religion": "以基督宗教為主,政教分離,信仰自由",
+    "currency": "美元（USD）",
+    "government": "聯邦制、總統制共和"
+  },
+  "animals": [
+    {
+      "zh": "白頭海雕",
+      "en": "Bald eagle",
+      "note": "美國國鳥與國徽圖案,曾因DDT污染瀕危,現已復育成功。",
+      "image": "animals-bald-eagle.jpg"
+    },
+    {
+      "zh": "美洲野牛",
+      "en": "American bison",
+      "note": "北美最大的陸生動物,曾遭獵殺近乎絕跡,現為美國國獸。",
+      "image": "animals-american-bison.jpg"
+    },
+    {
+      "zh": "灰熊",
+      "en": "Grizzly bear",
+      "note": "棕熊的北美亞種,主要分布於洛磯山脈與阿拉斯加。"
+    },
+    {
+      "zh": "郊狼",
+      "en": "Coyote",
+      "note": "適應力極強的犬科動物,已擴散至全美各地,包括都市邊緣。"
+    },
+    {
+      "zh": "美洲短吻鱷",
+      "en": "American alligator",
+      "note": "分布於東南部濕地,是佛羅里達與路易斯安那的代表物種。"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "漢堡",
+      "en": "Hamburger",
+      "note": "夾牛肉餅的圓麵包,是美式速食與家庭烤肉的象徵。",
+      "image": "foods-hamburger.jpg"
+    },
+    {
+      "zh": "熱狗",
+      "en": "Hot dog",
+      "note": "香腸夾長型麵包,是棒球場與街邊攤的經典小吃。"
+    },
+    {
+      "zh": "燒烤",
+      "en": "Barbecue",
+      "note": "以低溫慢燻牛胸肉、豬肋排,德州、堪薩斯等地風味各異。"
+    },
+    {
+      "zh": "蘋果派",
+      "en": "Apple pie",
+      "note": "格狀酥皮包裹肉桂蘋果餡,常被拿來代表「美國味」。"
+    },
+    {
+      "zh": "感恩節火雞",
+      "en": "Roast turkey",
+      "note": "感恩節與耶誕節的主菜,整隻烤製並佐以肉汁與填料。"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "自由女神像",
+      "en": "Statue of Liberty",
+      "note": "法國於1886年贈送的紀念碑,矗立紐約港,象徵自由與移民。",
+      "latlon": [
+        40.6892,
+        -74.0445
+      ],
+      "image": "landmarks-statue-of-liberty.jpg"
+    },
+    {
+      "zh": "大峽谷",
+      "en": "Grand Canyon",
+      "note": "科羅拉多河歷經數百萬年切割出的巨大峽谷,最深逾1600公尺。",
+      "latlon": [
+        36.1069,
+        -112.1129
+      ],
+      "image": "landmarks-grand-canyon.jpg"
+    },
+    {
+      "zh": "金門大橋",
+      "en": "Golden Gate Bridge",
+      "note": "舊金山灣口的紅色吊橋,1937年完工,1937至1964年為世界跨距最長的懸索橋。",
+      "latlon": [
+        37.8199,
+        -122.4783
+      ],
+      "image": "landmarks-golden-gate-bridge.jpg"
+    },
+    {
+      "zh": "白宮",
+      "en": "White House",
+      "note": "位於華盛頓特區的總統官邸兼辦公處,1800年起正式啟用。",
+      "latlon": [
+        38.8977,
+        -77.0365
+      ],
+      "image": "landmarks-white-house.jpg"
+    },
+    {
+      "zh": "拉什莫爾山",
+      "en": "Mount Rushmore",
+      "note": "南達科他州花崗岩山體上雕出四位總統頭像的國家紀念區。",
+      "latlon": [
+        43.8791,
+        -103.4591
+      ],
+      "image": "landmarks-mount-rushmore.jpg"
+    }
+  ],
+  "people": [
+    {
+      "zh": "喬治·華盛頓",
+      "en": "George Washington",
+      "note": "獨立戰爭大陸軍總司令與首任總統,立下不戀棧權位的典範。",
+      "image": "people-george-washington.jpg"
+    },
+    {
+      "zh": "亞伯拉罕·林肯",
+      "en": "Abraham Lincoln",
+      "note": "第16任總統,領導聯邦度過南北戰爭並推動廢奴,任內遇刺身亡。",
+      "image": "people-abraham-lincoln.jpg"
+    },
+    {
+      "zh": "馬丁·路德·金恩",
+      "en": "Martin Luther King Jr.",
+      "note": "非裔民權運動領袖,主張非暴力抗爭,1964年獲諾貝爾和平獎。",
+      "image": "people-mlk.jpg"
+    },
+    {
+      "zh": "湯瑪斯·愛迪生",
+      "en": "Thomas Edison",
+      "note": "發明家與企業家,擁有逾千項專利,推動電燈與留聲機的商業化。",
+      "image": "people-thomas-edison.jpg"
+    },
+    {
+      "zh": "馬克·吐溫",
+      "en": "Mark Twain",
+      "note": "作家,《頑童歷險記》被視為美國文學的奠基之作。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "秋季的新英格蘭",
+      "note": "9月下旬至10月佛蒙特、新罕布夏一帶楓葉轉紅,適合開車走鄉間公路與小鎮。"
+    },
+    {
+      "zh": "春季的華盛頓特區",
+      "note": "3月底至4月初櫻花沿潮汐湖盛開,史密森尼系列博物館全年免費參觀。"
+    },
+    {
+      "zh": "夏季的西部國家公園",
+      "note": "6至9月串遊大峽谷、錫安、布萊斯與黃石,日照長、步道大多全面開放。"
+    }
+  ],
+  "events": [
+    {
+      "year": 1607,
+      "zh": "英國在維吉尼亞建立詹姆斯敦,為北美首個永久殖民地。"
+    },
+    {
+      "year": 1776,
+      "zh": "大陸會議通過《獨立宣言》,十三殖民地宣布脫離英國。"
+    },
+    {
+      "year": 1787,
+      "zh": "費城制憲會議通過聯邦憲法,兩年後華盛頓就任首任總統。"
+    },
+    {
+      "year": 1803,
+      "zh": "向法國購入路易斯安那,美國國土面積幾乎倍增。"
+    },
+    {
+      "year": 1861,
+      "zh": "南北戰爭爆發,1865年聯邦獲勝並廢除奴隸制。"
+    },
+    {
+      "year": 1945,
+      "zh": "第二次世界大戰結束,美國成為擁有核武的超級強權。"
+    },
+    {
+      "year": 1969,
+      "zh": "阿波羅11號完成人類首次登陸月球。"
+    }
+  ],
+  "credits": [
+    {
+      "file": "animals-bald-eagle.jpg",
+      "title": "Bald eagle flying over water",
+      "author": "Kaela Gamio, U.S. Forest Service",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bald_Eagle_flying_over_water.jpg"
+    },
+    {
+      "file": "animals-american-bison.jpg",
+      "title": "American bison in Yellowstone",
+      "author": "Stephen Pribut",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:American_Bison_(Yellowstone).jpg"
+    },
+    {
+      "file": "foods-hamburger.jpg",
+      "title": "Cheeseburger on a plate",
+      "author": "TheCulinaryGeek",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Cheeseburger_on_a_plate.jpg"
+    },
+    {
+      "file": "landmarks-statue-of-liberty.jpg",
+      "title": "Statue of Liberty, New York",
+      "author": "Elcobbola (Wikimedia)",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Statue_of_Liberty_7.jpg"
+    },
+    {
+      "file": "landmarks-grand-canyon.jpg",
+      "title": "View from Mather Point, Grand Canyon",
+      "author": "Supercarwaar",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:View_from_Mather_Point,_Grand_Canyon.jpg"
+    },
+    {
+      "file": "landmarks-golden-gate-bridge.jpg",
+      "title": "Golden Gate Bridge as seen from Battery East",
+      "author": "Frank Schulenburg",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Golden_Gate_Bridge_as_seen_from_Battery_East.jpg"
+    },
+    {
+      "file": "landmarks-white-house.jpg",
+      "title": "The White House, north façade, 2024",
+      "author": "DJTechYT (Wikimedia)",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:The_White_House_June_2024.jpg"
+    },
+    {
+      "file": "landmarks-mount-rushmore.jpg",
+      "title": "Mount Rushmore National Memorial",
+      "author": "Dean Franklin",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Dean_Franklin_-_06.04.03_Mount_Rushmore_Monument_(by-sa)-3_new.jpg"
+    },
+    {
+      "file": "people-george-washington.jpg",
+      "title": "Portrait of George Washington by Gilbert Stuart",
+      "author": "Gilbert Stuart",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg"
+    },
+    {
+      "file": "people-abraham-lincoln.jpg",
+      "title": "Abraham Lincoln, O-77 portrait, 1863",
+      "author": "Alexander Gardner",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Abraham_Lincoln_O-77_matte_collodion_print.jpg"
+    },
+    {
+      "file": "people-mlk.jpg",
+      "title": "Martin Luther King Jr. at a press conference, 1964",
+      "author": "Marion S. Trikosko (U.S. News & World Report)",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Martin_Luther_King_press_conference_01269u_edit.jpg"
+    },
+    {
+      "file": "people-thomas-edison.jpg",
+      "title": "Thomas Edison, c. 1922",
+      "author": "Louis Bachrach, Bachrach Studios (restored by Michel Vuijlsteke)",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Thomas_Edison2.jpg"
+    }
+  ],
+  "code": "US"
+}
