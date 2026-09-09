@@ -17,7 +17,7 @@ export function createSidePanel({ onClose, onMore }) {
   let clockTz = null;
   let clockTimer = null;
   el.querySelector(".close").addEventListener("click", () => { close(); });
-  window.addEventListener("keydown", (e) => { if (e.key === "Escape" && el.classList.contains("open")) close(); });
+  window.addEventListener("keydown", (e) => { if (e.key === "Escape" && el.classList.contains("open") && !document.getElementById("encyclopedia")?.classList.contains("open")) close(); });
 
   function section(title, html) { return `<h3>${title}</h3>${html}`; }
 

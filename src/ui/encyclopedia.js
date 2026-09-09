@@ -4,11 +4,14 @@ export function createEncyclopedia() {
   const el = document.getElementById("encyclopedia");
   const titleEl = el.querySelector(".enc-title");
   const bodyEl = document.getElementById("enc-body");
+  const scrollEl = el.querySelector(".enc-scroll");
+
+  const codeToFile = (c) => String(c).replace(/[ .]/g, "_");
 
   el.querySelector(".enc-close").addEventListener("click", close);
   el.querySelector(".enc-back").addEventListener("click", close);
   window.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && el.classList.contains("open")) { e.stopPropagation(); close(); }
+    if (e.key === "Escape" && el.classList.contains("open")) { e.stopImmediatePropagation(); close(); }
   });
 
   const cache = new Map();
@@ -24,7 +27,7 @@ export function createEncyclopedia() {
 
   function card(code, it) {
     const img = it.image
-      ? `<img src="${IMG_BASE}${encodeURIComponent(code)}/${encodeURIComponent(it.image)}" alt="" loading="lazy" onerror="this.remove()">`
+      ? `<img src="${IMG_BASE}${encodeURIComponent(codeToFile(code))}/${encodeURIComponent(it.image)}" alt="" loading="lazy" onerror="this.remove()">`
       : "";
     const en = it.en ? `<span class="enc-card-en">${esc(it.en)}</span>` : "";
     return `<div class="enc-card">${img}<div class="enc-card-body"><b>${esc(it.zh)}</b> ${en}` +
@@ -71,12 +74,15 @@ export function createEncyclopedia() {
       h += section("推薦玩法", d.recommended.map((r) => `<p><b>${esc(r.zh)}</b> — ${esc(r.note || "")}</p>`).join(""));
 
     if (Array.isArray(d.credits) && d.credits.length)
-      h += section("圖片來源", `<ul class="enc-credits">` + d.credits.map((c) =>
-        `<li>${esc(c.title || c.file)} — ${esc(c.author)} / ${esc(c.license)} · <a href="${esc(c.source)}" target="_blank" rel="noopener">Wikimedia Commons</a></li>`
-      ).join("") + `</ul>`);
+      h += section("圖片來源", `<ul class="enc-credits">` + d.credits.map((c) => {
+        const head = `${esc(c.title || c.file)} — ${esc(c.author)} / ${esc(c.license)}`;
+        return /^https:\/\//.test(c.source)
+          ? `<li>${head} · <a href="${esc(c.source)}" target="_blank" rel="noopener">Wikimedia Commons</a></li>`
+          : `<li>${head}</li>`;
+      }).join("") + `</ul>`);
 
     bodyEl.innerHTML = h;
-    document.querySelector(".enc-scroll").scrollTop = 0;
+    scrollEl.scrollTop = 0;
   }
 
   async function open(code) {
@@ -85,11 +91,11 @@ export function createEncyclopedia() {
     bodyEl.innerHTML = `<p class="enc-dim">載入中…</p>`;
     el.classList.add("open");
     el.setAttribute("aria-hidden", "false");
-    document.querySelector(".enc-scroll").scrollTop = 0;
+    scrollEl.scrollTop = 0;
 
     if (cache.has(code)) { if (seq === reqSeq) render(code, cache.get(code)); return; }
     try {
-      const r = await fetch(`/data/deep/${encodeURIComponent(code).replace(/%20/g, "_").replace(/\./g, "_")}.json`);
+      const r = await fetch(`/data/deep/${encodeURIComponent(codeToFile(code))}.json`);
       if (seq !== reqSeq) return;            // 已切到別國
       if (!r.ok) throw new Error("not found");
       const d = await r.json();
