@@ -68,6 +68,11 @@ export function createClockWeather({ onForecast } = {}) {
       const { icon, label } = weatherCodeToIcon(j.current.weather_code);
       const html = `${icon} ${label} ${t}°C`;
       const forecast = parseForecast(j.daily);
+      // 「今天」格改用此刻的天氣代碼:當日彙總會把整天最顯著天氣(例如清晨一場毛毛雨)標成雨,
+      // 與使用者當下看到的窗外實況不符。最高/最低溫與降雨機率仍用當日值。
+      if (forecast && forecast.length && j.current && Number.isFinite(j.current.weather_code)) {
+        forecast[0].code = j.current.weather_code;
+      }
       cache.set(c.code, { at: Date.now(), html, forecast });   // A 的資料對 A 永遠有效,照存
       if (current && current.code === c.code) weatherHtml = html;
       emitForecast(c.code, forecast);

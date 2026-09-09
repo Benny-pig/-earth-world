@@ -9,6 +9,19 @@
   [hidden] { display: none !important; }
   #app { position: fixed; inset: 0; }
   canvas { display: block; }
+  #loading {
+    position: fixed; inset: 0; z-index: 100; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 22px;
+    background: radial-gradient(ellipse at center, #0a1020 0%, #05060d 70%);
+    color: #dfe8ff; font: 14px/1.6 system-ui, "Microsoft JhengHei", sans-serif;
+    transition: opacity .6s ease; opacity: 1;
+  }
+  #loading.done { opacity: 0; pointer-events: none; }
+  #loading .ld-title { font-size: 30px; font-weight: 700; letter-spacing: .35em; text-indent: .35em; }
+  #loading .ld-sub { font-size: 12px; color: #8fa3c8; letter-spacing: .15em; }
+  #loading .ld-track { width: 260px; height: 3px; border-radius: 3px; background: rgba(255,255,255,.12); overflow: hidden; }
+  #loading .ld-fill { height: 100%; width: 0; background: linear-gradient(90deg, #4da3ff, #8fd4ff); transition: width .3s ease; }
+  #loading .ld-pct { font-variant-numeric: tabular-nums; font-size: 12px; color: #9fb2d8; }
   #error-banner {
     position: fixed; left: 50%; top: 24px; transform: translateX(-50%);
     max-width: 80vw; padding: 12px 18px; border-radius: 8px;
@@ -108,6 +121,12 @@
 </head>
 <body>
   <div id="app"></div>
+  <div id="loading">
+    <div class="ld-title">地球世界</div>
+    <div class="ld-track"><div class="ld-fill" id="ld-fill"></div></div>
+    <div class="ld-pct" id="ld-pct">載入中… 0%</div>
+    <div class="ld-sub">EARTH WORLD</div>
+  </div>
   <div id="error-banner"></div>
   <div id="webgl-fallback">你的瀏覽器不支援 WebGL,無法顯示地球世界。<br>請改用較新版本的 Chrome / Edge / Firefox。</div>
   <div id="tooltip"></div>

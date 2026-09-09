@@ -34,6 +34,42 @@ function webglAvailable() {
   } catch { return false; }
 }
 
+// 首屏載入畫面:貼圖經 THREE.DefaultLoadingManager 追蹤,三個 JSON 由 bumpData() 手動計入。
+function setupLoadingScreen() {
+  const el = document.getElementById("loading");
+  const fill = document.getElementById("ld-fill");
+  const pctEl = document.getElementById("ld-pct");
+  const DATA_TOTAL = 3;
+  let texLoaded = 0, texTotal = 6, texDone = false, dataLoaded = 0, finished = false;
+
+  function paint() {
+    const loaded = texLoaded + dataLoaded;
+    const total = Math.max(loaded + (texDone ? 0 : 1), texTotal + DATA_TOTAL);
+    const p = Math.max(0, Math.min(100, Math.round((loaded / total) * 100)));
+    if (fill) fill.style.width = p + "%";
+    if (pctEl) pctEl.textContent = `載入中… ${p}%`;
+  }
+  function finish() {
+    if (finished) return;
+    finished = true;
+    clearTimeout(failsafe);
+    if (fill) fill.style.width = "100%";
+    if (pctEl) pctEl.textContent = "載入完成";
+    if (el) { el.classList.add("done"); setTimeout(() => el.remove(), 700); }
+  }
+  function maybeFinish() { if (texDone && dataLoaded >= DATA_TOTAL) finish(); }
+
+  THREE.DefaultLoadingManager.onProgress = (_url, loaded, total) => { texLoaded = loaded; texTotal = total; paint(); };
+  THREE.DefaultLoadingManager.onLoad = () => { texDone = true; texLoaded = texTotal; paint(); maybeFinish(); };
+  THREE.DefaultLoadingManager.onError = (url) => console.warn("[loading] 資源載入失敗:", url);
+  const failsafe = setTimeout(finish, 15000);   // 永遠不把使用者困在遮罩後面
+  paint();
+
+  return {
+    bumpData() { dataLoaded++; paint(); maybeFinish(); },
+  };
+}
+
 export function start() {
   if (!webglAvailable()) {
     document.getElementById("webgl-fallback").style.display = "grid";
@@ -49,6 +85,8 @@ export function start() {
   window.addEventListener("error", reportGlobalError);
   window.addEventListener("unhandledrejection", reportGlobalError);
 
+  const loading = setupLoadingScreen();
+
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1500);
   camera.position.set(0, 0, 3.2);
@@ -61,10 +99,11 @@ export function start() {
   scene.add(globe.lightRig);
 
   // 非同步載入 Natural Earth 110m 國界,掛在地球 group 上跟著自轉
+  const tap = (p) => p.finally(() => loading.bumpData());
   Promise.all([
-    fetch("/data/countries.geo.json").then((r) => { if (!r.ok) throw new Error("國界資料載入失敗 " + r.status); return r.json(); }),
-    fetch("/data/country-names-zh-hant.json").then((r) => (r.ok ? r.json() : {})).catch(() => ({})),
-    fetch("/data/countries.content.json").then((r) => (r.ok ? r.json() : {})).catch(() => ({})),
+    tap(fetch("/data/countries.geo.json").then((r) => { if (!r.ok) throw new Error("國界資料載入失敗 " + r.status); return r.json(); })),
+    tap(fetch("/data/country-names-zh-hant.json").then((r) => (r.ok ? r.json() : {})).catch(() => ({}))),
+    tap(fetch("/data/countries.content.json").then((r) => (r.ok ? r.json() : {})).catch(() => ({}))),
   ])
     .then(([geojson, zhHant, content]) => {
       setZhHantNames(zhHant);
