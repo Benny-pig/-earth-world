@@ -1,4 +1,4 @@
-import { weatherCodeToIcon, weekdayFromISODate, tzOffsetHours } from "/src/lib/geo.js";
+import { weatherCodeToIcon, weekdayFromISODate, tzOffsetHours, formatZonedTime } from "/src/lib/geo.js";
 
 export const MONTH_LABELS = ["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"];
 
@@ -19,10 +19,41 @@ export function createSidePanel({ onClose }) {
   const el = document.getElementById("side-panel");
   const body = document.getElementById("side-panel-body");
   let openCode = null;
+  let clockTz = null;
+  let clockTimer = null;
   el.querySelector(".close").addEventListener("click", () => { close(); });
   window.addEventListener("keydown", (e) => { if (e.key === "Escape" && el.classList.contains("open")) close(); });
 
   function section(title, html) { return `<h3>${title}</h3>${html}`; }
+
+  // 側欄內的當地時鐘,格式同首頁左上角的台灣時鐘,每秒更新。
+  function renderClock() {
+    const box = document.getElementById("sp-clock");
+    if (!box || !clockTz) return;
+    const { date, time, weekday } = formatZonedTime(new Date(), clockTz);
+    const oh = tzOffsetHours(clockTz);
+    let rel = "";
+    if (oh != null) {
+      const d = Math.round((oh - 8) * 10) / 10;
+      rel = d === 0 ? "與台灣同時" : `與台灣 ${d > 0 ? "+" : "−"}${Math.abs(d)} 小時`;
+    }
+    box.innerHTML =
+      `<div class="spc-label">當地時間${rel ? `　·　${rel}` : ""}</div>` +
+      `<div class="spc-date">${date}(${weekday})</div>` +
+      `<div class="spc-time">${time}</div>`;
+  }
+  function startClock(tz) {
+    stopClock();
+    clockTz = tz || null;
+    if (!clockTz) return;
+    renderClock();
+    clockTimer = setInterval(renderClock, 1000);
+  }
+  function stopClock() {
+    if (clockTimer) clearInterval(clockTimer);
+    clockTimer = null;
+    clockTz = null;
+  }
 
   function forecastHtml(days) {
     if (days === null) return `<p class="dim">未來一週天氣暫時取得不到。</p>`;
@@ -65,17 +96,11 @@ export function createSidePanel({ onClose }) {
     const meta = [];
     if (p.capital && p.capital.zh) meta.push(`首都:${esc(p.capital.zh)}${p.capital.en ? ` (${esc(p.capital.en)})` : ""}`);
     if (p.population != null && p.population !== "") meta.push(`人口:${fmtPop(p.population)}`);
-    if (p.timezone) {
-      const oh = tzOffsetHours(p.timezone);
-      let rel = "";
-      if (oh != null) {
-        const d = Math.round((oh - 8) * 10) / 10;   // 相對台灣(UTC+8)
-        rel = d === 0 ? "(與台灣同時)" : `(與台灣 ${d > 0 ? "+" : "−"}${Math.abs(d)} 小時)`;
-      }
-      meta.push(`時區:${esc(p.timezone)}${rel}`);
-    }
+    if (p.timezone) meta.push(`時區:${esc(p.timezone)}`);
     if (p.latlon) meta.push(`位置:${p.latlon[0].toFixed(1)}, ${p.latlon[1].toFixed(1)}`);
     if (meta.length) html += `<div class="meta">${meta.join("　·　")}</div>`;
+
+    if (p.timezone) html += `<div id="sp-clock" class="sp-clock"></div>`;
 
     if (p.features && p.features.length)
       html += section("特色", p.features.map((t) => `<p>${esc(t)}</p>`).join(""));
@@ -107,11 +132,13 @@ export function createSidePanel({ onClose }) {
 
     body.innerHTML = html;
     el.classList.add("open");
+    startClock(p.timezone);
   }
 
   function close() {
     if (!el.classList.contains("open")) return;
     openCode = null;
+    stopClock();
     el.classList.remove("open");
     onClose && onClose();
   }
