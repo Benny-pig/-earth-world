@@ -3,8 +3,8 @@ import { iterCountryPolygons, countryCode, countryNames } from "/src/countries/b
 
 const DEG = Math.PI / 180;
 const MAX_LABELS = 46;
-const MIN_AREA_NEAR = 3;     // deg^2 — when zoomed in, show countries this big or bigger
-const MIN_AREA_FAR = 260;    // deg^2 — when zoomed out, only very large countries
+const MIN_AREA_NEAR = 2;     // deg^2 — when zoomed in, show countries this big or bigger
+const MIN_AREA_FAR = 130;    // deg^2 — when zoomed out, only very large countries
 
 function latLonToDir(latDeg, lonDeg) {
   const lat = latDeg * DEG, lon = lonDeg * DEG, cl = Math.cos(lat);
@@ -64,7 +64,7 @@ export function createCountryLabels({ geojson, globeObject, camera, renderer }) 
       const facing = nrm.dot(camTo);
       ndc.copy(anchor).project(camera);
       if (ndc.z > 1 || facing < -0.05) { L.el.style.opacity = "0"; L.el.style.transform = "translate(-9999px,-9999px)"; continue; }
-      const fadeEdge = THREE.MathUtils.clamp((L.area / threshold - 1.0) / 0.4, 0, 1); // soft in/out as threshold crosses
+      const fadeEdge = 0.55 + 0.45 * THREE.MathUtils.clamp((L.area / threshold - 1.0) / 0.6, 0, 1); // readable floor + soft in/out
       const opacity = THREE.MathUtils.clamp((facing + 0.05) / 0.25, 0, 1) * fadeEdge;
       if (opacity <= 0.02) { L.el.style.opacity = "0"; L.el.style.transform = "translate(-9999px,-9999px)"; continue; }
       const x = rect.left + (ndc.x * 0.5 + 0.5) * rect.width;
