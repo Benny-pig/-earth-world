@@ -11,6 +11,7 @@ import { createCameraRig } from "/src/scene/camera-controls.js";
 import { buildBorders } from "/src/countries/borders.js";
 import { buildCountryLayer } from "/src/countries/country-layer.js";
 import { createTooltip } from "/src/ui/tooltip.js";
+import { createOceanLabels } from "/src/scene/ocean-labels.js";
 
 const container = document.getElementById("app");
 
@@ -95,6 +96,9 @@ export function start() {
   const rig = createCameraRig({ camera, domElement: renderer.domElement });
   window.__earth.rig = rig;
 
+  const oceanLabels = createOceanLabels({ globeObject: globe.object, camera, renderer });
+  window.__earth.oceanLabels = oceanLabels;
+
   // hover 暫停:用 raycaster 判斷游標是否指到地球(Task 7 會擴充成國家偵測,這裡先做地球層級)
   const raycaster = new THREE.Raycaster();
   const pointer = new THREE.Vector2(-2, -2);
@@ -139,6 +143,8 @@ export function start() {
       resumeTimer = setTimeout(() => { globe.setSpinPaused(false); resumeTimer = null; }, 1500);
     }
     rig.update(dt);
+
+    oceanLabels.update();
 
     composer.render();
     requestAnimationFrame(loop);
