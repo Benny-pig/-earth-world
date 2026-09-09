@@ -75,9 +75,9 @@ export function createStarfield() {
   const mwGeo = new THREE.SphereGeometry(420, 64, 64);
   const mwMat = new THREE.MeshBasicMaterial({
     side: THREE.BackSide,
-    color: 0x8a95b8,           // tints/dims the panorama so it never overpowers the globe
+    color: 0x9aa4c0,           // tints/dims the panorama so it never overpowers the globe
     transparent: true,
-    opacity: 0.9,
+    opacity: 0.85,
     depthWrite: false,
     fog: false,
   });
