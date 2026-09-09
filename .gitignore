@@ -3,3 +3,5 @@
 # 編輯器
 .vscode/
 .DS_Store
+# subagent-driven 工作區(ledger、批次產出暫存)
+.superpowers/
