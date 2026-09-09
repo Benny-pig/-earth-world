@@ -283,7 +283,10 @@ export function start() {
     if (window.__earth.countryLayer) hovered = window.__earth.countryLayer.pick(raycaster, globe.mesh);
     const hitGlobe = hovered || raycaster.intersectObject(globe.mesh, false).length > 0;
 
-    if (window.__earth.countryLayer) window.__earth.countryLayer.setHover(hovered ? hovered.code : null);
+    if (window.__earth.countryLayer) {
+      window.__earth.countryLayer.setHover(hovered ? hovered.code : null);
+      window.__earth.countryLayer.update(dt);
+    }
     if (hovered) tooltip.show(pointerPx.x, pointerPx.y, hovered.names);
     else tooltip.hide();
 

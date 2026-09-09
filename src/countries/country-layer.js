@@ -7,12 +7,15 @@ const HOVER_COLOR = 0x66e0ff;
 const BASE_OPACITY = 0.001;
 const HOVER_OPACITY = 0.28;
 
-const SELECT_SCALE = 1.055;
-const SELECT_OPACITY = 0.5;
+const SELECT_SCALE = 1.05;
+const SELECT_OPACITY = 0.42;
 const SELECT_COLOR = 0x4da3ff;
 const OUTLINE_COLOR = 0x9fe9ff;
-const OUTLINE_RADIUS = 1.06;
+const OUTLINE_RADIUS = 1.055;
 const OUTLINE_OPACITY = 0.9;
+const SEL_IN_SEC = 0.42;     // ease-in duration for the lift
+const SEL_OUT_SEC = 0.3;     // ease-out when deselecting
+const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
 
 function ringsToMeshGeometry(rings, radius) {
   // rings: [outer, hole1, ...] 每個是 [[lon,lat],...]
@@ -152,22 +155,31 @@ export function buildCountryLayer(geojson, { radius = 1.002 } = {}) {
     if (!w) return;
     w.scale.setScalar(1);
     const isHover = code === hoverCode;
-    w.userData.material.opacity = isHover ? HOVER_OPACITY : BASE_OPACITY;
-    w.userData.material.color.set(isHover ? HOVER_COLOR : 0xffffff);
+    const m = w.userData.material;
+    m.opacity = isHover ? HOVER_OPACITY : BASE_OPACITY;
+    m.color.set(isHover ? HOVER_COLOR : 0xffffff);
+    m.depthTest = false;      // 恢復預設:非選取狀態不參與深度測試
+    m.needsUpdate = true;
   }
+
+  let selT = 0;              // 0..1 選取抬起動畫進度
+  let releasing = null;      // { code, t } 正在緩降的前一個選取國
 
   function setSelected(code) {
     if (code === selectedCode) return;
-    if (selectedCode) restoreCountry(selectedCode);
+    if (selectedCode && meshByCode.has(selectedCode)) {
+      releasing = { code: selectedCode, t: selT };   // 交給 update() 緩降
+    }
     selectedCode = null;
     if (selOutline) selOutline.visible = false;
 
     if (!code || !meshByCode.has(code)) return;
     selectedCode = code;
+    selT = 0;
     const w = meshByCode.get(code);
-    w.scale.setScalar(SELECT_SCALE);
-    w.userData.material.opacity = SELECT_OPACITY;
     w.userData.material.color.set(SELECT_COLOR);
+    w.userData.material.depthTest = true;    // 選取國參與深度測試 → 繞到背面時被地球遮住,不再穿透
+    w.userData.material.needsUpdate = true;
 
     const geo = buildOutlineGeometry(w.userData.feature);
     if (!selOutline) {
@@ -183,6 +195,33 @@ export function buildCountryLayer(geojson, { radius = 1.002 } = {}) {
       selOutline.geometry = geo;
     }
     selOutline.visible = true;
+    if (releasing && releasing.code === code) releasing = null;
+  }
+
+  function applyLift(code, k) {
+    const w = meshByCode.get(code);
+    if (!w) return;
+    w.scale.setScalar(1 + (SELECT_SCALE - 1) * k);
+    w.userData.material.opacity = BASE_OPACITY + (SELECT_OPACITY - BASE_OPACITY) * k;
+  }
+
+  // 由主迴圈每幀呼叫:平滑的抬起 / 緩降,以及選取外框的柔和脈動。
+  function update(dt) {
+    if (selectedCode && meshByCode.has(selectedCode)) {
+      selT = Math.min(1, selT + dt / SEL_IN_SEC);
+      applyLift(selectedCode, easeOutCubic(selT));
+    }
+    if (releasing) {
+      releasing.t = Math.max(0, releasing.t - dt / SEL_OUT_SEC);
+      if (releasing.code !== selectedCode) applyLift(releasing.code, easeOutCubic(releasing.t));
+      if (releasing.t <= 0) {
+        if (releasing.code !== selectedCode) restoreCountry(releasing.code);
+        releasing = null;
+      }
+    }
+    if (selOutline && selOutline.visible) {
+      selOutline.material.opacity = OUTLINE_OPACITY * (0.72 + 0.28 * (0.5 + 0.5 * Math.sin(performance.now() * 0.0038)));
+    }
   }
 
   function pick(raycaster, occluder) {
@@ -202,5 +241,5 @@ export function buildCountryLayer(geojson, { radius = 1.002 } = {}) {
     return { code, names, centroidLatLon, pop: Number.isFinite(pop) ? pop : null };
   }
 
-  return { group, pick, setHover, setSelected, hasSelection: () => selectedCode != null, meshByCode };
+  return { group, pick, setHover, setSelected, update, hasSelection: () => selectedCode != null, meshByCode };
 }
