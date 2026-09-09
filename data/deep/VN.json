@@ -1,0 +1,230 @@
+{
+  "name_zh": "越南",
+  "name_en": "Vietnam",
+  "summary": "位於中南半島東岸的社會主義共和國,首都河內,最大城市為胡志明市。歷史上長期受中華文化影響,經歷法國殖民與二十世紀的長期戰爭,一九七五年統一;一九八六年革新開放後成為成長快速的製造業與農產出口國。",
+  "founding": [
+    "紅河三角洲一帶的東山文化(以銅鼓聞名)被視為越南文明的源頭,傳說中的鴻龐氏與雒越部族即活動於此。西元前一一一年漢朝將此地納入版圖,展開約一千年的「北屬時期」,漢字、儒學與行政制度隨之傳入。",
+    "九三九年吳權擊敗南漢軍,越南脫離中國的直接統治;此後歷經丁、前黎、李、陳、後黎等朝代,建立以升龍(今河內)為中心的獨立王國,多次擊退北方入侵,並向南擴張,兼併占婆並進入湄公河三角洲。",
+    "十九世紀初阮福映在法國協助下統一全國,一八○二年建立阮朝,定都順化。一八五八年起法國逐步入侵,至一八八○年代將越南、寮國、柬埔寨併為「法屬印度支那」。",
+    "二戰期間日本進駐,一九四五年胡志明領導的越盟宣布獨立,成立越南民主共和國。法國企圖重建殖民統治,爆發第一次印度支那戰爭,一九五四年奠邊府戰役後簽訂《日內瓦協定》,越南以北緯十七度線暫時分治。",
+    "分治後南北對立升高,美國自一九六○年代大規模介入,越南戰爭持續多年並波及寮國、柬埔寨。一九七三年美軍撤離,一九七五年北方部隊與南方民族解放陣線進入西貢,翌年南北統一為越南社會主義共和國。",
+    "統一初期實施計畫經濟,並與中國、柬埔寨發生邊境衝突。一九八六年推行「革新」(Đổi Mới)政策,開放市場與外資,經濟長期高速成長,成為紡織、電子與農產(稻米、咖啡、水產)的重要出口國,並積極參與區域經貿整合。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "越南社會主義共和國",
+    "area_km2": 331212,
+    "languages": [
+      "越南語"
+    ],
+    "religion": "多數國民無登記宗教;佛教、天主教、高台教、和好教並存",
+    "currency": "越南盾(VND)",
+    "government": "社會主義共和,一黨制,越南共產黨執政"
+  },
+  "animals": [
+    {
+      "zh": "亞洲水牛",
+      "en": "Water buffalo",
+      "note": "農村耕作與生活的象徵,常見於水田與村塘。"
+    },
+    {
+      "zh": "赤腿白臀葉猴",
+      "en": "Red-shanked douc",
+      "note": "中部森林的彩色葉猴,被稱為「穿花褲的猴子」。"
+    },
+    {
+      "zh": "中南大羚",
+      "en": "Saola",
+      "note": "一九九二年才在長山山脈被發現的牛科動物,極度瀕危,有「亞洲獨角獸」之稱。"
+    },
+    {
+      "zh": "亞洲象",
+      "en": "Asian elephant",
+      "note": "昔日用於運輸與慶典,現野生族群零星分布於中部高地。"
+    },
+    {
+      "zh": "湄公河巨鯰",
+      "en": "Mekong giant catfish",
+      "note": "湄公河的大型淡水魚,體長可逾兩公尺。"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "河粉",
+      "en": "Pho",
+      "note": "以牛骨或雞骨久熬高湯沖泡扁米粉,配生牛肉片與香草,源於北部。"
+    },
+    {
+      "zh": "越式法國麵包",
+      "en": "Banh mi",
+      "note": "酥脆小法棍夾肉、醃蘿蔔紅白絲、香菜與辣椒,是殖民時期食材本土化的產物。"
+    },
+    {
+      "zh": "生春捲",
+      "en": "Goi cuon",
+      "note": "米紙捲蝦、豬肉、米線與生菜,沾花生醬或魚露。"
+    },
+    {
+      "zh": "越南滴漏咖啡",
+      "en": "Ca phe sua da",
+      "note": "金屬濾杯滴煮的濃咖啡加煉乳與冰塊。"
+    },
+    {
+      "zh": "烤肉米線",
+      "en": "Bun cha",
+      "note": "炭烤豬肉餅與五花肉泡在酸甜魚露,配米線與生菜,河內名食。"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "下龍灣",
+      "en": "Ha Long Bay",
+      "note": "東北外海約兩千座石灰岩島嶼與海蝕地形,列世界自然遺產。",
+      "latlon": [
+        20.9101,
+        107.1839
+      ],
+      "image": "landmarks-halongbay.jpg"
+    },
+    {
+      "zh": "會安古鎮",
+      "en": "Hoi An Ancient Town",
+      "note": "十五至十九世紀的貿易港市街區,融合越、華、日、法建築,以夜間燈籠聞名。",
+      "latlon": [
+        15.8801,
+        108.338
+      ]
+    },
+    {
+      "zh": "順化皇城",
+      "en": "Imperial City of Hue",
+      "note": "阮朝的宮城與陵寢群,午門與紫禁城仿北京規制。",
+      "latlon": [
+        16.4698,
+        107.577
+      ],
+      "image": "landmarks-hue.jpg"
+    },
+    {
+      "zh": "木江界梯田",
+      "en": "Mu Cang Chai rice terraces",
+      "note": "西北山區苗族開墾的層疊水梯田,九、十月稻熟時金黃遍野。",
+      "latlon": [
+        21.708,
+        104.15
+      ],
+      "image": "landmarks-mucangchai.jpg"
+    },
+    {
+      "zh": "峰牙-己榜國家公園",
+      "en": "Phong Nha-Ke Bang National Park",
+      "note": "世界最大洞穴韓松洞所在的石灰岩溶洞群。",
+      "latlon": [
+        17.5333,
+        106.1167
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "胡志明",
+      "en": "Ho Chi Minh",
+      "note": "越南獨立運動與越盟領袖,越南民主共和國首任主席。",
+      "image": "people-hochiminh.jpg"
+    },
+    {
+      "zh": "二徵夫人",
+      "en": "Trung Sisters",
+      "note": "西元四十年起兵反抗漢朝統治的姊妹,越南最早的民族英雄象徵。"
+    },
+    {
+      "zh": "阮攸",
+      "en": "Nguyen Du",
+      "note": "十九世紀詩人,長篇敘事詩《金雲翹傳》被奉為國民文學。"
+    },
+    {
+      "zh": "武元甲",
+      "en": "Vo Nguyen Giap",
+      "note": "軍事統帥,指揮奠邊府戰役等關鍵戰事。"
+    },
+    {
+      "zh": "嘉隆帝(阮福映)",
+      "en": "Gia Long",
+      "note": "一八○二年統一越南、建立阮朝的開國君主。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "秋季的下龍灣與陸龍灣",
+      "note": "九至十一月天氣穩定、海面平靜,適合過夜遊船,並可延伸走寧平的陸龍灣划船看石山。"
+    },
+    {
+      "zh": "稻熟時節的西北山區",
+      "note": "九月下旬至十月上旬,沙壩與木江界梯田金黃,是健行與造訪山地部落的最佳時機。"
+    },
+    {
+      "zh": "乾季的湄公河三角洲",
+      "note": "十二至四月少雨,適合走訪水上市場、果園與芹苴一帶的河道生活。"
+    }
+  ],
+  "events": [
+    {
+      "year": -111,
+      "zh": "漢朝將今越南北部納入版圖,開啟約千年的北屬時期。"
+    },
+    {
+      "year": 939,
+      "zh": "吳權於白藤江之役後建立獨立政權,結束北屬時期。"
+    },
+    {
+      "year": 1802,
+      "zh": "阮福映統一全國,建立阮朝,定都順化。"
+    },
+    {
+      "year": 1858,
+      "zh": "法國開始入侵,其後越南成為法屬印度支那的一部分。"
+    },
+    {
+      "year": 1945,
+      "zh": "胡志明宣布獨立,成立越南民主共和國。"
+    },
+    {
+      "year": 1975,
+      "zh": "南北戰事結束,翌年統一為越南社會主義共和國。"
+    },
+    {
+      "year": 1986,
+      "zh": "推行「革新」政策,轉向市場經濟與對外開放。"
+    }
+  ],
+  "credits": [
+    {
+      "file": "landmarks-halongbay.jpg",
+      "title": "Halong Bay, Vietnam",
+      "author": "Thomas Hirsch",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Halong_Bay_in_Vietnam.jpg"
+    },
+    {
+      "file": "landmarks-hue.jpg",
+      "title": "Meridian Gate, Imperial City of Hue",
+      "author": "Vyacheslav Argenberg",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Vietnam,_Hue,_Imperial_City_of_Hue,_The_Meridian_Gate.jpg"
+    },
+    {
+      "file": "landmarks-mucangchai.jpg",
+      "title": "Mu Cang Chai rice terraces",
+      "author": "Viethavvh",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Mu_Cang_Chai.jpg"
+    },
+    {
+      "file": "people-hochiminh.jpg",
+      "title": "Ho Chi Minh, 1946",
+      "author": "不詳(一九四六年攝)",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Ho_Chi_Minh_1946.jpg"
+    }
+  ],
+  "code": "VN"
+}

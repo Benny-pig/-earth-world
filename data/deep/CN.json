@@ -1,0 +1,262 @@
+{
+  "name_zh": "中國",
+  "name_en": "China",
+  "summary": "位於東亞的大國,首都北京,人口逾十四億。擁有數千年連續發展的文明,歷經多個王朝與一九四九年建立的中華人民共和國;今日為全球第二大經濟體與最大的製造業與貨物貿易國之一。",
+  "founding": [
+    "中華文明的源頭可上溯至黃河與長江流域的新石器文化;傳世文獻記載夏、商、周三代,其中商代已有成熟的甲骨文與青銅器。周代確立封建與禮樂制度,春秋戰國時期諸子百家爭鳴,奠定此後兩千年的思想基礎。",
+    "西元前二二一年秦始皇統一六國,建立中央集權的郡縣制,並統一文字與度量衡。漢朝繼之,國祚約四百年,儒學成為官學,並經由絲路與中亞、西方世界往來,「漢」也成為主體民族之名。",
+    "漢末以降經歷魏晉南北朝的分裂與民族融合,隋唐重新統一,唐代長安為當時世界最大的城市之一。其後宋代商業與科技(印刷術、火藥、指南針)高度發展,元、明、清三代先後由蒙古、漢、滿統治者建立,疆域與人口大幅擴張。",
+    "十九世紀清朝在鴉片戰爭後與列強簽訂多項條約,國力衰退。一九一一年辛亥革命推翻帝制,翌年中華民國成立。此後歷經軍閥割據、北伐、對日抗戰(一九三七至一九四五)與國共內戰。",
+    "一九四九年中國共產黨在內戰中取得中國大陸的控制權,成立中華人民共和國,中華民國政府遷往台灣。建國初期推動土地改革與工業化,並經歷大躍進、文化大革命等政治運動。",
+    "一九七八年起推行改革開放,引入市場機制與外資,經濟長期高速成長,數億人口脫離貧困,城市化與基礎建設大幅推進。二○一○年前後成為世界第二大經濟體,在製造業、貿易與部分科技領域具全球影響力,同時面對人口結構、區域差距與環境等課題。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "中華人民共和國",
+    "area_km2": 9596961,
+    "languages": [
+      "漢語(現代標準漢語)"
+    ],
+    "religion": "官方不設國教;民間信仰與佛教、道教流傳廣泛,另有基督宗教、伊斯蘭教等",
+    "currency": "人民幣(CNY)",
+    "government": "社會主義共和,人民代表大會制,中國共產黨執政"
+  },
+  "animals": [
+    {
+      "zh": "大貓熊",
+      "en": "Giant panda",
+      "note": "僅分布於四川、陝西、甘肅山區,以竹為食,為國際保育的象徵。",
+      "image": "animals-panda.jpg"
+    },
+    {
+      "zh": "川金絲猴",
+      "en": "Golden snub-nosed monkey",
+      "note": "棲息高山森林的橙金色靈長類,群居於川、陝、甘一帶。"
+    },
+    {
+      "zh": "揚子鱷",
+      "en": "Chinese alligator",
+      "note": "長江下游特有的小型鱷,野生數量稀少。"
+    },
+    {
+      "zh": "丹頂鶴",
+      "en": "Red-crowned crane",
+      "note": "在東北濕地繁殖的大型涉禽,文化上象徵長壽。"
+    },
+    {
+      "zh": "藏羚羊",
+      "en": "Tibetan antelope",
+      "note": "青藏高原特有,曾因盜獵瀕危,近年族群回升。"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "北京烤鴨",
+      "en": "Peking duck",
+      "note": "果木炭火烤製、皮酥的填鴨,片皮沾甜麵醬以薄餅捲食。",
+      "image": "foods-pekingduck.jpg"
+    },
+    {
+      "zh": "小籠包",
+      "en": "Xiaolongbao",
+      "note": "江南薄皮灌湯包,以蒸籠現蒸,咬破吸湯。"
+    },
+    {
+      "zh": "麻婆豆腐",
+      "en": "Mapo tofu",
+      "note": "四川名菜,豆腐與牛絞肉燴以豆瓣、花椒,麻辣鮮香。"
+    },
+    {
+      "zh": "餃子",
+      "en": "Jiaozi",
+      "note": "麵皮包餡水煮或煎製,北方年節必食。"
+    },
+    {
+      "zh": "火鍋",
+      "en": "Hot pot",
+      "note": "圍爐涮煮肉片與蔬菜,以重慶、四川的紅油麻辣鍋最具代表。"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "萬里長城",
+      "en": "Great Wall of China",
+      "note": "歷代為防禦北方修築的城牆體系,現存多為明代磚石段,慕田峪、八達嶺開放參觀。",
+      "latlon": [
+        40.4319,
+        116.5704
+      ],
+      "image": "landmarks-greatwall.jpg"
+    },
+    {
+      "zh": "紫禁城(故宮)",
+      "en": "Forbidden City",
+      "note": "明清兩代皇宮,北京中軸線上規模最大的木構建築群,今為故宮博物院。",
+      "latlon": [
+        39.9163,
+        116.3972
+      ],
+      "image": "landmarks-forbiddencity.jpg"
+    },
+    {
+      "zh": "秦始皇兵馬俑",
+      "en": "Terracotta Army",
+      "note": "西安秦始皇陵陪葬坑出土的陶製軍陣,數以千計,面貌各異。",
+      "latlon": [
+        34.3853,
+        109.2785
+      ],
+      "image": "landmarks-terracotta.jpg"
+    },
+    {
+      "zh": "灕江與桂林山水",
+      "en": "Li River karst landscape",
+      "note": "桂林至陽朔一段的喀斯特峰林與清流,是中國山水畫的經典意象。",
+      "latlon": [
+        24.849,
+        110.663
+      ],
+      "image": "landmarks-lijiang.jpg"
+    },
+    {
+      "zh": "布達拉宮",
+      "en": "Potala Palace",
+      "note": "拉薩紅山上的宮堡建築群,歷代達賴喇嘛的冬宮,列世界遺產。",
+      "latlon": [
+        29.6578,
+        91.117
+      ],
+      "image": "landmarks-potala.jpg"
+    }
+  ],
+  "people": [
+    {
+      "zh": "孔子",
+      "en": "Confucius",
+      "note": "春秋思想家,儒家創始人,學說影響東亞兩千餘年。",
+      "image": "people-confucius.jpg"
+    },
+    {
+      "zh": "秦始皇",
+      "en": "Qin Shi Huang",
+      "note": "首位統一中國的皇帝,建立郡縣制並統一文字與度量衡。"
+    },
+    {
+      "zh": "李白",
+      "en": "Li Bai",
+      "note": "唐代詩人,以豪放飄逸的詩風被譽為「詩仙」。"
+    },
+    {
+      "zh": "蔡倫",
+      "en": "Cai Lun",
+      "note": "東漢宦官,改良造紙術,推動書寫材料普及。"
+    },
+    {
+      "zh": "鄧小平",
+      "en": "Deng Xiaoping",
+      "note": "一九七八年後主導改革開放政策的領導人。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "秋季的北京",
+      "note": "九至十一月天高氣爽,適合走長城、逛故宮與胡同,香山紅葉多在十月下旬。"
+    },
+    {
+      "zh": "四月的桂林陽朔",
+      "note": "春雨後灕江水量足、峰林含煙,可搭竹筏或騎單車遊十里畫廊。"
+    },
+    {
+      "zh": "盛夏的九寨溝與川西",
+      "note": "六至九月高原氣候涼爽,湖泊色彩最豐富,並可延伸探訪成都的貓熊基地。"
+    }
+  ],
+  "events": [
+    {
+      "year": -221,
+      "zh": "秦始皇滅六國,建立中央集權的統一帝國。"
+    },
+    {
+      "year": 618,
+      "zh": "唐朝建立,開啟中古中國的鼎盛時期。"
+    },
+    {
+      "year": 1271,
+      "zh": "忽必烈建國號元,一二七九年滅南宋、統一全國。"
+    },
+    {
+      "year": 1421,
+      "zh": "明成祖正式遷都北京,紫禁城建成啟用。"
+    },
+    {
+      "year": 1911,
+      "zh": "辛亥革命爆發,結束兩千餘年帝制,翌年中華民國成立。"
+    },
+    {
+      "year": 1949,
+      "zh": "中華人民共和國成立,中華民國政府遷往台灣。"
+    },
+    {
+      "year": 1978,
+      "zh": "中共十一屆三中全會後推行改革開放。"
+    }
+  ],
+  "credits": [
+    {
+      "file": "animals-panda.jpg",
+      "title": "Giant panda at Chengdu Research Base",
+      "author": "Colegota",
+      "license": "CC BY-SA 2.5 ES",
+      "source": "https://commons.wikimedia.org/wiki/File:Chengdu-pandas-d10.jpg"
+    },
+    {
+      "file": "foods-pekingduck.jpg",
+      "title": "Sliced Peking duck",
+      "author": "Daifawei",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sliced_Peking_Duck.jpg"
+    },
+    {
+      "file": "landmarks-greatwall.jpg",
+      "title": "Great Wall at Mutianyu",
+      "author": "J. Samuel Burner",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Great_Wall_at_Mutianyu.jpg"
+    },
+    {
+      "file": "landmarks-forbiddencity.jpg",
+      "title": "Hall of Supreme Harmony, Forbidden City",
+      "author": "Peter K Burian",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Hall_of_Supreme_Harmony_2018._Forbidden_City.jpg"
+    },
+    {
+      "file": "landmarks-terracotta.jpg",
+      "title": "Terracotta Army, Pit 1",
+      "author": "Gary Todd",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Qin_Shihuang_Terracotta_Army,_Pit_1.jpg"
+    },
+    {
+      "file": "landmarks-lijiang.jpg",
+      "title": "Li River near Yangshuo, Guilin",
+      "author": "chensiyuan",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:1_li_jiang_guilin_yangshuo_2011.jpg"
+    },
+    {
+      "file": "landmarks-potala.jpg",
+      "title": "The Potala Palace in Lhasa",
+      "author": "Bernt Rostad",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:The_Potala_Palace_in_Lhasa.jpg"
+    },
+    {
+      "file": "people-confucius.jpg",
+      "title": "Portrait of Confucius (traditionally attributed to Wu Daozi)",
+      "author": "傳吳道子(唐代)",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Confucius_Tang_Dynasty.jpg"
+    }
+  ],
+  "code": "CN"
+}

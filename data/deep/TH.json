@@ -1,0 +1,254 @@
+{
+  "name_zh": "泰國",
+  "name_en": "Thailand",
+  "summary": "位於中南半島中部的君主立憲國家,首都曼谷。歷史上以「暹羅」之名成為東南亞唯一未被歐洲殖民的國家,今以觀光、稻米出口與電子業聞名,上座部佛教深植社會。",
+  "founding": [
+    "泰人先民約於第一千年紀自中國南方逐步南遷,與孟人、高棉人的文化交融。十三世紀中葉素可泰王國興起,傳統上被視為泰族第一個統一王國,蘭甘亨王時期據信創製泰文字母,並奉錫蘭系上座部佛教為國教。",
+    "十四世紀大城王國(阿瑜陀耶)崛起,取代素可泰,成為中南半島強權,與中國、印度、波斯及後來的歐洲商船貿易往來達四百年。一七六七年大城被緬甸攻陷焚毀,鄭信(達信王)迅速復國,建都吞武里。",
+    "一七八二年卻克里將軍即位為拉瑪一世,建立延續至今的卻克里王朝,遷都對岸的曼谷。十九世紀拉瑪四世、五世(朱拉隆功)推行改革,廢除奴隸制、興辦鐵路與新式行政,並以外交手腕在英、法之間維持獨立。",
+    "一九三二年一場不流血政變結束君主專制,泰國改行君主立憲。此後政局長期由文人政府與軍方輪替,發生多次政變;一九三九年正式將國名由「暹羅」改為「泰國」。",
+    "二戰期間泰國與日本結盟,戰後迅速修好西方,冷戰時成為美國在東南亞的重要夥伴。一九六○年代起經濟以出口與觀光帶動成長,躋身中等收入國家。",
+    "蒲美蓬(拉瑪九世)在位七十年(一九四六至二○一六),被廣泛視為國家凝聚的象徵。當代泰國經濟以汽車、電子、旅遊與農產出口為支柱,同時經歷數次憲政更迭與政治對立。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "泰王國",
+    "area_km2": 513120,
+    "languages": [
+      "泰語"
+    ],
+    "religion": "以上座部佛教為主(約九成),南部有伊斯蘭教少數",
+    "currency": "泰銖(THB)",
+    "government": "議會制君主立憲"
+  },
+  "animals": [
+    {
+      "zh": "亞洲象",
+      "en": "Asian elephant",
+      "note": "泰國國家象徵,昔用於戰爭與林業,今多見於保育營與寺廟。",
+      "image": "animals-elephant.jpg"
+    },
+    {
+      "zh": "白掌長臂猿",
+      "en": "Lar gibbon",
+      "note": "熱帶雨林樹冠層的靈長類,以晨間鳴唱聞名。"
+    },
+    {
+      "zh": "暹羅鬥魚",
+      "en": "Siamese fighting fish",
+      "note": "原生於泰國中部水田,雄魚色彩豔麗且好鬥,二○一九年獲訂為國魚。"
+    },
+    {
+      "zh": "暹羅貓",
+      "en": "Siamese cat",
+      "note": "原產泰國的古老品種,曾為宮廷與寺院所養。"
+    },
+    {
+      "zh": "灣鱷",
+      "en": "Saltwater crocodile",
+      "note": "昔日分布沿海與河口,現野生族群稀少。"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "泰式炒河粉",
+      "en": "Pad thai",
+      "note": "米粉與蝦、豆芽、花生、羅望子醬同炒,酸甜鹹兼具的國民料理。",
+      "image": "foods-padthai.jpg"
+    },
+    {
+      "zh": "冬蔭功",
+      "en": "Tom yum goong",
+      "note": "香茅、南薑、檸檬葉與辣椒煮成的酸辣蝦湯。"
+    },
+    {
+      "zh": "綠咖哩",
+      "en": "Green curry",
+      "note": "綠咖哩醬加椰漿燉肉與茄子,香辣濃郁。"
+    },
+    {
+      "zh": "芒果糯米飯",
+      "en": "Mango sticky rice",
+      "note": "椰漿糯米配熟芒果,再淋上椰奶的經典甜點。"
+    },
+    {
+      "zh": "打拋豬",
+      "en": "Pad kaphrao",
+      "note": "絞肉與聖羅勒、辣椒快炒,佐白飯與煎蛋。"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "大皇宮與玉佛寺",
+      "en": "Grand Palace and Wat Phra Kaew",
+      "note": "一七八二年起的王室宮殿群,玉佛寺供奉泰國最神聖的翡翠佛。",
+      "latlon": [
+        13.75,
+        100.4915
+      ],
+      "image": "landmarks-grandpalace.jpg"
+    },
+    {
+      "zh": "鄭王廟(黎明寺)",
+      "en": "Wat Arun",
+      "note": "昭披耶河西岸的高棉式佛塔,外覆彩瓷,晨昏景色著稱。",
+      "latlon": [
+        13.7437,
+        100.4888
+      ],
+      "image": "landmarks-watarun.jpg"
+    },
+    {
+      "zh": "臥佛寺",
+      "en": "Wat Pho",
+      "note": "曼谷最古老的寺院之一,供奉四十六公尺長的鍍金臥佛,也是泰式按摩發源地。",
+      "latlon": [
+        13.7465,
+        100.4927
+      ],
+      "image": "landmarks-watpho.jpg"
+    },
+    {
+      "zh": "大城歷史公園",
+      "en": "Ayutthaya Historical Park",
+      "note": "舊都遺址,瑪哈泰寺被榕樹根包覆的佛頭是代表影像。",
+      "latlon": [
+        14.357,
+        100.568
+      ],
+      "image": "landmarks-ayutthaya.jpg"
+    },
+    {
+      "zh": "素可泰歷史公園",
+      "en": "Sukhothai Historical Park",
+      "note": "十三、十四世紀古都遺跡,坐佛與蓮苞式佛塔展現素可泰藝術。",
+      "latlon": [
+        17.021,
+        99.703
+      ],
+      "image": "landmarks-sukhothai.jpg"
+    }
+  ],
+  "people": [
+    {
+      "zh": "拉瑪一世",
+      "en": "King Rama I (Phutthayotfa Chulalok)",
+      "note": "卻克里王朝開國君主,一七八二年定都曼谷。"
+    },
+    {
+      "zh": "鄭信(達信王)",
+      "en": "King Taksin",
+      "note": "大城陷落後領導復國,建立吞武里王朝。"
+    },
+    {
+      "zh": "拉瑪五世(朱拉隆功)",
+      "en": "King Chulalongkorn",
+      "note": "推動廢奴與現代化改革,被尊為「大帝」。"
+    },
+    {
+      "zh": "蒲美蓬(拉瑪九世)",
+      "en": "Bhumibol Adulyadej",
+      "note": "在位七十年的國王,推動皇家發展計畫。"
+    },
+    {
+      "zh": "阿比查邦·魏拉希達庫",
+      "en": "Apichatpong Weerasethakul",
+      "note": "電影導演,《波米叔叔的前世今生》奪坎城金棕櫚。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "涼季的曼谷與大城",
+      "note": "十一月至二月天氣乾爽,適合逛寺廟、水上市場與昭披耶河遊船,並可一日往返大城古蹟。"
+    },
+    {
+      "zh": "四月的宋干節(潑水節)",
+      "note": "全國以潑水互祝新年,清邁古城的慶祝規模最盛,也是拜訪長者與浴佛的節日。"
+    },
+    {
+      "zh": "雨季後的清邁與北部山區",
+      "note": "十至十一月稻田金黃、瀑布水量足,可體驗山地部落與手工藝村。"
+    }
+  ],
+  "events": [
+    {
+      "year": 1238,
+      "zh": "素可泰王國建立(傳統繫年),泰族政權雛形出現。"
+    },
+    {
+      "year": 1351,
+      "zh": "大城王國(阿瑜陀耶)建立,主導中南半島數個世紀。"
+    },
+    {
+      "year": 1767,
+      "zh": "緬甸攻陷大城,鄭信隨即復國並建都吞武里。"
+    },
+    {
+      "year": 1782,
+      "zh": "拉瑪一世即位,卻克里王朝建立,遷都曼谷。"
+    },
+    {
+      "year": 1932,
+      "zh": "不流血政變結束君主專制,改行君主立憲。"
+    },
+    {
+      "year": 1939,
+      "zh": "國名由「暹羅」正式改為「泰國」。"
+    },
+    {
+      "year": 2016,
+      "zh": "蒲美蓬國王逝世,結束七十年在位,由拉瑪十世繼位。"
+    }
+  ],
+  "credits": [
+    {
+      "file": "animals-elephant.jpg",
+      "title": "Asian elephant at a Chiang Mai sanctuary",
+      "author": "James B Cutchin",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Asian_Elephant_in_Thailand.jpg"
+    },
+    {
+      "file": "foods-padthai.jpg",
+      "title": "Pad thai served in Bangkok",
+      "author": "Edgardo W. Olivera",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pad_Thai_en_Bangkok,_Tailandia_(23790424338).jpg"
+    },
+    {
+      "file": "landmarks-grandpalace.jpg",
+      "title": "Grand Palace and Wat Phra Kaew, Bangkok",
+      "author": "Phillip Maiwald",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bangkok_Grand_Palace_Wat_Phra_Kaew_triple.jpg"
+    },
+    {
+      "file": "landmarks-watarun.jpg",
+      "title": "Wat Arun, Bangkok",
+      "author": "Diego Delso",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Templo_Wat_Arun,_Bangkok,_Tailandia,_2013-08-22,_DD_37.jpg"
+    },
+    {
+      "file": "landmarks-watpho.jpg",
+      "title": "Wat Pho, Bangkok",
+      "author": "Vyacheslav Argenberg",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Wat_Pho,_Bangkok,_Thailand.jpg"
+    },
+    {
+      "file": "landmarks-ayutthaya.jpg",
+      "title": "Buddha head in tree roots, Wat Mahathat, Ayutthaya",
+      "author": "Alex Kovacheva",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ayutthaya_Thailand_Wat_Mahathat_Buddas_Head_in_Tree.JPG"
+    },
+    {
+      "file": "landmarks-sukhothai.jpg",
+      "title": "Wat Mahathat, Sukhothai",
+      "author": "Wiriya Somboonphol",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Wat_Mahathat_Sukhothai.jpg"
+    }
+  ],
+  "code": "TH"
+}

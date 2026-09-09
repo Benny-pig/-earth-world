@@ -1,0 +1,246 @@
+{
+  "name_zh": "南韓",
+  "name_en": "South Korea",
+  "summary": "位於朝鮮半島南半部的東亞國家,首都首爾。二十世紀後半自戰後廢墟快速工業化,如今是以半導體、造船、汽車與流行文化聞名的已開發經濟體,與北方的朝鮮民主主義人民共和國仍處於分治狀態。",
+  "founding": [
+    "朝鮮半島的政治體最早可追溯到傳說中的古朝鮮(檀君朝鮮),以及西元前後的三國時代——高句麗、百濟與新羅。七世紀新羅在唐朝協助下統一半島大部,形成統一新羅,佛教與漢字文化在此時深植半島。",
+    "九一八年王建建立高麗王朝,國名成為西方語言中「Korea」的由來;高麗以青瓷與木刻大藏經著稱,並長期周旋於契丹、蒙古等北方勢力之間。一三九二年李成桂推翻高麗,建立朝鮮王朝(李氏朝鮮),定都漢陽(今首爾),尊崇儒學。世宗大王在位期間主導創制韓文字母諺文。",
+    "朝鮮王朝維持約五百年,後期國力衰退,曾遭壬辰倭亂等外患。一八九七年高宗改國號為「大韓帝國」,推動近代化,但一九一○年被日本併吞,進入長達三十五年的殖民統治,期間推行同化政策,也激起一九一九年的三一獨立運動。",
+    "一九四五年二戰結束,朝鮮半島以北緯三十八度線為界,分別由美國與蘇聯接管。一九四八年南部成立大韓民國,李承晚任首任總統;北部另立政權。一九五○年韓戰爆發,戰事持續三年,一九五三年簽署停戰協定,半島分治延續至今。",
+    "戰後南韓歷經威權統治與多次政變,自一九六○年代起推動出口導向工業化,締造「漢江奇蹟」。一九八七年民主化後政黨輪替成為常態,一九九六年加入經濟合作暨發展組織(OECD),躋身已開發國家。",
+    "進入二十一世紀,南韓在半導體、顯示器、造船與汽車等產業居全球領先地位,K-pop、韓劇與電影等「韓流」文化輸出世界各地;同時面臨少子化、高齡化與南北關係等長期課題。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "大韓民國",
+    "area_km2": 100210,
+    "languages": [
+      "韓語"
+    ],
+    "religion": "無國教;約半數國民無特定宗教,基督宗教(新教、天主教)與佛教為主要信仰",
+    "currency": "韓元(KRW)",
+    "government": "單一制總統制共和,總統直選"
+  },
+  "animals": [
+    {
+      "zh": "珍島犬",
+      "en": "Jindo dog",
+      "note": "原產全羅南道珍島的忠犬品種,列為南韓天然紀念物。"
+    },
+    {
+      "zh": "東北虎(韓國虎)",
+      "en": "Siberian tiger",
+      "note": "昔日遍布半島,是民間傳說與神話中的常見角色。"
+    },
+    {
+      "zh": "丹頂鶴",
+      "en": "Red-crowned crane",
+      "note": "冬季造訪非軍事區一帶的大型候鳥,象徵長壽與純潔。"
+    },
+    {
+      "zh": "喜鵲",
+      "en": "Oriental magpie",
+      "note": "常見於村落,被視為帶來喜訊的「報喜鳥」。"
+    },
+    {
+      "zh": "長尾斑羚",
+      "en": "Long-tailed goral",
+      "note": "棲息山地岩壁的瀕危有蹄類,也是天然紀念物。"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "泡菜",
+      "en": "Kimchi",
+      "note": "白菜、蘿蔔加辣椒粉發酵的醃漬菜,幾乎每餐必備;醃泡菜文化列入非物質文化遺產。",
+      "image": "foods-kimchi.jpg"
+    },
+    {
+      "zh": "拌飯",
+      "en": "Bibimbap",
+      "note": "白飯鋪上各式蔬菜、肉末、煎蛋與辣椒醬,拌勻食用,以全州拌飯最有名。",
+      "image": "foods-bibimbap.jpg"
+    },
+    {
+      "zh": "韓式烤肉",
+      "en": "Bulgogi and galbi",
+      "note": "醬醃牛肉在桌上炭火或鐵盤現烤,佐生菜包食。"
+    },
+    {
+      "zh": "辣炒年糕",
+      "en": "Tteokbokki",
+      "note": "圓柱年糕與魚板以辣甜醬翻炒,是國民級街頭小吃。"
+    },
+    {
+      "zh": "參雞湯",
+      "en": "Samgyetang",
+      "note": "童子雞塞入糯米、人參與紅棗慢燉,夏季伏日進補。"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "景福宮",
+      "en": "Gyeongbokgung",
+      "note": "朝鮮王朝正宮,一三九五年始建,毀於戰火後多次重建,今為首爾核心古蹟。",
+      "latlon": [
+        37.5796,
+        126.977
+      ],
+      "image": "landmarks-gyeongbokgung.jpg"
+    },
+    {
+      "zh": "佛國寺",
+      "en": "Bulguksa",
+      "note": "慶州新羅古剎,與石窟庵同列世界遺產,多寶塔、釋迦塔為國寶。",
+      "latlon": [
+        35.7901,
+        129.332
+      ],
+      "image": "landmarks-bulguksa.jpg"
+    },
+    {
+      "zh": "城山日出峰",
+      "en": "Seongsan Ilchulbong",
+      "note": "濟州島東端的火山凝灰岩丘,巨大火口如城郭,是觀日出名所。",
+      "latlon": [
+        33.458,
+        126.9425
+      ],
+      "image": "landmarks-seongsan.jpg"
+    },
+    {
+      "zh": "N首爾塔",
+      "en": "N Seoul Tower",
+      "note": "矗立南山的通訊觀景塔,可俯瞰首爾全景與夜景,以情侶掛鎖聞名。",
+      "latlon": [
+        37.5512,
+        126.9882
+      ],
+      "image": "landmarks-nseoultower.jpg"
+    },
+    {
+      "zh": "北村韓屋村",
+      "en": "Bukchon Hanok Village",
+      "note": "景福宮與昌德宮之間的傳統韓屋聚落,巷弄保留朝鮮時代的居住風貌。",
+      "latlon": [
+        37.5826,
+        126.985
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "世宗大王",
+      "en": "Sejong the Great",
+      "note": "朝鮮第四代君主,主持創制韓文字母諺文,獎勵科學與農政。"
+    },
+    {
+      "zh": "李舜臣",
+      "en": "Yi Sun-sin",
+      "note": "壬辰戰爭水軍統帥,以龜船屢敗日本艦隊。"
+    },
+    {
+      "zh": "潘基文",
+      "en": "Ban Ki-moon",
+      "note": "外交官,二○○七至二○一六年任聯合國第八任秘書長。"
+    },
+    {
+      "zh": "白南準",
+      "en": "Nam June Paik",
+      "note": "錄像藝術先驅,被視為「錄像藝術之父」。"
+    },
+    {
+      "zh": "奉俊昊",
+      "en": "Bong Joon-ho",
+      "note": "電影導演,《寄生上流》奪坎城金棕櫚與奧斯卡最佳影片。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "春季賞櫻的鎮海",
+      "note": "每年三月底至四月初,慶尚南道鎮海軍港節數十萬株櫻花齊放,余佐川橋與慶和站是經典拍攝點。"
+    },
+    {
+      "zh": "初雪時節的首爾宮殿",
+      "note": "十一至十二月景福宮、昌德宮的雪景與傳統瓦頂相映,可體驗夜間開放與韓服租借。"
+    },
+    {
+      "zh": "秋天的雪嶽山",
+      "note": "十月中下旬楓紅最盛,搭權金城纜車或走蔚山岩步道,是韓國賞楓首選。"
+    }
+  ],
+  "events": [
+    {
+      "year": 676,
+      "zh": "新羅統一朝鮮半島大部,開啟統一新羅時代。"
+    },
+    {
+      "year": 918,
+      "zh": "王建建立高麗王朝,西方語言中「Korea」之名源於此。"
+    },
+    {
+      "year": 1392,
+      "zh": "李成桂建立朝鮮王朝,翌年遷都漢陽(今首爾)。"
+    },
+    {
+      "year": 1446,
+      "zh": "世宗大王頒行《訓民正音》,推廣新創的韓文字母。"
+    },
+    {
+      "year": 1910,
+      "zh": "日本併吞大韓帝國,展開三十五年殖民統治。"
+    },
+    {
+      "year": 1948,
+      "zh": "大韓民國政府成立,朝鮮半島形成南北兩個政權。"
+    },
+    {
+      "year": 1950,
+      "zh": "韓戰爆發,一九五三年簽署停戰協定,南北分治延續至今。"
+    }
+  ],
+  "credits": [
+    {
+      "file": "foods-kimchi.jpg",
+      "title": "Napa cabbage kimchi",
+      "author": "Jeremy Keith",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Korean_cuisine-Kimchi-08.jpg"
+    },
+    {
+      "file": "foods-bibimbap.jpg",
+      "title": "Korean bibimbap",
+      "author": "abex",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Korean.food-Bibimbap-02.jpg"
+    },
+    {
+      "file": "landmarks-gyeongbokgung.jpg",
+      "title": "Gyeongbokgung Palace, Seoul",
+      "author": "Richard Mortel",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Gyeongbokgung_Palace,_Seoul,_1395_(65)_(40418877294).jpg"
+    },
+    {
+      "file": "landmarks-bulguksa.jpg",
+      "title": "Dabotap Pagoda at Bulguksa, Gyeongju",
+      "author": "hiro kobashi",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Korea-Gyeongju-Bulguksa-Dabotap_Pagoda-01.jpg"
+    },
+    {
+      "file": "landmarks-seongsan.jpg",
+      "title": "Seongsan Ilchulbong, Jeju Island",
+      "author": "Bernard Gagnon",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Seongsan_Ilchulbong_01.jpg"
+    },
+    {
+      "file": "landmarks-nseoultower.jpg",
+      "title": "N Seoul Tower from Namsan Park",
+      "author": "travel oriented",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Seoul_Tower_from_Namsan_Park_(9595146693).jpg"
+    }
+  ],
+  "code": "KR"
+}

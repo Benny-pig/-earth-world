@@ -1,0 +1,255 @@
+{
+  "name_zh": "印度",
+  "name_en": "India",
+  "summary": "位於南亞的聯邦制共和國,首都新德里,人口逾十四億,為世界人口最多的國家。文明可追溯至印度河流域,宗教與語言極為多元;獨立後成為世界最大的民主國家,近年為成長快速的主要經濟體之一。",
+  "founding": [
+    "約西元前二六○○年,印度河流域文明在今巴基斯坦與印度西北一帶興起,擁有規劃嚴整的城市與排水系統。其後的吠陀時代,雅利安語族群東遷至恆河平原,婆羅門教與種姓制度的雛形逐漸形成,並孕育出後來的印度教、佛教與耆那教。",
+    "西元前三世紀,孔雀王朝的阿育王統一次大陸大部,並在征戰後皈依並弘揚佛教。此後笈多王朝(約四至六世紀)被視為古典文化的黃金時代,數學(十進位與零的概念)、天文與梵語文學均有重大成就。",
+    "中世紀北印度先後由多個王朝統治,伊斯蘭勢力自十二世紀起建立德里蘇丹國。一五二六年蒙兀兒帝國建立,融合波斯與印度文化,留下泰姬瑪哈陵等建築;南印度則有維查耶納伽爾等王國。",
+    "十七世紀起歐洲貿易公司進入,英國東印度公司在一七五七年普拉西戰役後逐步取得統治權。一八五八年印度民族起義後,英國王室直接統治「英屬印度」,建設鐵路與現代行政,同時也激起長期的民族運動。",
+    "二十世紀上半,以甘地、尼赫魯為代表的印度國民大會黨推動非暴力不合作運動爭取獨立。一九四七年英屬印度依宗教分布分割為印度與巴基斯坦兩個自治領,伴隨大規模人口遷徙與流血衝突;一九五○年印度憲法生效,成為共和國。",
+    "獨立後印度採行議會民主與計畫、市場並行的經濟,曾與巴基斯坦多次交戰,並在一九七四與一九九八年進行核試。一九九一年起推動經濟自由化,服務業與資訊科技快速崛起,今為全球主要經濟體與人口大國,同時面對貧富差距、基礎建設與環境等挑戰。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "印度共和國",
+    "area_km2": 3287263,
+    "languages": [
+      "印地語",
+      "英語"
+    ],
+    "religion": "以印度教為主(約八成),伊斯蘭教次之;另有基督宗教、錫克教、佛教、耆那教",
+    "currency": "印度盧比(INR)",
+    "government": "聯邦制議會共和"
+  },
+  "animals": [
+    {
+      "zh": "孟加拉虎",
+      "en": "Bengal tiger",
+      "note": "印度的國獸,主要棲息於中部與北部的國家公園。",
+      "image": "animals-tiger.jpg"
+    },
+    {
+      "zh": "印度象",
+      "en": "Indian elephant",
+      "note": "亞洲象的印度亞種,在宗教與慶典中地位崇高。"
+    },
+    {
+      "zh": "亞洲獅",
+      "en": "Asiatic lion",
+      "note": "全球僅存於古吉拉特邦的吉爾森林。"
+    },
+    {
+      "zh": "印度孔雀",
+      "en": "Indian peafowl",
+      "note": "印度國鳥,雄鳥開屏的尾羽廣見於藝術與神話。",
+      "image": "animals-peacock.jpg"
+    },
+    {
+      "zh": "恆河豚",
+      "en": "Ganges river dolphin",
+      "note": "幾近失明的淡水豚,為印度的國家水生動物。"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "咖哩角(薩摩薩)",
+      "en": "Samosa",
+      "note": "油炸三角酥餅,內餡多為馬鈴薯與豌豆調香料。"
+    },
+    {
+      "zh": "印度烤餅",
+      "en": "Naan and roti",
+      "note": "泥爐或平底鍋烙製的發酵或無發酵麵餅,搭配咖哩。"
+    },
+    {
+      "zh": "印度香飯",
+      "en": "Biryani",
+      "note": "香料、肉類與長粒米分層燜煮,源自蒙兀兒宮廷。"
+    },
+    {
+      "zh": "坦都里烤雞",
+      "en": "Tandoori chicken",
+      "note": "以優格與香料醃漬後入泥爐高溫燒烤。"
+    },
+    {
+      "zh": "馬薩拉多薩",
+      "en": "Masala dosa",
+      "note": "南印度發酵米豆糊煎成的薄脆捲餅,內夾香料馬鈴薯。"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "泰姬瑪哈陵",
+      "en": "Taj Mahal",
+      "note": "蒙兀兒皇帝沙賈汗為愛妃修建的白色大理石陵墓,約一六五三年完工。",
+      "latlon": [
+        27.1751,
+        78.0421
+      ],
+      "image": "landmarks-tajmahal.jpg"
+    },
+    {
+      "zh": "阿姆利則金廟",
+      "en": "Golden Temple (Harmandir Sahib)",
+      "note": "錫克教最重要的聖地,鍍金殿堂立於水池中央,設有免費大食堂。",
+      "latlon": [
+        31.62,
+        74.8765
+      ],
+      "image": "landmarks-goldentemple.jpg"
+    },
+    {
+      "zh": "風之宮殿(哈瓦馬哈爾)",
+      "en": "Hawa Mahal",
+      "note": "齋浦爾的紅粉砂岩宮牆,蜂窩狀窗格供宮中女眷觀街。",
+      "latlon": [
+        26.9239,
+        75.8267
+      ],
+      "image": "landmarks-hawamahal.jpg"
+    },
+    {
+      "zh": "瓦拉納西河壇",
+      "en": "Ghats of Varanasi",
+      "note": "恆河西岸的石階,印度教徒在此沐浴、祭祀與火葬。",
+      "latlon": [
+        25.309,
+        83.01
+      ],
+      "image": "landmarks-varanasi.jpg"
+    },
+    {
+      "zh": "德里紅堡",
+      "en": "Red Fort",
+      "note": "蒙兀兒帝國在德里的紅砂岩城堡,印度獨立日總理在此發表演說。",
+      "latlon": [
+        28.6562,
+        77.241
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "甘地",
+      "en": "Mahatma Gandhi",
+      "note": "以非暴力不合作領導印度獨立運動,尊稱「聖雄」。",
+      "image": "people-gandhi.jpg"
+    },
+    {
+      "zh": "阿育王",
+      "en": "Ashoka",
+      "note": "孔雀王朝君主,弘揚佛教,其石柱獅柱頭為今日印度國徽。"
+    },
+    {
+      "zh": "泰戈爾",
+      "en": "Rabindranath Tagore",
+      "note": "詩人,一九一三年成為首位獲諾貝爾文學獎的亞洲人。"
+    },
+    {
+      "zh": "尼赫魯",
+      "en": "Jawaharlal Nehru",
+      "note": "獨立後首任總理,推動議會民主與不結盟運動。"
+    },
+    {
+      "zh": "安貝卡",
+      "en": "B. R. Ambedkar",
+      "note": "法學家,印度憲法起草委員會主席,達利特權益運動領袖。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "涼季的金三角",
+      "note": "十月至三月天氣宜人,適合串連德里、阿格拉(泰姬瑪哈陵)與齋浦爾的經典路線。"
+    },
+    {
+      "zh": "二、三月的拉賈斯坦",
+      "note": "沙漠地區白天不至酷熱,可走烏代浦、久德浦與齋沙默爾的湖泊與城堡。"
+    },
+    {
+      "zh": "排燈節(Diwali)期間",
+      "note": "約在十、十一月,全國點燈、放煙火慶祝,市集與甜點最為熱鬧。"
+    }
+  ],
+  "events": [
+    {
+      "year": -261,
+      "zh": "阿育王征服羯陵伽後皈依佛教,推動其在次大陸的傳播。"
+    },
+    {
+      "year": 1526,
+      "zh": "巴布爾於帕尼帕特之役獲勝,建立蒙兀兒帝國。"
+    },
+    {
+      "year": 1757,
+      "zh": "普拉西戰役後,英國東印度公司在孟加拉取得統治權。"
+    },
+    {
+      "year": 1858,
+      "zh": "印度民族起義後,英國王室直接統治英屬印度。"
+    },
+    {
+      "year": 1947,
+      "zh": "英屬印度分割為印度與巴基斯坦,印度獨立。"
+    },
+    {
+      "year": 1950,
+      "zh": "印度憲法生效,正式成為共和國。"
+    },
+    {
+      "year": 1991,
+      "zh": "推行經濟自由化,開啟服務業與資訊科技的快速成長。"
+    }
+  ],
+  "credits": [
+    {
+      "file": "animals-tiger.jpg",
+      "title": "Tiger in Ranthambore Tiger Reserve",
+      "author": "Harsh.kabra.98",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:RANTHAMBORE_TIGER_RESERVE.jpg"
+    },
+    {
+      "file": "animals-peacock.jpg",
+      "title": "Indian peacock displaying plumage",
+      "author": "Vidhya Narayanan",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Indian_Peacock_Plumage.jpg"
+    },
+    {
+      "file": "landmarks-tajmahal.jpg",
+      "title": "Taj Mahal, Agra",
+      "author": "Yann Forget",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Taj_Mahal,_Agra,_India.jpg"
+    },
+    {
+      "file": "landmarks-goldentemple.jpg",
+      "title": "Golden Temple, Amritsar",
+      "author": "Vikas.gaur91",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Harmandir_Sahib-Swarn_Mandir-Golden_Temple_Amrtisar.jpg"
+    },
+    {
+      "file": "landmarks-hawamahal.jpg",
+      "title": "Hawa Mahal, Jaipur",
+      "author": "Chirag Pai",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Hawa_Mahal,_Jaipur,_Rajasthan,_India.jpg"
+    },
+    {
+      "file": "landmarks-varanasi.jpg",
+      "title": "Munshi Ghat, Varanasi",
+      "author": "Marcin Białek",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Varanasi_Munshi_Ghat3.jpg"
+    },
+    {
+      "file": "people-gandhi.jpg",
+      "title": "Studio portrait of Gandhi, 1931",
+      "author": "Elliott & Fry",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Mahatma-Gandhi,_studio,_1931.jpg"
+    }
+  ],
+  "code": "IN"
+}

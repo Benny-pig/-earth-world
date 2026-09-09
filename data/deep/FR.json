@@ -1,0 +1,262 @@
+{
+  "name_zh": "法國",
+  "name_en": "France",
+  "summary": "位於西歐的半總統制共和國,首都巴黎,並在海外擁有數個大區與屬地。由高盧與法蘭克人的傳統發展而來,歷經王國、大革命與多個共和;為聯合國安理會常任理事國、歐盟創始成員,以文化、藝術、時尚與觀光聞名。",
+  "founding": [
+    "今法國本土古稱高盧,西元前一世紀被羅馬征服,拉丁語言與城市文明就此深植。西元五世紀西羅馬崩解後,日耳曼系的法蘭克人建立王國,四八一年起在位的克洛維一世統一各部並改信基督宗教。",
+    "八○○年查理曼受教宗加冕為「羅馬人的皇帝」,其帝國於九世紀分裂,西法蘭克王國成為法國的前身。九八七年雨果·卡佩即位,開啟卡佩王朝,王權以巴黎為核心逐步向外擴張,並與英格蘭進行長達百餘年的百年戰爭。",
+    "十六至十七世紀,法國歷經宗教戰爭後走向中央集權,路易十四時期王權達於頂峰,凡爾賽宮成為權力與文化的象徵。十八世紀啟蒙思想在法國蓬勃發展,伏爾泰、盧梭等人的著作影響深遠。",
+    "一七八九年法國大革命爆發,推翻君主專制,發表《人權和公民權宣言》。革命後政局動盪,拿破崙·波拿巴掌權並稱帝,一度稱霸歐洲大陸,至一八一五年滑鐵盧戰役後失敗。十九世紀法國在王朝復辟、共和與帝制之間反覆,最終於一八七○年建立第三共和。",
+    "兩次世界大戰的主戰場多在法國本土,損失慘重。二戰期間本土一度淪陷,戴高樂領導「自由法國」持續抵抗,一九四四年獲解放。戰後推動與德國和解,並參與歐洲煤鋼共同體等整合計畫。",
+    "一九五八年戴高樂主導制定第五共和憲法,確立半總統制。此後法國逐步放棄海外殖民地,發展核能與航太工業,成為歐盟與歐元區的核心成員;當代法國經濟以服務業、航空、奢侈品、農業與觀光為支柱。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "法蘭西共和國",
+    "area_km2": 551695,
+    "languages": [
+      "法語"
+    ],
+    "religion": "政教分離的世俗國家;文化傳統以天主教為主,穆斯林為主要少數,無宗教者比例高",
+    "currency": "歐元(EUR)",
+    "government": "半總統制共和,單一制"
+  },
+  "animals": [
+    {
+      "zh": "高盧雄雞",
+      "en": "Gallic rooster",
+      "note": "源自拉丁文雙關的國族象徵,常見於運動代表隊與硬幣。"
+    },
+    {
+      "zh": "卡馬格馬",
+      "en": "Camargue horse",
+      "note": "隆河三角洲濕地的古老白馬品種,由牧人半野放飼養。"
+    },
+    {
+      "zh": "庇里牛斯山犬",
+      "en": "Great Pyrenees",
+      "note": "山區看護羊群的大型白色護衛犬。"
+    },
+    {
+      "zh": "摩弗倫羊",
+      "en": "Mouflon",
+      "note": "科西嘉與山區的野生綿羊,雄羊具捲角。"
+    },
+    {
+      "zh": "白鸛",
+      "en": "White stork",
+      "note": "阿爾薩斯的象徵鳥類,築巢於屋頂與教堂塔樓。"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "可頌",
+      "en": "Croissant",
+      "note": "層層裹入奶油的酥皮麵包,法式早餐的代表。",
+      "image": "foods-croissant.jpg"
+    },
+    {
+      "zh": "長棍麵包",
+      "en": "Baguette",
+      "note": "細長脆皮的日常主食,其製作工藝列入非物質文化遺產。"
+    },
+    {
+      "zh": "勃艮第紅酒燉牛肉",
+      "en": "Boeuf bourguignon",
+      "note": "牛肉以紅酒、洋蔥與蘑菇慢燉的鄉土名菜。"
+    },
+    {
+      "zh": "焗蝸牛",
+      "en": "Escargots",
+      "note": "蝸牛填入香蒜奶油焗烤,常見於節慶前菜。"
+    },
+    {
+      "zh": "馬卡龍",
+      "en": "Macaron",
+      "note": "杏仁蛋白餅夾內餡的圓形甜點,色彩繽紛。"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "艾菲爾鐵塔",
+      "en": "Eiffel Tower",
+      "note": "為一八八九年萬國博覽會而建的鍛鐵塔,高約三百三十公尺,是巴黎的象徵。",
+      "latlon": [
+        48.8584,
+        2.2945
+      ],
+      "image": "landmarks-eiffel.jpg"
+    },
+    {
+      "zh": "羅浮宮",
+      "en": "Louvre",
+      "note": "由王宮改成的美術館,藏有《蒙娜麗莎》等名作,入口為玻璃金字塔。",
+      "latlon": [
+        48.8606,
+        2.3376
+      ],
+      "image": "landmarks-louvre.jpg"
+    },
+    {
+      "zh": "凡爾賽宮",
+      "en": "Palace of Versailles",
+      "note": "路易十四打造的宮殿與庭園,鏡廳曾簽署多項條約。",
+      "latlon": [
+        48.8049,
+        2.1204
+      ],
+      "image": "landmarks-versailles.jpg"
+    },
+    {
+      "zh": "聖米歇爾山",
+      "en": "Mont-Saint-Michel",
+      "note": "諾曼第外海的岩島修道院,漲潮時四面環水。",
+      "latlon": [
+        48.6361,
+        -1.5115
+      ],
+      "image": "landmarks-montsaintmichel.jpg"
+    },
+    {
+      "zh": "巴黎聖母院",
+      "en": "Notre-Dame de Paris",
+      "note": "十二世紀始建的哥德式主教座堂,二○一九年火災後展開修復。",
+      "latlon": [
+        48.853,
+        2.3499
+      ],
+      "image": "landmarks-notredame.jpg"
+    }
+  ],
+  "people": [
+    {
+      "zh": "拿破崙·波拿巴",
+      "en": "Napoleon Bonaparte",
+      "note": "軍事家與皇帝,頒行《拿破崙法典》,一度主宰歐洲。",
+      "image": "people-napoleon.jpg"
+    },
+    {
+      "zh": "戴高樂",
+      "en": "Charles de Gaulle",
+      "note": "二戰自由法國領袖,第五共和首任總統。"
+    },
+    {
+      "zh": "伏爾泰",
+      "en": "Voltaire",
+      "note": "啟蒙時代作家與哲學家,倡言論自由與宗教寬容。"
+    },
+    {
+      "zh": "維克多·雨果",
+      "en": "Victor Hugo",
+      "note": "作家,著有《悲慘世界》與《鐘樓怪人》。"
+    },
+    {
+      "zh": "瑪麗·居禮",
+      "en": "Marie Curie",
+      "note": "波蘭裔法國物理與化學家,兩度獲諾貝爾獎,放射性研究先驅。",
+      "image": "people-mariecurie.jpg"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "春末的巴黎",
+      "note": "五至六月日照長、公園花開,適合逛博物館、走塞納河與蒙馬特,遊客較盛夏稍少。"
+    },
+    {
+      "zh": "夏季的普羅旺斯",
+      "note": "六月下旬至七月薰衣草田盛放,可串連亞維儂、亞爾與塞南克修道院。"
+    },
+    {
+      "zh": "秋季的羅亞爾河谷",
+      "note": "九至十月葡萄採收與城堡光影最佳,可騎單車遊香波堡、雪儂梭堡一帶。"
+    }
+  ],
+  "events": [
+    {
+      "year": 843,
+      "zh": "《凡爾登條約》分割查理曼帝國,西法蘭克王國成為法國的雛形。"
+    },
+    {
+      "year": 987,
+      "zh": "雨果·卡佩即位,開啟卡佩王朝。"
+    },
+    {
+      "year": 1789,
+      "zh": "法國大革命爆發,發表《人權和公民權宣言》。"
+    },
+    {
+      "year": 1804,
+      "zh": "拿破崙稱帝,建立法蘭西第一帝國。"
+    },
+    {
+      "year": 1889,
+      "zh": "巴黎萬國博覽會舉行,艾菲爾鐵塔落成。"
+    },
+    {
+      "year": 1958,
+      "zh": "第五共和成立,採行半總統制。"
+    },
+    {
+      "year": 2002,
+      "zh": "歐元紙鈔與硬幣正式流通,取代法郎。"
+    }
+  ],
+  "credits": [
+    {
+      "file": "foods-croissant.jpg",
+      "title": "Freshly baked croissants",
+      "author": "Asimilovana",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Freshly_baked_croissants.jpg"
+    },
+    {
+      "file": "landmarks-eiffel.jpg",
+      "title": "Eiffel Tower",
+      "author": "Tognopop",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Eiffel_Tower_20051010.jpg"
+    },
+    {
+      "file": "landmarks-louvre.jpg",
+      "title": "The Louvre glass pyramid",
+      "author": "Stefan Wloch",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:The_Louvre_Glass_Pyramid,_Paris,_France_(53198133274).jpg"
+    },
+    {
+      "file": "landmarks-versailles.jpg",
+      "title": "Hall of Mirrors, Palace of Versailles",
+      "author": "Myrabella",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Chateau_Versailles_Galerie_des_Glaces.jpg"
+    },
+    {
+      "file": "landmarks-montsaintmichel.jpg",
+      "title": "Mont Saint-Michel at sunrise",
+      "author": "Lynx1211",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mont_St_Michel_at_sunrise.jpg"
+    },
+    {
+      "file": "landmarks-notredame.jpg",
+      "title": "Facade of Notre-Dame de Paris",
+      "author": "Tristan Nitot",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Notre-dame-de-paris-facade.jpg"
+    },
+    {
+      "file": "people-napoleon.jpg",
+      "title": "The Emperor Napoleon in His Study (Jacques-Louis David)",
+      "author": "Jacques-Louis David",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Jacques-Louis_David_014.jpg"
+    },
+    {
+      "file": "people-mariecurie.jpg",
+      "title": "Marie Curie, c. 1920s",
+      "author": "Henri Manuel",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Marie_Curie_c._1920s.jpg"
+    }
+  ],
+  "code": "FR"
+}
