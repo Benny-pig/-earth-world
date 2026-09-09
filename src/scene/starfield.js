@@ -23,7 +23,7 @@ const fragmentShader = `
   void main() {
     float d = length(gl_PointCoord - vec2(0.5));
     if (d > 0.5) discard;
-    float core = smoothstep(0.5, 0.08, d);
+    float core = 1.0 - smoothstep(0.08, 0.5, d);
     gl_FragColor = vec4(vColor * core * vTw, core);
   }
 `;
@@ -75,7 +75,7 @@ export function createStarfield() {
   const mwGeo = new THREE.SphereGeometry(420, 64, 64);
   const mwMat = new THREE.MeshBasicMaterial({
     side: THREE.BackSide,
-    color: 0x2a3550,           // tints/dims the panorama so it never overpowers the globe
+    color: 0x8a95b8,           // tints/dims the panorama so it never overpowers the globe
     transparent: true,
     opacity: 0.9,
     depthWrite: false,

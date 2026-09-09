@@ -37,7 +37,7 @@ export function start() {
   }
 
   const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.01, 100);
+  const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1500);
   camera.position.set(0, 0, 3.2);
 
   const starfield = createStarfield();
