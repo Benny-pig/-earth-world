@@ -11,3 +11,4 @@
 
 - 8K 地球貼圖:Solar System Scope (https://www.solarsystemscope.com/textures/), CC BY 4.0
 - 8K 雲層貼圖:Solar System Scope (https://www.solarsystemscope.com/textures/), CC BY 4.0
+- 8K 銀河星空全景:Solar System Scope (https://www.solarsystemscope.com/textures/), CC BY 4.0

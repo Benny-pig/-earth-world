@@ -7,7 +7,7 @@ export function createClouds() {
   const material = new THREE.MeshStandardMaterial({
     color: 0xffffff,
     transparent: true,
-    opacity: 0.9,
+    opacity: 0.72,
     alphaMap: null,        // set after load
     depthWrite: false,
     roughness: 1.0,
@@ -25,7 +25,7 @@ export function createClouds() {
       material.needsUpdate = true;
     },
     undefined,
-    () => console.warn("[clouds] 雲層貼圖載入失敗,略過雲層"),
+    () => { console.warn("[clouds] 雲層貼圖載入失敗,略過雲層"); material.visible = false; },
   );
 
   let paused = false;
