@@ -97,6 +97,17 @@
   #side-panel .fc-pop { font-size: 10px; color: #8fd4ff; }
   #side-panel .close { position: absolute; top: 14px; right: 16px; cursor: pointer;
     background: none; border: none; color: #cdd8f0; font-size: 22px; line-height: 1; }
+  #tw-clock {
+    position: fixed; top: 18px; left: 18px; z-index: 42;
+    padding: 10px 14px; border-radius: 10px; text-align: left;
+    background: rgba(10, 14, 26, 0.7); backdrop-filter: blur(10px);
+    border: 1px solid rgba(120, 170, 255, 0.22); color: #e7edfb;
+    font: 13px/1.5 system-ui, "Microsoft JhengHei", sans-serif; min-width: 160px;
+    pointer-events: none;
+  }
+  #tw-clock .tw-label { font-size: 11px; color: #8fd4ff; letter-spacing: .04em; }
+  #tw-clock .tw-date { font-size: 12px; color: #b9c6e6; }
+  #tw-clock .tw-time { font-size: 20px; font-variant-numeric: tabular-nums; letter-spacing: .02em; }
   #clock-weather {
     position: fixed; top: 18px; right: 18px; z-index: 42;
     padding: 12px 16px; border-radius: 10px; text-align: right;
@@ -130,6 +141,7 @@
   <div id="error-banner"></div>
   <div id="webgl-fallback">你的瀏覽器不支援 WebGL,無法顯示地球世界。<br>請改用較新版本的 Chrome / Edge / Firefox。</div>
   <div id="tooltip"></div>
+  <div id="tw-clock"></div>
   <div id="country-labels"></div>
   <div id="ocean-labels"></div>
   <div id="side-panel"><button class="close" aria-label="關閉">×</button><div id="side-panel-body"></div></div>

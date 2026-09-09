@@ -1,4 +1,4 @@
-import { weatherCodeToIcon, weekdayFromISODate } from "/src/lib/geo.js";
+import { weatherCodeToIcon, weekdayFromISODate, tzOffsetHours } from "/src/lib/geo.js";
 
 export const MONTH_LABELS = ["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"];
 
@@ -55,7 +55,15 @@ export function createSidePanel({ onClose }) {
     const meta = [];
     if (p.capital && p.capital.zh) meta.push(`首都:${esc(p.capital.zh)}${p.capital.en ? ` (${esc(p.capital.en)})` : ""}`);
     if (p.population != null && p.population !== "") meta.push(`人口:${fmtPop(p.population)}`);
-    if (p.timezone) meta.push(`時區:${esc(p.timezone)}`);
+    if (p.timezone) {
+      const oh = tzOffsetHours(p.timezone);
+      let rel = "";
+      if (oh != null) {
+        const d = Math.round((oh - 8) * 10) / 10;   // 相對台灣(UTC+8)
+        rel = d === 0 ? "(與台灣同時)" : `(與台灣 ${d > 0 ? "+" : "−"}${Math.abs(d)} 小時)`;
+      }
+      meta.push(`時區:${esc(p.timezone)}${rel}`);
+    }
     if (p.latlon) meta.push(`位置:${p.latlon[0].toFixed(1)}, ${p.latlon[1].toFixed(1)}`);
     if (meta.length) html += `<div class="meta">${meta.join("　·　")}</div>`;
 

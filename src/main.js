@@ -16,6 +16,7 @@ import { createOceanLabels } from "/src/scene/ocean-labels.js";
 import { createCountryLabels } from "/src/scene/country-labels.js";
 import { createSidePanel } from "/src/ui/side-panel.js";
 import { createClockWeather } from "/src/ui/clock-weather.js";
+import { createTwClock } from "/src/ui/tw-clock.js";
 import { createMusic } from "/src/audio/music.js";
 
 const container = document.getElementById("app");
@@ -178,6 +179,7 @@ export function start() {
     onForecast: (code, days) => window.__earth.sidePanel?.setForecast(code, days),
   });
   window.__earth.clockWeather = clockWeather;
+  window.__earth.twClock = createTwClock();
 
   const music = createMusic();
   window.__earth.music = music;

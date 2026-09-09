@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { latLonToXYZ, xyzToLatLon, ringCentroid, formatZonedTime, weatherCodeToIcon, weekdayFromISODate } from "../src/lib/geo.js";
+import { latLonToXYZ, xyzToLatLon, ringCentroid, formatZonedTime, weatherCodeToIcon, weekdayFromISODate, tzOffsetHours, subsolarPoint } from "../src/lib/geo.js";
 
 const near = (a, b, eps = 1e-9) => assert.ok(Math.abs(a - b) < eps, `${a} ≈ ${b}`);
 
@@ -46,6 +46,24 @@ test("weekdayFromISODate 由 ISO 日期字串給出星期(不受 UTC 位移影�
   assert.equal(weekdayFromISODate("2026-01-15"), "週四");
   assert.equal(weekdayFromISODate("2026-01-01"), "週四");
   assert.equal(weekdayFromISODate("bad"), "—");
+});
+
+test("tzOffsetHours 台北 +8、印度 +5.5、UTC 0", () => {
+  const d = new Date("2026-09-09T00:00:00Z");
+  assert.equal(tzOffsetHours("Asia/Taipei", d), 8);
+  assert.equal(tzOffsetHours("Asia/Kolkata", d), 5.5);
+  assert.equal(tzOffsetHours("UTC", d), 0);
+  assert.equal(tzOffsetHours("不是時區", d), null);
+});
+
+test("subsolarPoint 分點約在赤道、夏至約在北迴歸線", () => {
+  const equinox = subsolarPoint(new Date("2026-03-21T12:00:00Z"));
+  assert.ok(Math.abs(equinox.lat) < 3, `equinox lat ${equinox.lat}`);
+  assert.ok(Math.abs(equinox.lon) < 4, `equinox lon ${equinox.lon}`);
+  const solstice = subsolarPoint(new Date("2026-06-21T12:00:00Z"));
+  assert.ok(solstice.lat > 21 && solstice.lat < 24, `solstice lat ${solstice.lat}`);
+  const evening = subsolarPoint(new Date("2026-06-21T18:00:00Z"));
+  assert.ok(evening.lon < -80 && evening.lon > -100, `18Z lon ${evening.lon}`);
 });
 
 test("weatherCodeToIcon 對應已知碼", () => {

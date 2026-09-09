@@ -45,6 +45,28 @@ export function formatZonedTime(date, timeZone) {
   return { date: dp, time: tp, weekday: WEEKDAYS[wdIndex] };
 }
 
+// 某時區在指定時刻相對 UTC 的偏移小時數(含半小時區,如印度 +5.5)。無法解析時回傳 null。
+export function tzOffsetHours(timeZone, date = new Date()) {
+  try {
+    const dtf = new Intl.DateTimeFormat("en-US", { timeZone, timeZoneName: "longOffset" });
+    const part = dtf.formatToParts(date).find((p) => p.type === "timeZoneName");
+    if (!part) return null;
+    const m = /GMT([+-])(\d{1,2})(?::(\d{2}))?/.exec(part.value);
+    if (!m) return 0; // 純 "GMT"
+    return (m[1] === "-" ? -1 : 1) * (Number(m[2]) + Number(m[3] || 0) / 60);
+  } catch { return null; }
+}
+
+// 太陽此刻直射的地表點(近似,忽略均時差)。lon:UTC 正午時在 0°,每小時西移 15°;lat:太陽赤緯。
+export function subsolarPoint(date = new Date()) {
+  const utcH = date.getUTCHours() + date.getUTCMinutes() / 60 + date.getUTCSeconds() / 3600;
+  const rawLon = -15 * (utcH - 12);
+  const startOfYear = Date.UTC(date.getUTCFullYear(), 0, 0);
+  const dayOfYear = Math.floor((date.getTime() - startOfYear) / 86400000);
+  const lat = -23.44 * Math.cos((2 * Math.PI / 365) * (dayOfYear + 10));
+  return { lat, lon: ((rawLon + 540) % 360) - 180 };
+}
+
 export function weekdayFromISODate(iso) {
   const [y, m, d] = String(iso).split("-").map(Number);
   if (!y || !m || !d) return "—";
