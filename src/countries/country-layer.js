@@ -12,6 +12,7 @@ const SELECT_OPACITY = 0.5;
 const SELECT_COLOR = 0x4da3ff;
 const OUTLINE_COLOR = 0x9fe9ff;
 const OUTLINE_RADIUS = 1.06;
+const OUTLINE_OPACITY = 0.9;
 
 function ringsToMeshGeometry(rings, radius) {
   // rings: [outer, hole1, ...] 每個是 [[lon,lat],...]
@@ -124,9 +125,10 @@ export function buildCountryLayer(geojson, { radius = 1.002 } = {}) {
     if (!selOutline) {
       selOutline = new THREE.LineSegments(
         geo,
-        new THREE.LineBasicMaterial({ color: OUTLINE_COLOR, transparent: true, opacity: 0.9, blending: THREE.AdditiveBlending, depthWrite: false }),
+        new THREE.LineBasicMaterial({ color: OUTLINE_COLOR, transparent: true, opacity: OUTLINE_OPACITY, blending: THREE.AdditiveBlending, depthWrite: false }),
       );
       selOutline.renderOrder = 3;
+      selOutline.raycast = () => {};
       group.add(selOutline);
     } else {
       selOutline.geometry.dispose();
