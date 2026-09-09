@@ -12,6 +12,7 @@ import { buildBorders } from "/src/countries/borders.js";
 import { buildCountryLayer } from "/src/countries/country-layer.js";
 import { createTooltip } from "/src/ui/tooltip.js";
 import { createOceanLabels } from "/src/scene/ocean-labels.js";
+import { createSidePanel } from "/src/ui/side-panel.js";
 
 const container = document.getElementById("app");
 
@@ -113,6 +114,30 @@ export function start() {
   const tooltip = createTooltip();
   let pointerPx = { x: -100, y: -100 };
   renderer.domElement.addEventListener("pointermove", (e) => { pointerPx = { x: e.clientX, y: e.clientY }; });
+
+  const sidePanel = createSidePanel({ onClose: () => rig.resetView() });
+  window.__earth.sidePanel = sidePanel;
+
+  let downPos = null;
+  renderer.domElement.addEventListener("pointerdown", (e) => { downPos = { x: e.clientX, y: e.clientY }; });
+  renderer.domElement.addEventListener("pointerup", (e) => {
+    if (!downPos) return;
+    const moved = Math.hypot(e.clientX - downPos.x, e.clientY - downPos.y);
+    downPos = null;
+    if (moved > 6) return;                 // 拖曳,不算點擊
+    const cl = window.__earth.countryLayer;
+    if (!cl) return;
+    raycaster.setFromCamera(pointer, camera);
+    const hit = cl.pick(raycaster, globe.mesh);
+    if (!hit) return;
+    const [lon, lat] = hit.centroidLatLon;
+    rig.flyTo(lat, lon, { distance: 1.7, ms: 1000 });
+    sidePanel.open({
+      code: hit.code, names: hit.names,
+      capital: null, timezone: null, latlon: [lat, lon],
+      features: [], travel: null, history: [],   // Task 9 換成真資料
+    });
+  });
 
   window.addEventListener("resize", () => {
     camera.aspect = window.innerWidth / window.innerHeight;

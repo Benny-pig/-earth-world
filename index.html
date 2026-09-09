@@ -39,6 +39,25 @@
   }
   #ocean-labels .ocean-label .zh { display: block; font-size: 16px; }
   #ocean-labels .ocean-label .en { display: block; font-size: 10px; letter-spacing: 0.15em; opacity: 0.75; margin-top: 2px; }
+  #side-panel {
+    position: fixed; top: 0; right: 0; height: 100%; width: 380px; max-width: 86vw;
+    transform: translateX(105%); transition: transform .45s cubic-bezier(.22,.61,.36,1);
+    background: rgba(10, 14, 26, 0.82); backdrop-filter: blur(14px);
+    border-left: 1px solid rgba(120, 170, 255, 0.25); color: #e7edfb;
+    font: 14px/1.7 system-ui, "Microsoft JhengHei", sans-serif; z-index: 45;
+    overflow-y: auto; padding: 28px 26px 40px;
+  }
+  #side-panel.open { transform: translateX(0); }
+  #side-panel h2 { margin: 0; font-size: 26px; }
+  #side-panel .en { color: #9fb2d8; font-size: 13px; margin: 2px 0 14px; }
+  #side-panel .meta { color: #b9c6e6; font-size: 12.5px; margin-bottom: 18px; }
+  #side-panel h3 { font-size: 14px; letter-spacing: .05em; color: #8fd4ff; margin: 22px 0 8px; }
+  #side-panel .months { display: grid; grid-template-columns: repeat(6, 1fr); gap: 4px; margin: 6px 0; }
+  #side-panel .months span { text-align: center; font-size: 11px; padding: 5px 0; border-radius: 4px;
+    background: rgba(255,255,255,.06); color: #93a3c4; }
+  #side-panel .months span.best { background: #2f6df6; color: #fff; }
+  #side-panel .close { position: absolute; top: 14px; right: 16px; cursor: pointer;
+    background: none; border: none; color: #cdd8f0; font-size: 22px; line-height: 1; }
 </style>
 </head>
 <body>
@@ -47,6 +66,7 @@
   <div id="webgl-fallback">你的瀏覽器不支援 WebGL,無法顯示地球世界。<br>請改用較新版本的 Chrome / Edge / Firefox。</div>
   <div id="tooltip"></div>
   <div id="ocean-labels"></div>
+  <div id="side-panel"><button class="close" aria-label="關閉">×</button><div id="side-panel-body"></div></div>
 
   <script type="importmap">
   {
