@@ -42,14 +42,15 @@ export function createClockWeather() {
       const j = await r.json();
       const t = Math.round(j.current.temperature_2m);
       const { icon, label } = weatherCodeToIcon(j.current.weather_code);
-      weatherHtml = `${icon} ${label} ${t}°C`;
-      cache.set(c.code, { at: Date.now(), html: weatherHtml });
+      const html = `${icon} ${label} ${t}°C`;
+      cache.set(c.code, { at: Date.now(), html });   // A 的資料對 A 永遠有效,照存
+      if (current && current.code === c.code) weatherHtml = html;
     } catch (e) {
       console.warn("[clock-weather] 天氣抓取失敗:", e.message);
-      weatherHtml = "天氣 —";
+      if (current && current.code === c.code) weatherHtml = "天氣 —";
     } finally {
       clearTimeout(timer);
-      // 只有仍是同一個國家才更新畫面,避免競態蓋掉新選取
+      // 舊請求回來時 current 已換人:不覆寫共用狀態、也不重繪
       if (current && current.code === c.code) renderTick();
     }
   }
