@@ -53,9 +53,11 @@ export function start() {
   Promise.all([
     fetch("/data/countries.geo.json").then((r) => { if (!r.ok) throw new Error("國界資料載入失敗 " + r.status); return r.json(); }),
     fetch("/data/country-names-zh-hant.json").then((r) => (r.ok ? r.json() : {})).catch(() => ({})),
+    fetch("/data/countries.content.json").then((r) => (r.ok ? r.json() : {})).catch(() => ({})),
   ])
-    .then(([geojson, zhHant]) => {
+    .then(([geojson, zhHant, content]) => {
       setZhHantNames(zhHant);
+      window.__earth.content = content;
       window.__earth.geojson = geojson;
       const borders = buildBorders(geojson);
       globe.object.add(borders);
@@ -137,12 +139,20 @@ export function start() {
     raycaster.setFromCamera(pointer, camera);
     const hit = cl.pick(raycaster, globe.mesh);
     if (!hit) return;
+    const c = (window.__earth.content || {})[hit.code];
     const [lon, lat] = hit.centroidLatLon;
-    rig.flyTo(lat, lon, { distance: 1.7, ms: 1000 });
+    const flyLat = c ? c.capital_latlon[0] : lat;
+    const flyLon = c ? c.capital_latlon[1] : lon;
+    rig.flyTo(flyLat, flyLon, { distance: 1.7, ms: 1000 });
     sidePanel.open({
-      code: hit.code, names: hit.names,
-      capital: null, timezone: null, latlon: [lat, lon],
-      features: [], travel: null, history: [],   // Task 9 換成真資料
+      code: hit.code,
+      names: hit.names,
+      capital: c ? { zh: c.capital_zh, en: c.capital_en } : null,
+      timezone: c ? c.timezone : null,
+      latlon: c ? c.capital_latlon : [lat, lon],
+      features: c ? c.features : [],
+      travel: c ? c.travel_months : null,
+      history: c ? c.history : [],
     });
   });
 
