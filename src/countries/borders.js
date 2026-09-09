@@ -4,7 +4,7 @@ import { zhHantName } from "/src/countries/country-names.js";
 
 export function countryCode(feature) {
   const p = feature.properties || {};
-  for (const k of ["ISO_A2_EH", "ISO_A2", "POSTAL"]) {
+  for (const k of ["ISO_A2_EH", "ISO_A2"]) {
     if (p[k] && p[k] !== "-99") return String(p[k]).toUpperCase();
   }
   return (p.NAME || "??").toUpperCase();
