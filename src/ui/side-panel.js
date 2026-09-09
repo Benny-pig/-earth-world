@@ -10,7 +10,7 @@ function fmtPop(v) {
   return `約 ${Math.round(v).toLocaleString("en-US")} 人`;
 }
 
-export function createSidePanel({ onClose }) {
+export function createSidePanel({ onClose, onMore }) {
   const el = document.getElementById("side-panel");
   const body = document.getElementById("side-panel-body");
   let openCode = null;
@@ -87,7 +87,9 @@ export function createSidePanel({ onClose }) {
     const flag = p.code
       ? `<img class="flag" src="https://flagcdn.com/w160/${p.code.toLowerCase()}.png" alt="" onerror="this.style.display='none'">`
       : "";
-    let html = `${flag}<h2>${esc(p.names.zh)}</h2><div class="en">${esc(p.names.en)}</div>`;
+    const moreBtn = onMore && p.code
+      ? `<button type="button" class="sp-more" data-code="${esc(p.code)}">詳細介紹 ›</button>` : "";
+    let html = `${flag}<h2>${esc(p.names.zh)}</h2><div class="en">${esc(p.names.en)}</div>${moreBtn}`;
     const meta = [];
     if (p.capital && p.capital.zh) meta.push(`首都:${esc(p.capital.zh)}${p.capital.en ? ` (${esc(p.capital.en)})` : ""}`);
     if (p.population != null && p.population !== "") meta.push(`人口:${fmtPop(p.population)}`);
@@ -126,6 +128,8 @@ export function createSidePanel({ onClose }) {
       html += `<p class="dim">國家基本資料建置中,之後會補上更多介紹。</p>`;
 
     body.innerHTML = html;
+    const mb = body.querySelector(".sp-more");
+    if (mb) mb.addEventListener("click", () => onMore(mb.dataset.code));
     el.classList.add("open");
     startClock(p.timezone);
   }

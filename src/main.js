@@ -213,17 +213,20 @@ export function start() {
     });
   }
 
-  const sidePanel = createSidePanel({ onClose: () => {
-    rig.resetView();
-    clockWeather.clear();
-    if (window.__earth.countryLayer) window.__earth.countryLayer.setSelected(null);
-    if (window.__earth.globe) window.__earth.globe.setSpinPaused(false);
-    if (window.__earth.clouds) window.__earth.clouds.setSpinPaused(false);
-  } });
-  window.__earth.sidePanel = sidePanel;
-
   const encyclopedia = createEncyclopedia();
   window.__earth.encyclopedia = encyclopedia;
+
+  const sidePanel = createSidePanel({
+    onClose: () => {
+      rig.resetView();
+      clockWeather.clear();
+      if (window.__earth.countryLayer) window.__earth.countryLayer.setSelected(null);
+      if (window.__earth.globe) window.__earth.globe.setSpinPaused(false);
+      if (window.__earth.clouds) window.__earth.clouds.setSpinPaused(false);
+    },
+    onMore: (code) => encyclopedia.open(code),
+  });
+  window.__earth.sidePanel = sidePanel;
 
   // 開啟一個國家:滑鼠點擊與搜尋欄共用。hit = { code, names, centroidLatLon, pop }
   function openCountry(hit) {
