@@ -200,6 +200,18 @@ export function start() {
   });
   audioVol.addEventListener("input", () => music.setVolume(audioVol.value / 100));
 
+  const audioTrack = document.getElementById("audio-track");
+  if (audioTrack) {
+    audioTrack.innerHTML = music.tracks
+      .map((t) => `<option value="${t.id}">${t.name}</option>`).join("");
+    audioTrack.value = music.currentTrackId();
+    audioTrack.title = music.tracks.find((t) => t.id === audioTrack.value)?.credit || "";
+    audioTrack.addEventListener("change", () => {
+      const tr = music.setTrack(audioTrack.value);
+      if (tr) audioTrack.title = tr.credit;
+    });
+  }
+
   const sidePanel = createSidePanel({ onClose: () => {
     rig.resetView();
     clockWeather.clear();

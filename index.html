@@ -162,7 +162,11 @@
     font: 13px system-ui, "Microsoft JhengHei", sans-serif;
   }
   #audio-ui button { background: none; border: none; color: #dfe8ff; font-size: 18px; cursor: pointer; line-height: 1; }
-  #audio-ui input[type=range] { width: 92px; accent-color: #4da3ff; }
+  #audio-ui input[type=range] { width: 88px; accent-color: #4da3ff; }
+  #audio-ui select {
+    background: rgba(20, 26, 44, 0.9); color: #dfe8ff; border: 1px solid rgba(120,170,255,.3);
+    border-radius: 6px; font: 12px system-ui, "Microsoft JhengHei", sans-serif; padding: 3px 6px; max-width: 150px;
+  }
 </style>
 </head>
 <body>
@@ -188,6 +192,7 @@
   <div id="audio-ui">
     <button id="audio-toggle" aria-label="背景音樂開關" title="背景音樂">🔊</button>
     <input id="audio-vol" type="range" min="0" max="100" value="55" aria-label="音量">
+    <select id="audio-track" aria-label="選擇背景音樂"></select>
   </div>
 
   <script type="importmap">
