@@ -1,0 +1,58 @@
+// 國家搜尋欄:中英名 / ISO 代碼皆可,方向鍵 + Enter 或點選即跳到該國。
+const MAX_RESULTS = 8;
+
+export function createCountrySearch({ index, onPick }) {
+  const box = document.getElementById("country-search");
+  if (!box || !Array.isArray(index) || !index.length) return { destroy() {} };
+  const input = box.querySelector("input");
+  const list = box.querySelector("ul");
+  let matches = [];
+  let active = -1;
+
+  const norm = (s) => String(s || "").toLowerCase().trim();
+
+  function search(q) {
+    const n = norm(q);
+    if (!n) return [];
+    const starts = [], contains = [];
+    for (const it of index) {
+      const zh = it.zh || "", en = norm(it.en), code = norm(it.code);
+      if (zh.startsWith(q.trim()) || en.startsWith(n) || code === n) starts.push(it);
+      else if (zh.includes(q.trim()) || en.includes(n)) contains.push(it);
+      if (starts.length >= MAX_RESULTS) break;
+    }
+    return starts.concat(contains).slice(0, MAX_RESULTS);
+  }
+
+  function render() {
+    if (!matches.length) { list.hidden = true; list.innerHTML = ""; return; }
+    list.innerHTML = matches.map((m, i) =>
+      `<li data-code="${m.code}" class="${i === active ? "active" : ""}">` +
+      `<span class="cs-zh">${m.zh}</span><span class="cs-en">${m.en || m.code}</span></li>`
+    ).join("");
+    list.hidden = false;
+  }
+
+  function choose(code) {
+    if (!code) return;
+    input.value = "";
+    matches = []; active = -1; render();
+    input.blur();
+    onPick(code);
+  }
+
+  input.addEventListener("input", () => { matches = search(input.value); active = matches.length ? 0 : -1; render(); });
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowDown") { e.preventDefault(); active = Math.min(active + 1, matches.length - 1); render(); }
+    else if (e.key === "ArrowUp") { e.preventDefault(); active = Math.max(active - 1, 0); render(); }
+    else if (e.key === "Enter") { e.preventDefault(); if (matches[active]) choose(matches[active].code); }
+    else if (e.key === "Escape") { input.value = ""; matches = []; render(); input.blur(); }
+  });
+  list.addEventListener("mousedown", (e) => {
+    const li = e.target.closest("li[data-code]");
+    if (li) { e.preventDefault(); choose(li.dataset.code); }
+  });
+  input.addEventListener("blur", () => { setTimeout(() => { matches = []; render(); }, 120); });
+
+  return { destroy() { box.remove(); } };
+}

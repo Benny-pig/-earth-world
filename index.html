@@ -108,6 +108,28 @@
   #tw-clock .tw-label { font-size: 11px; color: #8fd4ff; letter-spacing: .04em; }
   #tw-clock .tw-date { font-size: 12px; color: #b9c6e6; }
   #tw-clock .tw-time { font-size: 20px; font-variant-numeric: tabular-nums; letter-spacing: .02em; }
+  #country-search {
+    position: fixed; top: 18px; left: 50%; transform: translateX(-50%); z-index: 44; width: min(340px, 70vw);
+    font: 14px system-ui, "Microsoft JhengHei", sans-serif;
+  }
+  #country-search input {
+    width: 100%; box-sizing: border-box; padding: 9px 14px; border-radius: 10px;
+    background: rgba(10, 14, 26, 0.78); backdrop-filter: blur(10px);
+    border: 1px solid rgba(120, 170, 255, 0.3); color: #eef4ff; font: inherit; outline: none;
+  }
+  #country-search input::placeholder { color: #8093b5; }
+  #country-search input:focus { border-color: rgba(120, 170, 255, 0.7); }
+  #country-search ul {
+    list-style: none; margin: 6px 0 0; padding: 4px; border-radius: 10px;
+    background: rgba(10, 14, 26, 0.92); backdrop-filter: blur(12px);
+    border: 1px solid rgba(120, 170, 255, 0.22); max-height: 320px; overflow-y: auto;
+  }
+  #country-search li {
+    display: flex; align-items: baseline; gap: 8px; padding: 7px 10px; border-radius: 7px; cursor: pointer;
+  }
+  #country-search li.active, #country-search li:hover { background: rgba(77, 163, 255, 0.22); }
+  #country-search .cs-zh { color: #eef4ff; }
+  #country-search .cs-en { color: #9fb2d8; font-size: 12px; }
   #clock-weather {
     position: fixed; top: 18px; right: 18px; z-index: 42;
     padding: 12px 16px; border-radius: 10px; text-align: right;
@@ -142,6 +164,10 @@
   <div id="webgl-fallback">你的瀏覽器不支援 WebGL,無法顯示地球世界。<br>請改用較新版本的 Chrome / Edge / Firefox。</div>
   <div id="tooltip"></div>
   <div id="tw-clock"></div>
+  <div id="country-search">
+    <input type="text" placeholder="搜尋國家(中 / English)" aria-label="搜尋國家" autocomplete="off" spellcheck="false">
+    <ul hidden></ul>
+  </div>
   <div id="country-labels"></div>
   <div id="ocean-labels"></div>
   <div id="side-panel"><button class="close" aria-label="關閉">×</button><div id="side-panel-body"></div></div>

@@ -17,6 +17,7 @@ import { createCountryLabels } from "/src/scene/country-labels.js";
 import { createSidePanel } from "/src/ui/side-panel.js";
 import { createClockWeather } from "/src/ui/clock-weather.js";
 import { createTwClock } from "/src/ui/tw-clock.js";
+import { createCountrySearch } from "/src/ui/country-search.js";
 import { createMusic } from "/src/audio/music.js";
 
 const container = document.getElementById("app");
@@ -118,6 +119,14 @@ export function start() {
       window.__earth.countryLayer = countryLayer;
       const countryLabels = createCountryLabels({ geojson, globeObject: globe.object, camera, renderer });
       window.__earth.countryLabels = countryLabels;
+
+      const searchIndex = [];
+      for (const [code, wrap] of countryLayer.meshByCode) {
+        const n = wrap.userData.names || {};
+        searchIndex.push({ code, zh: n.zh || code, en: n.en || "" });
+      }
+      searchIndex.sort((a, b) => a.zh.localeCompare(b.zh, "zh-Hant"));
+      window.__earth.countrySearch = createCountrySearch({ index: searchIndex, onPick: openCountryByCode });
     })
     .catch((err) => showError(err.message));
 
@@ -200,18 +209,8 @@ export function start() {
   } });
   window.__earth.sidePanel = sidePanel;
 
-  let downPos = null;
-  renderer.domElement.addEventListener("pointerdown", (e) => { downPos = { x: e.clientX, y: e.clientY }; });
-  renderer.domElement.addEventListener("pointerup", (e) => {
-    if (!downPos) return;
-    const moved = Math.hypot(e.clientX - downPos.x, e.clientY - downPos.y);
-    downPos = null;
-    if (moved > 6) return;                 // 拖曳,不算點擊
-    const cl = window.__earth.countryLayer;
-    if (!cl) return;
-    raycaster.setFromCamera(pointer, camera);
-    const hit = cl.pick(raycaster, globe.mesh);
-    if (!hit) return;
+  // 開啟一個國家:滑鼠點擊與搜尋欄共用。hit = { code, names, centroidLatLon, pop }
+  function openCountry(hit) {
     const c = (window.__earth.content || {})[hit.code];
     const [lon, lat] = hit.centroidLatLon;
     // 有些條目(南極洲、法屬南部領地)有內容但沒有首都座標與聚落 → 飛到國家質心、不顯示天氣
@@ -239,6 +238,30 @@ export function start() {
       latlon: noSettlement ? null : (cll || [lat, lon]),
     });
     window.__earth.countryLayer.setSelected(hit.code);
+  }
+  window.__earth.openCountry = openCountry;
+
+  function openCountryByCode(code) {
+    const cl = window.__earth.countryLayer;
+    const wrap = cl && cl.meshByCode.get(code);
+    if (!wrap) return;
+    const u = wrap.userData;
+    openCountry({ code, names: u.names, centroidLatLon: u.centroidLatLon, pop: u.feature?.properties?.POP_EST ?? null });
+  }
+
+  let downPos = null;
+  renderer.domElement.addEventListener("pointerdown", (e) => { downPos = { x: e.clientX, y: e.clientY }; });
+  renderer.domElement.addEventListener("pointerup", (e) => {
+    if (!downPos) return;
+    const moved = Math.hypot(e.clientX - downPos.x, e.clientY - downPos.y);
+    downPos = null;
+    if (moved > 6) return;                 // 拖曳,不算點擊
+    const cl = window.__earth.countryLayer;
+    if (!cl) return;
+    raycaster.setFromCamera(pointer, camera);
+    const hit = cl.pick(raycaster, globe.mesh);
+    if (!hit) return;
+    openCountry(hit);
   });
 
   window.addEventListener("resize", () => {
