@@ -128,7 +128,11 @@ export function start() {
   const clockWeather = createClockWeather();
   window.__earth.clockWeather = clockWeather;
 
-  const sidePanel = createSidePanel({ onClose: () => { rig.resetView(); clockWeather.clear(); } });
+  const sidePanel = createSidePanel({ onClose: () => {
+    rig.resetView();
+    clockWeather.clear();
+    if (window.__earth.countryLayer) window.__earth.countryLayer.setSelected(null);
+  } });
   window.__earth.sidePanel = sidePanel;
 
   let downPos = null;
@@ -164,6 +168,7 @@ export function start() {
       timezone: c ? c.timezone : null,
       latlon: c ? c.capital_latlon : [lat, lon],
     });
+    window.__earth.countryLayer.setSelected(hit.code);
   });
 
   window.addEventListener("resize", () => {

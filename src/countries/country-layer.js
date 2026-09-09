@@ -7,6 +7,12 @@ const HOVER_COLOR = 0x66e0ff;
 const BASE_OPACITY = 0.001;
 const HOVER_OPACITY = 0.28;
 
+const SELECT_SCALE = 1.055;
+const SELECT_OPACITY = 0.5;
+const SELECT_COLOR = 0x4da3ff;
+const OUTLINE_COLOR = 0x9fe9ff;
+const OUTLINE_RADIUS = 1.06;
+
 function ringsToMeshGeometry(rings, radius) {
   // rings: [outer, hole1, ...] 每個是 [[lon,lat],...]
   const flat = [];
@@ -54,7 +60,7 @@ export function buildCountryLayer(geojson, { radius = 1.002 } = {}) {
     const meshes = geoms.map((g) => new THREE.Mesh(g, material));
     const wrap = new THREE.Group();
     meshes.forEach((m) => wrap.add(m));
-    wrap.userData = { code, names, centroidLatLon: biggestRing ? ringCentroid(biggestRing) : [0, 0], material };
+    wrap.userData = { code, names, centroidLatLon: biggestRing ? ringCentroid(biggestRing) : [0, 0], material, feature };
     group.add(wrap);
     meshByCode.set(code, wrap);
   }
@@ -62,15 +68,71 @@ export function buildCountryLayer(geojson, { radius = 1.002 } = {}) {
   let hoverCode = null;
   function setHover(code) {
     if (code === hoverCode) return;
-    if (hoverCode && meshByCode.has(hoverCode)) {
+    if (hoverCode && hoverCode !== selectedCode && meshByCode.has(hoverCode)) {
       const m = meshByCode.get(hoverCode).userData.material;
       m.opacity = BASE_OPACITY; m.color.set(0xffffff);
     }
     hoverCode = code;
-    if (hoverCode && meshByCode.has(hoverCode)) {
+    if (hoverCode && hoverCode !== selectedCode && meshByCode.has(hoverCode)) {
       const m = meshByCode.get(hoverCode).userData.material;
       m.opacity = HOVER_OPACITY; m.color.set(HOVER_COLOR);
     }
+  }
+
+  let selectedCode = null;
+  let selOutline = null; // reusable THREE.LineSegments, rebuilt per selection
+
+  function buildOutlineGeometry(feature) {
+    const verts = [];
+    for (const rings of iterCountryPolygons(feature)) {
+      for (const ring of rings) {
+        for (let i = 0; i < ring.length - 1; i++) {
+          const a = latLonToXYZ(ring[i][1], ring[i][0], OUTLINE_RADIUS);
+          const b = latLonToXYZ(ring[i + 1][1], ring[i + 1][0], OUTLINE_RADIUS);
+          verts.push(a.x, a.y, a.z, b.x, b.y, b.z);
+        }
+      }
+    }
+    const g = new THREE.BufferGeometry();
+    g.setAttribute("position", new THREE.BufferAttribute(new Float32Array(verts), 3));
+    return g;
+  }
+
+  function restoreCountry(code) {
+    const w = meshByCode.get(code);
+    if (!w) return;
+    w.scale.setScalar(1);
+    const isHover = code === hoverCode;
+    w.userData.material.opacity = isHover ? HOVER_OPACITY : BASE_OPACITY;
+    w.userData.material.color.set(isHover ? HOVER_COLOR : 0xffffff);
+  }
+
+  function setSelected(code) {
+    if (code === selectedCode) return;
+    if (selectedCode) restoreCountry(selectedCode);
+    selectedCode = null;
+    if (selOutline) selOutline.visible = false;
+
+    if (!code || !meshByCode.has(code)) return;
+    selectedCode = code;
+    const w = meshByCode.get(code);
+    w.scale.setScalar(SELECT_SCALE);
+    w.userData.material.opacity = SELECT_OPACITY;
+    w.userData.material.color.set(SELECT_COLOR);
+
+    const geo = buildOutlineGeometry(w.userData.feature);
+    if (!selOutline) {
+      selOutline = new THREE.LineSegments(
+        geo,
+        new THREE.LineBasicMaterial({ color: OUTLINE_COLOR, transparent: true, opacity: 0.9, blending: THREE.AdditiveBlending, depthWrite: false }),
+      );
+      selOutline.renderOrder = 3;
+      group.add(selOutline);
+    } else {
+      selOutline.geometry.dispose();
+      selOutline.geometry = geo;
+    }
+    selOutline.visible = true;
   }
 
   function pick(raycaster, occluder) {
@@ -89,5 +151,5 @@ export function buildCountryLayer(geojson, { radius = 1.002 } = {}) {
     return { code, names, centroidLatLon };
   }
 
-  return { group, pick, setHover, meshByCode };
+  return { group, pick, setHover, setSelected, meshByCode };
 }
