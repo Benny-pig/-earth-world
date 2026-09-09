@@ -1,0 +1,285 @@
+{
+  "name_zh": "德國",
+  "name_en": "Germany",
+  "summary": "德國位於中歐，是歐盟人口最多、經濟規模最大的國家，首都為柏林。它由十六個邦組成聯邦，歷史上長期分裂，直到一八七一年才首度統一，二十世紀又歷經兩次世界大戰與冷戰時期的分裂，於一九九○年重新統一。德國以工業製造、汽車、古典音樂與哲學傳統著稱。",
+  "founding": [
+    "中歐的日耳曼各部落在羅馬時代活動於萊茵河與多瑙河以北。西元九年的條頓堡森林之役，日耳曼聯軍殲滅三個羅馬軍團，使羅馬放棄向易北河擴張，萊茵河大致成為疆界。西羅馬崩解後，法蘭克人建立王國，查理曼在八○○年被加冕為皇帝，統一了西歐大部分基督教地區。",
+    "八四三年《凡爾登條約》將法蘭克帝國一分為三，東法蘭克王國即為德意志的雛形。九六二年鄂圖一世在羅馬加冕，神聖羅馬帝國成形。此後數百年，帝國內部由眾多公國、主教領地與自由城市組成，皇帝多由選帝侯推舉，中央權力有限，地方勢力強大。",
+    "一五一七年，維滕貝格的神學家馬丁·路德發表《九十五條論綱》，批評贖罪券，引發宗教改革，德意志地區從此分裂為天主教與新教。宗教與政治衝突在一六一八年爆發為三十年戰爭，戰火使德意志人口銳減；一六四八年《西發里亞和約》確認各邦的主權，帝國更趨鬆散。",
+    "十八世紀普魯士崛起為軍事強權。一八○六年拿破崙迫使神聖羅馬帝國解散，戰後成立鬆散的德意志邦聯。經濟上關稅同盟促進整合，政治上普魯士在俾斯麥主導下透過三場戰爭排除奧地利、擊敗法國，於一八七一年建立德意志帝國，首次將德意志統一為民族國家。",
+    "德意志帝國在第一次世界大戰戰敗後改行共和（威瑪共和）。一九三三年希特勒與納粹黨掌權，推行獨裁與種族迫害，並發動第二次世界大戰，造成包括猶太人大屠殺在內的巨大災難。戰後德國分裂，一九四九年西部成立德意志聯邦共和國、東部成立德意志民主共和國，一九六一年築起柏林圍牆。一九九○年兩德統一，柏林恢復為首都，今日德國是歐盟人口最多、經濟規模最大的國家。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "德意志聯邦共和國",
+    "area_km2": 357022,
+    "languages": [
+      "德語"
+    ],
+    "religion": "以基督宗教為主（天主教與福音教會約略相當），無國教，無宗教信仰者比例高",
+    "currency": "歐元（EUR）",
+    "government": "聯邦議會制共和"
+  },
+  "animals": [
+    {
+      "zh": "白鸛",
+      "en": "White stork",
+      "note": "常在屋頂與電線桿上築大巢，民間視為帶來好運。",
+      "image": "animals-white-stork.jpg"
+    },
+    {
+      "zh": "歐洲野牛",
+      "en": "European bison",
+      "note": "歐洲最重的陸生動物，經復育重新引入部分林區。"
+    },
+    {
+      "zh": "紅鳶",
+      "en": "Red kite",
+      "note": "尾羽分叉的猛禽，全球半數以上族群在德國繁殖。"
+    },
+    {
+      "zh": "歐亞猞猁",
+      "en": "Eurasian lynx",
+      "note": "哈茨山等林區復育的大型野貓，晝伏夜出。"
+    },
+    {
+      "zh": "野豬",
+      "en": "Wild boar",
+      "note": "廣布森林與近郊，夜間常進入城鎮翻找食物。"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "德式香腸",
+      "en": "Bratwurst",
+      "note": "各地配方不同的煎烤豬肉腸，常夾麵包食用。"
+    },
+    {
+      "zh": "德國酸菜",
+      "en": "Sauerkraut",
+      "note": "高麗菜經乳酸發酵而成，常搭配香腸與豬肉。"
+    },
+    {
+      "zh": "椒鹽卷餅",
+      "en": "Pretzel",
+      "note": "以鹼水處理再烘烤、表面撒粗鹽的結狀麵包。"
+    },
+    {
+      "zh": "烤豬腳",
+      "en": "Schweinshaxe",
+      "note": "烤到外皮酥脆的大塊帶骨豬腳，巴伐利亞名菜。"
+    },
+    {
+      "zh": "黑森林蛋糕",
+      "en": "Black Forest gâteau",
+      "note": "以巧克力海綿、櫻桃與鮮奶油層疊的蛋糕。"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "布蘭登堡門",
+      "en": "Brandenburg Gate",
+      "note": "柏林的新古典主義城門，冷戰時緊鄰東西分界。",
+      "latlon": [
+        52.5163,
+        13.3777
+      ],
+      "image": "landmarks-brandenburg-gate.jpg"
+    },
+    {
+      "zh": "新天鵝堡",
+      "en": "Neuschwanstein Castle",
+      "note": "巴伐利亞國王路德維希二世興建的夢幻山城堡。",
+      "latlon": [
+        47.5576,
+        10.7498
+      ],
+      "image": "landmarks-neuschwanstein.jpg"
+    },
+    {
+      "zh": "科隆主教座堂",
+      "en": "Cologne Cathedral",
+      "note": "歷時六百餘年才完工的哥德式雙塔大教堂。",
+      "latlon": [
+        50.9413,
+        6.9583
+      ],
+      "image": "landmarks-cologne-cathedral.jpg"
+    },
+    {
+      "zh": "國會大廈",
+      "en": "Reichstag building",
+      "note": "帝國時期落成、頂部加建玻璃穹頂的聯邦議會所在。",
+      "latlon": [
+        52.5186,
+        13.3762
+      ],
+      "image": "landmarks-reichstag.jpg"
+    },
+    {
+      "zh": "柏林圍牆東邊畫廊",
+      "en": "East Side Gallery",
+      "note": "圍牆遺跡上的露天壁畫，紀念德國的分裂與統一。",
+      "latlon": [
+        52.505,
+        13.4397
+      ],
+      "image": "landmarks-east-side-gallery.jpg"
+    }
+  ],
+  "people": [
+    {
+      "zh": "約翰·沃夫岡·馮·歌德",
+      "en": "Johann Wolfgang von Goethe",
+      "note": "《浮士德》作者，被視為德語文學的代表人物。",
+      "image": "people-goethe.jpg"
+    },
+    {
+      "zh": "路德維希·范·貝多芬",
+      "en": "Ludwig van Beethoven",
+      "note": "橫跨古典與浪漫時期的作曲家，晚年失聰仍持續創作。",
+      "image": "people-beethoven.jpg"
+    },
+    {
+      "zh": "約翰·塞巴斯蒂安·巴哈",
+      "en": "Johann Sebastian Bach",
+      "note": "巴洛克音樂的集大成者，作品體系龐大而嚴謹。",
+      "image": "people-bach.jpg"
+    },
+    {
+      "zh": "阿爾伯特·愛因斯坦",
+      "en": "Albert Einstein",
+      "note": "提出相對論的物理學家，出生於符騰堡的烏爾姆。",
+      "image": "people-einstein.jpg"
+    },
+    {
+      "zh": "馬丁·路德",
+      "en": "Martin Luther",
+      "note": "宗教改革的發起者，將聖經譯為德文、影響德語書面語。",
+      "image": "people-luther.jpg"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "十二月的聖誕市集",
+      "note": "紐倫堡、德勒斯登與科隆的耶誕市集有熱紅酒、薑餅與木製工藝品，是德國冬季的代表體驗。"
+    },
+    {
+      "zh": "九月底至十月初的慕尼黑啤酒節",
+      "note": "全球最大的民俗節慶，需提早訂帳篷桌位與住宿，白天氣氛較適合親子。"
+    },
+    {
+      "zh": "秋季的萊茵河中段與羅曼蒂克大道",
+      "note": "九至十月葡萄收成、城堡與紅葉相映，可搭河輪或自駕，串遊呂德斯海姆到科布倫茲一帶。"
+    }
+  ],
+  "events": [
+    {
+      "year": 9,
+      "zh": "條頓堡森林之役，日耳曼部落聯軍擊退羅馬軍團。"
+    },
+    {
+      "year": 843,
+      "zh": "《凡爾登條約》分割法蘭克帝國，東法蘭克王國成為德意志的雛形。"
+    },
+    {
+      "year": 962,
+      "zh": "鄂圖一世在羅馬加冕，神聖羅馬帝國成形。"
+    },
+    {
+      "year": 1517,
+      "zh": "馬丁·路德發表《九十五條論綱》，宗教改革開始。"
+    },
+    {
+      "year": 1871,
+      "zh": "普魯士主導下德意志帝國成立，德意志首次統一為民族國家。"
+    },
+    {
+      "year": 1949,
+      "zh": "德意志聯邦共和國（西德）與德意志民主共和國（東德）分別成立。"
+    },
+    {
+      "year": 1990,
+      "zh": "兩德統一，柏林恢復為首都。"
+    }
+  ],
+  "credits": [
+    {
+      "file": "animals-white-stork.jpg",
+      "title": "White stork on nest",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:White_stork_(Ciconia_ciconia)_on_nest.jpg"
+    },
+    {
+      "file": "landmarks-brandenburg-gate.jpg",
+      "title": "Brandenburg Gate in the morning",
+      "author": "Thomas Wolf",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Brandenburger_Tor_morgens.jpg"
+    },
+    {
+      "file": "landmarks-neuschwanstein.jpg",
+      "title": "Neuschwanstein Castle from Marienbrücke",
+      "author": "Ximonic, Simo Räsänen & Tauno Räsänen",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Neuschwanstein_Castle_from_Marienbrücke,_2011_May.jpg"
+    },
+    {
+      "file": "landmarks-cologne-cathedral.jpg",
+      "title": "Cologne Cathedral from the east",
+      "author": "Thomas Wolf",
+      "license": "CC BY-SA 3.0 de",
+      "source": "https://commons.wikimedia.org/wiki/File:Kölner_Dom_von_Osten.jpg"
+    },
+    {
+      "file": "landmarks-reichstag.jpg",
+      "title": "Reichstag building from the west before sunset",
+      "author": "Jürgen Matern",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Reichstag_building_Berlin_view_from_west_before_sunset.jpg"
+    },
+    {
+      "file": "landmarks-east-side-gallery.jpg",
+      "title": "East Side Gallery, remnant of the Berlin Wall",
+      "author": "Ank Kumar",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:East_side_gallery,_Berlin_Wall_(Ank_Kumar,_Infosys_Limited)_01.jpg"
+    },
+    {
+      "file": "people-goethe.jpg",
+      "title": "Goethe by Joseph Karl Stieler, 1828",
+      "author": "Joseph Karl Stieler",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Goethe_(Stieler_1828).jpg"
+    },
+    {
+      "file": "people-beethoven.jpg",
+      "title": "Beethoven by Joseph Karl Stieler",
+      "author": "Joseph Karl Stieler",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Beethoven.jpg"
+    },
+    {
+      "file": "people-bach.jpg",
+      "title": "Portrait of J. S. Bach by Elias Gottlob Haussmann",
+      "author": "Elias Gottlob Haussmann",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Johann_Sebastian_Bach.jpg"
+    },
+    {
+      "file": "people-einstein.jpg",
+      "title": "Albert Einstein, 1921",
+      "author": "Underwood and Underwood",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Albert_Einstein_photo_1921.jpg"
+    },
+    {
+      "file": "people-luther.jpg",
+      "title": "Martin Luther by Lucas Cranach the Elder, 1528",
+      "author": "Lucas Cranach the Elder",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Lucas_Cranach_d.Ä._-_Martin_Luther,_1528_(Veste_Coburg).jpg"
+    }
+  ],
+  "code": "DE"
+}

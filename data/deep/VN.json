@@ -51,12 +51,14 @@
     {
       "zh": "河粉",
       "en": "Pho",
-      "note": "以牛骨或雞骨久熬高湯沖泡扁米粉,配生牛肉片與香草,源於北部。"
+      "note": "以牛骨或雞骨久熬高湯沖泡扁米粉,配生牛肉片與香草,源於北部。",
+      "image": "foods-pho.jpg"
     },
     {
       "zh": "越式法國麵包",
       "en": "Banh mi",
-      "note": "酥脆小法棍夾肉、醃蘿蔔紅白絲、香菜與辣椒,是殖民時期食材本土化的產物。"
+      "note": "酥脆小法棍夾肉、醃蘿蔔紅白絲、香菜與辣椒,是殖民時期食材本土化的產物。",
+      "image": "foods-banhmi.jpg"
     },
     {
       "zh": "生春捲",
@@ -92,7 +94,8 @@
       "latlon": [
         15.8801,
         108.338
-      ]
+      ],
+      "image": "landmarks-hoian.jpg"
     },
     {
       "zh": "順化皇城",
@@ -198,11 +201,32 @@
   ],
   "credits": [
     {
+      "file": "foods-pho.jpg",
+      "title": "Pho bo (beef pho)",
+      "author": "Vinnie Cartabiano",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ph%E1%BB%9F_b%C3%B2_(39425047901).jpg"
+    },
+    {
+      "file": "foods-banhmi.jpg",
+      "title": "Banh mi in Ho Chi Minh City",
+      "author": "Matt Stabile",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:B%C3%A1nh_m%C3%AC_Vi%E1%BB%87t_Anh,_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.jpg"
+    },
+    {
       "file": "landmarks-halongbay.jpg",
       "title": "Halong Bay, Vietnam",
       "author": "Thomas Hirsch",
       "license": "CC BY-SA 3.0",
       "source": "https://commons.wikimedia.org/wiki/File:Halong_Bay_in_Vietnam.jpg"
+    },
+    {
+      "file": "landmarks-hoian.jpg",
+      "title": "Hoi An Ancient Town",
+      "author": "Steffen Schmitz",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:H%E1%BB%99i_An,_Ancient_Town,_2020-01_CN-11.jpg"
     },
     {
       "file": "landmarks-hue.jpg",

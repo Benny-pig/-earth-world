@@ -1,0 +1,287 @@
+{
+  "name_zh": "英國",
+  "name_en": "United Kingdom",
+  "summary": "英國全稱「大不列顛暨北愛爾蘭聯合王國」，位於西歐外海，由英格蘭、蘇格蘭、威爾斯與北愛爾蘭組成，首都為倫敦。它是工業革命的發源地，曾建立史上最大的殖民帝國，對議會制度、普通法與英語的全球傳播影響深遠。現為議會制君主立憲國，並於二○二○年正式脫離歐盟。",
+  "founding": [
+    "不列顛島在史前時代已有人居，巨石陣即建於新石器時代至青銅時代。西元四三年羅馬帝國入侵，設立不列顛尼亞行省，統治約四個世紀後於五世紀初撤離。此後盎格魯、撒克遜與朱特等日耳曼族群自歐陸遷入，逐漸形成多個小王國，並長期受維京人侵擾。",
+    "一○六六年，諾曼第公爵威廉渡海擊敗英格蘭國王，史稱「諾曼征服」，帶來法語貴族文化與封建制度。中世紀英格蘭發展出議會與普通法傳統，一二一五年貴族迫使約翰王簽署《大憲章》，限制王權。其後歷經與法國的百年戰爭，以及國內的玫瑰戰爭。",
+    "都鐸王朝時期，亨利八世與羅馬教廷決裂，建立英格蘭國教會；伊莉莎白一世在位期間國力上升。一六○三年蘇格蘭王詹姆士六世兼任英格蘭王，兩國共主。十七世紀的內戰導致一六四九年查理一世被處死、短暫的共和，一六六○年王政復辟，一六八八年「光榮革命」進一步確立議會主權。",
+    "一七○七年英格蘭與蘇格蘭議會通過《聯合法案》，合併為大不列顛王國；一八○一年再與愛爾蘭合併。十八世紀後期起，工業革命在不列顛率先展開，配合海軍與貿易優勢，英國建立起遍及各洲的殖民帝國，十九世紀成為世界最強的工業與海權國家。",
+    "兩次世界大戰後，英國國力相對下降，殖民地陸續獨立。一九二二年愛爾蘭自由邦成立並脫離，國名改為「大不列顛暨北愛爾蘭聯合王國」，北愛爾蘭的政治地位此後長期具爭議。一九四八年建立國民保健署，一九七三年加入歐洲共同體，二○一六年公民投票決定脫離歐盟並於二○二○年正式退出；一九九九年起蘇格蘭、威爾斯與北愛爾蘭設立地方議會，實行權力下放。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "大不列顛暨北愛爾蘭聯合王國",
+    "area_km2": 244376,
+    "languages": [
+      "英語",
+      "威爾斯語",
+      "蘇格蘭蓋爾語"
+    ],
+    "religion": "以基督宗教為主；英格蘭聖公會為國教、蘇格蘭教會為長老宗，無宗教比例上升",
+    "currency": "英鎊（GBP）",
+    "government": "單一制議會制君主立憲"
+  },
+  "animals": [
+    {
+      "zh": "歐亞紅松鼠",
+      "en": "Red squirrel",
+      "note": "原生松鼠，因外來灰松鼠競爭而分布退縮。"
+    },
+    {
+      "zh": "馬鹿",
+      "en": "Red deer",
+      "note": "英國最大的陸生哺乳動物，蘇格蘭高地常見。"
+    },
+    {
+      "zh": "歐亞知更鳥",
+      "en": "European robin",
+      "note": "胸前橙紅、不太怕人，常被票選為英國國鳥。"
+    },
+    {
+      "zh": "大西洋海鸚",
+      "en": "Atlantic puffin",
+      "note": "夏季在海崖群聚繁殖，喙在繁殖期呈鮮豔色彩。"
+    },
+    {
+      "zh": "蘇格蘭高地牛",
+      "en": "Highland cattle",
+      "note": "長毛長角、耐寒耐濕的古老牛種。"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "炸魚薯條",
+      "en": "Fish and chips",
+      "note": "裹麵糊油炸的白肉魚配粗切薯條，經典國民美食。",
+      "image": "foods-fish-and-chips.jpg"
+    },
+    {
+      "zh": "英式全套早餐",
+      "en": "Full English breakfast",
+      "note": "煎蛋、培根、香腸、豆子與烤番茄組成的豐盛拼盤。"
+    },
+    {
+      "zh": "週日烤肉",
+      "en": "Sunday roast",
+      "note": "烤肉佐馬鈴薯、時蔬與肉汁，傳統的家庭聚餐。"
+    },
+    {
+      "zh": "約克郡布丁",
+      "en": "Yorkshire pudding",
+      "note": "麵糊高溫烤成的中空酥殼，搭配烤牛肉與肉汁。"
+    },
+    {
+      "zh": "司康",
+      "en": "Scone",
+      "note": "佐凝脂奶油與果醬，是英式下午茶的要角。"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "西敏宮與大笨鐘",
+      "en": "Palace of Westminster & Big Ben",
+      "note": "英國國會所在，鐘樓大鐘是倫敦的象徵。",
+      "latlon": [
+        51.4995,
+        -0.1248
+      ],
+      "image": "landmarks-westminster.jpg"
+    },
+    {
+      "zh": "巨石陣",
+      "en": "Stonehenge",
+      "note": "新石器至青銅時代豎立的環狀巨石遺跡。",
+      "latlon": [
+        51.1789,
+        -1.8262
+      ],
+      "image": "landmarks-stonehenge.jpg"
+    },
+    {
+      "zh": "倫敦塔",
+      "en": "Tower of London",
+      "note": "諾曼時期城堡，曾為王宮、監獄與王室珍寶庫。",
+      "latlon": [
+        51.5081,
+        -0.0759
+      ],
+      "image": "landmarks-tower-of-london.jpg"
+    },
+    {
+      "zh": "愛丁堡城堡",
+      "en": "Edinburgh Castle",
+      "note": "聳立於火山岩上的堡壘，俯瞰蘇格蘭首府。",
+      "latlon": [
+        55.9486,
+        -3.1999
+      ],
+      "image": "landmarks-edinburgh-castle.jpg"
+    },
+    {
+      "zh": "巨人堤道",
+      "en": "Giant's Causeway",
+      "note": "北愛爾蘭海岸的六角形玄武岩柱群，源自火山活動。",
+      "latlon": [
+        55.2408,
+        -6.5116
+      ],
+      "image": "landmarks-giants-causeway.jpg"
+    }
+  ],
+  "people": [
+    {
+      "zh": "威廉·莎士比亞",
+      "en": "William Shakespeare",
+      "note": "劇作家與詩人，作品深刻影響英語文學與戲劇。",
+      "image": "people-shakespeare.jpg"
+    },
+    {
+      "zh": "艾薩克·牛頓",
+      "en": "Isaac Newton",
+      "note": "提出運動定律與萬有引力的物理學家與數學家。",
+      "image": "people-newton.jpg"
+    },
+    {
+      "zh": "查爾斯·達爾文",
+      "en": "Charles Darwin",
+      "note": "以天擇說奠定演化生物學的基礎。",
+      "image": "people-darwin.jpg"
+    },
+    {
+      "zh": "溫斯頓·邱吉爾",
+      "en": "Winston Churchill",
+      "note": "第二次世界大戰時期的英國首相，亦為作家。",
+      "image": "people-churchill.jpg"
+    },
+    {
+      "zh": "珍·奧斯汀",
+      "en": "Jane Austen",
+      "note": "《傲慢與偏見》作者，擅長描寫英國鄉紳社會。",
+      "image": "people-austen.jpg"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "八月的愛丁堡藝穗節",
+      "note": "全球最大的表演藝術節，全城同時上演數千場節目，務必提早訂房。"
+    },
+    {
+      "zh": "夏季的蘇格蘭高地與斯凱島",
+      "note": "六至八月日照長，適合自駕與健行，需準備防蚊與雨具。"
+    },
+    {
+      "zh": "春季的湖區與科茲窩",
+      "note": "四至五月水仙盛開、遊客較少，適合鄉間健行與住宿石屋民宿。"
+    }
+  ],
+  "events": [
+    {
+      "year": 43,
+      "zh": "羅馬帝國入侵不列顛，設立不列顛尼亞行省。"
+    },
+    {
+      "year": 1066,
+      "zh": "諾曼第公爵威廉征服英格蘭。"
+    },
+    {
+      "year": 1215,
+      "zh": "英格蘭貴族迫使約翰王簽署《大憲章》。"
+    },
+    {
+      "year": 1707,
+      "zh": "英格蘭與蘇格蘭通過《聯合法案》，大不列顛王國成立。"
+    },
+    {
+      "year": 1801,
+      "zh": "大不列顛與愛爾蘭合併，成立聯合王國。"
+    },
+    {
+      "year": 1922,
+      "zh": "愛爾蘭自由邦成立並脫離，國名改為現行的「大不列顛暨北愛爾蘭聯合王國」。"
+    },
+    {
+      "year": 2020,
+      "zh": "依二○一六年公民投票結果正式脫離歐洲聯盟。"
+    }
+  ],
+  "credits": [
+    {
+      "file": "foods-fish-and-chips.jpg",
+      "title": "Fish and chips, Blackpool",
+      "author": "Matthias Meckel",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Fish_and_chips_blackpool.jpg"
+    },
+    {
+      "file": "landmarks-westminster.jpg",
+      "title": "Palace of Westminster, London",
+      "author": "David Iliff (Diliff)",
+      "license": "CC BY-SA 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:Palace_of_Westminster,_London_-_Feb_2007.jpg"
+    },
+    {
+      "file": "landmarks-stonehenge.jpg",
+      "title": "Stonehenge, 2007",
+      "author": "garethwiscombe",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Stonehenge2007_07_30.jpg"
+    },
+    {
+      "file": "landmarks-tower-of-london.jpg",
+      "title": "Tower of London viewed from the River Thames",
+      "author": "Bob Collowan",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tower_of_London_viewed_from_the_River_Thames.jpg"
+    },
+    {
+      "file": "landmarks-edinburgh-castle.jpg",
+      "title": "Edinburgh Castle from the Grassmarket",
+      "author": "Stephencdickson",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Edinburgh_Castle_from_the_Grassmarket.jpg"
+    },
+    {
+      "file": "landmarks-giants-causeway.jpg",
+      "title": "Giant's Causeway, February 2022",
+      "author": "Maarlowes",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Giant's_Causeway_in_February_2022.jpg"
+    },
+    {
+      "file": "people-shakespeare.jpg",
+      "title": "The Chandos portrait of William Shakespeare",
+      "author": "Attributed to John Taylor",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Shakespeare.jpg"
+    },
+    {
+      "file": "people-newton.jpg",
+      "title": "Portrait of Isaac Newton, 1689",
+      "author": "After Godfrey Kneller",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:GodfreyKneller-IsaacNewton-1689.jpg"
+    },
+    {
+      "file": "people-darwin.jpg",
+      "title": "Charles Darwin, 1881",
+      "author": "Herbert Rose Barraud",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Charles_Darwin_photograph_by_Herbert_Rose_Barraud,_1881.jpg"
+    },
+    {
+      "file": "people-churchill.jpg",
+      "title": "Winston Churchill (The Roaring Lion)",
+      "author": "Yousuf Karsh",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Sir_Winston_Churchill.jpg"
+    },
+    {
+      "file": "people-austen.jpg",
+      "title": "Portrait of Jane Austen (1870 memoir)",
+      "author": "James Andrews / Cassandra Austen",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Jane_Austen,_from_A_Memoir_of_Jane_Austen_(1870).jpg"
+    }
+  ],
+  "code": "GB"
+}

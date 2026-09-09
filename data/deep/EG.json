@@ -1,0 +1,285 @@
+{
+  "name_zh": "埃及",
+  "name_en": "Egypt",
+  "summary": "埃及橫跨非洲東北部與亞洲的西奈半島，絕大多數人口聚居於尼羅河谷與三角洲，首都為開羅。這裡孕育了世界最古老的文明之一，金字塔、神廟與象形文字聞名於世；六四一年後逐漸伊斯蘭化與阿拉伯化，今日是阿拉伯世界人口最多的國家，並掌控連接地中海與紅海的蘇伊士運河。",
+  "founding": [
+    "尼羅河每年氾濫帶來肥沃淤泥，使兩岸在史前時代即發展出農業聚落。約西元前三一○○年，傳說中的統治者（常與納爾邁或美尼斯連結）統一了上埃及與下埃及，建立第一王朝，埃及進入以法老為核心的王朝時代，並發展出象形文字與獨特的來世信仰。",
+    "古王國時期，國力集中於孟斐斯一帶，吉薩三大金字塔即建於此時。經歷第一中間期的分裂後，中王國重新統一；新王國時期（約西元前十六至十一世紀）國勢最盛，圖特摩斯三世、哈特謝普蘇特與拉美西斯二世等法老將勢力擴展到努比亞與黎凡特，並在路克索一帶興建卡納克、帝王谷等大型建築群。",
+    "晚期埃及先後受利比亞人、努比亞人與波斯帝國統治。西元前三三二年亞歷山大大帝征服埃及，其部將建立托勒密王朝，以亞歷山卓為都，融合希臘與埃及文化。西元前三○年，屋大維擊敗女王克麗奧佩脫拉七世與安東尼，埃及成為羅馬（及後來的拜占庭）行省，也是早期基督教與科普特教會的重要據點。",
+    "六四一年阿拉伯穆斯林征服埃及，開啟長期的伊斯蘭化與阿拉伯化。九六九年法蒂瑪王朝建立開羅作為新都；其後薩拉丁的阿尤布王朝，以及馬木留克蘇丹國相繼統治，埃及成為伊斯蘭世界的學術與貿易中心，開羅的愛資哈爾清真寺即為代表。",
+    "一五一七年埃及併入鄂圖曼帝國。一七九八年拿破崙短暫入侵後，阿爾巴尼亞裔軍官穆罕默德·阿里取得政權，推動現代化改革；一八六九年蘇伊士運河通航，埃及戰略地位大增，但也因債務於一八八二年遭英國佔領，一九二二年名義上獨立為王國。一九五二年「自由軍官組織」發動政變推翻君主制，次年成立共和國；納賽爾推動土地改革與運河國有化，此後埃及與以色列多次交戰，一九七九年簽署和平條約，二○一一年爆發大規模示威導致政權更替。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "埃及阿拉伯共和國",
+    "area_km2": 1010408,
+    "languages": [
+      "阿拉伯語"
+    ],
+    "religion": "以伊斯蘭教（遜尼派）為國教；科普特正教會為最大的基督宗教少數",
+    "currency": "埃及鎊（EGP）",
+    "government": "單一制半總統制共和"
+  },
+  "animals": [
+    {
+      "zh": "單峰駱駝",
+      "en": "Dromedary camel",
+      "note": "沙漠運輸與觀光的要角，能長時間耐渴耐熱。",
+      "image": "animals-camel.jpg"
+    },
+    {
+      "zh": "尼羅鱷",
+      "en": "Nile crocodile",
+      "note": "非洲最大的爬行動物，亞斯文以南的尼羅河可見。"
+    },
+    {
+      "zh": "耳廓狐",
+      "en": "Fennec fox",
+      "note": "大耳的小型狐，夜行於沙漠、靠大耳散熱。"
+    },
+    {
+      "zh": "埃及聖䴉",
+      "en": "Sacred ibis",
+      "note": "古埃及視為神鳥，如今在埃及境內已相當罕見。"
+    },
+    {
+      "zh": "埃及貓",
+      "en": "Egyptian Mau",
+      "note": "天然帶斑點的家貓品種，外型近似古壁畫中的貓。"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "庫莎麗",
+      "en": "Koshari",
+      "note": "米、扁豆、通心粉加番茄醬與炸洋蔥，國民主食。",
+      "image": "foods-koshari.jpg"
+    },
+    {
+      "zh": "蠶豆泥",
+      "en": "Ful medames",
+      "note": "燉煮的蠶豆淋橄欖油、加香料，是常見的早餐。"
+    },
+    {
+      "zh": "塔米亞",
+      "en": "Ta'meya",
+      "note": "以去皮蠶豆製成的埃及式炸豆餅（法拉費）。"
+    },
+    {
+      "zh": "埃及圓餅",
+      "en": "Aish baladi",
+      "note": "全麥發酵的口袋麵包，幾乎每餐必備。"
+    },
+    {
+      "zh": "野麻嬰湯",
+      "en": "Molokhia",
+      "note": "口感黏稠的綠葉菜湯，常配飯或麵包與雞肉、兔肉。"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "吉薩金字塔群與人面獅身像",
+      "en": "Giza pyramids & Great Sphinx",
+      "note": "古王國時期的皇家陵墓群與巨型石獅像。",
+      "latlon": [
+        29.9773,
+        31.1325
+      ],
+      "image": "landmarks-giza.jpg"
+    },
+    {
+      "zh": "卡納克神廟",
+      "en": "Karnak Temple",
+      "note": "路克索的巨大神廟群，以柱廳的石柱林著稱。",
+      "latlon": [
+        25.7188,
+        32.6573
+      ],
+      "image": "landmarks-karnak.jpg"
+    },
+    {
+      "zh": "阿布辛貝神廟",
+      "en": "Abu Simbel",
+      "note": "拉美西斯二世鑿山而建，曾為避水患整體切割搬遷。",
+      "latlon": [
+        22.3372,
+        31.6258
+      ]
+    },
+    {
+      "zh": "帝王谷",
+      "en": "Valley of the Kings",
+      "note": "新王國法老鑿於山谷岩壁中的陵墓區。",
+      "latlon": [
+        25.7402,
+        32.6014
+      ],
+      "image": "landmarks-valley-of-kings.jpg"
+    },
+    {
+      "zh": "埃及博物館",
+      "en": "Egyptian Museum, Cairo",
+      "note": "開羅解放廣場旁，典藏圖坦卡門陪葬品等大量文物。",
+      "latlon": [
+        30.0478,
+        31.2336
+      ],
+      "image": "landmarks-egyptian-museum.jpg"
+    }
+  ],
+  "people": [
+    {
+      "zh": "圖坦卡門",
+      "en": "Tutankhamun",
+      "note": "少年即位的法老，一九二二年出土的黃金面具舉世聞名。",
+      "image": "people-tutankhamun.jpg"
+    },
+    {
+      "zh": "拉美西斯二世",
+      "en": "Ramesses II",
+      "note": "在位逾六十年的新王國法老，大興神廟與雕像。",
+      "image": "people-ramesses.jpg"
+    },
+    {
+      "zh": "克麗奧佩脫拉七世",
+      "en": "Cleopatra VII",
+      "note": "托勒密王朝的末代統治者，也是埃及最後的法老。",
+      "image": "people-cleopatra.jpg"
+    },
+    {
+      "zh": "納吉布·馬哈福茲",
+      "en": "Naguib Mahfouz",
+      "note": "一九八八年諾貝爾文學獎得主，多以開羅市井為題材。",
+      "image": "people-mahfouz.jpg"
+    },
+    {
+      "zh": "烏姆·庫勒蘇姆",
+      "en": "Umm Kulthum",
+      "note": "二十世紀阿拉伯世界最具影響力的歌唱家。",
+      "image": "people-umm-kulthum.jpg"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "十月至四月的尼羅河遊船",
+      "note": "路克索至亞斯文的三至四晚航程，串起卡納克、帝王谷、康孟波與菲萊神廟，冬季氣候最舒適。"
+    },
+    {
+      "zh": "冬季的開羅與吉薩",
+      "note": "十一月至二月氣溫適中，適合參觀金字塔、人面獅身像、埃及博物館與大埃及博物館。"
+    },
+    {
+      "zh": "紅海的胡爾加達與達哈布",
+      "note": "全年適合浮潛與潛水，珊瑚礁與能見度俱佳，也是尼羅河行程後放鬆的去處。"
+    }
+  ],
+  "events": [
+    {
+      "year": -3100,
+      "zh": "上下埃及統一，第一王朝建立，法老時代開始。"
+    },
+    {
+      "year": -2560,
+      "zh": "吉薩大金字塔（古夫金字塔）約於此時完工。"
+    },
+    {
+      "year": -332,
+      "zh": "亞歷山大大帝征服埃及，其後托勒密王朝以亞歷山卓為都。"
+    },
+    {
+      "year": -30,
+      "zh": "屋大維擊敗克麗奧佩脫拉七世與安東尼，埃及成為羅馬行省。"
+    },
+    {
+      "year": 641,
+      "zh": "阿拉伯穆斯林征服埃及，開啟伊斯蘭化與阿拉伯化。"
+    },
+    {
+      "year": 1869,
+      "zh": "蘇伊士運河通航。"
+    },
+    {
+      "year": 1952,
+      "zh": "自由軍官組織發動政變推翻君主制，次年成立共和國。"
+    }
+  ],
+  "credits": [
+    {
+      "file": "animals-camel.jpg",
+      "title": "Dromedary camels at the Great Pyramid of Giza",
+      "author": "Edwardwexler",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Domesticated_dromedary_camels_at_the_Great_Pyramid_of_Giza,_Giza,_Egypt.jpg"
+    },
+    {
+      "file": "foods-koshari.jpg",
+      "title": "Egyptian koshari",
+      "author": "Basma",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Egyptian_Koshari.jpg"
+    },
+    {
+      "file": "landmarks-giza.jpg",
+      "title": "Sphinx and pyramids of Giza panorama",
+      "author": "kallerna",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sphinx_and_pyramids_of_Giza_panorama.jpg"
+    },
+    {
+      "file": "landmarks-karnak.jpg",
+      "title": "Karnak Temple, Luxor",
+      "author": "Diego Delso",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Templo_de_Karnak,_Luxor,_Egipto,_2022-04-03,_DD_139.jpg"
+    },
+    {
+      "file": "landmarks-valley-of-kings.jpg",
+      "title": "Panoramic view of the Valley of the Kings",
+      "author": "Vyacheslav Argenberg",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Thebes,_Luxor,_Egypt,_Panoramic_view_of_the_Valley_of_the_Kings.jpg"
+    },
+    {
+      "file": "landmarks-egyptian-museum.jpg",
+      "title": "Facade of the Egyptian Museum, Tahrir Square",
+      "author": "Diego Delso",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Facade_of_the_Egyptian_Museum,_Tahrir_Square,_Cairo,_Egypt1.jpg"
+    },
+    {
+      "file": "people-tutankhamun.jpg",
+      "title": "Mask of Tutankhamun",
+      "author": "Bjørn Christian Tørrissen",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mask_of_Tutankhamun_2003-12-07.jpg"
+    },
+    {
+      "file": "people-ramesses.jpg",
+      "title": "Colossal bust of Ramesses II, the 'Younger Memnon'",
+      "author": "Jon Bodsworth",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Colossal_bust_of_Ramesses_II,_the_'Younger_Memnon'.jpg"
+    },
+    {
+      "file": "people-cleopatra.jpg",
+      "title": "Bust of Cleopatra VII, Altes Museum, Berlin",
+      "author": "José Luiz Bernardes Ribeiro",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bust_of_Cleopatra_VII_-_Altes_Museum_-_Berlin_-_Germany_2017_(2).jpg"
+    },
+    {
+      "file": "people-mahfouz.jpg",
+      "title": "Naguib Mahfouz in the 1960s",
+      "author": "AUC Press",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Naguib_Mahfouz_in_1960s.jpg"
+    },
+    {
+      "file": "people-umm-kulthum.jpg",
+      "title": "Umm Kulthum",
+      "author": "Unknown (Egyptian government press photographer)",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Umm_Kulthum_2.jpg"
+    }
+  ],
+  "code": "EG"
+}

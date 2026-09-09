@@ -1,0 +1,293 @@
+{
+  "name_zh": "希臘",
+  "name_en": "Greece",
+  "summary": "希臘位於巴爾幹半島南端，由大片本土與數千個愛琴海、愛奧尼亞海島嶼組成，首都為雅典。它是西方哲學、民主制度、戲劇與奧林匹克運動的發源地，古典遺跡遍布全國。現代希臘為議會制共和國，觀光與航運是主要的經濟支柱。",
+  "founding": [
+    "希臘是歐洲文明的重要源頭之一。青銅時代的愛琴海先後出現基克拉澤斯文化、克里特島的邁諾斯文明，以及希臘本土的邁錫尼文明。邁錫尼文明約於西元前十二世紀衰亡，希臘進入數百年史料匱乏的「黑暗時代」，其後逐漸形成以城邦（polis）為單位的社會。",
+    "古風與古典時期，各城邦沿地中海與黑海廣設殖民地。雅典在西元前六至五世紀發展出公民參與的民主制度，斯巴達則以軍事見長。西元前四九○年與前四八○年，希臘城邦兩度擊退波斯帝國的入侵，隨後雅典進入文化鼎盛期，哲學、戲劇、史學與建築成就深遠，但也與斯巴達爆發長期的伯羅奔尼撒戰爭。",
+    "西元前四世紀，馬其頓的腓力二世控制希臘，其子亞歷山大大帝東征，將希臘文化傳播到埃及與西亞，開啟「希臘化時代」。西元前一四六年，羅馬擊敗亞該亞同盟，希臘納入羅馬統治，但希臘語言與文化仍持續影響羅馬世界。",
+    "羅馬帝國東西分治後，以君士坦丁堡為中心、以希臘語為主的東羅馬（拜占庭）帝國延續了千年，是東正教文明的核心。一四五三年鄂圖曼帝國攻陷君士坦丁堡，拜占庭滅亡，希臘地區此後由鄂圖曼統治約四個世紀。",
+    "一八二一年希臘爆發獨立戰爭，在英、法、俄等國介入下，一八三○年獲國際承認獨立，初期為王國。二十世紀希臘歷經兩次世界大戰、德國佔領、一九四六至一九四九年的內戰，以及一九六七至一九七四年的軍事獨裁。一九七四年公投廢除君主制、確立共和；一九八一年加入歐洲共同體，二○○一年改用歐元，並於二○○九年後歷經嚴重的主權債務危機。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "希臘共和國",
+    "area_km2": 131957,
+    "languages": [
+      "希臘語"
+    ],
+    "religion": "以希臘正教會為主，約九成人口為東正教徒",
+    "currency": "歐元（EUR）",
+    "government": "議會制共和"
+  },
+  "animals": [
+    {
+      "zh": "赤蠵龜",
+      "en": "Loggerhead sea turtle",
+      "note": "在札金索斯等沙灘產卵的大型海龜，為保育重點。",
+      "image": "animals-loggerhead-turtle.jpg"
+    },
+    {
+      "zh": "地中海僧海豹",
+      "en": "Mediterranean monk seal",
+      "note": "全球最稀有的海豹之一，棲於愛琴海的岩岸洞穴。"
+    },
+    {
+      "zh": "克里島野山羊",
+      "en": "Kri-kri",
+      "note": "克里特島山區的野生山羊，體側有深色帶紋。"
+    },
+    {
+      "zh": "歐洲棕熊",
+      "en": "Brown bear",
+      "note": "分布於品都斯山脈北部的森林，數量稀少。"
+    },
+    {
+      "zh": "縱紋腹小鴞",
+      "en": "Little owl",
+      "note": "被視為雅典娜的象徵，常見於古蹟與橄欖園。"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "希臘沙拉",
+      "en": "Greek salad (horiatiki)",
+      "note": "番茄、小黃瓜、橄欖與整塊費達起司，淋上橄欖油。",
+      "image": "foods-greek-salad.jpg"
+    },
+    {
+      "zh": "慕沙卡",
+      "en": "Moussaka",
+      "note": "茄子、絞肉與白醬層層焗烤而成的家常菜。",
+      "image": "foods-moussaka.jpg"
+    },
+    {
+      "zh": "蘇夫拉基",
+      "en": "Souvlaki",
+      "note": "串烤肉塊，常夾進皮塔餅佐醬料與蔬菜。"
+    },
+    {
+      "zh": "費達起司",
+      "en": "Feta",
+      "note": "以羊奶或羊山羊混合乳鹽漬而成，受產地名稱保護。"
+    },
+    {
+      "zh": "果仁蜜餅",
+      "en": "Baklava",
+      "note": "層層薄酥皮夾堅果、再淋糖漿的甜點。"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "雅典衛城",
+      "en": "Acropolis of Athens",
+      "note": "山丘上的帕德嫩神廟等古典神殿群。",
+      "latlon": [
+        37.9715,
+        23.7267
+      ],
+      "image": "landmarks-acropolis.jpg"
+    },
+    {
+      "zh": "聖托里尼（伊亞）",
+      "en": "Santorini (Oia)",
+      "note": "火山口崖上的白牆藍頂村落，以夕陽著稱。",
+      "latlon": [
+        36.4618,
+        25.3753
+      ],
+      "image": "landmarks-santorini.jpg"
+    },
+    {
+      "zh": "邁泰奧拉",
+      "en": "Meteora",
+      "note": "矗立於巨岩頂端的東正教修道院群。",
+      "latlon": [
+        39.7217,
+        21.6306
+      ],
+      "image": "landmarks-meteora.jpg"
+    },
+    {
+      "zh": "德爾菲",
+      "en": "Delphi",
+      "note": "古希臘的阿波羅神諭聖地，曾被視為世界的中心。",
+      "latlon": [
+        38.4824,
+        22.501
+      ],
+      "image": "landmarks-delphi.jpg"
+    },
+    {
+      "zh": "克諾索斯",
+      "en": "Knossos",
+      "note": "克里特島上的邁諾斯文明宮殿遺址。",
+      "latlon": [
+        35.298,
+        25.163
+      ],
+      "image": "landmarks-knossos.jpg"
+    }
+  ],
+  "people": [
+    {
+      "zh": "蘇格拉底",
+      "en": "Socrates",
+      "note": "以問答法探究倫理，是西方哲學的關鍵人物。",
+      "image": "people-socrates.jpg"
+    },
+    {
+      "zh": "柏拉圖",
+      "en": "Plato",
+      "note": "蘇格拉底的門生，創辦學院、著有《理想國》。",
+      "image": "people-plato.jpg"
+    },
+    {
+      "zh": "亞里斯多德",
+      "en": "Aristotle",
+      "note": "涉獵邏輯、生物學與政治學的百科全書式學者。",
+      "image": "people-aristotle.jpg"
+    },
+    {
+      "zh": "荷馬",
+      "en": "Homer",
+      "note": "相傳為史詩《伊利亞德》與《奧德賽》的作者。",
+      "image": "people-homer.jpg"
+    },
+    {
+      "zh": "亞歷山大大帝",
+      "en": "Alexander the Great",
+      "note": "馬其頓國王，建立橫跨歐、亞、非的龐大帝國。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "五至六月或九月的愛琴海跳島",
+      "note": "氣溫舒適、船班仍密集，適合串遊聖托里尼、納克索斯與米克諾斯，避開八月的尖峰人潮。"
+    },
+    {
+      "zh": "春季的雅典與德爾菲",
+      "note": "三至五月遺跡周邊野花盛開、氣候涼爽，適合安排一日遊走訪德爾菲與蘇尼恩角。"
+    },
+    {
+      "zh": "夏季的克里特島",
+      "note": "島嶼幅員大，可結合克諾索斯遺跡、薩瑪利亞峽谷健行與南岸海灘。"
+    }
+  ],
+  "events": [
+    {
+      "year": -776,
+      "zh": "舉行第一屆古代奧林匹克運動會（傳統紀年）。"
+    },
+    {
+      "year": -508,
+      "zh": "雅典推行克里斯提尼改革，奠定民主政治的基礎。"
+    },
+    {
+      "year": -480,
+      "zh": "希臘城邦聯軍於薩拉米斯海戰擊敗波斯帝國。"
+    },
+    {
+      "year": -146,
+      "zh": "羅馬擊敗亞該亞同盟，希臘納入羅馬統治。"
+    },
+    {
+      "year": 1453,
+      "zh": "鄂圖曼帝國攻陷君士坦丁堡，拜占庭帝國滅亡。"
+    },
+    {
+      "year": 1821,
+      "zh": "希臘獨立戰爭爆發，一八三○年獲國際承認獨立。"
+    },
+    {
+      "year": 1981,
+      "zh": "希臘加入歐洲共同體。"
+    }
+  ],
+  "credits": [
+    {
+      "file": "animals-loggerhead-turtle.jpg",
+      "title": "Loggerhead sea turtle",
+      "author": "ukanda",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Loggerhead_sea_turtle.jpg"
+    },
+    {
+      "file": "foods-greek-salad.jpg",
+      "title": "Horiatiki (Greek village salad)",
+      "author": "Scudsvlad",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Horiatiki_salad.jpg"
+    },
+    {
+      "file": "foods-moussaka.jpg",
+      "title": "Moussaka and Greek salad at a taverna",
+      "author": "Vouliagmeni",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Moussaka_and_Greek_Salad_at_a_taverna_in_Greece.jpg"
+    },
+    {
+      "file": "landmarks-acropolis.jpg",
+      "title": "Acropolis and Parthenon, Athens",
+      "author": "Jebulon",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Acropolis_Parthenon_Athens_Greece.jpg"
+    },
+    {
+      "file": "landmarks-santorini.jpg",
+      "title": "Panoramic view of Oia, Santorini",
+      "author": "Mstyslav Chernov",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Panoramic_view_of_Oia,_Santorini_island_(Thira),_Greece.jpg"
+    },
+    {
+      "file": "landmarks-meteora.jpg",
+      "title": "Roussanou Monastery, Meteora",
+      "author": "Bernard Gagnon",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Roussanou_Monastery,_Meteora.jpg"
+    },
+    {
+      "file": "landmarks-delphi.jpg",
+      "title": "Tholos at the Sanctuary of Athena Pronaia, Delphi",
+      "author": "Bernard Gagnon",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tholos_of_Delphi_02.jpg"
+    },
+    {
+      "file": "landmarks-knossos.jpg",
+      "title": "Knossos palace, Crete",
+      "author": "Marc Ryckaert (MJJR)",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Knossos_R03.jpg"
+    },
+    {
+      "file": "people-socrates.jpg",
+      "title": "Bust of Socrates, Louvre",
+      "author": "Photograph by Sting; Roman copy after a Greek original",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Socrates_Louvre.jpg"
+    },
+    {
+      "file": "people-plato.jpg",
+      "title": "Bust of Plato (Silanion type), Musei Capitolini",
+      "author": "Marie-Lan Nguyen",
+      "license": "CC BY 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:Plato_Silanion_Musei_Capitolini_MC1377.jpg"
+    },
+    {
+      "file": "people-aristotle.jpg",
+      "title": "Bust of Aristotle (Altemps type)",
+      "author": "Photograph by Jastrow; Roman copy after Lysippos",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Aristotle_Altemps_Inv8575.jpg"
+    },
+    {
+      "file": "people-homer.jpg",
+      "title": "Bust of Homer, British Museum",
+      "author": "Hellenistic original; British Museum",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Homer_British_Museum.jpg"
+    }
+  ],
+  "code": "GR"
+}

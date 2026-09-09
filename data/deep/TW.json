@@ -111,7 +111,8 @@
       "latlon": [
         23.865,
         120.915
-      ]
+      ],
+      "image": "landmarks-sun-moon-lake.jpg"
     },
     {
       "zh": "阿里山",
@@ -143,7 +144,8 @@
     {
       "zh": "李安",
       "en": "Ang Lee",
-      "note": "電影導演,以《臥虎藏龍》《斷背山》《少年Pi的奇幻漂流》多次獲奧斯卡獎。"
+      "note": "電影導演,以《臥虎藏龍》《斷背山》《少年Pi的奇幻漂流》多次獲奧斯卡獎。",
+      "image": "people-ang-lee.jpg"
     },
     {
       "zh": "鄧麗君",
@@ -263,6 +265,13 @@
       "source": "https://commons.wikimedia.org/wiki/File:Taiwan_2009_HuaLien_Taroko_Gorge_FRD_5467.jpg"
     },
     {
+      "file": "landmarks-sun-moon-lake.jpg",
+      "title": "Sunrise over Sun Moon Lake",
+      "author": "lienyuan lee",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%E6%97%A5%E5%87%BA%E6%97%A5%E6%9C%88%E6%BD%AD_Sunrise_over_Sun_Moon_Lake_-_panoramio.jpg"
+    },
+    {
       "file": "landmarks-alishan.jpg",
       "title": "Alishan Forest Railway",
       "author": "Uwe Aranas / CEphoto",
@@ -275,6 +284,13 @@
       "author": "李登輝基金會 (Lee Teng-hui Foundation)",
       "license": "CC BY 4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Lee_Teng-hui_official_portrait.png"
+    },
+    {
+      "file": "people-ang-lee.jpg",
+      "title": "Ang Lee at the 66th Venice Film Festival",
+      "author": "Nicolas Genin",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ang_Lee_-_66%C3%A8me_Festival_de_Venise_(Mostra).jpg"
     }
   ],
   "code": "TW"

@@ -1,0 +1,296 @@
+{
+  "name_zh": "西班牙",
+  "name_en": "Spain",
+  "summary": "西班牙位於伊比利半島，西鄰葡萄牙，南隔直布羅陀海峽與非洲相望，首都為馬德里。歷史上先後受羅馬、西哥德與伊斯蘭勢力統治，十五世紀後成為橫跨美洲的帝國，使西班牙語成為世界主要語言之一。今日的西班牙是議會制君主立憲國，以陽光、建築、足球與飲食文化吸引大量旅客。",
+  "founding": [
+    "伊比利半島的人類活動可追溯到舊石器時代，阿爾塔米拉洞窟壁畫即為代表。古代半島居住著伊比利人、凱爾特人等族群，腓尼基人與希臘人沿海岸建立商站，迦太基一度控制東南部。西元前三世紀末，羅馬在對迦太基的戰爭中進入半島，歷經約兩百年將其納入版圖，稱為「西斯帕尼亞」。",
+    "羅馬統治為半島帶來拉丁語、道路與城市。五世紀西羅馬崩解後，西哥德人建立王國，以托雷多為中心統治大部分地區。七一一年，來自北非的伍麥亞王朝軍隊擊敗西哥德王國，伊斯蘭勢力迅速佔領半島大部，建立「安達魯斯」，哥多華一度成為歐洲最大的城市之一，學術與建築繁盛。",
+    "北方殘存的基督教小國此後展開長達數百年的「收復失地運動」。卡斯提亞與亞拉岡兩大王國逐漸壯大，一四六九年伊莎貝拉一世與斐迪南二世聯姻，使兩國實質結合。一四九二年，格拉納達的奈斯爾王朝投降，收復失地運動結束；同年哥倫布代表卡斯提亞王室首航美洲，王室並頒布驅逐猶太人的命令。",
+    "十六世紀在哈布斯堡王朝統治下，西班牙成為橫跨美洲、菲律賓與歐洲部分地區的龐大帝國，金銀自美洲大量流入，文學與繪畫進入「黃金時代」。此後因戰爭消耗、財政困難與王位繼承問題逐漸衰退，十九世紀初拿破崙入侵引發半島戰爭，美洲殖民地相繼獨立，一八九八年更失去古巴、波多黎各與菲律賓。",
+    "二十世紀西班牙歷經第二共和、一九三六至一九三九年的內戰，以及佛朗哥的長期獨裁。一九七五年佛朗哥去世後，國王胡安·卡洛斯一世推動民主轉型，一九七八年公投通過新憲法，確立議會制君主立憲與地方自治體制。一九八六年西班牙加入歐洲共同體，現為歐盟主要經濟體之一，觀光、農業與服務業發達。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "西班牙王國",
+    "area_km2": 505990,
+    "languages": [
+      "西班牙語（卡斯提亞語）",
+      "加泰隆尼亞語",
+      "加利西亞語",
+      "巴斯克語"
+    ],
+    "religion": "以天主教為主，憲法保障宗教自由、無國教",
+    "currency": "歐元（EUR）",
+    "government": "議會制君主立憲"
+  },
+  "animals": [
+    {
+      "zh": "伊比利猞猁",
+      "en": "Iberian lynx",
+      "note": "世界最瀕危的貓科之一，僅分布於伊比利半島。",
+      "image": "animals-iberian-lynx.jpg"
+    },
+    {
+      "zh": "西班牙帝雕",
+      "en": "Spanish imperial eagle",
+      "note": "伊比利半島特有的大型猛禽，曾一度數量稀少。"
+    },
+    {
+      "zh": "伊比利豬",
+      "en": "Iberian pig",
+      "note": "黑蹄豬種，在橡樹林放養、製成頂級生火腿。"
+    },
+    {
+      "zh": "戰鬥牛",
+      "en": "Lidia fighting bull",
+      "note": "為鬥牛培育的牛種，體格強健、性情兇猛。"
+    },
+    {
+      "zh": "大鴇",
+      "en": "Great bustard",
+      "note": "草原上體型最重的飛鳥之一，西班牙族群龐大。"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "西班牙燉飯",
+      "en": "Paella",
+      "note": "源自瓦倫西亞，以短米、番紅花與海鮮或肉類燉煮。",
+      "image": "foods-paella.jpg"
+    },
+    {
+      "zh": "塔帕斯",
+      "en": "Tapas",
+      "note": "佐酒的各式小菜，可多樣拼點、邊吃邊聊。"
+    },
+    {
+      "zh": "伊比利火腿",
+      "en": "Jamón ibérico",
+      "note": "長期風乾熟成的生火腿，油花細緻、鹹香。"
+    },
+    {
+      "zh": "西班牙冷湯",
+      "en": "Gazpacho",
+      "note": "番茄與蔬菜打成的冰涼湯品，夏季消暑。"
+    },
+    {
+      "zh": "吉拿棒",
+      "en": "Churros",
+      "note": "油炸長條麵團沾濃稠熱巧克力，常見早餐點心。"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "聖家堂",
+      "en": "Sagrada Família",
+      "note": "高第設計、至今仍在興建的巴塞隆納大教堂。",
+      "latlon": [
+        41.4036,
+        2.1744
+      ],
+      "image": "landmarks-sagrada-familia.jpg"
+    },
+    {
+      "zh": "阿爾罕布拉宮",
+      "en": "Alhambra",
+      "note": "格拉納達的奈斯爾王朝宮殿與城堡群。",
+      "latlon": [
+        37.1761,
+        -3.5881
+      ],
+      "image": "landmarks-alhambra.jpg"
+    },
+    {
+      "zh": "哥多華清真寺主教座堂",
+      "en": "Mosque–Cathedral of Córdoba",
+      "note": "在伊斯蘭拱柱林中興建教堂，見證多重統治。",
+      "latlon": [
+        37.8786,
+        -4.7794
+      ],
+      "image": "landmarks-cordoba.jpg"
+    },
+    {
+      "zh": "塞哥維亞水道橋",
+      "en": "Aqueduct of Segovia",
+      "note": "羅馬時代的引水石橋，未用灰泥仍屹立至今。",
+      "latlon": [
+        40.9481,
+        -4.1184
+      ],
+      "image": "landmarks-segovia-aqueduct.jpg"
+    },
+    {
+      "zh": "普拉多博物館",
+      "en": "Museo del Prado",
+      "note": "收藏維拉斯奎茲、戈雅等大師名作的國立美術館。",
+      "latlon": [
+        40.4139,
+        -3.6921
+      ],
+      "image": "landmarks-prado.jpg"
+    }
+  ],
+  "people": [
+    {
+      "zh": "米格爾·德·塞萬提斯",
+      "en": "Miguel de Cervantes",
+      "note": "《堂吉訶德》作者，被視為西班牙語文學的奠基者。",
+      "image": "people-cervantes.jpg"
+    },
+    {
+      "zh": "巴勃羅·畢卡索",
+      "en": "Pablo Picasso",
+      "note": "立體派的共同創始人，二十世紀最具影響力的畫家。",
+      "image": "people-picasso.jpg"
+    },
+    {
+      "zh": "薩爾瓦多·達利",
+      "en": "Salvador Dalí",
+      "note": "超現實主義代表人物，以奇想與融化的時鐘聞名。",
+      "image": "people-dali.jpg"
+    },
+    {
+      "zh": "安東尼·高第",
+      "en": "Antoni Gaudí",
+      "note": "加泰隆尼亞現代主義建築師，聖家堂的設計者。",
+      "image": "people-gaudi.jpg"
+    },
+    {
+      "zh": "法蘭西斯科·哥雅",
+      "en": "Francisco Goya",
+      "note": "橫跨宮廷肖像與黑暗版畫的浪漫主義先驅。",
+      "image": "people-goya.jpg"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "四月的塞維亞春會",
+      "note": "復活節後的 Feria de Abril 有佛朗明哥、馬車遊行與傳統服飾，安達魯西亞春天氣候舒適。"
+    },
+    {
+      "zh": "七月的潘普洛納聖費爾明節",
+      "note": "以清晨奔牛聞名，人潮與風險都高，適合想體驗大型街頭慶典的旅人，其餘時間可遊納瓦拉山區。"
+    },
+    {
+      "zh": "秋季的加利西亞與聖雅各之路",
+      "note": "九至十月走法國之路的末段，天氣涼爽、朝聖者較少，終點為聖地牙哥-德孔波斯特拉主教座堂。"
+    }
+  ],
+  "events": [
+    {
+      "year": -1104,
+      "zh": "腓尼基人相傳於此時建立加地斯，為西歐最古老城市之一。"
+    },
+    {
+      "year": -206,
+      "zh": "羅馬擊敗迦太基，開始統治伊比利半島。"
+    },
+    {
+      "year": 711,
+      "zh": "伍麥亞王朝軍隊擊敗西哥德王國，伊斯蘭勢力進入半島。"
+    },
+    {
+      "year": 1492,
+      "zh": "格拉納達陷落，收復失地運動結束；哥倫布代表卡斯提亞首航美洲。"
+    },
+    {
+      "year": 1936,
+      "zh": "西班牙內戰爆發，至一九三九年由佛朗哥一方獲勝。"
+    },
+    {
+      "year": 1978,
+      "zh": "公投通過新憲法，確立議會制君主立憲與地方自治體制。"
+    },
+    {
+      "year": 1986,
+      "zh": "西班牙加入歐洲共同體。"
+    }
+  ],
+  "credits": [
+    {
+      "file": "animals-iberian-lynx.jpg",
+      "title": "Iberian lynx (Lynx pardinus)",
+      "author": "Diego Delso",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Lince_ibérico_(Lynx_pardinus),_Almuradiel,_Ciudad_Real,_España,_2021-12-19,_DD_02.jpg"
+    },
+    {
+      "file": "foods-paella.jpg",
+      "title": "Paella Valenciana",
+      "author": "Jan Harenburg",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:01_Paella_Valenciana_original.jpg"
+    },
+    {
+      "file": "landmarks-sagrada-familia.jpg",
+      "title": "Sagrada Família, March 2015",
+      "author": "Alvesgaspar",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sagrada_Familia_March_2015-10a.jpg"
+    },
+    {
+      "file": "landmarks-alhambra.jpg",
+      "title": "Alhambra evening panorama from Mirador San Nicolás",
+      "author": "Slaunger",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Alhambra_evening_panorama_Mirador_San_Nicolas_sRGB-1.jpg"
+    },
+    {
+      "file": "landmarks-cordoba.jpg",
+      "title": "View of the Mosque-Cathedral of Córdoba",
+      "author": "CEphoto, Uwe Aranas",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Córdoba_Spain_View-of-the-Mosque-of-Cordoba-01.jpg"
+    },
+    {
+      "file": "landmarks-segovia-aqueduct.jpg",
+      "title": "Aqueduct of Segovia",
+      "author": "Diego Delso",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Acueducto,_Segovia,_España,_2024-06-14,_DD_10.jpg"
+    },
+    {
+      "file": "landmarks-prado.jpg",
+      "title": "Museo del Prado, Madrid",
+      "author": "Angel Rollón",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Museo_del_Prado_(Madrid)_18.jpg"
+    },
+    {
+      "file": "people-cervantes.jpg",
+      "title": "Portrait of Miguel de Cervantes",
+      "author": "Attributed to Juan de Jáuregui",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Cervantes_Jáuregui.jpg"
+    },
+    {
+      "file": "people-picasso.jpg",
+      "title": "Portrait of Picasso, 1908",
+      "author": "Anonymous",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Portrait_de_Picasso,_1908.jpg"
+    },
+    {
+      "file": "people-dali.jpg",
+      "title": "Salvador Dalí, 1939",
+      "author": "Carl Van Vechten",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Salvador_Dalí_1939.jpg"
+    },
+    {
+      "file": "people-gaudi.jpg",
+      "title": "Antoni Gaudí, 1878",
+      "author": "Pau Audouard",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Gaudí_(1878).jpg"
+    },
+    {
+      "file": "people-goya.jpg",
+      "title": "Self-Portrait by Francisco de Goya",
+      "author": "Francisco Goya",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Francisco_de_Goya_y_Lucientes_-_Self-Portrait_-_WGA9982.jpg"
+    }
+  ],
+  "code": "ES"
+}

@@ -1,0 +1,285 @@
+{
+  "name_zh": "義大利",
+  "name_en": "Italy",
+  "summary": "義大利位於南歐，由靴形的亞平寧半島與西西里、薩丁尼亞兩大島組成，首都為羅馬。這裡是古羅馬文明與文藝復興的發源地，留下大量世界遺產。現代義大利以設計、時尚、汽車、美食與觀光聞名，是七大工業國組織與歐盟的創始成員之一。",
+  "founding": [
+    "義大利半島在古代是多個民族的交會地帶。半島中部有伊特魯里亞人建立的城邦，南部沿海與西西里島遍布希臘人的殖民城市，史稱「大希臘」。相傳西元前七五三年羅慕路斯在台伯河畔建立羅馬城，羅馬起初由王室統治，西元前五○九年貴族推翻王政、改行共和，由元老院與選出的執政官共同掌權。",
+    "羅馬共和透過長期戰爭與結盟，先後征服義大利半島、擊敗迦太基，並將勢力伸入地中海各地。西元前一世紀的內戰之後，屋大維於西元前二七年取得「奧古斯都」尊號，開啟羅馬帝國時代。此後兩百餘年，帝國版圖橫跨歐、亞、非三洲，拉丁語、羅馬法與城市生活方式深刻形塑了後世的歐洲。",
+    "西元三世紀起帝國陷入危機，三九五年正式分裂為東西兩部。四七六年西羅馬末代皇帝被日耳曼將領廢黜，半島此後歷經東哥德、倫巴底、拜占庭與法蘭克等勢力更替。中世紀的義大利長期分裂為教宗國、城市共和國與王國，威尼斯、熱那亞等海上共和國掌握地中海貿易，佛羅倫斯等地則在十四至十六世紀孕育出文藝復興。",
+    "近代早期，義大利各邦成為西班牙、奧地利與法國角力的戰場。十九世紀民族主義興起，推動「復興運動」（Risorgimento）。在薩丁尼亞王國與加里波底等人的努力下，一八六一年義大利王國宣告成立，一八七一年遷都羅馬，大致完成統一。",
+    "二十世紀初義大利參與第一次世界大戰，戰後政局動盪，墨索里尼於一九二二年建立法西斯政權，並在第二次世界大戰中戰敗。一九四六年公民投票廢除君主制，義大利共和國成立；一九五七年義大利簽署《羅馬條約》，成為歐洲經濟共同體創始會員國。今日的義大利是七大工業國組織與歐盟核心成員，以製造業、設計、時尚與觀光著稱。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "義大利共和國",
+    "area_km2": 301340,
+    "languages": [
+      "義大利語"
+    ],
+    "religion": "以天主教為主，一九八四年後政教分離、無國教",
+    "currency": "歐元（EUR）",
+    "government": "議會制共和"
+  },
+  "animals": [
+    {
+      "zh": "義大利狼",
+      "en": "Italian wolf",
+      "note": "亞平寧山區的狼亞種，常被視為義大利的非官方國獸。"
+    },
+    {
+      "zh": "阿爾卑斯野山羊",
+      "en": "Alpine ibex",
+      "note": "大帕拉迪索國家公園的象徵，曾一度瀕臨滅絕。"
+    },
+    {
+      "zh": "歐洲盤羊",
+      "en": "European mouflon",
+      "note": "薩丁尼亞島的野生綿羊，體格結實、角呈螺旋狀。"
+    },
+    {
+      "zh": "大紅鸛",
+      "en": "Greater flamingo",
+      "note": "在薩丁尼亞與托斯卡尼的濕地成群覓食與繁殖。"
+    },
+    {
+      "zh": "馬雷馬牧羊犬",
+      "en": "Maremma Sheepdog",
+      "note": "中部牧區看守羊群的白色大型工作犬。"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "拿坡里披薩",
+      "en": "Neapolitan pizza",
+      "note": "薄餅底加番茄與莫札瑞拉，其做法列入非物質文化遺產。",
+      "image": "foods-pizza.jpg"
+    },
+    {
+      "zh": "義大利麵",
+      "en": "Pasta",
+      "note": "各地形狀與醬汁千變萬化，是義大利飲食的主食核心。"
+    },
+    {
+      "zh": "提拉米蘇",
+      "en": "Tiramisu",
+      "note": "以咖啡、手指餅乾與馬斯卡彭起司層疊而成的甜點。"
+    },
+    {
+      "zh": "濃縮咖啡",
+      "en": "Espresso",
+      "note": "高壓萃取的小杯咖啡，是義式咖啡文化的基礎。"
+    },
+    {
+      "zh": "義式冰淇淋",
+      "en": "Gelato",
+      "note": "乳脂較低、風味濃郁綿密的手工冰品。"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "羅馬競技場",
+      "en": "Colosseum",
+      "note": "西元一世紀落成的圓形競技場，古羅馬工程的代表。",
+      "latlon": [
+        41.8902,
+        12.4922
+      ],
+      "image": "landmarks-colosseum.jpg"
+    },
+    {
+      "zh": "比薩斜塔",
+      "en": "Leaning Tower of Pisa",
+      "note": "因地基不均而傾斜的中世紀大理石鐘樓。",
+      "latlon": [
+        43.723,
+        10.3966
+      ],
+      "image": "landmarks-pisa.jpg"
+    },
+    {
+      "zh": "威尼斯大運河",
+      "en": "Grand Canal, Venice",
+      "note": "貫穿水都的主要水道，兩岸盡是古老宮邸。",
+      "latlon": [
+        45.4386,
+        12.3316
+      ],
+      "image": "landmarks-venice-grand-canal.jpg"
+    },
+    {
+      "zh": "佛羅倫斯主教座堂",
+      "en": "Florence Cathedral",
+      "note": "布魯內萊斯基設計的紅色大圓頂，文藝復興地標。",
+      "latlon": [
+        43.7731,
+        11.256
+      ],
+      "image": "landmarks-florence.jpg"
+    },
+    {
+      "zh": "龐貝古城",
+      "en": "Pompeii",
+      "note": "七九年被維蘇威火山灰掩埋、保存完整的羅馬城市。",
+      "latlon": [
+        40.7497,
+        14.4869
+      ],
+      "image": "landmarks-pompeii.jpg"
+    }
+  ],
+  "people": [
+    {
+      "zh": "李奧納多·達文西",
+      "en": "Leonardo da Vinci",
+      "note": "文藝復興全才，繪有《蒙娜麗莎》與《最後的晚餐》。",
+      "image": "people-leonardo.jpg"
+    },
+    {
+      "zh": "米開朗基羅",
+      "en": "Michelangelo",
+      "note": "雕出《大衛像》、繪西斯汀禮拜堂天頂的雕刻家與畫家。",
+      "image": "people-michelangelo.jpg"
+    },
+    {
+      "zh": "但丁·阿利吉耶里",
+      "en": "Dante Alighieri",
+      "note": "以《神曲》奠定義大利文學語言的中世紀詩人。",
+      "image": "people-dante.jpg"
+    },
+    {
+      "zh": "伽利略·伽利萊",
+      "en": "Galileo Galilei",
+      "note": "以望遠鏡觀測天體、支持地動說的物理與天文學家。",
+      "image": "people-galileo.jpg"
+    },
+    {
+      "zh": "蘇菲亞·羅蘭",
+      "en": "Sophia Loren",
+      "note": "國際知名的義大利女演員，曾以非英語演出獲奧斯卡影后。",
+      "image": "people-sophia-loren.jpg"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "春秋兩季的托斯卡尼",
+      "note": "四至六月與九至十月氣候宜人，適合開車串遊佛羅倫斯、西恩納與山城葡萄園，避開盛夏人潮與高溫。"
+    },
+    {
+      "zh": "夏季的阿瑪菲海岸與卡布里島",
+      "note": "五至九月海況穩定，可搭船遊海岸線、走「眾神之路」健行，波西塔諾與拉維洛的景色最為出色。"
+    },
+    {
+      "zh": "二月的威尼斯嘉年華",
+      "note": "面具遊行與水都氛圍獨特，但需提早訂房，並留意冬季可能出現的高水位（acqua alta）。"
+    }
+  ],
+  "events": [
+    {
+      "year": -753,
+      "zh": "相傳羅慕路斯在台伯河畔建立羅馬城。"
+    },
+    {
+      "year": -509,
+      "zh": "羅馬人推翻王政，建立羅馬共和。"
+    },
+    {
+      "year": -27,
+      "zh": "屋大維受封「奧古斯都」，羅馬帝國時代開始。"
+    },
+    {
+      "year": 476,
+      "zh": "西羅馬帝國末代皇帝被廢，古典帝國瓦解。"
+    },
+    {
+      "year": 1861,
+      "zh": "薩丁尼亞王國主導下義大利王國成立，完成大部分統一。"
+    },
+    {
+      "year": 1946,
+      "zh": "公民投票廢除君主制，義大利共和國建立。"
+    },
+    {
+      "year": 1957,
+      "zh": "簽署《羅馬條約》，成為歐洲經濟共同體創始會員國。"
+    }
+  ],
+  "credits": [
+    {
+      "file": "foods-pizza.jpg",
+      "title": "Neapolitan pizza margherita",
+      "author": "Valerio Capello",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Eq_it-na_pizza-margherita_sep2005_sml.jpg"
+    },
+    {
+      "file": "landmarks-colosseum.jpg",
+      "title": "Colosseum in Rome, April 2007",
+      "author": "David Iliff (Diliff)",
+      "license": "CC BY-SA 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:Colosseum_in_Rome,_Italy_-_April_2007.jpg"
+    },
+    {
+      "file": "landmarks-pisa.jpg",
+      "title": "The Leaning Tower of Pisa",
+      "author": "Saffron Blaze",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:The_Leaning_Tower_of_Pisa_SB.jpeg"
+    },
+    {
+      "file": "landmarks-venice-grand-canal.jpg",
+      "title": "Grand Canal with Santa Maria della Salute",
+      "author": "Wolfgang Moroder",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Canal_Grande_Chiesa_della_Salute_e_Dogana_dal_ponte_dell_Accademia.jpg"
+    },
+    {
+      "file": "landmarks-florence.jpg",
+      "title": "Panorama of Florence from Piazzale Michelangelo",
+      "author": "Wikibusters",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Panorama_of_Florence_from_Piazzale_Michelangelo.jpg"
+    },
+    {
+      "file": "landmarks-pompeii.jpg",
+      "title": "Forum of Pompeii with Vesuvius",
+      "author": "Commonists",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Forum_(Pompeii)_and_the_Vesuvio.jpg"
+    },
+    {
+      "file": "people-leonardo.jpg",
+      "title": "Presumed self-portrait of Leonardo da Vinci",
+      "author": "Leonardo da Vinci",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Leonardo_da_Vinci_-_presumed_self-portrait_-_WGA12798.jpg"
+    },
+    {
+      "file": "people-michelangelo.jpg",
+      "title": "Portrait of Michelangelo by Daniele da Volterra",
+      "author": "Daniele da Volterra",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Michelangelo_Daniele_da_Volterra_(dettaglio).jpg"
+    },
+    {
+      "file": "people-dante.jpg",
+      "title": "Portrait of Dante by Sandro Botticelli",
+      "author": "Sandro Botticelli",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Portrait_de_Dante.jpg"
+    },
+    {
+      "file": "people-galileo.jpg",
+      "title": "Portrait of Galileo Galilei by Justus Sustermans",
+      "author": "Justus Sustermans",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Justus_Sustermans_-_Portrait_of_Galileo_Galilei_(Uffizi).jpg"
+    },
+    {
+      "file": "people-sophia-loren.jpg",
+      "title": "Sophia Loren, 1959",
+      "author": "Paul A. Hesse Studios",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Sophia_Loren_-_1959.jpg"
+    }
+  ],
+  "code": "IT"
+}
