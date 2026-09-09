@@ -114,7 +114,7 @@ export function start() {
   window.__earth.clouds = clouds;
   window.__earth.composer = composer;
 
-  const rig = createCameraRig({ camera, domElement: renderer.domElement });
+  const rig = createCameraRig({ camera, domElement: renderer.domElement, globeObject: globe.object });
   window.__earth.rig = rig;
 
   const oceanLabels = createOceanLabels({ globeObject: globe.object, camera, renderer });
@@ -152,6 +152,8 @@ export function start() {
     rig.resetView();
     clockWeather.clear();
     if (window.__earth.countryLayer) window.__earth.countryLayer.setSelected(null);
+    if (window.__earth.globe) window.__earth.globe.setSpinPaused(false);
+    if (window.__earth.clouds) window.__earth.clouds.setSpinPaused(false);
   } });
   window.__earth.sidePanel = sidePanel;
 
@@ -218,7 +220,7 @@ export function start() {
       globe.setSpinPaused(true);
       clouds.setSpinPaused(true);
       if (resumeTimer) { clearTimeout(resumeTimer); resumeTimer = null; }
-    } else if (!resumeTimer) {
+    } else if (!resumeTimer && !(window.__earth.countryLayer && window.__earth.countryLayer.hasSelection && window.__earth.countryLayer.hasSelection())) {
       resumeTimer = setTimeout(() => { globe.setSpinPaused(false); clouds.setSpinPaused(false); resumeTimer = null; }, 1500);
     }
     rig.update(dt);

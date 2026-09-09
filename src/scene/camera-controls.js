@@ -4,7 +4,7 @@ import { latLonToXYZ } from "/src/lib/geo.js";
 
 export const easeInOutCubic = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
 
-export function createCameraRig({ camera, domElement }) {
+export function createCameraRig({ camera, domElement, globeObject }) {
   const controls = new OrbitControls(camera, domElement);
   controls.enablePan = false;
   controls.enableDamping = true;
@@ -19,7 +19,9 @@ export function createCameraRig({ camera, domElement }) {
 
   function flyTo(latDeg, lonDeg, { distance = 1.8, ms = 1000 } = {}) {
     const p = latLonToXYZ(latDeg, lonDeg, 1);
-    const toDir = new THREE.Vector3(p.x, p.y, p.z).normalize();
+    const toDir = new THREE.Vector3(p.x, p.y, p.z);
+    if (globeObject) toDir.applyQuaternion(globeObject.quaternion);
+    toDir.normalize();
     tween = { from: camera.position.clone(), toDir, dist: distance, t: 0, ms };
   }
 
