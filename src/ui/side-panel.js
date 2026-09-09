@@ -1,12 +1,7 @@
 import { weatherCodeToIcon, weekdayFromISODate, tzOffsetHours, formatZonedTime } from "/src/lib/geo.js";
+import { esc } from "/src/lib/esc.js";
 
 export const MONTH_LABELS = ["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"];
-
-function esc(s) {
-  return String(s).replace(/[&<>"']/g, (c) => (
-    { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]
-  ));
-}
 
 function fmtPop(v) {
   if (typeof v !== "number" || !Number.isFinite(v)) return esc(String(v));
