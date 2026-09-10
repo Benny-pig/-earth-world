@@ -24,27 +24,32 @@
     {
       "zh": "高盧雄雞",
       "en": "Gallic rooster",
-      "note": "源自拉丁文雙關的國族象徵,常見於運動代表隊與硬幣。"
+      "note": "源自拉丁文雙關的國族象徵,常見於運動代表隊與硬幣。",
+      "image": "animals-gallic-rooster.jpg"
     },
     {
       "zh": "卡馬格馬",
       "en": "Camargue horse",
-      "note": "隆河三角洲濕地的古老白馬品種,由牧人半野放飼養。"
+      "note": "隆河三角洲濕地的古老白馬品種,由牧人半野放飼養。",
+      "image": "animals-camargue-horse.jpg"
     },
     {
       "zh": "庇里牛斯山犬",
       "en": "Great Pyrenees",
-      "note": "山區看護羊群的大型白色護衛犬。"
+      "note": "山區看護羊群的大型白色護衛犬。",
+      "image": "animals-great-pyrenees.jpg"
     },
     {
       "zh": "摩弗倫羊",
       "en": "Mouflon",
-      "note": "科西嘉與山區的野生綿羊,雄羊具捲角。"
+      "note": "科西嘉與山區的野生綿羊,雄羊具捲角。",
+      "image": "animals-mouflon.jpg"
     },
     {
       "zh": "白鸛",
       "en": "White stork",
-      "note": "阿爾薩斯的象徵鳥類,築巢於屋頂與教堂塔樓。"
+      "note": "阿爾薩斯的象徵鳥類,築巢於屋頂與教堂塔樓。",
+      "image": "animals-white-stork.jpg"
     }
   ],
   "foods": [
@@ -57,22 +62,26 @@
     {
       "zh": "長棍麵包",
       "en": "Baguette",
-      "note": "細長脆皮的日常主食,其製作工藝列入非物質文化遺產。"
+      "note": "細長脆皮的日常主食,其製作工藝列入非物質文化遺產。",
+      "image": "foods-baguette.jpg"
     },
     {
       "zh": "勃艮第紅酒燉牛肉",
       "en": "Boeuf bourguignon",
-      "note": "牛肉以紅酒、洋蔥與蘑菇慢燉的鄉土名菜。"
+      "note": "牛肉以紅酒、洋蔥與蘑菇慢燉的鄉土名菜。",
+      "image": "foods-boeuf-bourguignon.jpg"
     },
     {
       "zh": "焗蝸牛",
       "en": "Escargots",
-      "note": "蝸牛填入香蒜奶油焗烤,常見於節慶前菜。"
+      "note": "蝸牛填入香蒜奶油焗烤,常見於節慶前菜。",
+      "image": "foods-escargots.jpg"
     },
     {
       "zh": "馬卡龍",
       "en": "Macaron",
-      "note": "杏仁蛋白餅夾內餡的圓形甜點,色彩繽紛。"
+      "note": "杏仁蛋白餅夾內餡的圓形甜點,色彩繽紛。",
+      "image": "foods-macaron.jpg"
     }
   ],
   "landmarks": [
@@ -137,17 +146,20 @@
     {
       "zh": "戴高樂",
       "en": "Charles de Gaulle",
-      "note": "二戰自由法國領袖,第五共和首任總統。"
+      "note": "二戰自由法國領袖,第五共和首任總統。",
+      "image": "people-charles-de-gaulle.jpg"
     },
     {
       "zh": "伏爾泰",
       "en": "Voltaire",
-      "note": "啟蒙時代作家與哲學家,倡言論自由與宗教寬容。"
+      "note": "啟蒙時代作家與哲學家,倡言論自由與宗教寬容。",
+      "image": "people-voltaire.jpg"
     },
     {
       "zh": "維克多·雨果",
       "en": "Victor Hugo",
-      "note": "作家,著有《悲慘世界》與《鐘樓怪人》。"
+      "note": "作家,著有《悲慘世界》與《鐘樓怪人》。",
+      "image": "people-victor-hugo.jpg"
     },
     {
       "zh": "瑪麗·居禮",
@@ -256,6 +268,90 @@
       "author": "Henri Manuel",
       "license": "Public domain",
       "source": "https://commons.wikimedia.org/wiki/File:Marie_Curie_c._1920s.jpg"
+    },
+    {
+      "file": "animals-gallic-rooster.jpg",
+      "title": "Gallic Rooster monument, Place des Quinconces, Bordeaux",
+      "author": "Dennis G. Jarvis",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:France-001717_-_Gallic_Rooster_(15030544244).jpg"
+    },
+    {
+      "file": "animals-camargue-horse.jpg",
+      "title": "White horse of the Camargue",
+      "author": "Peter Broster",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:White_Horse_of_the_Camargue.jpg"
+    },
+    {
+      "file": "animals-great-pyrenees.jpg",
+      "title": "Great Pyrenees (Pyrenean Mountain Dog)",
+      "author": "HeartSpoon",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Great_Pyrenees_Mountain_Dog.jpg"
+    },
+    {
+      "file": "animals-mouflon.jpg",
+      "title": "European mouflon (Ovis orientalis)",
+      "author": "Jörg Hempel",
+      "license": "CC BY-SA 3.0 de",
+      "source": "https://commons.wikimedia.org/wiki/File:Ovis_orientalis_LC0267.jpg"
+    },
+    {
+      "file": "animals-white-stork.jpg",
+      "title": "White stork (Ciconia ciconia) on nest",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:White_stork_(Ciconia_ciconia)_on_nest.jpg"
+    },
+    {
+      "file": "foods-baguette.jpg",
+      "title": "French baguettes",
+      "author": "Amarant",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Nl-baguettes2.jpg"
+    },
+    {
+      "file": "foods-boeuf-bourguignon.jpg",
+      "title": "Boeuf bourguignon",
+      "author": "Asamboi",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Boeuf_Bourguignon_Paris_Beaubourg.jpg"
+    },
+    {
+      "file": "foods-escargots.jpg",
+      "title": "Cooked escargots with garlic butter",
+      "author": "David Monniaux",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Escargot_p1150449.jpg"
+    },
+    {
+      "file": "foods-macaron.jpg",
+      "title": "Assorted French macarons",
+      "author": "Macaron le petit français",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Boutique_Senlis_Macaron.jpg"
+    },
+    {
+      "file": "people-charles-de-gaulle.jpg",
+      "title": "Charles de Gaulle (OWI portrait)",
+      "author": "Office of War Information, Overseas Picture Division",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:De_Gaulle-OWI_(cropped)-(c).jpg"
+    },
+    {
+      "file": "people-voltaire.jpg",
+      "title": "Portrait of Voltaire by Nicolas de Largillière",
+      "author": "Nicolas de Largillière",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Nicolas_de_Largilli%C3%A8re_-_Portrait_de_Voltaire_(1694-1778)_en_1718_-_P208_-_mus%C3%A9e_Carnavalet.jpg"
+    },
+    {
+      "file": "people-victor-hugo.jpg",
+      "title": "Victor Hugo by Étienne Carjat, 1876",
+      "author": "Étienne Carjat",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Victor_Hugo_by_%C3%89tienne_Carjat_1876_-_full.jpg"
     }
   ],
   "code": "FR"

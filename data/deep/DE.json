@@ -29,49 +29,58 @@
     {
       "zh": "歐洲野牛",
       "en": "European bison",
-      "note": "歐洲最重的陸生動物，經復育重新引入部分林區。"
+      "note": "歐洲最重的陸生動物，經復育重新引入部分林區。",
+      "image": "animals-european-bison.jpg"
     },
     {
       "zh": "紅鳶",
       "en": "Red kite",
-      "note": "尾羽分叉的猛禽，全球半數以上族群在德國繁殖。"
+      "note": "尾羽分叉的猛禽，全球半數以上族群在德國繁殖。",
+      "image": "animals-red-kite.jpg"
     },
     {
       "zh": "歐亞猞猁",
       "en": "Eurasian lynx",
-      "note": "哈茨山等林區復育的大型野貓，晝伏夜出。"
+      "note": "哈茨山等林區復育的大型野貓，晝伏夜出。",
+      "image": "animals-eurasian-lynx.jpg"
     },
     {
       "zh": "野豬",
       "en": "Wild boar",
-      "note": "廣布森林與近郊，夜間常進入城鎮翻找食物。"
+      "note": "廣布森林與近郊，夜間常進入城鎮翻找食物。",
+      "image": "animals-wild-boar.jpg"
     }
   ],
   "foods": [
     {
       "zh": "德式香腸",
       "en": "Bratwurst",
-      "note": "各地配方不同的煎烤豬肉腸，常夾麵包食用。"
+      "note": "各地配方不同的煎烤豬肉腸，常夾麵包食用。",
+      "image": "foods-bratwurst.jpg"
     },
     {
       "zh": "德國酸菜",
       "en": "Sauerkraut",
-      "note": "高麗菜經乳酸發酵而成，常搭配香腸與豬肉。"
+      "note": "高麗菜經乳酸發酵而成，常搭配香腸與豬肉。",
+      "image": "foods-sauerkraut.jpg"
     },
     {
       "zh": "椒鹽卷餅",
       "en": "Pretzel",
-      "note": "以鹼水處理再烘烤、表面撒粗鹽的結狀麵包。"
+      "note": "以鹼水處理再烘烤、表面撒粗鹽的結狀麵包。",
+      "image": "foods-pretzel.jpg"
     },
     {
       "zh": "烤豬腳",
       "en": "Schweinshaxe",
-      "note": "烤到外皮酥脆的大塊帶骨豬腳，巴伐利亞名菜。"
+      "note": "烤到外皮酥脆的大塊帶骨豬腳，巴伐利亞名菜。",
+      "image": "foods-schweinshaxe.jpg"
     },
     {
       "zh": "黑森林蛋糕",
       "en": "Black Forest gâteau",
-      "note": "以巧克力海綿、櫻桃與鮮奶油層疊的蛋糕。"
+      "note": "以巧克力海綿、櫻桃與鮮奶油層疊的蛋糕。",
+      "image": "foods-black-forest-gateau.jpg"
     }
   ],
   "landmarks": [
@@ -279,6 +288,69 @@
       "author": "Lucas Cranach the Elder",
       "license": "Public domain",
       "source": "https://commons.wikimedia.org/wiki/File:Lucas_Cranach_d.Ä._-_Martin_Luther,_1528_(Veste_Coburg).jpg"
+    },
+    {
+      "file": "animals-european-bison.jpg",
+      "title": "European bison (Bison bonasus), male",
+      "author": "Michael Gäbler",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bison_bonasus_(Linnaeus_1758).jpg"
+    },
+    {
+      "file": "animals-red-kite.jpg",
+      "title": "Red kite (Milvus milvus)",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Red_kite_(Milvus_milvus).jpg"
+    },
+    {
+      "file": "animals-eurasian-lynx.jpg",
+      "title": "Eurasian lynx (Lynx lynx), Wildpark Poing",
+      "author": "Bernard Landgraf",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Lynx_lynx_poing.jpg"
+    },
+    {
+      "file": "animals-wild-boar.jpg",
+      "title": "Wild boar (Sus scrofa)",
+      "author": "Dave Pape",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Sus_scrofa_2_-_Otter,_Owl,_and_Wildlife_Park.jpg"
+    },
+    {
+      "file": "foods-bratwurst.jpg",
+      "title": "Bratwurst on the grill",
+      "author": "M & A Markwick",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bratwurst_on_the_grill.jpg"
+    },
+    {
+      "file": "foods-sauerkraut.jpg",
+      "title": "Sauerkraut served with potatoes and meats",
+      "author": "Will Bakker",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Choucroute_garnie.jpg"
+    },
+    {
+      "file": "foods-pretzel.jpg",
+      "title": "Selection of German pretzels with salt",
+      "author": "Sundar1",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:BrezelnSalz02_(cropped).JPG"
+    },
+    {
+      "file": "foods-schweinshaxe.jpg",
+      "title": "Schweinshaxe (roasted pork knuckle)",
+      "author": "Takeaway",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Schweinshaxe_Chiang_Mai.JPG"
+    },
+    {
+      "file": "foods-black-forest-gateau.jpg",
+      "title": "Black Forest gâteau (Schwarzwälder Kirschtorte)",
+      "author": "Mikelo",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Black_Forest_gateau.jpg"
     }
   ],
   "code": "DE"

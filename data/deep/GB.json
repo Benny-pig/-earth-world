@@ -25,27 +25,32 @@
     {
       "zh": "歐亞紅松鼠",
       "en": "Red squirrel",
-      "note": "原生松鼠，因外來灰松鼠競爭而分布退縮。"
+      "note": "原生松鼠，因外來灰松鼠競爭而分布退縮。",
+      "image": "animals-red-squirrel.jpg"
     },
     {
       "zh": "馬鹿",
       "en": "Red deer",
-      "note": "英國最大的陸生哺乳動物，蘇格蘭高地常見。"
+      "note": "英國最大的陸生哺乳動物，蘇格蘭高地常見。",
+      "image": "animals-red-deer.jpg"
     },
     {
       "zh": "歐亞知更鳥",
       "en": "European robin",
-      "note": "胸前橙紅、不太怕人，常被票選為英國國鳥。"
+      "note": "胸前橙紅、不太怕人，常被票選為英國國鳥。",
+      "image": "animals-european-robin.jpg"
     },
     {
       "zh": "大西洋海鸚",
       "en": "Atlantic puffin",
-      "note": "夏季在海崖群聚繁殖，喙在繁殖期呈鮮豔色彩。"
+      "note": "夏季在海崖群聚繁殖，喙在繁殖期呈鮮豔色彩。",
+      "image": "animals-atlantic-puffin.jpg"
     },
     {
       "zh": "蘇格蘭高地牛",
       "en": "Highland cattle",
-      "note": "長毛長角、耐寒耐濕的古老牛種。"
+      "note": "長毛長角、耐寒耐濕的古老牛種。",
+      "image": "animals-highland-cattle.jpg"
     }
   ],
   "foods": [
@@ -58,22 +63,26 @@
     {
       "zh": "英式全套早餐",
       "en": "Full English breakfast",
-      "note": "煎蛋、培根、香腸、豆子與烤番茄組成的豐盛拼盤。"
+      "note": "煎蛋、培根、香腸、豆子與烤番茄組成的豐盛拼盤。",
+      "image": "foods-full-english-breakfast.jpg"
     },
     {
       "zh": "週日烤肉",
       "en": "Sunday roast",
-      "note": "烤肉佐馬鈴薯、時蔬與肉汁，傳統的家庭聚餐。"
+      "note": "烤肉佐馬鈴薯、時蔬與肉汁，傳統的家庭聚餐。",
+      "image": "foods-sunday-roast.jpg"
     },
     {
       "zh": "約克郡布丁",
       "en": "Yorkshire pudding",
-      "note": "麵糊高溫烤成的中空酥殼，搭配烤牛肉與肉汁。"
+      "note": "麵糊高溫烤成的中空酥殼，搭配烤牛肉與肉汁。",
+      "image": "foods-yorkshire-pudding.jpg"
     },
     {
       "zh": "司康",
       "en": "Scone",
-      "note": "佐凝脂奶油與果醬，是英式下午茶的要角。"
+      "note": "佐凝脂奶油與果醬，是英式下午茶的要角。",
+      "image": "foods-scone.jpg"
     }
   ],
   "landmarks": [
@@ -281,6 +290,69 @@
       "author": "James Andrews / Cassandra Austen",
       "license": "Public domain",
       "source": "https://commons.wikimedia.org/wiki/File:Jane_Austen,_from_A_Memoir_of_Jane_Austen_(1870).jpg"
+    },
+    {
+      "file": "animals-red-squirrel.jpg",
+      "title": "Red squirrel (Sciurus vulgaris)",
+      "author": "Peter Trimming",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Squirrel_posing.jpg"
+    },
+    {
+      "file": "animals-red-deer.jpg",
+      "title": "Red deer stag (Cervus elaphus), Glen Torridon, Scotland",
+      "author": "Massimo Catarinella",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:RedDeerStag.jpg"
+    },
+    {
+      "file": "animals-european-robin.jpg",
+      "title": "European robin (Erithacus rubecula)",
+      "author": "Francis C. Franklin",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Erithacus_rubecula_with_cocked_head.jpg"
+    },
+    {
+      "file": "animals-atlantic-puffin.jpg",
+      "title": "Atlantic puffin (Fratercula arctica), Skomer Island, Wales",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Puffin_(Fratercula_arctica).jpg"
+    },
+    {
+      "file": "animals-highland-cattle.jpg",
+      "title": "Highland cattle, Isle of Skye, Scotland",
+      "author": "Raphael Hofmann",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Highland_Cattle_on_Isle_of_Skye,_Scotland.jpg"
+    },
+    {
+      "file": "foods-full-english-breakfast.jpg",
+      "title": "Full English breakfast, West Sussex",
+      "author": "Acabashi",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Full_English_breakfast_at_the_Chalet_Cafe,_Cowfold,_West_Sussex,_England.jpg"
+    },
+    {
+      "file": "foods-sunday-roast.jpg",
+      "title": "Sunday roast: roast beef with Yorkshire pudding",
+      "author": "Jeremy Keith",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sunday_roast_-_roast_beef_1.jpg"
+    },
+    {
+      "file": "foods-yorkshire-pudding.jpg",
+      "title": "Yorkshire puddings, fresh from the oven",
+      "author": "Trussrod",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Johns_Yorkshire_Puddings.jpg"
+    },
+    {
+      "file": "foods-scone.jpg",
+      "title": "Scone with clotted cream and jam",
+      "author": "Foowee",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:SconeCream.jpg"
     }
   ],
   "code": "GB"

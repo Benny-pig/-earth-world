@@ -23,27 +23,32 @@
     {
       "zh": "義大利狼",
       "en": "Italian wolf",
-      "note": "亞平寧山區的狼亞種，常被視為義大利的非官方國獸。"
+      "note": "亞平寧山區的狼亞種，常被視為義大利的非官方國獸。",
+      "image": "animals-italian-wolf.jpg"
     },
     {
       "zh": "阿爾卑斯野山羊",
       "en": "Alpine ibex",
-      "note": "大帕拉迪索國家公園的象徵，曾一度瀕臨滅絕。"
+      "note": "大帕拉迪索國家公園的象徵，曾一度瀕臨滅絕。",
+      "image": "animals-alpine-ibex.jpg"
     },
     {
       "zh": "歐洲盤羊",
       "en": "European mouflon",
-      "note": "薩丁尼亞島的野生綿羊，體格結實、角呈螺旋狀。"
+      "note": "薩丁尼亞島的野生綿羊，體格結實、角呈螺旋狀。",
+      "image": "animals-european-mouflon.jpg"
     },
     {
       "zh": "大紅鸛",
       "en": "Greater flamingo",
-      "note": "在薩丁尼亞與托斯卡尼的濕地成群覓食與繁殖。"
+      "note": "在薩丁尼亞與托斯卡尼的濕地成群覓食與繁殖。",
+      "image": "animals-greater-flamingo.jpg"
     },
     {
       "zh": "馬雷馬牧羊犬",
       "en": "Maremma Sheepdog",
-      "note": "中部牧區看守羊群的白色大型工作犬。"
+      "note": "中部牧區看守羊群的白色大型工作犬。",
+      "image": "animals-maremma-sheepdog.jpg"
     }
   ],
   "foods": [
@@ -56,22 +61,26 @@
     {
       "zh": "義大利麵",
       "en": "Pasta",
-      "note": "各地形狀與醬汁千變萬化，是義大利飲食的主食核心。"
+      "note": "各地形狀與醬汁千變萬化，是義大利飲食的主食核心。",
+      "image": "foods-pasta.jpg"
     },
     {
       "zh": "提拉米蘇",
       "en": "Tiramisu",
-      "note": "以咖啡、手指餅乾與馬斯卡彭起司層疊而成的甜點。"
+      "note": "以咖啡、手指餅乾與馬斯卡彭起司層疊而成的甜點。",
+      "image": "foods-tiramisu.jpg"
     },
     {
       "zh": "濃縮咖啡",
       "en": "Espresso",
-      "note": "高壓萃取的小杯咖啡，是義式咖啡文化的基礎。"
+      "note": "高壓萃取的小杯咖啡，是義式咖啡文化的基礎。",
+      "image": "foods-espresso.jpg"
     },
     {
       "zh": "義式冰淇淋",
       "en": "Gelato",
-      "note": "乳脂較低、風味濃郁綿密的手工冰品。"
+      "note": "乳脂較低、風味濃郁綿密的手工冰品。",
+      "image": "foods-gelato.jpg"
     }
   ],
   "landmarks": [
@@ -279,6 +288,69 @@
       "author": "Paul A. Hesse Studios",
       "license": "Public domain",
       "source": "https://commons.wikimedia.org/wiki/File:Sophia_Loren_-_1959.jpg"
+    },
+    {
+      "file": "animals-italian-wolf.jpg",
+      "title": "Italian wolf (Canis lupus italicus), Calabria",
+      "author": "Gianluca Congi",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Italian_wolf,_Cosenza,_Calabria,_IT.jpeg"
+    },
+    {
+      "file": "animals-alpine-ibex.jpg",
+      "title": "Young male Alpine ibex (Capra ibex)",
+      "author": "Ianare Sévi",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Capra_ibex_young_male_mercantour.JPG"
+    },
+    {
+      "file": "animals-european-mouflon.jpg",
+      "title": "European mouflon ram",
+      "author": "Alberto-g-rovi",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:European_mouflon_ram,_Naturlandia_(1)_(cropped).jpg"
+    },
+    {
+      "file": "animals-greater-flamingo.jpg",
+      "title": "Greater flamingo (Phoenicopterus roseus)",
+      "author": "Luc Viatour",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Phoenicopterus_roseus_Luc_Viatour.jpg"
+    },
+    {
+      "file": "animals-maremma-sheepdog.jpg",
+      "title": "Maremma Sheepdog on Pratomagno",
+      "author": "Justlettersandnumbers",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pastore_Maremmano-Abruzzese_on_Pratomagno.jpg"
+    },
+    {
+      "file": "foods-pasta.jpg",
+      "title": "Pasta al pomodoro",
+      "author": "Alessio Sbarbaro",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pasta_al_Pomodoro_01.jpg"
+    },
+    {
+      "file": "foods-tiramisu.jpg",
+      "title": "Tiramisu",
+      "author": "Javier Lastras",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Dessert_Tiramisu.jpg"
+    },
+    {
+      "file": "foods-espresso.jpg",
+      "title": "Espresso with crema",
+      "author": "Takeaway",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Crema_espresso_Akha_Ama.jpg"
+    },
+    {
+      "file": "foods-gelato.jpg",
+      "title": "Italian gelato shop, Rome",
+      "author": "Alessio Damato",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Italian_ice_cream.jpg"
     }
   ],
   "code": "IT"

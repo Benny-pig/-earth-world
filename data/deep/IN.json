@@ -31,12 +31,14 @@
     {
       "zh": "印度象",
       "en": "Indian elephant",
-      "note": "亞洲象的印度亞種,在宗教與慶典中地位崇高。"
+      "note": "亞洲象的印度亞種,在宗教與慶典中地位崇高。",
+      "image": "animals-indian-elephant.jpg"
     },
     {
       "zh": "亞洲獅",
       "en": "Asiatic lion",
-      "note": "全球僅存於古吉拉特邦的吉爾森林。"
+      "note": "全球僅存於古吉拉特邦的吉爾森林。",
+      "image": "animals-asiatic-lion.jpg"
     },
     {
       "zh": "印度孔雀",
@@ -47,34 +49,40 @@
     {
       "zh": "恆河豚",
       "en": "Ganges river dolphin",
-      "note": "幾近失明的淡水豚,為印度的國家水生動物。"
+      "note": "幾近失明的淡水豚,為印度的國家水生動物。",
+      "image": "animals-ganges-river-dolphin.jpg"
     }
   ],
   "foods": [
     {
       "zh": "咖哩角(薩摩薩)",
       "en": "Samosa",
-      "note": "油炸三角酥餅,內餡多為馬鈴薯與豌豆調香料。"
+      "note": "油炸三角酥餅,內餡多為馬鈴薯與豌豆調香料。",
+      "image": "foods-samosa.jpg"
     },
     {
       "zh": "印度烤餅",
       "en": "Naan and roti",
-      "note": "泥爐或平底鍋烙製的發酵或無發酵麵餅,搭配咖哩。"
+      "note": "泥爐或平底鍋烙製的發酵或無發酵麵餅,搭配咖哩。",
+      "image": "foods-naan-and-roti.jpg"
     },
     {
       "zh": "印度香飯",
       "en": "Biryani",
-      "note": "香料、肉類與長粒米分層燜煮,源自蒙兀兒宮廷。"
+      "note": "香料、肉類與長粒米分層燜煮,源自蒙兀兒宮廷。",
+      "image": "foods-biryani.jpg"
     },
     {
       "zh": "坦都里烤雞",
       "en": "Tandoori chicken",
-      "note": "以優格與香料醃漬後入泥爐高溫燒烤。"
+      "note": "以優格與香料醃漬後入泥爐高溫燒烤。",
+      "image": "foods-tandoori-chicken.jpg"
     },
     {
       "zh": "馬薩拉多薩",
       "en": "Masala dosa",
-      "note": "南印度發酵米豆糊煎成的薄脆捲餅,內夾香料馬鈴薯。"
+      "note": "南印度發酵米豆糊煎成的薄脆捲餅,內夾香料馬鈴薯。",
+      "image": "foods-masala-dosa.jpg"
     }
   ],
   "landmarks": [
@@ -125,7 +133,8 @@
       "latlon": [
         28.6562,
         77.241
-      ]
+      ],
+      "image": "landmarks-red-fort.jpg"
     }
   ],
   "people": [
@@ -138,22 +147,26 @@
     {
       "zh": "阿育王",
       "en": "Ashoka",
-      "note": "孔雀王朝君主,弘揚佛教,其石柱獅柱頭為今日印度國徽。"
+      "note": "孔雀王朝君主,弘揚佛教,其石柱獅柱頭為今日印度國徽。",
+      "image": "people-ashoka.jpg"
     },
     {
       "zh": "泰戈爾",
       "en": "Rabindranath Tagore",
-      "note": "詩人,一九一三年成為首位獲諾貝爾文學獎的亞洲人。"
+      "note": "詩人,一九一三年成為首位獲諾貝爾文學獎的亞洲人。",
+      "image": "people-rabindranath-tagore.jpg"
     },
     {
       "zh": "尼赫魯",
       "en": "Jawaharlal Nehru",
-      "note": "獨立後首任總理,推動議會民主與不結盟運動。"
+      "note": "獨立後首任總理,推動議會民主與不結盟運動。",
+      "image": "people-jawaharlal-nehru.jpg"
     },
     {
       "zh": "安貝卡",
       "en": "B. R. Ambedkar",
-      "note": "法學家,印度憲法起草委員會主席,達利特權益運動領袖。"
+      "note": "法學家,印度憲法起草委員會主席,達利特權益運動領袖。",
+      "image": "people-b-r-ambedkar.jpg"
     }
   ],
   "recommended": [
@@ -249,6 +262,97 @@
       "author": "Elliott & Fry",
       "license": "Public domain",
       "source": "https://commons.wikimedia.org/wiki/File:Mahatma-Gandhi,_studio,_1931.jpg"
+    },
+    {
+      "file": "animals-indian-elephant.jpg",
+      "title": "Indian elephant (Elephas maximus), Bandipur",
+      "author": "Yathin S Krishnappa",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Elephas_maximus_(Bandipur).jpg"
+    },
+    {
+      "file": "animals-asiatic-lion.jpg",
+      "title": "Adult Asiatic lion, Gir Forest",
+      "author": "Sumeet Moghe",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Adult_Asiatic_Lion.jpg"
+    },
+    {
+      "file": "animals-ganges-river-dolphin.jpg",
+      "title": "Ganges river dolphin (Platanista gangetica)",
+      "author": "Kukil Gogoi",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ganges_River_Dolphin.jpg"
+    },
+    {
+      "file": "foods-samosa.jpg",
+      "title": "Samosa",
+      "author": "Vara Prasad Reddy Thallapalli",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Samosa_kadapa.jpg"
+    },
+    {
+      "file": "foods-naan-and-roti.jpg",
+      "title": "Indian naan bread",
+      "author": "jetalone",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Indian_naan_bread.jpg"
+    },
+    {
+      "file": "foods-biryani.jpg",
+      "title": "Chicken Hyderabadi biryani",
+      "author": "Dheerajk88",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Chicken_Hyderabadi_Biryani.JPG"
+    },
+    {
+      "file": "foods-tandoori-chicken.jpg",
+      "title": "Tandoori chicken",
+      "author": "pelican",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tandoori_chicken_Indian.jpg"
+    },
+    {
+      "file": "foods-masala-dosa.jpg",
+      "title": "Masala dosa",
+      "author": "Marajozkee",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Masala_dosa_01.jpg"
+    },
+    {
+      "file": "landmarks-red-fort.jpg",
+      "title": "Lahori Gate, Red Fort, Delhi",
+      "author": "Ranjeet Chauhan",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Lahori_Gate,_Red_Fort,_Delhi.jpg"
+    },
+    {
+      "file": "people-ashoka.jpg",
+      "title": "Statue of Emperor Ashoka the Great",
+      "author": "Moheen Reeyad",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Emperor_Ashoka_the_Great,_Rangkut_Banasram_Pilgrimage_Monastery_(122542).jpg"
+    },
+    {
+      "file": "people-rabindranath-tagore.jpg",
+      "title": "Rabindranath Tagore in 1909",
+      "author": "Generalstabens litografiska anstalt",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Rabindranath_Tagore_in_1909.jpg"
+    },
+    {
+      "file": "people-jawaharlal-nehru.jpg",
+      "title": "Portrait of Jawaharlal Nehru, 1942",
+      "author": "Unknown author",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Portrait_of_Jawaharlal_Nehru_in_1942.JPG"
+    },
+    {
+      "file": "people-b-r-ambedkar.jpg",
+      "title": "Dr. B. R. Ambedkar at Delhi, 1948",
+      "author": "Unknown author",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Dr._B._R._Ambedkar_at_Delhi_in_1948.jpg"
     }
   ],
   "code": "IN"

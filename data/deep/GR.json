@@ -29,22 +29,26 @@
     {
       "zh": "地中海僧海豹",
       "en": "Mediterranean monk seal",
-      "note": "全球最稀有的海豹之一，棲於愛琴海的岩岸洞穴。"
+      "note": "全球最稀有的海豹之一，棲於愛琴海的岩岸洞穴。",
+      "image": "animals-mediterranean-monk-seal.jpg"
     },
     {
       "zh": "克里島野山羊",
       "en": "Kri-kri",
-      "note": "克里特島山區的野生山羊，體側有深色帶紋。"
+      "note": "克里特島山區的野生山羊，體側有深色帶紋。",
+      "image": "animals-kri-kri.jpg"
     },
     {
       "zh": "歐洲棕熊",
       "en": "Brown bear",
-      "note": "分布於品都斯山脈北部的森林，數量稀少。"
+      "note": "分布於品都斯山脈北部的森林，數量稀少。",
+      "image": "animals-brown-bear.jpg"
     },
     {
       "zh": "縱紋腹小鴞",
       "en": "Little owl",
-      "note": "被視為雅典娜的象徵，常見於古蹟與橄欖園。"
+      "note": "被視為雅典娜的象徵，常見於古蹟與橄欖園。",
+      "image": "animals-little-owl.jpg"
     }
   ],
   "foods": [
@@ -63,17 +67,20 @@
     {
       "zh": "蘇夫拉基",
       "en": "Souvlaki",
-      "note": "串烤肉塊，常夾進皮塔餅佐醬料與蔬菜。"
+      "note": "串烤肉塊，常夾進皮塔餅佐醬料與蔬菜。",
+      "image": "foods-souvlaki.jpg"
     },
     {
       "zh": "費達起司",
       "en": "Feta",
-      "note": "以羊奶或羊山羊混合乳鹽漬而成，受產地名稱保護。"
+      "note": "以羊奶或羊山羊混合乳鹽漬而成，受產地名稱保護。",
+      "image": "foods-feta.jpg"
     },
     {
       "zh": "果仁蜜餅",
       "en": "Baklava",
-      "note": "層層薄酥皮夾堅果、再淋糖漿的甜點。"
+      "note": "層層薄酥皮夾堅果、再淋糖漿的甜點。",
+      "image": "foods-baklava.jpg"
     }
   ],
   "landmarks": [
@@ -156,7 +163,8 @@
     {
       "zh": "亞歷山大大帝",
       "en": "Alexander the Great",
-      "note": "馬其頓國王，建立橫跨歐、亞、非的龐大帝國。"
+      "note": "馬其頓國王，建立橫跨歐、亞、非的龐大帝國。",
+      "image": "people-alexander-the-great.jpg"
     }
   ],
   "recommended": [
@@ -287,6 +295,62 @@
       "author": "Hellenistic original; British Museum",
       "license": "Public domain",
       "source": "https://commons.wikimedia.org/wiki/File:Homer_British_Museum.jpg"
+    },
+    {
+      "file": "animals-mediterranean-monk-seal.jpg",
+      "title": "Young Mediterranean monk seal, Lichadonisia, Greece",
+      "author": "Wanax01",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Young_monk_seal.jpg"
+    },
+    {
+      "file": "animals-kri-kri.jpg",
+      "title": "Kri-kri (Cretan goat), Samaria Gorge",
+      "author": "Tommi Nikkila",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Kri-kri.JPG"
+    },
+    {
+      "file": "animals-brown-bear.jpg",
+      "title": "European brown bear (Ursus arctos) in forest",
+      "author": "George Wheelhouse",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Casual_Forest_Bear_(141013759).jpeg"
+    },
+    {
+      "file": "animals-little-owl.jpg",
+      "title": "Little owl (Athene noctua), Samos, Greece",
+      "author": "Hobbyfotowiki",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Little_owl_(Athene_noctua),.jpg"
+    },
+    {
+      "file": "foods-souvlaki.jpg",
+      "title": "Souvlaki plate",
+      "author": "Cifo Buscemi",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Souvlakiplate.jpg"
+    },
+    {
+      "file": "foods-feta.jpg",
+      "title": "Greek feta cheese",
+      "author": "Jon Sullivan",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Greek_feta.jpg"
+    },
+    {
+      "file": "foods-baklava.jpg",
+      "title": "Baklava",
+      "author": "Challiyan",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Baklava_1.jpg"
+    },
+    {
+      "file": "people-alexander-the-great.jpg",
+      "title": "Marble bust of Alexander the Great",
+      "author": "Satdeep Gill",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bust_of_Alexander_the_Great.jpg"
     }
   ],
   "code": "GR"

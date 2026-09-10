@@ -32,22 +32,26 @@
     {
       "zh": "西班牙帝雕",
       "en": "Spanish imperial eagle",
-      "note": "伊比利半島特有的大型猛禽，曾一度數量稀少。"
+      "note": "伊比利半島特有的大型猛禽，曾一度數量稀少。",
+      "image": "animals-spanish-imperial-eagle.jpg"
     },
     {
       "zh": "伊比利豬",
       "en": "Iberian pig",
-      "note": "黑蹄豬種，在橡樹林放養、製成頂級生火腿。"
+      "note": "黑蹄豬種，在橡樹林放養、製成頂級生火腿。",
+      "image": "animals-iberian-pig.jpg"
     },
     {
       "zh": "戰鬥牛",
       "en": "Lidia fighting bull",
-      "note": "為鬥牛培育的牛種，體格強健、性情兇猛。"
+      "note": "為鬥牛培育的牛種，體格強健、性情兇猛。",
+      "image": "animals-lidia-fighting-bull.jpg"
     },
     {
       "zh": "大鴇",
       "en": "Great bustard",
-      "note": "草原上體型最重的飛鳥之一，西班牙族群龐大。"
+      "note": "草原上體型最重的飛鳥之一，西班牙族群龐大。",
+      "image": "animals-great-bustard.jpg"
     }
   ],
   "foods": [
@@ -60,22 +64,26 @@
     {
       "zh": "塔帕斯",
       "en": "Tapas",
-      "note": "佐酒的各式小菜，可多樣拼點、邊吃邊聊。"
+      "note": "佐酒的各式小菜，可多樣拼點、邊吃邊聊。",
+      "image": "foods-tapas.jpg"
     },
     {
       "zh": "伊比利火腿",
       "en": "Jamón ibérico",
-      "note": "長期風乾熟成的生火腿，油花細緻、鹹香。"
+      "note": "長期風乾熟成的生火腿，油花細緻、鹹香。",
+      "image": "foods-jamon-iberico.jpg"
     },
     {
       "zh": "西班牙冷湯",
       "en": "Gazpacho",
-      "note": "番茄與蔬菜打成的冰涼湯品，夏季消暑。"
+      "note": "番茄與蔬菜打成的冰涼湯品，夏季消暑。",
+      "image": "foods-gazpacho.jpg"
     },
     {
       "zh": "吉拿棒",
       "en": "Churros",
-      "note": "油炸長條麵團沾濃稠熱巧克力，常見早餐點心。"
+      "note": "油炸長條麵團沾濃稠熱巧克力，常見早餐點心。",
+      "image": "foods-churros.jpg"
     }
   ],
   "landmarks": [
@@ -290,6 +298,62 @@
       "author": "Francisco Goya",
       "license": "Public domain",
       "source": "https://commons.wikimedia.org/wiki/File:Francisco_de_Goya_y_Lucientes_-_Self-Portrait_-_WGA9982.jpg"
+    },
+    {
+      "file": "animals-spanish-imperial-eagle.jpg",
+      "title": "Spanish imperial eagle (Aquila adalberti), adult",
+      "author": "Juan Lacruz",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Aquila_adalberti_(ad.).jpg"
+    },
+    {
+      "file": "animals-iberian-pig.jpg",
+      "title": "Iberian pigs in a dehesa",
+      "author": "comakut",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Dehesa_Pigs.jpg"
+    },
+    {
+      "file": "animals-lidia-fighting-bull.jpg",
+      "title": "Spanish fighting bull (Toro de Lidia)",
+      "author": "Briske88",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Toro_Juan_Pedro_Domecq.jpg"
+    },
+    {
+      "file": "animals-great-bustard.jpg",
+      "title": "Great bustard (Otis tarda) male, Villafáfila, Spain",
+      "author": "Luiz Lapa",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Abetarda-comum,_macho,_Great_Bustard,_male_(54453957097).jpg"
+    },
+    {
+      "file": "foods-tapas.jpg",
+      "title": "Plate of tapas, Ronda, Andalusia",
+      "author": "Ben Coombs",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ronda_Tapas.jpg"
+    },
+    {
+      "file": "foods-jamon-iberico.jpg",
+      "title": "Leg of jamón ibérico de bellota",
+      "author": "Schellack",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Jamon_iberico_joselita.jpg"
+    },
+    {
+      "file": "foods-gazpacho.jpg",
+      "title": "Gazpacho served in a clay bowl",
+      "author": "Bocadorada",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Gazpacho_Cazuela_Barro.jpg"
+    },
+    {
+      "file": "foods-churros.jpg",
+      "title": "Chocolate con churros, San Ginés, Madrid",
+      "author": "Barcex",
+      "license": "CC BY-SA 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:Chocolate_con_churros_-_San_Gin%C3%A9s_-_Madrid.jpg"
     }
   ],
   "code": "ES"
