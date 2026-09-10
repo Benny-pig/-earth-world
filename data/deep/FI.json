@@ -1,0 +1,333 @@
+{
+  "name_zh": "芬蘭",
+  "name_en": "Finland",
+  "summary": "位於北歐、東鄰俄羅斯的共和國,首都赫爾辛基。全國約有十八萬座湖泊,森林覆蓋率居歐洲之冠,冬季漫長而寒冷。曾長期為瑞典與俄國的一部分,一九一七年獨立;今以教育、行動通訊與設計著稱,並在二〇二三年加入北約。",
+  "founding": [
+    "冰河退去後,芬蘭語族的各支系陸續在此定居,形成芬蘭人、塔瓦斯特人與卡累利阿人等群體,但長期沒有自己的國家,夾在西邊的瑞典與東邊的諾夫哥羅德之間。",
+    "十二至十三世紀,瑞典經由多次十字軍將芬蘭納入其王國,芬蘭因此當了約六百五十年瑞典的東部領土。圖爾庫成為主教座與行政中心;宗教改革後,阿格里科拉於一五四八年出版芬蘭語新約,奠定書面芬蘭語。",
+    "一八〇九年芬蘭戰爭後,瑞典把芬蘭割讓給俄國。芬蘭成為俄國治下的自治大公國,沙皇兼任大公;首都於一八一二年遷往赫爾辛基,芬蘭保有自己的政府機構,後來還有自己的貨幣與議會。",
+    "十九世紀民族意識覺醒:隆洛特編纂民族史詩《卡勒瓦拉》,史奈爾曼、魯內貝里與西貝流士各在思想、文學與音樂上塑造芬蘭認同。十九、二十世紀之交俄國推行俄化政策,激起強烈反彈。",
+    "一九一七年俄國革命之際,芬蘭於十二月六日宣布獨立。翌年爆發短暫而慘烈的內戰(紅軍對白軍),一九一九年通過共和憲法。第二次世界大戰期間,芬蘭在冬季戰爭(一九三九至四〇)與繼續戰爭(一九四一至四四)中對抗蘇聯,割讓卡累利阿部分地區,但保住了獨立。",
+    "冷戰期間芬蘭在蘇聯陰影下維持中立。一九九五年加入歐盟,並於一九九九至二〇〇二年採用歐元。二〇二二年俄羅斯全面入侵烏克蘭後,芬蘭放棄軍事不結盟,於二〇二三年加入北約。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "芬蘭共和國",
+    "area_km2": 338455,
+    "languages": [
+      "芬蘭語",
+      "瑞典語"
+    ],
+    "religion": "以福音信義會為主(具國家教會地位),另有芬蘭東正教會",
+    "currency": "歐元(EUR)",
+    "government": "議會共和制,總統為國家元首、內閣對國會負責"
+  },
+  "animals": [
+    {
+      "zh": "棕熊",
+      "en": "Brown bear",
+      "note": "芬蘭的國獸,棲息於東部與北部森林,可在賞熊小屋觀察。",
+      "image": "animals-brown-bear.jpg"
+    },
+    {
+      "zh": "賽馬湖環斑海豹",
+      "en": "Saimaa ringed seal",
+      "note": "只生活在賽馬湖水系的淡水海豹,全球僅存數百隻,極度瀕危。",
+      "image": "animals-saimaa-seal.jpg"
+    },
+    {
+      "zh": "狼獾",
+      "en": "Wolverine",
+      "note": "分布於東部與拉普蘭的稀有貂科動物,行蹤隱密。",
+      "image": "animals-wolverine.jpg"
+    },
+    {
+      "zh": "大天鵝",
+      "en": "Whooper swan",
+      "note": "芬蘭的國鳥,叫聲嘹亮,出現在紙鈔與硬幣上。",
+      "image": "animals-whooper-swan.jpg"
+    },
+    {
+      "zh": "馴鹿",
+      "en": "Reindeer",
+      "note": "拉普蘭的半馴養牲口,常見於公路旁,是薩米經濟的支柱。",
+      "image": "animals-reindeer.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "卡累利阿派",
+      "en": "Karjalanpiirakka",
+      "note": "裸麥薄皮包米粥餡的橢圓小餅,常抹上蛋黃奶油。",
+      "image": "foods-karelian-pasty.jpg"
+    },
+    {
+      "zh": "裸麥麵包",
+      "en": "Ruisleipä",
+      "note": "酸味濃、質地紮實的深色裸麥麵包,是芬蘭主食。",
+      "image": "foods-ruisleipa.jpg"
+    },
+    {
+      "zh": "香煎馴鹿肉",
+      "en": "Poronkäristys",
+      "note": "薄切馴鹿肉快炒,佐馬鈴薯泥與越橘,是拉普蘭名菜。",
+      "image": "foods-sauteed-reindeer.jpg"
+    },
+    {
+      "zh": "麵包乳酪",
+      "en": "Leipäjuusto",
+      "note": "烘出焦斑的凝乳「吱吱乳酪」,常配雲莓醬與咖啡。",
+      "image": "foods-leipajuusto.jpg"
+    },
+    {
+      "zh": "鹹甘草糖",
+      "en": "Salmiakki",
+      "note": "加氯化銨的黑色甘草糖,鹹嗆的味道是北歐特有的口味。",
+      "image": "foods-salmiakki.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "赫爾辛基大教堂",
+      "en": "Helsinki Cathedral",
+      "note": "參議院廣場上的新古典主義白色教堂,城市的招牌畫面。",
+      "latlon": [
+        60.1703,
+        24.9522
+      ],
+      "image": "landmarks-helsinki-cathedral.jpg"
+    },
+    {
+      "zh": "芬蘭堡",
+      "en": "Suomenlinna",
+      "note": "橫跨數座島嶼的十八世紀海防要塞,列入世界遺產,渡輪可達。",
+      "latlon": [
+        60.1454,
+        24.9881
+      ],
+      "image": "landmarks-suomenlinna.jpg"
+    },
+    {
+      "zh": "聖誕老人村",
+      "en": "Santa Claus Village",
+      "note": "羅瓦涅米近郊、北極圈線經過的主題村,全年可寄耶誕信。",
+      "latlon": [
+        66.5436,
+        25.8472
+      ]
+    },
+    {
+      "zh": "岩石教堂",
+      "en": "Temppeliaukio Church",
+      "note": "直接在花崗岩中鑿出、覆以銅頂的教堂,音響效果出色。",
+      "latlon": [
+        60.1732,
+        24.9253
+      ]
+    },
+    {
+      "zh": "奧拉溫林納城堡",
+      "en": "Olavinlinna",
+      "note": "薩翁林納湖上的中世紀石造城堡,夏季在此舉辦歌劇節。",
+      "latlon": [
+        61.8639,
+        28.8989
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "尚·西貝流士",
+      "en": "Jean Sibelius",
+      "note": "作曲家,交響詩《芬蘭頌》成為民族象徵。"
+    },
+    {
+      "zh": "阿爾瓦·奧圖",
+      "en": "Alvar Aalto",
+      "note": "現代主義建築師與家具設計師,作品遍及芬蘭各地。"
+    },
+    {
+      "zh": "托芙·揚松",
+      "en": "Tove Jansson",
+      "note": "畫家與作家,創造「嚕嚕米」系列。"
+    },
+    {
+      "zh": "帕沃·努爾米",
+      "en": "Paavo Nurmi",
+      "note": "一九二〇年代長跑名將「飛翔的芬蘭人」,奪九面奧運金牌。"
+    },
+    {
+      "zh": "林納斯·托瓦茲",
+      "en": "Linus Torvalds",
+      "note": "程式設計師,開創 Linux 作業系統核心。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "六至八月的湖區",
+      "note": "賽馬湖一帶日照極長,可租木屋、划獨木舟、蒸桑拿後跳湖,是芬蘭夏天的核心體驗。"
+    },
+    {
+      "zh": "十二月至三月的拉普蘭",
+      "note": "羅瓦涅米以北看極光、住玻璃屋、體驗馴鹿與哈士奇雪橇,並拜訪聖誕老人村。"
+    },
+    {
+      "zh": "七月薩翁林納歌劇節",
+      "note": "在奧拉溫林納城堡中庭聽歌劇,搭配湖區遊船,票與住宿要提前數月訂。"
+    }
+  ],
+  "events": [
+    {
+      "year": 1249,
+      "zh": "瑞典經十字軍逐步將芬蘭納入其王國(約十三世紀中)。"
+    },
+    {
+      "year": 1548,
+      "zh": "阿格里科拉出版芬蘭語新約,奠定書面芬蘭語。"
+    },
+    {
+      "year": 1809,
+      "zh": "芬蘭戰爭後割予俄國,成立自治的芬蘭大公國。"
+    },
+    {
+      "year": 1835,
+      "zh": "隆洛特首度出版民族史詩《卡勒瓦拉》。"
+    },
+    {
+      "year": 1917,
+      "zh": "十二月六日芬蘭宣布獨立。"
+    },
+    {
+      "year": 1939,
+      "zh": "冬季戰爭爆發,芬蘭對抗蘇聯入侵。"
+    },
+    {
+      "year": 2023,
+      "zh": "芬蘭加入北約。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "赫爾辛基＋愛沙尼亞塔林",
+        "days": "4–5 天",
+        "note": "赫爾辛基的大教堂、岩石教堂、設計區與芬蘭堡安排兩天,搭快船當日往返塔林中世紀老城。航點多、行程輕鬆,適合第一次到芬蘭的旅客。"
+      },
+      {
+        "zh": "羅瓦涅米極光與聖誕村",
+        "days": "5–6 天",
+        "note": "飛赫爾辛基轉機到羅瓦涅米,住玻璃屋追極光、坐哈士奇與馴鹿雪橇、逛聖誕老人村。十二月至三月旺季,行程與住宿要早訂。"
+      },
+      {
+        "zh": "湖區木屋假期(薩翁林納—庫奧皮奧)",
+        "days": "5–6 天",
+        "note": "夏季租湖畔木屋,划船、桑拿、採莓,順遊奧拉溫林納城堡與庫奧皮奧的煙燻塔。步調悠閒,適合家庭與情侶。"
+      },
+      {
+        "zh": "赫爾辛基＋斯德哥爾摩郵輪",
+        "days": "5–6 天",
+        "note": "搭波羅的海過夜郵輪往返瑞典首都,船上看群島風景,兩端各安排一至兩天。適合想同遊兩國又不想拉車的旅客。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "庫薩莫與奧蘭卡國家公園",
+        "note": "東部近俄羅斯邊界的原野,夏季走「熊之路」步道、秋季看色葉。班次稀疏,建議自駕或參加行程。"
+      },
+      {
+        "zh": "奧蘭群島",
+        "note": "位於芬蘭與瑞典之間、講瑞典語的自治群島,適合夏天騎單車跳島、看紅色花崗岩海岸。"
+      },
+      {
+        "zh": "哈邁林納與芬蘭中部工藝小鎮",
+        "note": "西貝流士故鄉、伊塔拉玻璃工廠與中世紀城堡,適合搭火車做一段慢節奏的文化小旅行。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "animals-brown-bear.jpg",
+      "title": "Ours brun Finlande",
+      "author": "Ludovic Péron",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AOurs_brun_Finlande.jpg"
+    },
+    {
+      "file": "animals-saimaa-seal.jpg",
+      "title": "Pusa hispida saimensis 304551354",
+      "author": "Linda Lötjönen",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3APusa_hispida_saimensis_304551354.jpg"
+    },
+    {
+      "file": "animals-wolverine.jpg",
+      "title": "The wolverine in the wilderness (48112068898)",
+      "author": "yrjö jyske from Finland",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AThe_wolverine_in_the_wilderness_%2848112068898%29.jpg"
+    },
+    {
+      "file": "animals-whooper-swan.jpg",
+      "title": "Cygnus cygnus Oulu 20170417 02",
+      "author": "Estormiz",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ACygnus_cygnus_Oulu_20170417_02.jpg"
+    },
+    {
+      "file": "animals-reindeer.jpg",
+      "title": "Reindeer on Kaamasentie near Säytsjärvi in Inari, Lapland, Finland, 2021 September",
+      "author": "Ximonic (Simo Räsänen)",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AReindeer_on_Kaamasentie_near_S%C3%A4ytsj%C3%A4rvi_in_Inari%2C_Lapland%2C_Finland%2C_2021_September.jpg"
+    },
+    {
+      "file": "foods-karelian-pasty.jpg",
+      "title": "Karjalanpiirakka with egg butter",
+      "author": "Olivia Fries",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AKarjalanpiirakka_with_egg_butter.jpg"
+    },
+    {
+      "file": "foods-ruisleipa.jpg",
+      "title": "Ruisleipä-limppu reikäleipä reissumies hapankorppu-1",
+      "author": "Hellahulla ( Hellahulla )",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ARuisleip%C3%A4-limppu_reik%C3%A4leip%C3%A4_reissumies_hapankorppu-1.JPG"
+    },
+    {
+      "file": "foods-sauteed-reindeer.jpg",
+      "title": "Poronkäristys",
+      "author": "Htm",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3APoronk%C3%A4ristys.jpg"
+    },
+    {
+      "file": "foods-leipajuusto.jpg",
+      "title": "Leipäjuusto",
+      "author": "Tiia Monto",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ALeip%C3%A4juusto.jpg"
+    },
+    {
+      "file": "foods-salmiakki.jpg",
+      "title": "Salmiakki candies",
+      "author": "Tiia Monto",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASalmiakki_candies.jpg"
+    },
+    {
+      "file": "landmarks-helsinki-cathedral.jpg",
+      "title": "Lutheran Cathedral Helsinki",
+      "author": "Hans Hillewaert",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ALutheran_Cathedral_Helsinki.jpg"
+    },
+    {
+      "file": "landmarks-suomenlinna.jpg",
+      "title": "Suomenlinna mereltä 1",
+      "author": "kallerna",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASuomenlinna_merelt%C3%A4_1.jpg"
+    }
+  ],
+  "code": "FI"
+}

@@ -1,0 +1,337 @@
+{
+  "name_zh": "土耳其",
+  "name_en": "Turkey",
+  "summary": "橫跨安納托利亞半島與歐洲東南角的國家,首都安卡拉,最大城市伊斯坦堡扼守博斯普魯斯海峽。安納托利亞是人類最早的定居地之一,先後為赫梯、希臘、羅馬與拜占庭所有。鄂圖曼帝國曾統治三大洲六百餘年;一九二三年凱末爾建立世俗共和國,一九五二年加入北約。",
+  "founding": [
+    "安納托利亞是世界上最早有人定居的地區之一:哥貝克力石陣(約西元前九六〇〇年)、加泰土丘,以及後來的赫梯帝國、弗里吉亞、呂底亞、愛琴海沿岸的希臘城邦,接著是波斯、亞歷山大、希臘化王國,再到羅馬與拜占庭。三三〇年起,君士坦丁堡成為(東)羅馬帝國的新都。",
+    "來自中亞的突厥人在一〇七一年曼齊克特之戰後大舉進入安納托利亞,建立羅姆蘇丹國。蒙古之後,半島出現許多突厥小侯國;其中由奧斯曼領導、位於安納托利亞西北的一支自約一二九九年逐步壯大,是為鄂圖曼侯國。",
+    "鄂圖曼渡海進入歐洲,攻取埃迪爾內,並於一四五三年五月二十九日由穆罕默德二世攻陷君士坦丁堡,拜占庭帝國滅亡。十六世紀塞利姆一世與蘇萊曼一世在位時,帝國橫跨巴爾幹、中東與北非,並取得伊斯蘭聖地與哈里發稱號。",
+    "十七世紀末起帝國逐漸收縮;十九世紀的坦志麥特改革試圖現代化,但巴爾幹領土相繼獨立。第一次世界大戰站在同盟國一方,戰敗後遭列強瓜分;一九一五至一七年間發生鄂圖曼亞美尼亞人遭大規模驅逐與屠殺(此一「亞美尼亞議題」在國際上仍有爭議)。",
+    "穆斯塔法·凱末爾自一九一九年領導民族運動,土耳其獨立戰爭擊退占領軍;一九二三年《洛桑條約》確定邊界(並與希臘進行人口交換),同年十月二十九日土耳其共和國成立,定都安卡拉,蘇丹制與哈里發制先後被廢除。",
+    "凱末爾的改革打造出世俗、面向西方的民族國家(拉丁字母、民法、女性參政)。第二次世界大戰土耳其大致維持中立,一九五二年加入北約,並成為歐盟候選國(入盟談判停滯)。此後文人政府與軍事政變交替(一九六〇、一九七一、一九八〇年,及二〇一六年未遂政變);二〇一七年公投改行總統制。一九八〇年代起,國家與庫德工人黨(PKK)在以庫德族為主的東南部持續武裝衝突。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "土耳其共和國",
+    "area_km2": 783562,
+    "languages": [
+      "土耳其語"
+    ],
+    "religion": "人口多數為穆斯林(以遜尼派為主),另有阿列維派;憲法定為世俗國家",
+    "currency": "土耳其里拉(TRY)",
+    "government": "總統制共和"
+  },
+  "animals": [
+    {
+      "zh": "凡湖貓",
+      "en": "Van cat",
+      "note": "產自凡湖一帶的白色長毛貓,常有一藍一琥珀的異色瞳。",
+      "image": "animals-van-cat.jpg"
+    },
+    {
+      "zh": "安哥拉山羊",
+      "en": "Angora goat",
+      "note": "以安卡拉為名,產出柔亮的馬海毛(mohair)。"
+    },
+    {
+      "zh": "康加爾牧羊犬",
+      "en": "Kangal Shepherd Dog",
+      "note": "體型龐大、護畜性強的安納托利亞牧羊犬,原產於錫瓦斯一帶。",
+      "image": "animals-kangal.jpg"
+    },
+    {
+      "zh": "蠵龜",
+      "en": "Loggerhead sea turtle",
+      "note": "在地中海沿岸沙灘(如達利安伊茲圖祖)產卵的海龜。",
+      "image": "animals-loggerhead-turtle.jpg"
+    },
+    {
+      "zh": "安納托利亞棕熊",
+      "en": "Anatolian brown bear",
+      "note": "分布於黑海與東部山區森林的棕熊亞群。",
+      "image": "animals-anatolian-bear.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "土耳其烤肉",
+      "en": "Kebap",
+      "note": "泛指炭火串烤或旋轉烤肉,阿達納、旋轉(döner)、串烤等各具地方風味。",
+      "image": "foods-kebap.jpg"
+    },
+    {
+      "zh": "果仁蜜餅",
+      "en": "Baklava",
+      "note": "層層薄酥皮夾核桃或開心果、澆糖漿的甜點,加濟安泰普最負盛名。"
+    },
+    {
+      "zh": "土耳其咖啡",
+      "en": "Türk kahvesi",
+      "note": "以銅壺細火煮出的濃咖啡,連渣一起倒入小杯,列入非物質文化遺產。",
+      "image": "foods-turkish-coffee.jpg"
+    },
+    {
+      "zh": "土耳其軟糖",
+      "en": "Lokum",
+      "note": "以澱粉與糖凝製、常加玫瑰水或堅果的方塊軟糖。",
+      "image": "foods-lokum.jpg"
+    },
+    {
+      "zh": "土耳其披薩",
+      "en": "Pide／Lahmacun",
+      "note": "船形餅皮鋪餡烤的 pide,與薄脆的肉末薄餅 lahmacun。",
+      "image": "foods-pide.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "聖索菲亞",
+      "en": "Hagia Sophia",
+      "note": "拜占庭巨型穹頂教堂,曾改為清真寺、博物館,現為清真寺。",
+      "latlon": [
+        41.0086,
+        28.98
+      ],
+      "image": "landmarks-hagia-sophia.jpg"
+    },
+    {
+      "zh": "卡帕多奇亞(格雷梅)",
+      "en": "Cappadocia",
+      "note": "火山凝灰岩侵蝕出的「仙人煙囪」與洞穴聚落,以熱氣球俯瞰聞名,列入世界遺產。",
+      "latlon": [
+        38.6431,
+        34.8283
+      ],
+      "image": "landmarks-cappadocia.jpg"
+    },
+    {
+      "zh": "棉堡與希拉波利斯",
+      "en": "Pamukkale",
+      "note": "溫泉碳酸鈣沉積形成的白色梯田水池,上方有古羅馬城遺跡,列入世界遺產。",
+      "latlon": [
+        37.9203,
+        29.1211
+      ],
+      "image": "landmarks-pamukkale.jpg"
+    },
+    {
+      "zh": "以弗所古城",
+      "en": "Ephesus",
+      "note": "保存完整的希臘羅馬城市遺址,塞爾蘇斯圖書館立面為其象徵。",
+      "latlon": [
+        37.9411,
+        27.342
+      ],
+      "image": "landmarks-ephesus.jpg"
+    },
+    {
+      "zh": "托普卡匹皇宮",
+      "en": "Topkapı Palace",
+      "note": "鄂圖曼蘇丹統治四百年的宮殿,收藏珍寶與聖物,俯瞰金角灣。",
+      "latlon": [
+        41.0115,
+        28.9834
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "穆斯塔法·凱末爾·阿塔圖克",
+      "en": "Mustafa Kemal Atatürk",
+      "note": "土耳其共和國締造者與首任總統,推動世俗化與西化改革。"
+    },
+    {
+      "zh": "米瑪爾·希南",
+      "en": "Mimar Sinan",
+      "note": "十六世紀鄂圖曼首席建築師,設計蘇萊曼尼耶與塞利米耶清真寺。"
+    },
+    {
+      "zh": "魯米(梅夫拉那)",
+      "en": "Rumi",
+      "note": "十三世紀居於孔亞的波斯語詩人與蘇非導師,旋轉舞儀式源於其教團。"
+    },
+    {
+      "zh": "奧罕·帕慕克",
+      "en": "Orhan Pamuk",
+      "note": "小說家,《我的名字叫紅》等作,二〇〇六年獲諾貝爾文學獎。"
+    },
+    {
+      "zh": "阿齊茲·桑賈爾",
+      "en": "Aziz Sancar",
+      "note": "分子生物學家,因 DNA 修復研究獲二〇一五年諾貝爾化學獎。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "四至六月或九至十月的伊斯坦堡",
+      "note": "氣候溫和、遊客略少,適合走舊城三大古蹟、大巴札與博斯普魯斯遊船。"
+    },
+    {
+      "zh": "卡帕多奇亞的清晨熱氣球",
+      "note": "日出時分數十顆熱氣球升空俯瞰仙人煙囪,住洞穴旅館,四至十月天氣較穩。"
+    },
+    {
+      "zh": "愛琴海與地中海岸自駕",
+      "note": "五至十月沿以弗所、棉堡、費特希耶「藍色巡航」與安塔利亞古城,把遺跡與海灘一次收。"
+    }
+  ],
+  "events": [
+    {
+      "year": -9600,
+      "zh": "哥貝克力石陣建造,是已知最早的巨石神廟遺址(約西元前九六〇〇年)。"
+    },
+    {
+      "year": 330,
+      "zh": "君士坦丁大帝將拜占庭改建為君士坦丁堡,成為羅馬帝國新都。"
+    },
+    {
+      "year": 1071,
+      "zh": "曼齊克特之戰,塞爾柱突厥人打開進入安納托利亞的門戶。"
+    },
+    {
+      "year": 1299,
+      "zh": "鄂圖曼侯國興起(傳統紀年)。"
+    },
+    {
+      "year": 1453,
+      "zh": "穆罕默德二世攻陷君士坦丁堡,拜占庭帝國滅亡。"
+    },
+    {
+      "year": 1520,
+      "zh": "蘇萊曼一世即位,鄂圖曼帝國進入鼎盛。"
+    },
+    {
+      "year": 1923,
+      "zh": "十月二十九日土耳其共和國成立,凱末爾任首任總統。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "伊斯坦堡＋卡帕多奇亞",
+        "days": "6–7 天",
+        "note": "伊斯坦堡舊城三大古蹟、大巴札與博斯普魯斯遊船三天,飛內夫謝希爾看仙人煙囪、坐熱氣球、住洞穴旅館。台灣有直航或一次轉機,是第一次到土耳其的經典組合。"
+      },
+      {
+        "zh": "土耳其西部經典環線",
+        "days": "8–10 天",
+        "note": "伊斯坦堡—恰納卡萊(特洛伊)—愛琴海的以弗所—棉堡—安塔利亞,一路遺跡加海岸。自駕或跟團,適合想一次看完古文明的旅客。"
+      },
+      {
+        "zh": "伊斯坦堡定點深度",
+        "days": "4–5 天",
+        "note": "舊城古蹟、香料市場、加拉達塔與亞洲區的卡德柯伊,傍晚渡輪跨洲。航班多、飯店選擇廣,適合週末長假。"
+      },
+      {
+        "zh": "卡帕多奇亞＋孔亞＋安塔利亞",
+        "days": "7–8 天",
+        "note": "從卡帕多奇亞南下孔亞看梅夫拉那與旋轉舞,再到地中海岸的安塔利亞古城與阿斯潘多斯劇場。適合想避開純西部路線的旅客。"
+      },
+      {
+        "zh": "費特希耶藍色巡航",
+        "days": "5–6 天",
+        "note": "從費特希耶或馬爾馬里斯出發,搭木船在地中海沿岸跳島、浮潛、看沉城,行程悠閒。四至十月為航季。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "土耳其東部:凡城與多烏拜亞澤特",
+        "note": "凡湖、阿克達瑪島的亞美尼亞教堂與伊薩克帕夏宮。距離遠、班次少,建議搭國內線再自駕或包車。"
+      },
+      {
+        "zh": "尼姆魯特山日出",
+        "note": "東南部山頂的巨大石雕頭像陵墓,清晨看日出最佳,通常由卡赫塔或阿德亞曼安排接送。"
+      },
+      {
+        "zh": "黑海山區:里澤與艾德爾高地",
+        "note": "多雨蒼翠的茶園與雲霧繚繞的高山牧場(yayla),蘇美拉懸崖修道院是亮點,夏季前往、注意路況。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "animals-van-cat.jpg",
+      "title": "Van kedisi - DSC00918",
+      "author": "Lemon tart",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AVan_kedisi_-_DSC00918.jpg"
+    },
+    {
+      "file": "animals-kangal.jpg",
+      "title": "Anatolian Shepherd Dog - Kangal köpeği 01",
+      "author": "Zeynel Cebeci",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AAnatolian_Shepherd_Dog_-_Kangal_k%C3%B6pe%C4%9Fi_01.jpg"
+    },
+    {
+      "file": "animals-loggerhead-turtle.jpg",
+      "title": "Loggerhead sea turtle",
+      "author": "ukanda",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ALoggerhead_sea_turtle.jpg"
+    },
+    {
+      "file": "animals-anatolian-bear.jpg",
+      "title": "Eurasian brown bear (Ursus arctos arctos) female 1",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AEurasian_brown_bear_%28Ursus_arctos_arctos%29_female_1.jpg"
+    },
+    {
+      "file": "foods-kebap.jpg",
+      "title": "Adana kebabı",
+      "author": "E4024",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AAdana_kebab%C4%B1.jpg"
+    },
+    {
+      "file": "foods-turkish-coffee.jpg",
+      "title": "Turkish coffee in Istanbul",
+      "author": "Tema",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ATurkish_coffee_in_Istanbul.jpg"
+    },
+    {
+      "file": "foods-lokum.jpg",
+      "title": "Lokum (Turkish Delight)",
+      "author": "ProjectManhattan",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ALokum_%28Turkish_Delight%29.jpg"
+    },
+    {
+      "file": "foods-pide.jpg",
+      "title": "Türk pidesi",
+      "author": "E4024",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AT%C3%BCrk_pidesi.jpg"
+    },
+    {
+      "file": "landmarks-hagia-sophia.jpg",
+      "title": "Hagia Sophia Mars 2013",
+      "author": "Arild Vågen",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AHagia_Sophia_Mars_2013.jpg"
+    },
+    {
+      "file": "landmarks-cappadocia.jpg",
+      "title": "Balloons in Cappadocia",
+      "author": "Emrahuygun",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABalloons_in_Cappadocia.jpg"
+    },
+    {
+      "file": "landmarks-pamukkale.jpg",
+      "title": "The travertine terraces of Pamukkale 4",
+      "author": "Slyronit",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AThe_travertine_terraces_of_Pamukkale_4.jpg"
+    },
+    {
+      "file": "landmarks-ephesus.jpg",
+      "title": "Ephesus Celsus Library Façade",
+      "author": "Benh LIEU SONG",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AEphesus_Celsus_Library_Fa%C3%A7ade.jpg"
+    }
+  ],
+  "code": "TR"
+}

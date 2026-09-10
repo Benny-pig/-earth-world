@@ -1,0 +1,337 @@
+{
+  "name_zh": "瑞典",
+  "name_en": "Sweden",
+  "summary": "位於斯堪地那維亞半島東側的北歐王國,首都斯德哥爾摩。國土狹長、湖泊與森林密布,人口約一千萬。曾是十七世紀的波羅的海強權,今以完善的福利制度、工業設計與資訊科技產業著稱,長期奉行中立,直到二〇二四年才加入北約。",
+  "founding": [
+    "瑞典的核心地帶是波羅的海西岸與梅拉倫湖周邊的低地。西元前後,日耳曼語族的斯維爾人與約塔人已在此形成部落聯盟;維京時代(約八至十一世紀),比爾卡等貿易據點興起,瑞典的維京人(瓦良格人)沿俄羅斯水系南下經商,並參與基輔羅斯的形成,勢力向東延伸。",
+    "十一至十二世紀,基督教經傳教與王權推廣逐步取代舊有信仰,王國中心向斯維爾人的烏普薩拉一帶集中。一二五〇年前後,攝政比爾耶·雅爾在梅拉倫湖出海口修築城堡,即後來的首都斯德哥爾摩;漢薩同盟的德意志商人也帶來城市制度與礦業技術。",
+    "一三九七年,瑞典、丹麥、挪威在丹麥王室主導下組成卡爾馬聯盟。聯盟後期瑞典貴族與丹麥王權衝突不斷,一五二三年古斯塔夫·瓦薩率眾脫離聯盟、即位為王,並推行宗教改革,沒收教會財產、確立信義宗,一五四四年將王位改為世襲,現代瑞典王國的基礎自此奠定。",
+    "十七世紀是瑞典的「大國時代」。古斯塔夫二世·阿道夫改革軍制、介入三十年戰爭,瑞典一度控制波羅的海大部分沿岸,成為歐洲強權。但長年征戰耗損國力,一七〇〇至一七二一年的大北方戰爭中敗於俄國,喪失波羅的海東岸領地,強權地位告終。",
+    "一八〇九年瑞典把芬蘭割讓給俄國,同年通過新憲法、確立權力分立。一八一〇年法國元帥貝爾納多特獲選為王儲,開啟延續至今的王朝;一八一四年瑞典與挪威組成共主聯盟(一九〇五年和平解散)。此後瑞典未再捲入戰爭,逐步走向長期中立。",
+    "十九世紀工業化推進,也有上百萬人口移民美洲。二十世紀兩次世界大戰瑞典皆維持中立,社會民主黨長期執政,建立以「人民之家」為名的福利國家。一九九五年加入歐盟,但公投否決採用歐元,保留瑞典克朗;二〇二二年俄羅斯全面入侵烏克蘭後,瑞典申請加入北約,二〇二四年正式成為會員國。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "瑞典王國",
+    "area_km2": 450295,
+    "languages": [
+      "瑞典語"
+    ],
+    "religion": "多數名義上屬信義宗(瑞典教會),2000 年起政教分離,實際宗教參與度低",
+    "currency": "瑞典克朗(SEK)",
+    "government": "議會內閣制君主立憲"
+  },
+  "animals": [
+    {
+      "zh": "駝鹿(麋鹿)",
+      "en": "Moose (Eurasian elk)",
+      "note": "北歐森林最大的鹿科動物,黃昏出沒,是瑞典非官方的代表動物。",
+      "image": "animals-moose.jpg"
+    },
+    {
+      "zh": "棕熊",
+      "en": "Brown bear",
+      "note": "主要棲息於北部針葉林,數量約三千頭,受法律保護。",
+      "image": "animals-brown-bear.jpg"
+    },
+    {
+      "zh": "歐亞猞猁",
+      "en": "Eurasian lynx",
+      "note": "北歐唯一的大型貓科,耳尖有黑色簇毛,獨行、夜間狩獵。",
+      "image": "animals-lynx.jpg"
+    },
+    {
+      "zh": "狼獾",
+      "en": "Wolverine",
+      "note": "貂科最大成員,體格粗壯、力氣驚人,活動於山區與凍原。",
+      "image": "animals-wolverine.jpg"
+    },
+    {
+      "zh": "馴鹿",
+      "en": "Reindeer",
+      "note": "半馴養狀態,由北部的薩米人放牧,是其傳統生計核心。",
+      "image": "animals-reindeer.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "瑞典肉丸",
+      "en": "Köttbullar",
+      "note": "小肉丸佐奶油醬、水煮馬鈴薯與越橘果醬,國民家常菜。",
+      "image": "foods-meatballs.jpg"
+    },
+    {
+      "zh": "肉桂捲",
+      "en": "Kanelbulle",
+      "note": "加豆蔻的螺旋甜麵包,是搭配咖啡的「fika」點心文化代表。",
+      "image": "foods-cinnamon-bun.jpg"
+    },
+    {
+      "zh": "醃鯡魚(酸鯡魚)",
+      "en": "Surströmming",
+      "note": "發酵的波羅的海鯡魚,氣味極濃,多在夏末開罐配薄餅吃。",
+      "image": "foods-surstromming.jpg"
+    },
+    {
+      "zh": "醃鮭魚",
+      "en": "Gravlax",
+      "note": "以鹽、糖與蒔蘿醃漬的生鮭魚薄片,常佐芥末蒔蘿醬。",
+      "image": "foods-gravlax.jpg"
+    },
+    {
+      "zh": "公主蛋糕",
+      "en": "Prinsesstårta",
+      "note": "海綿蛋糕夾鮮奶油與果醬,外覆淡綠色杏仁糖膜。",
+      "image": "foods-prinsesstarta.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "斯德哥爾摩老城",
+      "en": "Gamla Stan",
+      "note": "建於中世紀的島上舊城,鵝卵石巷弄、王宮與大廣場集中於此。",
+      "latlon": [
+        59.325,
+        18.071
+      ],
+      "image": "landmarks-gamla-stan.jpg"
+    },
+    {
+      "zh": "瓦薩沉船博物館",
+      "en": "Vasa Museum",
+      "note": "展出一六二八年首航即沉沒、一九六一年打撈出水的十七世紀戰艦。",
+      "latlon": [
+        59.328,
+        18.091
+      ],
+      "image": "landmarks-vasa.jpg"
+    },
+    {
+      "zh": "德羅特寧霍姆宮",
+      "en": "Drottningholm Palace",
+      "note": "王室居所,巴洛克庭園與宮廷劇院列入世界遺產。",
+      "latlon": [
+        59.321,
+        17.886
+      ]
+    },
+    {
+      "zh": "尤卡斯亞爾維冰旅館",
+      "en": "Icehotel",
+      "note": "北極圈內每年以冰雪重建的旅館,附設冰教堂與冰酒吧。",
+      "latlon": [
+        67.851,
+        20.596
+      ]
+    },
+    {
+      "zh": "維斯比",
+      "en": "Visby",
+      "note": "哥特蘭島上的漢薩時代港市,近乎完整的中世紀環城牆列入世界遺產。",
+      "latlon": [
+        57.638,
+        18.296
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "卡爾·林奈",
+      "en": "Carl Linnaeus",
+      "note": "十八世紀博物學家,創立生物「二名法」分類系統。"
+    },
+    {
+      "zh": "阿佛烈·諾貝爾",
+      "en": "Alfred Nobel",
+      "note": "化學家與發明家,發明黃色炸藥,遺囑設立諾貝爾獎。"
+    },
+    {
+      "zh": "英格瑪·柏格曼",
+      "en": "Ingmar Bergman",
+      "note": "電影導演,《第七封印》《野草莓》影響現代藝術電影。"
+    },
+    {
+      "zh": "阿斯特麗德·林格倫",
+      "en": "Astrid Lindgren",
+      "note": "兒童文學作家,創造「長襪皮皮」等經典角色。"
+    },
+    {
+      "zh": "ABBA",
+      "en": "ABBA",
+      "note": "一九七〇年代的流行樂團,以《Dancing Queen》等曲風靡全球。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "仲夏節前後的斯德哥爾摩與群島",
+      "note": "六月下旬日照近乎不落,可搭船跳島、參加仲夏柱慶典,是體驗瑞典夏天的最佳時機。"
+    },
+    {
+      "zh": "冬季的瑞典拉普蘭",
+      "note": "十二月至三月前往阿比斯庫、尤卡斯亞爾維看極光、住冰旅館、體驗狗拉雪橇與馴鹿文化。"
+    },
+    {
+      "zh": "八月哥特蘭島的中世紀週",
+      "note": "維斯比古城牆內市集、騎士比武與扮裝遊行連辦一週,適合家庭同遊。"
+    }
+  ],
+  "events": [
+    {
+      "year": 829,
+      "zh": "傳教士安斯加抵達比爾卡傳教,基督教開始傳入。"
+    },
+    {
+      "year": 1252,
+      "zh": "文獻首次提到斯德哥爾摩,比爾耶·雅爾在此築城。"
+    },
+    {
+      "year": 1397,
+      "zh": "瑞典加入以丹麥為首的卡爾馬聯盟。"
+    },
+    {
+      "year": 1523,
+      "zh": "古斯塔夫·瓦薩即位,瑞典脫離聯盟,現代王國成形。"
+    },
+    {
+      "year": 1721,
+      "zh": "大北方戰爭結束,瑞典喪失波羅的海霸權。"
+    },
+    {
+      "year": 1995,
+      "zh": "瑞典經公投加入歐盟。"
+    },
+    {
+      "year": 2024,
+      "zh": "瑞典加入北約,結束逾兩百年的軍事不結盟。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "斯德哥爾摩＋老城＋群島",
+        "days": "5–6 天",
+        "note": "老城區、瓦薩博物館、市政廳與皇宮安排三天,再搭渡輪到群島住一晚。台灣多轉機一次可達,適合第一次到北歐、想輕鬆走一座首都的旅客。"
+      },
+      {
+        "zh": "斯德哥爾摩＋哥特蘭島",
+        "days": "6–7 天",
+        "note": "首都行程接飛機或夜航渡輪到維斯比,環中世紀城牆散步、租單車遊島、看拉威爾石灰岩海蝕柱。古城加海島,步調悠閒。"
+      },
+      {
+        "zh": "瑞典拉普蘭極光之旅",
+        "days": "6–7 天",
+        "note": "經斯德哥爾摩轉機到基魯納,住冰旅館、追極光、體驗狗拉雪橇與薩米馴鹿營。十二月至三月為旺季,保暖裝備與行程須提早訂。"
+      },
+      {
+        "zh": "斯德哥爾摩＋馬爾默＋哥本哈根跨國",
+        "days": "7–8 天",
+        "note": "搭高鐵經跨海大橋串聯瑞典第三大城馬爾默與丹麥首都,一趟收兩國三城。適合想一次多看的旅客。"
+      },
+      {
+        "zh": "南部大城環線:哥德堡—馬爾默—隆德",
+        "days": "5–6 天",
+        "note": "哥德堡的海鮮與群島、馬爾默的旋轉大樓、隆德的大學古城,鐵路串聯方便,人潮比首都少。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "國王小徑健行(Kungsleden)",
+        "note": "拉普蘭山區的長距離步道,夏季七至九月可分段健行、住山屋。天氣多變、蚊蚋多,須有裝備與體力。"
+      },
+      {
+        "zh": "高海岸(Höga Kusten)世界遺產",
+        "note": "波的尼亞灣沿岸因冰後地殼回彈而持續抬升的獨特海岸,適合開車兼健行,大眾運輸稀疏建議自駕。"
+      },
+      {
+        "zh": "達拉納省的湖區與達拉木馬",
+        "note": "手繪達拉木馬的發源地,保留最濃的瑞典鄉村風情與仲夏傳統。班次少,自駕較彈性。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "animals-moose.jpg",
+      "title": "Moose - Slottsskogens djurpark",
+      "author": "Acediscovery",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AMoose_-_Slottsskogens_djurpark.jpg"
+    },
+    {
+      "file": "animals-brown-bear.jpg",
+      "title": "Casual Forest Bear (141013759)",
+      "author": "George Wheelhouse",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ACasual_Forest_Bear_%28141013759%29.jpeg"
+    },
+    {
+      "file": "animals-lynx.jpg",
+      "title": "Lynx lynx poing",
+      "author": "Bernard Landgraf ( User:Baerni )",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ALynx_lynx_poing.jpg"
+    },
+    {
+      "file": "animals-wolverine.jpg",
+      "title": "Järv1",
+      "author": "Esquilo",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AJ%C3%A4rv1.jpg"
+    },
+    {
+      "file": "animals-reindeer.jpg",
+      "title": "Domestic ren Rapadalen",
+      "author": "Prolineserver ( talk )",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ADomestic_ren_Rapadalen.jpg"
+    },
+    {
+      "file": "foods-meatballs.jpg",
+      "title": "Swedish meatballs in Gamla stan, Stockholm",
+      "author": "JIP",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASwedish_meatballs_in_Gamla_stan%2C_Stockholm.jpg"
+    },
+    {
+      "file": "foods-cinnamon-bun.jpg",
+      "title": "Kanelbullar Concedo",
+      "author": "Maria Eklind",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AKanelbullar_Concedo.jpg"
+    },
+    {
+      "file": "foods-surstromming.jpg",
+      "title": "Surströmming - 20210320 B",
+      "author": "IngimarE",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASurstr%C3%B6mming_-_20210320_B.jpg"
+    },
+    {
+      "file": "foods-gravlax.jpg",
+      "title": "Gravlax 2",
+      "author": "Tiia Monto",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AGravlax_2.jpg"
+    },
+    {
+      "file": "foods-prinsesstarta.jpg",
+      "title": "Prinsesstårta",
+      "author": "Fredrik Tersmeden (= User:FredrikT )",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3APrinsesst%C3%A5rta.JPG"
+    },
+    {
+      "file": "landmarks-gamla-stan.jpg",
+      "title": "Julmarknad på Stortorget, Gamla stan, Stockholm, 2017c",
+      "author": "Bysmon",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AJulmarknad_p%C3%A5_Stortorget%2C_Gamla_stan%2C_Stockholm%2C_2017c.jpg"
+    },
+    {
+      "file": "landmarks-vasa.jpg",
+      "title": "Lateral view of the Vasa ship, Vasa Museum, Stockholm, Sweden julesvernex2",
+      "author": "Jules Verne Times Two",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ALateral_view_of_the_Vasa_ship%2C_Vasa_Museum%2C_Stockholm%2C_Sweden_julesvernex2.jpg"
+    }
+  ],
+  "code": "SE"
+}

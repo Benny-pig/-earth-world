@@ -1,0 +1,337 @@
+{
+  "name_zh": "挪威",
+  "name_en": "Norway",
+  "summary": "位於斯堪地那維亞半島西側的北歐王國,首都奧斯陸。海岸線被冰河切割出綿長的峽灣,國土向北延伸至北極圈深處。二十世紀後期發現北海油氣,使其成為全球最富裕的國家之一,並建立世界最大的主權財富基金;兩度公投否決加入歐盟。",
+  "founding": [
+    "維京時代之前,挪威沿海散布著眾多小王國。傳統說法認為約八七二年哈拉爾一世(美髮王)在哈弗斯峽灣之戰後大致統一挪威。這一時期的挪威人向外拓殖,移居冰島、格陵蘭,並在不列顛群島與歐洲沿岸從事貿易與劫掠。",
+    "十世紀末至十一世紀,奧拉夫·特里格瓦松與奧拉夫二世(聖奧拉夫)推動基督教化;一〇三〇年聖奧拉夫在斯蒂克萊斯塔之戰陣亡,反而使他成為國家的守護聖人。中世紀盛期的挪威王國以特隆赫姆(尼達洛斯)為宗教中心,勢力涵蓋周邊島嶼。",
+    "一三四九年黑死病重創挪威,人口銳減、貴族凋零。一三九七年挪威加入卡爾馬聯盟;一五三七年進一步併入丹麥,成為「丹麥—挪威」的一部分,由哥本哈根統治近四百年,期間也接受了宗教改革。",
+    "一八一四年拿破崙戰爭結束,丹麥依《基爾條約》把挪威割讓給瑞典。挪威人於五月十七日在艾茲伏爾自行制定憲法,雖仍被迫與瑞典組成共主聯盟,但保有自己的議會與憲政體制,這一天後來成為國慶日。",
+    "一九〇五年,挪威與瑞典的聯盟經談判和平解散,挪威迎請丹麥王子出任國王哈康七世,成為完全獨立的君主立憲國家。第二次世界大戰期間挪威遭德國占領(一九四〇至一九四五),戰後於一九四九年成為北約創始會員國。",
+    "一九六九年北海發現艾科菲斯克油田,開啟石油時代。挪威把石油收入投入主權財富基金,支撐高水準的公共服務;同時在一九七二與一九九四年兩度公投否決加入歐洲共同體/歐盟,改以歐洲經濟區與申根協定與歐盟連結。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "挪威王國",
+    "area_km2": 385207,
+    "languages": [
+      "挪威語"
+    ],
+    "religion": "以信義宗(挪威教會)為主,2012 年起不再是國教;無宗教者比例上升",
+    "currency": "挪威克朗(NOK)",
+    "government": "議會內閣制君主立憲"
+  },
+  "animals": [
+    {
+      "zh": "北極熊",
+      "en": "Polar bear",
+      "note": "分布於斯瓦爾巴群島一帶的浮冰區,是當地的頂級掠食者。",
+      "image": "animals-polar-bear.jpg"
+    },
+    {
+      "zh": "麝牛",
+      "en": "Musk ox",
+      "note": "冰河時期的孑遺動物,重新引入多夫勒山國家公園後成群活動。",
+      "image": "animals-musk-ox.jpg"
+    },
+    {
+      "zh": "馴鹿",
+      "en": "Reindeer",
+      "note": "本土的野生族群外,斯瓦爾巴另有體型較小的特有亞種。",
+      "image": "animals-reindeer.jpg"
+    },
+    {
+      "zh": "大西洋海鸚",
+      "en": "Atlantic puffin",
+      "note": "嘴喙色彩鮮豔的海鳥,在西岸與北部離島形成大型繁殖群。",
+      "image": "animals-puffin.jpg"
+    },
+    {
+      "zh": "白尾海鵰",
+      "en": "White-tailed eagle",
+      "note": "歐洲最大的猛禽之一,羅弗敦與峽灣一帶族群穩定。",
+      "image": "animals-white-tailed-eagle.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "棕色乳酪",
+      "en": "Brunost",
+      "note": "以乳清熬煮出焦糖色的甜味乳酪,刨成薄片夾麵包或鬆餅。",
+      "image": "foods-brunost.jpg"
+    },
+    {
+      "zh": "羊肉燉高麗菜",
+      "en": "Fårikål",
+      "note": "帶骨羊肉與高麗菜、黑胡椒粒同燉,被視為挪威國菜。",
+      "image": "foods-farikal.jpg"
+    },
+    {
+      "zh": "鹼漬魚",
+      "en": "Lutefisk",
+      "note": "以鹼液泡發的乾鱈魚,質地滑軟,是耶誕季節的傳統菜。",
+      "image": "foods-lutefisk.jpg"
+    },
+    {
+      "zh": "乾鱈魚",
+      "en": "Tørrfisk",
+      "note": "不加鹽、在戶外木架風乾的鱈魚,自中世紀即為羅弗敦的出口品。",
+      "image": "foods-torrfisk.jpg"
+    },
+    {
+      "zh": "醃鮭魚",
+      "en": "Gravlaks",
+      "note": "鹽、糖與蒔蘿醃漬的生鮭魚,是斯堪地那維亞共通的前菜。",
+      "image": "foods-gravlaks.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "蓋倫格峽灣",
+      "en": "Geirangerfjord",
+      "note": "兩岸瀑布垂掛的深邃峽灣,是挪威峽灣世界遺產的代表。",
+      "latlon": [
+        62.101,
+        7.006
+      ],
+      "image": "landmarks-geirangerfjord.jpg"
+    },
+    {
+      "zh": "布道石",
+      "en": "Preikestolen",
+      "note": "呂瑟峽灣上方一塊近乎水平的懸崖平台,落差逾六百公尺。",
+      "latlon": [
+        58.986,
+        6.19
+      ],
+      "image": "landmarks-preikestolen.jpg"
+    },
+    {
+      "zh": "卑爾根布呂根",
+      "en": "Bryggen",
+      "note": "卑爾根港邊的漢薩同盟木造商館群,列入世界遺產。",
+      "latlon": [
+        60.397,
+        5.323
+      ]
+    },
+    {
+      "zh": "尼達洛斯大教堂",
+      "en": "Nidaros Cathedral",
+      "note": "建於聖奧拉夫墓地之上的哥德式主教座堂,歷代君王在此加冕。",
+      "latlon": [
+        63.427,
+        10.397
+      ]
+    },
+    {
+      "zh": "羅弗敦群島",
+      "en": "Lofoten Islands",
+      "note": "陡峭山峰直插入海、紅色漁屋沿岸而建的群島,以曬鱈魚聞名。",
+      "latlon": [
+        68.15,
+        13.6
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "亨里克·易卜生",
+      "en": "Henrik Ibsen",
+      "note": "現代戲劇之父,《玩偶之家》《人民公敵》影響世界劇場。"
+    },
+    {
+      "zh": "愛德華·孟克",
+      "en": "Edvard Munch",
+      "note": "表現主義畫家,《吶喊》成為現代焦慮的標誌性圖像。"
+    },
+    {
+      "zh": "愛德華·葛利格",
+      "en": "Edvard Grieg",
+      "note": "浪漫時期作曲家,《皮爾金組曲》《a小調鋼琴協奏曲》傳世。"
+    },
+    {
+      "zh": "羅爾德·亞孟森",
+      "en": "Roald Amundsen",
+      "note": "極地探險家,一九一一年率隊首度抵達南極點。"
+    },
+    {
+      "zh": "弗里喬夫·南森",
+      "en": "Fridtjof Nansen",
+      "note": "極地科學家與外交家,主持戰後難民救濟,獲諾貝爾和平獎。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "五至九月的峽灣區",
+      "note": "卑爾根進出,搭「挪威縮影」火車、渡輪組合遊松恩與哈丹格峽灣,瀑布水量最盛、山路積雪已融。"
+    },
+    {
+      "zh": "冬季的特羅姆瑟",
+      "note": "十一月至三月在北極圈內追極光、賞鯨、坐馴鹿或狗拉雪橇,城市機能完整、交通方便。"
+    },
+    {
+      "zh": "仲夏的羅弗敦群島",
+      "note": "六至七月永晝,可健行拉姆貝格山、住紅色漁屋、看曬魚架與白沙灣,適合攝影與慢遊。"
+    }
+  ],
+  "events": [
+    {
+      "year": 872,
+      "zh": "哈拉爾一世在哈弗斯峽灣之戰後大致統一挪威(傳統紀年)。"
+    },
+    {
+      "year": 1030,
+      "zh": "斯蒂克萊斯塔之戰,聖奧拉夫戰死,基督教確立。"
+    },
+    {
+      "year": 1397,
+      "zh": "挪威加入卡爾馬聯盟。"
+    },
+    {
+      "year": 1537,
+      "zh": "挪威併入丹麥,成為丹麥—挪威的一部分。"
+    },
+    {
+      "year": 1814,
+      "zh": "《基爾條約》割讓予瑞典;五月十七日制定艾茲伏爾憲法,被迫與瑞典組成聯盟。"
+    },
+    {
+      "year": 1905,
+      "zh": "挪瑞聯盟和平解散,迎立哈康七世,挪威完全獨立。"
+    },
+    {
+      "year": 1969,
+      "zh": "北海發現艾科菲斯克油田,開啟石油時代。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "挪威縮影:奧斯陸—卑爾根—松恩峽灣",
+        "days": "6–7 天",
+        "note": "搭卑爾根鐵路與弗洛姆高山火車、渡輪穿越峽灣,兩端各留一至兩天逛奧斯陸歌劇院與卑爾根魚市。第一次到挪威、想一次收火車與峽灣的自由行首選。"
+      },
+      {
+        "zh": "羅弗敦群島自駕",
+        "days": "6–7 天",
+        "note": "飛博多轉渡輪或飛斯沃爾維爾,租車沿 E10 公路串聯雷訥、漢姆諾、努斯峽灣,健行加漁村住宿。夏季永晝、冬季可追極光,拉車不多。"
+      },
+      {
+        "zh": "特羅姆瑟極光與峽灣",
+        "days": "5–6 天",
+        "note": "以特羅姆瑟為基地,晚上追極光、白天賞鯨或去塞尼亞島兜風。城市餐廳與行程社密集,適合怕冷但想看極光的旅客。"
+      },
+      {
+        "zh": "峽灣三重奏:蓋倫格—布道石—奇形巨石",
+        "days": "8–10 天",
+        "note": "從奧斯陸或卑爾根出發,自駕串聯蓋倫格峽灣、老鷹之路、布道石與呂瑟峽灣。體力好、假期長、想把經典健行一次走完的人適合。"
+      },
+      {
+        "zh": "北角與芬馬克",
+        "days": "5–6 天",
+        "note": "飛阿爾塔或霍寧斯沃格,開車到歐洲大陸最北端北角看午夜太陽,沿途薩米文化與馴鹿。路遠、風大,適合想「走到盡頭」的旅客。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "斯瓦爾巴群島(斯匹次卑爾根)",
+        "note": "北緯 78 度的朗伊爾城,可參加冰川健行、雪地摩托與郵輪。離開聚落須持槍嚮導防北極熊,行程與機票都要早訂。"
+      },
+      {
+        "zh": "奇蹟石與謝拉格伯頓岩",
+        "note": "呂瑟峽灣上方兩處著名巨石景點,健行難度高於布道石、人潮較少,需良好體力與天氣窗口。"
+      },
+      {
+        "zh": "泰勒馬克運河的老船閘",
+        "note": "十九世紀開鑿的運河,搭古董客船慢慢過一連串手動船閘,穿越內陸湖區,節奏極慢適合長者。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "animals-polar-bear.jpg",
+      "title": "Polar bear (Ursus maritimus) in the drift ice region north of Svalbard",
+      "author": "Andreas Weith",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3APolar_bear_%28Ursus_maritimus%29_in_the_drift_ice_region_north_of_Svalbard.jpg"
+    },
+    {
+      "file": "animals-musk-ox.jpg",
+      "title": "Muskox (Ovibos moschatus) male Dovrefjell 2",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AMuskox_%28Ovibos_moschatus%29_male_Dovrefjell_2.jpg"
+    },
+    {
+      "file": "animals-reindeer.jpg",
+      "title": "Svalbard reindeers (Rangifer tarandus platyrhynchus) in the Tundra of Reinsdyrflya",
+      "author": "Andreas Weith",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASvalbard_reindeers_%28Rangifer_tarandus_platyrhynchus%29_in_the_Tundra_of_Reinsdyrflya.jpg"
+    },
+    {
+      "file": "animals-puffin.jpg",
+      "title": "Atlantic puffin (Fratercula arctica)",
+      "author": "Bouke ten Cate",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AAtlantic_puffin_%28Fratercula_arctica%29.jpg"
+    },
+    {
+      "file": "animals-white-tailed-eagle.jpg",
+      "title": "Haliaeetus albicilla (Svolvær, 2012)",
+      "author": "Yathin S Krishnappa",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AHaliaeetus_albicilla_%28Svolv%C3%A6r%2C_2012%29.jpg"
+    },
+    {
+      "file": "foods-brunost.jpg",
+      "title": "Brunost - Brown cheese",
+      "author": "color line",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABrunost_-_Brown_cheese.jpg"
+    },
+    {
+      "file": "foods-farikal.jpg",
+      "title": "Får i kål",
+      "author": "Jarvin",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AF%C3%A5r_i_k%C3%A5l.jpg"
+    },
+    {
+      "file": "foods-lutefisk.jpg",
+      "title": "Extra Coop Supermarket, Amfi Shopping mall, Osøyro, Hordaland, Norway, 2018-03-22. Traditional Norwegian cod food dish for sale (\"lutefisk av skrei\")",
+      "author": "Wolfmann",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AExtra_Coop_Supermarket%2C_Amfi_Shopping_mall%2C_Os%C3%B8yro%2C_Hordaland%2C_Norway%2C_2018-03-22._Traditional_Norwegian_cod_food_dish_for_sale_%28%22lutefisk_av_skrei%22%29.jpg"
+    },
+    {
+      "file": "foods-torrfisk.jpg",
+      "title": "Lofoten - Torrfisk in Laukvik",
+      "author": "Thomas Faivre-Duboz from Paris, France",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ALofoten_-_Torrfisk_in_Laukvik.jpg"
+    },
+    {
+      "file": "foods-gravlaks.jpg",
+      "title": "Gravlax med hovmästarsås",
+      "author": "Tomas er",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AGravlax_med_hovm%C3%A4stars%C3%A5s.jpg"
+    },
+    {
+      "file": "landmarks-geirangerfjord.jpg",
+      "title": "00 3584 The Seven Sisters - Geirangerfjord",
+      "author": "W. Bulach",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3A00_3584_The_Seven_Sisters_-_Geirangerfjord.jpg"
+    },
+    {
+      "file": "landmarks-preikestolen.jpg",
+      "title": "Preikestolen-lysefjord-tunliweb",
+      "author": "Svein Magne Tunli",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3APreikestolen-lysefjord-tunliweb.jpg"
+    }
+  ],
+  "code": "NO"
+}

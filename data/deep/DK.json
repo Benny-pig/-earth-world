@@ -1,0 +1,337 @@
+{
+  "name_zh": "丹麥",
+  "name_en": "Denmark",
+  "summary": "位於北歐、由日德蘭半島與數百座島嶼組成的王國,首都哥本哈根;格陵蘭與法羅群島為其自治領。地勢低平、以自行車與風電聞名,是全球最早的君主立憲國家之一,也是高稅收、高福利的北歐模式代表。一九七三年加入歐洲共同體,但保留丹麥克朗。",
+  "founding": [
+    "丹麥地區在青銅時代已有發達的聚落文化。約九六五年,國王老哈拉爾(藍牙王)在日德蘭的耶靈立起大型符文石,宣稱「贏得整個丹麥與挪威,並使丹麥人成為基督徒」,這塊石頭常被視為丹麥的「出生證明」。",
+    "維京時代的丹麥人劫掠並殖民英格蘭、愛爾蘭與法蘭西沿岸;十一世紀初克努特大帝一度統治英格蘭、丹麥與挪威,建立橫跨北海的帝國。中世紀盛期,丹麥王權向波羅的海南岸擴張。",
+    "一三九七年,瑪格麗特一世促成卡爾馬聯盟,丹麥是三國中最強勢的一方。一五三六年宗教改革確立信義宗國家教會;此後丹麥與瑞典長年爭霸,一六五八年《羅斯基勒條約》被迫將斯堪尼等地割讓瑞典。",
+    "一八一四年丹麥因在拿破崙戰爭中站錯邊,失去挪威。一八四九年頒布「六月憲法」,結束君主專制、改行君主立憲。一八六四年第二次石勒蘇益格戰爭中敗於普魯士與奧地利,喪失南方的石勒蘇益格—荷爾斯泰因,成為深刻的民族創傷。",
+    "二十世紀初丹麥在第一次世界大戰維持中立;第二次世界大戰期間遭德國占領(一九四〇至一九四五)。戰後丹麥發展成典型的北歐福利國家,並於一九四九年加入北約、一九七三年加入歐洲共同體。",
+    "丹麥、格陵蘭與法羅群島組成一個「王國共同體」,後兩者享有高度自治。丹麥在歐盟事務上保留數項豁免條款(如不採用歐元);二〇二二年公投取消了國防領域的豁免,加強與歐盟的安全合作。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "丹麥王國",
+    "area_km2": 42933,
+    "languages": [
+      "丹麥語"
+    ],
+    "religion": "以信義宗(丹麥國家教會)為多數並具國教地位",
+    "currency": "丹麥克朗(DKK)",
+    "government": "議會內閣制君主立憲"
+  },
+  "animals": [
+    {
+      "zh": "歐洲馬鹿",
+      "en": "Red deer",
+      "note": "丹麥最大的野生哺乳動物,秋季發情期雄鹿的吼聲響徹林地。",
+      "image": "animals-red-deer.jpg"
+    },
+    {
+      "zh": "疣鼻天鵝",
+      "en": "Mute swan",
+      "note": "丹麥的國鳥,安徒生《醜小鴨》的原型,常見於湖泊與海灣。",
+      "image": "animals-mute-swan.jpg"
+    },
+    {
+      "zh": "鼠海豚",
+      "en": "Harbour porpoise",
+      "note": "體型小的鯨豚,常在丹麥沿海與海峽出沒。",
+      "image": "animals-porpoise.jpg"
+    },
+    {
+      "zh": "灰海豹",
+      "en": "Grey seal",
+      "note": "曾在丹麥近乎絕跡,近年在瓦登海一帶重新繁衍。",
+      "image": "animals-grey-seal.jpg"
+    },
+    {
+      "zh": "白鸛",
+      "en": "White stork",
+      "note": "昔日常在農舍屋頂築巢的吉祥鳥,如今在丹麥數量稀少。",
+      "image": "animals-white-stork.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "開放式三明治",
+      "en": "Smørrebrød",
+      "note": "一片裸麥麵包鋪上魚、肉、蛋或蔬菜,是丹麥午餐的核心。",
+      "image": "foods-smorrebrod.jpg"
+    },
+    {
+      "zh": "丹麥酥皮麵包",
+      "en": "Wienerbrød",
+      "note": "層層奶油摺疊的酥皮甜點,英文直接稱作「Danish」。",
+      "image": "foods-wienerbrod.jpg"
+    },
+    {
+      "zh": "脆皮烤豬",
+      "en": "Flæskesteg",
+      "note": "帶脆皮的烤豬肉,佐紅甘藍與棕醬,是耶誕大餐主角。",
+      "image": "foods-flaeskesteg.jpg"
+    },
+    {
+      "zh": "炸肉丸",
+      "en": "Frikadeller",
+      "note": "豬牛混合的煎肉餅,配馬鈴薯與醃菜的家常菜。",
+      "image": "foods-frikadeller.jpg"
+    },
+    {
+      "zh": "醃鯡魚",
+      "en": "Sild",
+      "note": "糖醋或咖哩醃漬的鯡魚,是開放式三明治與節慶餐桌常客。",
+      "image": "foods-pickled-herring.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "小美人魚銅像",
+      "en": "The Little Mermaid",
+      "note": "朗厄利尼海濱依安徒生童話塑造的小銅像,哥本哈根的象徵。",
+      "latlon": [
+        55.6929,
+        12.5993
+      ],
+      "image": "landmarks-little-mermaid.jpg"
+    },
+    {
+      "zh": "新港",
+      "en": "Nyhavn",
+      "note": "彩色山牆屋與木帆船夾岸的十七世紀運河碼頭,咖啡館林立。",
+      "latlon": [
+        55.6799,
+        12.5913
+      ],
+      "image": "landmarks-nyhavn.jpg"
+    },
+    {
+      "zh": "蒂沃利公園",
+      "en": "Tivoli Gardens",
+      "note": "一八四三年開園的老遊樂園,燈飾與花園啟發了迪士尼樂園。",
+      "latlon": [
+        55.6737,
+        12.5681
+      ]
+    },
+    {
+      "zh": "克倫堡宮",
+      "en": "Kronborg Castle",
+      "note": "扼守厄勒海峽的文藝復興城堡,莎劇《哈姆雷特》的舞台,列入世界遺產。",
+      "latlon": [
+        56.0389,
+        12.6216
+      ]
+    },
+    {
+      "zh": "耶靈墳塚與符文石",
+      "en": "Jelling stones",
+      "note": "兩座王室墳丘、教堂與老哈拉爾的符文石,列入世界遺產。",
+      "latlon": [
+        55.7562,
+        9.419
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "漢斯·克里斯蒂安·安徒生",
+      "en": "Hans Christian Andersen",
+      "note": "童話作家,《美人魚》《醜小鴨》《國王的新衣》流傳全球。"
+    },
+    {
+      "zh": "索倫·齊克果",
+      "en": "Søren Kierkegaard",
+      "note": "十九世紀哲學家,被視為存在主義的先驅。"
+    },
+    {
+      "zh": "尼爾斯·波耳",
+      "en": "Niels Bohr",
+      "note": "物理學家,提出原子模型,一九二二年獲諾貝爾物理獎。"
+    },
+    {
+      "zh": "卡倫·白列森",
+      "en": "Karen Blixen",
+      "note": "作家,回憶錄《遠離非洲》以筆名 Isak Dinesen 發表。"
+    },
+    {
+      "zh": "第谷·布拉赫",
+      "en": "Tycho Brahe",
+      "note": "文藝復興天文學家,留下精密的行星觀測資料。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "五至八月的哥本哈根",
+      "note": "日長天暖,可沿運河划獨木舟、逛蒂沃利與新港、跳進海港浴場,單車即可玩遍市區。"
+    },
+    {
+      "zh": "日德蘭半島親子路線",
+      "note": "比隆的樂高樂園搭配奧胡斯的兒童博物館與海邊小鎮,自駕一週適合帶小孩。"
+    },
+    {
+      "zh": "十二月的耶誕市集",
+      "note": "蒂沃利與新港的耶誕市集點燈、賣熱紅酒與手工藝,是體驗「hygge」氛圍的季節。"
+    }
+  ],
+  "events": [
+    {
+      "year": 965,
+      "zh": "老哈拉爾立耶靈符文石,宣稱統一丹麥並使丹麥人皈依基督教。"
+    },
+    {
+      "year": 1016,
+      "zh": "克努特大帝征服英格蘭,建立橫跨北海的帝國。"
+    },
+    {
+      "year": 1397,
+      "zh": "瑪格麗特一世促成卡爾馬聯盟,丹麥居主導地位。"
+    },
+    {
+      "year": 1536,
+      "zh": "宗教改革,確立信義宗國家教會。"
+    },
+    {
+      "year": 1849,
+      "zh": "頒布六月憲法,結束君主專制,改行君主立憲。"
+    },
+    {
+      "year": 1864,
+      "zh": "第二次石勒蘇益格戰爭失利,喪失南方公國。"
+    },
+    {
+      "year": 1973,
+      "zh": "丹麥加入歐洲共同體。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "哥本哈根定點深度",
+        "days": "4–5 天",
+        "note": "新港、蒂沃利、圓塔、克里斯欽自由城與設計博物館,一天往返羅斯基勒維京船博物館。航班選擇多、市內單車友善,適合週末小旅行。"
+      },
+      {
+        "zh": "哥本哈根＋北西蘭城堡群",
+        "days": "5–6 天",
+        "note": "首都行程加上腓特烈堡宮、克倫堡宮與現代藝術館 Louisiana,搭區間車一日可達。適合愛城堡與美術館的旅客。"
+      },
+      {
+        "zh": "日德蘭半島自駕(奧胡斯—里伯—比隆)",
+        "days": "6–7 天",
+        "note": "丹麥第二大城奧胡斯的老鎮露天博物館、最古老城鎮里伯、比隆樂高樂園,再到瓦登海看候鳥。適合親子與自駕客。"
+      },
+      {
+        "zh": "哥本哈根＋馬爾默一日跨國",
+        "days": "4–5 天",
+        "note": "以哥本哈根為主,搭火車過厄勒海峽大橋到瑞典馬爾默半日遊。適合想順帶踏進瑞典的旅客。"
+      },
+      {
+        "zh": "歐登賽與菲因島",
+        "days": "4–5 天",
+        "note": "安徒生故鄉歐登賽的童話步道,加上埃格斯考城堡與海邊小鎮,節奏緩慢適合慢遊。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "法羅群島",
+        "note": "北大西洋上的自治群島,草頂屋、海崖與多變天氣。班機與住宿少,健行須注意濃霧與強風。"
+      },
+      {
+        "zh": "博恩霍爾姆島",
+        "note": "波羅的海上的「陽光島」,以圓形教堂、煙燻鯡魚與陶藝聞名,夏季搭渡輪前往、租單車環島。"
+      },
+      {
+        "zh": "默恩島白堊斷崖",
+        "note": "默恩斷崖是丹麥少見的高聳白色海崖,可健行下到海灘找化石,大眾運輸不便建議自駕。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "animals-red-deer.jpg",
+      "title": "Red deer stag 2009 denmark",
+      "author": "Bill Ebbesen",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ARed_deer_stag_2009_denmark.jpg"
+    },
+    {
+      "file": "animals-mute-swan.jpg",
+      "title": "Cygnus olor head closeup Borgvold Viborg 2015-03-22",
+      "author": "Slaunger",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ACygnus_olor_head_closeup_Borgvold_Viborg_2015-03-22.jpg"
+    },
+    {
+      "file": "animals-porpoise.jpg",
+      "title": "Phocoena phocoena Rømø Denmark (2024-08-19)",
+      "author": "Olgierd Rudak",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3APhocoena_phocoena_R%C3%B8m%C3%B8_Denmark_%282024-08-19%29.jpg"
+    },
+    {
+      "file": "animals-grey-seal.jpg",
+      "title": "Halichoerus grypus June 2014 01",
+      "author": "Arild Vågen",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AHalichoerus_grypus_June_2014_01.jpg"
+    },
+    {
+      "file": "animals-white-stork.jpg",
+      "title": "White stork (Ciconia ciconia) on nest",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AWhite_stork_%28Ciconia_ciconia%29_on_nest.jpg"
+    },
+    {
+      "file": "foods-smorrebrod.jpg",
+      "title": "Smørrebrød 1",
+      "author": "Nillerdk",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASm%C3%B8rrebr%C3%B8d_1.jpg"
+    },
+    {
+      "file": "foods-wienerbrod.jpg",
+      "title": "Spandauer med creme",
+      "author": "Nillerdk",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASpandauer_med_creme.JPG"
+    },
+    {
+      "file": "foods-flaeskesteg.jpg",
+      "title": "Flæskesteg",
+      "author": "見 Wikimedia Commons 檔案頁",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AFl%C3%A6skesteg.jpg"
+    },
+    {
+      "file": "foods-frikadeller.jpg",
+      "title": "Frikadeller",
+      "author": "This image was taken by Kenneth Jorgensen ( gallery ). Please attribute this image with \"Kenneth Jorgensen\" . An email would also be appreci…",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AFrikadeller.jpg"
+    },
+    {
+      "file": "foods-pickled-herring.jpg",
+      "title": "Sild",
+      "author": "Flickr user: cyclone bill http://cyclonebill.blogspot.com/",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASild.jpg"
+    },
+    {
+      "file": "landmarks-little-mermaid.jpg",
+      "title": "Denmark, Copenhagen, Little Mermaid, Langelinie Promenade 150422-26",
+      "author": "Richardmaackphotography",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ADenmark%2C_Copenhagen%2C_Little_Mermaid%2C_Langelinie_Promenade_150422-26.jpg"
+    },
+    {
+      "file": "landmarks-nyhavn.jpg",
+      "title": "Nyhavn houses and boats",
+      "author": "OleNeitzel",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ANyhavn_houses_and_boats.jpg"
+    }
+  ],
+  "code": "DK"
+}

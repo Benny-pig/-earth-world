@@ -1,0 +1,337 @@
+{
+  "name_zh": "匈牙利",
+  "name_en": "Hungary",
+  "summary": "位於中歐喀爾巴阡盆地的內陸國,首都布達佩斯,多瑙河由北向南貫穿。匈牙利語與周邊斯拉夫、日耳曼語言迥異,屬烏拉語系。曾是奧匈帝國的一半,一九二〇年《特里亞農條約》後大幅縮小。以溫泉、貴腐甜酒與紅椒料理聞名,一九九九年加入北約、二〇〇四年加入歐盟。",
+  "founding": [
+    "說烏拉語系的馬扎爾人自烏拉山一帶經黑海北方草原遷徙,約八九五至八九六年在阿爾帕德率領下進入喀爾巴阡盆地,史稱「佔領家園」。此後數十年他們縱橫歐洲劫掠,直到九五五年在萊希菲爾德戰敗才止。",
+    "基督教化與建國:伊什特萬一世於一〇〇〇年前後獲教宗賜冠,加冕為匈牙利的基督教國王,建立阿爾帕德王朝的王國。一二二二年《金璽詔書》確立貴族權利;一二四一至四二年蒙古入侵造成重大破壞。",
+    "阿爾帕德王朝於一三〇一年絕嗣後,先後由安茹等外來王室繼位。馬提亞斯·科爾維努斯(一四五八至九〇年在位)時期,布達成為文藝復興文化中心,國力達到高峰。",
+    "一五二六年摩哈赤戰役,鄂圖曼大敗匈牙利、國王陣亡。此後國土三分:西部與北部由哈布斯堡統治,中部受鄂圖曼占領約一百五十年,東部則是外西凡尼亞公國。一六八六年布達收復,全境歸哈布斯堡。",
+    "一八四八至四九年的革命與獨立戰爭(科蘇特、裴多菲)在俄國協助下被鎮壓。一八六七年奧匈折衷方案成立二元君主國,布達佩斯迅速繁榮:一八七三年布達、佩斯與老布達合併,一八九六年舉辦建國千年慶典。",
+    "第一次世界大戰後,一九二〇年《特里亞農條約》使匈牙利喪失約三分之二領土與大量匈裔人口,成為長久的民族議題。此後經歷霍爾蒂攝政、與軸心國結盟、一九四四年德國占領與猶太人大屠殺;一九四九年成立共產政權,一九五六年革命遭蘇聯出兵鎮壓。一九八九年和平轉型,十月二十三日宣布共和國。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "匈牙利",
+    "area_km2": 93030,
+    "languages": [
+      "匈牙利語"
+    ],
+    "religion": "以羅馬天主教為主,另有喀爾文宗等新教教會",
+    "currency": "福林(HUF)",
+    "government": "議會共和制"
+  },
+  "animals": [
+    {
+      "zh": "普利犬",
+      "en": "Puli",
+      "note": "匈牙利的牧羊犬,一身像拖把的繩狀捲毛是最大特徵。"
+    },
+    {
+      "zh": "匈牙利灰牛",
+      "en": "Hungarian Grey cattle",
+      "note": "長角、灰白毛色的古老牛種,是霍爾托巴吉草原的象徵。",
+      "image": "animals-grey-cattle.jpg"
+    },
+    {
+      "zh": "曼加利察豬",
+      "en": "Mangalica",
+      "note": "披著捲曲長毛的豬,脂肪厚、風味濃,近年復育推廣。",
+      "image": "animals-mangalica.jpg"
+    },
+    {
+      "zh": "維茲拉犬",
+      "en": "Vizsla",
+      "note": "金褐色的匈牙利指示獵犬,親人、活潑,常被稱作「魔鬼犬」。",
+      "image": "animals-vizsla.jpg"
+    },
+    {
+      "zh": "大鴇",
+      "en": "Great bustard",
+      "note": "歐洲最重的飛行鳥類之一,棲息於霍爾托巴吉的開闊草原。"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "匈牙利燉牛肉湯",
+      "en": "Gulyás",
+      "note": "紅椒粉調味的牛肉蔬菜湯,傳統以吊鍋在戶外燉煮。",
+      "image": "foods-goulash.jpg"
+    },
+    {
+      "zh": "紅椒燉肉",
+      "en": "Pörkölt",
+      "note": "洋蔥與大量紅椒粉燜煮的濃稠燉肉,常配麵疙瘩。",
+      "image": "foods-porkolt.jpg"
+    },
+    {
+      "zh": "炸麵餅",
+      "en": "Lángos",
+      "note": "油炸的發酵麵團,抹上酸奶油與起司,是市場與泳池小吃。",
+      "image": "foods-langos.jpg"
+    },
+    {
+      "zh": "托卡伊貴腐酒",
+      "en": "Tokaji Aszú",
+      "note": "以貴腐葡萄釀成的金黃甜酒,曾被譽為「酒中之王」。"
+    },
+    {
+      "zh": "煙囪蛋糕",
+      "en": "Kürtőskalács",
+      "note": "繞棒烘烤、表面焦糖化的中空甜捲,源自塞凱伊人。"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "匈牙利國會大廈",
+      "en": "Hungarian Parliament Building",
+      "note": "多瑙河畔的新哥德式巨型建築,是布達佩斯的地標。",
+      "latlon": [
+        47.5072,
+        19.0455
+      ],
+      "image": "landmarks-parliament.jpg"
+    },
+    {
+      "zh": "漁人堡",
+      "en": "Fisherman's Bastion",
+      "note": "布達城堡山上的白色觀景迴廊,可俯瞰佩斯與國會大廈。",
+      "latlon": [
+        47.5025,
+        19.0347
+      ],
+      "image": "landmarks-fishermans-bastion.jpg"
+    },
+    {
+      "zh": "塞切尼鏈橋",
+      "en": "Széchenyi Chain Bridge",
+      "note": "一八四九年通車、連接布達與佩斯的第一座永久橋,兩端有石獅。",
+      "latlon": [
+        47.4986,
+        19.0435
+      ],
+      "image": "landmarks-chain-bridge.jpg"
+    },
+    {
+      "zh": "塞切尼溫泉浴場",
+      "en": "Széchenyi Thermal Bath",
+      "note": "黃色新巴洛克建築內的大型溫泉,戶外池冬天也開放。",
+      "latlon": [
+        47.5188,
+        19.0824
+      ],
+      "image": "landmarks-szechenyi-bath.jpg"
+    },
+    {
+      "zh": "巴拉頓湖",
+      "en": "Lake Balaton",
+      "note": "中歐最大的湖,南岸淺水親子、北岸有蒂豪尼半島與酒鄉。",
+      "latlon": [
+        46.83,
+        17.73
+      ],
+      "image": "landmarks-balaton.jpg"
+    }
+  ],
+  "people": [
+    {
+      "zh": "李斯特·費倫茨",
+      "en": "Franz Liszt",
+      "note": "浪漫時期鋼琴巨匠與作曲家,《匈牙利狂想曲》聞名。"
+    },
+    {
+      "zh": "巴爾托克·貝拉",
+      "en": "Béla Bartók",
+      "note": "作曲家與民族音樂學者,大量採集中東歐民謠。"
+    },
+    {
+      "zh": "馮·諾伊曼",
+      "en": "John von Neumann",
+      "note": "數學家,奠定現代電腦架構與賽局理論基礎。"
+    },
+    {
+      "zh": "裴多菲·山多爾",
+      "en": "Sándor Petőfi",
+      "note": "民族詩人,一八四八年革命的象徵,〈民族之歌〉傳世。"
+    },
+    {
+      "zh": "魯比克·艾爾諾",
+      "en": "Ernő Rubik",
+      "note": "建築師與設計師,一九七四年發明「魔術方塊」。",
+      "image": "people-rubik.jpg"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "四至六月或九月的布達佩斯",
+      "note": "氣溫舒適,可白天走城堡山與國會、傍晚泡塞切尼溫泉、夜遊多瑙河看點燈的橋樑。"
+    },
+    {
+      "zh": "夏季的巴拉頓湖",
+      "note": "七、八月南岸戲水、北岸蒂豪尼看薰衣草與修道院,並品巴達松尼的白酒。"
+    },
+    {
+      "zh": "托卡伊酒鄉的採收季",
+      "note": "十月葡萄採收時走訪酒窖、品貴腐甜酒,搭配周邊的世界遺產葡萄園地景。"
+    }
+  ],
+  "events": [
+    {
+      "year": 895,
+      "zh": "馬扎爾人在阿爾帕德率領下進入喀爾巴阡盆地(佔領家園)。"
+    },
+    {
+      "year": 1000,
+      "zh": "伊什特萬一世加冕為基督教國王,匈牙利王國建立。"
+    },
+    {
+      "year": 1241,
+      "zh": "蒙古入侵,重創匈牙利。"
+    },
+    {
+      "year": 1526,
+      "zh": "摩哈赤戰役慘敗,國土三分,中部受鄂圖曼統治約一百五十年。"
+    },
+    {
+      "year": 1867,
+      "zh": "奧匈折衷方案,成立奧匈二元君主國。"
+    },
+    {
+      "year": 1920,
+      "zh": "《特里亞農條約》,匈牙利喪失約三分之二領土。"
+    },
+    {
+      "year": 1989,
+      "zh": "共產政權和平轉型,十月二十三日宣布共和國。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "布達佩斯定點深度",
+        "days": "4–5 天",
+        "note": "城堡山與漁人堡、國會大廈、猶太區與大市場,傍晚泡塞切尼或蓋勒特溫泉、夜遊多瑙河。台灣多一次轉機可達,是中歐自由行的熱門起點。"
+      },
+      {
+        "zh": "布達佩斯＋維也納＋布拉迪斯拉發",
+        "days": "6–7 天",
+        "note": "多瑙河三都以火車一至三小時互通,可從布達佩斯搭快船或火車到維也納,順道停斯洛伐克首都。適合想一次多國的旅客。"
+      },
+      {
+        "zh": "布達佩斯＋巴拉頓湖",
+        "days": "4–5 天",
+        "note": "首都行程後搭火車到巴拉頓湖,夏季戲水、蒂豪尼半島散步、品北岸白酒。步調悠閒,適合家庭。"
+      },
+      {
+        "zh": "匈牙利東北:艾格爾—托卡伊—霍爾托巴吉",
+        "days": "5–6 天",
+        "note": "艾格爾城堡與「公牛血」紅酒、托卡伊貴腐甜酒、霍爾托巴吉草原的牧人表演與灰牛。自駕較彈性,適合愛酒與草原風光的旅客。"
+      },
+      {
+        "zh": "多瑙河灣區一日圈",
+        "days": "4–5 天",
+        "note": "以布達佩斯為基地,一日遊聖安德烈藝術小鎮、維謝格拉德要塞與埃斯泰爾戈姆大教堂。適合不想拉車的旅客。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "佩奇與南部",
+        "note": "擁有早期基督教墓室世界遺產的大學城佩奇,搭配維拉尼紅酒產區與錫克洛什城堡,遊客較少。"
+      },
+      {
+        "zh": "霍爾托巴吉國家公園深度",
+        "note": "歐洲最大的天然草原「普斯塔」,看牧馬表演、灰牛與大鴇,春秋為賞鳥高峰,住宿與交通須先安排。"
+      },
+      {
+        "zh": "厄爾謝格與西部溫泉小鎮",
+        "note": "與奧地利、斯洛維尼亞交界的丘陵林區,搭配海維茲溫泉湖與布克溫泉,適合慢節奏療養行。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "animals-grey-cattle.jpg",
+      "title": "Hungarian Grey cattle-1",
+      "author": "Einstein2",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AHungarian_Grey_cattle-1.jpg"
+    },
+    {
+      "file": "animals-mangalica.jpg",
+      "title": "00 0823 Wollschwein (Mangalica)",
+      "author": "W. Bulach",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3A00_0823_Wollschwein_%28Mangalica%29.jpg"
+    },
+    {
+      "file": "animals-vizsla.jpg",
+      "title": "Magyar Vizsla male 1 year old dog in forest",
+      "author": "Markgraf1508",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AMagyar_Vizsla_male_1_year_old_dog_in_forest.jpg"
+    },
+    {
+      "file": "foods-goulash.jpg",
+      "title": "Gulyásleves",
+      "author": "Christo",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AGuly%C3%A1sleves.jpg"
+    },
+    {
+      "file": "foods-porkolt.jpg",
+      "title": "Pörkölt",
+      "author": "Orrling",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AP%C3%B6rk%C3%B6lt.jpg"
+    },
+    {
+      "file": "foods-langos.jpg",
+      "title": "Catering-Anhänger 'Lángos', 2023 Bodajk",
+      "author": "Globetrotter19",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ACatering-Anh%C3%A4nger_%27L%C3%A1ngos%27%2C_2023_Bodajk.jpg"
+    },
+    {
+      "file": "landmarks-parliament.jpg",
+      "title": "Danube and Hungarian Parliament Building by night",
+      "author": "Florian Fèvre",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ADanube_and_Hungarian_Parliament_Building_by_night.jpg"
+    },
+    {
+      "file": "landmarks-fishermans-bastion.jpg",
+      "title": "Fishermans bastion Budapest IMG 1429",
+      "author": "Bjoertvedt",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AFishermans_bastion_Budapest_IMG_1429.JPG"
+    },
+    {
+      "file": "landmarks-chain-bridge.jpg",
+      "title": "Széchenyi Chain Bridge, June 2013",
+      "author": "Frank Schulenburg",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASz%C3%A9chenyi_Chain_Bridge%2C_June_2013.jpg"
+    },
+    {
+      "file": "landmarks-szechenyi-bath.jpg",
+      "title": "Budapest Széchenyi Baths R03",
+      "author": "Marc Ryckaert ( MJJR )",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABudapest_Sz%C3%A9chenyi_Baths_R03.jpg"
+    },
+    {
+      "file": "landmarks-balaton.jpg",
+      "title": "Lake Balaton at Tihany, Hungary",
+      "author": "Takkk",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ALake_Balaton_at_Tihany%2C_Hungary.jpg"
+    },
+    {
+      "file": "people-rubik.jpg",
+      "title": "Erno Rubik Genius Gala 2014",
+      "author": "Babak Mansouri",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3AErno_Rubik_Genius_Gala_2014.jpg"
+    }
+  ],
+  "code": "HU"
+}

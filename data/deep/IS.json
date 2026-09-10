@@ -1,0 +1,337 @@
+{
+  "name_zh": "冰島",
+  "name_en": "Iceland",
+  "summary": "位於北大西洋、跨在中洋脊上的島國,首都雷克雅維克。火山、冰川、地熱與瀑布密集,人口約三十八萬,是全球人口最稀疏的國家之一。無常備軍隊,幾乎全靠地熱與水力發電;二十一世紀以觀光業快速成長,未加入歐盟。",
+  "founding": [
+    "冰島約在西元八七四年開始有人定居,傳統上以挪威人殷格·亞納遜在今雷克雅維克落腳為起點;移民中也有來自不列顛群島的蓋爾人。這段「定居時代」在數十年間把可耕沿海地帶佔滿。",
+    "九三〇年,各地酋長在辛格韋德利設立「阿爾庭」議事會,建立沒有國王的冰島自由邦,是世界上最古老的議會之一。約一千年,阿爾庭以決議方式接受基督教;十二、十三世紀寫下大量「薩迦」文學。",
+    "十三世紀內部酋長混戰(斯圖倫時代)後,冰島人於一二六二至一二六四年簽訂《舊約》,臣服於挪威王權;一三九七年隨挪威併入卡爾馬聯盟,轉由丹麥統治。",
+    "此後數百年由丹麥管轄,並曾實施貿易壟斷。天災頻仍:一七八三年拉基火山大噴發引發饑荒(「迷霧饑荒」),加上瘟疫與貧困使人口長期停滯。十九世紀,約恩·西格松領導爭取自治的運動。",
+    "一八七四年冰島獲得憲法,一九〇四年實施內部自治,一九一八年《聯合法》使冰島成為與丹麥共主的主權王國。第二次世界大戰中丹麥淪陷後,英軍、繼而美軍進駐冰島。",
+    "一九四四年六月十七日,冰島經公投在辛格韋德利宣布成立共和國。冰島是一九四九年的北約創始會員(但無軍隊),一九五八至一九七六年間與英國發生數次「鱈魚戰爭」。二〇〇八年金融崩潰後,靠觀光業復甦,至今未加入歐盟。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "冰島",
+    "area_km2": 103000,
+    "languages": [
+      "冰島語"
+    ],
+    "religion": "以福音信義會(冰島國教會)為主",
+    "currency": "冰島克朗(ISK)",
+    "government": "議會共和制,總統為國家元首(多屬象徵性)"
+  },
+  "animals": [
+    {
+      "zh": "冰島馬",
+      "en": "Icelandic horse",
+      "note": "矮壯的古老品種,擁有獨特的「對側步」步態,禁止進口他馬。",
+      "image": "animals-icelandic-horse.jpg"
+    },
+    {
+      "zh": "北極狐",
+      "en": "Arctic fox",
+      "note": "冰島唯一的原生陸生哺乳動物,毛色隨季節轉換。",
+      "image": "animals-arctic-fox.jpg"
+    },
+    {
+      "zh": "大西洋海鸚",
+      "en": "Atlantic puffin",
+      "note": "夏季在海崖形成龐大繁殖群,是冰島最上鏡的海鳥。",
+      "image": "animals-puffin.jpg"
+    },
+    {
+      "zh": "座頭鯨",
+      "en": "Humpback whale",
+      "note": "北部與西部海域常見,胡薩維克是知名的賞鯨港。",
+      "image": "animals-humpback-whale.jpg"
+    },
+    {
+      "zh": "冰島綿羊",
+      "en": "Icelandic sheep",
+      "note": "數量多於人口,夏季放牧高地、秋季由人與馬圈趕下山。",
+      "image": "animals-icelandic-sheep.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "發酵鯊魚肉",
+      "en": "Hákarl",
+      "note": "把小頭睡鯊肉發酵風乾數月,氨味刺鼻,是最出名的「挑戰料理」。",
+      "image": "foods-hakarl.jpg"
+    },
+    {
+      "zh": "燻羊肉",
+      "en": "Hangikjöt",
+      "note": "以羊糞或樺木煙燻的羊腿肉,節慶時切片配白醬與豌豆。",
+      "image": "foods-hangikjot.jpg"
+    },
+    {
+      "zh": "冰島優格",
+      "en": "Skyr",
+      "note": "質地濃稠、蛋白質高的傳統乳製品,技術上屬新鮮乳酪。",
+      "image": "foods-skyr.jpg"
+    },
+    {
+      "zh": "溫泉黑麥麵包",
+      "en": "Rúgbrauð",
+      "note": "微甜的深色裸麥麵包,傳統上埋進地熱土中低溫慢烤。"
+    },
+    {
+      "zh": "羊肉湯",
+      "en": "Kjötsúpa",
+      "note": "帶骨羊肉與根莖蔬菜熬煮的清燉湯,是冬季家常暖食。",
+      "image": "foods-kjotsupa.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "藍湖溫泉",
+      "en": "Blue Lagoon",
+      "note": "地熱發電廠排水形成的乳藍色矽泥溫泉,離凱夫拉維克機場不遠。",
+      "latlon": [
+        63.8804,
+        -22.4495
+      ],
+      "image": "landmarks-blue-lagoon.jpg"
+    },
+    {
+      "zh": "辛格韋德利",
+      "en": "Þingvellir",
+      "note": "古阿爾庭遺址,也是北美與歐亞板塊裂谷地貌,列入世界遺產。",
+      "latlon": [
+        64.2559,
+        -21.1301
+      ],
+      "image": "landmarks-thingvellir.jpg"
+    },
+    {
+      "zh": "蓋錫爾間歇泉區",
+      "en": "Geysir & Strokkur",
+      "note": "英文「geyser」一詞的來源;史托克間歇泉每隔數分鐘噴發一次。",
+      "latlon": [
+        64.3104,
+        -20.3024
+      ],
+      "image": "landmarks-geysir.jpg"
+    },
+    {
+      "zh": "古佛斯瀑布",
+      "en": "Gullfoss",
+      "note": "分兩段跌入峽谷的「黃金瀑布」,與辛格韋德利、蓋錫爾同屬「黃金圈」。",
+      "latlon": [
+        64.3271,
+        -20.1199
+      ]
+    },
+    {
+      "zh": "傑古沙龍冰河湖",
+      "en": "Jökulsárlón",
+      "note": "冰川末端崩落的浮冰漂浮於潟湖,對岸「鑽石沙灘」布滿冰塊。",
+      "latlon": [
+        64.0784,
+        -16.2306
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "斯諾里·斯圖魯松",
+      "en": "Snorri Sturluson",
+      "note": "十三世紀史家與政治人物,著《散文埃達》與《王朝史》。"
+    },
+    {
+      "zh": "約恩·西格松",
+      "en": "Jón Sigurðsson",
+      "note": "十九世紀獨立運動領袖,生日六月十七日定為國慶。"
+    },
+    {
+      "zh": "哈爾多爾·拉克斯內斯",
+      "en": "Halldór Laxness",
+      "note": "小說家,一九五五年獲諾貝爾文學獎。"
+    },
+    {
+      "zh": "碧玉",
+      "en": "Björk",
+      "note": "實驗流行音樂家,以獨特嗓音與視覺風格聞名國際。"
+    },
+    {
+      "zh": "維格迪絲·芬博阿多蒂爾",
+      "en": "Vigdís Finnbogadóttir",
+      "note": "一九八〇年當選總統,是世界首位民選的女性國家元首。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "六至八月的環島公路",
+      "note": "永晝、道路全開,可沿一號環島公路開一圈,看瀑布、冰河湖與峽灣,是自駕的黃金季。"
+    },
+    {
+      "zh": "十月至三月追極光",
+      "note": "日短、天黑得早,適合在遠離市區處守候極光,並搭配藍湖、冰洞行程。"
+    },
+    {
+      "zh": "冬季的瓦特納冰川藍冰洞",
+      "note": "僅冬季開放、須由嚮導帶領進入冰川內部的天然藍色冰洞,名額有限要早訂。"
+    }
+  ],
+  "events": [
+    {
+      "year": 874,
+      "zh": "挪威人殷格·亞納遜在雷克雅維克定居,開啟「定居時代」。"
+    },
+    {
+      "year": 930,
+      "zh": "在辛格韋德利設立阿爾庭,成立冰島自由邦。"
+    },
+    {
+      "year": 1000,
+      "zh": "阿爾庭決議全島改信基督教。"
+    },
+    {
+      "year": 1262,
+      "zh": "簽訂《舊約》,冰島臣服於挪威王權。"
+    },
+    {
+      "year": 1783,
+      "zh": "拉基火山大噴發,引發「迷霧饑荒」。"
+    },
+    {
+      "year": 1918,
+      "zh": "《聯合法》使冰島成為與丹麥共主的主權王國。"
+    },
+    {
+      "year": 1944,
+      "zh": "六月十七日公投通過,冰島共和國在辛格韋德利宣告成立。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "黃金圈＋雷克雅維克",
+        "days": "4–5 天",
+        "note": "辛格韋德利、蓋錫爾、古佛斯一日走完,加上藍湖與首都的哈爾格林姆教堂、彩色老城。冰島航空或北歐轉機可達,適合第一次來、天數有限的旅客。"
+      },
+      {
+        "zh": "南岸經典:瀑布、黑沙灘、冰河湖",
+        "days": "5–6 天",
+        "note": "沿一號公路東行,看塞里雅蘭與斯科加瀑布、雷尼斯黑沙灘、傑古沙龍冰河湖與鑽石沙灘,冬季加藍冰洞。租車自駕,路況單純。"
+      },
+      {
+        "zh": "環島公路一圈",
+        "days": "8–10 天",
+        "note": "逆時針走完全島:南岸瀑布、東部峽灣、米湖地熱區、北部胡薩維克賞鯨、西部斯奈山半島。夏季永晝適合,行李輕、住宿沿線預訂。"
+      },
+      {
+        "zh": "冬季極光短程",
+        "days": "4–5 天",
+        "note": "以雷克雅維克為基地,白天走黃金圈或南岸一日團,晚上追極光,行有餘力進藍冰洞。適合怕開雪地的旅客。"
+      },
+      {
+        "zh": "斯奈山半島＋西部",
+        "days": "4–5 天",
+        "note": "被稱為「冰島縮影」的半島,教會山、熔岩原、海崖與漁村,離首都近、人潮少。適合想避開南岸車陣的旅客。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "西峽灣(Westfjords)",
+        "note": "人跡罕至的西北角,丁堅地瀑布、拉泰拉海鸚崖與紅沙灘。道路多碎石、旺季外服務有限,建議夏季自駕。"
+      },
+      {
+        "zh": "高地內陸(Landmannalaugar 與 Þórsmörk)",
+        "note": "只在盛夏開放、需四驅車涉水的火山高地,彩色流紋岩山與「勞加維格」健行路線。"
+      },
+      {
+        "zh": "維斯特曼納群島",
+        "note": "搭渡輪到海上的赫馬島,看一九七三年火山噴發遺跡與夏季數十萬隻海鸚,島小步行即可遊。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "animals-icelandic-horse.jpg",
+      "title": "Iceland horse herd in August",
+      "author": "David Blaikie from Hampshire, UK",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AIceland_horse_herd_in_August.jpg"
+    },
+    {
+      "file": "animals-arctic-fox.jpg",
+      "title": "Vulpes lagopus in Iceland",
+      "author": "Jonatan Pie ( unsplash.com/@r3dmax )",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AVulpes_lagopus_in_Iceland.jpg"
+    },
+    {
+      "file": "animals-puffin.jpg",
+      "title": "Colony of Atlantic puffins on a cliff on the Dyrhólaey peninsula in Iceland, 20240720 0931 2106",
+      "author": "Jakub Hałun",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AColony_of_Atlantic_puffins_on_a_cliff_on_the_Dyrh%C3%B3laey_peninsula_in_Iceland%2C_20240720_0931_2106.jpg"
+    },
+    {
+      "file": "animals-humpback-whale.jpg",
+      "title": "Humpback whale, Faxaflói Bay, Iceland, 20230507 1029 5618",
+      "author": "Jakub Hałun",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AHumpback_whale%2C_Faxafl%C3%B3i_Bay%2C_Iceland%2C_20230507_1029_5618.jpg"
+    },
+    {
+      "file": "animals-icelandic-sheep.jpg",
+      "title": "Icelandic sheep summer 06",
+      "author": "biologyfishman",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AIcelandic_sheep_summer_06.jpg"
+    },
+    {
+      "file": "foods-hakarl.jpg",
+      "title": "Hákarl2",
+      "author": "Xfigpower",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AH%C3%A1karl2.jpg"
+    },
+    {
+      "file": "foods-hangikjot.jpg",
+      "title": "Hangikjöt",
+      "author": "Martin Sønderlev Christensen",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AHangikj%C3%B6t.jpg"
+    },
+    {
+      "file": "foods-skyr.jpg",
+      "title": "Icelandic Skyr",
+      "author": "IcelandicProvisions",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AIcelandic_Skyr.jpg"
+    },
+    {
+      "file": "foods-kjotsupa.jpg",
+      "title": "Kjötsúpa",
+      "author": "Ypsilon from Finland",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AKj%C3%B6ts%C3%BApa.JPG"
+    },
+    {
+      "file": "landmarks-blue-lagoon.jpg",
+      "title": "Blue Lagoon Geothermal Spa, Grindavík, Iceland (37917013312)",
+      "author": "sikeri from Silver Spring, MD, USA",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABlue_Lagoon_Geothermal_Spa%2C_Grindav%C3%ADk%2C_Iceland_%2837917013312%29.jpg"
+    },
+    {
+      "file": "landmarks-thingvellir.jpg",
+      "title": "Almannagjá rift at Þingvellir National Park",
+      "author": "Olga Ernst",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AAlmannagj%C3%A1_rift_at_%C3%9Eingvellir_National_Park.jpg"
+    },
+    {
+      "file": "landmarks-geysir.jpg",
+      "title": "Strokkur geyser eruption, close-up view",
+      "author": "Andreas Tille",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AStrokkur_geyser_eruption%2C_close-up_view.jpg"
+    }
+  ],
+  "code": "IS"
+}

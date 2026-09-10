@@ -1,0 +1,332 @@
+{
+  "name_zh": "捷克",
+  "name_en": "Czechia",
+  "summary": "位於中歐、不臨海的內陸國,首都布拉格。由波希米亞、摩拉維亞與西利西亞一角組成,四周被山地環抱。曾是神聖羅馬帝國的核心王國與奧匈帝國的工業重鎮,一九一八年與斯洛伐克組成捷克斯洛伐克,一九九三年和平分立。今以機械、汽車與啤酒產業著稱。",
+  "founding": [
+    "斯拉夫人約在六世紀進入波希米亞與摩拉維亞。九世紀的大摩拉維亞是本地第一個較具規模的政體,八六三年拜占庭派來的西里爾與美多德在此傳教並創制斯拉夫字母;大摩拉維亞在馬扎爾人入侵後於十世紀初瓦解。",
+    "普熱米斯爾王朝以布拉格為中心整合出波希米亞公國、後升為王國;十世紀的聖瓦茨拉夫成為守護聖人。一二一二年《西西里金璽詔書》確認波希米亞的世襲王國地位,其國王是神聖羅馬帝國的選帝侯之一。",
+    "盧森堡王朝的查理四世同時是波希米亞國王與神聖羅馬皇帝,把布拉格建設成帝國首都:一三四八年創立查理大學(中歐最古老)、興建查理大橋與聖維特主教座堂,史稱黃金時代。",
+    "胡斯改革引發動盪:揚·胡斯於一四一五年被判火刑,隨後爆發胡斯戰爭。一五二六年哈布斯堡家族取得波希米亞王位;一六一八年的「布拉格擲窗事件」點燃三十年戰爭,一六二〇年白山之戰後波希米亞貴族被壓制,哈布斯堡強化統治並推行再天主教化,捷克語一度式微。",
+    "十九世紀捷克民族復興運動在語言、史學與文化上重建認同。第一次世界大戰後奧匈帝國解體,一九一八年十月二十八日捷克斯洛伐克宣告獨立,馬薩里克出任首任總統。",
+    "一九三八年《慕尼黑協定》割走蘇台德地區,翌年德國占領。一九四八年共產黨奪權;一九六八年「布拉格之春」遭華沙公約組織軍隊鎮壓;一九八九年「天鵝絨革命」和平推翻共產政權,哈維爾任總統。一九九三年捷克與斯洛伐克和平分立,捷克共和國成立,後加入北約(一九九九)與歐盟(二〇〇四),保留捷克克朗。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "捷克共和國",
+    "area_km2": 78871,
+    "languages": [
+      "捷克語"
+    ],
+    "religion": "無宗教信仰者比例居歐洲最高之列;信教者以羅馬天主教為主",
+    "currency": "捷克克朗(CZK)",
+    "government": "議會共和制,總統由公民直選"
+  },
+  "animals": [
+    {
+      "zh": "歐亞猞猁",
+      "en": "Eurasian lynx",
+      "note": "在舒馬瓦與貝斯基迪山區重新繁衍的大型貓科動物。",
+      "image": "animals-lynx.jpg"
+    },
+    {
+      "zh": "歐洲馬鹿",
+      "en": "Red deer",
+      "note": "森林中最大的野生動物,秋季發情期的吼聲是林間標誌。",
+      "image": "animals-red-deer.jpg"
+    },
+    {
+      "zh": "野豬",
+      "en": "Wild boar",
+      "note": "數量眾多、適應力強,近年常進入城郊綠地。",
+      "image": "animals-wild-boar.jpg"
+    },
+    {
+      "zh": "白鸛",
+      "en": "White stork",
+      "note": "春夏在村落煙囪與電線桿頂築巢,被視為帶來好運。",
+      "image": "animals-white-stork.jpg"
+    },
+    {
+      "zh": "歐洲盤羊",
+      "en": "Mouflon",
+      "note": "十九世紀引進的野綿羊,捷克族群數量居歐洲前列。",
+      "image": "animals-mouflon.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "奶油燉牛肉配麵糰子",
+      "en": "Svíčková na smetaně",
+      "note": "燉牛肉澆上根菜奶油醬,佐蔓越莓與麵包糰子,國民名菜。",
+      "image": "foods-svickova.jpg"
+    },
+    {
+      "zh": "烤豬肉配糰子與酸菜",
+      "en": "Vepřo knedlo zelo",
+      "note": "烤豬、麵包或馬鈴薯糰子加燉酸白菜,最典型的捷克組合。",
+      "image": "foods-vepro-knedlo-zelo.jpg"
+    },
+    {
+      "zh": "皮爾森啤酒",
+      "en": "Pilsner",
+      "note": "一八四二年誕生於皮爾森的金黃色下層發酵啤酒,風行全球。"
+    },
+    {
+      "zh": "炸乳酪",
+      "en": "Smažený sýr",
+      "note": "裹粉油炸的乳酪塊,配塔塔醬與薯條,街頭與酒館常見。",
+      "image": "foods-smazeny-syr.jpg"
+    },
+    {
+      "zh": "煙囪捲餅",
+      "en": "Trdelník",
+      "note": "繞在鐵棒上烤、沾糖與堅果的中空捲餅,布拉格觀光區熱賣(其實源自周邊地區)。",
+      "image": "foods-trdelnik.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "布拉格城堡",
+      "en": "Prague Castle",
+      "note": "世界最大的古城堡建築群,內有聖維特主教座堂與總統府。",
+      "latlon": [
+        50.091,
+        14.4009
+      ],
+      "image": "landmarks-prague-castle.jpg"
+    },
+    {
+      "zh": "查理大橋",
+      "en": "Charles Bridge",
+      "note": "十四世紀石橋,兩側立有三十座巴洛克聖徒雕像。",
+      "latlon": [
+        50.0865,
+        14.4114
+      ],
+      "image": "landmarks-charles-bridge.jpg"
+    },
+    {
+      "zh": "舊城廣場天文鐘",
+      "en": "Prague Astronomical Clock",
+      "note": "一四一〇年的天文鐘,整點有使徒木偶巡遊,是全球最古老仍運轉者。",
+      "latlon": [
+        50.087,
+        14.4208
+      ],
+      "image": "landmarks-astronomical-clock.jpg"
+    },
+    {
+      "zh": "庫倫洛夫",
+      "en": "Český Krumlov",
+      "note": "伏爾塔瓦河曲流環抱的中世紀小鎮,城堡與老城列入世界遺產。",
+      "latlon": [
+        48.8127,
+        14.315
+      ]
+    },
+    {
+      "zh": "賽德萊茨人骨教堂",
+      "en": "Sedlec Ossuary",
+      "note": "庫特納霍拉近郊,以約四萬人骨排成吊燈與紋章的小教堂。",
+      "latlon": [
+        49.961,
+        15.2886
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "揚·胡斯",
+      "en": "Jan Hus",
+      "note": "十五世紀宗教改革先驅,遭火刑後引發胡斯戰爭。"
+    },
+    {
+      "zh": "安東寧·德弗札克",
+      "en": "Antonín Dvořák",
+      "note": "作曲家,《新世界交響曲》與《斯拉夫舞曲》廣為流傳。"
+    },
+    {
+      "zh": "法蘭茲·卡夫卡",
+      "en": "Franz Kafka",
+      "note": "以德語寫作的布拉格猶太作家,《變形記》《審判》影響現代文學。"
+    },
+    {
+      "zh": "米蘭·昆德拉",
+      "en": "Milan Kundera",
+      "note": "小說家,《生命中不能承受之輕》長年流亡法國。"
+    },
+    {
+      "zh": "瓦茨拉夫·哈維爾",
+      "en": "Václav Havel",
+      "note": "劇作家與異議人士,天鵝絨革命後任總統。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "五月或九月的布拉格",
+      "note": "避開盛夏人潮與嚴冬,天氣宜人,適合慢走老城、城堡區與河畔,傍晚看查理大橋。"
+    },
+    {
+      "zh": "波希米亞溫泉三角",
+      "note": "卡羅維瓦利、瑪麗亞溫泉與弗朗齊歇克溫泉的十九世紀溫泉迴廊,列入世界遺產,適合散步療養。"
+    },
+    {
+      "zh": "耶誕與復活節市集",
+      "note": "舊城與和平廣場的市集賣熱紅酒、火腿與手工藝,配點燈的天文鐘,氣氛濃厚。"
+    }
+  ],
+  "events": [
+    {
+      "year": 863,
+      "zh": "西里爾與美多德到大摩拉維亞傳教,創制斯拉夫字母。"
+    },
+    {
+      "year": 1212,
+      "zh": "《西西里金璽詔書》確認波希米亞的世襲王國地位。"
+    },
+    {
+      "year": 1348,
+      "zh": "查理四世創立布拉格查理大學。"
+    },
+    {
+      "year": 1415,
+      "zh": "揚·胡斯被判火刑,引發胡斯戰爭。"
+    },
+    {
+      "year": 1620,
+      "zh": "白山之戰,波希米亞貴族戰敗,哈布斯堡強化統治。"
+    },
+    {
+      "year": 1918,
+      "zh": "十月二十八日捷克斯洛伐克宣告獨立。"
+    },
+    {
+      "year": 1993,
+      "zh": "捷克與斯洛伐克和平分立,捷克共和國成立。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "布拉格定點深度",
+        "days": "4–5 天",
+        "note": "老城廣場與天文鐘、查理大橋、城堡區與小城區、猶太區,傍晚聽一場古典音樂會。台灣多一次轉機可達,是第一次到中歐的自由行首選。"
+      },
+      {
+        "zh": "布拉格＋庫倫洛夫＋庫特納霍拉",
+        "days": "5–6 天",
+        "note": "首都行程加上南波希米亞的中世紀小鎮庫倫洛夫住一晚,再去庫特納霍拉看人骨教堂與聖芭芭拉教堂。巴士與火車銜接方便。"
+      },
+      {
+        "zh": "波希米亞溫泉與啤酒",
+        "days": "5–6 天",
+        "note": "卡羅維瓦利、瑪麗亞溫泉的溫泉迴廊,搭配皮爾森的啤酒廠導覽與百威城(České Budějovice)。適合想放鬆兼品飲的旅客。"
+      },
+      {
+        "zh": "中歐四都串遊:布拉格—維也納—布達佩斯",
+        "days": "8–10 天",
+        "note": "以火車或巴士把三國首都串起來,布拉格與維也納間可順遊布爾諾或南摩拉維亞酒鄉。假期長、想一次玩多國的人適合。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "摩拉維亞喀斯特與麥田曲線地景",
+        "note": "布爾諾以北的鐘乳石洞與馬克赫拉深淵,搭配南摩拉維亞如波浪般起伏的葡萄園田景。班次少,自駕較方便。"
+      },
+      {
+        "zh": "捷克瑞士國家公園",
+        "note": "與德國交界的砂岩峰林,普拉夫奇采石門是最大的天然石拱。可從德勒斯登或布拉格一日往返。"
+      },
+      {
+        "zh": "奧洛穆茨與北摩拉維亞",
+        "note": "擁有世界遺產聖三柱與眾多噴泉的大學城,遊客遠少於布拉格,可延伸到普涅羅夫與貝斯基迪山。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "animals-lynx.jpg",
+      "title": "Portrait of a Carpathian Lynx",
+      "author": "Wilfredor",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File%3APortrait_of_a_Carpathian_Lynx.jpg"
+    },
+    {
+      "file": "animals-red-deer.jpg",
+      "title": "Cervus elaphus Luc Viatour 5",
+      "author": "Lviatour",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ACervus_elaphus_Luc_Viatour_5.jpg"
+    },
+    {
+      "file": "animals-wild-boar.jpg",
+      "title": "Sus scrofa 2 - Otter, Owl, and Wildlife Park",
+      "author": "Dave Pape",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASus_scrofa_2_-_Otter%2C_Owl%2C_and_Wildlife_Park.jpg"
+    },
+    {
+      "file": "animals-white-stork.jpg",
+      "title": "Ciconia ciconia - White stork 02",
+      "author": "Zeynel Cebeci",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ACiconia_ciconia_-_White_stork_02.jpg"
+    },
+    {
+      "file": "animals-mouflon.jpg",
+      "title": "European mouflon (Ovis orientalis musimon) (1)",
+      "author": "Ken Billington",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AEuropean_mouflon_%28Ovis_orientalis_musimon%29_%281%29.jpg"
+    },
+    {
+      "file": "foods-svickova.jpg",
+      "title": "Svíčková na smetaně",
+      "author": "Matyáš Havel",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASv%C3%AD%C4%8Dkov%C3%A1_na_smetan%C4%9B.JPG"
+    },
+    {
+      "file": "foods-vepro-knedlo-zelo.jpg",
+      "title": "Uzená pečeně chlupaté knedlíky a kyselé zelí 01",
+      "author": "Pohled 111",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AUzen%C3%A1_pe%C4%8Den%C4%9B_chlupat%C3%A9_knedl%C3%ADky_a_kysel%C3%A9_zel%C3%AD_01.jpg"
+    },
+    {
+      "file": "foods-smazeny-syr.jpg",
+      "title": "Smažený sýr s dvojitou porcí tatarky v restauraci Metuje",
+      "author": "Ladislav Boháč",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASma%C5%BEen%C3%BD_s%C3%BDr_s_dvojitou_porc%C3%AD_tatarky_v_restauraci_Metuje.jpg"
+    },
+    {
+      "file": "foods-trdelnik.jpg",
+      "title": "Trdelnik in Prague",
+      "author": "Fjmustak",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ATrdelnik_in_Prague.jpg"
+    },
+    {
+      "file": "landmarks-prague-castle.jpg",
+      "title": "Praha Panorama from Petřín 20170430",
+      "author": "Uoaei1",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3APraha_Panorama_from_Pet%C5%99%C3%ADn_20170430.jpg"
+    },
+    {
+      "file": "landmarks-charles-bridge.jpg",
+      "title": "Prague Charles Bridge 2021 26",
+      "author": "Scotch Mist",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3APrague_Charles_Bridge_2021_26.jpg"
+    },
+    {
+      "file": "landmarks-astronomical-clock.jpg",
+      "title": "Prague Town Hall Clock 2021 16",
+      "author": "Scotch Mist",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3APrague_Town_Hall_Clock_2021_16.jpg"
+    }
+  ],
+  "code": "CZ"
+}

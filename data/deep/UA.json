@@ -1,0 +1,332 @@
+{
+  "name_zh": "烏克蘭",
+  "name_en": "Ukraine",
+  "summary": "位於東歐、北臨黑海的國家,首都基輔;以面積計是完全位於歐洲境內最大的國家。黑土肥沃,素有「歐洲糧倉」之稱。中世紀的基輔羅斯被視為東斯拉夫文明的源頭。一九九一年脫離蘇聯獨立;二〇一四年起與俄羅斯發生領土衝突,二〇二二年二月遭俄羅斯全面入侵,戰爭持續至今。",
+  "founding": [
+    "黑海以北的草原自古是遊牧民族與希臘殖民城市交會之地,先後有辛梅里安人、斯基泰人、薩爾馬提亞人、哥德人與匈人。東斯拉夫部落在西元第一千年進入森林草原地帶定居。",
+    "九世紀起,以基輔為中心、由留里克王朝統治的東斯拉夫諸地形成「基輔羅斯」,掌握「從瓦良格人到希臘人」的貿易水路。九八八年弗拉基米爾大公受洗,接受拜占庭基督教;智者雅羅斯拉夫時編纂法典、興建聖索菲亞大教堂。羅斯後來分裂為諸公國,一二四〇年蒙古攻陷基輔。",
+    "十四世紀起,多數烏克蘭土地先歸立陶宛大公國,一五六九年盧布林聯合後併入波蘭—立陶宛聯邦。東正教居民生活在天主教政權之下,一五九六年的布列斯特聯合催生了希臘禮天主教會。",
+    "第聶伯河邊疆形成扎波羅熱哥薩克;一六四八年赫梅利尼茨基起義建立哥薩克酋長國,一六五四年(佩列亞斯拉夫)與莫斯科結盟。此後俄國控制日增,酋長國於十八世紀後期被廢除;波蘭遭瓜分後,右岸烏克蘭併入俄羅斯帝國,加利西亞則歸哈布斯堡奧地利。",
+    "十九世紀民族復興(舍甫琴科等)。一九一七年革命後出現短暫的烏克蘭人民共和國與西烏克蘭人民共和國;至一九二一年,烏克蘭土地被分割為蘇維埃烏克蘭與波蘭(部分歸羅馬尼亞、捷克斯洛伐克)。蘇維埃烏克蘭在一九三二至三三年經歷大饑荒(赫洛多摩爾)與大規模鎮壓;西部各地在一九三九至四五年間被併入蘇聯。一九五四年,克里米亞由俄羅斯蘇維埃聯邦社會主義共和國劃歸烏克蘭。",
+    "一九九一年八月二十四日烏克蘭宣布獨立,十二月一日公投確認,同月蘇聯解體。獨立後歷經二〇〇四年橙色革命與二〇一三至一四年的「廣場革命」,之後亞努科維奇總統出走。二〇一四年俄羅斯併吞克里米亞,頓巴斯爆發烏克蘭政府軍與俄方支持的分離武裝之間的戰事。二〇二二年二月二十四日俄羅斯發動全面入侵,戰爭持續;同年六月烏克蘭獲得歐盟候選國地位。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "烏克蘭",
+    "area_km2": 603628,
+    "languages": [
+      "烏克蘭語"
+    ],
+    "religion": "以東正教為主,西部另有東儀天主教會(希臘禮天主教)",
+    "currency": "格里夫納(UAH)",
+    "government": "半總統制共和"
+  },
+  "animals": [
+    {
+      "zh": "白鸛",
+      "en": "White stork",
+      "note": "常在村舍與電線桿頂築巢,是烏克蘭最具文化意涵的鳥類。",
+      "image": "animals-white-stork.jpg"
+    },
+    {
+      "zh": "歐洲野牛",
+      "en": "European bison",
+      "note": "歐洲最重的陸生動物,在喀爾巴阡與部分自然保護區野放。",
+      "image": "animals-bison.jpg"
+    },
+    {
+      "zh": "灰狼",
+      "en": "Grey wolf",
+      "note": "分布於森林與波利西亞濕地一帶,包括車諾比隔離區。"
+    },
+    {
+      "zh": "棕熊",
+      "en": "Brown bear",
+      "note": "主要棲息於西部喀爾巴阡山區的森林。",
+      "image": "animals-brown-bear.jpg"
+    },
+    {
+      "zh": "普氏野馬",
+      "en": "Przewalski's horse",
+      "note": "阿斯卡尼亞-諾瓦保護區與車諾比隔離區皆有野放族群。",
+      "image": "animals-przewalski-horse.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "羅宋湯",
+      "en": "Borscht",
+      "note": "以甜菜根為主的紅色酸湯,配酸奶油與蒜香麵包,二〇二二年列入聯合國非物質文化遺產。"
+    },
+    {
+      "zh": "烏克蘭餃",
+      "en": "Varenyky",
+      "note": "半月形水餃,內餡有馬鈴薯、酸菜、乳渣或櫻桃,配奶油與酸奶。",
+      "image": "foods-varenyky.jpg"
+    },
+    {
+      "zh": "高麗菜捲",
+      "en": "Holubtsi",
+      "note": "高麗菜葉包米與絞肉,以番茄醬汁燉煮。",
+      "image": "foods-holubtsi.jpg"
+    },
+    {
+      "zh": "醃豬脂",
+      "en": "Salo",
+      "note": "鹽醃或煙燻的生豬背脂,切薄片配黑麵包與大蒜。",
+      "image": "foods-salo.jpg"
+    },
+    {
+      "zh": "基輔炸雞捲",
+      "en": "Chicken Kyiv",
+      "note": "雞胸肉包裹香草奶油後裹粉油炸,切開流出金黃奶油。"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "基輔聖索菲亞大教堂",
+      "en": "Saint Sophia Cathedral",
+      "note": "十一世紀基輔羅斯的主教座堂,保存拜占庭馬賽克與濕壁畫,列入世界遺產。",
+      "latlon": [
+        50.4529,
+        30.5142
+      ],
+      "image": "landmarks-saint-sophia-kyiv.jpg"
+    },
+    {
+      "zh": "基輔洞窟修道院",
+      "en": "Kyiv Pechersk Lavra",
+      "note": "始建於一〇五一年的東正教修道院,金頂教堂與地下洞窟並列世界遺產。",
+      "latlon": [
+        50.4347,
+        30.5578
+      ]
+    },
+    {
+      "zh": "利維夫歷史中心",
+      "en": "Lviv Old Town",
+      "note": "融合哥德、文藝復興與巴洛克的中歐古城,市集廣場列入世界遺產。",
+      "latlon": [
+        49.8419,
+        24.0315
+      ],
+      "image": "landmarks-lviv.jpg"
+    },
+    {
+      "zh": "卡緬涅茨—波多利斯基城堡",
+      "en": "Kamianets-Podilskyi Castle",
+      "note": "立於峽谷環繞岩島上的中世紀要塞,護城的是天然河曲。",
+      "latlon": [
+        48.6727,
+        26.5628
+      ],
+      "image": "landmarks-kamianets-podilskyi.jpg"
+    },
+    {
+      "zh": "奧德薩波坦金階梯",
+      "en": "Potemkin Stairs",
+      "note": "黑海港市奧德薩通往海濱的宏偉階梯,因愛森斯坦電影而聞名。",
+      "latlon": [
+        46.4877,
+        30.7417
+      ],
+      "image": "landmarks-odesa-stairs.jpg"
+    }
+  ],
+  "people": [
+    {
+      "zh": "塔拉斯·舍甫琴科",
+      "en": "Taras Shevchenko",
+      "note": "十九世紀詩人與畫家,烏克蘭民族文學的奠基者。",
+      "image": "people-shevchenko.jpg"
+    },
+    {
+      "zh": "果戈里",
+      "en": "Nikolai Gogol",
+      "note": "生於波爾塔瓦一帶、以俄語寫作的作家,《死靈魂》《欽差大臣》傳世,俄烏皆視為己出。"
+    },
+    {
+      "zh": "伊戈爾·西科斯基",
+      "en": "Igor Sikorsky",
+      "note": "生於基輔的航空工程師,開發出實用的單旋翼直升機。"
+    },
+    {
+      "zh": "謝爾蓋·普羅科菲耶夫",
+      "en": "Sergei Prokofiev",
+      "note": "生於今頓內茨克州的作曲家,《彼得與狼》《羅密歐與茱麗葉》聞名。"
+    },
+    {
+      "zh": "安德烈·舍甫琴科",
+      "en": "Andriy Shevchenko",
+      "note": "足球前鋒,二〇〇四年金球獎得主,後任烏克蘭國家隊教練。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "利維夫的咖啡與老城(局勢許可時)",
+      "note": "西部大城利維夫的咖啡館文化、市集廣場與教堂群相對安全,是感受中歐風情的窗口。"
+    },
+    {
+      "zh": "喀爾巴阡山區",
+      "note": "西部山區的健行、滑雪與胡楚爾木造教堂,夏季走霍維爾拉峰、冬季到布科維爾滑雪。"
+    },
+    {
+      "zh": "基輔的教堂與博物館",
+      "note": "聖索菲亞、洞窟修道院與聖米迦勒金頂修道院集中於基輔中心,可徒步串聯。"
+    }
+  ],
+  "events": [
+    {
+      "year": 988,
+      "zh": "弗拉基米爾大公受洗,基輔羅斯接受拜占庭基督教。"
+    },
+    {
+      "year": 1240,
+      "zh": "蒙古軍攻陷基輔,基輔羅斯瓦解。"
+    },
+    {
+      "year": 1648,
+      "zh": "赫梅利尼茨基起義,建立哥薩克酋長國。"
+    },
+    {
+      "year": 1932,
+      "zh": "大饑荒(赫洛多摩爾)造成數百萬人死亡(一九三二至三三年)。"
+    },
+    {
+      "year": 1991,
+      "zh": "八月二十四日宣布獨立,十二月公投確認,蘇聯解體。"
+    },
+    {
+      "year": 2014,
+      "zh": "廣場革命後,俄羅斯併吞克里米亞,頓巴斯爆發戰事。"
+    },
+    {
+      "year": 2022,
+      "zh": "二月二十四日俄羅斯發動全面入侵,戰爭持續;烏克蘭獲歐盟候選國地位。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "利維夫古城慢遊",
+        "days": "3–4 天",
+        "note": "市集廣場、拉丁主教座堂、亞美尼亞教堂與咖啡館巡禮,登高塔看紅瓦屋頂。西部相對安全,是目前最常被安排的路線。註:烏克蘭現處戰時,出發前務必查外交部旅遊警示。"
+      },
+      {
+        "zh": "基輔歷史核心",
+        "days": "3–4 天",
+        "note": "聖索菲亞大教堂、洞窟修道院、聖米迦勒金頂修道院與獨立廣場,搭配蘇聯時期的地鐵深站。行程視安全狀況而定。"
+      },
+      {
+        "zh": "喀爾巴阡山健行與滑雪",
+        "days": "4–5 天",
+        "note": "以雅列姆切或布科維爾為基地,夏季登霍維爾拉峰、看胡楚爾木教堂,冬季滑雪。適合山區愛好者,需留意路況與警報。"
+      },
+      {
+        "zh": "利維夫＋喀爾巴阡串遊",
+        "days": "6–7 天",
+        "note": "以利維夫進出,搭火車或包車延伸到卡爾巴阡山村與礦泉小鎮,兼顧城市與自然。行程彈性要留給臨時調整。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "卡緬涅茨—波多利斯基與霍京城堡",
+        "note": "波多利亞地區兩座立於河曲上的中世紀要塞,可從利維夫或切爾諾夫策安排一日到訪。"
+      },
+      {
+        "zh": "車諾比隔離區(視開放狀況)",
+        "note": "普里皮亞季廢城與反應爐石棺的導覽行程,戰前由官方核准的旅行社帶團;近年因戰事一度關閉,前往前須確認是否開放。"
+      },
+      {
+        "zh": "外喀爾巴阡的木造教堂群",
+        "note": "與斯洛伐克、波蘭並列世界遺產的東正教木造教堂,分散在西部村落,需自駕或包車串點。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "animals-white-stork.jpg",
+      "title": "Smolyanka, Kulykivka Raion 165043 06 the nest of White stork",
+      "author": "Nickispeaki",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASmolyanka%2C_Kulykivka_Raion_165043_06_the_nest_of_White_stork.jpg"
+    },
+    {
+      "file": "animals-bison.jpg",
+      "title": "46-212-5007 NNP Skolivski Beskydy European Bizon RB 18",
+      "author": "Rbrechko",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3A46-212-5007_NNP_Skolivski_Beskydy_European_Bizon_RB_18.jpg"
+    },
+    {
+      "file": "animals-brown-bear.jpg",
+      "title": "Brown bear in Carpathians",
+      "author": "Larisa Uhryn",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABrown_bear_in_Carpathians.jpg"
+    },
+    {
+      "file": "animals-przewalski-horse.jpg",
+      "title": "Askania steppe Przewalski's Horse 01 (YDS 1676)",
+      "author": "Nataliya Shestakova",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AAskania_steppe_Przewalski%27s_Horse_01_%28YDS_1676%29.jpg"
+    },
+    {
+      "file": "foods-varenyky.jpg",
+      "title": "Varenyky opischnya 01",
+      "author": "Yurii-mr",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AVarenyky_opischnya_01.jpg"
+    },
+    {
+      "file": "foods-holubtsi.jpg",
+      "title": "Golubtsi - traditional Ukrainian food cuisine. Homemade cabbage rolls in a tray",
+      "author": "Joi54a",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AGolubtsi_-_traditional_Ukrainian_food_cuisine._Homemade_cabbage_rolls_in_a_tray.jpg"
+    },
+    {
+      "file": "foods-salo.jpg",
+      "title": "Woman in Market Carves Salo (Pork Fat) - Berdichev - Polissya Region - Ukraine (26530137494)",
+      "author": "Adam Jones from Kelowna, BC, Canada",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AWoman_in_Market_Carves_Salo_%28Pork_Fat%29_-_Berdichev_-_Polissya_Region_-_Ukraine_%2826530137494%29.jpg"
+    },
+    {
+      "file": "landmarks-saint-sophia-kyiv.jpg",
+      "title": "Вид з повітря на Софійський собор у Києві",
+      "author": "Vadiko~ruwiki",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3A%D0%92%D0%B8%D0%B4_%D0%B7_%D0%BF%D0%BE%D0%B2%D1%96%D1%82%D1%80%D1%8F_%D0%BD%D0%B0_%D0%A1%D0%BE%D1%84%D1%96%D0%B9%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_%D1%83_%D0%9A%D0%B8%D1%94%D0%B2%D1%96.jpg"
+    },
+    {
+      "file": "landmarks-lviv.jpg",
+      "title": "Rynok Square in Lviv (8673813675)",
+      "author": "Jorge Láscar from Australia",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ARynok_Square_in_Lviv_%288673813675%29.jpg"
+    },
+    {
+      "file": "landmarks-kamianets-podilskyi.jpg",
+      "title": "68-104-9007 Kamianets-Podilskyi Fortress RB 18 2",
+      "author": "Rbrechko",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3A68-104-9007_Kamianets-Podilskyi_Fortress_RB_18_2.jpg"
+    },
+    {
+      "file": "landmarks-odesa-stairs.jpg",
+      "title": "Потьомкінські сходи 11",
+      "author": "Oleksandr Malyon",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3A%D0%9F%D0%BE%D1%82%D1%8C%D0%BE%D0%BC%D0%BA%D1%96%D0%BD%D1%81%D1%8C%D0%BA%D1%96_%D1%81%D1%85%D0%BE%D0%B4%D0%B8_11.jpg"
+    },
+    {
+      "file": "people-shevchenko.jpg",
+      "title": "Taras Shevchenko selfportrait oil 1840",
+      "author": "Taras Shevchenko",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3ATaras_Shevchenko_selfportrait_oil_1840.jpg"
+    }
+  ],
+  "code": "UA"
+}

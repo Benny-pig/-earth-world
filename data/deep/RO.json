@@ -1,0 +1,337 @@
+{
+  "name_zh": "羅馬尼亞",
+  "name_en": "Romania",
+  "summary": "位於東南歐、喀爾巴阡山與多瑙河下游之間的國家,首都布加勒斯特。語言屬羅曼語族,源自古羅馬在達契亞的統治。由瓦拉幾亞、摩爾多瓦與外西凡尼亞等歷史地區在十九至二十世紀陸續合併而成;一九八九年結束共產統治,後加入北約(二〇〇四)與歐盟(二〇〇七)。",
+  "founding": [
+    "古代這裡是達契亞人的居地。約西元前一世紀,布雷比斯塔統一諸部,建立強大的達契亞王國;至德凱巴魯斯時,羅馬皇帝圖拉真於一〇一至一〇六年征服達契亞,設為行省。羅馬移民帶來拉丁語,是羅馬尼亞語與民族起源的核心(達契亞—羅馬延續說)。",
+    "羅馬於二七一年撤出後,歷經多波民族遷徙。中世紀形成幾個公國:瓦拉幾亞(約一三三〇年,巴薩拉布一世)與摩爾多瓦(約一三五九年,博格丹一世);外西凡尼亞則長期屬匈牙利王權。宗教上以東正教為主,禮儀使用教會斯拉夫語。",
+    "十五至十六世紀起,瓦拉幾亞與摩爾多瓦成為鄂圖曼的附庸,保有自治、按時納貢,但未被完全占領。這一時期出了刺穿者弗拉德(瓦拉幾亞)、大帝斯特凡(摩爾多瓦),以及一六〇〇年一度統一三地的勇敢的米哈伊。",
+    "一八五九年,庫扎同時當選摩爾多瓦與瓦拉幾亞的公,兩公國走向合併,稱「聯合公國」。一八六六年迎立霍亨索倫家族的卡羅爾一世為公;一八七七至七八年藉俄土戰爭脫離鄂圖曼獨立,一八八一年成為羅馬尼亞王國。",
+    "第一次世界大戰羅馬尼亞站在協約國一方,戰後外西凡尼亞、比薩拉比亞與布科維納與王國合併,形成「大羅馬尼亞」。第二次世界大戰中失去比薩拉比亞、在安東內斯庫領導下與軸心國結盟,一九四四年八月倒戈。",
+    "一九四七年國王邁克爾被迫退位,成立共產政權;壽西斯古自一九六五年掌權,推行民族主義與嚴厲的緊縮政策。一九八九年十二月爆發流血革命,壽西斯古被處決,羅馬尼亞轉向民主與市場經濟,列伊為貨幣,尚未加入歐元區。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "羅馬尼亞",
+    "area_km2": 238397,
+    "languages": [
+      "羅馬尼亞語"
+    ],
+    "religion": "以羅馬尼亞正教會為主",
+    "currency": "羅馬尼亞列伊(RON)",
+    "government": "半總統制共和,總統由直選產生"
+  },
+  "animals": [
+    {
+      "zh": "棕熊",
+      "en": "Brown bear",
+      "note": "喀爾巴阡山區棲息著歐洲(不含俄羅斯)相當高比例的棕熊。",
+      "image": "animals-brown-bear.jpg"
+    },
+    {
+      "zh": "灰狼",
+      "en": "Grey wolf",
+      "note": "喀爾巴阡山的狼群數量在歐洲名列前茅,常成群活動。",
+      "image": "animals-wolf.jpg"
+    },
+    {
+      "zh": "歐亞猞猁",
+      "en": "Eurasian lynx",
+      "note": "歐洲最大的猞猁族群之一,棲息於山地森林。",
+      "image": "animals-lynx.jpg"
+    },
+    {
+      "zh": "歐洲野牛",
+      "en": "European bison",
+      "note": "歐洲最重的陸生動物,已在喀爾巴阡山區野放復育。",
+      "image": "animals-bison.jpg"
+    },
+    {
+      "zh": "卷羽鵜鶘",
+      "en": "Dalmatian pelican",
+      "note": "多瑙河三角洲聚集歐洲最大的鵜鶘繁殖群。",
+      "image": "animals-pelican.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "高麗菜捲",
+      "en": "Sarmale",
+      "note": "醃高麗菜或葡萄葉包絞肉與米,節慶必備,常配玉米糊與酸奶。",
+      "image": "foods-sarmale.jpg"
+    },
+    {
+      "zh": "玉米糊",
+      "en": "Mămăligă",
+      "note": "玉米粉煮成的稠糊,是傳統主食,可搭乳酪、酸奶或燉肉。"
+    },
+    {
+      "zh": "炭烤肉腸",
+      "en": "Mici",
+      "note": "無腸衣的碳烤混合絞肉條,配芥末與麵包,是烤肉聚會主角。",
+      "image": "foods-mici.jpg"
+    },
+    {
+      "zh": "羅馬尼亞酸湯",
+      "en": "Ciorbă",
+      "note": "以發酵麥麩水或檸檬調酸的湯,牛肚、肉丸與雜菜等版本眾多。",
+      "image": "foods-ciorba.jpg"
+    },
+    {
+      "zh": "李子白蘭地",
+      "en": "Țuică",
+      "note": "以李子蒸餾的烈酒,鄉間自釀,常在餐前飲用。"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "布蘭城堡",
+      "en": "Bran Castle",
+      "note": "外西凡尼亞山口上的中世紀城堡,因與「德古拉」傳說連結而聞名。",
+      "latlon": [
+        45.515,
+        25.3672
+      ],
+      "image": "landmarks-bran-castle.jpg"
+    },
+    {
+      "zh": "佩雷什城堡",
+      "en": "Peleș Castle",
+      "note": "錫納亞的十九世紀新文藝復興王宮,內部裝飾極盡華麗。",
+      "latlon": [
+        45.36,
+        25.5424
+      ],
+      "image": "landmarks-peles-castle.jpg"
+    },
+    {
+      "zh": "布加勒斯特議會宮",
+      "en": "Palace of the Parliament",
+      "note": "壽西斯古時代興建的巨型建築,是世界上最重、體積名列前茅的行政大樓。",
+      "latlon": [
+        44.4275,
+        26.0875
+      ],
+      "image": "landmarks-parliament-palace.jpg"
+    },
+    {
+      "zh": "沃羅內茨修道院",
+      "en": "Voroneț Monastery",
+      "note": "布科維納「彩繪修道院」之一,外牆滿布藍底濕壁畫,列入世界遺產。",
+      "latlon": [
+        47.517,
+        25.66
+      ],
+      "image": "landmarks-voronet.jpg"
+    },
+    {
+      "zh": "錫吉什瓦拉古城",
+      "en": "Sighișoara",
+      "note": "仍有人居住的中世紀薩克森要塞城,鐘樓與彩色房屋列入世界遺產。",
+      "latlon": [
+        46.2191,
+        24.7925
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "弗拉德三世(刺穿者)",
+      "en": "Vlad the Impaler",
+      "note": "十五世紀瓦拉幾亞大公,以嚴酷手段抵抗鄂圖曼,是「德古拉」原型。"
+    },
+    {
+      "zh": "康斯坦丁·布朗庫西",
+      "en": "Constantin Brâncuși",
+      "note": "現代雕塑先驅,《無盡之柱》《吻》等作極具影響力。"
+    },
+    {
+      "zh": "喬治·埃內斯庫",
+      "en": "George Enescu",
+      "note": "作曲家與小提琴家,《羅馬尼亞狂想曲》最為人知。"
+    },
+    {
+      "zh": "娜迪婭·科馬內奇",
+      "en": "Nadia Comăneci",
+      "note": "體操選手,一九七六年奧運獲奧運史上首個滿分十分。"
+    },
+    {
+      "zh": "埃利·維瑟爾",
+      "en": "Elie Wiesel",
+      "note": "生於錫蓋特的猶太作家,大屠殺見證者,獲諾貝爾和平獎。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "五至九月的外西凡尼亞",
+      "note": "氣候宜人,可自駕串聯布拉索夫、錫比烏、錫吉什瓦拉的薩克森古城與山中城堡。"
+    },
+    {
+      "zh": "夏季走橫貫喀爾巴阡公路",
+      "note": "七、八月才全線開放的川法加拉山公路,一路髮夾彎與高山湖,是自駕迷的朝聖路線。"
+    },
+    {
+      "zh": "多瑙河三角洲賞鳥",
+      "note": "四至六月搭船深入蘆葦水道,看鵜鶘、蒼鷺與數百種鳥類,由圖爾恰進出。"
+    }
+  ],
+  "events": [
+    {
+      "year": -82,
+      "zh": "布雷比斯塔統一達契亞諸部,建立達契亞王國(約西元前一世紀)。"
+    },
+    {
+      "year": 106,
+      "zh": "圖拉真征服達契亞,設羅馬行省,拉丁語與移民在此扎根。"
+    },
+    {
+      "year": 1330,
+      "zh": "巴薩拉布一世確立瓦拉幾亞公國(摩爾多瓦公國約一三五九年成立)。"
+    },
+    {
+      "year": 1859,
+      "zh": "庫扎當選為摩爾多瓦與瓦拉幾亞共同的公,兩公國合併。"
+    },
+    {
+      "year": 1878,
+      "zh": "柏林會議承認羅馬尼亞脫離鄂圖曼獨立(一八八一年建立王國)。"
+    },
+    {
+      "year": 1918,
+      "zh": "外西凡尼亞、比薩拉比亞與布科維納與王國合併,形成「大羅馬尼亞」。"
+    },
+    {
+      "year": 1989,
+      "zh": "十二月革命推翻壽西斯古政權。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "外西凡尼亞古城與城堡環線",
+        "days": "6–7 天",
+        "note": "布加勒斯特進出,自駕或跟團串聯錫納亞佩雷什城堡、布蘭城堡、布拉索夫、錫吉什瓦拉與錫比烏。第一次到羅馬尼亞、想一次收城堡與薩克森古城的首選。"
+      },
+      {
+        "zh": "布加勒斯特＋錫納亞山城",
+        "days": "4–5 天",
+        "note": "首都的議會宮、老城與村莊博物館,搭火車一小時到錫納亞看佩雷什城堡與登山纜車。適合天數少的旅客。"
+      },
+      {
+        "zh": "布科維納彩繪修道院",
+        "days": "4–5 天",
+        "note": "以蘇恰瓦為基地,走訪沃羅內茨、莫爾多維察與蘇切維察等外牆彩繪的世界遺產修道院,搭配木造教堂。適合愛宗教藝術的旅客。"
+      },
+      {
+        "zh": "喀爾巴阡自駕:橫貫公路與畢卡茲峽谷",
+        "days": "7–8 天",
+        "note": "夏季走川法加拉與川阿爾卑斯山公路,加畢卡茲峽谷與紅湖、錫比烏周邊。彎道多、僅盛夏全開,適合自駕與山景愛好者。"
+      },
+      {
+        "zh": "多瑙河三角洲生態",
+        "days": "4–5 天",
+        "note": "圖爾恰搭船進蘇利納或穆爾吉霍爾的水道民宿,清晨賞鳥、釣魚、看漁村。適合想避開人潮、親近自然的旅客。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "馬拉穆列什木教堂與農村",
+        "note": "羅馬尼亞北部保留高聳木造教堂與傳統木門的地區,「歡樂墓園」以彩繪墓碑聞名,自駕較方便。"
+      },
+      {
+        "zh": "多瑙河鐵門峽谷",
+        "note": "多瑙河切穿喀爾巴阡山的壯麗峽谷,河岸有巨大的達契亞王岩雕,可搭船遊覽。"
+      },
+      {
+        "zh": "阿普塞尼山與圖爾達鹽礦",
+        "note": "外西凡尼亞西部的喀斯特山區,冰洞與峽谷,搭配改成地下遊樂場的圖爾達鹽礦。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "animals-brown-bear.jpg",
+      "title": "Carpathian Brown Bear (232367505)",
+      "author": "Costin Costan",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ACarpathian_Brown_Bear_%28232367505%29.jpeg"
+    },
+    {
+      "file": "animals-wolf.jpg",
+      "title": "Eurasian Grey Wolf (Canis lupus lupus) (CWPG)",
+      "author": "Vauxford",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AEurasian_Grey_Wolf_%28Canis_lupus_lupus%29_%28CWPG%29.jpg"
+    },
+    {
+      "file": "animals-lynx.jpg",
+      "title": "Lynx lynx, Luchs 05",
+      "author": "Böhringer Friedrich",
+      "license": "CC BY-SA 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File%3ALynx_lynx%2C_Luchs_05.JPG"
+    },
+    {
+      "file": "animals-bison.jpg",
+      "title": "Bison bonasus (Linnaeus 1758)",
+      "author": "Michael Gäbler",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABison_bonasus_%28Linnaeus_1758%29.jpg"
+    },
+    {
+      "file": "animals-pelican.jpg",
+      "title": "White pelicans (Pelecanus onocrotalus) Danube delta",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AWhite_pelicans_%28Pelecanus_onocrotalus%29_Danube_delta.jpg"
+    },
+    {
+      "file": "foods-sarmale.jpg",
+      "title": "Sarmale Romania",
+      "author": "Andrei",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASarmale_Romania.jpg"
+    },
+    {
+      "file": "foods-mici.jpg",
+      "title": "Rumänischer Mixed-Grill mit Mici und Beilagen",
+      "author": "Sacha47",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ARum%C3%A4nischer_Mixed-Grill_mit_Mici_und_Beilagen.jpg"
+    },
+    {
+      "file": "foods-ciorba.jpg",
+      "title": "Ciorbă cu perișoare",
+      "author": "Sacha47",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ACiorb%C4%83_cu_peri%C8%99oare.jpg"
+    },
+    {
+      "file": "landmarks-bran-castle.jpg",
+      "title": "Bran castle Transylvania In Romania",
+      "author": "Beata Jankowska",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABran_castle_Transylvania_In_Romania.jpg"
+    },
+    {
+      "file": "landmarks-peles-castle.jpg",
+      "title": "Peles Castle, Sinaia (Romania)",
+      "author": "Teodor Mitrache",
+      "license": "CC BY-SA 3.0 ro",
+      "source": "https://commons.wikimedia.org/wiki/File%3APeles_Castle%2C_Sinaia_%28Romania%29.jpg"
+    },
+    {
+      "file": "landmarks-parliament-palace.jpg",
+      "title": "Palace of the Parliament in Bucharest (51878975552)",
+      "author": "William John Gauthier from Denmark",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3APalace_of_the_Parliament_in_Bucharest_%2851878975552%29.jpg"
+    },
+    {
+      "file": "landmarks-voronet.jpg",
+      "title": "Manastirea Voronet-vedere laterala",
+      "author": "Valeria23",
+      "license": "CC BY-SA 3.0 ro",
+      "source": "https://commons.wikimedia.org/wiki/File%3AManastirea_Voronet-vedere_laterala.JPG"
+    }
+  ],
+  "code": "RO"
+}
