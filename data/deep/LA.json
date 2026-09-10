@@ -1,0 +1,355 @@
+{
+  "name_zh": "寮國",
+  "name_en": "Laos",
+  "summary": "位於中南半島內陸,是東南亞唯一不臨海的國家,湄公河沿西界流過並劃出部分國界。以山地與森林為主,佛教信仰深厚,曾是「瀾滄」(百萬大象)王國;現由寮國人民革命黨一黨執政,經濟依賴水力發電與礦產。",
+  "founding": [
+    "傣語族群約自八至十三世紀由北方遷入湄公河中游河谷,與原有的孟-高棉族群融合,形成早期城邦。此前這一帶曾受真臘(高棉)勢力影響,占巴塞附近的瓦普廟即為吳哥時期的印度教建築。",
+    "一三五三年,法昂在高棉支持下統一各邦,建立以龍坡邦為中心的瀾滄王國,意為「百萬大象之地」,並引入上座部佛教為國教。王國國力在十六世紀塞塔提拉在位時達到高峰,他將首都遷到永珍,興建塔鑾與玉佛寺。",
+    "十七世紀蘇里亞馮薩在位期間國勢鼎盛、與外界貿易往來頻繁。他死後王位紛爭導致王國在十八世紀初分裂為龍坡邦、永珍與占巴塞三個王國,先後成為暹羅的藩屬。一八二七年前後永珍王昭阿努起兵反抗暹羅失敗,永珍城遭摧毀。",
+    "十九世紀末法國將寮地各邦納入法屬印度支那,一八九三年成為法國保護國,行政中心設於永珍。二戰期間一度被日軍佔領,戰後民族主義者組成「自由寮」運動,一九五三年寮國以王國之姿完全獨立。",
+    "獨立後,王國政府與共產主義的「巴特寮」爆發長期內戰,並與越戰緊密糾纏。一九六四至一九七三年間,寮國東部與胡志明小徑沿線遭受大規模空襲,是史上人均落彈量最高的國家之一,至今仍有大量未爆彈。",
+    "一九七五年巴特寮取得全國控制權,廢除君主制,十二月二日成立寮人民民主共和國,實行一黨制並與越南保持緊密關係。一九八六年起推行「新經濟機制」的市場化改革,一九九七年加入東協;近年中寮鐵路通車、湄公河支流水壩興建,使寮國自我定位為「東南亞的蓄電池」。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "寮人民民主共和國",
+    "area_km2": 236800,
+    "languages": [
+      "寮語"
+    ],
+    "religion": "以上座部佛教為主",
+    "currency": "基普(LAK)",
+    "government": "社會主義一黨制共和(寮國人民革命黨)"
+  },
+  "animals": [
+    {
+      "zh": "亞洲象",
+      "en": "Asian elephant",
+      "note": "瀾滄王國以「百萬大象」為名,今野生與工作象多分布於南部與沙耶武里省。",
+      "image": "LA-a-elephant.jpg"
+    },
+    {
+      "zh": "印度支那虎",
+      "en": "Indochinese tiger",
+      "note": "曾廣布山林,因盜獵與棲地破碎,寮國境內已極為罕見或近乎絕跡。",
+      "image": "LA-a-tiger.jpg"
+    },
+    {
+      "zh": "中南大羚",
+      "en": "Saola",
+      "note": "有「亞洲獨角獸」之稱的牛科動物,一九九二年才被發現,數量極少。",
+      "image": "LA-a-saola.jpg"
+    },
+    {
+      "zh": "寮國岩鼠",
+      "en": "Laotian rock rat",
+      "note": "二〇〇五年在他曲市場被發現的齧齒類,是唯一現存的一個古老科,號稱「活化石」。"
+    },
+    {
+      "zh": "湄公河巨鯰",
+      "en": "Mekong giant catfish",
+      "note": "世界最大的淡水魚之一,可重達三百公斤,湄公河族群瀕危。",
+      "image": "LA-a-catfish.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "糯米飯",
+      "en": "Khao niaw (sticky rice)",
+      "note": "以竹簍蒸熟、用手捏成小團的主食,寮國人均糯米消費量居世界前列。",
+      "image": "LA-f-stickyrice.jpg"
+    },
+    {
+      "zh": "寮式肉末沙拉",
+      "en": "Larb (laap)",
+      "note": "剁碎的肉或魚拌魚露、萊姆、辣椒與炒米粉,常被視為國菜。",
+      "image": "LA-f-larb.jpg"
+    },
+    {
+      "zh": "涼拌青木瓜",
+      "en": "Tam mak hoong",
+      "note": "青木瓜絲搗入魚露、蟹醬、萊姆與辣椒,味道比泰式更鹹辣。",
+      "image": "LA-f-papaya.jpg"
+    },
+    {
+      "zh": "米線湯",
+      "en": "Khao piak sen",
+      "note": "現做的粗米麵在雞湯或豬骨湯裡煮,口感軟滑,是常見早餐。",
+      "image": "LA-f-khaopiak.jpg"
+    },
+    {
+      "zh": "烤雞",
+      "en": "Ping kai",
+      "note": "抹上香茅、蒜與魚露的半剖雞用竹夾炭烤,配糯米與辣醬(jeow)。"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "龍坡邦古城",
+      "en": "Luang Prabang",
+      "note": "湄公河與南康河交會的古都,寺廟與法式建築並存,清晨僧侶托缽,列世界遺產。",
+      "latlon": [
+        19.8917,
+        102.135
+      ],
+      "image": "LA-l-luangprabang.jpg"
+    },
+    {
+      "zh": "塔鑾",
+      "en": "Pha That Luang",
+      "note": "永珍的金色佛塔,傳說藏有佛陀舍利,是寮國最重要的國家象徵。",
+      "latlon": [
+        17.9757,
+        102.6331
+      ],
+      "image": "LA-l-thatluang.jpg"
+    },
+    {
+      "zh": "石缸平原",
+      "en": "Plain of Jars",
+      "note": "川壙省高原上散布數千個鐵器時代的巨型石缸,用途推測與喪葬有關,列世界遺產。",
+      "latlon": [
+        19.431,
+        103.153
+      ],
+      "image": "LA-l-jars.jpg"
+    },
+    {
+      "zh": "瓦普廟",
+      "en": "Vat Phou",
+      "note": "占巴塞的吳哥時期山廟遺址,早於吳哥窟,依山勢層層而上,列世界遺產。",
+      "latlon": [
+        14.8489,
+        105.8225
+      ],
+      "image": "LA-l-vatphou.jpg"
+    },
+    {
+      "zh": "光西瀑布",
+      "en": "Kuang Si Falls",
+      "note": "龍坡邦近郊的多層石灰華瀑布,水池呈藍綠色,可戲水,園內設有黑熊救護中心。",
+      "latlon": [
+        19.7492,
+        101.9931
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "法昂",
+      "en": "Fa Ngum",
+      "note": "一三五三年建立瀾滄王國的開國君主,並將上座部佛教定為國教。"
+    },
+    {
+      "zh": "塞塔提拉",
+      "en": "Setthathirath",
+      "note": "十六世紀國王,遷都永珍,興建塔鑾與玉佛寺,抵禦緬甸入侵。"
+    },
+    {
+      "zh": "昭阿努",
+      "en": "Anouvong",
+      "note": "永珍末代君主,一八二〇年代起兵反抗暹羅失敗,被後世視為民族英雄。"
+    },
+    {
+      "zh": "蘇發努馮",
+      "en": "Souphanouvong",
+      "note": "「紅色親王」,巴特寮領導人之一,寮人民民主共和國首任國家主席。"
+    },
+    {
+      "zh": "凱山·豐威漢",
+      "en": "Kaysone Phomvihane",
+      "note": "寮國人民革命黨長期領導人,建國後主政近二十年。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "十一到二月的龍坡邦",
+      "note": "涼季乾爽舒適,適合看清晨布施、爬普西山看夕陽、跳島到光西瀑布,湄公河遊船視野也最好。"
+    },
+    {
+      "zh": "十到四月的四千美島",
+      "note": "湄公河進入寮柬邊界後分岔成的河中群島,租單車看孔恩瀑布、找伊河海豚,步調極慢適合放空。"
+    },
+    {
+      "zh": "十一到三月的川壙石缸平原",
+      "note": "高原氣候涼、能見度佳,參觀一、二、三號缸群並看戰爭遺跡,需走已排雷的標示路徑。"
+    }
+  ],
+  "events": [
+    {
+      "year": 1353,
+      "zh": "法昂統一各邦,建立瀾滄王國。"
+    },
+    {
+      "year": 1560,
+      "zh": "塞塔提拉將首都遷至永珍。"
+    },
+    {
+      "year": 1707,
+      "zh": "瀾滄分裂為龍坡邦、永珍與占巴塞三國。"
+    },
+    {
+      "year": 1893,
+      "zh": "寮國成為法國保護國,納入法屬印度支那。"
+    },
+    {
+      "year": 1953,
+      "zh": "以王國身分完全獨立。"
+    },
+    {
+      "year": 1964,
+      "zh": "美軍展開大規模空襲,持續至一九七三年。"
+    },
+    {
+      "year": 1975,
+      "zh": "廢除君主制,成立寮人民民主共和國。"
+    }
+  ],
+  "souvenirs": [
+    {
+      "zh": "手織絲綢與棉布",
+      "note": "龍坡邦與永珍的圍巾、桌旗多為天然染,夜市與工坊都有。"
+    },
+    {
+      "zh": "寮國咖啡",
+      "note": "波羅芬高原產的羅布斯塔與阿拉比卡,掛耳包與豆子輕便好帶。"
+    },
+    {
+      "zh": "高山有機茶",
+      "note": "豐沙里一帶的古樹茶與綠茶,適合送禮。"
+    },
+    {
+      "zh": "銀飾與竹編",
+      "note": "苗族銀飾、藤竹提籃與糯米簍,價格不高、造型樸拙。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "龍坡邦慢遊",
+        "days": "4 天",
+        "note": "台灣多經曼谷或河內轉機。逛古城寺廟、夜市與皇宮博物館,清晨看布施,一天到光西瀑布戲水、順訪帕烏洞。"
+      },
+      {
+        "zh": "龍坡邦＋永珍",
+        "days": "6 天",
+        "note": "先玩龍坡邦,再搭中寮鐵路或國內線到永珍,看塔鑾、凱旋門與佛像公園,行程輕鬆。"
+      },
+      {
+        "zh": "湄公河順流",
+        "days": "5 天",
+        "note": "從泰國會曬過境,搭兩天慢船經北本到龍坡邦,沿途停靠村落與帕烏洞,體驗河運生活。"
+      },
+      {
+        "zh": "寮國南部環線",
+        "days": "6–7 天",
+        "note": "巴色進出,跑波羅芬高原咖啡與瀑布、瓦普廟遺址,再到四千美島找河豚看日落。"
+      },
+      {
+        "zh": "川壙與石缸平原",
+        "days": "4 天",
+        "note": "從龍坡邦搭機或走山路到豐沙灣,看三處石缸群與越戰遺跡,可延伸到桑怒的洞穴基地。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "南俄湖與孔羅洞",
+        "note": "甘蒙省的七公里長河穿山洞,搭獨木舟摸黑穿越,結合森林步道與吊橋。"
+      },
+      {
+        "zh": "北部山村健行",
+        "note": "從烏多姆賽或琅南塔進入,住阿卡族與克木族村落,走原始林看野生長臂猿棲地。"
+      },
+      {
+        "zh": "華潘省與抗戰洞穴",
+        "note": "維恩賽洞窟群曾是巴特寮總部,可深入了解內戰時期的地下生活。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "LA-a-elephant.jpg",
+      "title": "Asian elephant bathing, Tad Lo river",
+      "author": "Basile Morin",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sitting_Asian_elephant_(Elephas_maximus)_bathing_in_Tad_Lo_river,_Laos.jpg"
+    },
+    {
+      "file": "LA-a-tiger.jpg",
+      "title": "Indochinese tiger",
+      "author": "H. Zell",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Panthera_tigris_corbetti_01.jpg"
+    },
+    {
+      "file": "LA-a-saola.jpg",
+      "title": "Saola (Pseudoryx nghetinhensis)",
+      "author": "Dao Nguyen and James Hardcastle",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pseudoryx_nghetinhensis_318200.jpg"
+    },
+    {
+      "file": "LA-a-catfish.jpg",
+      "title": "Mekong giant catfish",
+      "author": "Cool critter channel",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mekong_giant_catfish.jpg"
+    },
+    {
+      "file": "LA-f-stickyrice.jpg",
+      "title": "Lao sticky rice",
+      "author": "Thomas Wanhoff",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Lao_sticky_rice.jpg"
+    },
+    {
+      "file": "LA-f-larb.jpg",
+      "title": "Lao larb neua",
+      "author": "Jpatokal",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:LaoFood_LarbNeua.JPG"
+    },
+    {
+      "file": "LA-f-papaya.jpg",
+      "title": "Lao green papaya salad",
+      "author": "Jpatokal",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Lao_green_papaya_salad.jpg"
+    },
+    {
+      "file": "LA-f-khaopiak.jpg",
+      "title": "Khao piak sen",
+      "author": "Spencer",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Khao_piak_sen.jpg"
+    },
+    {
+      "file": "LA-l-luangprabang.jpg",
+      "title": "Wat Xieng Thong, Luang Prabang",
+      "author": "Basile Morin",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Temple_Wat_Xieng_Thong_-_Luang_Prabang_-_Laos.jpg"
+    },
+    {
+      "file": "LA-l-thatluang.jpg",
+      "title": "Pha That Luang, Vientiane",
+      "author": "Jakub Hałun",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:20171118_Pha_That_Luang_Vientiane_3184_DxO.jpg"
+    },
+    {
+      "file": "LA-l-jars.jpg",
+      "title": "Plain of Jars, Laos",
+      "author": "Jakub Hałun",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:20171115_Plain_of_Jars_Laos_2540_DxO.jpg"
+    },
+    {
+      "file": "LA-l-vatphou.jpg",
+      "title": "Wat Phou temple, Champasak",
+      "author": "Basile Morin",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Clothed_statues_of_the_Buddha_in_the_ruined_Khmer_Hindu_temple_of_Wat_Phou,_Champasak,_Laos.jpg"
+    }
+  ],
+  "code": "LA"
+}

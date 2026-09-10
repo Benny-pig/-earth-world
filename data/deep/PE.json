@@ -1,0 +1,357 @@
+{
+  "name_zh": "秘魯",
+  "name_en": "Peru",
+  "summary": "位於南美洲西岸的中央安地斯地區,是印加帝國的核心,也是美洲最古老文明卡拉爾的所在地。國土涵蓋乾燥海岸、高聳山脈與亞馬遜雨林三大地帶,首都利馬,馬丘比丘是全球知名度最高的遺址之一。",
+  "founding": [
+    "秘魯中北部海岸的卡拉爾-蘇佩文明約在西元前三千年興起,金字塔與廣場的年代與古埃及相當,被視為美洲最早的複雜社會。此後查文、帕拉卡斯、納斯卡、莫切、瓦里與蒂亞瓦納科等文化相繼發展,留下地畫、陶器、金工與大型土台建築。",
+    "十五世紀庫斯科的印加人在帕查庫特克帶領下急速擴張,建立「塔萬廷蘇尤」(四方之地),鼎盛時北抵今哥倫比亞、南達智利中部,以石造道路系統、梯田農業與勞役制度統治數百萬人口,是前哥倫布美洲最大的帝國。",
+    "一五三二年皮薩羅率西班牙隊伍在卡哈馬卡俘虜印加君主阿塔瓦爾帕,勒索黃金後將其處死。一五三三年攻入庫斯科,一五三五年建立利馬。西班牙隨後設立秘魯總督轄區,成為南美洲行政與宗教中心,依賴原住民勞役開採白銀,人口因疾病與剝削大幅減少。",
+    "殖民統治期間爆發多次原住民與混血族群起事,一七八〇年圖帕克·阿馬魯二世領導的大規模反抗震撼全境,最終遭鎮壓。十九世紀初的獨立主要由外部推動:一八二一年聖馬丁在利馬宣布獨立,一八二四年玻利瓦與蘇克雷在胡寧與阿亞庫喬戰役擊敗西班牙軍,獨立才告確立。",
+    "獨立後秘魯政局長期動盪,軍人干政頻繁。十九世紀中葉靠海鳥糞(鳥糞石)出口一度繁榮;一八七九至一八八三年的太平洋戰爭敗給智利,失去南部硝石產區塔拉帕卡。二十世紀土地與族群問題持續,經濟高度依賴礦業。",
+    "一九八〇至二〇〇〇年,毛派游擊隊「光明之路」與政府的內部武裝衝突造成數萬人死亡與失蹤。藤森於一九九〇年當選,以強硬手段平亂並推行市場改革,後因貪腐與人權案下台。二十一世紀秘魯維持選舉制度,但總統更迭頻繁、政局不穩成為常態。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "秘魯共和國",
+    "area_km2": 1285216,
+    "languages": [
+      "西班牙語",
+      "克丘亞語",
+      "艾馬拉語"
+    ],
+    "religion": "以天主教為主,原住民信仰與之融合",
+    "currency": "秘魯索爾(PEN)",
+    "government": "單一制總統共和"
+  },
+  "animals": [
+    {
+      "zh": "駱馬",
+      "en": "Llama",
+      "note": "安地斯高地的馱獸,印加時代用於運輸,毛與肉皆可利用。",
+      "image": "PE-a-llama.jpg"
+    },
+    {
+      "zh": "羊駝",
+      "en": "Alpaca",
+      "note": "體型比駱馬小,以細軟的毛聞名,是高原牧民的主要牲畜。",
+      "image": "PE-a-alpaca.jpg"
+    },
+    {
+      "zh": "小羊駝",
+      "en": "Vicuña",
+      "note": "野生駱駝科動物,毛極細珍貴,是秘魯國徽上的動物。",
+      "image": "PE-a-vicuna.jpg"
+    },
+    {
+      "zh": "安地斯動冠傘鳥",
+      "en": "Andean cock-of-the-rock",
+      "note": "秘魯國鳥,雄鳥有鮮橙色羽冠,棲息雲霧林,求偶時集體展示。",
+      "image": "PE-a-cotr.jpg"
+    },
+    {
+      "zh": "眼鏡熊",
+      "en": "Spectacled bear",
+      "note": "南美唯一的熊,眼周有淺色斑紋,棲息安地斯山林,是「帕丁頓熊」原型。",
+      "image": "PE-a-bear.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "檸檬醃生魚",
+      "en": "Ceviche",
+      "note": "白肉魚以萊姆汁、辣椒與洋蔥快速醃漬,配地瓜與玉米,列非物質文化遺產。",
+      "image": "PE-f-ceviche.jpg"
+    },
+    {
+      "zh": "醬炒牛柳",
+      "en": "Lomo saltado",
+      "note": "牛肉條與洋蔥、番茄大火快炒,佐薯條與白飯,中式與秘魯風味結合。",
+      "image": "PE-f-lomo.jpg"
+    },
+    {
+      "zh": "炭烤雞",
+      "en": "Pollo a la brasa",
+      "note": "以香料醃過的全雞炭火慢烤,搭薯條與沙拉,是家庭外食首選。",
+      "image": "PE-f-pollo.jpg"
+    },
+    {
+      "zh": "萬卡風味馬鈴薯",
+      "en": "Papa a la huancaína",
+      "note": "水煮馬鈴薯淋上黃辣椒、起司與餅乾打成的醬,常作前菜。",
+      "image": "PE-f-huancaina.jpg"
+    },
+    {
+      "zh": "烤牛心串",
+      "en": "Anticuchos",
+      "note": "醃過的牛心切塊串烤,是街邊與慶典常見的小吃。",
+      "image": "PE-f-anticucho.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "馬丘比丘",
+      "en": "Machu Picchu",
+      "note": "十五世紀印加山城遺址,一九一一年才為外界所知,是南美最著名的古蹟。",
+      "latlon": [
+        -13.1631,
+        -72.545
+      ],
+      "image": "PE-l-machu.jpg"
+    },
+    {
+      "zh": "納斯卡線",
+      "en": "Nazca Lines",
+      "note": "納斯卡文化在乾燥高原上刮出的巨型動物與幾何圖形,需從空中或觀景塔俯瞰。",
+      "latlon": [
+        -14.739,
+        -75.13
+      ],
+      "image": "PE-l-nazca.jpg"
+    },
+    {
+      "zh": "庫斯科古城",
+      "en": "Cusco",
+      "note": "前印加帝國首都,西班牙教堂建在印加石牆之上,是前往聖谷與馬丘比丘的門戶。",
+      "latlon": [
+        -13.5183,
+        -71.9781
+      ]
+    },
+    {
+      "zh": "的的喀喀湖烏羅斯浮島",
+      "en": "Uros Islands, Lake Titicaca",
+      "note": "世界最高的通航大湖,烏羅斯人以蘆葦編成人工浮島居住至今。",
+      "latlon": [
+        -15.826,
+        -69.968
+      ]
+    },
+    {
+      "zh": "彩虹山",
+      "en": "Vinicunca (Rainbow Mountain)",
+      "note": "庫斯科東南的高山,礦物層理形成彩色條紋,海拔逾五千公尺。",
+      "latlon": [
+        -13.871,
+        -71.303
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "帕查庫特克",
+      "en": "Pachacuti",
+      "note": "十五世紀印加君主,將庫斯科小邦擴張成龐大帝國並重建都城。"
+    },
+    {
+      "zh": "阿塔瓦爾帕",
+      "en": "Atahualpa",
+      "note": "最後一位掌權的印加君主,一五三三年被西班牙人處死。"
+    },
+    {
+      "zh": "圖帕克·阿馬魯二世",
+      "en": "Túpac Amaru II",
+      "note": "一七八〇年領導反抗西班牙的大規模原住民起事,失敗後遭處決。"
+    },
+    {
+      "zh": "馬里奧·巴爾加斯·尤薩",
+      "en": "Mario Vargas Llosa",
+      "note": "小說家,拉丁美洲文學爆炸代表人物,二〇一〇年獲諾貝爾文學獎。"
+    },
+    {
+      "zh": "哈維爾·佩雷斯·德奎利亞爾",
+      "en": "Javier Pérez de Cuéllar",
+      "note": "外交官,一九八二至一九九一年出任聯合國秘書長。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "五到九月的旱季庫斯科與聖谷",
+      "note": "高原少雨、步道穩定,適合走印加古道、參觀聖谷市集與鹽田,行前需在庫斯科停留一兩天適應高度。"
+    },
+    {
+      "zh": "六到八月的科爾卡峽谷",
+      "note": "阿雷基帕出發的深谷,清晨在十字架觀景台看安地斯神鷲乘氣流盤旋,沿途有溫泉與梯田村落。"
+    },
+    {
+      "zh": "五到十月的亞馬遜叢林",
+      "note": "從馬爾多納多港或伊基托斯進入,水位較低、步道好走,可看粉紅河豚、猴群與金剛鸚鵡黏土崖。"
+    }
+  ],
+  "events": [
+    {
+      "year": -3000,
+      "zh": "卡拉爾-蘇佩文明在中央海岸興起,是美洲最早的複雜社會之一。"
+    },
+    {
+      "year": 1438,
+      "zh": "帕查庫特克即位,印加帝國大舉擴張。"
+    },
+    {
+      "year": 1532,
+      "zh": "皮薩羅在卡哈馬卡俘虜印加君主阿塔瓦爾帕。"
+    },
+    {
+      "year": 1780,
+      "zh": "圖帕克·阿馬魯二世領導大規模原住民起事。"
+    },
+    {
+      "year": 1824,
+      "zh": "阿亞庫喬戰役,西屬南美獨立確立。"
+    },
+    {
+      "year": 1879,
+      "zh": "太平洋戰爭爆發,秘魯戰後失去塔拉帕卡。"
+    },
+    {
+      "year": 2000,
+      "zh": "藤森政權在貪腐醜聞中垮台。"
+    }
+  ],
+  "souvenirs": [
+    {
+      "zh": "羊駝毛織品",
+      "note": "羊駝毛圍巾與披風,認明 baby alpaca 標籤者品質較佳。"
+    },
+    {
+      "zh": "印加可樂與皮斯可",
+      "note": "亮黃色的國民汽水與白蘭地類蒸餾酒,超市可買,皮斯可注意托運。"
+    },
+    {
+      "zh": "雷塔布洛木盒神龕",
+      "note": "阿亞庫喬手工彩繪的多層小木櫃,呈現節慶與鄉村場景。"
+    },
+    {
+      "zh": "精品可可與巧克力",
+      "note": "秘魯是精品可可產地,庫斯科與利馬有多家 bean-to-bar 品牌。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "庫斯科＋馬丘比丘",
+        "days": "5 天",
+        "note": "台灣多經美國轉利馬再飛庫斯科。先在庫斯科適應高度、逛聖谷,搭觀光火車到熱水鎮,隔天一早登馬丘比丘。"
+      },
+      {
+        "zh": "秘魯經典南環",
+        "days": "10–12 天",
+        "note": "利馬、帕拉卡斯與納斯卡線、阿雷基帕與科爾卡峽谷、庫斯科與聖谷、的的喀喀湖普諾,巴士與國內線並用。"
+      },
+      {
+        "zh": "利馬美食與周邊",
+        "days": "3–4 天",
+        "note": "適合轉機停留,吃遍檸檬醃生魚與名店,走米拉弗洛雷斯海崖、巴蘭科藝術區,一天到帕拉卡斯看鳥島。"
+      },
+      {
+        "zh": "亞馬遜雨林生態",
+        "days": "4 天",
+        "note": "從馬爾多納多港轉船進生態旅館,安排夜間找凱門鱷、黏土崖賞鸚鵡與樹冠層吊橋。"
+      },
+      {
+        "zh": "印加古道健行",
+        "days": "4–5 天",
+        "note": "經典四天路線需數月前抽名額,翻越死婦隘口,最後從太陽門走進馬丘比丘;體力有限可改走短版兩天。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "瓦拉斯與白色山脈",
+        "note": "布蘭卡山脈的高山湖泊與六千公尺雪峰,69 號湖與聖克魯茲環線是安地斯健行者的私房地。"
+      },
+      {
+        "zh": "北部莫切金字塔之路",
+        "note": "特魯希略與奇克拉約一帶的太陽月亮神廟、希潘王墓與昌昌泥城,遊客遠少於南部。"
+      },
+      {
+        "zh": "亞馬遜源頭伊基托斯",
+        "note": "無公路相連、只能搭飛機或船抵達的雨林大城,搭慢船深入保護區看巨睡蓮與河豚。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "PE-a-llama.jpg",
+      "title": "Llama on Machu Picchu",
+      "author": "Alexandre Buisse (Nattfodd)",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Llama_on_Machu_Picchu.jpg"
+    },
+    {
+      "file": "PE-a-alpaca.jpg",
+      "title": "National Alpaca Day, Peru",
+      "author": "Elwinlhq",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Dia_Nacional_de_la_Alpaca_01.jpg"
+    },
+    {
+      "file": "PE-a-vicuna.jpg",
+      "title": "Vicuña",
+      "author": "Vera & Jean-Christophe",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Vicu%C3%B1a.jpg"
+    },
+    {
+      "file": "PE-a-cotr.jpg",
+      "title": "Andean cock-of-the-rock, male",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Andean_cock-of-the-rock_(Rupicola_peruvianus_sanguinolentus)_male_Antioquia_2.jpg"
+    },
+    {
+      "file": "PE-a-bear.jpg",
+      "title": "Spectacled bear",
+      "author": "Wilfredor",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tremarctos_ornatus_in_Jardim_Zool%C3%B3gico_de_Curitiba.jpg"
+    },
+    {
+      "file": "PE-f-ceviche.jpg",
+      "title": "Ceviche peruano",
+      "author": "MiguelAlanCS",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ceviche_peruano.jpg"
+    },
+    {
+      "file": "PE-f-lomo.jpg",
+      "title": "Lomo saltado peruano",
+      "author": "Miguel Alan Córdova Silva",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Lomo_saltado_peruano.jpg"
+    },
+    {
+      "file": "PE-f-pollo.jpg",
+      "title": "Pollo a la brasa peruano",
+      "author": "Manuel González Olaechea",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pollo_a_la_brasa_peruano.jpg"
+    },
+    {
+      "file": "PE-f-huancaina.jpg",
+      "title": "Papa a la Huancaína",
+      "author": "tacowitte",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Papa_a_la_Huanca%C3%ADna.jpg"
+    },
+    {
+      "file": "PE-f-anticucho.jpg",
+      "title": "Anticucho al plato",
+      "author": "Chalisimo5",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Anticucho_al_plato.jpg"
+    },
+    {
+      "file": "PE-l-machu.jpg",
+      "title": "Machu Picchu with Huayna Picchu",
+      "author": "PIERRE ANDRE LECLERCQ",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Machu_Picchu_with_Huayna_Picchu_P%C3%A9rou_(3).jpg"
+    },
+    {
+      "file": "PE-l-nazca.jpg",
+      "title": "Nazca Lines Hummingbird",
+      "author": "Unukorno",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Nazca_Lines_Hummingbird_(cropped).jpg"
+    }
+  ],
+  "code": "PE"
+}

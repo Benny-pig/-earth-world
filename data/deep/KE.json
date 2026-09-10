@@ -1,0 +1,356 @@
+{
+  "name_zh": "肯亞",
+  "name_en": "Kenya",
+  "summary": "位於東非、赤道橫貫,東濱印度洋,大裂谷縱貫全境,擁有雪頂的肯亞山與眾多裂谷湖泊。人類化石在圖爾卡納盆地大量出土,使其有「人類搖籃」之稱;野生動物大遷徙、東非鐵路史與斯瓦希里海岸文化是主要特色。",
+  "founding": [
+    "圖爾卡納湖周邊出土大量早期人族化石,包括直立人的「圖爾卡納男孩」骨骼,年代跨越數百萬年,使東非裂谷成為研究人類演化的重要現場。此後庫希特語、尼羅語與班圖語族群先後遷入,形成今日多元的民族結構。",
+    "約自西元一世紀起,印度洋季風貿易帶動沿海發展,蒙巴薩、馬林迪、拉穆等斯瓦希里城邦以象牙、黃金與奴隸貿易與阿拉伯、波斯及印度往來,伊斯蘭教與斯瓦希里語文化在海岸紮根。一四九八年達伽馬船隊抵達,葡萄牙隨後在蒙巴薩建耶穌堡;十八世紀阿曼蘇丹掌控海岸。",
+    "十九世紀末列強瓜分非洲,英國於一八九五年設立東非保護地,並修築從蒙巴薩通往維多利亞湖的烏干達鐵路。鐵路沿線發展出內羅畢,白人移民進入中部高地經營大農場,大量非洲人失去傳統土地,埋下日後衝突的根源。",
+    "一九二〇年保護地改制為肯亞殖民地。土地與政治權利的不滿在一九五二年爆發為「茅茅」起事,主要由基庫尤人參與,殖民政府宣布緊急狀態、大規模拘留與鎮壓,衝突持續到一九五〇年代末。",
+    "一九六三年十二月十二日肯亞獨立,喬莫·肯雅塔先後出任總理與總統,肯亞非洲民族聯盟(KANU)長期一黨獨大。一九七八年莫伊接任,執政二十四年,一九九一年在內外壓力下恢復多黨制。",
+    "二〇〇七年總統大選後爆發族群衝突,造成上千人死亡與數十萬人流離。二〇一〇年通過新憲法,設立四十七個郡的地方分權制度,並強化人權與制衡機制。近年肯亞以行動支付 M-Pesa 與科技創業聞名,也面臨公共債務與乾旱的挑戰。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "肯亞共和國",
+    "area_km2": 580367,
+    "languages": [
+      "斯瓦希里語",
+      "英語"
+    ],
+    "religion": "以基督宗教為主,沿海地區伊斯蘭教信眾較多",
+    "currency": "肯亞先令(KES)",
+    "government": "總統共和(設四十七郡地方分權)"
+  },
+  "animals": [
+    {
+      "zh": "獅子",
+      "en": "Lion",
+      "note": "馬賽馬拉與察沃等保護區的旗艦物種,常見於草原晨昏狩獵。",
+      "image": "KE-a-lion.jpg"
+    },
+    {
+      "zh": "非洲象",
+      "en": "African elephant",
+      "note": "安波塞利以吉力馬札羅山為背景的象群最經典,乾季集中於沼澤區。",
+      "image": "KE-a-elephant.jpg"
+    },
+    {
+      "zh": "馬賽長頸鹿",
+      "en": "Masai giraffe",
+      "note": "斑塊邊緣呈鋸齒狀的長頸鹿亞種,分布於肯亞南部與坦尚尼亞。",
+      "image": "KE-a-giraffe.jpg"
+    },
+    {
+      "zh": "角馬(牛羚)",
+      "en": "Blue wildebeest",
+      "note": "每年在塞倫蓋提與馬賽馬拉之間循環遷徙,渡馬拉河場面壯觀。",
+      "image": "KE-a-wildebeest.jpg"
+    },
+    {
+      "zh": "小紅鶴",
+      "en": "Lesser flamingo",
+      "note": "曾在納庫魯湖等鹼水湖聚成數十萬隻的粉紅色湖岸。",
+      "image": "KE-a-flamingo.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "玉米糕",
+      "en": "Ugali",
+      "note": "玉米粉加水煮成的固體團,是主食,用手捏取沾菜配肉。",
+      "image": "KE-f-ugali.jpg"
+    },
+    {
+      "zh": "炭烤肉",
+      "en": "Nyama choma",
+      "note": "直譯「燒肉」,多為山羊或牛肉大塊炭烤,佐洋蔥番茄生菜。",
+      "image": "KE-f-nyama.jpg"
+    },
+    {
+      "zh": "燴羽衣甘藍",
+      "en": "Sukuma wiki",
+      "note": "切絲的羽衣甘藍加洋蔥快炒,是最普遍的配菜,名稱意為「撐過一週」。",
+      "image": "KE-f-sukuma.jpg"
+    },
+    {
+      "zh": "香料飯",
+      "en": "Pilau",
+      "note": "沿海斯瓦希里料理,米飯與肉用小豆蔻、丁香、肉桂等香料同煮。",
+      "image": "KE-f-pilau.jpg"
+    },
+    {
+      "zh": "炸麵餅",
+      "en": "Mandazi",
+      "note": "微甜的油炸麵團,常加椰奶或小豆蔻,配茶當早餐或點心。",
+      "image": "KE-f-mandazi.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "馬賽馬拉國家保護區",
+      "en": "Maasai Mara National Reserve",
+      "note": "塞倫蓋提生態系的北端,每年七到十月上百萬角馬渡馬拉河的大遷徙在此上演。",
+      "latlon": [
+        -1.4061,
+        35.0086
+      ],
+      "image": "KE-l-mara.jpg"
+    },
+    {
+      "zh": "肯亞山",
+      "en": "Mount Kenya",
+      "note": "非洲第二高峰,赤道上卻有冰川,國家因它得名,山區列世界遺產。",
+      "latlon": [
+        -0.1522,
+        37.3084
+      ],
+      "image": "KE-l-mtkenya.jpg"
+    },
+    {
+      "zh": "安波塞利國家公園",
+      "en": "Amboseli National Park",
+      "note": "以吉力馬札羅山為背景的大象群觀賞地,乾季動物集中於沼澤區。",
+      "latlon": [
+        -2.6527,
+        37.2606
+      ]
+    },
+    {
+      "zh": "納庫魯湖國家公園",
+      "en": "Lake Nakuru National Park",
+      "note": "大裂谷的鹼水湖,曾聚集數十萬隻紅鶴,也是白犀牛與羅氏長頸鹿的保護區。",
+      "latlon": [
+        -0.3667,
+        36.0833
+      ]
+    },
+    {
+      "zh": "拉穆古城",
+      "en": "Lamu Old Town",
+      "note": "東非保存最完整的斯瓦希里聚落,無汽車、以驢代步,列世界遺產。",
+      "latlon": [
+        -2.2686,
+        40.902
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "喬莫·肯雅塔",
+      "en": "Jomo Kenyatta",
+      "note": "獨立運動領袖,肯亞首任總理與總統,被視為國父。"
+    },
+    {
+      "zh": "丹尼爾·阿拉普·莫伊",
+      "en": "Daniel arap Moi",
+      "note": "第二任總統,執政二十四年,任內肯亞於一九九一年重回多黨制。"
+    },
+    {
+      "zh": "旺加里·馬塔伊",
+      "en": "Wangari Maathai",
+      "note": "環保與人權運動者,創辦綠帶運動,二〇〇四年成為首位獲諾貝爾和平獎的非洲女性。"
+    },
+    {
+      "zh": "恩古吉·瓦·提安哥",
+      "en": "Ngũgĩ wa Thiong'o",
+      "note": "作家,主張以母語基庫尤語寫作,作品批判殖民與威權。"
+    },
+    {
+      "zh": "埃利烏德·基普喬蓋",
+      "en": "Eliud Kipchoge",
+      "note": "馬拉松名將,兩屆奧運金牌,曾在非正式賽事跑進兩小時。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "七到十月的馬賽馬拉大遷徙",
+      "note": "角馬與斑馬群渡馬拉河、鱷魚埋伏的經典畫面多在此時,住保護區內或周邊營地,清晨出車機會最好。"
+    },
+    {
+      "zh": "一到三月的安波塞利與察沃",
+      "note": "短旱季天氣晴朗、塵土較少,吉力馬札羅山常露出雪頂,適合拍大象與雪山同框。"
+    },
+    {
+      "zh": "全年皆宜的拉穆與迪亞尼海岸",
+      "note": "遊獵之後到印度洋岸放鬆,拉穆看斯瓦希里老城與帆船(dhow),迪亞尼有白沙灘與礁岩浮潛。"
+    }
+  ],
+  "events": [
+    {
+      "year": 1498,
+      "zh": "達伽馬船隊抵達馬林迪與蒙巴薩。"
+    },
+    {
+      "year": 1593,
+      "zh": "葡萄牙人在蒙巴薩興建耶穌堡。"
+    },
+    {
+      "year": 1895,
+      "zh": "英國設立東非保護地,隨後修築烏干達鐵路。"
+    },
+    {
+      "year": 1952,
+      "zh": "殖民政府因茅茅起事宣布緊急狀態。"
+    },
+    {
+      "year": 1963,
+      "zh": "肯亞獨立,肯雅塔出任領導人。"
+    },
+    {
+      "year": 1978,
+      "zh": "莫伊接任總統,執政至二〇〇二年。"
+    },
+    {
+      "year": 2010,
+      "zh": "通過新憲法,推動四十七郡地方分權。"
+    }
+  ],
+  "souvenirs": [
+    {
+      "zh": "肯亞 AA 咖啡豆",
+      "note": "高海拔水洗處理、酸香明亮,超市與莊園門市都買得到。"
+    },
+    {
+      "zh": "肯亞紅茶",
+      "note": "產量居世界前列,CTC 碎茶適合做奶茶,包裝輕便。"
+    },
+    {
+      "zh": "馬賽披毯與串珠",
+      "note": "紅底格紋毛毯(shuka)與幾何串珠飾品,市集可議價。"
+    },
+    {
+      "zh": "皂石雕刻",
+      "note": "基西地區出產的軟石動物與餐具,色澤溫潤、重量偏重。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "馬賽馬拉遊獵",
+        "days": "3–4 天",
+        "note": "台灣多經曼谷、杜哈或阿迪斯阿貝巴轉機到內羅畢,再搭輕型飛機進馬拉,每天早晚各一次 game drive,旺季務必早訂。"
+      },
+      {
+        "zh": "肯亞經典環線",
+        "days": "7–9 天",
+        "note": "內羅畢出發,串連安波塞利、奈瓦夏湖、納庫魯湖與馬賽馬拉,多為四驅車陸路移動,路況顛簸。"
+      },
+      {
+        "zh": "遊獵＋印度洋海岸",
+        "days": "8–10 天",
+        "note": "前段內陸遊獵,後段飛蒙巴薩或迪亞尼,拉穆看古城、海邊住民宿,行程張弛有度。"
+      },
+      {
+        "zh": "內羅畢周邊",
+        "days": "2–3 天",
+        "note": "適合轉機停留,看長頸鹿中心、大象孤兒院與內羅畢國家公園,再逛卡倫故居與市集。"
+      },
+      {
+        "zh": "安波塞利＋察沃",
+        "days": "4–5 天",
+        "note": "從內羅畢南下,先安波塞利拍雪山大象,再進東西察沃看紅土象群與辛巴丘,適合第二次來的旅客。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "圖爾卡納湖與北部邊疆",
+        "note": "「翡翠海」般的鹼水湖與化石遺址,路途遙遠、需嚮導與補給,可搭配部落文化節。"
+      },
+      {
+        "zh": "肯亞山攀登",
+        "note": "走席立蒙或那羅摩魯路線,三到四天登上點雷納納(約四九八五公尺),看高山巨型半邊蓮與冰斗湖。"
+      },
+      {
+        "zh": "查魯河與桑布魯",
+        "note": "中北部半乾旱保護區,可看網紋長頸鹿、細紋斑馬與長頸羚等「北方特有種」。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "KE-a-lion.jpg",
+      "title": "Lions family portrait, Masai Mara",
+      "author": "Benh LIEU SONG",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Lions_Family_Portrait_Masai_Mara.jpg"
+    },
+    {
+      "file": "KE-a-elephant.jpg",
+      "title": "Kilimanjaro elephant, Amboseli",
+      "author": "Lafleursauvage",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Amboseli_Park_-_Kilimanjaro_elephant.jpg"
+    },
+    {
+      "file": "KE-a-giraffe.jpg",
+      "title": "Masai giraffe, Masai Mara",
+      "author": "Esin Üstün",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Masai_Giraffe_-_Masai_Mara_-_Kenya_(20495769970).jpg"
+    },
+    {
+      "file": "KE-a-wildebeest.jpg",
+      "title": "Wildebeest in Maasai Mara",
+      "author": "Daniel Case",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Wildebeest_and_Thomson_gazelle_in_Maasai_Mara,_Kenya.jpg"
+    },
+    {
+      "file": "KE-a-flamingo.jpg",
+      "title": "Lesser flamingo, Lake Nakuru",
+      "author": "Thomas Fuhrmann",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Lake_Nakuru_National_Park_02_-_Lesser_Flamingo_(Phoeniconaias_minor).jpg"
+    },
+    {
+      "file": "KE-f-ugali.jpg",
+      "title": "Ugali & sukuma wiki",
+      "author": "Paresh Jai",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ugali_&_Sukuma_Wiki.jpg"
+    },
+    {
+      "file": "KE-f-nyama.jpg",
+      "title": "Nyama choma in Nairobi",
+      "author": "Kengitau254",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Nyama_choma_in_nairobi_kenya.jpg"
+    },
+    {
+      "file": "KE-f-sukuma.jpg",
+      "title": "Ugali with sukuma wiki and kale",
+      "author": "Catherine Amia",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Posho_(Ugali),_Sukuma_wiki_+_kale.jpg"
+    },
+    {
+      "file": "KE-f-pilau.jpg",
+      "title": "Pilau food in Kenya",
+      "author": "Cmwaura",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pilau_Food_in_Kenya.jpg"
+    },
+    {
+      "file": "KE-f-mandazi.jpg",
+      "title": "Tea and mandazi",
+      "author": "Kengee8",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tea_and_mandazi.jpg"
+    },
+    {
+      "file": "KE-l-mara.jpg",
+      "title": "Wildebeest herd, Maasai Mara",
+      "author": "Daniel Case",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Wildebeest_herd_on_hillside,_Maasai_Mara,_Kenya.jpg"
+    },
+    {
+      "file": "KE-l-mtkenya.jpg",
+      "title": "Mount Kenya peaks",
+      "author": "Galkey",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mount_Kenya_Peaks.jpg"
+    }
+  ],
+  "code": "KE"
+}

@@ -1,0 +1,355 @@
+{
+  "name_zh": "亞美尼亞",
+  "name_en": "Armenia",
+  "summary": "位於南高加索的內陸山國,平均海拔高、地形崎嶇,聖山亞拉拉特雖已在土耳其境內,仍是民族象徵。西元三〇一年成為首個以基督教為國教的國家,擁有眾多中世紀修道院。與亞塞拜然之間的納戈爾諾-卡拉巴赫爭議延續三十餘年,二〇二三年當地亞美尼亞人政權解散。",
+  "founding": [
+    "亞美尼亞高原在西元前九至前六世紀是烏拉爾圖王國的核心,環繞凡湖建立要塞與灌溉系統,今日葉里溫的埃里布尼要塞即建於西元前七八二年。此後亞美尼亞人逐漸成為高原的主要族群。",
+    "亞美尼亞王國在西元前一世紀提格蘭大帝時達到最大版圖,勢力一度從裏海延伸到地中海,但很快被夾在羅馬與帕提亞之間。西元三〇一年,國王梯里達底三世在啟蒙者聖格里高利感召下受洗,亞美尼亞成為世界上第一個以基督教為國教的國家。",
+    "約四〇五年,梅斯羅布·馬什托茨創制亞美尼亞字母,使聖經與典籍得以用本族語言書寫,對民族認同影響深遠。四五一年的阿瓦拉伊爾戰役,亞美尼亞人為保有信仰對抗薩珊波斯,雖敗猶榮,後來換得宗教寬容。",
+    "中世紀亞美尼亞先後受拜占庭、阿拉伯與塞爾柱統治;九至十一世紀巴格拉圖尼王朝以阿尼為都,號稱「千座教堂之城」。十二至十四世紀在地中海岸另有奇里乞亞的亞美尼亞王國。此後高原長期被鄂圖曼與波斯(後為俄國)瓜分,一八二八年東亞美尼亞割讓給俄羅斯帝國。",
+    "第一次世界大戰期間,鄂圖曼帝國境內的亞美尼亞人自一九一五年起遭到大規模驅逐與屠殺,死亡人數以百萬計,多數國家與學界稱之為種族滅絕,土耳其則否認此一定性。一九一八年戰後短暫成立第一共和國,一九二〇年被蘇維埃化,成為蘇聯的亞美尼亞加盟共和國。",
+    "一九八八年斯皮塔克大地震造成數萬人罹難;同年圍繞納戈爾諾-卡拉巴赫的衝突升溫,一九九二至一九九四年與亞塞拜然爆發全面戰爭。一九九一年九月亞美尼亞恢復獨立。二〇一八年的「天鵝絨革命」使帕辛揚上台;二〇二〇年的四十四日戰爭與二〇二三年亞塞拜然收復卡拉巴赫全境,使當地亞美尼亞人口大規模遷離。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "亞美尼亞共和國",
+    "area_km2": 29743,
+    "languages": [
+      "亞美尼亞語"
+    ],
+    "religion": "以亞美尼亞使徒教會為主",
+    "currency": "德拉姆(AMD)",
+    "government": "議會共和"
+  },
+  "animals": [
+    {
+      "zh": "亞美尼亞盤羊",
+      "en": "Armenian mouflon",
+      "note": "亞美尼亞與周邊山區的野綿羊,雄性有捲曲大角,是紅皮書物種。"
+    },
+    {
+      "zh": "大角野山羊(貝索爾)",
+      "en": "Bezoar goat",
+      "note": "家山羊的野生祖先,善於在陡崖攀爬,分布於亞美尼亞南部。",
+      "image": "AM-a-bezoar.jpg"
+    },
+    {
+      "zh": "高加索豹",
+      "en": "Caucasian leopard",
+      "note": "花豹的高加索亞種,亞美尼亞南部有少量個體,是重點保育對象。"
+    },
+    {
+      "zh": "敘利亞棕熊",
+      "en": "Syrian brown bear",
+      "note": "體色偏淺的棕熊亞種,棲息山區森林,常因覓食進入果園。",
+      "image": "AM-a-bear.jpg"
+    },
+    {
+      "zh": "亞美尼亞鷗",
+      "en": "Armenian gull",
+      "note": "繁殖於賽凡湖等高山湖泊的鷗類,分布局限於高加索到中東一帶。"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "薄餅",
+      "en": "Lavash",
+      "note": "在坑窯(tonir)內壁烤製的大張薄麵餅,可捲食物、久放,列非物質文化遺產。",
+      "image": "AM-f-lavash.jpg"
+    },
+    {
+      "zh": "烤肉串",
+      "en": "Khorovats",
+      "note": "亞美尼亞式炭烤,豬、羊或牛肉與蔬菜分開串烤,是聚會主角。",
+      "image": "AM-f-khorovats.jpg"
+    },
+    {
+      "zh": "葡萄葉飯捲",
+      "en": "Tolma (dolma)",
+      "note": "葡萄葉或高麗菜葉包米與絞肉,夏季也用甜椒、番茄等蔬菜作「夏季 tolma」。",
+      "image": "AM-f-tolma.jpg"
+    },
+    {
+      "zh": "麥仁燉肉",
+      "en": "Harissa",
+      "note": "去殼小麥與雞肉長時間熬到糊狀的濃粥,是傳統節慶與救濟食物。"
+    },
+    {
+      "zh": "核桃酥餅",
+      "en": "Gata",
+      "note": "加了奶酥餡的圓形甜麵包,不同城鎮有各自的花紋與做法。",
+      "image": "AM-f-gata.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "埃奇米亞津主教座堂",
+      "en": "Etchmiadzin Cathedral",
+      "note": "亞美尼亞使徒教會的總部,始建於四世紀,被視為世界最古老的主教座堂之一。",
+      "latlon": [
+        40.1622,
+        44.2914
+      ],
+      "image": "AM-l-etchmiadzin.jpg"
+    },
+    {
+      "zh": "格加爾德修道院",
+      "en": "Geghard Monastery",
+      "note": "部分殿堂直接鑿入岩壁的中世紀修道院,音響效果極佳,列世界遺產。",
+      "latlon": [
+        40.1397,
+        44.818
+      ],
+      "image": "AM-l-geghard.jpg"
+    },
+    {
+      "zh": "加尼神廟",
+      "en": "Temple of Garni",
+      "note": "一世紀的希臘羅馬式列柱神廟,是高加索唯一保存的異教時期建築。",
+      "latlon": [
+        40.1122,
+        44.73
+      ],
+      "image": "AM-l-garni.jpg"
+    },
+    {
+      "zh": "霍瑞維拉修道院",
+      "en": "Khor Virap",
+      "note": "緊鄰土耳其邊界的修道院,以亞拉拉特山為背景,傳為聖格里高利被囚之地。",
+      "latlon": [
+        39.8781,
+        44.5744
+      ],
+      "image": "AM-l-khorvirap.jpg"
+    },
+    {
+      "zh": "塔特夫修道院",
+      "en": "Tatev Monastery",
+      "note": "九世紀建於峽谷邊的修道院,可搭全長五公里餘的「塔特夫之翼」纜車前往。",
+      "latlon": [
+        39.3797,
+        46.2503
+      ],
+      "image": "AM-l-tatev.jpg"
+    }
+  ],
+  "people": [
+    {
+      "zh": "提格蘭大帝",
+      "en": "Tigranes the Great",
+      "note": "西元前一世紀君主,將亞美尼亞王國推向最大版圖。",
+      "image": "AM-p-tigranes.jpg"
+    },
+    {
+      "zh": "梅斯羅布·馬什托茨",
+      "en": "Mesrop Mashtots",
+      "note": "約四〇五年創制亞美尼亞字母的學者與神職人員。"
+    },
+    {
+      "zh": "科米塔斯",
+      "en": "Komitas",
+      "note": "作曲家與民族音樂學者,採集整理亞美尼亞民謠,被視為現代亞美尼亞音樂之父。"
+    },
+    {
+      "zh": "阿拉姆·哈察都量",
+      "en": "Aram Khachaturian",
+      "note": "作曲家,《劍舞》與芭蕾《斯巴達克斯》聞名於世。"
+    },
+    {
+      "zh": "夏爾·阿茲納吾爾",
+      "en": "Charles Aznavour",
+      "note": "法國-亞美尼亞裔歌手與演員,二十世紀最具代表性的法語香頌歌手之一。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "五到六月或九到十月的葉里溫",
+      "note": "春秋氣候溫和,適合逛共和廣場、階梯藝廊與市集,一日往返格加爾德、加尼與埃奇米亞津。"
+    },
+    {
+      "zh": "七到八月的賽凡湖與迪利然",
+      "note": "夏季高原涼爽,可在海拔約一千九百公尺的賽凡湖畔戲水、吃烤鱒魚,再到有「小瑞士」之稱的迪利然森林健行。"
+    },
+    {
+      "zh": "九到十月的南部塔特夫",
+      "note": "秋色正濃時搭「塔特夫之翼」纜車跨越峽谷,參觀修道院並順訪古老的阿雷尼葡萄酒莊。"
+    }
+  ],
+  "events": [
+    {
+      "year": -782,
+      "zh": "烏拉爾圖王建立埃里布尼要塞,是葉里溫的前身。"
+    },
+    {
+      "year": 301,
+      "zh": "亞美尼亞成為首個以基督教為國教的國家。"
+    },
+    {
+      "year": 405,
+      "zh": "梅斯羅布·馬什托茨創制亞美尼亞字母。"
+    },
+    {
+      "year": 1045,
+      "zh": "巴格拉圖尼王朝首都阿尼陷落。"
+    },
+    {
+      "year": 1828,
+      "zh": "東亞美尼亞割讓給俄羅斯帝國。"
+    },
+    {
+      "year": 1915,
+      "zh": "鄂圖曼統治下的亞美尼亞人遭大規模驅逐與屠殺。"
+    },
+    {
+      "year": 1991,
+      "zh": "亞美尼亞恢復獨立。"
+    }
+  ],
+  "souvenirs": [
+    {
+      "zh": "阿雷尼葡萄酒與白蘭地",
+      "note": "亞美尼亞白蘭地(如 ArArAt)最有名,紅酒來自古老產區。"
+    },
+    {
+      "zh": "乾果與水果軟糖(sujukh)",
+      "note": "杏桃、無花果與裹核桃的葡萄汁軟條,市集秤重販售。"
+    },
+    {
+      "zh": "黑曜石飾品與十字架石拓",
+      "note": "火山黑曜石墜子,以及仿中世紀十字架石(khachkar)的浮雕擺件。"
+    },
+    {
+      "zh": "掐絲琺瑯與地毯",
+      "note": "手工 minankari 飾品與小塊亞美尼亞地毯,圖案常見石榴。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "葉里溫與周邊",
+        "days": "4 天",
+        "note": "台灣多經杜哈、杜拜或莫斯科轉機。市區看共和廣場、種族滅絕紀念館與白蘭地廠,一天跑格加爾德、加尼與埃奇米亞津,一天到霍瑞維拉眺望亞拉拉特山。"
+      },
+      {
+        "zh": "亞美尼亞修道院環線",
+        "days": "7–8 天",
+        "note": "葉里溫進出,串連賽凡湖、迪利然、哈格帕特與薩納因、塔特夫與阿雷尼酒鄉,多為包車或參團。"
+      },
+      {
+        "zh": "亞美尼亞＋喬治亞雙國",
+        "days": "10–12 天",
+        "note": "葉里溫與第比利斯各進出一次,陸路經北部修道院與賽凡湖,兩地拉車約六小時。"
+      },
+      {
+        "zh": "葡萄酒與美食",
+        "days": "5 天",
+        "note": "以葉里溫與阿雷尼為據點,參觀鳥洞(Areni-1)遺址與酒莊、學做 tolma 與 lavash,秋天遇採收季最佳。"
+      },
+      {
+        "zh": "高加索健行(迪利然與南部)",
+        "days": "6 天",
+        "note": "走「跨高加索步道」迪利然段,搭配賽凡半島與塔特夫周邊的峽谷路線。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "瓦約茨佐爾峽谷與岩鑿聚落",
+        "note": "南部偏遠峽谷與岩洞村,少有旅遊團,適合自駕探訪。"
+      },
+      {
+        "zh": "久姆里的重建與工藝",
+        "note": "亞美尼亞第二大城,一九八八年地震重創後重建,黑凝灰岩老城與鐵匠、陶藝傳統值得停留。"
+      },
+      {
+        "zh": "洛里峽谷雙修道院",
+        "note": "哈格帕特與薩納因兩座世界遺產修道院隔谷相望,搭配阿拉維爾迪的鐵索橋與峽谷風光。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "AM-a-bezoar.jpg",
+      "title": "Bezoar ibex, native to Armenia",
+      "author": "gailhampshire",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bezoar_ibex_are_a_subspecies_of_the_wild_goat,_and_native_to_Armenia.jpg"
+    },
+    {
+      "file": "AM-a-bear.jpg",
+      "title": "Syrian brown bear (specimen)",
+      "author": "باسم",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Taxidermized_Syrian_Brown_Bear_AUB.jpg"
+    },
+    {
+      "file": "AM-f-lavash.jpg",
+      "title": "The process of lavash baking",
+      "author": "Avetisyan Ani",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:The_process_of_lavash_baking_02.jpg"
+    },
+    {
+      "file": "AM-f-khorovats.jpg",
+      "title": "Armenian khorovats",
+      "author": "Armineaghayan",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Armenian_khorovats_barbecue_on_grill.jpg"
+    },
+    {
+      "file": "AM-f-tolma.jpg",
+      "title": "Armenian dolma",
+      "author": "Արարատ Թրվանց",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Armenian_dolma_01.jpg"
+    },
+    {
+      "file": "AM-f-gata.jpg",
+      "title": "Armenian gata in slices",
+      "author": "Armineaghayan",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Armenian_Gata_in_slices_(1).jpg"
+    },
+    {
+      "file": "AM-l-etchmiadzin.jpg",
+      "title": "Etchmiadzin Cathedral",
+      "author": "Radosław Botev",
+      "license": "CC BY 3.0 pl",
+      "source": "https://commons.wikimedia.org/wiki/File:Etchmiadzin_Cathedral_Armenia.jpg"
+    },
+    {
+      "file": "AM-l-geghard.jpg",
+      "title": "Geghard Monastery",
+      "author": "Vyacheslav Argenberg",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Geghard_Monastery,_Armenia.jpg"
+    },
+    {
+      "file": "AM-l-garni.jpg",
+      "title": "Garni Temple",
+      "author": "Armenak Margarian",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Garni_Temple_18-11-2010_v2.jpg"
+    },
+    {
+      "file": "AM-l-khorvirap.jpg",
+      "title": "Khor Virap Monastery and Mount Ararat",
+      "author": "Andrew Behesnilian",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Khor_Virap_Monastery_and_Mount_Ararat,_Armenia.jpg"
+    },
+    {
+      "file": "AM-l-tatev.jpg",
+      "title": "Tatev Monastery",
+      "author": "Armenak Margarian",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tatev_Monastery_23-06-2018.jpg"
+    },
+    {
+      "file": "AM-p-tigranes.jpg",
+      "title": "Coin of Tigranes the Great",
+      "author": "Yerevantsi",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tigranes_coin_Vienna-1.jpg"
+    }
+  ],
+  "code": "AM"
+}

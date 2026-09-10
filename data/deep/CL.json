@@ -1,0 +1,355 @@
+{
+  "name_zh": "智利",
+  "name_en": "Chile",
+  "summary": "南美洲西南緣的狹長國家,南北長逾四千公里、東西平均不到兩百公里,夾在安地斯山與太平洋之間。地貌從世界最乾的阿他加馬沙漠一路過渡到峽灣、冰川與南極,銅礦出口與穩定體制使其成為區域內人均所得最高的國家之一。",
+  "founding": [
+    "智利中部與南部自古是馬普切人(阿勞卡尼亞人)的家園,他們以農耕和畜牧維生,社會組織鬆散但善戰;北部乾燥地帶則有受印加影響的阿他加馬與艾馬拉聚落。十五世紀印加帝國南擴至中部的邁波河一帶,但在馬普切人的抵抗下未能再南進。",
+    "一五二〇年麥哲倫船隊通過南端海峽,一五四〇年代西班牙人瓦爾迪維亞率隊南下,一五四一年建立聖地牙哥。西班牙在中央谷地站穩腳跟,但與馬普切人之間爆發長達三世紀的「阿勞卡尼亞戰爭」,比奧比奧河以南長期不受殖民政府控制。",
+    "殖民時期的智利是秘魯總督轄區的邊陲軍事前線,經濟以農牧和小規模採礦為主。一八一〇年九月十八日,聖地牙哥成立第一屆自治政府委員會,展開獨立進程;歷經挫敗與「重新征服」後,奧希金斯與聖馬丁的聯軍於一八一八年的邁普戰役確立獨立。",
+    "建國初期由奧希金斯短暫獨裁,隨後保守派主導,一八三三年憲法建立中央集權的共和體制,政局相對穩定。一八七九至一八八三年的太平洋戰爭中,智利擊敗秘魯與玻利維亞,取得北部富含硝石的塔拉帕卡與安托法加斯塔,國土大幅北擴,並讓玻利維亞失去出海口。",
+    "硝石與後來的銅礦帶動經濟,也造就礦區勞工運動。二十世紀政黨政治發展成熟,一九七〇年阿葉德以社會主義綱領當選總統。一九七三年九月十一日皮諾契特領導軍事政變,阿葉德身亡,軍政府統治至一九九〇年,期間推行市場化改革,亦發生嚴重人權侵害。",
+    "一九八八年公投否決皮諾契特續任,一九九〇年恢復民主,由中間偏左的政黨聯盟長期執政。此後智利以自由貿易與財政紀律著稱,但貧富差距與教育、退休金制度爭議引發二〇一九年大規模示威,並啟動兩次制憲公投,均未通過,現行仍沿用一九八〇年憲法的修正版。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "智利共和國",
+    "area_km2": 756102,
+    "languages": [
+      "西班牙語"
+    ],
+    "religion": "以天主教為主,福音派成長快速,無國教",
+    "currency": "智利披索(CLP)",
+    "government": "單一制總統共和"
+  },
+  "animals": [
+    {
+      "zh": "安地斯神鷲",
+      "en": "Andean condor",
+      "note": "智利國徽上的猛禽,常見於安地斯山高處的上升氣流中盤旋。",
+      "image": "CL-a-condor.jpg"
+    },
+    {
+      "zh": "原駝",
+      "en": "Guanaco",
+      "note": "百內國家公園草原上最常見的大型草食動物,是美洲獅的主要獵物。",
+      "image": "CL-a-guanaco.jpg"
+    },
+    {
+      "zh": "美洲獅",
+      "en": "Puma",
+      "note": "百內一帶族群密度高,近年成為野生動物攝影與追蹤旅遊的焦點。",
+      "image": "CL-a-puma.jpg"
+    },
+    {
+      "zh": "洪堡企鵝",
+      "en": "Humboldt penguin",
+      "note": "沿洪堡涼流分布,在中北部島嶼與奇洛埃島外海有繁殖群。",
+      "image": "CL-a-penguin.jpg"
+    },
+    {
+      "zh": "普度鹿",
+      "en": "Southern pudú",
+      "note": "世界最小的鹿之一,肩高約四十公分,棲息南部溫帶雨林。",
+      "image": "CL-a-pudu.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "玉米派",
+      "en": "Pastel de choclo",
+      "note": "甜玉米泥鋪在雞肉、絞肉、橄欖與水煮蛋上焗烤的夏季主菜。",
+      "image": "CL-f-pastel.jpg"
+    },
+    {
+      "zh": "肉餡餅",
+      "en": "Empanada de pino",
+      "note": "烤製的大顆餡餅,內餡是炒洋蔥牛絞肉、葡萄乾與半顆蛋,國慶必吃。",
+      "image": "CL-f-empanada.jpg"
+    },
+    {
+      "zh": "智利熱狗",
+      "en": "Completo",
+      "note": "麵包夾香腸,再堆酪梨泥、番茄丁與美乃滋,份量驚人的國民速食。",
+      "image": "CL-f-completo.jpg"
+    },
+    {
+      "zh": "康吉鰻湯",
+      "en": "Caldillo de congrio",
+      "note": "康吉鰻、馬鈴薯與番茄燉煮的濃湯,聶魯達曾為它寫頌詩。",
+      "image": "CL-f-caldillo.jpg"
+    },
+    {
+      "zh": "庫蘭托",
+      "en": "Curanto",
+      "note": "奇洛埃島的地坑石烤料理,以貝類、肉類與馬鈴薯餅層層堆疊燜熟。",
+      "image": "CL-f-curanto.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "復活節島摩艾",
+      "en": "Moai, Rapa Nui",
+      "note": "拉帕努伊人在十三至十六世紀雕刻的巨型石像,現存近千尊。",
+      "latlon": [
+        -27.1256,
+        -109.2769
+      ],
+      "image": "CL-l-moai.jpg"
+    },
+    {
+      "zh": "月亮谷",
+      "en": "Valle de la Luna",
+      "note": "聖佩德羅德阿他加馬附近的鹽岩風蝕地形,以日落時的色彩變化聞名。",
+      "latlon": [
+        -22.9231,
+        -68.2703
+      ],
+      "image": "CL-l-luna.jpg"
+    },
+    {
+      "zh": "百內國家公園",
+      "en": "Torres del Paine",
+      "note": "巴塔哥尼亞的花崗岩尖峰、冰川與藍綠湖泊,W 與 O 環線是健行聖地。",
+      "latlon": [
+        -50.9423,
+        -73.0403
+      ]
+    },
+    {
+      "zh": "瓦爾帕萊索",
+      "en": "Valparaíso",
+      "note": "太平洋岸的港市,彩色房屋沿陡坡而建,老城區與纜索升降機列世界遺產。",
+      "latlon": [
+        -33.0472,
+        -71.6127
+      ]
+    },
+    {
+      "zh": "大理石教堂",
+      "en": "Capillas de Mármol",
+      "note": "卡雷拉將軍湖上被湖水侵蝕出的大理石岩洞,需搭小船進入。",
+      "latlon": [
+        -46.6469,
+        -72.6236
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "貝爾納多·奧希金斯",
+      "en": "Bernardo O'Higgins",
+      "note": "獨立戰爭領袖與首任國家元首,被尊為智利國父。"
+    },
+    {
+      "zh": "巴勃羅·聶魯達",
+      "en": "Pablo Neruda",
+      "note": "詩人與外交官,一九七一年獲諾貝爾文學獎,《二十首情詩》流傳廣。"
+    },
+    {
+      "zh": "加夫列拉·米斯特拉爾",
+      "en": "Gabriela Mistral",
+      "note": "一九四五年成為首位獲諾貝爾文學獎的拉丁美洲作家,亦是教育家。"
+    },
+    {
+      "zh": "薩爾瓦多·阿葉德",
+      "en": "Salvador Allende",
+      "note": "一九七〇年當選的社會主義總統,一九七三年政變中身亡。"
+    },
+    {
+      "zh": "伊莎貝·阿言德",
+      "en": "Isabel Allende",
+      "note": "小說家,《精靈之屋》為魔幻寫實代表作,是最暢銷的西語作家之一。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "十一到三月的巴塔哥尼亞",
+      "note": "南半球夏季氣候最穩、步道全開,適合走百內 W 線、看格雷冰川,並從納塔萊斯港安排一日遊。"
+    },
+    {
+      "zh": "全年皆宜的阿他加馬沙漠",
+      "note": "以聖佩德羅為據點看月亮谷日落、塔蒂奧噴泉日出與高原鹽湖紅鶴,夜晚是世界級觀星地。"
+    },
+    {
+      "zh": "二到四月的中部酒鄉",
+      "note": "採收季走訪邁波谷、卡薩布蘭卡谷酒莊,搭配聖地牙哥與瓦爾帕萊索的都會與海港行程。"
+    }
+  ],
+  "events": [
+    {
+      "year": 1520,
+      "zh": "麥哲倫船隊通過南端的麥哲倫海峽。"
+    },
+    {
+      "year": 1541,
+      "zh": "瓦爾迪維亞建立聖地牙哥。"
+    },
+    {
+      "year": 1818,
+      "zh": "邁普戰役確立智利獨立。"
+    },
+    {
+      "year": 1879,
+      "zh": "太平洋戰爭爆發,智利擊敗秘魯與玻利維亞(至一八八三年)。"
+    },
+    {
+      "year": 1960,
+      "zh": "瓦爾迪維亞發生規模約九點五的史上最強地震。"
+    },
+    {
+      "year": 1973,
+      "zh": "皮諾契特發動軍事政變,阿葉德身亡。"
+    },
+    {
+      "year": 1990,
+      "zh": "結束軍政府統治,恢復民主。"
+    }
+  ],
+  "souvenirs": [
+    {
+      "zh": "智利葡萄酒",
+      "note": "卡門內爾為招牌品種,超市與酒莊價位親民,注意行李限重。"
+    },
+    {
+      "zh": "銅製工藝品",
+      "note": "世界最大銅出口國,盤飾、餐具與飾品在聖露西亞市集常見。"
+    },
+    {
+      "zh": "青金石飾品",
+      "note": "智利與阿富汗並列主要產地,深藍寶石多鑲成墜子與戒指。"
+    },
+    {
+      "zh": "手工羊駝毛織品",
+      "note": "南部與奇洛埃島的披肩、毛帽,質地厚實保暖。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "聖地牙哥＋瓦爾帕萊索",
+        "days": "4 天",
+        "note": "台灣多經美國或聖保羅轉機。首都看武器廣場、聖克里斯托巴爾山,一天往返海港城瓦爾帕萊索與維尼亞德爾馬,再跑一趟邁波谷酒莊。"
+      },
+      {
+        "zh": "阿他加馬沙漠",
+        "days": "4–5 天",
+        "note": "從卡拉馬機場進聖佩德羅,安排月亮谷、塔蒂奧噴泉、高原鹽湖與紅鶴保護區,並留一晚純觀星。"
+      },
+      {
+        "zh": "百內國家公園 W 線",
+        "days": "6–7 天",
+        "note": "蓬塔阿雷納斯進、納塔萊斯港補給,五天走法國谷、英國人瞭望台與塔下三峰,住山屋或營地,可與阿根廷冰川行程串連。"
+      },
+      {
+        "zh": "復活節島",
+        "days": "4 天",
+        "note": "從聖地牙哥飛五個半小時,環島看阿胡湯加里基十五尊摩艾、拉諾拉拉庫採石場與火山口,行程輕鬆適合搭配本島。"
+      },
+      {
+        "zh": "湖區與奇洛埃島",
+        "days": "6 天",
+        "note": "從蒙特港租車,走瓦拉斯的奧索爾諾火山、彼得羅烏埃瀑布,再過渡輪到奇洛埃看木造教堂、吃庫蘭托。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "卡雷拉將軍湖與南部公路",
+        "note": "沿七號公路自駕,看大理石教堂、翡翠色湖水與貝克河,路況粗獷、補給點少。"
+      },
+      {
+        "zh": "埃爾基谷觀星與皮斯可",
+        "note": "拉塞雷納內陸的釀酒谷地,結合天文台導覽、瑜伽民宿與皮斯可酒莊。"
+      },
+      {
+        "zh": "火地島與合恩角航程",
+        "note": "從蓬塔阿雷納斯搭探險船穿越麥哲倫海峽與比格爾水道,看冰川、企鵝與世界最南燈塔。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "CL-a-condor.jpg",
+      "title": "Male adult Andean condor",
+      "author": "Hugo Pedel",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Condor_des_Andes_m%C3%A2le_adulte.jpg"
+    },
+    {
+      "file": "CL-a-guanaco.jpg",
+      "title": "Guanacos in Chilean Patagonia",
+      "author": "ZedPlusIxe",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Guanacos_in_Chacabuco_valley_Chilean_Patagonia.jpg"
+    },
+    {
+      "file": "CL-a-puma.jpg",
+      "title": "Puma at sunset, Torres del Paine",
+      "author": "Ferna.mf",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Parque_Nacional_Torres_del_Paine_-_XII_Region_de_Magallanes_y_La_Antartica_Chilena_-_Puma_Concolor_Atardecer.jpg"
+    },
+    {
+      "file": "CL-a-penguin.jpg",
+      "title": "Humboldt penguin, Chiloe",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Humboldt_penguin_(Spheniscus_humboldti)_Chiloe.jpg"
+    },
+    {
+      "file": "CL-a-pudu.jpg",
+      "title": "Pudú, Isla San Pedro",
+      "author": "Cplandco",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pudu_Isla_San_Pedro.jpg"
+    },
+    {
+      "file": "CL-f-pastel.jpg",
+      "title": "Pastel de choclo",
+      "author": "Paloma Baytelman",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pastel_de_choclo.jpg"
+    },
+    {
+      "file": "CL-f-empanada.jpg",
+      "title": "Empanada de pino",
+      "author": "J B",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Empanada_de_pino.jpg"
+    },
+    {
+      "file": "CL-f-completo.jpg",
+      "title": "Completo italiano",
+      "author": "Maximiliano Nadjar",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Vienesa_Italiana_-_Completo_Italiano_-_Chilean_Hotdog.jpg"
+    },
+    {
+      "file": "CL-f-caldillo.jpg",
+      "title": "Caldillo de congrio",
+      "author": "Marco Antonio Correa Flores",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Caldillo_de_congrio_01.JPG"
+    },
+    {
+      "file": "CL-f-curanto.jpg",
+      "title": "Curanto al hoyo, Chiloé",
+      "author": "Fabiola Cárcamo",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Curanto_al_Hoyo_Chilo%C3%A9.JPG"
+    },
+    {
+      "file": "CL-l-moai.jpg",
+      "title": "Ahu Tongariki, Easter Island",
+      "author": "Bjørn Christian Tørrissen",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ahu-Tongariki-and-Traveling-Moai_cropped.jpg"
+    },
+    {
+      "file": "CL-l-luna.jpg",
+      "title": "Valle de la Luna, Atacama",
+      "author": "Diego Delso",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Valle_de_la_Luna,_San_Pedro_de_Atacama,_Chile,_2016-02-01,_DD_160.JPG"
+    }
+  ],
+  "code": "CL"
+}

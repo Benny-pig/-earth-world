@@ -1,0 +1,347 @@
+{
+  "name_zh": "古巴",
+  "name_en": "Cuba",
+  "summary": "加勒比海最大的島國,位於佛羅里達海峽南側,扼守墨西哥灣出入口。一九五九年革命後建立社會主義體制,由古巴共產黨一黨執政,以全民教育醫療、雪茄與蔗糖、老爺車與音樂舞蹈聞名;與美國的關係長期緊張,近年時鬆時緊。",
+  "founding": [
+    "歐洲人到來前,古巴島上住著泰諾人與更早的西沃內人,以農耕、漁獵維生。一四九二年十月哥倫布首航抵達古巴,宣布歸屬西班牙。一五一一年起貝拉斯克斯率隊征服全島,建立巴拉科阿、聖地牙哥與哈瓦那等據點,原住民人口在數十年內因戰爭與疾病幾近消失。",
+    "十六世紀後,哈瓦那因地利成為西班牙珍寶船隊的集結港,城防不斷加強。十七、十八世紀,古巴發展出以非洲奴隸勞動為基礎的蔗糖與菸草種植園經濟。一七六二年英國一度攻佔哈瓦那,一年後以換取佛羅里達歸還西班牙。",
+    "十九世紀古巴成為世界最大產糖地。爭取脫離西班牙的鬥爭從一八六八年的「十年戰爭」開始,一八八六年廢除奴隸制。一八九五年獨立戰爭再起,詩人與組織者荷西·馬蒂在戰事初期陣亡,成為民族象徵。",
+    "一八九八年美國軍艦緬因號在哈瓦那港爆炸,引發美西戰爭,西班牙戰敗後放棄古巴。美國軍事佔領數年,並透過《普拉特修正案》取得干預權與關塔那摩灣租借地;一九〇二年古巴名義上獨立,但政治與經濟深受美國影響。",
+    "二十世紀上半葉政局動盪,巴蒂斯塔於一九五二年政變上台。菲德爾·卡斯楚領導的「七月二十六日運動」歷經蒙卡達兵營攻擊、格拉瑪號登陸與馬埃斯特拉山區游擊戰,於一九五九年一月一日推翻巴蒂斯塔。",
+    "新政府推行土地改革與國有化,與蘇聯結盟,美國自一九六〇年起實施貿易禁運。一九六一年美方支持的豬玀灣入侵失敗,一九六二年古巴飛彈危機使冷戰逼近核戰邊緣。此後古巴維持一黨社會主義體制,推動識字與公共衛生;蘇聯解體後的一九九〇年代陷入「特殊時期」的嚴重物資短缺。二〇〇八年勞爾·卡斯楚接班,二〇一四至一五年美古一度恢復外交關係,二〇二一年迪亞斯-卡內爾接任共產黨第一書記,結束卡斯楚兄弟的直接領導。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "古巴共和國",
+    "area_km2": 109884,
+    "languages": [
+      "西班牙語"
+    ],
+    "religion": "以天主教為主,另有非洲裔融合信仰(如聖泰里亞),國家為世俗體制",
+    "currency": "古巴披索(CUP)",
+    "government": "社會主義一黨制共和(古巴共產黨)"
+  },
+  "animals": [
+    {
+      "zh": "吸蜜蜂鳥",
+      "en": "Bee hummingbird",
+      "note": "世界最小的鳥,體長約六公分,是古巴特有種。",
+      "image": "CU-a-hummingbird.jpg"
+    },
+    {
+      "zh": "古巴咬鵑",
+      "en": "Cuban trogon (tocororo)",
+      "note": "古巴國鳥,羽色恰為國旗的紅白藍三色。",
+      "image": "CU-a-trogon.jpg"
+    },
+    {
+      "zh": "古巴鱷",
+      "en": "Cuban crocodile",
+      "note": "僅分布於薩帕塔沼澤與青年島的小型鱷魚,極度瀕危。"
+    },
+    {
+      "zh": "古巴溝齒鼩",
+      "en": "Cuban solenodon",
+      "note": "夜行性食蟲哺乳類,唾液帶毒,是少數存活至今的原始獸類。"
+    },
+    {
+      "zh": "古巴彩蝸",
+      "en": "Polymita painted snail",
+      "note": "古巴東部特有的樹蝸牛,螺殼有鮮豔螺旋條紋,因採集而受威脅。",
+      "image": "CU-a-polymita.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "手撕燉牛肉",
+      "en": "Ropa vieja",
+      "note": "直譯「舊衣服」,牛腱肉燉到能撕成絲,與甜椒番茄同燴,是國菜。"
+    },
+    {
+      "zh": "黑豆飯",
+      "en": "Moros y cristianos",
+      "note": "黑豆與白米同煮成的深色飯,幾乎每餐都有,又稱 congrí。",
+      "image": "CU-f-congri.jpg"
+    },
+    {
+      "zh": "烤乳豬",
+      "en": "Lechón asado",
+      "note": "整隻乳豬以苦橙與大蒜醃過慢烤,是聖誕與慶典的主菜。"
+    },
+    {
+      "zh": "炸大蕉",
+      "en": "Tostones",
+      "note": "未熟的大蕉切塊壓扁後兩次油炸,鹹香酥脆,是最常見的配菜。",
+      "image": "CU-f-tostones.jpg"
+    },
+    {
+      "zh": "古巴三明治",
+      "en": "Cuban sandwich",
+      "note": "古巴麵包夾烤豬、火腿、瑞士起司、酸黃瓜與芥末,壓熱後食用。",
+      "image": "CU-f-sandwich.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "舊哈瓦那",
+      "en": "Old Havana",
+      "note": "西班牙殖民時期的城區,廣場、教堂與城堡群列世界遺產,老爺車穿梭其間。",
+      "latlon": [
+        23.14,
+        -82.355
+      ],
+      "image": "CU-l-havana.jpg"
+    },
+    {
+      "zh": "馬雷貢濱海大道",
+      "en": "Malecón",
+      "note": "沿哈瓦那海岸延伸八公里的堤岸大道,是市民散步、垂釣與乘涼的客廳。",
+      "latlon": [
+        23.145,
+        -82.383
+      ]
+    },
+    {
+      "zh": "千里達",
+      "en": "Trinidad",
+      "note": "十八、十九世紀製糖致富的殖民小鎮,鵝卵石街與彩色房屋幾乎原封保存,列世界遺產。",
+      "latlon": [
+        21.802,
+        -79.9847
+      ],
+      "image": "CU-l-trinidad.jpg"
+    },
+    {
+      "zh": "比尼亞萊斯山谷",
+      "en": "Viñales Valley",
+      "note": "皮納爾德里奧省的喀斯特谷地,圓頂石灰岩丘間種植菸草,列世界遺產。",
+      "latlon": [
+        22.6167,
+        -83.7167
+      ],
+      "image": "CU-l-vinales.jpg"
+    },
+    {
+      "zh": "莫羅城堡",
+      "en": "Castillo del Morro",
+      "note": "扼守哈瓦那港口的十六世紀要塞,與對岸的拉卡瓦尼亞砲台共同防禦海盜與艦隊。",
+      "latlon": [
+        23.1503,
+        -82.3564
+      ],
+      "image": "CU-l-morro.jpg"
+    }
+  ],
+  "people": [
+    {
+      "zh": "荷西·馬蒂",
+      "en": "José Martí",
+      "note": "詩人、記者與獨立運動組織者,一八九五年戰死,被視為古巴國父。"
+    },
+    {
+      "zh": "菲德爾·卡斯楚",
+      "en": "Fidel Castro",
+      "note": "一九五九年革命領袖,主政近半世紀,建立社會主義體制。"
+    },
+    {
+      "zh": "切·格瓦拉",
+      "en": "Che Guevara",
+      "note": "阿根廷出身的革命者,古巴革命核心人物,後在玻利維亞被殺,肖像成為全球符號。"
+    },
+    {
+      "zh": "何塞·勞爾·卡帕布蘭卡",
+      "en": "José Raúl Capablanca",
+      "note": "一九二一至一九二七年的西洋棋世界冠軍,以直覺與殘局功力著稱。",
+      "image": "CU-p-capablanca.jpg"
+    },
+    {
+      "zh": "塞莉亞·克魯茲",
+      "en": "Celia Cruz",
+      "note": "「莎莎女王」,古巴裔歌手,流亡美國後將古巴音樂推向世界。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "十二到四月的乾季哈瓦那",
+      "note": "濕度低、少雨,適合走舊城四大廣場、搭老爺敞篷車遊馬雷貢,晚上聽現場 son 與莎莎樂團。"
+    },
+    {
+      "zh": "全年皆宜的比尼亞萊斯",
+      "note": "從哈瓦那拉車約三小時,騎馬或健行穿過菸田與圓頂山丘,參觀捲菸農家與鐘乳石洞。"
+    },
+    {
+      "zh": "十二到三月的千里達與周邊",
+      "note": "涼爽宜人,白天逛殖民老城與糖谷莊園遺址,下午到安孔海灘,傍晚在階梯廣場聽露天音樂。"
+    }
+  ],
+  "events": [
+    {
+      "year": 1492,
+      "zh": "哥倫布首航抵達古巴。"
+    },
+    {
+      "year": 1762,
+      "zh": "英國短暫佔領哈瓦那,次年以佛羅里達交換歸還。"
+    },
+    {
+      "year": 1868,
+      "zh": "反抗西班牙的「十年戰爭」爆發。"
+    },
+    {
+      "year": 1898,
+      "zh": "緬因號爆炸引發美西戰爭,西班牙放棄古巴。"
+    },
+    {
+      "year": 1902,
+      "zh": "古巴共和國成立,但深受美國影響。"
+    },
+    {
+      "year": 1959,
+      "zh": "革命推翻巴蒂斯塔政權。"
+    },
+    {
+      "year": 1962,
+      "zh": "古巴飛彈危機使冷戰逼近核戰邊緣。"
+    }
+  ],
+  "souvenirs": [
+    {
+      "zh": "雪茄",
+      "note": "認明國營菸廠封條與發票,注意各國入境數量限制。"
+    },
+    {
+      "zh": "蘭姆酒",
+      "note": "Havana Club 等品牌,七年陳釀常見,托運注意液體規定。"
+    },
+    {
+      "zh": "咖啡豆",
+      "note": "東部山區(如水晶山)出產,包裝輕便,超市與菸酒店有售。"
+    },
+    {
+      "zh": "手工藝品與音樂 CD",
+      "note": "木雕、鉤針蕾絲與 Buena Vista 相關唱片,舊城市集可議價。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "哈瓦那經典",
+        "days": "4 天",
+        "note": "台灣多經加拿大、墨西哥或歐洲轉機。舊城四大廣場、國會大廈與革命廣場,搭老爺車遊馬雷貢,一天到近郊海明威故居與漁村。"
+      },
+      {
+        "zh": "哈瓦那＋比尼亞萊斯＋千里達",
+        "days": "8 天",
+        "note": "西段看菸田喀斯特,東段住千里達殖民老城與安孔海灘,中間可停聖克拉拉看切·格瓦拉紀念館。"
+      },
+      {
+        "zh": "古巴東西縱貫",
+        "days": "12–14 天",
+        "note": "哈瓦那一路到聖地牙哥,經比尼亞萊斯、千里達、卡馬圭與巴亞莫,體驗東部更濃的加勒比與非洲文化。"
+      },
+      {
+        "zh": "巴拉德羅度假",
+        "days": "4–5 天",
+        "note": "半島上二十公里白沙灘與全包式度假村,適合只想放鬆的旅客,可安排一天進哈瓦那市區。"
+      },
+      {
+        "zh": "音樂與舞蹈主題",
+        "days": "6 天",
+        "note": "以哈瓦那與千里達為據點,上莎莎與頌樂課程、看 Casa de la Música 現場,週末找街區派對(rumba)。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "薩帕塔沼澤生態",
+        "note": "加勒比最大濕地,賞古巴特有鳥類、看古巴鱷復育站,並到豬玀灣潟湖浮潛。"
+      },
+      {
+        "zh": "東部貝拉科阿與洪保德公園",
+        "note": "古巴第一座西班牙城鎮,周邊是雨林國家公園,有平頂山(El Yunque)與河海交界的僻靜海灘。"
+      },
+      {
+        "zh": "聖地牙哥狂歡節(七月)",
+        "note": "古巴最具非洲色彩的城市,七月的康加遊行(conga)與加勒比節慶熱鬧,搭配莫羅城堡與革命史蹟。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "CU-a-hummingbird.jpg",
+      "title": "Bee hummingbird, adult male in flight",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bee_hummingbird_(Mellisuga_helenae)_adult_male_in_flight.jpg"
+    },
+    {
+      "file": "CU-a-trogon.jpg",
+      "title": "Cuban trogon",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Cuban_trogon_(Priotelus_temnurus).JPG"
+    },
+    {
+      "file": "CU-a-polymita.jpg",
+      "title": "Polymita picta, painted snail",
+      "author": "James St. John",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Polymita_picta_(painted_snail)_(eastern_Cuba)_13_(23949177333).jpg"
+    },
+    {
+      "file": "CU-f-congri.jpg",
+      "title": "Arroz congrí",
+      "author": "Arnoud Joris Maaswinkel",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:AJM_030_Congr%C3%AD.JPG"
+    },
+    {
+      "file": "CU-f-tostones.jpg",
+      "title": "Tostones",
+      "author": "AMartiniouk",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tostones.JPG"
+    },
+    {
+      "file": "CU-f-sandwich.jpg",
+      "title": "Cuban sandwich",
+      "author": "Kramtronik",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tampa_Cuban_Sandwich.jpg"
+    },
+    {
+      "file": "CU-l-havana.jpg",
+      "title": "Old Havana",
+      "author": "Jorge Royan",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Havana_-_Cuba_-_3706.jpg"
+    },
+    {
+      "file": "CU-l-trinidad.jpg",
+      "title": "Trinidad, Cuba",
+      "author": "Rômulo Ferreira",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Trinidad_-_Cuba_(40240172614).jpg"
+    },
+    {
+      "file": "CU-l-vinales.jpg",
+      "title": "Viñales Valley mogotes",
+      "author": "Velvet",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Vinales_vue_mogotes.jpg"
+    },
+    {
+      "file": "CU-l-morro.jpg",
+      "title": "Castillo del Morro, Havana",
+      "author": "Kate Perez",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Castillo_del_Morro_-_Havana,_Cuba.jpg"
+    },
+    {
+      "file": "CU-p-capablanca.jpg",
+      "title": "José Raúl Capablanca, 1931",
+      "author": "Keystone-France",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Jos%C3%A9_Ra%C3%BAl_Capablanca_1931.jpg"
+    }
+  ],
+  "code": "CU"
+}

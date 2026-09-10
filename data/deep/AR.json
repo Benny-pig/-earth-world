@@ -1,0 +1,355 @@
+{
+  "name_zh": "阿根廷",
+  "name_en": "Argentina",
+  "summary": "位於南美洲東南部,國土從亞熱帶的格蘭查科一路延伸到南極圈邊緣的巴塔哥尼亞,是拉丁美洲面積第二大的國家。以彭巴草原的農牧、探戈、足球與歐洲移民形塑的都會文化聞名,首都布宜諾斯艾利斯有「南美巴黎」之稱。",
+  "founding": [
+    "前哥倫布時期,今日阿根廷的土地上分布著多個原住民族群:西北安地斯山區有受印加帝國影響的迪亞吉塔人,從事灌溉農業與製陶;中部與彭巴草原是遊牧狩獵的克蘭迪人;南部巴塔哥尼亞與火地島則有特維爾切人與雅甘人等。這些社會沒有形成統一政權,語言與生活方式差異極大。",
+    "一五一六年西班牙航海家索利斯進入拉布拉他河口,揭開歐洲人探索的序幕。一五三六年門多薩首次嘗試建立布宜諾斯艾利斯失敗,直到一五八〇年才由加賴永久奠基。殖民時期的阿根廷長期是邊陲地帶,經濟重心在秘魯的白銀貿易,拉布拉他地區以走私和牛皮出口維生。",
+    "一七七六年西班牙設立拉布拉他總督轄區,以布宜諾斯艾利斯為首府,地位大幅提升。一八〇六至一八〇七年當地民兵擊退英軍兩次入侵,自信心高漲。一八一〇年五月,趁西班牙本土被拿破崙佔領,布宜諾斯艾利斯成立自治政府,史稱「五月革命」,通常被視為建國起點。",
+    "一八一六年七月九日,各省代表在圖庫曼宣布獨立。此後聖馬丁率軍翻越安地斯山,協助解放智利與秘魯。獨立後數十年,主張中央集權的「統一派」與主張地方自治的「聯邦派」長期內戰,直到一八五三年制定憲法、一八六〇年代布宜諾斯艾利斯併入,國家體制才大致底定。",
+    "一八八〇年後,阿根廷藉冷藏船技術大量出口牛肉與小麥,吸引數百萬義大利、西班牙移民湧入,經濟一度躋身世界前列,號稱「世界糧倉」。二十世紀政局動盪,軍事政變頻繁;一九四六年裴隆上台,推動社會福利與工會政治,影響延續至今。",
+    "一九七六至一九八三年的軍政府時期發生大規模政治迫害,史稱「骯髒戰爭」;一九八二年福克蘭(馬爾維納斯)群島戰爭失利後,軍政府垮台,一九八三年恢復民主。此後阿根廷維持選舉政治,但屢受高通膨、外債違約與貨幣貶值困擾,經濟大起大落成為常態。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "阿根廷共和國",
+    "area_km2": 2780400,
+    "languages": [
+      "西班牙語"
+    ],
+    "religion": "以天主教為主,信仰自由;憲法規定聯邦政府支持天主教",
+    "currency": "阿根廷披索(ARS)",
+    "government": "聯邦制總統共和"
+  },
+  "animals": [
+    {
+      "zh": "美洲豹",
+      "en": "Jaguar",
+      "note": "美洲最大貓科動物,棲息北部伊比拉濕地與叢林,是當地保育象徵。",
+      "image": "AR-a-jaguar.jpg"
+    },
+    {
+      "zh": "原駝",
+      "en": "Guanaco",
+      "note": "駱駝科野生動物,成群漫遊巴塔哥尼亞草原與高原,是羊駝的野生近親。",
+      "image": "AR-a-guanaco.jpg"
+    },
+    {
+      "zh": "麥哲倫企鵝",
+      "en": "Magellanic penguin",
+      "note": "每年春夏在丘布省的湯波角等地築巢,形成數十萬對的大型繁殖地。",
+      "image": "AR-a-penguin.jpg"
+    },
+    {
+      "zh": "南露脊鯨",
+      "en": "Southern right whale",
+      "note": "每年六到十二月洄游到瓦爾德斯半島海域交配育幼,是賞鯨招牌。",
+      "image": "AR-a-whale.jpg"
+    },
+    {
+      "zh": "安地斯神鷲",
+      "en": "Andean condor",
+      "note": "翼展可達三公尺的巨型猛禽,盤旋於安地斯山脊,是多國的國家象徵。",
+      "image": "AR-a-condor.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "阿根廷烤肉",
+      "en": "Asado",
+      "note": "以炭火慢烤牛肋排、香腸與內臟,是週末家庭聚會的核心儀式。",
+      "image": "AR-f-asado.jpg"
+    },
+    {
+      "zh": "恩帕納達",
+      "en": "Empanada",
+      "note": "半月形烤餡餅,內餡多為牛肉洋蔥,各省包法與口味不同。",
+      "image": "AR-f-empanada.jpg"
+    },
+    {
+      "zh": "瑪黛茶",
+      "en": "Mate",
+      "note": "用葫蘆杯裝冬青葉、插金屬吸管輪流傳飲的社交式茶飲。",
+      "image": "AR-f-mate.jpg"
+    },
+    {
+      "zh": "焦糖牛奶醬",
+      "en": "Dulce de leche",
+      "note": "牛奶加糖熬煮的濃稠奶醬,抹麵包、夾餅乾或做甜點皆可。",
+      "image": "AR-f-ddl.jpg"
+    },
+    {
+      "zh": "阿爾法霍餅",
+      "en": "Alfajor",
+      "note": "兩片酥餅夾焦糖牛奶醬或果醬,外裹巧克力或糖霜,最普及的零食。",
+      "image": "AR-f-alfajor.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "伊瓜蘇瀑布",
+      "en": "Iguazú Falls",
+      "note": "與巴西交界、由兩百多道落水組成的巨型瀑布群,核心是「魔鬼咽喉」。",
+      "latlon": [
+        -25.6953,
+        -54.4367
+      ],
+      "image": "AR-l-iguazu.jpg"
+    },
+    {
+      "zh": "佩里托莫雷諾冰川",
+      "en": "Perito Moreno Glacier",
+      "note": "洛斯格拉西亞雷斯國家公園內仍在前進的冰川,常見冰崩。",
+      "latlon": [
+        -50.4967,
+        -73.0377
+      ],
+      "image": "AR-l-moreno.jpg"
+    },
+    {
+      "zh": "布宜諾斯艾利斯方尖碑",
+      "en": "Obelisco de Buenos Aires",
+      "note": "矗立於七月九日大道與科連特斯街口的城市地標,常是集會與慶祝地點。",
+      "latlon": [
+        -34.6037,
+        -58.3816
+      ]
+    },
+    {
+      "zh": "七彩山(烏瑪瓦卡峽谷)",
+      "en": "Cerro de los Siete Colores",
+      "note": "胡胡伊省普爾馬馬爾卡村後的彩色沉積岩山,所在峽谷列世界遺產。",
+      "latlon": [
+        -23.7458,
+        -65.5017
+      ]
+    },
+    {
+      "zh": "雷科萊塔公墓",
+      "en": "Recoleta Cemetery",
+      "note": "布宜諾斯艾利斯的名人陵園,艾薇塔等政要與文人長眠於此。",
+      "latlon": [
+        -34.5875,
+        -58.3928
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "荷西·德·聖馬丁",
+      "en": "José de San Martín",
+      "note": "率軍翻越安地斯山,解放阿根廷、智利與秘魯的獨立戰爭統帥。"
+    },
+    {
+      "zh": "艾薇塔·裴隆",
+      "en": "Eva Perón",
+      "note": "裴隆總統之妻,推動婦女參政與社會救助,英年早逝後被神化。"
+    },
+    {
+      "zh": "迪亞哥·馬拉度納",
+      "en": "Diego Maradona",
+      "note": "帶領阿根廷奪一九八六年世界盃的足球傳奇,以「上帝之手」聞名。"
+    },
+    {
+      "zh": "里奧·梅西",
+      "en": "Lionel Messi",
+      "note": "多次世界足球先生,二〇二二年率隊奪得世界盃冠軍。"
+    },
+    {
+      "zh": "豪爾赫·路易斯·波赫士",
+      "en": "Jorge Luis Borges",
+      "note": "短篇小說與散文大師,《虛構集》影響二十世紀世界文學。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "三到四月的伊瓜蘇",
+      "note": "雨季末水量足、氣溫回穩,阿根廷側棧道可近距離走到魔鬼咽喉,建議搭配巴西側一次看完。"
+    },
+    {
+      "zh": "十到十二月的瓦爾德斯半島",
+      "note": "春季是南露脊鯨育幼、麥哲倫企鵝上岸與象海豹繁殖的旺季,從馬德林港出發賞鯨。"
+    },
+    {
+      "zh": "十一到三月的巴塔哥尼亞健行",
+      "note": "南半球夏季日照長、山路開放,適合到艾爾卡拉法特看冰川、去查爾騰鎮走菲茨羅伊峰步道。"
+    }
+  ],
+  "events": [
+    {
+      "year": 1516,
+      "zh": "西班牙航海家索利斯的船隊抵達拉布拉他河口。"
+    },
+    {
+      "year": 1810,
+      "zh": "五月革命,布宜諾斯艾利斯成立自治政府。"
+    },
+    {
+      "year": 1816,
+      "zh": "圖庫曼會議正式宣布獨立。"
+    },
+    {
+      "year": 1853,
+      "zh": "通過聯邦憲法,確立共和體制。"
+    },
+    {
+      "year": 1946,
+      "zh": "裴隆首度當選總統,推動工會政治與社會福利。"
+    },
+    {
+      "year": 1982,
+      "zh": "福克蘭(馬爾維納斯)群島戰爭,阿根廷戰敗。"
+    },
+    {
+      "year": 1983,
+      "zh": "結束軍政府統治,恢復民主選舉。"
+    }
+  ],
+  "souvenirs": [
+    {
+      "zh": "瑪黛茶具組",
+      "note": "葫蘆杯、金屬吸管與茶葉成套,超市與紀念品店都有。"
+    },
+    {
+      "zh": "阿爾法霍餅",
+      "note": "Havanna、Cachafaz 等品牌盒裝,機場免稅店常見。"
+    },
+    {
+      "zh": "馬爾貝克紅酒",
+      "note": "門多薩產區的招牌品種,酒體飽滿、價格實惠。"
+    },
+    {
+      "zh": "高卓皮件",
+      "note": "皮帶、錢包與銀飾馬具等草原牧人工藝,聖特爾莫週日市集好逛。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "布宜諾斯艾利斯經典",
+        "days": "4 天",
+        "note": "台灣無直航,多經杜哈或聖保羅轉機。市區走五月廣場、雷科萊塔、博卡與聖特爾莫,晚上看探戈秀,一天往返老虎洲三角洲。"
+      },
+      {
+        "zh": "阿根廷南北縱走",
+        "days": "10–12 天",
+        "note": "首都進出,北上鹽湖與烏瑪瓦卡七彩山,南飛艾爾卡拉法特看莫雷諾冰川,再到烏斯懷亞世界盡頭,內陸段多靠國內線。"
+      },
+      {
+        "zh": "伊瓜蘇雙國瀑布",
+        "days": "5 天",
+        "note": "從首都飛伊瓜蘇港,一天走阿根廷側棧道、一天過境巴西側看全景,行有餘力加訪三國交界碑與鳥園。"
+      },
+      {
+        "zh": "巴塔哥尼亞健行",
+        "days": "8 天",
+        "note": "艾爾卡拉法特為據點,安排莫雷諾冰川健行、查爾騰鎮菲茨羅伊峰與托雷峰一日步道,可延伸到智利百內。"
+      },
+      {
+        "zh": "門多薩葡萄酒之旅",
+        "days": "4 天",
+        "note": "首都飛門多薩,租車或參團跑麥普與烏科谷酒莊,結合安地斯山腳的阿空加瓜觀景,三月採收季最熱鬧。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "埃斯克爾與老巴塔哥尼亞快車",
+        "note": "搭窄軌蒸汽火車「La Trochita」穿行草原,順遊洛斯阿萊爾塞斯國家公園的智利柏森林。"
+      },
+      {
+        "zh": "伊比拉濕地找美洲豹",
+        "note": "科連特斯省的再野化保護區,可搭船看水豚、凱門鱷、吼猴與重新引入的美洲豹。"
+      },
+      {
+        "zh": "科多巴耶穌會傳教區",
+        "note": "中部山區的殖民時期教堂與莊園群,列世界遺產,可搭配山城小鎮避暑。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "AR-a-jaguar.jpg",
+      "title": "Jaguar (Panthera onca palustris) male",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Jaguar_(Panthera_onca_palustris)_male_Rio_Negro_2.JPG"
+    },
+    {
+      "file": "AR-a-guanaco.jpg",
+      "title": "Guanaco in Patagonia",
+      "author": "ThartmannWiki",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Guanaco_in_Patagonia.jpg"
+    },
+    {
+      "file": "AR-a-penguin.jpg",
+      "title": "Magellanic Penguin, Punta Tombo",
+      "author": "Francesco Veronesi",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Magellanic_Penguin_-_Punta_Tombo_-_Pen.Valdez_18_(13222535793).jpg"
+    },
+    {
+      "file": "AR-a-whale.jpg",
+      "title": "Southern Right Whale, Golfo Nuevo",
+      "author": "Naturedata",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Southern_Right_Whale_-_Golfo_Nuevo.jpg"
+    },
+    {
+      "file": "AR-a-condor.jpg",
+      "title": "Male adult Andean condor",
+      "author": "Hugo Pedel",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Condor_des_Andes_m%C3%A2le_adulte.jpg"
+    },
+    {
+      "file": "AR-f-asado.jpg",
+      "title": "Asado in Argentina",
+      "author": "Metrónomo",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Asado_in_Argentina.JPG"
+    },
+    {
+      "file": "AR-f-empanada.jpg",
+      "title": "Baked Argentine empanadas",
+      "author": "Horacio Cambeiro",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Empanadas_argentinas_al_horno_con_omelete.jpg"
+    },
+    {
+      "file": "AR-f-mate.jpg",
+      "title": "Traditional mate set",
+      "author": "Siarhei Besarab",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Traditional_mate_set_calabash_gourd_with_La_Merced_yerba_mate.jpg"
+    },
+    {
+      "file": "AR-f-ddl.jpg",
+      "title": "Dulce de leche",
+      "author": "audinou",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:DulceDeLeche.jpg"
+    },
+    {
+      "file": "AR-f-alfajor.jpg",
+      "title": "Alfajor Altas Cumbres",
+      "author": "Noked",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Alfajor_Altas_Cumbres_de_durazno.jpg"
+    },
+    {
+      "file": "AR-l-iguazu.jpg",
+      "title": "Iguazu Falls from the Argentine side",
+      "author": "Horacio Cambeiro",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:A_view_of_Iguazu_Falls_from_the_Argentina_side.jpg"
+    },
+    {
+      "file": "AR-l-moreno.jpg",
+      "title": "Perito Moreno Glacier",
+      "author": "Diego Delso",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Glaciar_Perito_Moreno5_-_Argentina.JPG"
+    }
+  ],
+  "code": "AR"
+}

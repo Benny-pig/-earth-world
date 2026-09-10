@@ -1,0 +1,355 @@
+{
+  "name_zh": "喬治亞",
+  "name_en": "Georgia",
+  "summary": "位於南高加索,西臨黑海,北以高加索山脈與俄羅斯為界,地處歐亞交界。是最早接受基督教的國家之一,也是已知最古老的葡萄酒產地。獨立後推行親歐路線,二〇二三年獲歐盟候選國地位;阿布哈茲與南奧塞提亞兩地區不受中央政府控制。",
+  "founding": [
+    "喬治亞境內的考古顯示,約八千年前的新石器聚落已在陶罐中釀造葡萄酒,是目前已知最早的釀酒證據。古代西部有與希臘神話「金羊毛」相連的科爾基斯王國,東部則有以卡爾特利為核心的伊比利亞王國。",
+    "約西元三二六年前後,伊比利亞王國在聖尼諾傳教下接受基督教為國教,成為世界上最早的基督教國家之一。此後數百年,喬治亞夾在羅馬/拜占庭與波斯之間,又歷經阿拉伯人在第比利斯設立埃米爾政權的時期。",
+    "一〇〇八年前後,巴格拉特三世將東西各邦統一為喬治亞王國。十一至十三世紀是「黃金時代」:大衛四世(建設者)在一一二一年的迪德戈里戰役擊敗塞爾柱人,收復第比利斯;其後塔瑪爾女王在位時,王國影響力擴及整個南高加索,文學與建築繁盛,魯斯塔維利寫下史詩《虎皮武士》。",
+    "十三世紀起,蒙古入侵與帖木兒的多次遠征重創喬治亞,王國分裂為卡爾特利、卡赫季、伊梅列季等互相競爭的政權,長期在鄂圖曼與波斯兩大帝國間求生。一七八三年,卡爾特利-卡赫季王國與俄國簽訂《格奧爾吉耶夫斯克條約》,接受俄國保護。",
+    "一八〇一年俄國正式併吞東喬治亞,其餘地區也陸續納入。一九一八年趁俄國革命之機,喬治亞成立民主共和國;一九二一年紅軍進入,喬治亞被併入蘇聯,先屬外高加索聯邦,後為喬治亞蘇維埃社會主義共和國。史達林與貝利亞都是喬治亞人。",
+    "一九九一年四月九日恢復獨立。獨立初期爆發內戰,阿布哈茲與南奧塞提亞先後脫離中央控制。謝瓦納茲執政多年後,二〇〇三年「玫瑰革命」使薩卡希維利上台,推動親西方改革與反貪。二〇〇八年八月,喬治亞與俄羅斯就南奧塞提亞爆發為期數日的戰爭;二〇二三年十二月,喬治亞獲得歐盟候選國地位。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "喬治亞",
+    "area_km2": 69700,
+    "languages": [
+      "喬治亞語"
+    ],
+    "religion": "以喬治亞正教會(東正教)為主",
+    "currency": "拉里(GEL)",
+    "government": "議會共和"
+  },
+  "animals": [
+    {
+      "zh": "高加索羱羊(東高加索塔爾)",
+      "en": "East Caucasian tur",
+      "note": "高加索山脈特有的野生山羊,雄性有粗壯的彎角,棲息陡峭岩壁。",
+      "image": "GE-a-tur.jpg"
+    },
+    {
+      "zh": "高加索豹",
+      "en": "Caucasian leopard",
+      "note": "花豹的高加索亞種,數量極少,近年在喬治亞東南部山區有重現紀錄。",
+      "image": "GE-a-leopard.jpg"
+    },
+    {
+      "zh": "棕熊",
+      "en": "Brown bear",
+      "note": "高加索山林中最大的掠食者,喬治亞多處國家公園可見蹤跡。",
+      "image": "GE-a-bear.jpg"
+    },
+    {
+      "zh": "灰狼",
+      "en": "Grey wolf",
+      "note": "廣布山區與丘陵,常與牧羊活動衝突。",
+      "image": "GE-a-wolf.jpg"
+    },
+    {
+      "zh": "高加索黑琴雞",
+      "en": "Caucasian grouse",
+      "note": "高山草甸的特有雉類,雄鳥全身黑亮、尾羽下垂,求偶時集體展示。"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "起司麵包",
+      "en": "Khachapuri",
+      "note": "麵餅包起司烤製,阿札拉式做成船形、中央打生蛋加奶油,是國民料理。",
+      "image": "GE-f-khachapuri.jpg"
+    },
+    {
+      "zh": "喬治亞水餃",
+      "en": "Khinkali",
+      "note": "帶皺褶的大顆湯包,內餡多為牛豬混合絞肉,用手抓著吃、留下蒂頭。",
+      "image": "GE-f-khinkali.jpg"
+    },
+    {
+      "zh": "串烤",
+      "en": "Mtsvadi",
+      "note": "葡萄藤枝炭火烤的豬肉或牛肉塊,佐石榴汁與醃菜。"
+    },
+    {
+      "zh": "核桃醬燉雞",
+      "en": "Satsivi",
+      "note": "水煮雞泡在核桃、大蒜與香料調成的濃醬裡放涼,是節慶冷盤。",
+      "image": "GE-f-satsivi.jpg"
+    },
+    {
+      "zh": "串葡萄核桃糖",
+      "en": "Churchkhela",
+      "note": "核桃串成串後反覆浸入濃縮葡萄汁凝固,像蠟燭般吊掛販售。",
+      "image": "GE-f-churchkhela.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "第比利斯舊城",
+      "en": "Old Tbilisi",
+      "note": "庫拉河畔的老城區,硫磺浴場、清真寺與教堂並存,纜車可上納里卡拉要塞。",
+      "latlon": [
+        41.6883,
+        44.809
+      ],
+      "image": "GE-l-tbilisi.jpg"
+    },
+    {
+      "zh": "格爾蓋蒂三一教堂",
+      "en": "Gergeti Trinity Church",
+      "note": "卡茲別克山下海拔約兩千兩百公尺的十四世紀教堂,是喬治亞的標誌性風景。",
+      "latlon": [
+        42.6624,
+        44.6203
+      ],
+      "image": "GE-l-gergeti.jpg"
+    },
+    {
+      "zh": "姆茨赫塔與季瓦里修道院",
+      "en": "Mtskheta & Jvari Monastery",
+      "note": "古都姆茨赫塔是喬治亞正教會發源地,山上的季瓦里修道院俯瞰兩河交會,列世界遺產。",
+      "latlon": [
+        41.8386,
+        44.7331
+      ],
+      "image": "GE-l-mtskheta.jpg"
+    },
+    {
+      "zh": "烏什古利與斯瓦內季塔樓",
+      "en": "Ushguli, Svaneti",
+      "note": "高加索深處的村落群,中世紀防禦石塔林立,是歐洲最高的常住聚落之一。",
+      "latlon": [
+        42.9186,
+        43.0231
+      ],
+      "image": "GE-l-ushguli.jpg"
+    },
+    {
+      "zh": "瓦爾濟亞岩窟修道院",
+      "en": "Vardzia",
+      "note": "十二世紀塔瑪爾女王時期在崖壁開鑿的洞穴城,含教堂、居室與水利設施。",
+      "latlon": [
+        41.3811,
+        43.2847
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "聖尼諾",
+      "en": "Saint Nino",
+      "note": "四世紀傳教者,傳說她使伊比利亞王國皈依基督教。"
+    },
+    {
+      "zh": "大衛四世(建設者)",
+      "en": "David IV the Builder",
+      "note": "十二世紀初國王,擊退塞爾柱人、收復第比利斯,開啟黃金時代。"
+    },
+    {
+      "zh": "塔瑪爾女王",
+      "en": "Queen Tamar",
+      "note": "喬治亞黃金時代的君主,在位期間國力與文化達到頂峰,被正教會封聖。"
+    },
+    {
+      "zh": "蕭塔·魯斯塔維利",
+      "en": "Shota Rustaveli",
+      "note": "十二世紀詩人,史詩《虎皮武士》是喬治亞文學的奠基之作。"
+    },
+    {
+      "zh": "約瑟夫·史達林",
+      "en": "Joseph Stalin",
+      "note": "生於哥里,一九二〇年代起長期領導蘇聯,對二十世紀歷史影響深遠。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "六到九月的斯瓦內季",
+      "note": "夏季山路解封、天氣穩定,適合從梅斯蒂亞健行到烏什古利,看塔樓村與高加索雪峰,冬季道路常封閉。"
+    },
+    {
+      "zh": "九到十月的卡赫季葡萄酒鄉",
+      "note": "採收季走訪錫格納吉山城與眾多陶罐(qvevri)酒莊,參加踩葡萄與家庭宴(supra)。"
+    },
+    {
+      "zh": "五到六月或九月的第比利斯與卡茲別克",
+      "note": "春秋氣候宜人,舊城泡硫磺浴、逛跳蚤市場,再沿軍事大道北上格爾蓋蒂教堂與滑雪勝地古道里。"
+    }
+  ],
+  "events": [
+    {
+      "year": -6000,
+      "zh": "南高加索出現已知最早的葡萄酒釀造。"
+    },
+    {
+      "year": 326,
+      "zh": "伊比利亞王國接受基督教為國教。"
+    },
+    {
+      "year": 1121,
+      "zh": "迪德戈里戰役,大衛四世擊敗塞爾柱人。"
+    },
+    {
+      "year": 1783,
+      "zh": "卡爾特利-卡赫季王國與俄國簽訂《格奧爾吉耶夫斯克條約》。"
+    },
+    {
+      "year": 1921,
+      "zh": "紅軍進入,喬治亞被併入蘇聯。"
+    },
+    {
+      "year": 1991,
+      "zh": "恢復獨立。"
+    },
+    {
+      "year": 2008,
+      "zh": "喬治亞與俄羅斯就南奧塞提亞爆發五日戰爭。"
+    }
+  ],
+  "souvenirs": [
+    {
+      "zh": "陶罐釀葡萄酒與恰恰",
+      "note": "琥珀酒(橘酒)是特色,或帶小瓶裝的恰恰(chacha)烈酒,注意托運。"
+    },
+    {
+      "zh": "串葡萄核桃糖(churchkhela)",
+      "note": "市集常見的能量零食,選當年新製、不黏手的較好。"
+    },
+    {
+      "zh": "藍染桌布與琺瑯首飾",
+      "note": "藍染印花桌布與 minankari 掐絲琺瑯飾品,舊城可買。"
+    },
+    {
+      "zh": "斯瓦內季鹽與香料",
+      "note": "混了葛縷子、葫蘆巴等香草的調味鹽,搭配喬治亞菜很對味。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "第比利斯與周邊",
+        "days": "4 天",
+        "note": "台灣多經杜哈、伊斯坦堡或杜拜轉機。舊城泡浴場、逛橋與市集,一天到姆茨赫塔與哥里(史達林博物館),一天上卡茲別克看格爾蓋蒂教堂。"
+      },
+      {
+        "zh": "喬治亞經典環線",
+        "days": "8–10 天",
+        "note": "第比利斯進出,串連卡赫季酒鄉、卡茲別克、庫塔伊西與峽谷、巴統黑海岸,再視季節加斯瓦內季。"
+      },
+      {
+        "zh": "高加索健行(斯瓦內季)",
+        "days": "5–6 天",
+        "note": "飛庫塔伊西或走陸路到梅斯蒂亞,走四天梅斯蒂亞—烏什古利步道,住民宿、看塔樓村與冰川。"
+      },
+      {
+        "zh": "葡萄酒與美食深度",
+        "days": "5 天",
+        "note": "以第比利斯與錫格納吉為據點,跑卡赫季陶罐酒莊、上採收課、體驗家庭宴,適合美食旅人。"
+      },
+      {
+        "zh": "亞美尼亞＋喬治亞雙國",
+        "days": "10–12 天",
+        "note": "多從第比利斯進、葉里溫出(或相反),陸路經賽凡湖與洞窟修道院,兩國對台灣人多為落地或免簽,行前再確認。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "圖謝季偏遠山區",
+        "note": "只在夏季通車的東北山區,越野車翻越阿巴諾山口,住石塔村落、走高山牧道。"
+      },
+      {
+        "zh": "黑海岸巴統與植物園",
+        "note": "亞熱帶氣候的港市,現代建築與老城並存,近郊有山坡海景植物園與纜車。"
+      },
+      {
+        "zh": "大衛加雷賈岩洞修道院",
+        "note": "第比利斯東南、位於喬治亞與亞塞拜然邊界的半沙漠洞窟修道院群,壁畫與荒野景觀獨特。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "GE-a-tur.jpg",
+      "title": "East Caucasian tur",
+      "author": "Frettie",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Capra_cylindricornis_in_Liberec_Zoo_in_Liberec,_Liberec_District.jpg"
+    },
+    {
+      "file": "GE-a-leopard.jpg",
+      "title": "Persian (Caucasian) leopard",
+      "author": "Tamar Assaf",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Persian_Leopard_sitting.jpg"
+    },
+    {
+      "file": "GE-a-bear.jpg",
+      "title": "Eurasian brown bear",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Eurasian_brown_bear_(Ursus_arctos_arctos)_female_1.jpg"
+    },
+    {
+      "file": "GE-a-wolf.jpg",
+      "title": "Grey wolf",
+      "author": "Malene Thyssen",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Scandinavian_grey_wolf_Canis_lupus.jpg"
+    },
+    {
+      "file": "GE-f-khachapuri.jpg",
+      "title": "Adjarian khachapuri",
+      "author": "Eugene Krasnaok",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Khachapuri_Adjaruli_with_egg_and_butter_2016.jpg"
+    },
+    {
+      "file": "GE-f-khinkali.jpg",
+      "title": "Khinkali, mixed",
+      "author": "Chemipanda",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Khinkali_mixed.jpg"
+    },
+    {
+      "file": "GE-f-satsivi.jpg",
+      "title": "Satsivi",
+      "author": "Francesc Fort",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Satsivi_-_Batumi.jpg"
+    },
+    {
+      "file": "GE-f-churchkhela.jpg",
+      "title": "Churchkhela drying in the sun",
+      "author": "Jon Gudorf Photography",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Churchkhela_-_grape_and_nut_dried_on_string_in_sun.jpg"
+    },
+    {
+      "file": "GE-l-tbilisi.jpg",
+      "title": "Old Tbilisi",
+      "author": "GeoO",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Old_Tbilisi_town_in_Tbilisi,_Georgia.jpg"
+    },
+    {
+      "file": "GE-l-gergeti.jpg",
+      "title": "Gergeti Trinity Church, Kazbegi",
+      "author": "Stefan Wisselink",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Gergeti_Trinity_Church._Kazbegi,_Georgia_(36130111370).jpg"
+    },
+    {
+      "file": "GE-l-mtskheta.jpg",
+      "title": "Jvari Monastery, Mtskheta",
+      "author": "Vyacheslav Argenberg",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mtskheta,_Jvari_Monastery,_Church,_Georgia.jpg"
+    },
+    {
+      "file": "GE-l-ushguli.jpg",
+      "title": "Ushguli, Svaneti",
+      "author": "Florian Pinel",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ushguli_Svaneti_Georgia.JPG"
+    }
+  ],
+  "code": "GE"
+}

@@ -1,0 +1,359 @@
+{
+  "name_zh": "南非",
+  "name_en": "South Africa",
+  "summary": "位於非洲大陸最南端,三面環海,國土從乾燥的喀拉哈里到開普的地中海型氣候帶。以豐富礦產、野生動物與多元族群著稱,設有行政、立法、司法三個首都,結束種族隔離後於一九九四年舉行首次不分種族的選舉。",
+  "founding": [
+    "南非最早的居民是以採集狩獵維生的桑人與畜牧的科伊科伊人。約在西元三世紀前後,說班圖語的族群由北方遷入,帶來農耕與冶鐵,發展出祖魯、科薩、索托等社會,分布於東部與內陸較濕潤的地帶。",
+    "一六五二年荷蘭東印度公司在好望角設立補給站,歐洲移民(後稱布爾人或阿非利卡人)逐漸向內陸擴張,與科薩人爆發多次邊境戰爭,並自東南亞與非洲他地引入奴隸。一八〇六年英國正式取得開普殖民地。",
+    "十九世紀上半葉,祖魯王國在沙卡帶領下崛起並引發族群大遷徙(Mfecane);不滿英國統治的布爾人展開「大遷徙」,在內陸建立川斯瓦與奧蘭治自由邦兩個共和國。一八六七年金伯利發現鑽石、一八八六年威特沃特斯蘭發現黃金,徹底改變經濟與人口結構。",
+    "礦業利益與領土衝突引爆英國與布爾人的戰爭,一八九九至一九〇二年的第二次布爾戰爭以英國勝利告終。一九一〇年開普、納塔爾、川斯瓦與奧蘭治合組南非聯邦,成為大英帝國自治領,黑人多數被排除於政治之外,一九一三年《原住民土地法》限制其土地權。",
+    "一九四八年國民黨執政,將既有的種族區隔做法系統化為「種族隔離」(apartheid)法律體系,依種族劃分居住、教育、婚姻與參政權。非洲民族議會等組織由和平抗爭轉向地下與武裝路線,一九六〇年沙佩維爾槍擊事件、一九七六年索威托學生示威成為重要轉折,曼德拉等領袖於一九六四年被判終身監禁。",
+    "一九八〇年代國際制裁與國內動盪加劇。一九九〇年政府解除禁令、釋放曼德拉,展開多方談判;一九九四年舉行首次不分種族的大選,曼德拉出任總統,並成立真相與和解委員會處理過往侵害。民主化後,南非面臨貧富差距、失業與供電不足等長期課題。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "南非共和國",
+    "area_km2": 1221037,
+    "languages": [
+      "祖魯語",
+      "科薩語",
+      "南非荷蘭語",
+      "英語",
+      "北索托語"
+    ],
+    "religion": "以基督宗教為主,另有傳統信仰、伊斯蘭教與印度教",
+    "currency": "蘭特(ZAR)",
+    "government": "議會共和(總統由國會選出,兼國家與政府首長)"
+  },
+  "animals": [
+    {
+      "zh": "獅子",
+      "en": "Lion",
+      "note": "克留格爾等保護區的頂級掠食者,是「非洲五霸」之一。",
+      "image": "ZA-a-lion.jpg"
+    },
+    {
+      "zh": "非洲象",
+      "en": "African bush elephant",
+      "note": "陸上最大動物,克留格爾與艾多國家公園族群穩定。",
+      "image": "ZA-a-elephant.jpg"
+    },
+    {
+      "zh": "白犀牛",
+      "en": "Southern white rhinoceros",
+      "note": "南非是全球最大族群所在,長期受盜獵威脅,保育投入巨大。",
+      "image": "ZA-a-rhino.jpg"
+    },
+    {
+      "zh": "跳羚",
+      "en": "Springbok",
+      "note": "乾草原上善跳躍的羚羊,是南非的國家動物與橄欖球隊代號。",
+      "image": "ZA-a-springbok.jpg"
+    },
+    {
+      "zh": "非洲企鵝",
+      "en": "African penguin",
+      "note": "在開普半島的巨石灘等地上岸築巢,是非洲唯一的野生企鵝。",
+      "image": "ZA-a-penguin.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "炭烤聚會",
+      "en": "Braai",
+      "note": "以柴火炭烤肉類的社交活動,近似戶外烤肉但更具儀式感,有專屬國定日。",
+      "image": "ZA-f-braai.jpg"
+    },
+    {
+      "zh": "咖哩肉末派",
+      "en": "Bobotie",
+      "note": "咖哩調味的牛絞肉加果乾,上面覆蛋奶液烤成,源自開普馬來料理。",
+      "image": "ZA-f-bobotie.jpg"
+    },
+    {
+      "zh": "玉米糊",
+      "en": "Pap",
+      "note": "玉米粉煮成的稠粥,是多數家庭的主食,常配燉肉與辣番茄醬。"
+    },
+    {
+      "zh": "比爾通",
+      "en": "Biltong",
+      "note": "以醋與香料醃過風乾的生肉乾,牛肉或獵物肉皆可,是國民零食。",
+      "image": "ZA-f-biltong.jpg"
+    },
+    {
+      "zh": "兔子餐",
+      "en": "Bunny chow",
+      "note": "德班發源,將半條吐司挖空、填入咖哩,是印度裔勞工的平價午餐。",
+      "image": "ZA-f-bunny.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "桌山",
+      "en": "Table Mountain",
+      "note": "開普敦後方的平頂山,可搭旋轉纜車登頂,是城市的象徵。",
+      "latlon": [
+        -33.9575,
+        18.403
+      ],
+      "image": "ZA-l-table.jpg"
+    },
+    {
+      "zh": "好望角",
+      "en": "Cape of Good Hope",
+      "note": "開普半島南端的岩岬,昔日航海地標,今為自然保護區。",
+      "latlon": [
+        -34.3568,
+        18.474
+      ],
+      "image": "ZA-l-goodhope.jpg"
+    },
+    {
+      "zh": "克留格爾國家公園",
+      "en": "Kruger National Park",
+      "note": "面積近兩萬平方公里的野生動物保護區,是自駕看五霸的首選。",
+      "latlon": [
+        -24.01,
+        31.49
+      ],
+      "image": "ZA-l-kruger.jpg"
+    },
+    {
+      "zh": "羅本島",
+      "en": "Robben Island",
+      "note": "開普敦外海的監獄島,曼德拉在此囚禁十八年,現為紀念館。",
+      "latlon": [
+        -33.8067,
+        18.3667
+      ]
+    },
+    {
+      "zh": "布萊德河峽谷",
+      "en": "Blyde River Canyon",
+      "note": "世界最大的綠色峽谷之一,「三茅屋」與「上帝之窗」是著名觀景點。",
+      "latlon": [
+        -24.5833,
+        30.8
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "尼爾森·曼德拉",
+      "en": "Nelson Mandela",
+      "note": "反種族隔離領袖,獄中二十七年後成為首位民選黑人總統,獲諾貝爾和平獎。"
+    },
+    {
+      "zh": "戴斯蒙·屠圖",
+      "en": "Desmond Tutu",
+      "note": "聖公會大主教,以非暴力反抗種族隔離,主持真相與和解委員會,獲諾貝爾和平獎。"
+    },
+    {
+      "zh": "沙卡",
+      "en": "Shaka",
+      "note": "十九世紀初的祖魯國王,以軍事改革建立強大王國,影響南部非洲格局。"
+    },
+    {
+      "zh": "克里斯蒂安·巴納德",
+      "en": "Christiaan Barnard",
+      "note": "心臟外科醫師,一九六七年在開普敦完成世界首例人對人心臟移植。"
+    },
+    {
+      "zh": "娜汀·葛蒂瑪",
+      "en": "Nadine Gordimer",
+      "note": "小說家,作品刻畫種族隔離下的社會,一九九一年獲諾貝爾文學獎。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "五到九月的克留格爾旱季",
+      "note": "乾季植被稀疏、動物聚集水源,是自駕或參加遊獵看五霸的最佳時機,日夜溫差大要帶外套。"
+    },
+    {
+      "zh": "十一到三月的開普敦夏季",
+      "note": "天氣乾爽,適合登桌山、走半島到好望角、跑康斯坦提亞酒莊,並到赫曼努斯賞南露脊鯨(六到十一月)。"
+    },
+    {
+      "zh": "八到九月的西開普花季",
+      "note": "春雨後,西北部的納馬夸蘭與西開普國家公園野花大片綻放,是攝影與自駕路線。"
+    }
+  ],
+  "events": [
+    {
+      "year": 1652,
+      "zh": "荷蘭東印度公司在好望角設立補給站。"
+    },
+    {
+      "year": 1867,
+      "zh": "金伯利發現鑽石。"
+    },
+    {
+      "year": 1886,
+      "zh": "威特沃特斯蘭發現黃金。"
+    },
+    {
+      "year": 1910,
+      "zh": "開普、納塔爾、川斯瓦與奧蘭治合組南非聯邦。"
+    },
+    {
+      "year": 1948,
+      "zh": "國民黨執政,將種族隔離系統化為法律。"
+    },
+    {
+      "year": 1976,
+      "zh": "索威托學生示威遭鎮壓。"
+    },
+    {
+      "year": 1994,
+      "zh": "首次不分種族大選,曼德拉當選總統。"
+    }
+  ],
+  "souvenirs": [
+    {
+      "zh": "國寶茶(如意波士茶)",
+      "note": "產自西開普的無咖啡因草本茶,超市盒裝,輕便好帶。"
+    },
+    {
+      "zh": "比爾通肉乾",
+      "note": "真空包裝的牛肉乾,注意台灣入境肉類限制,購買前先確認。"
+    },
+    {
+      "zh": "恩德貝勒串珠飾品",
+      "note": "幾何圖案的手環、頸飾與娃娃,機場與市集常見。"
+    },
+    {
+      "zh": "本地葡萄酒與白蘭地",
+      "note": "斯泰倫博斯與弗蘭斯胡克產區,皮諾塔吉是南非特有品種。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "開普敦與半島",
+        "days": "4–5 天",
+        "note": "台灣多經杜哈、香港或約翰尼斯堡轉機。市區走桌山、綠市廣場與波卡普區,一天沿海岸開到好望角與企鵝灘,一天跑康斯坦提亞或斯泰倫博斯酒莊。"
+      },
+      {
+        "zh": "克留格爾遊獵",
+        "days": "3–4 天",
+        "note": "從約翰尼斯堡飛內爾斯普雷特或自駕進園,住公營營地或私人保護區,清晨與傍晚各一次 game drive。"
+      },
+      {
+        "zh": "花園大道自駕",
+        "days": "6–7 天",
+        "note": "開普敦一路開到伊莉莎白港,經赫曼努斯賞鯨、奈斯納潟湖、齊齊卡馬吊橋與奧茨胡恩鴕鳥場。"
+      },
+      {
+        "zh": "約堡＋普利托里亞歷史",
+        "days": "2–3 天",
+        "note": "參觀種族隔離博物館、憲政山與索威托,再到普利托里亞看聯合大廈,適合轉機或遊獵前後。"
+      },
+      {
+        "zh": "全景之路與克留格爾",
+        "days": "5 天",
+        "note": "從約堡開上姆普馬蘭加高地,看上帝之窗、三茅屋與布萊德河峽谷,再下切進克留格爾北段。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "龍山山脈健行",
+        "note": "誇祖魯-納塔爾與賴索托交界的高山草原,有布須曼岩畫、瀑布與圓形劇場崖壁,適合多日健行。"
+      },
+      {
+        "zh": "西北部喀拉哈里",
+        "note": "到卡拉哈里跨境公園看沙丘、黑鬃獅與猛禽,路線偏遠、需四驅車與充足補給。"
+      },
+      {
+        "zh": "誇祖魯-納塔爾戰場之旅",
+        "note": "走訪伊散德爾瓦納與羅克渡口等英祖戰爭遺址,搭配當地說書導覽。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "ZA-a-lion.jpg",
+      "title": "Lion, female, Kruger",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Lion_(Panthera_leo)_female_Kruger.jpg"
+    },
+    {
+      "file": "ZA-a-elephant.jpg",
+      "title": "African bush elephant, male, Kruger",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:African_bush_elephant_(Loxodonta_africana)_male_Kruger.jpg"
+    },
+    {
+      "file": "ZA-a-rhino.jpg",
+      "title": "Adult white rhinoceros",
+      "author": "Vauxford",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Adult_White_Rhinoceros_(Ceratotherium_simum_simum)_(CWPG).jpg"
+    },
+    {
+      "file": "ZA-a-springbok.jpg",
+      "title": "Springbok pronking",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Springbok_(Antidorcas_marsupialis)_pronking_2.jpg"
+    },
+    {
+      "file": "ZA-a-penguin.jpg",
+      "title": "African penguins",
+      "author": "Salimfadhley",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:African_penguins.jpg"
+    },
+    {
+      "file": "ZA-f-braai.jpg",
+      "title": "A real braai, South Africa",
+      "author": "Victorgrigas",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:A_Real_Braai,_South_Africa-3619.jpg"
+    },
+    {
+      "file": "ZA-f-bobotie.jpg",
+      "title": "Bobotie, South African dish",
+      "author": "Olga Ernst",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bobotie,_South_African_dish.jpg"
+    },
+    {
+      "file": "ZA-f-biltong.jpg",
+      "title": "Typical homemade biltong",
+      "author": "Schalkb2",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Typical_homemade_biltong.jpg"
+    },
+    {
+      "file": "ZA-f-bunny.jpg",
+      "title": "Durban bunny chow",
+      "author": "Robert Rutherford",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Durban_Bunny_Chow.jpg"
+    },
+    {
+      "file": "ZA-l-table.jpg",
+      "title": "Table Mountain, Cape Town",
+      "author": "Dietmar Rabich",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Cape_Town_(ZA),_Table_Mountain_--_2024_--_2821.jpg"
+    },
+    {
+      "file": "ZA-l-goodhope.jpg",
+      "title": "Cape of Good Hope",
+      "author": "Dietmar Rabich",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Cape_Town_(ZA),_Cape_Peninsula_National_Park,_Cape_of_Good_Hope_--_2024_--_3276.jpg"
+    },
+    {
+      "file": "ZA-l-kruger.jpg",
+      "title": "Kruger National Park landscape",
+      "author": "Dietmar Rabich",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Kruger_National_Park_(ZA),_Landschaft_--_2024_--_0043.jpg"
+    }
+  ],
+  "code": "ZA"
+}

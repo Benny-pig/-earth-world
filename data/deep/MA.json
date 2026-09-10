@@ -1,0 +1,356 @@
+{
+  "name_zh": "摩洛哥",
+  "name_en": "Morocco",
+  "summary": "位於非洲西北端,隔直布羅陀海峽與歐洲相望,西臨大西洋、北濱地中海,內陸有阿特拉斯山與撒哈拉沙漠。柏柏爾(阿馬齊格)與阿拉伯文化交融,現由阿拉維王朝統治,以四座皇城、手工藝與觀光聞名。西撒哈拉的主權歸屬仍具爭議。",
+  "founding": [
+    "摩洛哥最早的居民是柏柏爾(阿馬齊格)人,分布於山地與綠洲,以農牧和跨撒哈拉貿易維生。腓尼基與迦太基人沿海設立商站,西元一世紀成為羅馬帝國的廷吉塔納·茅利塔尼亞行省,沃呂比利斯等城鎮遺跡留存至今。",
+    "七世紀末阿拉伯軍隊帶著伊斯蘭教進入馬格里布。七八八年,先知後裔伊德里斯一世在此建立伊德里斯王朝,以非斯為中心,被視為第一個摩洛哥國家。此後柏柏爾人建立的政權崛起,阿拉伯語、伊斯蘭教與在地文化逐漸融合。",
+    "十一至十三世紀,源自摩洛哥的穆拉比特王朝與穆瓦希德王朝先後統治整個馬格里布與伊比利半島南部,馬拉喀什成為帝國首都,留下庫圖比亞清真寺等建築。之後馬林王朝定都非斯,擴建伊斯蘭學院,使非斯成為重要的宗教與學術中心。",
+    "十六世紀薩阿德王朝抵禦葡萄牙與鄂圖曼的擴張,一五七八年在「三王戰役」中大勝葡萄牙,隨後蘇丹艾哈邁德·曼蘇爾出兵西非,一度控制桑海帝國的黃金貿易。一六六六年阿拉維王朝取得政權,將首都遷至梅克內斯與拉巴特,王朝延續至今。",
+    "十九世紀歐洲列強步步進逼。一九一二年《非斯條約》使摩洛哥大部分成為法國保護國,北部與南部部分地區歸西班牙,丹吉爾另設國際共管區。殖民時期修築鐵路與新城區,也激起民族主義運動,一九五六年摩洛哥恢復獨立,蘇丹改稱國王。",
+    "獨立後哈桑二世長期在位,王權集中,政局歷經動盪。一九七五年組織「綠色進軍」,數十萬平民進入西班牙撤離的西撒哈拉,主權爭議延續至今。一九九九年穆罕默德六世即位,推動基礎建設與部分社會改革;二〇一一年在區域示威潮中修憲,擴大民選政府權限,但國王仍握有實權。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "摩洛哥王國",
+    "area_km2": 446550,
+    "languages": [
+      "阿拉伯語",
+      "阿馬齊格語(柏柏爾語)"
+    ],
+    "religion": "伊斯蘭教(遜尼派)為國教",
+    "currency": "摩洛哥迪拉姆(MAD)",
+    "government": "君主立憲(國王握有實權)"
+  },
+  "animals": [
+    {
+      "zh": "巴巴利獼猴",
+      "en": "Barbary macaque",
+      "note": "北非唯一的猴類,群居於中阿特拉斯的雪松林,也出現在觀光景點。",
+      "image": "MA-a-macaque.jpg"
+    },
+    {
+      "zh": "髯羊",
+      "en": "Barbary sheep (aoudad)",
+      "note": "適應乾旱山地的野羊,頸胸有長毛,阿特拉斯山有野生族群。",
+      "image": "MA-a-aoudad.jpg"
+    },
+    {
+      "zh": "耳廓狐",
+      "en": "Fennec fox",
+      "note": "撒哈拉的小型狐狸,耳朵極大以散熱,夜行、群居於沙丘洞穴。",
+      "image": "MA-a-fennec.jpg"
+    },
+    {
+      "zh": "隱䴉",
+      "en": "Northern bald ibis",
+      "note": "極度瀕危的黑羽禿頭䴉,全球最大野生族群在南部的蘇斯-馬薩沿岸。",
+      "image": "MA-a-ibis.jpg"
+    },
+    {
+      "zh": "單峰駱駝",
+      "en": "Dromedary camel",
+      "note": "撒哈拉邊緣居民的馱獸與坐騎,梅爾祖卡沙丘的駝隊行程最經典。",
+      "image": "MA-a-camel.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "塔吉鍋",
+      "en": "Tagine",
+      "note": "錐形陶鍋燉煮的肉類蔬菜料理,常加杏桃、椰棗、橄欖或醃檸檬。",
+      "image": "MA-f-tagine.jpg"
+    },
+    {
+      "zh": "庫斯庫斯",
+      "en": "Couscous",
+      "note": "蒸熟的小顆粒粗麥,鋪上燉肉與蔬菜,傳統上星期五全家共食。",
+      "image": "MA-f-couscous.jpg"
+    },
+    {
+      "zh": "哈利拉湯",
+      "en": "Harira",
+      "note": "番茄、鷹嘴豆與扁豆熬的濃湯,齋戒月開齋時最常喝。",
+      "image": "MA-f-harira.jpg"
+    },
+    {
+      "zh": "貝斯蒂亞餡餅",
+      "en": "Pastilla",
+      "note": "薄酥皮包鴿肉或雞肉與杏仁,表面撒糖粉與肉桂,鹹甜交織的宴客菜。",
+      "image": "MA-f-pastilla.jpg"
+    },
+    {
+      "zh": "摩洛哥薄荷茶",
+      "en": "Moroccan mint tea",
+      "note": "綠茶加大量鮮薄荷與糖,從高處沖入杯中起泡,是待客必備。",
+      "image": "MA-f-tea.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "德吉瑪廣場",
+      "en": "Jemaa el-Fnaa",
+      "note": "馬拉喀什舊城的中心廣場,入夜有說書人、樂手與大排檔,列非物質文化遺產。",
+      "latlon": [
+        31.6258,
+        -7.9891
+      ],
+      "image": "MA-l-jemaa.jpg"
+    },
+    {
+      "zh": "非斯舊城",
+      "en": "Fès el-Bali",
+      "note": "世界最大的無車舊城區之一,巷弄如迷宮,喬拉皮革染坊是招牌畫面。",
+      "latlon": [
+        34.0654,
+        -4.977
+      ],
+      "image": "MA-l-fez.jpg"
+    },
+    {
+      "zh": "舍夫沙萬",
+      "en": "Chefchaouen",
+      "note": "里夫山區的山城,舊城牆面幾乎全漆成藍色,是熱門拍照地。",
+      "latlon": [
+        35.1688,
+        -5.2636
+      ]
+    },
+    {
+      "zh": "艾本哈杜築壘村",
+      "en": "Aït Benhaddou",
+      "note": "阿特拉斯山南麓的夯土築壘村落,是多部電影取景地,列世界遺產。",
+      "latlon": [
+        31.0472,
+        -7.1318
+      ]
+    },
+    {
+      "zh": "哈桑二世清真寺",
+      "en": "Hassan II Mosque",
+      "note": "卡薩布蘭卡海濱的巨型清真寺,宣禮塔高兩百公尺,部分建在海面上。",
+      "latlon": [
+        33.6083,
+        -7.6326
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "伊德里斯一世",
+      "en": "Idris I",
+      "note": "先知後裔,七八八年建立伊德里斯王朝,被視為摩洛哥立國者。"
+    },
+    {
+      "zh": "伊本·巴圖塔",
+      "en": "Ibn Battuta",
+      "note": "十四世紀丹吉爾出身的旅行家,遊歷橫跨非亞歐,留下著名遊記。"
+    },
+    {
+      "zh": "艾哈邁德·曼蘇爾",
+      "en": "Ahmad al-Mansur",
+      "note": "薩阿德王朝蘇丹,一五七八年勝三王戰役,後征服桑海帝國。"
+    },
+    {
+      "zh": "哈桑二世",
+      "en": "Hassan II",
+      "note": "一九六一至一九九九年在位,鞏固王權並發動綠色進軍。"
+    },
+    {
+      "zh": "希查姆·艾爾·奎羅伊",
+      "en": "Hicham El Guerrouj",
+      "note": "中距離跑者,一千五百公尺與一英里世界紀錄保持人,雅典奧運雙金。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "三到五月的馬拉喀什與南部",
+      "note": "春季氣溫舒適、沙漠不至酷熱,適合逛舊城、翻越提茲恩提查山口到艾本哈杜,再走三天兩夜沙漠團到梅爾祖卡。"
+    },
+    {
+      "zh": "九到十一月的非斯與北部",
+      "note": "暑氣退去後走非斯、梅克內斯與沃呂比利斯羅馬遺址,再北上舍夫沙萬藍城與丹吉爾看海峽。"
+    },
+    {
+      "zh": "冬季的大西洋岸與索維拉",
+      "note": "十二到二月內陸偏冷,轉往氣候溫和的海港城索維拉,看城牆、漁港與風帆,順訪阿甘油合作社。"
+    }
+  ],
+  "events": [
+    {
+      "year": 40,
+      "zh": "羅馬設立廷吉塔納·茅利塔尼亞行省。"
+    },
+    {
+      "year": 788,
+      "zh": "伊德里斯一世在非斯建立伊德里斯王朝。"
+    },
+    {
+      "year": 1062,
+      "zh": "穆拉比特王朝興建馬拉喀什並定為首都。"
+    },
+    {
+      "year": 1578,
+      "zh": "三王戰役擊敗葡萄牙。"
+    },
+    {
+      "year": 1912,
+      "zh": "《非斯條約》使摩洛哥成為法國與西班牙保護國。"
+    },
+    {
+      "year": 1956,
+      "zh": "摩洛哥恢復獨立,蘇丹改稱國王。"
+    },
+    {
+      "year": 1975,
+      "zh": "「綠色進軍」進入西班牙撤離的西撒哈拉。"
+    }
+  ],
+  "souvenirs": [
+    {
+      "zh": "阿甘油",
+      "note": "摩洛哥特產,分食用與美容兩種,合作社購買品質較有保障。"
+    },
+    {
+      "zh": "手工皮件",
+      "note": "非斯染坊出品的皮包、拖鞋與坐墊套,議價空間大。"
+    },
+    {
+      "zh": "彩繪陶器與塔吉鍋",
+      "note": "非斯藍與薩菲彩繪最有名,陶製塔吉鍋較重、需妥善包裝。"
+    },
+    {
+      "zh": "薄荷茶具與香料",
+      "note": "銀色茶壺、雕花玻璃杯與什錦香料,市集小攤都有。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "馬拉喀什＋撒哈拉",
+        "days": "5 天",
+        "note": "台灣多經杜哈或歐洲轉機。馬拉喀什舊城兩天,再參加三天兩夜沙漠團經艾本哈杜、托德拉峽谷到梅爾祖卡騎駱駝、住帳篷看星。"
+      },
+      {
+        "zh": "皇城環線",
+        "days": "8–10 天",
+        "note": "卡薩布蘭卡進,串連拉巴特、梅克內斯、沃呂比利斯、非斯、舍夫沙萬與馬拉喀什,火車與包車並用。"
+      },
+      {
+        "zh": "藍城與北部",
+        "days": "5 天",
+        "note": "從丹吉爾或非斯出發,主軸是舍夫沙萬藍城,搭配得土安舊城與地中海小鎮,步調較慢。"
+      },
+      {
+        "zh": "沙漠攝影深度",
+        "days": "7 天",
+        "note": "以梅爾祖卡或姆哈米德為基地,追沙丘日出日落、乾河床與遊牧聚落,適合帶腳架的攝影者。"
+      },
+      {
+        "zh": "大西洋岸衝浪與索維拉",
+        "days": "4 天",
+        "note": "從馬拉喀什拉車到塔加佐特衝浪村與索維拉古城,行程輕鬆,適合親子或想放空的旅人。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "托德拉與達德斯峽谷自駕",
+        "note": "阿特拉斯山南麓的紅色峽谷與「千座卡斯巴之路」,自駕住當地民宿最能感受。"
+      },
+      {
+        "zh": "中阿特拉斯雪松林與伊夫蘭",
+        "note": "有「摩洛哥小瑞士」之稱的山城,春夏健行看巴巴利獼猴,冬季甚至可滑雪。"
+      },
+      {
+        "zh": "塔菲拉勒特綠洲與化石之路",
+        "note": "埃爾夫德一帶採石場出產三葉蟲化石,可深入撒哈拉邊緣的椰棗綠洲與夯土古城。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "MA-a-macaque.jpg",
+      "title": "Barbary macaque, Marrakesh",
+      "author": "Adam Harangozó",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Barbary_macaque,_Marrakesh_01.jpg"
+    },
+    {
+      "file": "MA-a-aoudad.jpg",
+      "title": "Barbary sheep (Ammotragus lervia)",
+      "author": "Clément Bardot",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mouflon_%C3%A0_manchettes_(Ammotragus_lervia).jpg"
+    },
+    {
+      "file": "MA-a-fennec.jpg",
+      "title": "Fennec fox",
+      "author": "Anass ERRIHANI",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Fennec_Fox_Peek.jpg"
+    },
+    {
+      "file": "MA-a-ibis.jpg",
+      "title": "Northern bald ibis",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Northern_bald_ibis_(Geronticus_eremita).jpg"
+    },
+    {
+      "file": "MA-a-camel.jpg",
+      "title": "Camels at Aït Benhaddou",
+      "author": "cliff williams",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:A%C3%AFtBenhaddou_Morocco_2.jpg"
+    },
+    {
+      "file": "MA-f-tagine.jpg",
+      "title": "Moroccan tagine",
+      "author": "Khammal92",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Moroccan_tagine.jpg"
+    },
+    {
+      "file": "MA-f-couscous.jpg",
+      "title": "Moroccan couscous",
+      "author": "Lmmima",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Moroccan_cuscus,_from_Casablanca,_September_2018.jpg"
+    },
+    {
+      "file": "MA-f-harira.jpg",
+      "title": "Harira with sides",
+      "author": "AxlsPacific",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Maroka%C5%84ska_Harira_z_dodatkami.jpg"
+    },
+    {
+      "file": "MA-f-pastilla.jpg",
+      "title": "Pastilla from Souk Jmiaa, Casablanca",
+      "author": "Mounir Neddi",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pastilla_from_Souk_Jmiaa_in_Casablanca_17.jpg"
+    },
+    {
+      "file": "MA-f-tea.jpg",
+      "title": "Mint tea",
+      "author": "katiebordner",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mint_tea_(14823416550).jpg"
+    },
+    {
+      "file": "MA-l-jemaa.jpg",
+      "title": "Jemaa el-Fnaa, Marrakesh",
+      "author": "Jorge Láscar",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Jemaa_el-Fnaa_(7346166250).jpg"
+    },
+    {
+      "file": "MA-l-fez.jpg",
+      "title": "Chouara Tannery, Fez",
+      "author": "Jorge Franganillo",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Fez_Chouara_Tannery_(54238811661).jpg"
+    }
+  ],
+  "code": "MA"
+}
