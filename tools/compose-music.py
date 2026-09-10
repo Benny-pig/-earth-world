@@ -9,6 +9,7 @@ compose-music.py — 產生「地球世界」的原創背景音樂(無版權顧�
   spa          SPA 療養       —— 溫暖低 pad + 五聲慢旋律 + 水聲,極慢,無鼓
   deepspace    深空冥想       —— 低頻嗡鳴 drone + 偶發 sub 湧動 + 稀疏高音,巨大殘響
   nebula       星塵電子       —— 十六分音琶音 + sidechain pad + 旋律 lead + 柔和 kick
+  lofi         書房 lo-fi     —— Rhodes 七和弦 + 搖擺鼓組 + 黑膠雜訊 + 簡單貝斯與短動機
 
 執行:
   .../python.exe tools/compose-music.py            # 全部重算
@@ -356,12 +357,100 @@ def build_nebula():
     mix[:, 1] += bass + kick
     return SR, seamless(master(SR, mix, target_rms_db=-12), n, SR)
 
+def build_lofi():
+    """書房 lo-fi:Rhodes ii-V-I-vi 循環 + 搖擺鼓組 + 黑膠雜訊 + 走動貝斯 + 兩小節動機。"""
+    SR, BPM = 32000, 72.0
+    beat = 60 / BPM; bar = 4 * beat; seg = 2 * bar          # 兩小節一換和弦
+    swing = 0.62                                            # 八分音符搖擺比
+    n = int(round(SR * seg * 8)); n_ext = n + int(SR * 3.0)
+    t = np.arange(n_ext) / SR; rng = np.random.default_rng(1975)
+    # F 大調:Gm9 - C13 - Fmaj9 - Dm9  (jazzy、慵懶)
+    C = [[hz(-14), hz(-10), hz(-7), hz(-3), hz(2)],         # Gm9
+         [hz(-19), hz(-9), hz(-5), hz(0), hz(4)],           # C13
+         [hz(-16), hz(-12), hz(-8), hz(-4), hz(3)],         # Fmaj9
+         [hz(-17), hz(-13), hz(-10), hz(-6), hz(-1)]]       # Dm9
+    Bass = [hz(-26), hz(-31), hz(-28), hz(-23)]             # G C F D 根音
+    pad = synth_pad(SR, n_ext, t, C, seg, rng, level=0.115, detune=0.001,
+                    attack=0.18, rel=0.9, trem_hz=0.9,      # Rhodes 顫音
+                    harm=(1.0, 0.55, 0.28, 0.12, 0.05))
+    # 走動貝斯:每拍一顆,和弦音間漫步
+    bass = np.zeros(n_ext)
+    for s in range(int(n_ext / (SR * beat))):
+        tb = s * beat
+        seg_i = int((tb % (seg * 4)) // seg) % len(Bass)
+        root = Bass[seg_i]
+        f = root * (1.0 if s % 4 < 2 else (1.5 if s % 4 == 2 else 1.335))
+        i0 = int(tb * SR); i1 = int(min((tb + beat * 0.92) * SR, n_ext))
+        lt = (np.arange(i0, i1) - i0) / SR
+        env = np.clip(lt / 0.02, 0, 1) * np.exp(-lt * 2.6)
+        bass[i0:i1] += (np.sin(2 * np.pi * f * lt) + 0.3 * np.sin(4 * np.pi * f * lt)) * env * 0.5
+    # 搖擺鼓組:kick(1、3)+ 側擊 snare(2、4)+ 八分 hihat(搖擺)
+    drums = np.zeros(n_ext)
+    for s in range(int(n_ext / (SR * beat))):
+        tb = s * beat
+        if s % 2 == 0:                                      # kick
+            i0 = int(tb * SR); i1 = int(min((tb + 0.32) * SR, n_ext))
+            lt = (np.arange(i0, i1) - i0) / SR
+            drums[i0:i1] += np.sin(2 * np.pi * (44 * np.exp(-lt * 24) + 38) * lt) * np.exp(-lt * 10) * 0.5
+        else:                                               # snare(濾過噪音 + 低音體)
+            i0 = int(tb * SR); i1 = int(min((tb + 0.22) * SR, n_ext))
+            lt = (np.arange(i0, i1) - i0) / SR
+            nb = rng.standard_normal(i1 - i0)
+            bb, aa = butter(2, [1400 / (SR / 2), 6500 / (SR / 2)], btype="band")
+            drums[i0:i1] += (lfilter(bb, aa, nb) * np.exp(-lt * 26) * 0.28
+                             + np.sin(2 * np.pi * 190 * lt) * np.exp(-lt * 30) * 0.12)
+    for s in range(int(n_ext / (SR * beat / 2))):           # hihat,搖擺
+        frac = (s % 2) * (swing - 0.5) * 2
+        tb = (s // 2) * beat + (0.5 + frac) * beat * (s % 2)
+        if s % 2 == 0:
+            tb = (s // 2) * beat
+        i0 = int(tb * SR); i1 = int(min((tb + 0.09) * SR, n_ext))
+        if i1 <= i0:
+            continue
+        lt = (np.arange(i0, i1) - i0) / SR
+        nb = rng.standard_normal(i1 - i0)
+        hb, ha = butter(2, 8000 / (SR / 2), btype="high")
+        drums[i0:i1] += lfilter(hb, ha, nb) * np.exp(-lt * 60) * (0.12 if s % 2 else 0.16)
+    # 兩小節鋼琴動機(F 大調音階,固定樂句)
+    motif = np.zeros((n_ext, 2))
+    phrase = [(0, 2), (2, 1), (4, 1), (2, 2), (-1, 2), (0, 4)]   # (音級, 拍長×2 → 八分)
+    scale = [hz(-16), hz(-14), hz(-12), hz(-11), hz(-9), hz(-7), hz(-5), hz(-4), hz(-1), hz(0)]
+    tcur = seg
+    while tcur < n_ext / SR - 3:
+        for deg, ln in phrase:
+            f = scale[(deg + 4) % len(scale)] * 4
+            dur = ln * beat / 2
+            i0 = int(tcur * SR); i1 = int(min((tcur + dur + 0.5) * SR, n_ext))
+            lt = (np.arange(i0, i1) - i0) / SR
+            env = np.clip(lt / 0.01, 0, 1) * np.exp(-lt * 3.2)
+            v = (np.sin(2 * np.pi * f * lt) + 0.4 * np.sin(4 * np.pi * f * lt)
+                 + 0.15 * np.sin(6 * np.pi * f * lt)) * env * 0.085
+            motif[i0:i1, 0] += v * 0.6; motif[i0:i1, 1] += v * 0.45
+            tcur += dur
+        tcur += seg - (sum(ln for _, ln in phrase) * beat / 2) % seg
+    # 黑膠雜訊:持續嘶聲 + 隨機爆音
+    hiss = rng.standard_normal(n_ext)
+    lb, la = butter(2, [1800 / (SR / 2), 9000 / (SR / 2)], btype="band")
+    hiss = lfilter(lb, la, hiss) * 0.012
+    for _ in range(int(n_ext / SR * 5)):
+        p = rng.integers(0, n_ext - 30)
+        hiss[p:p + rng.integers(3, 22)] += rng.uniform(-0.05, 0.05)
+    rev = make_reverb(SR)
+    wetL = pad[:, 0] + motif[:, 0]
+    wetR = pad[:, 1] + motif[:, 1]
+    revS = np.stack([rev(wetL, size=0.8), rev(wetR, size=0.8)], axis=1) * 0.16
+    mix = pad + motif + revS
+    mix[:, 0] += bass * 0.6 + drums * 0.5 + hiss
+    mix[:, 1] += bass * 0.6 + drums * 0.5 + hiss
+    return SR, seamless(master(SR, mix, target_rms_db=-13.5, air_hz=6000, air_amt=0.15), n, SR)
+
 PRESETS = {
     "earth-world": build_earth_world,
     "crystal": build_crystal,
     "spa": build_spa,
     "deepspace": build_deepspace,
     "nebula": build_nebula,
+    "lofi": build_lofi,
 }
 
 if __name__ == "__main__":
