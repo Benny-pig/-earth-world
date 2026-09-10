@@ -129,76 +129,120 @@
     background: none; border: none; color: #cdd8f0; font-size: 22px; line-height: 1; }
   #encyclopedia {
     position: fixed; inset: 0; z-index: 60; display: flex; flex-direction: column;
-    background: rgba(6, 9, 18, 0.94); backdrop-filter: blur(18px); color: #e7edfb;
-    font: 14px/1.75 system-ui, "Microsoft JhengHei", sans-serif;
+    --enc-bg: #0a0b0e; --enc-ink: #f3f0e8; --enc-ink-dim: #9aa2b1;
+    --enc-line: rgba(255,255,255,.13); --enc-surface: rgba(255,255,255,.035);
+    --enc-accent: #6db4ff; --enc-warm: #e8b768;
+    background: var(--enc-bg); backdrop-filter: blur(18px); color: var(--enc-ink);
+    font: 15px/1.75 system-ui, "Microsoft JhengHei", "PingFang TC", sans-serif;
     transform: translateY(100%); transition: transform .5s cubic-bezier(.22,.61,.36,1);
     will-change: transform;
   }
   #encyclopedia.open { transform: translateY(0); }
+  #encyclopedia ::selection { background: var(--enc-accent); color: #04121f; }
   #encyclopedia .enc-topbar {
     flex: 0 0 auto; display: flex; align-items: center; gap: 14px;
-    padding: 14px 22px; border-bottom: 1px solid rgba(120,170,255,.18);
-    background: rgba(10,14,26,.6);
+    padding: 13px 26px; border-bottom: 1px solid var(--enc-line);
+    background: rgba(10,11,14,.72); backdrop-filter: blur(10px);
   }
-  #encyclopedia .enc-title { flex: 1; font-size: 16px; font-weight: 700; letter-spacing: .04em; }
+  #encyclopedia .enc-title { flex: 1; font-size: 13px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
   #encyclopedia .enc-topbar button {
-    background: none; border: 1px solid rgba(120,170,255,.28); color: #dfe8ff;
-    border-radius: 7px; padding: 5px 12px; font: inherit; cursor: pointer;
+    background: none; border: 1px solid var(--enc-line); color: var(--enc-ink);
+    border-radius: 4px; padding: 6px 13px; font: inherit; font-size: 12px; cursor: pointer;
+    letter-spacing: .04em; transition: background .15s, border-color .15s;
   }
-  #encyclopedia .enc-topbar button:hover { background: rgba(77,163,255,.18); }
-  #encyclopedia .enc-close { font-size: 18px; line-height: 1; padding: 2px 10px; }
-  #encyclopedia .enc-scroll { flex: 1; overflow-y: auto; overscroll-behavior: contain; }
-  #encyclopedia #enc-body { max-width: 920px; margin: 0 auto; padding: 26px 24px 120px; }
-  #encyclopedia h2 { font-size: 30px; margin: 0 0 4px; }
-  #encyclopedia .enc-en { color: #9fb2d8; font-size: 14px; margin-bottom: 14px; }
-  #encyclopedia h3 {
-    font-size: 15px; letter-spacing: .06em; color: #8fd4ff;
-    margin: 34px 0 12px; padding-bottom: 6px; border-bottom: 1px solid rgba(120,170,255,.15);
-  }
+  #encyclopedia .enc-topbar button:hover { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.32); }
+  #encyclopedia .enc-close { font-size: 17px; line-height: 1; padding: 3px 11px; }
+  #encyclopedia .enc-scroll { flex: 1; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: rgba(255,255,255,.2) transparent; }
+  #encyclopedia .enc-scroll::-webkit-scrollbar { width: 10px; }
+  #encyclopedia .enc-scroll::-webkit-scrollbar-thumb { background: rgba(255,255,255,.16); border-radius: 10px; border: 3px solid var(--enc-bg); }
+  #encyclopedia #enc-body { max-width: 1120px; margin: 0 auto; padding: 52px 44px 160px; counter-reset: enc; }
+  /* ── 封面 hero ─────────────────────────────────────────── */
+  #encyclopedia .enc-hero { display: flex; align-items: flex-start; justify-content: space-between; gap: 40px; padding-bottom: 30px; border-bottom: 1px solid var(--enc-line); }
+  #encyclopedia .enc-hero-main { min-width: 0; }
+  #encyclopedia .enc-flag { width: 168px; flex: 0 0 auto; border-radius: 3px; box-shadow: 0 10px 34px rgba(0,0,0,.45); }
+  #encyclopedia h2 { font-size: clamp(34px, 6vw, 62px); font-weight: 800; letter-spacing: -.022em; line-height: 1.02; margin: 6px 0 0; }
+  #encyclopedia .enc-en { color: var(--enc-ink-dim); font-size: 12px; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; }
+  #encyclopedia .enc-lead { font-size: 17px; line-height: 1.72; color: #d4d9e4; max-width: 42em; margin: 18px 0 0; }
   #encyclopedia p { margin: 0 0 12px; }
-  #encyclopedia .enc-facts { display: grid; grid-template-columns: max-content 1fr; gap: 4px 16px; font-size: 13px; }
-  #encyclopedia .enc-facts dt { color: #8fd4ff; }
-  #encyclopedia .enc-facts dd { margin: 0; color: #dbe4f7; }
-  #encyclopedia .enc-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 16px; }
-  #encyclopedia .enc-card { background: rgba(255,255,255,.04); border: 1px solid rgba(120,170,255,.14); border-radius: 10px; overflow: hidden; }
-  #encyclopedia .enc-card img { display: block; width: 100%; height: 132px; object-fit: cover; background: rgba(255,255,255,.05); }
-  #encyclopedia .enc-card .enc-card-body { padding: 10px 12px 12px; }
-  #encyclopedia .enc-card b { font-size: 14px; }
-  #encyclopedia .enc-card .enc-card-en { color: #9fb2d8; font-size: 12px; }
-  #encyclopedia .enc-card p { font-size: 12.5px; margin: 6px 0 0; color: #cdd8ef; }
+  /* ── 章節 ─────────────────────────────────────────────── */
+  #encyclopedia .enc-sec { margin: 58px 0 0; counter-increment: enc; }
+  #encyclopedia .enc-sec > h3 {
+    display: flex; align-items: baseline; gap: 15px; font-size: 13px; font-weight: 700;
+    letter-spacing: .2em; text-transform: uppercase; color: var(--enc-ink);
+    margin: 0 0 24px; padding: 0 0 14px; border-bottom: 1px solid var(--enc-line);
+  }
+  #encyclopedia .enc-sec > h3::before {
+    content: counter(enc, decimal-leading-zero); color: var(--enc-accent);
+    font-size: 12px; letter-spacing: .05em; font-variant-numeric: tabular-nums;
+  }
+  #encyclopedia .enc-facts {
+    display: grid; grid-template-columns: 150px 1fr; gap: 0 30px; font-size: 14px;
+    margin-top: 30px; border-top: 1px solid var(--enc-line);
+  }
+  #encyclopedia .enc-facts dt {
+    color: var(--enc-ink-dim); font-size: 11px; font-weight: 600; letter-spacing: .16em;
+    text-transform: uppercase; padding: 13px 0 13px; border-bottom: 1px solid var(--enc-line);
+  }
+  #encyclopedia .enc-facts dd { margin: 0; color: var(--enc-ink); padding: 12px 0; border-bottom: 1px solid var(--enc-line); }
+  #encyclopedia .enc-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(224px, 1fr)); gap: 22px; }
+  #encyclopedia .enc-card {
+    background: var(--enc-surface); border: 1px solid var(--enc-line); border-radius: 4px; overflow: hidden;
+    transition: transform .22s cubic-bezier(.22,.61,.36,1), border-color .22s;
+  }
+  #encyclopedia .enc-card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,.3); }
+  #encyclopedia .enc-card-imglink { display: block; overflow: hidden; }
+  #encyclopedia .enc-card img { display: block; width: 100%; height: 184px; object-fit: cover; background: rgba(255,255,255,.05); transition: transform .4s ease; }
+  #encyclopedia .enc-card:hover img { transform: scale(1.055); }
+  #encyclopedia .enc-card .enc-card-body { padding: 14px 15px 16px; }
+  #encyclopedia .enc-card b { font-size: 14.5px; font-weight: 700; }
+  #encyclopedia .enc-card .enc-card-en { color: var(--enc-ink-dim); font-size: 11.5px; letter-spacing: .04em; }
+  #encyclopedia .enc-card p { font-size: 12.5px; line-height: 1.62; margin: 8px 0 0; color: #c3ccdd; }
   #encyclopedia .enc-card-title { color: inherit; text-decoration: none; display: inline-block; }
-  #encyclopedia .enc-card-title:hover b { text-decoration: underline; }
-  #encyclopedia .enc-card-title .enc-ext { color: #8fd4ff; font-size: 11px; opacity: .7; }
-  #encyclopedia .enc-card-imglink { display: block; }
-  #encyclopedia #enc-fx .enc-fx-line { font-size: 13.5px; margin: 4px 0 10px; }
-  #encyclopedia #enc-fx .enc-fx-line b { color: #8fd4ff; }
+  #encyclopedia .enc-card-title:hover b { color: var(--enc-accent); }
+  #encyclopedia .enc-card-title .enc-ext { color: var(--enc-ink-dim); font-size: 11px; opacity: .7; }
+  #encyclopedia #enc-fx .enc-fx-line { font-size: 14px; margin: 4px 0 12px; }
+  #encyclopedia #enc-fx .enc-fx-line b { color: var(--enc-accent); }
   #encyclopedia .enc-fx-conv { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
-  #encyclopedia .enc-fx-conv label { font-size: 12.5px; color: #b9c6e6; display: flex; align-items: center; gap: 6px; }
+  #encyclopedia .enc-fx-conv label { font-size: 12.5px; color: var(--enc-ink-dim); display: flex; align-items: center; gap: 6px; }
   #encyclopedia .enc-fx-conv input {
-    width: 130px; padding: 6px 9px; border-radius: 7px; font: inherit;
-    background: rgba(20,26,44,.9); color: #eef4ff; border: 1px solid rgba(120,170,255,.3);
+    width: 132px; padding: 8px 10px; border-radius: 4px; font: inherit;
+    background: rgba(255,255,255,.05); color: var(--enc-ink); border: 1px solid var(--enc-line);
   }
+  #encyclopedia .enc-fx-conv input:focus { outline: none; border-color: var(--enc-accent); }
   #encyclopedia .enc-fx-swap {
-    color: #8fd4ff; font-size: 15px; cursor: pointer; line-height: 1;
-    background: rgba(77,163,255,.16); border: 1px solid rgba(120,170,255,.4);
-    border-radius: 8px; padding: 7px 10px; font-family: inherit;
+    color: var(--enc-accent); font-size: 15px; cursor: pointer; line-height: 1;
+    background: rgba(255,255,255,.05); border: 1px solid var(--enc-line);
+    border-radius: 4px; padding: 8px 11px; font-family: inherit; transition: background .15s;
   }
-  #encyclopedia .enc-fx-swap:hover { background: rgba(77,163,255,.32); }
-  #encyclopedia .enc-flight { background: rgba(120,200,140,.14); border-color: rgba(140,220,160,.4); }
+  #encyclopedia .enc-fx-swap:hover { background: rgba(255,255,255,.12); }
+  #encyclopedia .enc-flight { background: rgba(120,200,140,.12) !important; border-color: rgba(140,220,160,.4) !important; color: #d7f2df !important; }
   #encyclopedia .enc-fx-src { font-size: 10.5px; margin-top: 8px; }
-  #encyclopedia .enc-sub { font-size: 12.5px; letter-spacing: .08em; color: #8fd4ff; margin: 14px 0 8px; font-weight: 700; }
-  #encyclopedia .enc-route { padding: 9px 0; border-bottom: 1px dashed rgba(120,170,255,.14); }
-  #encyclopedia .enc-route b { font-size: 13.5px; }
-  #encyclopedia .enc-route-days { margin-left: 8px; font-size: 11px; color: #8fd4ff; background: rgba(77,163,255,.14); padding: 1px 7px; border-radius: 999px; }
-  #encyclopedia .enc-route p { font-size: 12.5px; margin: 5px 0 0; color: #cdd8ef; }
-  #encyclopedia .enc-route-niche b::before { content: "✦ "; color: #8fd4ff; }
+  #encyclopedia .enc-sub {
+    font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--enc-ink-dim);
+    margin: 26px 0 10px; font-weight: 700;
+  }
+  #encyclopedia .enc-sec > h3 + .enc-sub, #encyclopedia .enc-sub:first-child { margin-top: 4px; }
+  #encyclopedia .enc-route { padding: 13px 0; border-bottom: 1px solid var(--enc-line); }
+  #encyclopedia .enc-route b { font-size: 14px; font-weight: 700; }
+  #encyclopedia .enc-route-days { margin-left: 10px; font-size: 11px; color: var(--enc-bg); background: var(--enc-accent); font-weight: 700; padding: 2px 8px; border-radius: 2px; }
+  #encyclopedia .enc-route p { font-size: 12.5px; line-height: 1.62; margin: 6px 0 0; color: #c3ccdd; }
+  #encyclopedia .enc-route-niche b::before { content: "✦ "; color: var(--enc-warm); }
   #encyclopedia .enc-agencies { display: flex; flex-wrap: wrap; gap: 10px; }
   #encyclopedia .enc-agency {
-    padding: 8px 15px; border-radius: 999px; text-decoration: none; font-size: 13px; font-weight: 600;
-    background: rgba(77,163,255,.14); border: 1px solid rgba(120,170,255,.35); color: #dfe8ff;
+    padding: 9px 16px; border-radius: 3px; text-decoration: none; font-size: 12.5px; font-weight: 600;
+    background: transparent; border: 1px solid var(--enc-line); color: var(--enc-ink);
+    transition: background .15s, border-color .15s;
   }
-  #encyclopedia .enc-agency:hover { background: rgba(77,163,255,.28); }
-  #encyclopedia .enc-theme-btn { font-size: 13px; }
+  #encyclopedia .enc-agency:hover { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.34); }
+  #encyclopedia .enc-theme-btn { font-size: 12px; }
+  @media (max-width: 720px) {
+    #encyclopedia #enc-body { padding: 32px 20px 120px; }
+    #encyclopedia .enc-hero { flex-direction: column-reverse; align-items: flex-start; gap: 18px; }
+    #encyclopedia .enc-flag { width: 116px; }
+    #encyclopedia .enc-facts { grid-template-columns: 1fr; gap: 0; }
+    #encyclopedia .enc-facts dt { border-bottom: 0; padding-bottom: 2px; }
+    #encyclopedia .enc-facts dd { padding-top: 2px; }
+  }
   #encyclopedia .admin-map-svg { width: 100%; height: auto; max-height: 62vh; display: block; background: rgba(255,255,255,.03); border-radius: 10px; touch-action: none; cursor: grab; overflow: hidden; }
   #encyclopedia .admin-map-svg:active { cursor: grabbing; }
   #encyclopedia .admin-region { fill: rgba(120,170,255,.14); stroke: rgba(160,200,255,.55); stroke-width: .04; cursor: pointer; transition: fill .12s; vector-effect: non-scaling-stroke; }
@@ -245,13 +289,31 @@
   #encyclopedia[data-enc-theme="journal"] .enc-route-days,
   #encyclopedia[data-enc-theme="journal"] .enc-agency { background: rgba(166,87,46,.12); border-color: rgba(166,87,46,.35); color: #5a4b39; }
   #encyclopedia[data-enc-theme="journal"] .enc-fx-conv input { background: #fbf7ee; color: #3b332a; border-color: rgba(120,90,50,.35); }
+  #encyclopedia[data-enc-theme="journal"] { --enc-line: rgba(120,90,50,.24); --enc-ink-dim: #8a7a63; --enc-accent: #a6572e; --enc-warm: #a6572e; }
+  #encyclopedia[data-enc-theme="journal"] .enc-hero,
+  #encyclopedia[data-enc-theme="journal"] .enc-sec > h3,
+  #encyclopedia[data-enc-theme="journal"] .enc-facts,
+  #encyclopedia[data-enc-theme="journal"] .enc-facts dt,
+  #encyclopedia[data-enc-theme="journal"] .enc-facts dd,
+  #encyclopedia[data-enc-theme="journal"] .enc-route,
+  #encyclopedia[data-enc-theme="journal"] .enc-timeline li { border-color: rgba(120,90,50,.24); }
+  #encyclopedia[data-enc-theme="journal"] .enc-sec > h3::before { color: #a6572e; }
+  #encyclopedia[data-enc-theme="journal"] .enc-lead { color: #4a4033; }
+  #encyclopedia[data-enc-theme="journal"] .enc-flag { box-shadow: 0 8px 24px rgba(90,70,40,.22); }
+  #encyclopedia[data-enc-theme="journal"] .enc-facts dd,
+  #encyclopedia[data-enc-theme="journal"] .enc-card-title:hover b { color: #2c2419; }
+  #encyclopedia[data-enc-theme="journal"] .enc-route-days { background: #a6572e; color: #f8f2e6; }
+  #encyclopedia[data-enc-theme="journal"] .enc-card:hover { border-color: rgba(120,90,50,.5); }
+  #encyclopedia[data-enc-theme="journal"] .enc-scroll::-webkit-scrollbar-thumb { background: rgba(120,90,50,.3); border-color: #f3ede0; }
+  #encyclopedia[data-enc-theme="journal"] ::selection { background: #a6572e; color: #f8f2e6; }
   #encyclopedia .enc-timeline { list-style: none; padding: 0; margin: 0; }
-  #encyclopedia .enc-timeline li { display: grid; grid-template-columns: 68px 1fr; gap: 12px; padding: 7px 0; border-bottom: 1px dashed rgba(120,170,255,.12); }
-  #encyclopedia .enc-timeline .enc-year { color: #8fd4ff; font-variant-numeric: tabular-nums; }
-  #encyclopedia .enc-credits { font-size: 11.5px; color: #8093b5; }
+  #encyclopedia .enc-timeline li { display: grid; grid-template-columns: 74px 1fr; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--enc-line); }
+  #encyclopedia .enc-timeline li:last-child { border-bottom: 0; }
+  #encyclopedia .enc-timeline .enc-year { color: var(--enc-warm); font-weight: 600; font-variant-numeric: tabular-nums; }
+  #encyclopedia .enc-credits { font-size: 11.5px; color: var(--enc-ink-dim); }
   #encyclopedia .enc-credits li { margin: 3px 0; }
-  #encyclopedia .enc-dim { color: #9fb2d8; }
-  #encyclopedia .enc-sec { margin: 0; }
+  #encyclopedia .enc-credits a { color: var(--enc-accent); }
+  #encyclopedia .enc-dim { color: var(--enc-ink-dim); }
   @keyframes encRise { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
   #encyclopedia .enc-reveal { animation: encRise .5s cubic-bezier(.22,.61,.36,1) forwards; }
   #encyclopedia .enc-reveal:nth-of-type(1) { animation-delay: .02s; }

@@ -135,10 +135,13 @@ export function createEncyclopedia() {
   function render(code, d) {
     titleEl.textContent = d.name_zh || code;
     const flag = /^[A-Za-z]{2}$/.test(code)
-      ? `<img src="https://flagcdn.com/w160/${code.toLowerCase()}.png" alt="" style="width:104px;border-radius:4px;margin-bottom:12px" onerror="this.remove()">`
+      ? `<img class="enc-flag" src="https://flagcdn.com/w320/${code.toLowerCase()}.png" alt="" onerror="this.remove()">`
       : "";
-    let h = `${flag}<h2>${esc(d.name_zh || code)}</h2><div class="enc-en">${esc(d.name_en || "")}</div>`;
-    if (d.summary) h += `<p>${esc(d.summary)}</p>`;
+    let h = `<header class="enc-hero enc-reveal"><div class="enc-hero-main">` +
+      `<div class="enc-en">${esc(d.name_en || "")}</div>` +
+      `<h2>${esc(d.name_zh || code)}</h2>` +
+      (d.summary ? `<p class="enc-lead">${esc(d.summary)}</p>` : "") +
+      `</div>${flag}</header>`;
 
     const qf = d.quick_facts || {};
     const rows = [];
