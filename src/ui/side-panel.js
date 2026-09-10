@@ -88,7 +88,8 @@ export function createSidePanel({ onClose, onMore }) {
       ? `<img class="flag" src="https://flagcdn.com/w160/${p.code.toLowerCase()}.png" alt="" onerror="this.style.display='none'">`
       : "";
     const moreBtn = onMore && p.code
-      ? `<button type="button" class="sp-more" data-code="${esc(p.code)}">詳細介紹 ›</button>` : "";
+      ? `<button type="button" class="sp-more pulse" data-code="${esc(p.code)}">` +
+        `<span class="sp-more-ico">📖</span>國家大百科 · 詳細介紹</button>` : "";
     let html = `${flag}<h2>${esc(p.names.zh)}</h2><div class="en">${esc(p.names.en)}</div>${moreBtn}`;
     const meta = [];
     if (p.capital && p.capital.zh) meta.push(`首都:${esc(p.capital.zh)}${p.capital.en ? ` (${esc(p.capital.en)})` : ""}`);

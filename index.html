@@ -87,11 +87,22 @@
   #side-panel .sp-clock .spc-date { font-size: 12px; color: #b9c6e6; }
   #side-panel .sp-clock .spc-time { font-size: 24px; font-variant-numeric: tabular-nums; letter-spacing: .02em; }
   #side-panel .sp-more {
-    display: inline-block; margin: 4px 0 2px; padding: 6px 14px; cursor: pointer;
-    background: rgba(77,163,255,.16); border: 1px solid rgba(120,170,255,.4);
-    border-radius: 999px; color: #dfe8ff; font: 13px system-ui, "Microsoft JhengHei", sans-serif;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    width: 100%; box-sizing: border-box; margin: 10px 0 4px; padding: 11px 16px; cursor: pointer;
+    background: linear-gradient(90deg, #2f6df6, #4da3ff); border: none;
+    border-radius: 10px; color: #fff; font: 700 14.5px system-ui, "Microsoft JhengHei", sans-serif;
+    letter-spacing: .04em; box-shadow: 0 4px 16px rgba(47,109,246,.35);
+    transition: transform .12s ease, box-shadow .2s ease;
   }
-  #side-panel .sp-more:hover { background: rgba(77,163,255,.3); }
+  #side-panel .sp-more:hover { transform: translateY(-1px); box-shadow: 0 6px 22px rgba(47,109,246,.5); }
+  #side-panel .sp-more .sp-more-ico { font-size: 16px; }
+  #side-panel .sp-more.pulse { animation: spMorePulse 1.4s ease-out 2; }
+  @keyframes spMorePulse {
+    0% { box-shadow: 0 4px 16px rgba(47,109,246,.35), 0 0 0 0 rgba(120,190,255,.55); }
+    70% { box-shadow: 0 4px 16px rgba(47,109,246,.35), 0 0 0 14px rgba(120,190,255,0); }
+    100% { box-shadow: 0 4px 16px rgba(47,109,246,.35), 0 0 0 0 rgba(120,190,255,0); }
+  }
+  @media (prefers-reduced-motion: reduce) { #side-panel .sp-more.pulse { animation: none; } }
   #side-panel h3 { font-size: 14px; letter-spacing: .05em; color: #8fd4ff; margin: 22px 0 8px; }
   #side-panel .months { display: grid; grid-template-columns: repeat(6, 1fr); gap: 4px; margin: 6px 0; }
   #side-panel .months span { text-align: center; font-size: 11px; padding: 5px 0; border-radius: 4px;
@@ -155,6 +166,20 @@
   #encyclopedia .enc-card b { font-size: 14px; }
   #encyclopedia .enc-card .enc-card-en { color: #9fb2d8; font-size: 12px; }
   #encyclopedia .enc-card p { font-size: 12.5px; margin: 6px 0 0; color: #cdd8ef; }
+  #encyclopedia .enc-card-title { color: inherit; text-decoration: none; display: inline-block; }
+  #encyclopedia .enc-card-title:hover b { text-decoration: underline; }
+  #encyclopedia .enc-card-title .enc-ext { color: #8fd4ff; font-size: 11px; opacity: .7; }
+  #encyclopedia .enc-card-imglink { display: block; }
+  #encyclopedia #enc-fx .enc-fx-line { font-size: 13.5px; margin: 4px 0 10px; }
+  #encyclopedia #enc-fx .enc-fx-line b { color: #8fd4ff; }
+  #encyclopedia .enc-fx-conv { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  #encyclopedia .enc-fx-conv label { font-size: 12.5px; color: #b9c6e6; display: flex; align-items: center; gap: 6px; }
+  #encyclopedia .enc-fx-conv input {
+    width: 130px; padding: 6px 9px; border-radius: 7px; font: inherit;
+    background: rgba(20,26,44,.9); color: #eef4ff; border: 1px solid rgba(120,170,255,.3);
+  }
+  #encyclopedia .enc-fx-swap { color: #8fd4ff; font-size: 16px; }
+  #encyclopedia .enc-fx-src { font-size: 10.5px; margin-top: 8px; }
   #encyclopedia .enc-timeline { list-style: none; padding: 0; margin: 0; }
   #encyclopedia .enc-timeline li { display: grid; grid-template-columns: 68px 1fr; gap: 12px; padding: 7px 0; border-bottom: 1px dashed rgba(120,170,255,.12); }
   #encyclopedia .enc-timeline .enc-year { color: #8fd4ff; font-variant-numeric: tabular-nums; }

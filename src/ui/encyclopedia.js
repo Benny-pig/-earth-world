@@ -19,18 +19,81 @@ export function createEncyclopedia() {
 
   const IMG_BASE = "/assets/deep/";
 
+  // ---- 即時匯率(以新台幣為基準,免金鑰,約每日更新)----
+  let fxData = null, fxAt = 0;
+  const FX_TTL = 60 * 60 * 1000;
+  async function getFx() {
+    if (fxData && Date.now() - fxAt < FX_TTL) return fxData;
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), 6000);
+    try {
+      const r = await fetch("https://open.er-api.com/v6/latest/TWD", { signal: ctrl.signal });
+      const j = await r.json();
+      if (j && j.result === "success" && j.rates) { fxData = j; fxAt = Date.now(); }
+    } catch { /* 靜默:renderFx 會顯示降級訊息 */ }
+    finally { clearTimeout(timer); }
+    return fxData;
+  }
+  function currencyCodeOf(qf) {
+    // 貨幣字串可能用半形或全形括號:「日圓(JPY)」「美元（USD）」
+    const m = /[(（]\s*([A-Za-z]{3})\s*[)）]/.exec((qf && qf.currency) || "");
+    return m ? m[1].toUpperCase() : null;
+  }
+  function trimNum(n) {
+    if (!isFinite(n)) return "—";
+    if (n >= 100) return n.toLocaleString("en-US", { maximumFractionDigits: 1 });
+    if (n >= 1) return n.toLocaleString("en-US", { maximumFractionDigits: 3 });
+    return n.toLocaleString("en-US", { maximumFractionDigits: 5 });
+  }
+  async function renderFx(code, ccy) {
+    const box = document.getElementById("enc-fx");
+    if (!box || !ccy) return;
+    const mySeq = reqSeq;
+    const fx = await getFx();
+    if (mySeq !== reqSeq || !document.getElementById("enc-fx")) return;   // 已切到別國
+    const rate = fx && fx.rates ? fx.rates[ccy] : null;   // 1 TWD = rate 外幣
+    if (!rate) { box.innerHTML = `<p class="enc-dim">即時匯率暫時取得不到(貨幣:${esc(ccy)})。</p>`; return; }
+    const inv = 1 / rate;
+    const upd = fx.time_last_update_utc ? fx.time_last_update_utc.slice(5, 16) : "";
+    box.innerHTML =
+      `<p class="enc-fx-line">1 新臺幣 (TWD) ≈ <b>${trimNum(rate)}</b> ${esc(ccy)}　·　` +
+      `1 ${esc(ccy)} ≈ <b>${trimNum(inv)}</b> 新臺幣</p>` +
+      `<div class="enc-fx-conv">` +
+        `<label>新臺幣 <input type="number" id="fx-twd" value="1000" min="0" step="any"></label>` +
+        `<span class="enc-fx-swap">⇄</span>` +
+        `<label>${esc(ccy)} <input type="number" id="fx-for" min="0" step="any"></label>` +
+      `</div>` +
+      `<p class="enc-dim enc-fx-src">匯率更新:${esc(upd)} UTC · 資料 open.er-api.com</p>`;
+    const twd = box.querySelector("#fx-twd"), forr = box.querySelector("#fx-for");
+    const sync = (from) => {
+      if (from === "twd") forr.value = twd.value ? trimNum(parseFloat(twd.value) * rate).replace(/,/g, "") : "";
+      else twd.value = forr.value ? trimNum(parseFloat(forr.value) * inv).replace(/,/g, "") : "";
+    };
+    twd.addEventListener("input", () => sync("twd"));
+    forr.addEventListener("input", () => sync("for"));
+    sync("twd");
+  }
+
   function fmtArea(km2) {
     if (typeof km2 !== "number" || !Number.isFinite(km2)) return null;
     if (km2 >= 1e4) return `約 ${(km2 / 1e4).toFixed(km2 >= 1e6 ? 0 : 1)} 萬 km²`;
     return `約 ${Math.round(km2).toLocaleString("en-US")} km²`;
   }
 
+  // 每張卡片的標題與圖片都連到中文維基(用中文名查詢),方便點擊延伸閱讀。
+  function wikiUrl(it) {
+    const term = it.wiki || it.zh || it.en || "";
+    return "https://zh.wikipedia.org/wiki/" + encodeURIComponent(String(term).replace(/\s+/g, "_"));
+  }
   function card(code, it) {
+    const href = esc(wikiUrl(it));
     const img = it.image
-      ? `<img src="${IMG_BASE}${encodeURIComponent(codeToFile(code))}/${encodeURIComponent(it.image)}" alt="" loading="lazy" onerror="this.remove()">`
+      ? `<a href="${href}" target="_blank" rel="noopener" class="enc-card-imglink">` +
+        `<img src="${IMG_BASE}${encodeURIComponent(codeToFile(code))}/${encodeURIComponent(it.image)}" alt="" loading="lazy" onerror="this.parentNode.remove()"></a>`
       : "";
     const en = it.en ? `<span class="enc-card-en">${esc(it.en)}</span>` : "";
-    return `<div class="enc-card">${img}<div class="enc-card-body"><b>${esc(it.zh)}</b> ${en}` +
+    return `<div class="enc-card">${img}<div class="enc-card-body">` +
+      `<a href="${href}" target="_blank" rel="noopener" class="enc-card-title"><b>${esc(it.zh)}</b> ${en} <span class="enc-ext">↗</span></a>` +
       `<p>${esc(it.note || "")}</p></div></div>`;
   }
 
@@ -55,6 +118,9 @@ export function createEncyclopedia() {
     if (qf.government) rows.push(["政體", qf.government]);
     if (rows.length)
       h += `<dl class="enc-facts">` + rows.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join("") + `</dl>`;
+
+    const ccy = currencyCodeOf(qf);
+    if (ccy) h += section("匯率換算(對新臺幣)", `<div id="enc-fx"><p class="enc-dim">載入即時匯率…</p></div>`);
 
     if (Array.isArray(d.founding) && d.founding.length)
       h += section("國家的生成與發展", d.founding.map((p) => `<p>${esc(p)}</p>`).join(""));
@@ -83,6 +149,7 @@ export function createEncyclopedia() {
 
     bodyEl.innerHTML = h;
     scrollEl.scrollTop = 0;
+    if (ccy) renderFx(code, ccy);
   }
 
   async function open(code) {
