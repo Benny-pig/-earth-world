@@ -1,6 +1,11 @@
 import { esc } from "/src/lib/esc.js";
+import { createAdminMap } from "/src/ui/admin-map.js";
+
+const ADMIN_MAP_COUNTRIES = new Set(["TW", "JP", "US"]);
 
 export function createEncyclopedia() {
+  const adminMap = createAdminMap();
+  const regionCache = new Map();
   const el = document.getElementById("encyclopedia");
   const titleEl = el.querySelector(".enc-title");
   const bodyEl = document.getElementById("enc-body");
@@ -186,6 +191,11 @@ export function createEncyclopedia() {
         `<a href="${esc(u)}" target="_blank" rel="noopener" class="enc-agency">${esc(n)} ↗</a>`).join("") + `</div>` +
       `<p class="enc-dim" style="font-size:11px;margin-top:8px">連到各旅行社的「${esc(d.name_zh || code)}」搜尋結果,價格與檔期以各站為準。</p>`);
 
+    if (ADMIN_MAP_COUNTRIES.has(code))
+      h += section("縣市地圖",
+        `<p class="enc-dim" style="font-size:12px">點縣市看特色與推薦。★ = 首都。</p>` +
+        `<div id="enc-admin-map"></div><div id="enc-region-info"></div>`);
+
     if (Array.isArray(d.credits) && d.credits.length)
       h += section("圖片來源", `<ul class="enc-credits">` + d.credits.map((c) => {
         const head = `${esc(c.title || c.file)} — ${esc(c.author)} / ${esc(c.license)}`;
@@ -201,6 +211,32 @@ export function createEncyclopedia() {
       if (getComputedStyle(n).opacity === "0") n.style.opacity = "1";
     }), 1200);
     if (ccy) renderFx(code, ccy);
+
+    if (ADMIN_MAP_COUNTRIES.has(code)) {
+      const mapBox = document.getElementById("enc-admin-map");
+      const cap = window.__earth && window.__earth.content && window.__earth.content[code];
+      adminMap.render(mapBox, code, {
+        capital: cap && cap.capital_latlon,
+        onPick: (name) => renderRegionInfo(code, name),
+      });
+    }
+  }
+
+  async function renderRegionInfo(code, name) {
+    const box = document.getElementById("enc-region-info");
+    if (!box) return;
+    box.innerHTML = `<h4 class="enc-sub">${esc(name)}</h4><p class="enc-dim">載入中…</p>`;
+    let data = regionCache.get(code);
+    if (!data) {
+      data = fetch(`/data/admin1/${encodeURIComponent(code)}.regions.json`).then((r) => (r.ok ? r.json() : {})).catch(() => ({}));
+      regionCache.set(code, data);
+    }
+    const map = await data;
+    if (!document.getElementById("enc-region-info")) return;
+    const r = map && map[name];
+    box.innerHTML = `<h4 class="enc-sub">${esc(name)}</h4>` +
+      (r ? `<p>${esc(r.note || "")}</p>${r.rec ? `<p><b>推薦:</b>${esc(r.rec)}</p>` : ""}`
+         : `<p class="enc-dim">這個縣市的介紹之後補上。</p>`);
   }
 
   async function open(code) {

@@ -193,6 +193,18 @@
   }
   #encyclopedia .enc-agency:hover { background: rgba(77,163,255,.28); }
   #encyclopedia .enc-theme-btn { font-size: 13px; }
+  #encyclopedia .admin-map-svg { width: 100%; height: auto; max-height: 62vh; display: block; background: rgba(255,255,255,.03); border-radius: 10px; }
+  #encyclopedia .admin-region { fill: rgba(120,170,255,.14); stroke: rgba(160,200,255,.55); stroke-width: .04; cursor: pointer; transition: fill .12s; vector-effect: non-scaling-stroke; }
+  #encyclopedia .admin-region:hover { fill: rgba(120,190,255,.34); }
+  #encyclopedia .admin-region.sel { fill: rgba(77,163,255,.6); stroke: #cfe6ff; }
+  #encyclopedia .admin-label { fill: #eef4ff; paint-order: stroke; stroke: rgba(6,10,20,.9); stroke-width: 3px; stroke-linejoin: round; vector-effect: non-scaling-stroke; text-anchor: middle; dominant-baseline: middle; pointer-events: none; font-family: system-ui, "Microsoft JhengHei", sans-serif; }
+  #encyclopedia .admin-capital { fill: #ffd76a; pointer-events: none; }
+  #encyclopedia #enc-region-info { margin-top: 12px; min-height: 20px; }
+  #encyclopedia[data-enc-theme="journal"] .admin-map-svg { background: #efe7d6; }
+  #encyclopedia[data-enc-theme="journal"] .admin-region { fill: rgba(166,120,70,.16); stroke: rgba(120,90,50,.5); }
+  #encyclopedia[data-enc-theme="journal"] .admin-region:hover { fill: rgba(166,120,70,.34); }
+  #encyclopedia[data-enc-theme="journal"] .admin-region.sel { fill: rgba(166,87,46,.55); stroke: #7a4a2e; }
+  #encyclopedia[data-enc-theme="journal"] .admin-label { fill: #33291d; stroke: rgba(250,246,238,.85); }
   /* ── 主題:旅誌(暖色編輯風)────────────────────────────── */
   #encyclopedia[data-enc-theme="journal"] {
     background: #f3ede0; color: #3b332a;
