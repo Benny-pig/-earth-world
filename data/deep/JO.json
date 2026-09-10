@@ -1,0 +1,355 @@
+{
+  "name_zh": "約旦",
+  "name_en": "Jordan",
+  "summary": "位於西亞、地處阿拉伯半島西北的王國,大部分國土是沙漠,僅西部高地與約旦河谷較適人居。缺乏石油與出海口(僅南端亞喀巴一小段紅海岸),經濟仰賴服務業、觀光、僑匯與外援,長期收容大量周邊地區的難民。",
+  "founding": [
+    "約旦河東岸自石器時代便有人居,安曼近郊的艾因加扎爾遺址出土距今約九千年的大型人像。青銅與鐵器時代,這裡分布著亞捫、摩押與以東等小王國,《希伯來聖經》多次提及,並留下米沙石碑等文物。",
+    "公元前後,善於經營商隊貿易的納巴泰人以佩特拉為都,控制乳香與香料路線,開鑿岩壁神殿與精密的引水系統。一〇六年羅馬帝國併吞納巴泰,設阿拉伯行省,傑拉什、佩拉等「十城」繁榮一時。",
+    "七世紀伊斯蘭興起,這一帶先後歸屬倭馬亞、阿拔斯等哈里發王朝,倭馬亞在沙漠中修築行宮。十二世紀十字軍在卡拉克等地築城,隨後為薩拉丁及其後繼者所逐;十三世紀起長期屬於馬木留克與鄂圖曼帝國,是通往麥加的朝聖與商旅要道。",
+    "第一次世界大戰期間,鄂圖曼統治瓦解,阿拉伯大起義沿漢志鐵路展開。戰後英國取得託管,一九二一年將約旦河以東劃為「外約旦」酋長國,由哈希姆家族的阿卜杜拉出任埃米爾,首都設於安曼。",
+    "一九四六年外約旦脫離英國託管獨立,改稱約旦哈希姆王國。一九四八年以阿戰爭後,約旦控制並於一九五〇年併入約旦河西岸(一九八八年放棄對該地的行政主張)。一九五二年頒行至今仍施行的憲法,確立君主與國會並存的體制。",
+    "一九六七年六日戰爭中約旦失去約旦河西岸與東耶路撒冷。一九七〇年代初與境內巴勒斯坦武裝組織爆發衝突。一九九四年約旦與以色列簽署和平條約。海珊國王在位近半世紀,一九九九年由其子阿卜杜拉二世繼位,延續親西方、重視觀光與經濟改革的路線。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "約旦哈希米王國",
+    "area_km2": 89342,
+    "languages": [
+      "阿拉伯語"
+    ],
+    "religion": "伊斯蘭教(遜尼派)為國教,另有基督宗教少數",
+    "currency": "約旦第納爾(JOD)",
+    "government": "二元君主立憲制(國王與國會並存)"
+  },
+  "animals": [
+    {
+      "zh": "阿拉伯大羚羊",
+      "en": "Arabian oryx",
+      "note": "曾在野外滅絕,經人工繁殖後在沙漠保護區重新野放。",
+      "image": "JO-a-oryx.jpg"
+    },
+    {
+      "zh": "努比亞羱羊",
+      "en": "Nubian ibex",
+      "note": "大角野山羊,善於在佩特拉一帶的乾旱峭壁上攀爬。",
+      "image": "JO-a-ibex.jpg"
+    },
+    {
+      "zh": "阿拉伯狼",
+      "en": "Arabian wolf",
+      "note": "體型比北方灰狼小、耳大,適應沙漠,夜間活動。",
+      "image": "JO-a-wolf.jpg"
+    },
+    {
+      "zh": "沙貓",
+      "en": "Sand cat",
+      "note": "腳掌長毛以隔熱,能長期不喝水,棲息於沙丘。",
+      "image": "JO-a-sandcat.jpg"
+    },
+    {
+      "zh": "西奈薔薇雀",
+      "en": "Sinai rosefinch",
+      "note": "約旦國鳥,雄鳥帶粉紅色,常在佩特拉岩壁間活動。",
+      "image": "JO-a-rosefinch.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "曼薩夫",
+      "en": "Mansaf",
+      "note": "羊肉配發酵乾優酪醬汁,澆在米飯與薄餅上,是國宴級主菜。",
+      "image": "JO-f-mansaf.jpg"
+    },
+    {
+      "zh": "倒扣飯",
+      "en": "Maqluba",
+      "note": "肉、炸蔬菜與米同鍋燜煮,上桌時整鍋倒扣。"
+    },
+    {
+      "zh": "炸鷹嘴豆餅",
+      "en": "Falafel",
+      "note": "鷹嘴豆泥加香料油炸成小球,夾口袋餅當早餐或點心。",
+      "image": "JO-f-falafel.jpg"
+    },
+    {
+      "zh": "鷹嘴豆泥",
+      "en": "Hummus",
+      "note": "鷹嘴豆與芝麻醬打成泥,淋橄欖油,用麵包沾食。",
+      "image": "JO-f-hummus.jpg"
+    },
+    {
+      "zh": "卡納法",
+      "en": "Knafeh",
+      "note": "細麵絲或粗麵糊夾鹹起司烤製,淋糖漿、撒開心果,趁熱吃。",
+      "image": "JO-f-knafeh.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "佩特拉",
+      "en": "Petra",
+      "note": "納巴泰人在玫瑰色岩壁鑿出的古城,以卡茲尼神殿立面最著名。",
+      "latlon": [
+        30.3222,
+        35.4515
+      ],
+      "image": "JO-l-petra.jpg"
+    },
+    {
+      "zh": "瓦地倫",
+      "en": "Wadi Rum",
+      "note": "紅砂與巨岩構成的沙漠峽谷,又稱「月亮谷」,常作科幻片場景。",
+      "latlon": [
+        29.5765,
+        35.42
+      ],
+      "image": "JO-l-wadirum.jpg"
+    },
+    {
+      "zh": "死海",
+      "en": "Dead Sea",
+      "note": "湖面低於海平面逾 430 公尺,鹽度極高,人可浮於水面。",
+      "latlon": [
+        31.5,
+        35.4667
+      ],
+      "image": "JO-l-deadsea.jpg"
+    },
+    {
+      "zh": "傑拉什",
+      "en": "Jerash",
+      "note": "保存良好的羅馬城市遺址,有橢圓廣場、列柱大道與神廟。",
+      "latlon": [
+        32.2807,
+        35.8912
+      ]
+    },
+    {
+      "zh": "安曼城堡山",
+      "en": "Amman Citadel",
+      "note": "俯瞰首都的山丘,遺有羅馬海克力斯神廟與倭馬亞宮殿。",
+      "latlon": [
+        31.9548,
+        35.9344
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "阿卜杜拉一世",
+      "en": "Abdullah I",
+      "note": "哈希姆家族成員,一九二一年建立外約旦,一九四六年成為首任國王。"
+    },
+    {
+      "zh": "海珊",
+      "en": "Hussein of Jordan",
+      "note": "一九五二至一九九九年在位,近半世紀主導約旦內政外交。"
+    },
+    {
+      "zh": "阿卜杜拉二世",
+      "en": "Abdullah II",
+      "note": "現任國王,一九九九年繼位,推動觀光與經濟改革。"
+    },
+    {
+      "zh": "拉尼婭王后",
+      "en": "Queen Rania",
+      "note": "巴勒斯坦裔王后,關注教育與兒童議題,國際知名度高。"
+    },
+    {
+      "zh": "艾哈邁德·阿布加烏什",
+      "en": "Ahmad Abughaush",
+      "note": "跆拳道選手,二〇一六里約奧運奪得約旦史上首面奧運金牌。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "國王大道(King's Highway)",
+      "note": "從安曼往南自駕,串起馬達巴馬賽克、尼波山、卡拉克十字軍城堡到佩特拉。"
+    },
+    {
+      "zh": "佩特拉＋瓦地倫兩天",
+      "note": "佩特拉留一整天(含「修道院」步道),傍晚轉瓦地倫,夜宿沙漠帳篷營看星。"
+    },
+    {
+      "zh": "死海放鬆",
+      "note": "行程尾聲在死海度假區住一晚,漂浮、敷泥,並看約旦河谷的落日。"
+    }
+  ],
+  "events": [
+    {
+      "year": -100,
+      "zh": "納巴泰王國以佩特拉為都,掌控香料商路。"
+    },
+    {
+      "year": 106,
+      "zh": "羅馬帝國併吞納巴泰,設阿拉伯行省。"
+    },
+    {
+      "year": 630,
+      "zh": "伊斯蘭勢力進入約旦地區。"
+    },
+    {
+      "year": 1916,
+      "zh": "阿拉伯大起義沿漢志鐵路展開。"
+    },
+    {
+      "year": 1921,
+      "zh": "英國託管下成立外約旦酋長國。"
+    },
+    {
+      "year": 1946,
+      "zh": "脫離英國託管獨立,建立約旦哈希姆王國。"
+    },
+    {
+      "year": 1994,
+      "zh": "約旦與以色列簽署和平條約。"
+    }
+  ],
+  "souvenirs": [
+    {
+      "zh": "死海泥與礦物保養品",
+      "note": "死海泥面膜、鹽與護膚品,機場與專賣店都有。"
+    },
+    {
+      "zh": "手工彩沙瓶",
+      "note": "把不同顏色的沙分層填進玻璃瓶,排出駱駝、沙漠圖案。"
+    },
+    {
+      "zh": "貝都因地毯與刺繡",
+      "note": "幾何紋地毯、抱枕套與十字繡布藝。"
+    },
+    {
+      "zh": "納布勒斯橄欖油皂",
+      "note": "純橄欖油製的方形肥皂,溫和不刺激。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "約旦經典環線",
+        "days": "6–7 天",
+        "note": "安曼、傑拉什、死海、佩特拉、瓦地倫、亞喀巴一圈。台灣多經杜拜、多哈或伊斯坦堡轉機,適合第一次到中東的旅客。"
+      },
+      {
+        "zh": "佩特拉＋瓦地倫聚焦",
+        "days": "4–5 天",
+        "note": "時間有限時直奔南部,佩特拉兩天、瓦地倫一晚沙漠營,再到亞喀巴潛水。"
+      },
+      {
+        "zh": "約旦＋耶路撒冷",
+        "days": "8–10 天",
+        "note": "經約旦河或亞喀巴的陸路關口,把約旦與以色列、巴勒斯坦重點併成一趟,留意各關口規定與時事。"
+      },
+      {
+        "zh": "聖經之路主題",
+        "days": "6–7 天",
+        "note": "尼波山、洗禮處(伯大尼)、馬達巴地圖、瑪凱魯斯與死海,適合宗教文化取向的旅客。"
+      },
+      {
+        "zh": "家庭自駕慢遊",
+        "days": "7–8 天",
+        "note": "以安曼與死海度假村為據點,分段前往傑拉什、佩特拉,行程寬鬆、飯店設施好。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "達納生態保留區健行",
+        "note": "從高地峽谷一路下降到接近佩特拉的低地,住生態山屋,適合喜歡健行者。"
+      },
+      {
+        "zh": "沙漠城堡東線",
+        "note": "安曼以東的倭馬亞行宮群(阿姆拉、哈拉納、艾茲拉克),半日自駕環線,遊客少。"
+      },
+      {
+        "zh": "亞喀巴紅海潛水",
+        "note": "約旦唯一的海岸,有沉船與人工礁潛點,比對岸埃及安靜,可搭配瓦地倫。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "JO-a-oryx.jpg",
+      "title": "Arabian oryx",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AArabian_oryx_(oryx_leucoryx).jpg"
+    },
+    {
+      "file": "JO-a-ibex.jpg",
+      "title": "Nubian ibex",
+      "author": "Godot13",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AIsrael-2013-Makhtesh_Ramon_02_(Ibex).jpg"
+    },
+    {
+      "file": "JO-a-wolf.jpg",
+      "title": "Arabian wolf in Jordan",
+      "author": "Ahmad Qarmish12",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AArabian_wolf_in_Jordan.jpg"
+    },
+    {
+      "file": "JO-a-sandcat.jpg",
+      "title": "Sand cat",
+      "author": "Oleg Yunakov",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASand_cat_(Felis_margarita).jpg"
+    },
+    {
+      "file": "JO-a-rosefinch.jpg",
+      "title": "Sinai rosefinch",
+      "author": "Len Worthington",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASINAI_ROSEFINCH_Carpodacus_synoicus_synoicus_(8468692214).jpg"
+    },
+    {
+      "file": "JO-f-mansaf.jpg",
+      "title": "Mansaf",
+      "author": "Jktab",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AMansaf,_the_traditional_dish_of_Jordan.jpg"
+    },
+    {
+      "file": "JO-f-falafel.jpg",
+      "title": "Falafel",
+      "author": "Miansari66",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AFalafel_1.JPG"
+    },
+    {
+      "file": "JO-f-hummus.jpg",
+      "title": "Homemade hummus and pita",
+      "author": "Satdeep Gill",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AHomemade_hummus_and_pita_03.jpg"
+    },
+    {
+      "file": "JO-f-knafeh.jpg",
+      "title": "Nabulsi knafeh",
+      "author": "Krista",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AQwaider_al_nabulsi_kunafa_al_nama_(11389641075).jpg"
+    },
+    {
+      "file": "JO-l-petra.jpg",
+      "title": "Al-Khazneh (The Treasury), Petra",
+      "author": "Vyacheslav Argenberg",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AAl-Khazneh_(The_Treasury),_Petra,_Jordan.jpg"
+    },
+    {
+      "file": "JO-l-wadirum.jpg",
+      "title": "Wadi Rum landscape",
+      "author": "Jorge Láscar",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AWadi_Rum_landscape_(12465264714).jpg"
+    },
+    {
+      "file": "JO-l-deadsea.jpg",
+      "title": "Dead Sea, Jordanian shore",
+      "author": "Alexandermcnabb",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ADead_Sea,_Jordanian_Shore.jpg"
+    }
+  ],
+  "code": "JO"
+}

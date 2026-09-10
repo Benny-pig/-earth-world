@@ -1,0 +1,349 @@
+{
+  "name_zh": "馬爾地夫",
+  "name_en": "Maldives",
+  "summary": "印度洋上由約 1,200 座珊瑚島組成的島國,分屬 26 個環礁,陸地平均海拔僅約一公尺多,是全球地勢最低的國家。以「一島一飯店」的度假村觀光與遠洋鮪魚漁業為經濟支柱,全民信奉伊斯蘭教。",
+  "founding": [
+    "馬爾地夫群島的定居者可能來自南亞,語言迪維希語屬印度-雅利安語系,與僧伽羅語相近。早期居民信奉佛教,留下佛塔基座與遺物;群島也是印度洋航路上的補給站,以寶螺(貨貝)輸出聞名,曾廣泛作為亞洲與非洲的貨幣。",
+    "一一五三年,馬爾地夫改信伊斯蘭教,建立蘇丹國,此後八百多年由歷代蘇丹統治。十四世紀,旅行家伊本·白圖泰曾在此擔任伊斯蘭教法官,留下對當地社會的詳細記述。",
+    "十六世紀,葡萄牙人一度占領馬列並駐軍,一五七三年在穆罕默德·塔庫魯法努領導下被逐出,這段抗爭成為馬爾地夫的建國記憶,其登陸日訂為國慶。此後群島與荷蘭、英國先後往來,一八八七年成為英國的保護國,內政仍由蘇丹掌理。",
+    "一九六五年七月二十六日,馬爾地夫脫離英國完全獨立。一九六八年公投廢除蘇丹制,改為共和國,由總統掌握大權。此後觀光業自一九七〇年代起步,快速成為經濟命脈,人口與建設集中於首都馬列。",
+    "二〇〇四年南亞大海嘯淹沒大半國土,凸顯海平面上升的威脅;馬爾地夫因此成為國際氣候談判的積極倡議者。二〇〇八年首次舉行多黨總統直選,之後政局在不同陣營間數度更替,同時持續填海造陸並興建跨海大橋以擴充居住空間。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "馬爾地夫共和國",
+    "area_km2": 298,
+    "languages": [
+      "迪維希語"
+    ],
+    "religion": "伊斯蘭教(遜尼派)為國教",
+    "currency": "盧非亞(MVR)",
+    "government": "總統制共和"
+  },
+  "animals": [
+    {
+      "zh": "鯨鯊",
+      "en": "Whale shark",
+      "note": "世界最大的魚類,南阿里環礁全年可與其同游,以浮游生物為食。",
+      "image": "MV-a-whaleshark.jpg"
+    },
+    {
+      "zh": "巨型鬼蝠魟",
+      "en": "Reef manta ray",
+      "note": "哈尼法魯灣雨季會聚集數十至上百隻濾食,是知名景象。",
+      "image": "MV-a-manta.jpg"
+    },
+    {
+      "zh": "玳瑁",
+      "en": "Hawksbill turtle",
+      "note": "珊瑚礁常見海龜,以海綿為食,因龜甲曾遭大量獵捕。",
+      "image": "MV-a-turtle.jpg"
+    },
+    {
+      "zh": "飛旋海豚",
+      "en": "Spinner dolphin",
+      "note": "常成大群在礁道追船跳躍旋轉,傍晚出海常能遇見。",
+      "image": "MV-a-dolphin.jpg"
+    },
+    {
+      "zh": "蒼鷺",
+      "en": "Grey heron",
+      "note": "幾乎每座島的碼頭與淺灘都能見到,靜立守候獵魚。",
+      "image": "MV-a-heron.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "鮪魚清湯",
+      "en": "Garudhiya",
+      "note": "鮪魚塊煮成的清湯,配白飯、萊姆、辣椒與洋蔥,是家常主食。"
+    },
+    {
+      "zh": "鮪魚椰絲拌盤",
+      "en": "Mas huni",
+      "note": "煙燻鮪魚碎拌椰絲、洋蔥與辣椒,配薄餅 roshi 當早餐。"
+    },
+    {
+      "zh": "炸魚點心",
+      "en": "Gulha",
+      "note": "鮪魚椰絲餡的小炸丸,屬於「短食」(hedhikaa)點心的一種。",
+      "image": "MV-f-gulha.jpg"
+    },
+    {
+      "zh": "濃鮪魚醬",
+      "en": "Rihaakuru",
+      "note": "熬煮鮪魚湯汁收成的深褐色鹹醬,拌飯或沾菜。"
+    },
+    {
+      "zh": "鮪魚椰漿咖哩",
+      "en": "Kandu kukulhu",
+      "note": "鮪魚以椰漿與香料燉成的咖哩,配米飯或麵包果。",
+      "image": "MV-f-kandukukulhu.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "老星期五清真寺",
+      "en": "Hukuru Miskiy (Old Friday Mosque)",
+      "note": "一六五八年以珊瑚石砌成的老清真寺,雕花精細,列入世界遺產預備名單。",
+      "latlon": [
+        4.1759,
+        73.5091
+      ]
+    },
+    {
+      "zh": "大星期五清真寺(伊斯蘭中心)",
+      "en": "Islamic Centre / Grand Friday Mosque",
+      "note": "馬列的國家大清真寺,有金色圓頂,可容納數千人禮拜。",
+      "latlon": [
+        4.1772,
+        73.5099
+      ],
+      "image": "MV-l-grandmosque.jpg"
+    },
+    {
+      "zh": "海嘯紀念碑",
+      "en": "Tsunami Monument",
+      "note": "馬列東岸紀念二〇〇四年海嘯罹難者的鋼球造型紀念物。",
+      "latlon": [
+        4.1889,
+        73.5136
+      ],
+      "image": "MV-l-tsunami.jpg"
+    },
+    {
+      "zh": "馬列",
+      "en": "Malé",
+      "note": "面積僅約 8 平方公里、人口稠密的首都,是世界最擁擠的城市之一。",
+      "latlon": [
+        4.177,
+        73.5108
+      ],
+      "image": "MV-l-male.jpg"
+    },
+    {
+      "zh": "胡魯馬列",
+      "en": "Hulhumalé",
+      "note": "填海造出的新市鎮,以人工島與跨海大橋紓解馬列的居住壓力。",
+      "latlon": [
+        4.2109,
+        73.5405
+      ],
+      "image": "MV-l-hulhumale.jpg"
+    }
+  ],
+  "people": [
+    {
+      "zh": "穆罕默德·塔庫魯法努",
+      "en": "Muhammad Thakurufaanu",
+      "note": "十六世紀民族英雄,率眾驅逐葡萄牙駐軍,後為蘇丹。"
+    },
+    {
+      "zh": "易卜拉欣·納西爾",
+      "en": "Ibrahim Nasir",
+      "note": "帶領馬爾地夫一九六五年獨立的總理,後成為共和國第二任總統。"
+    },
+    {
+      "zh": "邁蒙·阿卜杜爾·加堯姆",
+      "en": "Maumoon Abdul Gayoom",
+      "note": "一九七八至二〇〇八年連任六屆的總統,任內觀光業大幅擴張。"
+    },
+    {
+      "zh": "穆罕默德·納希德",
+      "en": "Mohamed Nasheed",
+      "note": "二〇〇八年首位多黨直選產生的總統,以倡議對抗氣候變遷聞名。",
+      "image": "MV-p-nasheed.jpg"
+    },
+    {
+      "zh": "穆罕默德·穆伊茲",
+      "en": "Mohamed Muizzu",
+      "note": "工程背景出身,曾任馬列市長,二〇二三年當選總統。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "度假村跳島與潛水",
+      "note": "十一至四月乾季海況穩定、能見度高,適合浮潛、深潛與看鯊魚魟魚。"
+    },
+    {
+      "zh": "馬列半日文化行",
+      "note": "利用轉機或搭渡輪的空檔,走老清真寺、蘇丹公園、國家博物館與魚市場。"
+    },
+    {
+      "zh": "平價當地島旅行",
+      "note": "想省預算可住有人島的民宿,但需遵守當地伊斯蘭習俗,選有「比基尼海灘」的島。"
+    }
+  ],
+  "events": [
+    {
+      "year": 1153,
+      "zh": "馬爾地夫改信伊斯蘭教,建立蘇丹國。"
+    },
+    {
+      "year": 1558,
+      "zh": "葡萄牙人占領馬列並駐軍。"
+    },
+    {
+      "year": 1573,
+      "zh": "塔庫魯法努率眾逐出葡萄牙人。"
+    },
+    {
+      "year": 1887,
+      "zh": "馬爾地夫成為英國保護國。"
+    },
+    {
+      "year": 1965,
+      "zh": "脫離英國獨立。"
+    },
+    {
+      "year": 1968,
+      "zh": "公投廢除蘇丹制,改為共和國。"
+    },
+    {
+      "year": 2004,
+      "zh": "南亞大海嘯淹沒大半國土。"
+    }
+  ],
+  "souvenirs": [
+    {
+      "zh": "鮪魚乾與魚醬",
+      "note": "煙燻鮪魚乾與濃魚醬 rihaakuru,超市有售。"
+    },
+    {
+      "zh": "椰殼與棕櫚葉編織",
+      "note": "手編的墊子、盒子與帽子,是島上婦女的傳統手藝。"
+    },
+    {
+      "zh": "漆繪木盒",
+      "note": "車床旋出、漆上紅黑紋樣的木盒與花瓶,是傳統工藝。"
+    },
+    {
+      "zh": "環礁主題精品",
+      "note": "度假村商店的珊瑚礁攝影、香氛與海洋保育聯名商品。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "度假村蜜月／放空",
+        "days": "5–6 天",
+        "note": "選一座水上屋度假村,以浮潛、SPA 與跳島半日遊為主。台灣多經新加坡、吉隆坡或曼谷轉機到馬列,再轉快艇或水上飛機。"
+      },
+      {
+        "zh": "潛水船宿(liveaboard)",
+        "days": "7–8 天",
+        "note": "住潛水船跟著洋流跑北中南環礁的潛點,看鯊魚、魟魚與沉船,適合有潛水證者。"
+      },
+      {
+        "zh": "當地島背包行",
+        "days": "6–7 天",
+        "note": "以馬富施、烏庫拉斯等有人島的民宿為據點,搭公共渡輪跳島,預算比度假村低很多。"
+      },
+      {
+        "zh": "馬列＋一島度假",
+        "days": "4–5 天",
+        "note": "假期短時,馬列看文化半天,再到近郊環礁的度假村住三晚,交通時間最省。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "哈尼法魯灣賞鬼蝠魟",
+        "note": "六至十一月西南季風期,巴環礁的哈尼法魯灣有鬼蝠魟與鯨鯊聚集,僅能浮潛、有人數管制。"
+      },
+      {
+        "zh": "富瓦穆拉與最南環礁",
+        "note": "赤道以南的獨立島富瓦穆拉有淡水湖與農地,再往南是相連的阿杜環礁與二戰遺跡。"
+      },
+      {
+        "zh": "衝浪環礁行",
+        "note": "三至十月南馬列與中央環礁的礁石浪點,住衝浪客棧或船宿,人潮較少。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "MV-a-whaleshark.jpg",
+      "title": "Whale shark",
+      "author": "Arturo de Frias Marques",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AWhale_Shark_AdF.jpg"
+    },
+    {
+      "file": "MV-a-manta.jpg",
+      "title": "Reef manta ray, Fushivaru Thila",
+      "author": "asands",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AManta_alfredi_fushivaru_thila.jpg"
+    },
+    {
+      "file": "MV-a-turtle.jpg",
+      "title": "Hawksbill turtle",
+      "author": "Diego Delso",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ATortuga_carey_(Eretmochelys_imbricata),_parque_nacional_Ras_Muhammad,_Egipto,_2022-03-28,_DD_56.jpg"
+    },
+    {
+      "file": "MV-a-dolphin.jpg",
+      "title": "Spinner dolphin, Raa Atoll",
+      "author": "Darren Obbard",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASpinner_Dolphin,_Raa_Atoll,_Maldives_imported_from_iNaturalist_photo_473648276.jpg"
+    },
+    {
+      "file": "MV-a-heron.jpg",
+      "title": "Grey heron, Maldives",
+      "author": "Andromeda2064",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AGrey_Heron_(Ardea_cinerea),_Maldives.jpg"
+    },
+    {
+      "file": "MV-f-gulha.jpg",
+      "title": "Maldivian gulha",
+      "author": "Xavier Romero-Frias",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AMaldivian_gulha33.JPG"
+    },
+    {
+      "file": "MV-f-kandukukulhu.jpg",
+      "title": "Maldivian dish, kandu kukulhu",
+      "author": "Satdeep Gill",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AMaldivian_dish_-_Kandu_Kulkulhu_01.jpg"
+    },
+    {
+      "file": "MV-l-grandmosque.jpg",
+      "title": "Masjid-al Sultan Muhammad Thakurufaanu Al Auzam",
+      "author": "Zairon",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AMale%27_Masjid-al_Sultan_Muhammad_Thakurufaanu_Al_Auzam_01.jpg"
+    },
+    {
+      "file": "MV-l-tsunami.jpg",
+      "title": "Malé Tsunami Monument",
+      "author": "Zairon",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AMale%27_Tsunami_Monument_01.jpg"
+    },
+    {
+      "file": "MV-l-male.jpg",
+      "title": "Malé city aerial",
+      "author": "Ibrahim Asad",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AMale_City_Aerial,_The_Capital_city_of_Maldives_-_panoramio.jpg"
+    },
+    {
+      "file": "MV-l-hulhumale.jpg",
+      "title": "Architecture in Hulhumalé",
+      "author": "Adam Jones",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AArchitecture_-_Hulhumale_-_Maldives_(14295830842).jpg"
+    },
+    {
+      "file": "MV-p-nasheed.jpg",
+      "title": "Mohamed Nasheed",
+      "author": "The President's Office",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AMohamed_Nasheed_portrait_(2).jpg"
+    }
+  ],
+  "code": "MV"
+}

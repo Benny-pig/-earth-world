@@ -1,0 +1,355 @@
+{
+  "name_zh": "蒙古",
+  "name_en": "Mongolia",
+  "summary": "位於中國與俄羅斯之間的內陸高原國家,國土遼闊、人口僅約 350 萬,是世界人口密度最低的國家之一。經濟以畜牧與礦業為主,首都烏蘭巴托集中了全國近半人口,約三成國民仍過著遊牧或半遊牧生活。",
+  "founding": [
+    "蒙古高原自古是遊牧民族的舞台,匈奴、鮮卑、突厥、回鶻與契丹先後在此興衰。蒙古語部族原居於今日蒙古東北的山林草原,以放牧、狩獵為生,分為許多互相征戰的氏族。",
+    "一二〇六年,鐵木真統一草原各部,在斡難河源被尊為「成吉思汗」,建立大蒙古國,推行千戶制、頒行成文法並創制文字。此後數十年,蒙古騎兵向外擴張,勢力橫跨歐亞。",
+    "一二七一年,成吉思汗之孫忽必烈建立元朝、定都大都(今北京),蒙古帝國實際分裂為元朝與四大汗國。一三六八年元朝退回草原,史稱北元,之後蒙古再度陷入東西部長期的分裂與內鬥。",
+    "十六世紀末,藏傳佛教格魯派大規模傳入蒙古,俺答汗尊予達賴喇嘛稱號;寺院與活佛體系成為草原社會的重要支柱。十七世紀,漠南蒙古歸附後金,漠北的喀爾喀蒙古則在一六九一年接受清朝統治。",
+    "一九一一年清朝崩解之際,外蒙古在哲布尊丹巴呼圖克圖領導下宣布獨立,幾經反覆。一九二一年,在蘇俄紅軍協助下,蒙古人民黨取得政權;一九二四年成立蒙古人民共和國,成為蘇聯之外第一個社會主義國家,其後推行集體化並壓制宗教。",
+    "一九九〇年,在蘇聯改革與東歐變局影響下,蒙古發生民主示威,人民共和國和平轉型為多黨民主與市場經濟,通過新憲法、改國名為「蒙古國」。二〇〇〇年代後,銅、金、煤等礦產開發帶動經濟,但也使國家高度依賴礦業與外部市場。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "蒙古國",
+    "area_km2": 1564116,
+    "languages": [
+      "蒙古語"
+    ],
+    "religion": "藏傳佛教為主,另有薩滿信仰,無國教",
+    "currency": "圖格里克(MNT)",
+    "government": "半總統制共和(一院制國會)"
+  },
+  "animals": [
+    {
+      "zh": "普氏野馬",
+      "en": "Przewalski's horse",
+      "note": "蒙古語稱 takhi,世界僅存的真正野馬,曾野外滅絕後再引入。",
+      "image": "MN-a-przewalski.jpg"
+    },
+    {
+      "zh": "雪豹",
+      "en": "Snow leopard",
+      "note": "分布於西部阿爾泰與杭愛山區,是全球重要的族群之一。",
+      "image": "MN-a-snowleopard.jpg"
+    },
+    {
+      "zh": "戈壁熊",
+      "en": "Gobi bear",
+      "note": "蒙古語稱 mazaalai,只生活在戈壁,野外僅存數十頭,極度瀕危。",
+      "image": "MN-a-gobibear.jpg"
+    },
+    {
+      "zh": "雙峰駱駝",
+      "en": "Bactrian camel",
+      "note": "遊牧生活的重要牲畜,野生族群僅存於西南戈壁。",
+      "image": "MN-a-camel.jpg"
+    },
+    {
+      "zh": "蒙古野驢",
+      "en": "Khulan",
+      "note": "又稱亞洲野驢,成群奔馳於戈壁草原,是現存最大的野生族群。"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "蒙古包子",
+      "en": "Buuz",
+      "note": "羊肉或牛肉餡的小蒸包,是新年(白月節)必備。",
+      "image": "MN-f-buuz.jpg"
+    },
+    {
+      "zh": "石頭烤肉",
+      "en": "Khorkhog",
+      "note": "羊肉與燒熱的石頭、蔬菜一起封在奶桶中燜熟。",
+      "image": "MN-f-khorkhog.jpg"
+    },
+    {
+      "zh": "炸肉餅",
+      "en": "Khuushuur",
+      "note": "麵皮包肉餡油煎成扁平半月形,那達慕期間到處可見。",
+      "image": "MN-f-khuushuur.jpg"
+    },
+    {
+      "zh": "奶茶",
+      "en": "Suutei tsai",
+      "note": "磚茶加牛奶與鹽煮成的鹹奶茶,是日常飲品。",
+      "image": "MN-f-suuteitsai.jpg"
+    },
+    {
+      "zh": "馬奶酒",
+      "en": "Airag",
+      "note": "馬奶發酵的微酸低酒精飲料,是夏季草原的待客飲品。",
+      "image": "MN-f-airag.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "成吉思汗騎馬雕像",
+      "en": "Genghis Khan Equestrian Statue",
+      "note": "草原上高 40 公尺的不鏽鋼騎馬像,可登上馬頭觀景。",
+      "latlon": [
+        47.8083,
+        107.5306
+      ],
+      "image": "MN-l-genghisstatue.jpg"
+    },
+    {
+      "zh": "額爾德尼召",
+      "en": "Erdene Zuu Monastery",
+      "note": "建於一五八五年,是蒙古最古老的佛寺,座落在古都哈拉和林旁。",
+      "latlon": [
+        47.2015,
+        102.842
+      ],
+      "image": "MN-l-erdenezuu.jpg"
+    },
+    {
+      "zh": "甘丹寺",
+      "en": "Gandantegchinlen Monastery",
+      "note": "烏蘭巴托的藏傳佛教中心,殿內有 26 公尺高的觀音立像。",
+      "latlon": [
+        47.9211,
+        106.8938
+      ],
+      "image": "MN-l-gandan.jpg"
+    },
+    {
+      "zh": "火焰崖",
+      "en": "Flaming Cliffs (Bayanzag)",
+      "note": "戈壁中的紅色砂岩崖,一九二〇年代首度發現恐龍蛋化石。",
+      "latlon": [
+        44.1389,
+        103.725
+      ]
+    },
+    {
+      "zh": "庫蘇古爾湖",
+      "en": "Lake Khövsgöl",
+      "note": "北部的深水湖,水量佔全國淡水近七成,冬季結成厚冰。",
+      "latlon": [
+        51.05,
+        100.5
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "成吉思汗",
+      "en": "Genghis Khan",
+      "note": "一二〇六年統一草原各部,建立橫跨歐亞的大蒙古國。"
+    },
+    {
+      "zh": "忽必烈",
+      "en": "Kublai Khan",
+      "note": "成吉思汗之孫,建立元朝,定都今北京。"
+    },
+    {
+      "zh": "札那巴札爾",
+      "en": "Zanabazar",
+      "note": "十七世紀首位哲布尊丹巴活佛,是雕塑家與文字創制者。"
+    },
+    {
+      "zh": "蘇赫巴托爾",
+      "en": "Damdin Sükhbaatar",
+      "note": "一九二一年革命領袖,烏蘭巴托中央廣場以他為名。"
+    },
+    {
+      "zh": "古爾拉格查",
+      "en": "Jügderdemidiin Gürragchaa",
+      "note": "一九八一年隨蘇聯太空船升空,是首位進入太空的蒙古人。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "七月的那達慕",
+      "note": "七月中的國家那達慕大會有摔跤、賽馬與射箭,草原氣候宜人,住宿與機票要早訂。"
+    },
+    {
+      "zh": "戈壁與火焰崖",
+      "note": "六至九月自駕或跟團穿越南戈壁,看沙丘、紅崖與駱駝,夜宿蒙古包營地看星空。"
+    },
+    {
+      "zh": "庫蘇古爾湖與馴鹿人",
+      "note": "夏季走訪北部湖區,騎馬、健行,並可探訪飼養馴鹿的查坦人聚落。"
+    }
+  ],
+  "events": [
+    {
+      "year": -209,
+      "zh": "匈奴在冒頓單于領導下崛起於蒙古高原。"
+    },
+    {
+      "year": 1206,
+      "zh": "鐵木真獲尊成吉思汗,建立大蒙古國。"
+    },
+    {
+      "year": 1271,
+      "zh": "忽必烈建立元朝。"
+    },
+    {
+      "year": 1368,
+      "zh": "元朝退回草原,史稱北元。"
+    },
+    {
+      "year": 1691,
+      "zh": "漠北喀爾喀蒙古接受清朝統治。"
+    },
+    {
+      "year": 1921,
+      "zh": "蒙古人民黨在蘇俄協助下取得政權。"
+    },
+    {
+      "year": 1990,
+      "zh": "民主化,人民共和國和平轉型,改國名為蒙古國。"
+    }
+  ],
+  "souvenirs": [
+    {
+      "zh": "山羊絨(喀什米爾)製品",
+      "note": "蒙古是世界主要山羊絨產地,烏蘭巴托有多家品牌工廠直營店。"
+    },
+    {
+      "zh": "氈製與皮革工藝",
+      "note": "羊毛氈拖鞋、氈畫與馬具皮件,是遊牧生活的日常工藝。"
+    },
+    {
+      "zh": "馬頭琴小物與呼麥錄音",
+      "note": "馬頭琴縮小模型與音樂 CD,是有代表性的音樂伴手禮。"
+    },
+    {
+      "zh": "蒙古靴與傳統配件",
+      "note": "翹頭皮靴、腰帶與銀飾,市集與國營百貨都有。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "烏蘭巴托＋中部草原",
+        "days": "5–6 天",
+        "note": "首都博物館與甘丹寺,再到特勒吉國家公園、成吉思汗雕像與哈拉和林。台灣多經首爾、北京或香港轉機。"
+      },
+      {
+        "zh": "南戈壁環線",
+        "days": "6–8 天",
+        "note": "火焰崖、洪戈林沙丘與雅林峽谷,搭配蒙古包住宿與駱駝、騎馬體驗,多為越野車團。"
+      },
+      {
+        "zh": "那達慕主題行",
+        "days": "5–6 天",
+        "note": "配合七月那達慕,看開幕式與競技,再安排草原騎馬與一場本地家庭作客。"
+      },
+      {
+        "zh": "庫蘇古爾湖北疆",
+        "days": "7–8 天",
+        "note": "飛木倫後到湖區健行、划船、騎馬,深入者可拜訪馴鹿人,適合夏季前往。"
+      },
+      {
+        "zh": "西部阿爾泰深度",
+        "days": "10–12 天",
+        "note": "巴彥烏列蓋的哈薩克獵鷹人、塔旺博格德雪山與冰川,路況艱難,適合資深旅人。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "獵鷹人節",
+        "note": "十月巴彥烏列蓋的金鵰節,哈薩克騎手展示馴鷹狩獵,需安排國內航班與嚮導。"
+      },
+      {
+        "zh": "東方省成吉思汗遺跡",
+        "note": "肯特山一帶的成吉思汗出生地與聖山不兒罕合勒敦,朝聖氛圍濃,基礎設施少。"
+      },
+      {
+        "zh": "恐龍化石與科學營",
+        "note": "南戈壁的化石產地與博物館,適合對古生物有興趣的家庭,多需跟專門團。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "MN-a-przewalski.jpg",
+      "title": "Przewalski's horse, Hustai",
+      "author": "Kelsey rideout",
+      "license": "CC BY 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File%3APrezHorseHustai.jpg"
+    },
+    {
+      "file": "MN-a-snowleopard.jpg",
+      "title": "Snow leopard of Tost Mountain",
+      "author": "Snow Leopard Trust",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AThe_Snow_Leopard_of_Tost_Mountain.png"
+    },
+    {
+      "file": "MN-a-gobibear.jpg",
+      "title": "Gobi bear",
+      "author": "Diogorandom",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AGobi_Bear.jpg"
+    },
+    {
+      "file": "MN-a-camel.jpg",
+      "title": "Bactrian camel in western Mongolia",
+      "author": "Alexandr frolov",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ACamelus_bactrianus_in_western_Mongolia_02.jpg"
+    },
+    {
+      "file": "MN-f-buuz.jpg",
+      "title": "Mongolian buuz",
+      "author": "Vidor",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AMongolianBuuz.JPG"
+    },
+    {
+      "file": "MN-f-khorkhog.jpg",
+      "title": "Khorkhog",
+      "author": "Vidor",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3AKhorkhog.JPG"
+    },
+    {
+      "file": "MN-f-khuushuur.jpg",
+      "title": "Khuushuur, Ulaanbaatar style",
+      "author": "Mizu basyo",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AKhuushuur,Mongolian_Ulaanbaatar_style.JPG"
+    },
+    {
+      "file": "MN-f-suuteitsai.jpg",
+      "title": "Suutei tsai",
+      "author": "Mizu Basyo",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASuutei_tsai.jpg"
+    },
+    {
+      "file": "MN-f-airag.jpg",
+      "title": "Homemade airag",
+      "author": "Jpatokal",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AHomemade_airag_in_Mongolia.jpg"
+    },
+    {
+      "file": "MN-l-genghisstatue.jpg",
+      "title": "Genghis Khan Equestrian Statue",
+      "author": "Chinneeb",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AGenghis_Khan_Equestrian_Statue_2011.jpg"
+    },
+    {
+      "file": "MN-l-erdenezuu.jpg",
+      "title": "Erdene Zuu Monastery",
+      "author": "Bernard Gagnon",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AErdene_Zuu_Monastery_08.jpg"
+    },
+    {
+      "file": "MN-l-gandan.jpg",
+      "title": "Gandantegchinlen Monastery",
+      "author": "Chongkian",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AGandantegchinlen_Monastery_(2024).jpg"
+    }
+  ],
+  "code": "MN"
+}

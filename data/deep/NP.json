@@ -1,0 +1,355 @@
+{
+  "name_zh": "尼泊爾",
+  "name_en": "Nepal",
+  "summary": "夾在中國與印度之間的內陸山國,境內有含聖母峰在內的八座逾八千公尺高峰。從南部低地平原到高山雪線,地形與族群語言都極為多樣。長期是印度教王國,二〇〇八年廢除君主制,改為聯邦民主共和國。",
+  "founding": [
+    "加德滿都谷地自古是喜馬拉雅南麓的交通與文化十字路口。傳說谷地原是湖泊,經文殊菩薩劈開山口排水後才可居住。西元前後,基拉底人統治谷地;約四世紀起李查維王朝興起,留下石碑與早期寺廟,佛教與印度教並存。",
+    "佛陀釋迦牟尼約於西元前六世紀誕生在南部的藍毗尼,當時屬釋迦族的迦毗羅衛國。此後這一帶成為佛教重要聖地,孔雀王朝的阿育王曾立石柱紀念。",
+    "十三至十八世紀,馬拉王朝統治加德滿都谷地,分為加德滿都、帕坦、巴克塔布三個城邦,競相營建杜巴廣場、多層神廟與木雕宮殿,尼瓦爾人的建築與工藝達到高峰。谷地以外則有眾多小邦割據。",
+    "一七六八年,廓爾喀國王普里特維·納拉揚·沙阿攻下加德滿都谷地,逐步統一諸邦,建立沙阿王朝的近代尼泊爾。十九世紀初與英屬印度交戰失利,簽約割地,但保持獨立;此後廓爾喀士兵開始受僱於英軍。",
+    "一八四六年,拉納家族透過政變掌握世襲首相之位,將國王架空達一世紀,對外維持鎖國。一九五一年,王室在印度支持下推翻拉納統治,恢復王權並嘗試議會政治。一九六〇年代起改行無政黨的「評議會制」。",
+    "一九九〇年恢復多黨制與君主立憲。一九九六年起毛派發動十年武裝衝突;二〇〇一年王室發生槍擊慘案。二〇〇六年大規模示威後,毛派加入政治;二〇〇八年制憲議會宣布廢除君主制,尼泊爾成為聯邦民主共和國,二〇一五年通過新憲法,將全國劃為七個省。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "尼泊爾聯邦民主共和國",
+    "area_km2": 147516,
+    "languages": [
+      "尼泊爾語"
+    ],
+    "religion": "印度教為主,佛教次之,另有伊斯蘭教",
+    "currency": "尼泊爾盧比(NPR)",
+    "government": "聯邦議會共和制"
+  },
+  "animals": [
+    {
+      "zh": "印度犀",
+      "en": "Indian rhinoceros",
+      "note": "獨角犀牛,主要棲息在奇特旺與巴迪亞的草原濕地。",
+      "image": "NP-a-rhino.jpg"
+    },
+    {
+      "zh": "孟加拉虎",
+      "en": "Bengal tiger",
+      "note": "低地國家公園有穩定族群,是保育的旗艦物種。",
+      "image": "NP-a-tiger.jpg"
+    },
+    {
+      "zh": "小貓熊",
+      "en": "Red panda",
+      "note": "東部高山竹林的害羞夜行動物,毛色紅棕,以竹葉為食。",
+      "image": "NP-a-redpanda.jpg"
+    },
+    {
+      "zh": "雪豹",
+      "en": "Snow leopard",
+      "note": "出沒於高海拔岩壁與草坡,行蹤隱密,是喜馬拉雅的象徵。",
+      "image": "NP-a-snowleopard.jpg"
+    },
+    {
+      "zh": "棕尾虹雉",
+      "en": "Himalayan monal",
+      "note": "尼泊爾國鳥(當地稱 Danphe),雄鳥羽色如金屬彩虹。",
+      "image": "NP-a-monal.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "豆湯飯",
+      "en": "Dal bhat",
+      "note": "白飯配扁豆湯、咖哩蔬菜與醃菜,是每日主食,常可續添。",
+      "image": "NP-f-dalbhat.jpg"
+    },
+    {
+      "zh": "蒸餃",
+      "en": "Momo",
+      "note": "麵皮包水牛肉或蔬菜蒸或煎,配番茄辣醬,街頭最受歡迎。",
+      "image": "NP-f-momo.jpg"
+    },
+    {
+      "zh": "環形米餅",
+      "en": "Sel roti",
+      "note": "米漿糊擠成圈狀油炸,是節慶與待客的甜點心。",
+      "image": "NP-f-selroti.jpg"
+    },
+    {
+      "zh": "醃酸菜",
+      "en": "Gundruk",
+      "note": "芥菜葉發酵曬乾,煮湯或做小菜,帶明顯酸味。",
+      "image": "NP-f-gundruk.jpg"
+    },
+    {
+      "zh": "巴克塔布優格",
+      "en": "Juju dhau",
+      "note": "用陶碗盛裝的濃稠水牛奶優格,有「優格之王」之稱。",
+      "image": "NP-f-jujudhau.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "聖母峰",
+      "en": "Mount Everest",
+      "note": "海拔 8,849 公尺的世界最高峰,尼泊爾稱薩加瑪塔。",
+      "latlon": [
+        27.9881,
+        86.925
+      ],
+      "image": "NP-l-everest.jpg"
+    },
+    {
+      "zh": "加德滿都杜巴廣場",
+      "en": "Kathmandu Durbar Square",
+      "note": "舊王宮與神廟群,活女神庫瑪麗的住所也在此。",
+      "latlon": [
+        27.7045,
+        85.307
+      ],
+      "image": "NP-l-kathmandudurbar.jpg"
+    },
+    {
+      "zh": "博拿佛塔",
+      "en": "Boudhanath Stupa",
+      "note": "尼泊爾最大的圓頂佛塔,是藏傳佛教信眾的朝聖與轉經中心。",
+      "latlon": [
+        27.7215,
+        85.362
+      ]
+    },
+    {
+      "zh": "帕舒帕蒂納特廟",
+      "en": "Pashupatinath Temple",
+      "note": "巴格馬提河畔的濕婆神廟群,河岸設有露天火葬台。",
+      "latlon": [
+        27.7105,
+        85.3488
+      ]
+    },
+    {
+      "zh": "藍毗尼",
+      "en": "Lumbini",
+      "note": "佛陀誕生地,園內有摩耶夫人廟與阿育王石柱。",
+      "latlon": [
+        27.4693,
+        83.276
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "釋迦牟尼佛",
+      "en": "Gautama Buddha",
+      "note": "佛教創立者,約西元前六世紀生於藍毗尼。"
+    },
+    {
+      "zh": "普里特維·納拉揚·沙阿",
+      "en": "Prithvi Narayan Shah",
+      "note": "十八世紀廓爾喀國王,統一諸邦,建立近代尼泊爾。"
+    },
+    {
+      "zh": "丹增·諾蓋",
+      "en": "Tenzing Norgay",
+      "note": "雪巴登山家,一九五三年與希拉瑞首度登頂聖母峰。"
+    },
+    {
+      "zh": "阿尼哥",
+      "en": "Araniko",
+      "note": "十三世紀尼瓦爾工匠,將尼泊爾式佛塔建築帶入元朝。"
+    },
+    {
+      "zh": "比蘭德拉",
+      "en": "Birendra",
+      "note": "一九七二至二〇〇一年在位的國王,二〇〇一年死於王室槍擊事件。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "十至十一月的安納布爾納",
+      "note": "雨季剛過、天氣穩定、視野清澈,適合走布恩山或安納布爾納基地營路線。"
+    },
+    {
+      "zh": "波卡拉慢活",
+      "note": "費瓦湖畔看魚尾峰倒影,搭配滑翔傘、山中日出與世界和平塔,節奏悠閒。"
+    },
+    {
+      "zh": "奇特旺叢林旅館",
+      "note": "十至三月乾季搭吉普車或步行找犀牛與野鳥,傍晚看塔魯族歌舞。"
+    }
+  ],
+  "events": [
+    {
+      "year": -563,
+      "zh": "佛陀誕生於藍毗尼(年代有數種說法)。"
+    },
+    {
+      "year": 1200,
+      "zh": "馬拉王朝統治加德滿都谷地,三城邦競建杜巴廣場。"
+    },
+    {
+      "year": 1768,
+      "zh": "普里特維·納拉揚·沙阿攻下加德滿都,統一近代尼泊爾。"
+    },
+    {
+      "year": 1814,
+      "zh": "英尼戰爭爆發,兩年後簽約割地,開始廓爾喀募兵。"
+    },
+    {
+      "year": 1846,
+      "zh": "拉納家族掌權,世襲首相統治近一世紀。"
+    },
+    {
+      "year": 1951,
+      "zh": "王室推翻拉納統治,恢復王權。"
+    },
+    {
+      "year": 2008,
+      "zh": "廢除君主制,成立聯邦民主共和國。"
+    }
+  ],
+  "souvenirs": [
+    {
+      "zh": "喜馬拉雅茶與香料",
+      "note": "伊拉姆紅茶、藏式酥油茶料與咖哩香料,市集可秤重買。"
+    },
+    {
+      "zh": "帕什米納羊絨圍巾",
+      "note": "山羊絨手織披肩,注意純度與價格,認明信譽店家。"
+    },
+    {
+      "zh": "廓爾喀彎刀(khukuri)",
+      "note": "傳統與軍用刀具,做工講究,託運需留意規定。"
+    },
+    {
+      "zh": "唐卡與金屬佛像",
+      "note": "帕坦一帶的手繪唐卡與失蠟法銅像,價差大,慢慢挑。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "加德滿都谷地文化遊",
+        "days": "4–5 天",
+        "note": "加德滿都、帕坦、巴克塔布三座杜巴廣場,加博拿佛塔、帕舒帕蒂納特與斯瓦揚布。台灣多經曼谷、加爾各答或吉隆坡轉機。"
+      },
+      {
+        "zh": "加德滿都＋波卡拉＋奇特旺",
+        "days": "8–9 天",
+        "note": "谷地文化、費瓦湖度假與奇特旺叢林三段式,以飛機或巴士串聯,是最經典的初訪路線。"
+      },
+      {
+        "zh": "安納布爾納基地營健行",
+        "days": "12–14 天",
+        "note": "從波卡拉出發,經山村與杜鵑林走到 4,130 公尺的基地營,需嚮導與許可證。"
+      },
+      {
+        "zh": "布恩山輕健行",
+        "days": "6–7 天",
+        "note": "三到四天的低強度健行,清晨在布恩山看安納布爾納與道拉吉里日照金山,適合入門。"
+      },
+      {
+        "zh": "聖母峰基地營健行",
+        "days": "12–16 天",
+        "note": "飛盧卡拉後沿昆布冰河走到 5,364 公尺基地營,需充分的高度適應與體能。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "上木斯塘",
+        "note": "乾燥的高原古王國,土色夯築村落與洞窟寺院,需特別許可、費用較高。"
+      },
+      {
+        "zh": "蘭塘谷地健行",
+        "note": "距加德滿都最近的高山健行區,二〇一五地震後重建,人潮比安納布爾納少。"
+      },
+      {
+        "zh": "賈納克布爾與南部平原",
+        "note": "特萊平原上的印度教聖城賈納克布爾,有鮮豔的米蒂拉彩繪與濕地鳥類。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "NP-a-rhino.jpg",
+      "title": "One-horned rhinoceros at Chitwan",
+      "author": "Lurey Rohit",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AOne-horned_Rhinoceros_at_Chitwan_National_Park.jpg"
+    },
+    {
+      "file": "NP-a-tiger.jpg",
+      "title": "Bengal tiger in Bardiya National Park",
+      "author": "Nirojsedhai",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABengal_Tiger_in_Bardiya_National_Park.jpg"
+    },
+    {
+      "file": "NP-a-redpanda.jpg",
+      "title": "Red panda",
+      "author": "Mathias Appel",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ARed_Panda_(24986761703).jpg"
+    },
+    {
+      "file": "NP-a-snowleopard.jpg",
+      "title": "Snow leopard portrait",
+      "author": "Tambako The Jaguar",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASnow_leopard_portrait.jpg"
+    },
+    {
+      "file": "NP-a-monal.jpg",
+      "title": "Himalayan monal, Sagarmatha National Park",
+      "author": "Pratap Gurung",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AHimalayan_Monal_at_Sagarmatha_National_Park,_Nepal.jpg"
+    },
+    {
+      "file": "NP-f-dalbhat.jpg",
+      "title": "Nepali dal bhat tarkari",
+      "author": "Subhashish Panigrahi",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ANepali_dal-bhat-tarkari.jpg"
+    },
+    {
+      "file": "NP-f-momo.jpg",
+      "title": "Momo, Nepali cuisine",
+      "author": "Bajinra",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AMomo_Nepali_cuisine.jpg"
+    },
+    {
+      "file": "NP-f-selroti.jpg",
+      "title": "Sel roti",
+      "author": "Janak Bhatta",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASel_Roti_Nepal.jpg"
+    },
+    {
+      "file": "NP-f-gundruk.jpg",
+      "title": "Gundruk (pickled leafy vegetables)",
+      "author": "Gaurav Dhwaj Khadka",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AGundruk_(Pickled_Leafy_Vegetables).jpg"
+    },
+    {
+      "file": "NP-f-jujudhau.jpg",
+      "title": "Juju dhau",
+      "author": "Gaurav Dhwaj Khadka",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AJuju_Dhau.jpg"
+    },
+    {
+      "file": "NP-l-everest.jpg",
+      "title": "Mount Everest from Kala Patthar",
+      "author": "Pavel Novak",
+      "license": "CC BY-SA 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File%3AEverest_kalapatthar_crop.jpg"
+    },
+    {
+      "file": "NP-l-kathmandudurbar.jpg",
+      "title": "Kathmandu Durbar Square",
+      "author": "Bijay Chaurasia",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AHistoric_Pagoda_Style_Architecture_in_Kathmandu_Durbar_Square-IMG_4069.jpg"
+    }
+  ],
+  "code": "NP"
+}

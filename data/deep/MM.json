@@ -1,0 +1,355 @@
+{
+  "name_zh": "緬甸",
+  "name_en": "Myanmar",
+  "summary": "位於中南半島西側、瀕臨孟加拉灣與安達曼海的國家,人口約 5,400 萬,由緬族與撣、克欽、克倫等眾多民族組成。歷史上有蒲甘、東吁與貢榜三個王朝,十九世紀被英國併吞,一九四八年獨立。近數十年政治長期由軍方主導。",
+  "founding": [
+    "伊洛瓦底江中游是緬甸文明的搖籃。公元前後,驃族在此建立城邦,信奉佛教、發展灌溉;約九世紀,緬族自北方遷入,吸收驃族與孟族文化。一〇四四年,阿奴律陀在蒲甘即位,統一伊洛瓦底江流域,並自孟族地區引入上座部佛教與文字,史稱蒲甘王朝。",
+    "蒲甘兩百多年間在平原上興建數千座佛塔與寺院,是緬甸佛教藝術的高峰。十三世紀末,蒙元軍隊南下,蒲甘瓦解,緬甸分裂為上緬甸的阿瓦、下緬甸孟族的勃固,以及撣族諸邦,彼此征戰數百年。",
+    "十六世紀,東吁王朝的莽應龍一度建立東南亞規模最大的王國,勢力及於暹羅。十八世紀中葉,雍笈牙(阿朗帕耶)崛起,建立貢榜王朝,再次統一全境,並向阿拉干、曼尼普爾與暹羅擴張。",
+    "貢榜王朝的擴張與英屬印度發生衝突。一八二四至一八八五年間,英國發動三次英緬戰爭,逐步併吞緬甸,末代國王錫袍被流放印度,緬甸成為英屬印度的一個省,大量印度移民與資本進入。",
+    "二戰期間日軍占領緬甸,翁山等「三十志士」先與日本合作、後轉而抗日。一九四七年翁山與少數民族代表簽署《彬龍協議》,同年他遇刺身亡。一九四八年一月四日,緬甸脫離英國獨立,採聯邦制,但隨即陷入共產黨與民族武裝的內戰。",
+    "一九六二年奈溫發動政變,實行「緬甸式社會主義」與軍事統治。一九八八年民主示威遭鎮壓,翌年國名改為 Myanmar。二〇一一年起軍方推動局部改革,二〇一五年全國民主聯盟贏得大選。二〇二一年二月一日軍方再度接管政權,成立國家管理委員會,多地爆發武裝衝突,情勢持續動盪。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "緬甸聯邦共和國",
+    "area_km2": 676578,
+    "languages": [
+      "緬甸語"
+    ],
+    "religion": "上座部佛教為主,另有基督宗教、伊斯蘭教",
+    "currency": "緬元(MMK)",
+    "government": "共和制;二〇二一年二月起由軍方成立的國家管理委員會掌理"
+  },
+  "animals": [
+    {
+      "zh": "亞洲象",
+      "en": "Asian elephant",
+      "note": "緬甸曾以馴象拖運柚木聞名,白象在傳統上被視為祥瑞。",
+      "image": "MM-a-elephant.jpg"
+    },
+    {
+      "zh": "綠孔雀",
+      "en": "Green peafowl",
+      "note": "緬甸的文化象徵,曾出現在王朝與獨立運動的旗徽上。",
+      "image": "MM-a-peafowl.jpg"
+    },
+    {
+      "zh": "伊洛瓦底江豚",
+      "en": "Irrawaddy dolphin",
+      "note": "江豚與漁民合作圍魚的傳統,見於曼德勒上游的河段。",
+      "image": "MM-a-dolphin.jpg"
+    },
+    {
+      "zh": "緬甸金絲猴",
+      "en": "Myanmar snub-nosed monkey",
+      "note": "二〇一〇年才被科學描述,僅分布於克欽邦高山林,下雨會打噴嚏。",
+      "image": "MM-a-snubnose.jpg"
+    },
+    {
+      "zh": "緬甸蟒",
+      "en": "Burmese python",
+      "note": "世界最大的蛇類之一,善游泳,棲息於雨林與濕地。",
+      "image": "MM-a-python.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "魚湯米線(莫興加)",
+      "en": "Mohinga",
+      "note": "鯰魚香茅湯配米線,加油炸物與香菜,被視為國民早餐。",
+      "image": "MM-f-mohinga.jpg"
+    },
+    {
+      "zh": "醃茶葉沙拉",
+      "en": "Lahpet thoke",
+      "note": "發酵茶葉拌炸豆、蒜片、花生與蝦米,用來待客與當零食。",
+      "image": "MM-f-lahpet.jpg"
+    },
+    {
+      "zh": "撣邦米麵",
+      "en": "Shan noodles",
+      "note": "撣族的米麵,拌或湯食,配醃菜與雞肉番茄醬汁。",
+      "image": "MM-f-shannoodles.jpg"
+    },
+    {
+      "zh": "南吉託",
+      "en": "Nan gyi thoke",
+      "note": "粗米麵拌雞肉咖哩、豆粉與魚餅,像是「乾版的莫興加」。",
+      "image": "MM-f-nangyithoke.jpg"
+    },
+    {
+      "zh": "椰漿雞湯麵",
+      "en": "Ohn no khao swè",
+      "note": "雞肉椰漿咖哩湯配黃麵,加水煮蛋與炸餛飩皮。",
+      "image": "MM-f-ohnnokhaoswe.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "仰光大金寺",
+      "en": "Shwedagon Pagoda",
+      "note": "高約百公尺的鍍金佛塔,相傳藏有佛陀髮舍利,是最神聖之地。",
+      "latlon": [
+        16.7983,
+        96.1495
+      ],
+      "image": "MM-l-shwedagon.jpg"
+    },
+    {
+      "zh": "蒲甘平原",
+      "en": "Bagan",
+      "note": "平原上散布數千座十一至十三世紀佛塔,列入世界遺產。",
+      "latlon": [
+        21.167,
+        94.859
+      ],
+      "image": "MM-l-bagan.jpg"
+    },
+    {
+      "zh": "烏本橋",
+      "en": "U Bein Bridge",
+      "note": "阿馬拉布拉的柚木橋,長約 1.2 公里,是世界最長的柚木步橋。",
+      "latlon": [
+        21.8908,
+        96.0559
+      ]
+    },
+    {
+      "zh": "茵萊湖",
+      "en": "Inle Lake",
+      "note": "撣邦高原湖泊,以單腳划船的漁民、水上菜園與高腳屋村落聞名。",
+      "latlon": [
+        20.55,
+        96.92
+      ]
+    },
+    {
+      "zh": "大金石",
+      "en": "Kyaiktiyo (Golden Rock)",
+      "note": "貼滿金箔、看似搖搖欲墜立在崖邊的巨石與小塔,是重要朝聖地。",
+      "latlon": [
+        17.4816,
+        97.0977
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "阿奴律陀",
+      "en": "Anawrahta",
+      "note": "十一世紀蒲甘開國君主,統一緬甸並確立上座部佛教。"
+    },
+    {
+      "zh": "雍笈牙",
+      "en": "Alaungpaya",
+      "note": "十八世紀貢榜王朝的創建者,再次統一全緬。"
+    },
+    {
+      "zh": "翁山",
+      "en": "Aung San",
+      "note": "獨立運動領袖,促成彬龍協議,一九四七年遇刺。"
+    },
+    {
+      "zh": "翁山蘇姬",
+      "en": "Aung San Suu Kyi",
+      "note": "翁山之女,民主運動人物,一九九一年獲諾貝爾和平獎。"
+    },
+    {
+      "zh": "吳丹",
+      "en": "U Thant",
+      "note": "緬甸外交官,一九六一至一九七一年任聯合國第三任秘書長。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "涼季的蒲甘",
+      "note": "十一至二月清晨搭熱氣球或登塔看平原塔林日出,午後騎電動車探訪小廟。"
+    },
+    {
+      "zh": "茵萊湖與娘瑞",
+      "note": "全年可訪,搭船看單腳漁夫、浮島菜園與五日輪市,住湖畔的高腳屋旅館。"
+    },
+    {
+      "zh": "仰光殖民建築散步",
+      "note": "傍晚沿仰光市中心走一圈,看殖民時期法院、海事大樓,再到大金寺看點燈。"
+    }
+  ],
+  "events": [
+    {
+      "year": 1044,
+      "zh": "阿奴律陀即位,蒲甘王朝統一伊洛瓦底江流域。"
+    },
+    {
+      "year": 1752,
+      "zh": "雍笈牙建立貢榜王朝。"
+    },
+    {
+      "year": 1885,
+      "zh": "第三次英緬戰爭,英國併吞全緬,末代國王被流放。"
+    },
+    {
+      "year": 1948,
+      "zh": "脫離英國獨立。"
+    },
+    {
+      "year": 1962,
+      "zh": "奈溫政變,開始長期的軍事統治。"
+    },
+    {
+      "year": 1988,
+      "zh": "民主示威遭鎮壓;翌年國名改為 Myanmar。"
+    },
+    {
+      "year": 2021,
+      "zh": "軍方接管政權,成立國家管理委員會。"
+    }
+  ],
+  "souvenirs": [
+    {
+      "zh": "漆器",
+      "note": "蒲甘的竹胎漆器碗盤與盒子,層層上漆刻花,是代表工藝。"
+    },
+    {
+      "zh": "醃茶葉",
+      "note": "真空包裝的發酵茶葉與拌料包,回家可自製茶葉沙拉。"
+    },
+    {
+      "zh": "特納卡香木",
+      "note": "磨成粉塗臉防曬的黃木,常連磨盤一起賣。"
+    },
+    {
+      "zh": "撣族揹袋與手織布",
+      "note": "棉麻織的斜背袋、圍巾,茵萊湖與撣邦市集常見。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "仰光＋蒲甘＋曼德勒",
+        "days": "7–8 天",
+        "note": "緬甸三大重點:仰光大金寺、蒲甘塔林、曼德勒與周邊古都。台灣多經曼谷或吉隆坡轉機,出發前留意各國旅遊警示與當地情勢。"
+      },
+      {
+        "zh": "蒲甘深度",
+        "days": "4–5 天",
+        "note": "以蒲甘為主,騎電動車跑遍主要佛塔,安排熱氣球、漆器工坊與波帕山一日。"
+      },
+      {
+        "zh": "茵萊湖與娘瑞",
+        "days": "4–5 天",
+        "note": "黑河機場進,環湖搭船看水上生活、五日市與蓮藕織布,登山到彬達雅千佛洞。"
+      },
+      {
+        "zh": "曼德勒與周邊古都",
+        "days": "5–6 天",
+        "note": "曼德勒山、皇宮與烏本橋,加上實皆、因瓦與敏貢三座舊都,搭船遊伊洛瓦底江。"
+      },
+      {
+        "zh": "仰光與南部海濱",
+        "days": "6–7 天",
+        "note": "仰光看殖民建築後,飛或搭車到額布里、維桑海灘曬太陽,節奏放鬆。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "欽邦山區",
+        "note": "蒲東、哈卡一帶的臉部刺青長者、梯田與雲海,路況差,需嚮導與許可。"
+      },
+      {
+        "zh": "毛淡棉與丹老群島",
+        "note": "南部孟邦古城毛淡棉,再往南從丹老出海跳島,珊瑚礁與海上吉普賽人。"
+      },
+      {
+        "zh": "密支那與江水匯流",
+        "note": "克欽邦首府密支那,看伊洛瓦底江源頭與克欽文化,進出受當地情勢影響,行前須確認。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "MM-a-elephant.jpg",
+      "title": "Asian elephant herd",
+      "author": "Pailoolom",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AAsian_elephant_herd_in_Khao_Yai_National_Park.jpg"
+    },
+    {
+      "file": "MM-a-peafowl.jpg",
+      "title": "Green peafowl",
+      "author": "Crisco 1492",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AGreen_peafowl_(Pavo_muticus),_Gembira_Loka_Zoo,_Yogyakarta,_2015-03-15.jpg"
+    },
+    {
+      "file": "MM-a-dolphin.jpg",
+      "title": "Irrawaddy dolphin",
+      "author": "Bernard DUPONT",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AIrrawaddy_Dolphin_(Orcaella_brevirostris)_(15223163534).jpg"
+    },
+    {
+      "file": "MM-a-snubnose.jpg",
+      "title": "Rhinopithecus strykeri (illustration)",
+      "author": "Liedigk et al.",
+      "license": "CC BY 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File%3ADrawing_of_Rhinopithecus_strykeri.jpg"
+    },
+    {
+      "file": "MM-a-python.jpg",
+      "title": "Burmese python",
+      "author": "Cvmontuy",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3APython_bivittatus_1701.jpg"
+    },
+    {
+      "file": "MM-f-mohinga.jpg",
+      "title": "Mohinga",
+      "author": "Allervous",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AMohinga_(20250315).jpg"
+    },
+    {
+      "file": "MM-f-lahpet.jpg",
+      "title": "Lahpet thoke",
+      "author": "Allervous",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ALahpet_thohk_(20250315181751).jpg"
+    },
+    {
+      "file": "MM-f-shannoodles.jpg",
+      "title": "Shan noodles",
+      "author": "Myominkyaw93",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AShan_Noodle.jpg"
+    },
+    {
+      "file": "MM-f-nangyithoke.jpg",
+      "title": "Nan gyi thoke",
+      "author": "Lionslayer",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ANan_Gyi_Thoke.jpg"
+    },
+    {
+      "file": "MM-f-ohnnokhaoswe.jpg",
+      "title": "Ohn no khao swè (khow suey)",
+      "author": "Gaurav Nemade",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AKhow_Suey_(25204448596).jpg"
+    },
+    {
+      "file": "MM-l-shwedagon.jpg",
+      "title": "Shwedagon Pagoda, Yangon",
+      "author": "kallerna",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AShwedagon_Zedi_Daw_Yangon_3.jpg"
+    },
+    {
+      "file": "MM-l-bagan.jpg",
+      "title": "Bagan temples",
+      "author": "Jakub Hałun",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3A20160801_Bagan_temples_6701.jpg"
+    }
+  ],
+  "code": "MM"
+}

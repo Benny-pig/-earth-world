@@ -1,0 +1,349 @@
+{
+  "name_zh": "汶萊",
+  "name_en": "Brunei",
+  "summary": "位於婆羅洲西北岸、被馬來西亞砂拉越分割成兩塊的小型蘇丹國,人口約 45 萬。石油與天然氣自一九二九年開採,支撐了免所得稅、公費醫療與教育的高福利體制。奉行「馬來伊斯蘭君主制」的國家理念,由蘇丹掌握全部行政權。",
+  "founding": [
+    "汶萊在中國史籍中稱「渤泥」,至遲在十世紀已與中國、爪哇通商。傳說首位信奉伊斯蘭教的統治者是十四世紀的阿旺·阿拉·貝塔塔爾(蘇丹穆罕默德沙),此後汶萊成為蘇丹國,並逐漸控制婆羅洲北部沿海與蘇祿一帶。",
+    "十五至十七世紀是汶萊的黃金時代,第五代蘇丹博爾基亞在位時,勢力一度及於整個婆羅洲北部與菲律賓南部。一五二一年,麥哲倫船隊的倖存者曾造訪汶萊,留下對繁華港市的記載。此後西班牙、荷蘭等勢力介入,王室內爭,汶萊國勢轉衰。",
+    "十九世紀,英國冒險家詹姆士·布魯克協助平亂後獲封砂拉越拉惹,「白人拉惹」政權與英屬北婆羅洲公司持續蠶食汶萊領土,使其縮小為今日被砂拉越包夾的兩塊飛地。一八八八年,汶萊成為英國保護國。",
+    "一九〇六年英國派駐官員管理內政。一九二九年在詩里亞發現大油田,徹底改變汶萊的經濟。一九五九年蘇丹奧瑪·阿里·賽福鼎三世頒布首部憲法,恢復內部自治,但外交與國防仍由英國負責;一九六二年一場要求成立議會的武裝起義被弭平,此後國家長期實施緊急狀態。",
+    "一九六七年奧瑪·阿里·賽福鼎三世讓位給兒子哈桑納爾·博爾基亞。一九八四年一月一日,汶萊脫離英國完全獨立,國名定為「汶萊達魯薩蘭國」(意為「和平之邦」)。獨立後維持絕對君主制,二〇一四年起分階段實施伊斯蘭刑法,經濟則持續尋求石油以外的多元發展。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "汶萊達魯薩蘭國",
+    "area_km2": 5765,
+    "languages": [
+      "馬來語"
+    ],
+    "religion": "伊斯蘭教(遜尼派)為國教",
+    "currency": "汶萊元(BND)",
+    "government": "絕對君主制(蘇丹兼任首相)"
+  },
+  "animals": [
+    {
+      "zh": "長鼻猴",
+      "en": "Proboscis monkey",
+      "note": "婆羅洲特有,雄猴有下垂的大鼻,常見於河岸紅樹林。",
+      "image": "BN-a-proboscis.jpg"
+    },
+    {
+      "zh": "婆羅洲紅毛猩猩",
+      "en": "Bornean orangutan",
+      "note": "亞洲唯一的大猿,棲於雨林樹冠,烏魯淡武廊一帶尚有分布。",
+      "image": "BN-a-orangutan.jpg"
+    },
+    {
+      "zh": "馬來熊",
+      "en": "Sun bear",
+      "note": "世界最小的熊,胸口有淺色 U 形斑,善爬樹找蜂蜜。",
+      "image": "BN-a-sunbear.jpg"
+    },
+    {
+      "zh": "馬來犀鳥",
+      "en": "Rhinoceros hornbill",
+      "note": "頭上有紅黃色盔突,是婆羅洲雨林的代表鳥類。",
+      "image": "BN-a-hornbill.jpg"
+    },
+    {
+      "zh": "巽他雲豹",
+      "en": "Sunda clouded leopard",
+      "note": "婆羅洲與蘇門答臘特有的中型貓科,犬齒比例居貓科之冠。"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "西米糊",
+      "en": "Ambuyat",
+      "note": "西谷椰澱粉調成的透明黏糊,用竹叉捲起沾酸辣醬吃,是國菜。"
+    },
+    {
+      "zh": "打包飯",
+      "en": "Nasi katok",
+      "note": "白飯配炸雞與參巴辣醬的平價包裝飯,深夜也買得到。"
+    },
+    {
+      "zh": "椰漿飯",
+      "en": "Nasi lemak",
+      "note": "椰漿煮的米飯配江魚仔、花生、蛋與參巴,是常見的早餐。",
+      "image": "BN-f-nasilemak.jpg"
+    },
+    {
+      "zh": "沙嗲",
+      "en": "Satay",
+      "note": "醃過的肉串炭烤,沾花生醬,配飯糰與小黃瓜。",
+      "image": "BN-f-satay.jpg"
+    },
+    {
+      "zh": "環形炸餅",
+      "en": "Kuih cincin",
+      "note": "用椰糖與米粉做的環狀花紋炸餅,是節慶甜點。",
+      "image": "BN-f-kuihcincin.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "賈米·哈桑納爾·博爾基亞清真寺",
+      "en": "Jame' Asr Hassanil Bolkiah Mosque",
+      "note": "汶萊最大的清真寺,有 29 座金頂,紀念現任蘇丹登基 25 週年。",
+      "latlon": [
+        4.9236,
+        114.9203
+      ],
+      "image": "BN-l-jamemosque.jpg"
+    },
+    {
+      "zh": "蘇丹奧瑪·阿里·賽福鼎清真寺",
+      "en": "Sultan Omar Ali Saifuddien Mosque",
+      "note": "一九五八年落成,金頂與潟湖中的石舫是首都地標。",
+      "latlon": [
+        4.888,
+        114.9407
+      ],
+      "image": "BN-l-omarali.jpg"
+    },
+    {
+      "zh": "水村",
+      "en": "Kampong Ayer",
+      "note": "建在汶萊河上的高腳屋聚落,有數百年歷史,設有學校與診所。",
+      "latlon": [
+        4.8829,
+        114.94
+      ],
+      "image": "BN-l-kampongayer.jpg"
+    },
+    {
+      "zh": "努魯爾·伊曼皇宮",
+      "en": "Istana Nurul Iman",
+      "note": "蘇丹官邸與政府所在,是世界最大的住宅型宮殿,開齋節開放參觀。",
+      "latlon": [
+        4.8686,
+        114.893
+      ],
+      "image": "BN-l-istana.jpg"
+    },
+    {
+      "zh": "烏魯淡武廊國家公園",
+      "en": "Ulu Temburong National Park",
+      "note": "只能搭長舟進入的原始雨林保護區,設有雨林樹冠吊橋。",
+      "latlon": [
+        4.55,
+        115.1667
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "哈桑納爾·博爾基亞",
+      "en": "Hassanal Bolkiah",
+      "note": "第 29 任、現任蘇丹,一九六七年即位,同時兼任首相與多個部長。",
+      "image": "BN-p-hassanal.jpg"
+    },
+    {
+      "zh": "奧瑪·阿里·賽福鼎三世",
+      "en": "Omar Ali Saifuddien III",
+      "note": "第 28 任蘇丹,頒布首部憲法,被稱為現代汶萊之父。"
+    },
+    {
+      "zh": "蘇丹博爾基亞(第五代)",
+      "en": "Sultan Bolkiah",
+      "note": "十五至十六世紀的君主,是汶萊黃金時代的象徵,首都大清真寺以他為名。"
+    },
+    {
+      "zh": "拉惹依斯特里·薩列哈",
+      "en": "Raja Isteri Pengiran Anak Saleha",
+      "note": "現任蘇丹的元配王后,參與教育與婦幼公益活動。"
+    },
+    {
+      "zh": "阿卜杜勒·馬廷",
+      "en": "Abdul Mateen",
+      "note": "蘇丹之子,二〇二四年的婚禮盛況吸引大量國際關注。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "首都一日",
+      "note": "上午看兩座大清真寺與皇家御用品博物館,搭水上計程車遊水村,傍晚到 Gadong 夜市吃小吃。"
+    },
+    {
+      "zh": "烏魯淡武廊雨林",
+      "note": "從首都經淡武廊區搭長舟進雨林,爬樹冠吊橋、泡溪、看螢火蟲,可當日往返或住一晚。"
+    },
+    {
+      "zh": "賞長鼻猴遊船",
+      "note": "傍晚從水村碼頭出海到紅樹林河道,找長鼻猴、鱷魚與螢火蟲,約兩三小時。"
+    }
+  ],
+  "events": [
+    {
+      "year": 977,
+      "zh": "渤泥(汶萊)遣使到宋朝,見於中國史籍。"
+    },
+    {
+      "year": 1521,
+      "zh": "麥哲倫船隊的倖存者造訪汶萊,記錄港市盛況。"
+    },
+    {
+      "year": 1578,
+      "zh": "西班牙短暫攻入汶萊(卡斯提爾戰爭)。"
+    },
+    {
+      "year": 1841,
+      "zh": "詹姆士·布魯克成為砂拉越拉惹,汶萊領土開始被割讓。"
+    },
+    {
+      "year": 1888,
+      "zh": "汶萊成為英國保護國。"
+    },
+    {
+      "year": 1929,
+      "zh": "詩里亞發現大油田。"
+    },
+    {
+      "year": 1984,
+      "zh": "汶萊脫離英國完全獨立。"
+    }
+  ],
+  "souvenirs": [
+    {
+      "zh": "千層糕(kek lapis)",
+      "note": "一層層烘烤的奶油千層蛋糕,口味多,是最受歡迎的伴手禮。"
+    },
+    {
+      "zh": "手工銀器與黃銅器",
+      "note": "傳統的檳榔盒、水壺與船形擺件,做工細緻。"
+    },
+    {
+      "zh": "songket 織錦",
+      "note": "用金銀線織花的絲綢布料,多用於婚禮與正式場合。"
+    },
+    {
+      "zh": "沉香與相關製品",
+      "note": "婆羅洲產的沉香木與精油、香品,價格差距大。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "汶萊城市＋雨林",
+        "days": "3–4 天",
+        "note": "斯里巴加灣看清真寺、水村與夜市,加一天烏魯淡武廊雨林。台灣可經新加坡、吉隆坡或馬尼拉轉機,適合週末或連假。"
+      },
+      {
+        "zh": "汶萊＋沙巴",
+        "days": "6–7 天",
+        "note": "汶萊兩天後,陸路或搭機到沙巴亞庇,接神山、海島與長鼻猴,一趟看婆羅洲北部。"
+      },
+      {
+        "zh": "汶萊＋美里(砂拉越)",
+        "days": "4–5 天",
+        "note": "從汶萊陸路到砂拉越的美里,看尼亞洞與姆祿國家公園的鐘乳石與蝙蝠洞。"
+      },
+      {
+        "zh": "汶萊過境深度遊",
+        "days": "2–3 天",
+        "note": "利用皇家汶萊航空的過境行程,集中看清真寺、博物館、水村與一場雨林半日團。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "淡武廊區慢遊",
+        "note": "被砂拉越隔開的東部飛地,除國家公園外還有農莊、溪流與寧靜村落,適合放空。"
+      },
+      {
+        "zh": "詩里亞油田與海濱",
+        "note": "看「十億桶」紀念碑、油氣探索館與海邊抽油機,了解汶萊的經濟命脈。"
+      },
+      {
+        "zh": "內陸長屋體驗",
+        "note": "淡武廊或白拉奕內陸的伊班族長屋聚落,體驗傳統共居生活,需事先安排。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "BN-a-proboscis.jpg",
+      "title": "Proboscis monkey, male",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AProboscis_monkey_(Nasalis_larvatus)_male_Labuk_Bay.jpg"
+    },
+    {
+      "file": "BN-a-orangutan.jpg",
+      "title": "Bornean orangutan",
+      "author": "Thomas Fuhrmann",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABornean_orangutan_(Pongo_pygmaeus),_Tanjung_Putting_National_Park_02.jpg"
+    },
+    {
+      "file": "BN-a-sunbear.jpg",
+      "title": "Sun bear, Sepilok",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASun_bear_(Helarctos_malayanus_euryspilus)_Sepilok.jpg"
+    },
+    {
+      "file": "BN-a-hornbill.jpg",
+      "title": "Rhinoceros hornbills",
+      "author": "Bernard DUPONT",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ARhinoceros_Hornbills_(Buceros_rhinoceros)_(8067785989).jpg"
+    },
+    {
+      "file": "BN-f-nasilemak.jpg",
+      "title": "Nasi lemak on banana leaf",
+      "author": "Jpatokal",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ANasi_lemak_on_banana_leaf.jpg"
+    },
+    {
+      "file": "BN-f-satay.jpg",
+      "title": "Chicken satay on banana leaf",
+      "author": "Gunawan Kartapranata",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AChicken_satay_on_banana_leaf_in_Java.jpg"
+    },
+    {
+      "file": "BN-f-kuihcincin.jpg",
+      "title": "Kuih cincin",
+      "author": "Ranking Update",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AKuih_cincin.JPG"
+    },
+    {
+      "file": "BN-l-jamemosque.jpg",
+      "title": "Jame' Asr Hassanil Bolkiah Mosque",
+      "author": "Ravi Dwivedi",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AJame_Asr_Hassanil_Bolkiah_Mosque.jpg"
+    },
+    {
+      "file": "BN-l-omarali.jpg",
+      "title": "Sultan Omar Ali Saifuddien Mosque",
+      "author": "Bernard Spragg. NZ",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASultan_Omar_Ali_Saifuddien_Mosque_(8619949791).jpg"
+    },
+    {
+      "file": "BN-l-kampongayer.jpg",
+      "title": "Kampong Ayer, Water Village",
+      "author": "Mstyslav Chernov",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AKampong_Ayer,_Water_Village,_Mosque._Brunei,_Southeast_Asia.jpg"
+    },
+    {
+      "file": "BN-l-istana.jpg",
+      "title": "Istana Nurul Iman",
+      "author": "Pangalau",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AIstana_Nurul_Iman_2008_01.jpg"
+    },
+    {
+      "file": "BN-p-hassanal.jpg",
+      "title": "Sultan Hassanal Bolkiah",
+      "author": "Chin Yu Chu",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASultan_Hassanal_Bolkiah_-_53857993945.jpg"
+    }
+  ],
+  "code": "BN"
+}

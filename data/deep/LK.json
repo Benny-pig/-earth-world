@@ -1,0 +1,356 @@
+{
+  "name_zh": "斯里蘭卡",
+  "name_en": "Sri Lanka",
+  "summary": "位於印度半島東南方外海的島國,舊稱錫蘭。中南部是茶園覆蓋的高地,四周為椰林海岸與古城遺址。僧伽羅人與坦米爾人是兩大族群,二〇〇九年結束近三十年內戰,經濟以觀光、成衣、茶葉與僑匯為主。",
+  "founding": [
+    "傳說僧伽羅人的祖先由北印度渡海而來,西元前五世紀由王子維闍耶建立王國。西元前三世紀,阿育王之子摩哂陀將佛教傳入,阿努拉德普勒成為佛教王國的首都,興建大塔與大寺,並發展出以水庫網絡灌溉的稻作文明。",
+    "阿努拉德普勒王朝延續逾千年,期間屢遭南印度朱羅等勢力入侵。十一世紀朱羅一度占領全島;之後僧伽羅王朝將首都南遷波隆納魯沃,十二世紀波羅迦羅摩巴忽一世在位時修築大型灌溉工程,是古代文明的最後高峰。",
+    "十三世紀後,王都持續向西南山區退縮,先後以丹巴德尼耶、耶波瓦、康提為都。島上同時形成北部的坦米爾人賈夫納王國。十五世紀,中國鄭和船隊曾到訪,並將一位當地統治者帶回明朝。",
+    "一五〇五年葡萄牙人抵達,控制沿海並傳入天主教;一六五八年荷蘭東印度公司取而代之,壟斷肉桂貿易。一七九六年英國奪取荷蘭屬地,一八一五年併吞內陸的康提王國,首次由單一政權統治全島,並闢建咖啡、後改種茶的大型莊園,自南印度引進坦米爾勞工。",
+    "一九四八年,錫蘭在大英國協內取得自治領地位、和平獨立。一九七二年改行共和,國名定為斯里蘭卡;一九七八年再改為總統制。獨立後僧伽羅語政策與族群矛盾升高。",
+    "一九八三年爆發僧伽羅人與坦米爾伊拉姆猛虎組織之間的內戰,斷續近二十六年,二〇〇四年又逢南亞大海嘯重創沿海。二〇〇九年政府軍宣告內戰結束。近年經歷嚴重外債與二〇二二年的經濟危機,之後在國際金援下逐步調整。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "斯里蘭卡民主社會主義共和國",
+    "area_km2": 65610,
+    "languages": [
+      "僧伽羅語",
+      "坦米爾語"
+    ],
+    "religion": "上座部佛教為主,另有印度教、伊斯蘭教與基督宗教",
+    "currency": "斯里蘭卡盧比(LKR)",
+    "government": "總統制共和"
+  },
+  "animals": [
+    {
+      "zh": "斯里蘭卡象",
+      "en": "Sri Lankan elephant",
+      "note": "亞洲象最大的亞種,雄象多無長牙,常見於雅拉、烏達瓦拉威。",
+      "image": "LK-a-elephant.jpg"
+    },
+    {
+      "zh": "錫蘭豹",
+      "en": "Sri Lankan leopard",
+      "note": "島上特有亞種,是本地食物鏈頂端掠食者,雅拉密度高。",
+      "image": "LK-a-leopard.jpg"
+    },
+    {
+      "zh": "藍鯨",
+      "en": "Blue whale",
+      "note": "南部美蕊沙外海可全年賞鯨,是少數近岸就能見到藍鯨的地方。",
+      "image": "LK-a-bluewhale.jpg"
+    },
+    {
+      "zh": "紫面葉猴",
+      "en": "Purple-faced langur",
+      "note": "斯里蘭卡特有種,臉黑毛褐,棲息於濕帶森林與郊區。",
+      "image": "LK-a-langur.jpg"
+    },
+    {
+      "zh": "斯里蘭卡原雞",
+      "en": "Sri Lankan junglefowl",
+      "note": "島上特有的國鳥,雄鳥羽色橙紅,是家雞的近親。",
+      "image": "LK-a-junglefowl.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "飯與咖哩",
+      "en": "Rice and curry",
+      "note": "白飯配數種蔬菜、扁豆與魚肉咖哩及參巴,是每日主餐。",
+      "image": "LK-f-riceandcurry.jpg"
+    },
+    {
+      "zh": "麵線窩",
+      "en": "String hoppers",
+      "note": "米漿擠成細麵蒸成小圓餅,配咖哩與椰子參巴當早餐。",
+      "image": "LK-f-stringhoppers.jpg"
+    },
+    {
+      "zh": "碎餅",
+      "en": "Kottu roti",
+      "note": "把煎餅切碎與蔬菜、蛋或肉在鐵板上拌炒,街邊常見。",
+      "image": "LK-f-kottu.jpg"
+    },
+    {
+      "zh": "椰子參巴",
+      "en": "Pol sambol",
+      "note": "椰絲拌辣椒粉、紅蔥、萊姆與馬爾地夫魚乾,佐餐必備。",
+      "image": "LK-f-polsambol.jpg"
+    },
+    {
+      "zh": "椰糖布丁",
+      "en": "Watalappan",
+      "note": "棕櫚糖、椰漿與蛋、腰果做的蒸布丁,源自馬來裔社群。",
+      "image": "LK-f-watalappan.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "獅子岩",
+      "en": "Sigiriya",
+      "note": "五世紀建在兩百公尺巨岩上的宮殿要塞,有壁畫與獅爪門。",
+      "latlon": [
+        7.957,
+        80.7603
+      ],
+      "image": "LK-l-sigiriya.jpg"
+    },
+    {
+      "zh": "康提佛牙寺",
+      "en": "Temple of the Sacred Tooth Relic",
+      "note": "供奉佛陀牙舍利的寺院,每年舉行大遊行。",
+      "latlon": [
+        7.2936,
+        80.6413
+      ],
+      "image": "LK-l-tooth.jpg"
+    },
+    {
+      "zh": "加勒古堡",
+      "en": "Galle Fort",
+      "note": "荷蘭人擴建的濱海城堡,城牆與街區保存完整,列入世界遺產。",
+      "latlon": [
+        6.0269,
+        80.2167
+      ]
+    },
+    {
+      "zh": "丹布勒石窟寺",
+      "en": "Dambulla Cave Temple",
+      "note": "五座天然岩窟內有大量佛像與壁畫,已延續兩千多年。",
+      "latlon": [
+        7.8567,
+        80.649
+      ]
+    },
+    {
+      "zh": "阿努拉德普勒",
+      "en": "Anuradhapura",
+      "note": "古代僧伽羅首都,遺有大型佛塔、僧院與菩提聖樹。",
+      "latlon": [
+        8.3494,
+        80.3964
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "波羅迦羅摩巴忽一世",
+      "en": "Parakramabahu I",
+      "note": "十二世紀波隆納魯沃君主,大興水利,是古文明的最後盛世。"
+    },
+    {
+      "zh": "索羅門·班達拉奈克",
+      "en": "S. W. R. D. Bandaranaike",
+      "note": "一九五〇年代總理,推動僧伽羅語政策,一九五九年遇刺。"
+    },
+    {
+      "zh": "西麗瑪沃·班達拉奈克",
+      "en": "Sirimavo Bandaranaike",
+      "note": "一九六〇年就任總理,是世界第一位民選女性政府首腦。"
+    },
+    {
+      "zh": "穆蒂亞·穆拉利塔倫",
+      "en": "Muttiah Muralitharan",
+      "note": "板球史上國際賽奪三振次數最多的旋轉球投手。"
+    },
+    {
+      "zh": "麥可·翁達傑",
+      "en": "Michael Ondaatje",
+      "note": "出生於可倫坡的作家,《英倫情人》獲布克獎。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "高地茶園火車",
+      "note": "康提到埃拉的山線火車穿過茶園與九拱橋,是經典風景路段,宜提前訂位。"
+    },
+    {
+      "zh": "十二至四月的南部海岸",
+      "note": "這段是西南岸乾季,美蕊沙賞鯨、烏納瓦圖納戲水、加勒古堡散步都合適。"
+    },
+    {
+      "zh": "文化三角遺址巡禮",
+      "note": "以錫吉里耶或丹布勒為據點,兩三天串起獅子岩、波隆納魯沃與阿努拉德普勒。"
+    }
+  ],
+  "events": [
+    {
+      "year": -543,
+      "zh": "傳說維闍耶王子登陸,建立僧伽羅王國。"
+    },
+    {
+      "year": -247,
+      "zh": "摩哂陀將佛教傳入,阿努拉德普勒成為佛教中心。"
+    },
+    {
+      "year": 1017,
+      "zh": "朱羅王朝占領全島,王都其後南遷波隆納魯沃。"
+    },
+    {
+      "year": 1505,
+      "zh": "葡萄牙人抵達,開啟歐洲殖民。"
+    },
+    {
+      "year": 1815,
+      "zh": "英國併吞康提王國,首度統治全島。"
+    },
+    {
+      "year": 1948,
+      "zh": "脫離英國獨立,國名錫蘭。"
+    },
+    {
+      "year": 2009,
+      "zh": "近二十六年的內戰結束。"
+    }
+  ],
+  "souvenirs": [
+    {
+      "zh": "錫蘭紅茶",
+      "note": "烏瓦、努瓦拉埃利亞、汀布拉等產區的單一莊園茶,茶行可試喝選購。"
+    },
+    {
+      "zh": "藍寶石與月光石",
+      "note": "拉特納普勒一帶產寶石,購買時認明證書與信譽店家。"
+    },
+    {
+      "zh": "錫蘭肉桂",
+      "note": "真肉桂捲成細筒,香氣柔和,超市與市集有售。"
+    },
+    {
+      "zh": "手工彩繪面具",
+      "note": "南部安巴蘭戈達的驅邪木面具,是傳統工藝。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "文化三角＋高地茶園",
+        "days": "7–8 天",
+        "note": "尼甘布進,走獅子岩、丹布勒、康提佛牙寺,再搭山線火車到努瓦拉埃利亞與埃拉。台灣多經曼谷、新加坡或吉隆坡轉機。"
+      },
+      {
+        "zh": "南部海岸＋加勒",
+        "days": "5–6 天",
+        "note": "可倫坡或加勒為據點,美蕊沙賞鯨、烏納瓦圖納浮潛、加勒古堡看夕陽,節奏悠閒。"
+      },
+      {
+        "zh": "環島精華",
+        "days": "10–12 天",
+        "note": "文化三角、山區茶園、南部海岸與雅拉野生動物園一次走完,適合假期較長者。"
+      },
+      {
+        "zh": "斯里蘭卡野生動物",
+        "days": "5–6 天",
+        "note": "以雅拉、烏達瓦拉威與辛哈拉賈雨林為主,找象群、豹與特有鳥類。"
+      },
+      {
+        "zh": "可倫坡＋康提雙城",
+        "days": "4–5 天",
+        "note": "時間有限時,首都看市場與殖民建築,再上康提看佛牙寺與植物園。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "賈夫納與北部",
+        "note": "內戰後重新開放的北部坦米爾城市賈夫納,有印度教神廟、荷蘭堡與離島,遊客稀少。"
+      },
+      {
+        "zh": "亞當峰朝聖",
+        "note": "十二至五月夜間登亞當峰(聖足山),破曉看日出與三角形山影,是多宗教共同聖地。"
+      },
+      {
+        "zh": "東岸亭可馬里",
+        "note": "五至九月換東岸乾季,亭可馬里、尼拉維利海灘與鴿子島浮潛,人潮比西南岸少。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "LK-a-elephant.jpg",
+      "title": "Sri Lankan elephant",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASri_Lankan_elephant_(Elephas_maximus_maximus)_female_and_young_1.jpg"
+    },
+    {
+      "file": "LK-a-leopard.jpg",
+      "title": "Sri Lankan leopard",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASri_Lankan_leopard_(Panthera_pardus_kotiya)_male.jpg"
+    },
+    {
+      "file": "LK-a-bluewhale.jpg",
+      "title": "Blue whale off Mirissa",
+      "author": "Arian Zwegers",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AMirissa,_whale_watching,_blue_whale_(6918166357).jpg"
+    },
+    {
+      "file": "LK-a-langur.jpg",
+      "title": "Purple-faced langur",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3APurple-faced_langur_(Semnopithecus_vetulus_vetulus).jpg"
+    },
+    {
+      "file": "LK-a-junglefowl.jpg",
+      "title": "Sri Lankan junglefowl",
+      "author": "Sarala Gamage",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASri_Lankan_junglefowl_(Gallus_lafayettii).jpg"
+    },
+    {
+      "file": "LK-f-riceandcurry.jpg",
+      "title": "Sri Lankan rice and curry",
+      "author": "Lankan Foodie",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASri_Lankan_Rice_and_Curry.jpg"
+    },
+    {
+      "file": "LK-f-stringhoppers.jpg",
+      "title": "String hoppers (idiyappam)",
+      "author": "Vis M",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AIdiyappam_02.jpg"
+    },
+    {
+      "file": "LK-f-kottu.jpg",
+      "title": "Chicken kottu",
+      "author": "Dan arndt",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AChicken_Kottu.jpg"
+    },
+    {
+      "file": "LK-f-polsambol.jpg",
+      "title": "Pol sambol",
+      "author": "Dan arndt",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3APol_Sambol.jpg"
+    },
+    {
+      "file": "LK-f-watalappan.jpg",
+      "title": "Watalappan",
+      "author": "Ji-Elle",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AWatalappan-Sri_Lanka.jpg"
+    },
+    {
+      "file": "LK-l-sigiriya.jpg",
+      "title": "Sigiriya Rock Fortress",
+      "author": "Gayomiw",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASigiriya_Rock_Fortress_View_from_Pidurangala_Rock.jpg"
+    },
+    {
+      "file": "LK-l-tooth.jpg",
+      "title": "Temple of the Tooth Relic, Kandy",
+      "author": "Rovin Shanila",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AKandy_Temple_of_the_Tooth_Relic.jpg"
+    }
+  ],
+  "code": "LK"
+}

@@ -1,0 +1,357 @@
+{
+  "name_zh": "新加坡",
+  "name_en": "Singapore",
+  "summary": "位於馬來半島南端的城市國家,由本島與周邊小島組成,扼守麻六甲海峽東口。1965 年獨立後,從轉口貿易港發展為全球金融、航運與科技樞紐,人口約 590 萬,以多元族群、雙語教育與嚴格法治著稱。",
+  "founding": [
+    "新加坡島古稱「淡馬錫」,十四世紀已是室利佛逝與滿者伯夷勢力邊緣的港口聚落,馬來史料另稱其為「獅城」(Singapura)。此後數百年名義上歸屬柔佛蘇丹國,實際只是一座人口稀少的漁村與海盜出沒之地。",
+    "一八一九年,英國東印度公司的萊佛士與柔佛王室簽約,在此設立自由貿易站。一八二四年英荷條約確定新加坡歸英國;一八二六年與檳城、麻六甲合組「海峽殖民地」。免關稅政策與優越位置,吸引華人、印度人、馬來人與阿拉伯商人大量湧入,人口迅速膨脹。",
+    "十九世紀後期,橡膠與錫礦貿易興盛,新加坡成為東南亞最大的轉口港與英國在遠東的海軍基地。一九四二至一九四五年,日軍攻占新加坡,改名「昭南島」,實施軍政與肅清行動,是殖民地史上的重大斷裂。",
+    "戰後民族自決浪潮下,新加坡於一九五九年取得內部自治,人民行動黨執政,李光耀出任總理。一九六三年新加坡與馬來亞、砂拉越、北婆羅洲合組馬來西亞聯邦,但因族群政策與中央權力分配的分歧,一九六五年八月九日退出聯邦,被迫成為獨立國家。",
+    "獨立後政府推動工業化、組屋計畫、公積金制度與雙語教育,並藉裕廊工業區、樟宜機場與港口建設吸引外資。數十年間人均所得躍居世界前列,新加坡成為東南亞國家協會重要成員,並在區域外交與全球供應鏈中扮演樞紐角色。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "新加坡共和國",
+    "area_km2": 735,
+    "languages": [
+      "英語",
+      "華語",
+      "馬來語",
+      "坦米爾語"
+    ],
+    "religion": "佛教、基督宗教、伊斯蘭教、道教、印度教並存,無國教",
+    "currency": "新加坡幣(SGD)",
+    "government": "議會共和制(一院制國會)"
+  },
+  "animals": [
+    {
+      "zh": "江獺",
+      "en": "Smooth-coated otter",
+      "note": "在河道與濱海灣重現的野生族群,常見全家覓食,成為城市象徵。",
+      "image": "SG-a-otter.jpg"
+    },
+    {
+      "zh": "巽他穿山甲",
+      "en": "Sunda pangolin",
+      "note": "夜行、以螞蟻白蟻為食,保護區森林邊緣偶爾現蹤。",
+      "image": "SG-a-pangolin.jpg"
+    },
+    {
+      "zh": "長尾獼猴",
+      "en": "Long-tailed macaque",
+      "note": "麥里芝與武吉知馬森林常見,會翻找遊客背包。",
+      "image": "SG-a-macaque.jpg"
+    },
+    {
+      "zh": "斑犀鳥",
+      "en": "Oriental pied hornbill",
+      "note": "一度在本島絕跡,經復育後重新在市區樹林築巢。",
+      "image": "SG-a-hornbill.jpg"
+    },
+    {
+      "zh": "小鼷鹿",
+      "en": "Lesser mouse-deer",
+      "note": "東南亞最小的偶蹄類,約兔子大小,棲息於次生林。",
+      "image": "SG-a-mousedeer.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "海南雞飯",
+      "en": "Hainanese chicken rice",
+      "note": "白斬雞配雞油飯與辣椒薑蓉醬,公認的國民料理。",
+      "image": "SG-f-chickenrice.jpg"
+    },
+    {
+      "zh": "辣椒螃蟹",
+      "en": "Chilli crab",
+      "note": "肉蟹以番茄辣醬與蛋花快炒,沾饅頭吃,宴客名菜。",
+      "image": "SG-f-chillicrab.jpg"
+    },
+    {
+      "zh": "叻沙",
+      "en": "Katong laksa",
+      "note": "加東式椰漿咖哩米粉,麵剪成短段用湯匙舀食。",
+      "image": "SG-f-laksa.jpg"
+    },
+    {
+      "zh": "肉骨茶",
+      "en": "Bak kut teh",
+      "note": "排骨以白胡椒與蒜頭清燉,配油條與熱茶當早餐。",
+      "image": "SG-f-bakkutteh.jpg"
+    },
+    {
+      "zh": "咖椰吐司",
+      "en": "Kaya toast",
+      "note": "烤麵包夾咖椰醬與冷奶油,配半熟蛋與咖啡烏。",
+      "image": "SG-f-kaya.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "濱海灣金沙",
+      "en": "Marina Bay Sands",
+      "note": "三塔頂著空中花園與無邊際泳池的地標飯店。",
+      "latlon": [
+        1.2834,
+        103.8607
+      ],
+      "image": "SG-l-mbs.jpg"
+    },
+    {
+      "zh": "魚尾獅公園",
+      "en": "Merlion Park",
+      "note": "獅頭魚身噴水像,面向濱海灣,是最經典的打卡點。",
+      "latlon": [
+        1.2868,
+        103.8545
+      ],
+      "image": "SG-l-merlion.jpg"
+    },
+    {
+      "zh": "濱海灣花園",
+      "en": "Gardens by the Bay",
+      "note": "擎天樹叢與兩座玻璃冷室構成的濱海植物園。",
+      "latlon": [
+        1.2816,
+        103.8636
+      ]
+    },
+    {
+      "zh": "星耀樟宜",
+      "en": "Jewel Changi Airport",
+      "note": "機場旁的室內森林,中央是全球最高的室內瀑布。",
+      "latlon": [
+        1.3606,
+        103.9899
+      ]
+    },
+    {
+      "zh": "新加坡植物園",
+      "en": "Singapore Botanic Gardens",
+      "note": "一八五九年闢建的熱帶園林,列入世界遺產,設國家胡姬園。",
+      "latlon": [
+        1.3138,
+        103.8159
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "李光耀",
+      "en": "Lee Kuan Yew",
+      "note": "建國總理,主政逾三十年,奠定新加坡的發展路線。"
+    },
+    {
+      "zh": "史丹福·萊佛士",
+      "en": "Stamford Raffles",
+      "note": "英國殖民官員,一八一九年在此設立自由貿易站。"
+    },
+    {
+      "zh": "李顯龍",
+      "en": "Lee Hsien Loong",
+      "note": "第三任總理(二〇〇四至二〇二四),李光耀長子。"
+    },
+    {
+      "zh": "約瑟夫·斯庫林",
+      "en": "Joseph Schooling",
+      "note": "游泳選手,二〇一六里約奧運百米蝶式奪金,是該國首金。"
+    },
+    {
+      "zh": "孫燕姿",
+      "en": "Stefanie Sun",
+      "note": "華語流行樂天后,二〇〇〇年出道,影響華語歌壇。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "濱海灣跨年",
+      "note": "十二月底濱海灣一帶有燈光秀與煙火,飯店、花園與購物區集中,適合首訪。"
+    },
+    {
+      "zh": "小印度與甘榜格南散步",
+      "note": "想看多元族群面貌,可安排半天走小印度、阿拉伯街與牛車水,體驗廟宇、清真寺與老店屋。"
+    },
+    {
+      "zh": "聖淘沙親子二日",
+      "note": "環球影城、水族館與海灘纜車集中在聖淘沙島,適合帶小孩安排一到兩天。"
+    }
+  ],
+  "events": [
+    {
+      "year": 1299,
+      "zh": "馬來傳說中僧尼羅烏達瑪登島,建立獅城(Singapura)。"
+    },
+    {
+      "year": 1819,
+      "zh": "萊佛士代表英國東印度公司在新加坡設立自由貿易站。"
+    },
+    {
+      "year": 1826,
+      "zh": "新加坡與檳城、麻六甲合組海峽殖民地。"
+    },
+    {
+      "year": 1942,
+      "zh": "日軍攻占新加坡,更名昭南島,至一九四五年。"
+    },
+    {
+      "year": 1959,
+      "zh": "取得內部自治,李光耀出任首任總理。"
+    },
+    {
+      "year": 1963,
+      "zh": "新加坡加入馬來西亞聯邦。"
+    },
+    {
+      "year": 1965,
+      "zh": "退出馬來西亞,成為獨立主權國家。"
+    }
+  ],
+  "souvenirs": [
+    {
+      "zh": "娘惹糕與班蘭製品",
+      "note": "椰香九層糕、班蘭蛋糕等,機場與老店都有真空包裝。"
+    },
+    {
+      "zh": "咖椰醬",
+      "note": "椰漿雞蛋熬的抹醬,搭吐司,超市與老字號皆售。"
+    },
+    {
+      "zh": "肉骨茶湯料包",
+      "note": "白胡椒蒜頭配方的湯包,超市有售,回家可自煮。"
+    },
+    {
+      "zh": "魚尾獅與胡姬花紀念品",
+      "note": "魚尾獅造型糖、鍍金胡姬花胸針等經典小物。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "新加坡經典市區",
+        "days": "3–4 天",
+        "note": "濱海灣、聖淘沙、牛車水與小印度、植物園與夜間動物園。台灣有多家航空直飛約四個半小時,適合週末小旅行或轉機停留。"
+      },
+      {
+        "zh": "新加坡親子遊",
+        "days": "4–5 天",
+        "note": "以聖淘沙環球影城、SEA 海洋館、河川生態園與夜間動物園為主,搭配濱海灣花園,行程輕鬆、交通方便。"
+      },
+      {
+        "zh": "新馬雙城",
+        "days": "5–6 天",
+        "note": "新加坡進出,搭巴士或火車到新山樂高樂園,再北上麻六甲看古城,一趟走兩國。"
+      },
+      {
+        "zh": "新加坡＋民丹島",
+        "days": "5–6 天",
+        "note": "市區三天後搭渡輪到印尼民丹島度假村住兩晚,結合都市與海島。"
+      },
+      {
+        "zh": "美食購物深度遊",
+        "days": "4 天",
+        "note": "跟著小販中心與米其林攤位吃遍全島,搭配烏節路、加東與哈芝巷選物。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "南部離島與聖約翰島",
+        "note": "從濱海南碼頭搭船到聖約翰島、龜嶼,健行與野餐,遊客稀少。"
+      },
+      {
+        "zh": "麥里芝樹梯步道",
+        "note": "走吊橋與雨林步道找長尾獼猴與松鼠猴,清晨前往較涼爽。"
+      },
+      {
+        "zh": "烏敏島單車行",
+        "note": "搭舢舨到烏敏島租單車,看最後的甘榜聚落與仄爪哇濕地,適合半日遊。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "SG-a-otter.jpg",
+      "title": "Smooth-coated otter",
+      "author": "Red Eyes Black Dragon 92",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASmooth_Coated_Otter_1.jpg"
+    },
+    {
+      "file": "SG-a-pangolin.jpg",
+      "title": "Sunda pangolin",
+      "author": "Frendi Apen Irawan",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ATrenggiling_Sunda_Sunda_Pangolin_Manis_javanica.jpg"
+    },
+    {
+      "file": "SG-a-macaque.jpg",
+      "title": "Long-tailed macaque",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ALong-tailed_macaque_(Macaca_fascicularis)_Labuk_Bay.jpg"
+    },
+    {
+      "file": "SG-a-hornbill.jpg",
+      "title": "Oriental pied hornbill",
+      "author": "Red Eyes Black Dragon 92",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AOriental_Pied_Hornbill_1.jpg"
+    },
+    {
+      "file": "SG-a-mousedeer.jpg",
+      "title": "Lesser mouse-deer in Singapore",
+      "author": "Seshadri.K.S.",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AAdult_Lesser_mouse-deer_(Tragulus_kanchil),_Singapore_-_20141001.jpg"
+    },
+    {
+      "file": "SG-f-chickenrice.jpg",
+      "title": "Hainanese chicken rice",
+      "author": "Misaochan",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AHainanese_chicken_rice.jpg"
+    },
+    {
+      "file": "SG-f-chillicrab.jpg",
+      "title": "Chilli crab",
+      "author": "Chensiyuan",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AChili_crab_zz.jpg"
+    },
+    {
+      "file": "SG-f-laksa.jpg",
+      "title": "Katong laksa",
+      "author": "ProjectManhattan",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AKatong_laksa.jpg"
+    },
+    {
+      "file": "SG-f-bakkutteh.jpg",
+      "title": "Bak kut teh",
+      "author": "Chensiyuan",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABak_kut_teh_zz.jpg"
+    },
+    {
+      "file": "SG-f-kaya.jpg",
+      "title": "Kaya toast",
+      "author": "Exdintary",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AKaya_Toast,_a_sweet_breakfast!.jpg"
+    },
+    {
+      "file": "SG-l-mbs.jpg",
+      "title": "Marina Bay Sands at dusk",
+      "author": "Someformofhuman",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AMarina_Bay_Sands_in_the_evening_-_20101120.jpg"
+    },
+    {
+      "file": "SG-l-merlion.jpg",
+      "title": "Merlion at Marina Bay",
+      "author": "CEphoto, Uwe Aranas",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASingapore_Merlion-at-Marina-Bay-01.jpg"
+    }
+  ],
+  "code": "SG"
+}

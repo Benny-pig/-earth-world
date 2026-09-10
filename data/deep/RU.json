@@ -1,0 +1,350 @@
+{
+  "name_zh": "俄羅斯",
+  "name_en": "Russia",
+  "summary": "橫跨東歐與北亞的聯邦制國家,面積約 1,710 萬平方公里,是世界上最大的國家,跨十一個時區。人口約 1.46 億,自然資源與能源蘊藏豐富。歷史上由莫斯科公國逐步擴張為帝國,二十世紀為蘇聯核心,一九九一年蘇聯解體後成為俄羅斯聯邦。",
+  "founding": [
+    "東斯拉夫部族約在西元第一千紀擴散到東歐平原的河流沿線。九世紀,以諾夫哥羅德、基輔為中心形成「基輔羅斯」,傳統上與北歐的瓦良格人有關。九八八年,弗拉基米爾大公接受拜占庭的東正教,奠定日後俄羅斯的宗教與文字基礎。",
+    "十三世紀,蒙古(金帳汗國)西征,基輔羅斯各公國臣服納貢近兩個半世紀。位於森林地帶的莫斯科公國憑藉替汗國徵稅、兼併鄰邦而壯大,一四八〇年伊凡三世正式擺脫汗國控制。一五四七年,伊凡四世(雷帝)加冕為「沙皇」,並開始向東越過烏拉山、征服西伯利亞汗國。",
+    "一六一三年,經歷混亂與波蘭入侵後,全俄縉紳會議推選羅曼諾夫家族的米哈伊爾為沙皇,王朝延續至一九一七年。十七世紀,哥薩克與皮貨商人一路推進到太平洋岸。",
+    "彼得一世(大帝)在位期間(一六八二至一七二五)推行西化改革、建立海軍與新都聖彼得堡,在大北方戰爭中擊敗瑞典,俄國躋身歐洲列強。凱薩琳二世(大帝)時進一步向黑海與波蘭方向擴張,國土與影響力大增。",
+    "十九世紀,俄國擊退拿破崙入侵,成為歐洲保守秩序的支柱;同時對外擴張至中亞與遠東,對內則面臨農奴制與改革的張力,一八六一年廢除農奴制。一九〇四至一九〇五年日俄戰爭失利與一九〇五年革命動搖了帝制。",
+    "一九一七年,二月革命推翻沙皇,十月革命後布爾什維克掌權,經內戰於一九二二年成立蘇聯。蘇聯歷經工業化、第二次世界大戰(其稱「偉大衛國戰爭」)與冷戰,一九九一年解體。俄羅斯聯邦繼承其國際地位;二〇〇〇年代後政治由普丁長期主導,二〇一四年兼併克里米亞,二〇二二年起與烏克蘭爆發大規模軍事衝突,並受到西方國家廣泛制裁。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "俄羅斯聯邦",
+    "area_km2": 17098246,
+    "languages": [
+      "俄語"
+    ],
+    "religion": "以東正教為主,伊斯蘭教次之;憲法規定政教分離",
+    "currency": "俄羅斯盧布(RUB)",
+    "government": "聯邦半總統制共和"
+  },
+  "animals": [
+    {
+      "zh": "棕熊",
+      "en": "Brown bear",
+      "note": "廣布於森林與堪察加,是俄羅斯常見的國家象徵動物。",
+      "image": "RU-a-bear.jpg"
+    },
+    {
+      "zh": "西伯利亞虎",
+      "en": "Siberian tiger",
+      "note": "又稱阿穆爾虎,是現存最大的貓科,主要棲息於遠東錫霍特山。",
+      "image": "RU-a-tiger.jpg"
+    },
+    {
+      "zh": "紫貂",
+      "en": "Sable",
+      "note": "毛皮珍貴,歷史上「軟黃金」的貂皮貿易推動了西伯利亞開拓。",
+      "image": "RU-a-sable.jpg"
+    },
+    {
+      "zh": "北極熊",
+      "en": "Polar bear",
+      "note": "分布於北冰洋沿岸與島嶼,弗蘭格爾島是重要的產仔地。",
+      "image": "RU-a-polarbear.jpg"
+    },
+    {
+      "zh": "虎頭海鵰",
+      "en": "Steller's sea eagle",
+      "note": "世界最重的鵰之一,只在俄羅斯遠東沿海與堪察加繁殖。",
+      "image": "RU-a-seaeagle.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "羅宋湯",
+      "en": "Borscht",
+      "note": "甜菜根為底的紅色濃湯,配酸奶油與黑麵包。",
+      "image": "RU-f-borscht.jpg"
+    },
+    {
+      "zh": "俄式餃子",
+      "en": "Pelmeni",
+      "note": "小顆肉餡水餃,水煮後拌奶油或酸奶油,源自烏拉、西伯利亞。",
+      "image": "RU-f-pelmeni.jpg"
+    },
+    {
+      "zh": "布利尼薄餅",
+      "en": "Blini",
+      "note": "發酵麵糊煎的薄餅,可捲酸奶油、魚子醬或果醬。"
+    },
+    {
+      "zh": "奧利維耶沙拉",
+      "en": "Olivier salad",
+      "note": "馬鈴薯、豌豆、蛋與醃黃瓜拌美乃滋,是年節餐桌的固定菜。"
+    },
+    {
+      "zh": "俄式燉牛肉",
+      "en": "Beef Stroganoff",
+      "note": "牛肉絲以酸奶油醬汁燴煮,十九世紀源自俄國貴族家庭。"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "聖瓦西里主教座堂",
+      "en": "Saint Basil's Cathedral",
+      "note": "紅場旁色彩繽紛的洋蔥頂教堂,一五六一年為紀念戰功而建。",
+      "latlon": [
+        55.7525,
+        37.6231
+      ],
+      "image": "RU-l-stbasil.jpg"
+    },
+    {
+      "zh": "莫斯科克里姆林宮",
+      "en": "Moscow Kremlin",
+      "note": "紅牆環繞的城堡建築群,是俄羅斯的政治中心。",
+      "latlon": [
+        55.752,
+        37.6175
+      ],
+      "image": "RU-l-kremlin.jpg"
+    },
+    {
+      "zh": "冬宮(埃爾米塔日博物館)",
+      "en": "Winter Palace (Hermitage)",
+      "note": "聖彼得堡的前沙皇宮殿,現為世界頂級的藝術博物館之一。",
+      "latlon": [
+        59.941,
+        30.3129
+      ],
+      "image": "RU-l-hermitage.jpg"
+    },
+    {
+      "zh": "貝加爾湖",
+      "en": "Lake Baikal",
+      "note": "世界最深、蓄水量最大的淡水湖,冬季湖面結成透明的厚冰。",
+      "latlon": [
+        53.5587,
+        108.165
+      ],
+      "image": "RU-l-baikal.jpg"
+    },
+    {
+      "zh": "彼得夏宮",
+      "en": "Peterhof",
+      "note": "聖彼得堡近郊的宮殿園林,以逐級而下的噴泉大瀑布聞名。",
+      "latlon": [
+        59.8845,
+        29.9077
+      ],
+      "image": "RU-l-peterhof.jpg"
+    }
+  ],
+  "people": [
+    {
+      "zh": "彼得大帝",
+      "en": "Peter the Great",
+      "note": "推行西化改革、建立海軍與聖彼得堡的沙皇。"
+    },
+    {
+      "zh": "凱薩琳大帝",
+      "en": "Catherine the Great",
+      "note": "十八世紀女皇,擴張疆域並提倡啟蒙文化。"
+    },
+    {
+      "zh": "列夫·托爾斯泰",
+      "en": "Leo Tolstoy",
+      "note": "《戰爭與和平》《安娜·卡列尼娜》作者,寫實主義文學巨匠。"
+    },
+    {
+      "zh": "彼得·柴可夫斯基",
+      "en": "Pyotr Ilyich Tchaikovsky",
+      "note": "作曲家,《天鵝湖》《胡桃鉗》等芭蕾與交響樂作者。"
+    },
+    {
+      "zh": "尤里·加加林",
+      "en": "Yuri Gagarin",
+      "note": "一九六一年搭乘東方一號,成為首位進入太空的人類。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "莫斯科與聖彼得堡雙城",
+      "note": "兩大城以高鐵約四小時相連,看紅場、克里姆林宮、冬宮與夏宮,夏季白夜日照長。"
+    },
+    {
+      "zh": "貝加爾湖",
+      "note": "一至三月看藍冰、氣墊船與冰上健行;夏季則搭環湖鐵路與到奧爾洪島。行前留意簽證與時事。"
+    },
+    {
+      "zh": "金環古城",
+      "note": "莫斯科東北的謝爾吉耶夫波薩德、蘇茲達爾等古鎮,有修道院與木造建築,適合兩三天小旅行。"
+    }
+  ],
+  "events": [
+    {
+      "year": 882,
+      "zh": "奧列格定都基輔,基輔羅斯成形。"
+    },
+    {
+      "year": 988,
+      "zh": "弗拉基米爾大公受洗,東正教成為國教。"
+    },
+    {
+      "year": 1240,
+      "zh": "蒙古攻陷基輔,羅斯諸公國臣服金帳汗國。"
+    },
+    {
+      "year": 1547,
+      "zh": "伊凡四世加冕為沙皇。"
+    },
+    {
+      "year": 1712,
+      "zh": "彼得大帝將首都遷至聖彼得堡。"
+    },
+    {
+      "year": 1917,
+      "zh": "二月與十月革命,帝制終結。"
+    },
+    {
+      "year": 1991,
+      "zh": "蘇聯解體,俄羅斯聯邦成立。"
+    }
+  ],
+  "souvenirs": [
+    {
+      "zh": "俄羅斯套娃",
+      "note": "一層層相套的木娃娃,傳統彩繪或名人主題都有。"
+    },
+    {
+      "zh": "琥珀製品",
+      "note": "加里寧格勒一帶產波羅的海琥珀,做成飾品與擺件。"
+    },
+    {
+      "zh": "霍赫洛馬與 Gzhel 彩繪",
+      "note": "金紅木器與藍白瓷器,是俄式民間彩繪的代表。"
+    },
+    {
+      "zh": "茶炊、蜂蜜與魚子醬",
+      "note": "傳統茶炊(samovar)、森林蜂蜜與鮭魚子罐頭。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "莫斯科＋聖彼得堡",
+        "days": "7–9 天",
+        "note": "兩大城各留三天,紅場、克里姆林宮、冬宮、夏宮與地鐵站巡禮,以高鐵往返。台灣需經第三地轉機,並事先辦妥簽證。"
+      },
+      {
+        "zh": "聖彼得堡藝術文化",
+        "days": "4–5 天",
+        "note": "專攻冬宮、俄羅斯博物館、教堂與劇院,夏季可看白夜與郊區宮殿。"
+      },
+      {
+        "zh": "金環＋莫斯科",
+        "days": "6–7 天",
+        "note": "首都搭配謝爾吉耶夫波薩德、蘇茲達爾、弗拉基米爾等古城,看修道院與田園風光。"
+      },
+      {
+        "zh": "貝加爾湖冬之旅",
+        "days": "6–7 天",
+        "note": "從伊爾庫茨克進,環湖鐵路、利斯特維揚卡與奧爾洪島,二、三月藍冰季節景色最特別。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "西伯利亞鐵路",
+        "note": "從莫斯科到伊爾庫茨克或海參崴的長途火車,分段搭乘、途中停留數城,體驗跨洲陸路。"
+      },
+      {
+        "zh": "堪察加半島",
+        "note": "夏季的火山、溫泉、棕熊與海岸,多需搭直升機與跟專門團,費用高。"
+      },
+      {
+        "zh": "喀山與韃靼斯坦",
+        "note": "伏爾加河畔的喀山,克里姆林宮內東正教堂與清真寺並立,展現多元宗教面貌。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "RU-a-bear.jpg",
+      "title": "Kamchatka brown bear",
+      "author": "Robert F. Tobler",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AKamchatka_Brown_Bear_near_Dvuhyurtochnoe_on_2015-07-23.jpg"
+    },
+    {
+      "file": "RU-a-tiger.jpg",
+      "title": "Siberian tiger",
+      "author": "Malene Thyssen",
+      "license": "CC BY 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASiberian_Tiger_by_Malene_Th.jpg"
+    },
+    {
+      "file": "RU-a-sable.jpg",
+      "title": "Sable (Brehm's Life of Animals)",
+      "author": "Alfred Brehm / Wilhelm Haacke",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABrehm%27s_Life_of_animals_(Page_155)_(6220158327).jpg"
+    },
+    {
+      "file": "RU-a-polarbear.jpg",
+      "title": "Polar bear",
+      "author": "Christopher Michel",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3APolar_Bear_with_its_tongue_sticking_out.jpg"
+    },
+    {
+      "file": "RU-a-seaeagle.jpg",
+      "title": "Steller's sea eagle",
+      "author": "Isiwal",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AHaliaeetus_pelagicus_Riesenseeadler-3381.jpg"
+    },
+    {
+      "file": "RU-f-borscht.jpg",
+      "title": "Borscht, Rostov-on-Don",
+      "author": "Vyacheslav Argenberg",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABorscht,_Rostov-on-Don,_Russia.jpg"
+    },
+    {
+      "file": "RU-f-pelmeni.jpg",
+      "title": "Russian pelmeni",
+      "author": "Vyacheslav Argenberg",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ARussian_Pelmeni_(Dumplings),_Rostov-on-Don,_Russia.jpg"
+    },
+    {
+      "file": "RU-l-stbasil.jpg",
+      "title": "Saint Basil's Cathedral",
+      "author": "Godot13",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASaint_Basil%27s_Cathedral_(Moscow,_2004).jpg"
+    },
+    {
+      "file": "RU-l-kremlin.jpg",
+      "title": "Moskva River and the Kremlin",
+      "author": "Popolon",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AMoskva_et_Kremlin.jpg"
+    },
+    {
+      "file": "RU-l-hermitage.jpg",
+      "title": "Winter Palace panorama",
+      "author": "Florstein",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AWinter_Palace_Panorama_4.jpg"
+    },
+    {
+      "file": "RU-l-baikal.jpg",
+      "title": "Lake Baikal in winter",
+      "author": "Sergey Pesterev",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ALake_Baikal_in_winter.jpg"
+    },
+    {
+      "file": "RU-l-peterhof.jpg",
+      "title": "Grand Cascade, Peterhof",
+      "author": "Florstein",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AGrand_Cascade_in_Peterhof_01.jpg"
+    }
+  ],
+  "code": "RU"
+}

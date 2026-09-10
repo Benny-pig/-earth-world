@@ -1,0 +1,355 @@
+{
+  "name_zh": "柬埔寨",
+  "name_en": "Cambodia",
+  "summary": "位於中南半島、環抱洞里薩湖的王國,首都金邊。九至十五世紀的高棉帝國曾統治中南半島大部,留下吳哥建築群。近代歷經殖民、內戰與紅色高棉時期,一九九〇年代起在聯合國協助下重建,現以成衣業與吳哥觀光為經濟支柱。",
+  "founding": [
+    "高棉人的先民約在公元前後從事稻作與冶鐵,一世紀在湄公河三角洲出現受印度文化影響的「扶南」,是東南亞最早的國家之一,以港口貿易與運河農業著稱。六至八世紀,內陸的「真臘」取而代之,並一度分裂為水陸兩部。",
+    "八〇二年,闍耶跋摩二世在荔枝山舉行儀式,自立為「轉輪王」,標誌吳哥王朝的開端。此後六百年,歷代君主在暹粒平原營建都城與水利工程,國力鼎盛時涵蓋今日柬埔寨、寮國、泰國東部與越南南部。",
+    "十二世紀,蘇利耶跋摩二世興建吳哥寺獻給毘濕奴;闍耶跋摩七世在位時擊退占婆、改奉大乘佛教,修築大吳哥城、巴戎寺與大量醫院、驛站。十五世紀,暹羅屢次進犯,王室於一四三一年前後放棄吳哥,遷都至金邊一帶。",
+    "此後柬埔寨國勢衰微,長期夾在暹羅與越南兩大鄰國之間,領土與王位屢受干預。一八六三年,國王諾羅敦與法國簽訂保護國條約,柬埔寨併入法屬印度支那,法國藉此制衡暹羅並保住王室。",
+    "一九五三年,在國王諾羅敦·施亞努推動下,柬埔寨脫離法國獨立。一九七〇年朗諾政變推翻施亞努、成立高棉共和國,國家捲入越戰與內戰。一九七五年,紅色高棉攻占金邊,推行強制遷村與集體化,至一九七九年間造成大量人口死亡。",
+    "一九七九年越南出兵推翻紅色高棉,扶植人民共和國政權,內戰持續至一九九一年《巴黎和平協定》。一九九三年在聯合國監督下舉行大選,恢復君主立憲。二〇〇〇年代後政局由人民黨長期主導,經濟靠成衣出口、營建與觀光成長。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "柬埔寨王國",
+    "area_km2": 181035,
+    "languages": [
+      "高棉語"
+    ],
+    "religion": "上座部佛教為國教",
+    "currency": "瑞爾(KHR)",
+    "government": "君主立憲議會制"
+  },
+  "animals": [
+    {
+      "zh": "白緣牛",
+      "en": "Kouprey",
+      "note": "柬埔寨國獸,野生瘤牛,二十世紀後幾無可靠目擊,可能已滅絕。",
+      "image": "KH-a-kouprey.jpg"
+    },
+    {
+      "zh": "亞洲象",
+      "en": "Asian elephant",
+      "note": "東部蒙多基里與豆蔻山森林尚有野生族群,曾是戰爭與王室座騎。",
+      "image": "KH-a-elephant.jpg"
+    },
+    {
+      "zh": "伊洛瓦底江豚",
+      "en": "Irrawaddy dolphin",
+      "note": "湄公河桔井至上丁段的淡水族群,額頭圓鈍,僅存數十頭。",
+      "image": "KH-a-dolphin.jpg"
+    },
+    {
+      "zh": "巨䴉",
+      "en": "Giant ibis",
+      "note": "柬埔寨國鳥,體型最大的䴉,僅存於北部乾旱林,極度瀕危。"
+    },
+    {
+      "zh": "戴帽長臂猿",
+      "en": "Pileated gibbon",
+      "note": "吳哥森林與豆蔻山可聞其晨間鳴唱,雌雄毛色差異大。",
+      "image": "KH-a-gibbon.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "阿莫克魚",
+      "en": "Fish amok",
+      "note": "魚肉拌高棉咖哩醬與椰漿,以蕉葉盛裝蒸成慕斯狀。",
+      "image": "KH-f-amok.jpg"
+    },
+    {
+      "zh": "高棉牛肉粒",
+      "en": "Beef lok lak",
+      "note": "醃過的牛肉丁大火快炒,配生菜番茄與胡椒萊姆蘸醬、白飯。",
+      "image": "KH-f-loklak.jpg"
+    },
+    {
+      "zh": "金邊粿條",
+      "en": "Kuy teav",
+      "note": "豬骨湯米粉,配肉片、內臟與豆芽,常見的早餐。",
+      "image": "KH-f-kuyteav.jpg"
+    },
+    {
+      "zh": "高棉米線",
+      "en": "Num banh chok",
+      "note": "手工發酵米線淋魚肉香茅咖哩汁,配大量生菜香草。",
+      "image": "KH-f-numbanhchok.jpg"
+    },
+    {
+      "zh": "帕拉克魚醬",
+      "en": "Prahok",
+      "note": "發酵淡水魚糜,鹹味濃厚,是許多菜餚的基礎調味。",
+      "image": "KH-f-prahok.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "吳哥寺",
+      "en": "Angkor Wat",
+      "note": "十二世紀的印度教神殿,護城河環繞,是世界最大宗教建築之一。",
+      "latlon": [
+        13.4125,
+        103.867
+      ],
+      "image": "KH-l-angkorwat.jpg"
+    },
+    {
+      "zh": "巴戎寺",
+      "en": "Bayon",
+      "note": "大吳哥城中心,五十餘座塔刻著逾兩百張巨大人面。",
+      "latlon": [
+        13.4413,
+        103.8586
+      ],
+      "image": "KH-l-bayon.jpg"
+    },
+    {
+      "zh": "塔普倫寺",
+      "en": "Ta Prohm",
+      "note": "巨大絞殺榕盤纏廟牆的遺址,維持半坍塌的原貌。",
+      "latlon": [
+        13.4348,
+        103.8891
+      ],
+      "image": "KH-l-taprohm.jpg"
+    },
+    {
+      "zh": "女王宮",
+      "en": "Banteay Srei",
+      "note": "十世紀紅砂岩小廟,浮雕細膩,有「吳哥藝術寶石」之稱。",
+      "latlon": [
+        13.5988,
+        103.9633
+      ]
+    },
+    {
+      "zh": "金邊皇宮",
+      "en": "Royal Palace, Phnom Penh",
+      "note": "一八六六年起營建的王室居所,園內有貼銀地磚的銀殿。",
+      "latlon": [
+        11.5645,
+        104.931
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "闍耶跋摩七世",
+      "en": "Jayavarman VII",
+      "note": "十二世紀吳哥君主,擴張版圖、改奉佛教並廣建公共設施。"
+    },
+    {
+      "zh": "蘇利耶跋摩二世",
+      "en": "Suryavarman II",
+      "note": "十二世紀君主,下令興建吳哥寺,國勢達於鼎盛。"
+    },
+    {
+      "zh": "諾羅敦·施亞努",
+      "en": "Norodom Sihanouk",
+      "note": "帶領柬埔寨獨立,兩度為王,是近代政治的關鍵人物。"
+    },
+    {
+      "zh": "諾羅敦·西哈莫尼",
+      "en": "Norodom Sihamoni",
+      "note": "現任國王,曾任舞蹈家與駐聯合國教科文組織大使。"
+    },
+    {
+      "zh": "洪森",
+      "en": "Hun Sen",
+      "note": "一九八五至二〇二三年任總理,長期主導柬埔寨政局。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "乾季的吳哥",
+      "note": "十一至二月涼爽少雨,適合連看數日遺址;日出看小吳哥,午後轉森林中的塔普倫。"
+    },
+    {
+      "zh": "洞里薩湖水上聚落",
+      "note": "雨季(八至十月)湖面擴大,可搭船看高腳屋與水上市場,留意選擇口碑良好的社區行程。"
+    },
+    {
+      "zh": "貢布與白馬海濱",
+      "note": "南部貢布以胡椒莊園、法式老街聞名,可延伸到白馬市看殖民別墅與海鮮。"
+    }
+  ],
+  "events": [
+    {
+      "year": 802,
+      "zh": "闍耶跋摩二世自立為王,吳哥王朝開始。"
+    },
+    {
+      "year": 1113,
+      "zh": "蘇利耶跋摩二世即位,不久後動工興建吳哥寺。"
+    },
+    {
+      "year": 1431,
+      "zh": "暹羅進犯,王室棄守吳哥,遷都金邊一帶。"
+    },
+    {
+      "year": 1863,
+      "zh": "柬埔寨成為法國保護國。"
+    },
+    {
+      "year": 1953,
+      "zh": "脫離法國獨立。"
+    },
+    {
+      "year": 1975,
+      "zh": "紅色高棉攻占金邊,至一九七九年。"
+    },
+    {
+      "year": 1993,
+      "zh": "聯合國監督下大選,恢復君主立憲。"
+    }
+  ],
+  "souvenirs": [
+    {
+      "zh": "貢布胡椒",
+      "note": "具地理標示的黑、紅、白胡椒,香氣濃,莊園與市場都買得到。"
+    },
+    {
+      "zh": "高棉格紋巾(krama)",
+      "note": "傳統格紋棉巾與手織絲巾,市集與工坊常見。"
+    },
+    {
+      "zh": "棕糖與棕糖塊",
+      "note": "糖棕樹汁熬成的圓餅塊糖,帶焦香,可入菜或當零食。"
+    },
+    {
+      "zh": "銀器與浮雕拓印",
+      "note": "手工銀盒、檳榔盒與遺址浮雕拓片,暹粒老市場尋寶。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "吳哥窟經典",
+        "days": "4–5 天",
+        "note": "以暹粒為據點,分小圈、大圈與外圈看吳哥遺址,加一天洞里薩湖或崩密列。台灣有直飛暹粒或經曼谷、胡志明市轉機。"
+      },
+      {
+        "zh": "金邊＋暹粒",
+        "days": "6–7 天",
+        "note": "金邊看皇宮、國家博物館與近代史紀念地,再飛或搭巴士北上暹粒看吳哥,首都與古蹟並重。"
+      },
+      {
+        "zh": "柬南海濱＋貢布",
+        "days": "5–6 天",
+        "note": "金邊進,經貢布胡椒莊園與白馬,到西哈努克港外海的隆島、薩隆島住海島度假村。"
+      },
+      {
+        "zh": "柬越湄公河",
+        "days": "7–8 天",
+        "note": "從胡志明市走陸路或遊船經金邊到暹粒,一趟串起越南南部與柬埔寨。"
+      },
+      {
+        "zh": "暹粒慢遊與手作",
+        "days": "4 天",
+        "note": "除遺址外安排高棉料理課、Phare 馬戲團表演、絲綢之島與按摩,步調放鬆。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "崩密列與荔枝山",
+        "note": "未整修的叢林神殿崩密列,加上吳哥王朝發源地荔枝山的水底浮雕與瀑布,需包車一日。"
+      },
+      {
+        "zh": "上丁看江豚",
+        "note": "桔井或上丁搭小船到湄公河深潭區,清晨或傍晚看伊洛瓦底江豚,住宿選項少。"
+      },
+      {
+        "zh": "蒙多基里森林與瀑布",
+        "note": "東部高地的野象保育營、咖啡園與布斯拉瀑布,路程長,適合喜歡山林的旅人。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "KH-a-kouprey.jpg",
+      "title": "Kouprey",
+      "author": "DFoidl",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3AKouprey.jpg"
+    },
+    {
+      "file": "KH-a-elephant.jpg",
+      "title": "Asian elephant",
+      "author": "Kalyan Varma",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AAsian_Elephant_panning.jpg"
+    },
+    {
+      "file": "KH-a-dolphin.jpg",
+      "title": "Irrawaddy dolphin",
+      "author": "Jean-Claude Durka",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AIrrawaddy_Dolphin.jpg"
+    },
+    {
+      "file": "KH-a-gibbon.jpg",
+      "title": "Pileated gibbon at Angkor",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3APileated_gibbon_(Hylobates_pileatus)_female_Angkor.jpg"
+    },
+    {
+      "file": "KH-f-amok.jpg",
+      "title": "Amok trey, Phnom Penh",
+      "author": "Marcin Konsek",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3A2016_Phnom_Penh,_Amok_trey_(02).jpg"
+    },
+    {
+      "file": "KH-f-loklak.jpg",
+      "title": "Cambodian lok lak",
+      "author": "Stefan Fussan",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ACambodian_Lok_Lak.jpg"
+    },
+    {
+      "file": "KH-f-kuyteav.jpg",
+      "title": "Kuy teav",
+      "author": "Goomba King",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AKuyteav.jpg"
+    },
+    {
+      "file": "KH-f-numbanhchok.jpg",
+      "title": "Num banh chok",
+      "author": "Thomas Wanhoff",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ANum_Banh_Chok_(cropped).jpg"
+    },
+    {
+      "file": "KH-f-prahok.jpg",
+      "title": "Prahok",
+      "author": "Paxse",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3APrahok_Ang_detail.jpg"
+    },
+    {
+      "file": "KH-l-angkorwat.jpg",
+      "title": "Angkor Wat with its reflection",
+      "author": "Satdeep Gill",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AAngkor_Wat_with_its_reflection_(cropped).jpg"
+    },
+    {
+      "file": "KH-l-bayon.jpg",
+      "title": "Bayon Temple, Angkor Thom",
+      "author": "Jakub Hałun",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3A20171127_Bayon_Temple_Angkor_Thom_4754_DxO.jpg"
+    },
+    {
+      "file": "KH-l-taprohm.jpg",
+      "title": "Tree roots and temple, Ta Prohm",
+      "author": "David Sim",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ATree_roots_and_temple,_Ta_Prohm,_Angkor,_Cambodia.jpg"
+    }
+  ],
+  "code": "KH"
+}
