@@ -1,0 +1,339 @@
+{
+  "name_zh": "比利時",
+  "name_en": "Belgium",
+  "summary": "位於西歐、瀕臨北海的聯邦制王國,首都布魯塞爾,是歐盟與北約總部所在地。北部法蘭德斯講荷蘭語、南部瓦隆講法語,另有東部德語小區。中世紀法蘭德斯以紡織致富,十九世紀為歐陸最早工業化的國家之一,今以巧克力、啤酒與精密產業聞名。",
+  "founding": [
+    "比利時的疆域是歷史上「低地諸國」的一部分。羅馬時代屬高盧貝爾吉卡,後為法蘭克王國的核心地帶。中世紀分裂為富庶而半自治的公侯領地——法蘭德斯與埃諾伯國、布拉班特公國、列日采邑主教區——布魯日、根特、伊珀爾等紡織城鎮是歐洲最富有的地方之一。",
+    "十五世紀勃艮第公爵統合了大部分這些領地,經聯姻傳給哈布斯堡家族,再歸西班牙分支。尼德蘭起義期間,南方各省維持天主教信仰、續留西班牙統治,成為「西屬尼德蘭」,與獨立的北方分道揚鑣;安特衛普因斯海爾德河封鎖而衰落。",
+    "一七一四年南尼德蘭轉歸奧地利哈布斯堡,一七九五年被革命的法國併吞,一八一五年又與北方合組尼德蘭聯合王國。對荷蘭統治在語言、宗教、稅制與代表權上的不滿,於一八三〇年在布魯塞爾引發革命。",
+    "一八三〇年比利時宣布獨立為王國,列強承認並在一八三九年《倫敦條約》中保障其中立,利奧波德一世成為首任國王。比利時很早工業化——瓦隆的煤、鋼與鐵路——是歐陸最早的工業經濟體之一。",
+    "利奧波德二世自一八八五年以個人名義統治剛果自由邦,殘酷的榨取式管理招致國際譴責,一九〇八年領地移交比利時政府。德國於一九一四與一九四〇年兩度入侵中立的比利時,從伊珀爾到阿登,兩次大戰都在比利時國土上激烈交戰。",
+    "一九四五年後,比利時是比荷盧、北約與歐洲機構的共同創建者,布魯塞爾成為歐盟與北約總部的實際所在地。剛果於一九六〇年獨立。荷語法蘭德斯與法語瓦隆之間的長期張力,促成一九七〇至一九九三年間多次國家改革,將比利時轉型為由大區與語言共同體組成的聯邦國家。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "比利時王國",
+    "area_km2": 30689,
+    "languages": [
+      "荷蘭語",
+      "法語",
+      "德語"
+    ],
+    "religion": "傳統以天主教為主流,無宗教者比例上升,另有少數伊斯蘭教",
+    "currency": "歐元(EUR)",
+    "government": "聯邦制議會內閣君主立憲"
+  },
+  "animals": [
+    {
+      "zh": "比利時輓馬(布拉班特馬)",
+      "en": "Belgian draught horse",
+      "note": "體格壯碩的重輓馬,是世上力氣最大的馬種之一。",
+      "image": "animals-draughthorse.jpg"
+    },
+    {
+      "zh": "比利時藍牛",
+      "en": "Belgian Blue cattle",
+      "note": "因基因突變而「雙肌」發達的肉牛品種,肌肉線條明顯。",
+      "image": "animals-belgianblue.jpg"
+    },
+    {
+      "zh": "馬里努阿犬",
+      "en": "Malinois",
+      "note": "比利時牧羊犬的一種,警覺敏捷,廣泛用於警犬與軍犬。"
+    },
+    {
+      "zh": "野豬",
+      "en": "Wild boar",
+      "note": "棲息阿登森林,是當地野味料理的常見食材。",
+      "image": "animals-wildboar.jpg"
+    },
+    {
+      "zh": "賽鴿(信鴿)",
+      "en": "Racing pigeon",
+      "note": "現代賽鴿運動十九世紀在比利時興起,頂級種鴿身價驚人。",
+      "image": "animals-racingpigeon.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "淡菜薯條",
+      "en": "Moules-frites",
+      "note": "白酒或蔬菜清蒸淡菜配炸薯條,被視為國民料理。",
+      "image": "foods-moulesfrites.jpg"
+    },
+    {
+      "zh": "比利時薯條",
+      "en": "Belgian fries",
+      "note": "油炸兩次的薯條,在薯條攤買、沾美乃滋,當地主張為其發源。",
+      "image": "foods-frites.jpg"
+    },
+    {
+      "zh": "比利時鬆餅",
+      "en": "Belgian waffle",
+      "note": "分布魯塞爾式(輕脆長方)與列日式(紮實帶糖粒)兩種。",
+      "image": "foods-waffle.jpg"
+    },
+    {
+      "zh": "夾心巧克力",
+      "en": "Pralines",
+      "note": "帶餡的一口巧克力,一九一二年由諾好事在布魯塞爾發明。",
+      "image": "foods-pralines.jpg"
+    },
+    {
+      "zh": "法蘭德斯燉牛肉",
+      "en": "Carbonnade flamande",
+      "note": "牛肉以褐色啤酒與洋蔥慢燉,微甜濃郁。",
+      "image": "foods-carbonnade.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "布魯塞爾大廣場",
+      "en": "Grand-Place",
+      "note": "環繞行會屋與市政廳的中央廣場,列世界遺產。",
+      "latlon": [
+        50.8467,
+        4.3525
+      ],
+      "image": "landmarks-grandplace.jpg"
+    },
+    {
+      "zh": "尿尿小童",
+      "en": "Manneken Pis",
+      "note": "一六一九年設置的小型撒尿男童銅像噴泉,有龐大的服裝收藏。",
+      "latlon": [
+        50.845,
+        4.3499
+      ],
+      "image": "landmarks-mannekenpis.jpg"
+    },
+    {
+      "zh": "布魯日歷史中心",
+      "en": "Historic Centre of Bruges",
+      "note": "運河環繞的中世紀城市,鐘樓與市集廣場,列世界遺產。",
+      "latlon": [
+        51.2093,
+        3.2247
+      ],
+      "image": "landmarks-bruges.jpg"
+    },
+    {
+      "zh": "根特鐘樓與聖巴夫主教座堂",
+      "en": "Ghent Belfry and St Bavo's Cathedral",
+      "note": "聖巴夫堂藏有范艾克兄弟一四三二年的《根特祭壇畫》。",
+      "latlon": [
+        51.0536,
+        3.7304
+      ]
+    },
+    {
+      "zh": "原子塔",
+      "en": "Atomium",
+      "note": "為一九五八年世界博覽會而建的鐵晶體放大模型,高一〇二公尺。",
+      "latlon": [
+        50.8949,
+        4.3416
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "揚·范艾克",
+      "en": "Jan van Eyck",
+      "note": "早期尼德蘭繪畫大師,以油畫技法與《根特祭壇畫》聞名。"
+    },
+    {
+      "zh": "雷內·馬格利特",
+      "en": "René Magritte",
+      "note": "超現實主義畫家,〈形象的叛逆〉的菸斗畫廣為人知。"
+    },
+    {
+      "zh": "阿道夫·薩克斯",
+      "en": "Adolphe Sax",
+      "note": "迪南出身的樂器製造家,一八四〇年代發明薩克斯風。"
+    },
+    {
+      "zh": "喬治·勒梅特",
+      "en": "Georges Lemaître",
+      "note": "神父兼物理學家,最早提出宇宙膨脹與「原始原子」構想。"
+    },
+    {
+      "zh": "埃爾熱",
+      "en": "Hergé",
+      "note": "漫畫家,創作《丁丁歷險記》,奠定歐洲連環漫畫傳統。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "布魯日與根特古城",
+      "note": "運河、鐘樓與法蘭德斯繪畫,淡季人潮較少、住宿也較便宜。"
+    },
+    {
+      "zh": "布魯塞爾的巧克力、啤酒與漫畫",
+      "note": "大廣場、巧克力名店、漫畫牆路線與修道院啤酒酒吧,適合悠閒散步。"
+    },
+    {
+      "zh": "十二月的聖誕市集",
+      "note": "根特與布魯塞爾的燈飾與熱紅酒,冬季氣氛濃;不喜人潮可選春天前往。"
+    }
+  ],
+  "events": [
+    {
+      "year": 1302,
+      "zh": "「金馬刺之戰」中法蘭德斯市民民兵擊敗法國騎士。"
+    },
+    {
+      "year": 1477,
+      "zh": "勃艮第公爵領地經聯姻歸入哈布斯堡家族。"
+    },
+    {
+      "year": 1585,
+      "zh": "安特衛普陷落,南尼德蘭續留西班牙與天主教陣營,與北方分道。"
+    },
+    {
+      "year": 1830,
+      "zh": "布魯塞爾爆發革命,比利時脫離尼德蘭聯合王國獨立。"
+    },
+    {
+      "year": 1839,
+      "zh": "《倫敦條約》各強權承認比利時並保障其中立。"
+    },
+    {
+      "year": 1914,
+      "zh": "德國入侵中立的比利時,第一次世界大戰西線戰事在此展開。"
+    },
+    {
+      "year": 1958,
+      "zh": "布魯塞爾世界博覽會舉行,原子塔落成;戰後比利時成為歐洲整合的核心。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "布魯塞爾＋布魯日＋根特",
+        "days": "5–6 天",
+        "note": "大廣場與尿尿小童、原子塔,火車半小時到根特看《根特祭壇畫》,再到布魯日運河古城。第一次到比利時、想一次收首都與法蘭德斯古城的自由行首選。"
+      },
+      {
+        "zh": "荷比盧三國",
+        "days": "8–10 天",
+        "note": "阿姆斯特丹、布魯塞爾、布魯日、盧森堡市,高速鐵路一兩小時互通。適合假期較長、想一次收三國精華的旅客。"
+      },
+      {
+        "zh": "巧克力啤酒美食主題",
+        "days": "4–5 天",
+        "note": "布魯塞爾與安特衛普的巧克力工坊與精釀酒吧、淡菜薯條與鬆餅,加一場修道院啤酒巡禮。適合愛吃喝、想慢慢逛的旅客。"
+      },
+      {
+        "zh": "比利時＋法國北部:布魯塞爾—里爾—巴黎",
+        "days": "7–8 天",
+        "note": "搭高速鐵路一路南下,加法蘭德斯戰場與里爾舊城。適合想把比利時與巴黎串起來玩的旅客。"
+      },
+      {
+        "zh": "安特衛普＋法蘭德斯藝術",
+        "days": "4–5 天",
+        "note": "安特衛普中央車站、魯本斯故居與時尚區、根特與梅赫倫,近代與古典交錯。適合愛藝術、時尚與建築的旅客。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "阿登高地森林與城堡",
+        "note": "迪南、拉羅什與布永城堡、鐘乳石洞與野味料理。需開車,地形起伏,沿途有二戰突出部之役遺跡。"
+      },
+      {
+        "zh": "法蘭德斯一戰戰場:伊珀爾",
+        "note": "梅嫩門每晚的「最後崗位」號聲、法蘭德斯戰場博物館與泰恩科特公墓。氣氛肅穆,建議請導覽。"
+      },
+      {
+        "zh": "瓦隆礦業遺產與圖爾奈",
+        "note": "蒙斯、大霍爾努與四處列世界遺產的礦場,加圖爾奈主教座堂。屬工業遺產路線,班次稀疏。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "animals-draughthorse.jpg",
+      "title": "Brabants Trekpaard Stappend Opwijk 2014",
+      "author": "LieseDC",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Brabants_Trekpaard_Stappend_Opwijk_2014.JPG"
+    },
+    {
+      "file": "animals-belgianblue.jpg",
+      "title": "Belgian Blue cattle (Belagro-2021)",
+      "author": "Homoatrox",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Belgian_Blue_cattle_(Belagro-2021).jpg"
+    },
+    {
+      "file": "animals-wildboar.jpg",
+      "title": "Wild boar Paliseul Ardennes",
+      "author": "TheFurther21",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Wild_boar_Paliseul_Ardennes.jpg"
+    },
+    {
+      "file": "animals-racingpigeon.jpg",
+      "title": "Postduif",
+      "author": "Patrick Edwin Moran",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Postduif.jpg"
+    },
+    {
+      "file": "foods-moulesfrites.jpg",
+      "title": "Moules-frites at Chez Leon in Brussels",
+      "author": "Edward",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Moules-frites_at_Chez_Leon_in_Brussels.jpg"
+    },
+    {
+      "file": "foods-frites.jpg",
+      "title": "Frituur fries frikandel mayo curry ketchup",
+      "author": "Jon Åslund",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Frituur_fries_frikandel_mayo_curry_ketchup.jpg"
+    },
+    {
+      "file": "foods-waffle.jpg",
+      "title": "Belgian waffles - Brussels, Belgium, 2011 (2011-05-22 11.55.35 by Thomas Quine)",
+      "author": "Thomas Quine",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Belgian_waffles_-_Brussels,_Belgium,_2011_(2011-05-22_11.55.35_by_Thomas_Quine).jpg"
+    },
+    {
+      "file": "foods-pralines.jpg",
+      "title": "Pralines met logo door Chocolaterie Van Parijs",
+      "author": "Ferm Creative",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pralines_met_logo_door_Chocolaterie_Van_Parijs.jpg"
+    },
+    {
+      "file": "foods-carbonnade.jpg",
+      "title": "Carbonade flamande 2023",
+      "author": "René Hourdry",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Carbonade_flamande_2023.jpg"
+    },
+    {
+      "file": "landmarks-grandplace.jpg",
+      "title": "Grand Place, Zunfthäuser, Südwest",
+      "author": "Christoph Radtke",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Grand_Place,_Zunfth%C3%A4user,_S%C3%BCdwest.JPG"
+    },
+    {
+      "file": "landmarks-mannekenpis.jpg",
+      "title": "Manneken Pis, Brussels (DSCF4467)",
+      "author": "Trougnouf",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Manneken_Pis,_Brussels_(DSCF4467).jpg"
+    },
+    {
+      "file": "landmarks-bruges.jpg",
+      "title": "Rozenhoedkaai (canal) and Belfry of Bruges, Bruges, Belgium (Ank Kumar, Infosys Limited) 09",
+      "author": "Ank Kumar",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Rozenhoedkaai_(canal)_and_Belfry_of_Bruges,_Bruges,_Belgium_(Ank_Kumar,_Infosys_Limited)_09.jpg"
+    }
+  ],
+  "code": "BE"
+}

@@ -1,0 +1,337 @@
+{
+  "name_zh": "葡萄牙",
+  "name_en": "Portugal",
+  "summary": "位於伊比利半島西南、瀕臨大西洋的南歐國家,首都里斯本,另轄亞速爾與馬德拉兩個自治群島。擁有歐洲最古老且大致不變的疆界,十五、十六世紀率先展開海上探險,建立橫跨數洲的殖民帝國;今為服務業與觀光導向的經濟體。",
+  "founding": [
+    "伊比利半島西部曾有反抗羅馬的盧西塔尼亞人,後成為羅馬的盧西塔尼亞行省,繼而由蘇維匯人與西哥德人統治。七一一年起半島大部落入摩爾人之手,北部波爾圖一帶則屬基督教的萊昂王國,設有「葡萄牙伯國」。",
+    "一一三九年阿方索·恩里克斯擊敗摩爾人後稱王,一一四三年獲萊昂承認、一一七九年獲教宗承認獨立。收復失地運動向南推進,一二四九年攻下阿爾加維,大致底定延續至今的大陸疆界。一三八五年阿爾茹巴洛塔之役確保對卡斯提亞的獨立,開啟阿維斯王朝。",
+    "一四一五年攻佔北非休達後,葡萄牙在航海家亨利王子推動下領先歐洲海上擴張:迪亞士繞過好望角(一四八八年)、達伽馬抵達印度(一四九八年)、卡布拉爾登陸巴西(一五〇〇年)。貿易帝國自巴西延伸到西非、東非、波斯灣、印度、麻六甲、香料群島與澳門,並一度及於日本;里斯本因香料與後來的大西洋奴隸貿易而致富。",
+    "一五八〇至一六四〇年王位由西班牙國王兼領(伊比利聯盟),布拉干薩王朝於一六四〇年復辟。一七五五年里斯本大地震與海嘯幾乎摧毀首都,由龐巴爾侯爵以棋盤格局重建。拿破崙入侵期間王室遷往巴西(一八〇七至〇八年),巴西於一八二二年獨立,對經濟是一大打擊。",
+    "一九一〇年推翻君主制,第一共和政局動盪。一九二六年軍事政變後建立與薩拉查相關的威權「新國家」體制,持續至一九七四年,並在非洲進行長期殖民戰爭。一九七四年四月廿五日近乎不流血的「康乃馨革命」恢復民主。",
+    "革命後迅速展開非殖民化(安哥拉、莫三比克、幾內亞比索、維德角、聖多美與東帝汶均於一九七五年;澳門一九九九年移交中國)。葡萄牙一九八六年加入歐洲共同體並採用歐元。今日為穩定的議會民主國家,經濟以服務業與觀光為主,葡萄酒、軟木及龐大的海外僑民與葡語社群是其特色。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "葡萄牙共和國",
+    "area_km2": 92212,
+    "languages": [
+      "葡萄牙語"
+    ],
+    "religion": "以天主教為主(約八成),無宗教者比例上升,另有少數新教",
+    "currency": "歐元(EUR)",
+    "government": "半總統制共和(單一制)"
+  },
+  "animals": [
+    {
+      "zh": "伊比利猞猁",
+      "en": "Iberian lynx",
+      "note": "世上最瀕危的貓科之一,耳尖有黑毛簇,近年在南部河谷回穩。",
+      "image": "animals-lynx.jpg"
+    },
+    {
+      "zh": "伊比利狼",
+      "en": "Iberian wolf",
+      "note": "灰狼的伊比利亞族群,成群活動於北部山區。",
+      "image": "animals-iberianwolf.jpg"
+    },
+    {
+      "zh": "盧西塔諾馬",
+      "en": "Lusitano horse",
+      "note": "世上最古老的馬種之一,體態圓潤,用於古典馬術與鬥牛。"
+    },
+    {
+      "zh": "葡萄牙水犬",
+      "en": "Portuguese Water Dog",
+      "note": "阿爾加維漁民的助手犬,善泳,毛捲不易脫落。"
+    },
+    {
+      "zh": "大紅鸛(火烈鳥)",
+      "en": "Greater flamingo",
+      "note": "成群覓食於塔古斯、薩多河口與法羅濕地的鹽田潟湖。",
+      "image": "animals-flamingo.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "葡式蛋塔",
+      "en": "Pastel de nata",
+      "note": "酥皮裝焦糖蛋奶餡,源自貝倫的熱羅尼莫斯修道院。",
+      "image": "foods-pasteldenata.jpg"
+    },
+    {
+      "zh": "鹽漬鱈魚",
+      "en": "Bacalhau",
+      "note": "曬乾的鹽醃鱈魚,號稱有上百種料理法,聖誕餐桌必備。"
+    },
+    {
+      "zh": "葡式三明治(法蘭西那)",
+      "en": "Francesinha",
+      "note": "波爾圖的厚三明治,夾多種肉、覆起司,淋番茄啤酒醬。",
+      "image": "foods-francesinha.jpg"
+    },
+    {
+      "zh": "炭烤沙丁魚",
+      "en": "Grilled sardines",
+      "note": "炭火直烤的沙丁魚,是里斯本六月聖安東尼節的代表。"
+    },
+    {
+      "zh": "波特酒",
+      "en": "Port wine",
+      "note": "杜羅河谷產的加烈葡萄酒,在加亞新城的酒窖陳年。",
+      "image": "foods-port.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "貝倫塔",
+      "en": "Belém Tower",
+      "note": "里斯本河口的曼努埃爾式防禦塔(一五一九年),列世界遺產。",
+      "latlon": [
+        38.6916,
+        -9.216
+      ],
+      "image": "landmarks-belemtower.jpg"
+    },
+    {
+      "zh": "熱羅尼莫斯修道院",
+      "en": "Jerónimos Monastery",
+      "note": "里斯本的曼努埃爾式建築傑作,與貝倫塔同列世界遺產。",
+      "latlon": [
+        38.6979,
+        -9.2065
+      ],
+      "image": "landmarks-jeronimos.jpg"
+    },
+    {
+      "zh": "佩納宮",
+      "en": "Pena Palace",
+      "note": "辛特拉山上色彩鮮豔的浪漫主義宮殿,屬世界遺產文化景觀。",
+      "latlon": [
+        38.7876,
+        -9.3905
+      ],
+      "image": "landmarks-pena.jpg"
+    },
+    {
+      "zh": "波爾圖歷史中心與路易一世大橋",
+      "en": "Historic Centre of Porto",
+      "note": "斗羅河畔的世界遺產老城,雙層鐵橋連接里貝拉與加亞新城。",
+      "latlon": [
+        41.14,
+        -8.6109
+      ],
+      "image": "landmarks-porto-bridge.jpg"
+    },
+    {
+      "zh": "上杜羅葡萄酒產區",
+      "en": "Alto Douro Wine Region",
+      "note": "沿河開闢的梯田葡萄園,列世界遺產文化景觀。",
+      "latlon": [
+        41.162,
+        -7.79
+      ],
+      "image": "landmarks-douro.jpg"
+    }
+  ],
+  "people": [
+    {
+      "zh": "航海家亨利王子",
+      "en": "Henry the Navigator",
+      "note": "贊助早期非洲沿岸航行,推動葡萄牙的海上探險時代。"
+    },
+    {
+      "zh": "瓦斯科·達伽馬",
+      "en": "Vasco da Gama",
+      "note": "一四九八年開通歐洲繞非洲到印度的海上航線。",
+      "image": "people-davasco.jpg"
+    },
+    {
+      "zh": "賈梅士",
+      "en": "Luís de Camões",
+      "note": "民族詩人,史詩《盧濟塔尼亞人之歌》歌詠航海事業。"
+    },
+    {
+      "zh": "費爾南多·佩索亞",
+      "en": "Fernando Pessoa",
+      "note": "里斯本的現代主義詩人,以眾多「異名」寫作。"
+    },
+    {
+      "zh": "阿瑪莉亞·羅德里格斯",
+      "en": "Amália Rodrigues",
+      "note": "「法朵女王」,將葡萄牙傳統歌謠法朵推向世界。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "里斯本與辛特拉",
+      "note": "搭懷舊電車、逛阿法瑪與觀景台,一天到辛特拉看佩納宮與歐洲大陸最西端羅卡角;春秋氣候宜人。"
+    },
+    {
+      "zh": "波爾圖與杜羅河谷",
+      "note": "參觀波特酒窖、搭火車或遊船進河谷梯田酒莊過夜品酒,九月採收季最熱鬧。"
+    },
+    {
+      "zh": "五至九月的阿爾加維海岸",
+      "note": "拉古什、貝納吉爾海蝕洞與金色崖壁,適合曬太陽、玩水與跳船遊。"
+    }
+  ],
+  "events": [
+    {
+      "year": 1139,
+      "zh": "阿方索·恩里克斯稱王,一一四三年獲萊昂承認,葡萄牙王國成立。"
+    },
+    {
+      "year": 1249,
+      "zh": "攻下阿爾加維,確立延續至今的大陸疆界。"
+    },
+    {
+      "year": 1415,
+      "zh": "攻佔北非休達,揭開葡萄牙海上擴張的時代。"
+    },
+    {
+      "year": 1498,
+      "zh": "達伽馬繞過非洲抵達印度,開通歐印海上航線。"
+    },
+    {
+      "year": 1755,
+      "zh": "里斯本大地震與海嘯,首都幾近全毀後重建。"
+    },
+    {
+      "year": 1822,
+      "zh": "巴西宣布獨立,葡萄牙失去最大的海外領地。"
+    },
+    {
+      "year": 1974,
+      "zh": "「康乃馨革命」結束威權統治,隨後展開非殖民化。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "里斯本＋辛特拉＋波爾圖",
+        "days": "7–8 天",
+        "note": "里斯本電車與阿法瑪、辛特拉佩納宮與羅卡角、波爾圖里貝拉與波特酒窖,城際特快車串聯。第一次到葡萄牙、想一次收南北兩大城的自由行首選。"
+      },
+      {
+        "zh": "葡萄牙南北自駕縱貫",
+        "days": "9–11 天",
+        "note": "加科英布拉大學、歐比多斯城牆小鎮、埃武拉人骨禮拜堂與阿爾加維海岸洞穴。適合會開車、想深入內陸與海岸的旅客。"
+      },
+      {
+        "zh": "波爾圖與杜羅河谷",
+        "days": "5–6 天",
+        "note": "波爾圖舊城安排三天,搭火車或遊船進杜羅河谷梯田酒莊過夜品酒。愛葡萄酒、想放慢步調的旅客適合,九月採收季最熱鬧。"
+      },
+      {
+        "zh": "里斯本＋阿爾加維海岸",
+        "days": "6–7 天",
+        "note": "首都玩三天後南下拉古什,貝納吉爾海蝕洞、法羅濕地與塔維拉老城。適合想城市加海灘、夏天曬太陽的家庭與情侶。"
+      },
+      {
+        "zh": "西葡雙國:里斯本—馬德里—波爾圖",
+        "days": "9–10 天",
+        "note": "兩國首都加古城,搭夜車或跨境巴士往返。適合假期較長、想一次玩伊比利半島的旅客。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "亞速爾群島聖米格爾島",
+        "note": "大西洋中央的火山島,火口湖、溫泉與賞鯨。天氣一小時多變,航班多經里斯本轉。"
+      },
+      {
+        "zh": "馬德拉島健行",
+        "note": "沿灌溉水道「levada」步道穿越月桂林,豐沙爾為據點。氣候溫暖,部分路段臨崖、有懼高風險。"
+      },
+      {
+        "zh": "內陸歷史村落:蒙桑圖與科阿峽谷",
+        "note": "蒙桑圖的房子嵌在巨岩間,科阿峽谷有舊石器岩畫。大眾運輸稀少,需自駕。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "animals-lynx.jpg",
+      "title": "Lince ibérico (Lynx pardinus), Almuradiel, Ciudad Real, España, 2021-12-19, DD 07",
+      "author": "Diego Delso",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Lince_ib%C3%A9rico_(Lynx_pardinus),_Almuradiel,_Ciudad_Real,_Espa%C3%B1a,_2021-12-19,_DD_07.jpg"
+    },
+    {
+      "file": "animals-iberianwolf.jpg",
+      "title": "Iberian Wolf AdF 001",
+      "author": "Arturo de Frias Marques",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Iberian_Wolf_AdF_001.jpg"
+    },
+    {
+      "file": "animals-flamingo.jpg",
+      "title": "Greater flamingo (Phoenicopterus roseus) on water, Ria Formosa, Faro, Portugal (approx. GPS location) julesvernex2",
+      "author": "Jules Verne Times Two",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Greater_flamingo_(Phoenicopterus_roseus)_on_water,_Ria_Formosa,_Faro,_Portugal_(approx._GPS_location)_julesvernex2.jpg"
+    },
+    {
+      "file": "foods-pasteldenata.jpg",
+      "title": "Pastel de Nata \"custard tart\" - Latina 2023-12-18",
+      "author": "Andy Li",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pastel_de_Nata_%22custard_tart%22_-_Latina_2023-12-18.jpg"
+    },
+    {
+      "file": "foods-francesinha.jpg",
+      "title": "Francesinha encaixados porto portugal",
+      "author": "Ih8connecticut",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Francesinha_encaixados_porto_portugal.jpg"
+    },
+    {
+      "file": "foods-port.jpg",
+      "title": "Ramos Pinto Port Wine Cellars Entrance, Vila Nova de Gaia, Porto (54814198436)",
+      "author": "Dale Cruse - 10M views from San Francisco, CA, USA",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ramos_Pinto_Port_Wine_Cellars_Entrance,_Vila_Nova_de_Gaia,_Porto_(54814198436).jpg"
+    },
+    {
+      "file": "landmarks-belemtower.jpg",
+      "title": "Lisbon Torre de Belém BW 2018-10-03 16-33-21",
+      "author": "Berthold Werner",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Lisbon_Torre_de_Bel%C3%A9m_BW_2018-10-03_16-33-21.jpg"
+    },
+    {
+      "file": "landmarks-jeronimos.jpg",
+      "title": "Jerónimos Monastery in Belém, Lisbon, 20250604 1343 9263",
+      "author": "Jakub Hałun",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Jer%C3%B3nimos_Monastery_in_Bel%C3%A9m,_Lisbon,_20250604_1343_9263.jpg"
+    },
+    {
+      "file": "landmarks-pena.jpg",
+      "title": "Pena Palace, Sintra, Portugal, 20250606 1037 0005",
+      "author": "Jakub Hałun",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pena_Palace,_Sintra,_Portugal,_20250606_1037_0005.jpg"
+    },
+    {
+      "file": "landmarks-porto-bridge.jpg",
+      "title": "Ponte de Dom Luís I and Ribeira, Porto (54795128175)",
+      "author": "Dale Cruse - 10M views from San Francisco, CA, USA",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ponte_de_Dom_Lu%C3%ADs_I_and_Ribeira,_Porto_(54795128175).jpg"
+    },
+    {
+      "file": "landmarks-douro.jpg",
+      "title": "Vinha ao alto terracing in the Douro",
+      "author": "François Philipp",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Vinha_ao_alto_terracing_in_the_Douro.jpg"
+    },
+    {
+      "file": "people-davasco.jpg",
+      "title": "Lisboa-Museu Nacional de Arte Antiga-Retrato dito de Vasco da Gama-20140917",
+      "author": "Unknown master of the Portuguese School..",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Lisboa-Museu_Nacional_de_Arte_Antiga-Retrato_dito_de_Vasco_da_Gama-20140917.jpg"
+    }
+  ],
+  "code": "PT"
+}

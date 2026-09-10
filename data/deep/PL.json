@@ -1,0 +1,337 @@
+{
+  "name_zh": "波蘭",
+  "name_en": "Poland",
+  "summary": "位於中歐、瀕臨波羅的海的共和國,首都華沙。十世紀立國,曾與立陶宛組成疆域遼闊的聯邦;十八世紀末遭三度瓜分而亡國一二三年,一九一八年復國。二十世紀歷經兩次世界大戰與共產時期,一九八九年率先民主轉型,今為歐盟成長較快的經濟體之一。",
+  "founding": [
+    "斯拉夫部族約自六世紀起在奧得河與布格河之間的平原定居。九六六年,波蘭部族的皮亞斯特王朝公爵梅什科一世受洗,此舉被視為波蘭立國之始;其子波列斯瓦夫一世於一〇二五年加冕為首位國王,王都先後設於格涅茲諾與克拉科夫。",
+    "在皮亞斯特諸公分治一段時期後,王國於十四世紀重新統一。卡齊米日三世(大帝)編纂法律、創立克拉科夫大學(一三六四年),並收容猶太難民,開啟波蘭長期擁有全球最大猶太社群的時代。一三八五年克雷沃聯合透過雅德維加女王與雅蓋沃的聯姻,使波蘭與立陶宛大公國結合,開創雅蓋隆王朝。",
+    "一五六九年盧布林聯合成立波蘭-立陶宛聯邦,是當時歐洲最大的國家之一,採行選王制與權力強大的貴族議會(瑟姆),並有宗教寬容的傳統。一六八三年國王揚三世·索別斯基率軍為維也納解圍。十七世紀後期起,內部癱瘓與外力干預使國家日漸衰弱。",
+    "在一七七二、一七九三與一七九五年的三次瓜分中,俄羅斯、普魯士與奧地利吞併整個聯邦,波蘭自地圖上消失一二三年。一七九四、一八三〇與一八六三年的起義相繼被鎮壓,但語言、信仰與文化在十九世紀維繫了民族認同。",
+    "波蘭於一九一八年第一次世界大戰結束時復國,是為第二共和,初期由畢蘇斯基領導,並在一九二〇年擋下蘇聯的進攻。一九三九年遭納粹德國自西、蘇聯自東入侵,揭開第二次世界大戰。德國佔領極為殘酷:約六百萬波蘭公民喪生,其中近半是在猶太大屠殺中被害的猶太人,奧斯威辛-比克瑙等設於佔領區的營地是主要現場;華沙在一九四三年猶太區起義與一九四四年華沙起義後幾乎被夷平。",
+    "一九四五年後波蘭疆界整體西移,成為蘇聯陣營中的共產國家。一九八〇年在格但斯克造船廠誕生的團結工聯,以及一九七八年波蘭裔教宗若望·保祿二世的當選,推動了變革;一九八九年的半自由選舉產生東歐第一個非共產政府。波蘭一九九九年加入北約、二〇〇四年加入歐盟,此後成為歐盟成長較快的經濟體之一。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "波蘭共和國",
+    "area_km2": 312696,
+    "languages": [
+      "波蘭語"
+    ],
+    "religion": "以天主教為主(約九成登記),無宗教者比例上升",
+    "currency": "茲羅提(PLN)",
+    "government": "議會制共和(單一制),總統由公民直選"
+  },
+  "animals": [
+    {
+      "zh": "歐洲野牛",
+      "en": "European bison",
+      "note": "歐洲最重的陸生動物,曾一度野外絕跡,在比亞沃維耶扎復育重生。",
+      "image": "animals-bison.jpg"
+    },
+    {
+      "zh": "白鸛",
+      "en": "White stork",
+      "note": "在村莊屋頂與電桿上築大巢,全球相當比例的族群在波蘭繁殖。",
+      "image": "animals-stork.jpg"
+    },
+    {
+      "zh": "灰狼",
+      "en": "Grey wolf",
+      "note": "在喀爾巴阡山與東部森林恢復族群,成群活動。"
+    },
+    {
+      "zh": "駝鹿(麋)",
+      "en": "Moose",
+      "note": "棲息比耶布扎與坎皮諾斯等濕地林區的大型鹿科動物。",
+      "image": "animals-moose.jpg"
+    },
+    {
+      "zh": "柯尼克馬",
+      "en": "Konik",
+      "note": "外形近似已滅絕野馬的灰色矮種馬,用於保留區的自然放牧。",
+      "image": "animals-konik.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "波蘭餃子",
+      "en": "Pierogi",
+      "note": "半月形麵餃,常見馬鈴薯乳酪、肉餡、酸菜蘑菇或水果口味。",
+      "image": "foods-pierogi.jpg"
+    },
+    {
+      "zh": "獵人燉菜(比戈斯)",
+      "en": "Bigos",
+      "note": "酸菜與新鮮高麗菜加多種肉類長時間慢燉的燉菜。",
+      "image": "foods-bigos.jpg"
+    },
+    {
+      "zh": "酸黑麥湯(祖雷克)",
+      "en": "Żurek",
+      "note": "以發酵黑麥汁煮成的酸湯,常加白香腸與水煮蛋。"
+    },
+    {
+      "zh": "炸豬排",
+      "en": "Kotlet schabowy",
+      "note": "裹麵包粉煎的豬里肌排,配馬鈴薯與高麗菜沙拉。",
+      "image": "foods-schabowy.jpg"
+    },
+    {
+      "zh": "高麗菜肉捲(戈翁布基)",
+      "en": "Gołąbki",
+      "note": "高麗菜葉包肉與米,淋番茄醬汁燜煮。",
+      "image": "foods-golabki.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "克拉科夫中央集市廣場",
+      "en": "Kraków Main Market Square",
+      "note": "歐洲最大的中世紀廣場,有紡織會館與聖瑪利亞教堂,列世界遺產。",
+      "latlon": [
+        50.0616,
+        19.9373
+      ],
+      "image": "landmarks-krakowsquare.jpg"
+    },
+    {
+      "zh": "瓦維爾城堡",
+      "en": "Wawel Castle",
+      "note": "克拉科夫瓦維爾山上的王宮與主教座堂,歷代國王加冕與長眠之地。",
+      "latlon": [
+        50.054,
+        19.9354
+      ],
+      "image": "landmarks-wawel.jpg"
+    },
+    {
+      "zh": "奧斯威辛-比克瑙紀念館",
+      "en": "Auschwitz-Birkenau Memorial and Museum",
+      "note": "德國納粹在佔領區設立的集中營與滅絕營舊址,列世界遺產。",
+      "latlon": [
+        50.027,
+        19.203
+      ]
+    },
+    {
+      "zh": "維利奇卡鹽礦",
+      "en": "Wieliczka Salt Mine",
+      "note": "開採數百年的岩鹽礦坑,地下有以鹽雕成的禮拜堂,列世界遺產。",
+      "latlon": [
+        49.9835,
+        20.0546
+      ],
+      "image": "landmarks-wieliczka.jpg"
+    },
+    {
+      "zh": "華沙歷史中心(舊城)",
+      "en": "Historic Centre of Warsaw",
+      "note": "二戰幾乎全毀後依原貌重建的舊城,列世界遺產。",
+      "latlon": [
+        52.2497,
+        21.0122
+      ],
+      "image": "landmarks-warsawoldtown.jpg"
+    }
+  ],
+  "people": [
+    {
+      "zh": "哥白尼",
+      "en": "Nicolaus Copernicus",
+      "note": "托倫出身的天文學家,提出以太陽為中心的宇宙模型。"
+    },
+    {
+      "zh": "蕭邦",
+      "en": "Frédéric Chopin",
+      "note": "浪漫時期作曲家與鋼琴家,生於華沙近郊。"
+    },
+    {
+      "zh": "瑪麗·居禮",
+      "en": "Marie Curie",
+      "note": "生於華沙的物理與化學家,兩度獲諾貝爾獎。"
+    },
+    {
+      "zh": "若望·保祿二世",
+      "en": "Pope John Paul II",
+      "note": "曾任克拉科夫總主教,一九七八至二〇〇五年在位的教宗。"
+    },
+    {
+      "zh": "萊赫·華勒沙",
+      "en": "Lech Wałęsa",
+      "note": "團結工聯領袖,一九八三年諾貝爾和平獎得主,後任總統。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "克拉科夫舊城與周邊",
+      "note": "中央廣場、瓦維爾城堡與卡齊米日猶太區,並可一日往返維利奇卡鹽礦與奧斯威辛。"
+    },
+    {
+      "zh": "華沙的歷史與重建",
+      "note": "重建的舊城、華沙起義博物館與波蘭猶太人歷史博物館,夏季公園有蕭邦露天音樂會。"
+    },
+    {
+      "zh": "冬季的札科帕內或夏季的馬祖里湖區",
+      "note": "札科帕內在塔特拉山下適合滑雪與健行,馬祖里湖區夏天適合行船。"
+    }
+  ],
+  "events": [
+    {
+      "year": 966,
+      "zh": "梅什科一世受洗,傳統上視為波蘭立國之始。"
+    },
+    {
+      "year": 1385,
+      "zh": "克雷沃聯合使波蘭與立陶宛大公國結合,開啟雅蓋隆王朝。"
+    },
+    {
+      "year": 1569,
+      "zh": "盧布林聯合成立波蘭-立陶宛聯邦。"
+    },
+    {
+      "year": 1795,
+      "zh": "第三次瓜分完成,波蘭亡國達一二三年。"
+    },
+    {
+      "year": 1918,
+      "zh": "第一次世界大戰結束,波蘭復國,成立第二共和。"
+    },
+    {
+      "year": 1939,
+      "zh": "納粹德國與蘇聯先後入侵波蘭,第二次世界大戰爆發。"
+    },
+    {
+      "year": 1989,
+      "zh": "半自由選舉產生東歐首個非共產政府,波蘭啟動民主與市場轉型。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "克拉科夫＋華沙雙城",
+        "days": "6–7 天",
+        "note": "克拉科夫舊城、瓦維爾城堡、鹽礦與奧斯威辛紀念館,搭特快車兩個多小時到華沙看重建舊城與蕭邦。第一次到波蘭、想一次收兩大城與歷史現場的自由行首選。"
+      },
+      {
+        "zh": "波蘭南部深度:克拉科夫—札科帕內—弗次瓦夫",
+        "days": "8–9 天",
+        "note": "加塔特拉山下的札科帕內、「小矮人之城」弗次瓦夫與百年廳。適合想把山城健行與古城散步結合的旅客。"
+      },
+      {
+        "zh": "波羅的海與北部城堡:格但斯克—馬爾堡—托倫",
+        "days": "6–7 天",
+        "note": "格但斯克長街與團結工聯發源地、全歐最大的磚造馬爾堡城堡、哥白尼故鄉托倫的薑餅。適合愛城堡、海港與近代史的旅客。"
+      },
+      {
+        "zh": "中歐串遊:布拉格—克拉科夫—維也納—布達佩斯",
+        "days": "10–12 天",
+        "note": "以克拉科夫銜接捷克與匈牙利,火車或巴士互通。適合假期長、想一次玩多國的旅客。"
+      },
+      {
+        "zh": "華沙定點＋近郊",
+        "days": "4–5 天",
+        "note": "舊城、瓦津基公園與蕭邦故居熱拉佐瓦沃拉、二戰與波蘭猶太人歷史博物館。適合不想拉車、想深入首都的旅客。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "馬祖里湖區行船",
+        "note": "在相連的湖泊間駕帆船,或划獨木舟順克魯蒂尼亞河而下。僅適合夏季,船要提早預訂。"
+      },
+      {
+        "zh": "比亞沃維耶扎原始森林",
+        "note": "歐洲僅存的低地原始林,棲息野生歐洲野牛。進入嚴格保護區須由持照嚮導帶領,位置偏遠。"
+      },
+      {
+        "zh": "下西利西亞:克沃茲科谷地與和平教堂",
+        "note": "克沃茲科谷地的要塞群,加亞沃爾與希維德尼察兩座列世界遺產的木造「和平教堂」。班次稀疏,自駕較方便。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "animals-bison.jpg",
+      "title": "Żubr w Białowieskim Parku Narodowym 02",
+      "author": "Konrad Kurzacz Pimke",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%C5%BBubr_w_Bia%C5%82owieskim_Parku_Narodowym_02.jpg"
+    },
+    {
+      "file": "animals-stork.jpg",
+      "title": "Vola Storks 02",
+      "author": "Scotch Mist",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Vola_Storks_02.jpg"
+    },
+    {
+      "file": "animals-moose.jpg",
+      "title": "Alces alces 02(js), Biebrza National Park (Poland)",
+      "author": "Jerzy Strzelecki",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Alces_alces_02(js),_Biebrza_National_Park_(Poland).jpg"
+    },
+    {
+      "file": "animals-konik.jpg",
+      "title": "Konik Pony",
+      "author": "cazalegg",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Konik_Pony.jpg"
+    },
+    {
+      "file": "foods-pierogi.jpg",
+      "title": "Polish pierogi in a dish",
+      "author": "Piotrus",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Polish_pierogi_in_a_dish.jpg"
+    },
+    {
+      "file": "foods-bigos.jpg",
+      "title": "Bigos hunter stew",
+      "author": "Laurel F",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bigos_hunter_stew.jpg"
+    },
+    {
+      "file": "foods-schabowy.jpg",
+      "title": "Kotlet Schabowy",
+      "author": "Dmitry Dzema",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Kotlet_Schabowy.jpg"
+    },
+    {
+      "file": "foods-golabki.jpg",
+      "title": "Liat Portal for Foodie Disorder - Stuffed cabbage (homemade)",
+      "author": "HaJunkiyada",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Liat_Portal_for_Foodie_Disorder_-_Stuffed_cabbage_(homemade).jpg"
+    },
+    {
+      "file": "landmarks-krakowsquare.jpg",
+      "title": "Kraków Cloth Hall, 3 Main Market Square, Old Town, Kraków, Poland",
+      "author": "Igor123121",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Krak%C3%B3w_Cloth_Hall,_3_Main_Market_Square,_Old_Town,_Krak%C3%B3w,_Poland.jpg"
+    },
+    {
+      "file": "landmarks-wawel.jpg",
+      "title": "Krakow - Wawel from Vistula - 4",
+      "author": "Ingo Mehling",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Krakow_-_Wawel_from_Vistula_-_4.jpg"
+    },
+    {
+      "file": "landmarks-wieliczka.jpg",
+      "title": "Saint Kinga Chapel in Wieliczka Salt Mine",
+      "author": "Андрей Романенко",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Saint_Kinga_Chapel_in_Wieliczka_Salt_Mine.jpg"
+    },
+    {
+      "file": "landmarks-warsawoldtown.jpg",
+      "title": "Market Square Warsaw (22594p)",
+      "author": "Rhododendrites",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Market_Square_Warsaw_(22594p).jpg"
+    }
+  ],
+  "code": "PL"
+}

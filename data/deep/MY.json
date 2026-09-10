@@ -1,0 +1,337 @@
+{
+  "name_zh": "馬來西亞",
+  "name_en": "Malaysia",
+  "summary": "位於東南亞、橫跨馬來半島與婆羅洲北部的聯邦制國家,首都吉隆坡。扼守麻六甲海峽的貿易要衝,由馬來人、華人、印度人與眾多原住民族組成多元社會,今以電子製造、棕櫚油與石油天然氣為經濟支柱。",
+  "founding": [
+    "馬來半島與婆羅洲沿海很早就是印度洋與南海之間的貿易走廊。西元最初幾個世紀已出現受印度文化影響的港市政體,如狼牙脩與赤土;七世紀起,以蘇門答臘巨港為中心的室利佛逝掌握麻六甲海峽航路,半島多數港口臣屬其下,梵文、佛教與印度教隨商船傳入。",
+    "十五世紀初,巨港王子拜里米蘇拉在半島西岸建立馬六甲蘇丹國。馬六甲改奉伊斯蘭教、與明朝建立朝貢關係,迅速成為區域最大的轉口港,馬來語與伊斯蘭信仰藉由它的商業網絡擴散到整個群島,奠定「馬來世界」的雛形。",
+    "一五一一年葡萄牙攻佔馬六甲,一六四一年又由荷蘭取得;柔佛、吉打、霹靂、雪蘭莪等蘇丹國則各自發展。英國勢力自一七八六年取得檳城後逐步進入,一八二四年英荷條約劃分兩國在東南亞的範圍,一八二六年英國將檳城、馬六甲、新加坡合為海峽殖民地。",
+    "十九世紀後期,英國透過「馬來聯邦」與「馬來屬邦」把半島各蘇丹國納入保護;錫礦與橡膠園帶動大量華人與印度人移入,形成族群分工的多元社會。婆羅洲方面,砂拉越由布魯克家族「白人拉惹」統治,沙巴則由英屬北婆羅洲公司經營。",
+    "第二次世界大戰期間日本佔領馬來亞,戰後英國先後推行馬來亞聯邦與聯合邦方案,並面對長達十餘年的共產黨游擊戰(緊急狀態)。一九五七年八月三十一日馬來亞聯合邦脫離英國獨立,東姑阿都拉曼出任首任首相。",
+    "一九六三年馬來亞與新加坡、沙巴、砂拉越合組馬來西亞,新加坡於一九六五年退出。一九六九年族群衝突後推行以扶助土著為主的新經濟政策;一九八〇至九〇年代工業化快速推進,電子、製造與油氣使其成為中高所得經濟體,吉隆坡雙峰塔成為國家象徵。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "馬來西亞",
+    "area_km2": 330803,
+    "languages": [
+      "馬來語"
+    ],
+    "religion": "伊斯蘭教為國教(遜尼派),另有佛教、基督宗教、印度教與華人民間信仰",
+    "currency": "令吉(MYR)",
+    "government": "聯邦制議會內閣君主立憲,最高元首由九位世襲蘇丹輪任"
+  },
+  "animals": [
+    {
+      "zh": "馬來貘",
+      "en": "Malayan tapir",
+      "note": "體側大片白斑的東南亞特有貘,夜行、以嫩葉為食。",
+      "image": "animals-tapir.jpg"
+    },
+    {
+      "zh": "婆羅洲紅毛猩猩",
+      "en": "Bornean orangutan",
+      "note": "僅分布於婆羅洲雨林的大型猿類,山打根一帶設有復育中心。",
+      "image": "animals-orangutan.jpg"
+    },
+    {
+      "zh": "馬來亞虎",
+      "en": "Malayan tiger",
+      "note": "半島特有的老虎族群,現存極少,是國徽上的護盾動物。",
+      "image": "animals-malayan-tiger.jpg"
+    },
+    {
+      "zh": "馬來犀鳥",
+      "en": "Rhinoceros hornbill",
+      "note": "頭上有橙紅盔突的大型犀鳥,是砂拉越的州鳥。",
+      "image": "animals-hornbill.jpg"
+    },
+    {
+      "zh": "長鼻猴",
+      "en": "Proboscis monkey",
+      "note": "婆羅洲特有,雄猴垂鼻突出,群棲於紅樹林與河岸。",
+      "image": "animals-proboscis.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "椰漿飯",
+      "en": "Nasi lemak",
+      "note": "椰漿煮飯配參巴辣醬、江魚仔與花生,國民級早餐。",
+      "image": "foods-nasilemak.jpg"
+    },
+    {
+      "zh": "叻沙",
+      "en": "Laksa",
+      "note": "辣味米粉湯,有咖哩叻沙與檳城亞參叻沙等多種版本。",
+      "image": "foods-laksa.jpg"
+    },
+    {
+      "zh": "沙嗲",
+      "en": "Satay",
+      "note": "醃肉串炭烤,沾濃稠花生醬,常見於夜市與宴席。",
+      "image": "foods-satay.jpg"
+    },
+    {
+      "zh": "肉骨茶",
+      "en": "Bak kut teh",
+      "note": "藥材與蒜頭燉排骨的湯品,源自巴生港的華人勞工。",
+      "image": "foods-bakkutteh.jpg"
+    },
+    {
+      "zh": "印度煎餅",
+      "en": "Roti canai",
+      "note": "甩打起酥的麵餅,配咖哩或扁豆糊,嘛嘛檔常備。",
+      "image": "foods-roticanai.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "國油雙峰塔",
+      "en": "Petronas Twin Towers",
+      "note": "高四五二公尺的雙塔,曾為世界最高建築,空橋相連。",
+      "latlon": [
+        3.1578,
+        101.7117
+      ],
+      "image": "landmarks-petronas.jpg"
+    },
+    {
+      "zh": "京那巴魯山(神山)",
+      "en": "Mount Kinabalu",
+      "note": "沙巴高四〇九五公尺的花崗岩山,列世界自然遺產。",
+      "latlon": [
+        6.0753,
+        116.5583
+      ],
+      "image": "landmarks-kinabalu.jpg"
+    },
+    {
+      "zh": "馬六甲古城",
+      "en": "Historic City of Malacca",
+      "note": "葡、荷、英殖民遺跡並存的港市,荷蘭紅屋與聖保羅堂為代表。",
+      "latlon": [
+        2.1896,
+        102.2501
+      ]
+    },
+    {
+      "zh": "檳城喬治市",
+      "en": "George Town, Penang",
+      "note": "世界遺產老城,店屋、廟宇與街頭壁畫交織的多元聚落。",
+      "latlon": [
+        5.4145,
+        100.3292
+      ]
+    },
+    {
+      "zh": "黑風洞",
+      "en": "Batu Caves",
+      "note": "吉隆坡近郊的石灰岩洞與印度教神廟,大寶森節朝聖地。",
+      "latlon": [
+        3.2379,
+        101.684
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "東姑阿都拉曼",
+      "en": "Tunku Abdul Rahman",
+      "note": "首任首相,領導馬來亞獨立,被尊為「獨立之父」。"
+    },
+    {
+      "zh": "馬哈迪·莫哈末",
+      "en": "Mahathir Mohamad",
+      "note": "任期最長的首相,推動工業化與多項大型建設。"
+    },
+    {
+      "zh": "楊紫瓊",
+      "en": "Michelle Yeoh",
+      "note": "怡保出身的演員,以《媽的多重宇宙》成為首位華裔奧斯卡影后。"
+    },
+    {
+      "zh": "李宗偉",
+      "en": "Lee Chong Wei",
+      "note": "羽球名將,長年世界排名第一,奪三面奧運銀牌。"
+    },
+    {
+      "zh": "比南利",
+      "en": "P. Ramlee",
+      "note": "演員、導演兼作曲家,代表馬來電影與流行歌曲的黃金年代。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "吉隆坡與馬六甲雙城",
+      "note": "以雙峰塔、黑風洞的都會行程搭配馬六甲的古城散步,火車或巴士當日可達。"
+    },
+    {
+      "zh": "三至九月的沙巴婆羅洲生態",
+      "note": "乾季適合登神山、山打根看紅毛猩猩與長鼻猴,並延伸到西巴丹潛水。"
+    },
+    {
+      "zh": "檳城喬治市美食小旅行",
+      "note": "亞參叻沙、炒粿條與煎蕊等小販美食全年皆宜,避開年底東北季風雨季更舒適。"
+    }
+  ],
+  "events": [
+    {
+      "year": 1400,
+      "zh": "馬六甲蘇丹國建立,成為麻六甲海峽的貿易與伊斯蘭傳播中心。"
+    },
+    {
+      "year": 1511,
+      "zh": "葡萄牙攻佔馬六甲,歐洲勢力進入馬來半島。"
+    },
+    {
+      "year": 1826,
+      "zh": "英國將檳城、馬六甲、新加坡合組為海峽殖民地。"
+    },
+    {
+      "year": 1896,
+      "zh": "霹靂、雪蘭莪等組成馬來聯邦,錫礦與橡膠帶動大量華人、印度人移入。"
+    },
+    {
+      "year": 1942,
+      "zh": "日本佔領馬來亞,持續至一九四五年。"
+    },
+    {
+      "year": 1957,
+      "zh": "馬來亞聯合邦脫離英國獨立,東姑阿都拉曼任首任首相。"
+    },
+    {
+      "year": 1963,
+      "zh": "馬來亞與新加坡、沙巴、砂拉越組成馬來西亞,新加坡兩年後退出。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "吉隆坡＋馬六甲＋檳城經典縱線",
+        "days": "7–8 天",
+        "note": "吉隆坡看雙峰塔與黑風洞,南下馬六甲逛荷蘭紅屋與雞場街,再北上檳城喬治市看壁畫、吃小販美食。西馬鐵路與長途巴士串聯方便,是第一次到馬來西亞、想一次收都會與世界遺產古城的自由行首選。"
+      },
+      {
+        "zh": "沙巴亞庇婆羅洲生態度假",
+        "days": "5–6 天",
+        "note": "亞庇看日落與跳島,上京那巴魯山公園健行,再到山打根看紅毛猩猩與長鼻猴。行有餘力可加西巴丹潛水,潛水證與名額須提早申請。步調悠閒,適合親子與情侶。"
+      },
+      {
+        "zh": "檳城＋蘭卡威島",
+        "days": "6–7 天",
+        "note": "喬治市古蹟與美食安排三天,搭飛機或渡輪到蘭卡威玩天空之橋、跳島與海灘度假。古蹟加海島、拉車少,適合想放鬆又想看點文化的旅客。"
+      },
+      {
+        "zh": "吉隆坡購物美食快閃",
+        "days": "4–5 天",
+        "note": "雙峰塔、武吉免登商圈、茨廠街與嘉美克清真寺,一天往返雲頂高原或黑風洞。航班多、飯店選擇廣,適合週末小旅行與愛多元美食的旅客。"
+      },
+      {
+        "zh": "砂拉越古晉與姆祿",
+        "days": "6–7 天",
+        "note": "古晉沿河老城與貓雕像、峇哥國家公園看長鼻猴,再飛姆祿國家公園走鹿洞與石林步道。適合愛雨林、洞穴與原住民長屋文化、想避開人潮的旅客。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "金馬崙高原避暑",
+        "note": "層疊茶園、草莓園與涼爽氣候,適合喝下午茶與走森林步道。上山公路彎多易暈車,週末住宿與車位都緊張,最好提前訂。"
+      },
+      {
+        "zh": "玲瓏谷考古遺址",
+        "note": "霹靂內陸的世界遺產,出土「霹靂人」與舊石器遺物,遊客稀少。大眾運輸幾乎沒有,建議自駕或包車並找解說。"
+      },
+      {
+        "zh": "刁曼島或熱浪島潛水",
+        "note": "東海岸外海的清澈島嶼,適合浮潛與潛水考證。十一月至二月東北季風關島,行程要避開,四到九月最穩定。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "animals-tapir.jpg",
+      "title": "Tapirus indicus (Tapir de Malaisie) - 450",
+      "author": "Another one of my pictures: This photograph was taken by Medium69 (William Crochot) and released under the license stated below. You are free to use it for any purpose as long as you credit the author (William Crochot), the Source (Wikimedia Commons) and the license (CC-BY-SA 4.0) in close relation to the image. Please do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source RAW. This ensures that the changes are preserved. Please if you think that any changes should be required, please inform the author. Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tapirus_indicus_(Tapir_de_Malaisie)_-_450.jpg"
+    },
+    {
+      "file": "animals-orangutan.jpg",
+      "title": "Orangutan Kalimantan",
+      "author": "Ridwan0810",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Orangutan_Kalimantan.jpg"
+    },
+    {
+      "file": "animals-malayan-tiger.jpg",
+      "title": "Panthera Tigris Jacksoni (Malayan Tiger)",
+      "author": "B_cool",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Panthera_Tigris_Jacksoni_(Malayan_Tiger).jpg"
+    },
+    {
+      "file": "animals-hornbill.jpg",
+      "title": "Rhinoceros Hornbill Buceros rhinoceros Head 2200px",
+      "author": "Photo by and (C)2007 Derek Ramsey ( Ram-Man )",
+      "license": "CC BY-SA 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:Rhinoceros_Hornbill_Buceros_rhinoceros_Head_2200px.jpg"
+    },
+    {
+      "file": "animals-proboscis.jpg",
+      "title": "Proboscis monkey (Nasalis larvatus) male Labuk Bay",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Proboscis_monkey_(Nasalis_larvatus)_male_Labuk_Bay.jpg"
+    },
+    {
+      "file": "foods-nasilemak.jpg",
+      "title": "Nasi lemak joh",
+      "author": "مانفی",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Nasi_lemak_joh.jpg"
+    },
+    {
+      "file": "foods-laksa.jpg",
+      "title": "Curry Laksa served in Kuala Lumpur",
+      "author": "Mw12310",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Curry_Laksa_served_in_Kuala_Lumpur.jpg"
+    },
+    {
+      "file": "foods-satay.jpg",
+      "title": "DFC 2193 Sticky char-grilled skewers of savory satay glazed in a rich peanut sauce resting on a banana leaf",
+      "author": "PattayaPatrol",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:DFC_2193_Sticky_char-grilled_skewers_of_savory_satay_glazed_in_a_rich_peanut_sauce_resting_on_a_banana_leaf.jpg"
+    },
+    {
+      "file": "foods-bakkutteh.jpg",
+      "title": "Bak kut teh zz",
+      "author": "Chensiyuan",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bak_kut_teh_zz.jpg"
+    },
+    {
+      "file": "foods-roticanai.jpg",
+      "title": "Roti cane",
+      "author": "Preetam Rai from No Fixed Address",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Roti_cane.jpg"
+    },
+    {
+      "file": "landmarks-petronas.jpg",
+      "title": "Petronas Panorama II",
+      "author": "Someformofhuman",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Petronas_Panorama_II.jpg"
+    },
+    {
+      "file": "landmarks-kinabalu.jpg",
+      "title": "Kinabalu Sabah Borneo Kampong Kundasang 7",
+      "author": "kallerna",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Kinabalu_Sabah_Borneo_Kampong_Kundasang_7.jpg"
+    }
+  ],
+  "code": "MY"
+}

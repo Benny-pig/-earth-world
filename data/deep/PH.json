@@ -1,0 +1,338 @@
+{
+  "name_zh": "菲律賓",
+  "name_en": "Philippines",
+  "summary": "位於東南亞、由七千多座島嶼組成的群島國家,首都馬尼拉。歷經約三百年西班牙統治與近半世紀美國管治,是亞洲少數以天主教為主、廣泛使用英語的國家,經濟仰賴海外勞工匯款、電子代工與客服外包產業。",
+  "founding": [
+    "南島語族約在數千年前抵達菲律賓群島,形成以「巴朗蓋」為單位的聚落,與中國、婆羅洲及馬來世界貿易往來。十五世紀起,南部的蘇祿與馬京達瑙一帶建立伊斯蘭蘇丹國,呂宋的馬尼拉灣周邊則有湯多王國等政體。",
+    "一五二一年麥哲倫率領的西班牙船隊抵達,在麥克坦島被酋長拉普拉普擊殺。一五六五年黎牙實比在宿霧建立首個永久據點,一五七一年在馬尼拉設首府;群島以西班牙國王腓力二世命名,天主教會與馬尼拉—阿卡普爾科大帆船貿易成為殖民統治的支柱。",
+    "十九世紀民族意識興起,黎剎的小說與改革派的訴求推動變革。一八九六年反西班牙的菲律賓革命爆發,黎剎於年底遭處決。一八九八年美西戰爭後,西班牙依《巴黎條約》將菲律賓割讓予美國,隨即爆發持續數年的菲美戰爭。",
+    "美國統治時期推行英語教育與公共衛生,並逐步開放自治,一九三五年成立自治邦。第二次世界大戰期間日本佔領菲律賓,馬尼拉在戰事中嚴重毀損。一九四六年七月四日菲律賓脫離美國完全獨立,成立共和國。",
+    "戰後採行總統制民主。一九六五年馬可仕當選總統,一九七二年宣布戒嚴,長期集權統治至一九八六年,期間經濟惡化、外債攀升;一九八三年反對派人物艾奎諾遇刺,一九八六年「人民力量革命」使馬可仕下台,柯拉蓉·艾奎諾就任總統,翌年通過新憲法。",
+    "當代菲律賓為總統制民主國家,約一成人口在海外工作,匯款與客服外包支撐內需,經濟成長快速。長期課題包括貧富差距、颱風與地震等天災,以及民答那峨的分離運動——二〇一四年與莫洛陣線達成和平協議,二〇一九年成立邦薩摩洛自治區。二〇一六至二二年杜特蒂總統任內以爭議性的掃毒行動受到關注,二〇二二年小馬可仕當選總統。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "菲律賓共和國",
+    "area_km2": 300000,
+    "languages": [
+      "菲律賓語",
+      "英語"
+    ],
+    "religion": "以天主教為主(約八成),南部民答那峨有伊斯蘭教少數",
+    "currency": "披索(PHP)",
+    "government": "單一制總統制共和"
+  },
+  "animals": [
+    {
+      "zh": "菲律賓鷹",
+      "en": "Philippine eagle",
+      "note": "世上最大的鷹之一,菲律賓國鳥,僅存於少數島嶼森林,極度瀕危。",
+      "image": "animals-eagle.jpg"
+    },
+    {
+      "zh": "菲律賓眼鏡猴",
+      "en": "Philippine tarsier",
+      "note": "體型極小、眼睛巨大的夜行靈長類,以薄荷島最常見。",
+      "image": "animals-tarsier.jpg"
+    },
+    {
+      "zh": "水牛(卡拉宝)",
+      "en": "Carabao",
+      "note": "沼澤水牛,是農村耕作與生活的象徵,近似國家動物。",
+      "image": "animals-carabao.jpg"
+    },
+    {
+      "zh": "鯨鯊",
+      "en": "Whale shark",
+      "note": "世上最大的魚,棲息董索與宿霧海域,當地稱「布坦丁」。",
+      "image": "animals-whaleshark.jpg"
+    },
+    {
+      "zh": "民都洛水牛(塔馬勞)",
+      "en": "Tamaraw",
+      "note": "僅分布於民都洛島的小型野牛,數量稀少、極度瀕危。",
+      "image": "animals-tamaraw.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "阿多波",
+      "en": "Adobo",
+      "note": "以醋、醬油、蒜與月桂葉燜煮肉類,常被視為國民菜。",
+      "image": "foods-adobo.jpg"
+    },
+    {
+      "zh": "酸湯(西尼岡)",
+      "en": "Sinigang",
+      "note": "以羅望子等酸味食材煮成的清湯,常配豬肉或海鮮。",
+      "image": "foods-sinigang.jpg"
+    },
+    {
+      "zh": "烤乳豬",
+      "en": "Lechon",
+      "note": "整隻慢烤的乳豬,皮脆肉嫩,是節慶宴席的主角。",
+      "image": "foods-lechon.jpg"
+    },
+    {
+      "zh": "混合刨冰(哈囉哈囉)",
+      "en": "Halo-halo",
+      "note": "刨冰淋煉乳,加豆類、果凍、紫山藥冰淇淋與布丁。",
+      "image": "foods-halohalo.jpg"
+    },
+    {
+      "zh": "炒麵(潘西)",
+      "en": "Pancit",
+      "note": "多種炒米粉或麵的統稱,象徵長壽,生日常見。",
+      "image": "foods-pancit.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "巴拿威梯田",
+      "en": "Banaue Rice Terraces",
+      "note": "呂宋高地伊富高族開墾的兩千年梯田,科迪勒拉梯田群列世界遺產。",
+      "latlon": [
+        16.9294,
+        121.0569
+      ],
+      "image": "landmarks-banaue.jpg"
+    },
+    {
+      "zh": "普林塞薩港地下河",
+      "en": "Puerto Princesa Subterranean River",
+      "note": "巴拉望的地下伏流,可乘船進入石灰岩洞穴,列世界自然遺產。",
+      "latlon": [
+        10.2018,
+        118.9265
+      ],
+      "image": "landmarks-undergroundriver.jpg"
+    },
+    {
+      "zh": "巧克力山",
+      "en": "Chocolate Hills",
+      "note": "薄荷島上上千座圓錐狀小丘,乾季草枯轉為褐色。",
+      "latlon": [
+        9.829,
+        124.173
+      ]
+    },
+    {
+      "zh": "馬榮火山",
+      "en": "Mayon Volcano",
+      "note": "呂宋東南部近乎完美的圓錐活火山,常有噴發活動。",
+      "latlon": [
+        13.2572,
+        123.6856
+      ]
+    },
+    {
+      "zh": "維甘古城",
+      "en": "Historic Town of Vigan",
+      "note": "保存最完整的西班牙殖民市街,鵝卵石老街兩側是石造宅邸。",
+      "latlon": [
+        17.5747,
+        120.3869
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "荷西·黎剎",
+      "en": "José Rizal",
+      "note": "民族英雄,小說《不許犯我》喚起改革意識,一八九六年遭處決。"
+    },
+    {
+      "zh": "拉普拉普",
+      "en": "Lapulapu",
+      "note": "麥克坦島酋長,一五二一年擊退並殺死麥哲倫。"
+    },
+    {
+      "zh": "柯拉蓉·艾奎諾",
+      "en": "Corazon Aquino",
+      "note": "首位女總統,一九八六年領導「人民力量革命」。"
+    },
+    {
+      "zh": "曼尼·帕奎奧",
+      "en": "Manny Pacquiao",
+      "note": "跨八個量級奪世界拳王的拳擊手,後任參議員。"
+    },
+    {
+      "zh": "萊婭·薩隆加",
+      "en": "Lea Salonga",
+      "note": "歌手,首演音樂劇《西貢小姐》金姑娘,並為迪士尼配唱。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "乾季的巴拉望",
+      "note": "十一至五月少雨,適合在愛妮島與科隆跳島、遊潟湖與浮潛沉船。"
+    },
+    {
+      "zh": "薄荷島與宿霧",
+      "note": "看眼鏡猴、巧克力山與羅博河遊船,再到宿霧與鯨鯊、瀑布搭配,航班多。"
+    },
+    {
+      "zh": "二月的碧瑤與呂宋高地",
+      "note": "涼爽的山城適合避暑,適逢碧瑤花節;梯田在六、七月最青翠。"
+    }
+  ],
+  "events": [
+    {
+      "year": 1521,
+      "zh": "麥哲倫率西班牙船隊抵達,於麥克坦島被拉普拉普擊殺。"
+    },
+    {
+      "year": 1565,
+      "zh": "黎牙實比在宿霧建立首個西班牙永久據點,菲律賓進入約三百年殖民時期。"
+    },
+    {
+      "year": 1571,
+      "zh": "西班牙人建馬尼拉為首府,開啟馬尼拉—阿卡普爾科大帆船貿易。"
+    },
+    {
+      "year": 1896,
+      "zh": "反西班牙的菲律賓革命爆發,黎剎於年底遭處決。"
+    },
+    {
+      "year": 1898,
+      "zh": "美西戰爭後西班牙將菲律賓割讓予美國,隨即爆發菲美戰爭。"
+    },
+    {
+      "year": 1946,
+      "zh": "菲律賓脫離美國完全獨立,成立共和國。"
+    },
+    {
+      "year": 1986,
+      "zh": "「人民力量革命」使馬可仕政權下台,柯拉蓉·艾奎諾就任總統。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "宿霧＋薄荷島跳島",
+        "days": "5–6 天",
+        "note": "宿霧看鯨鯊、下潛沙丁魚風暴或跳瀑布,轉往薄荷島看眼鏡猴、巧克力山與羅博河遊船。台灣有直飛航班,行程機動,適合第一次到菲律賓、想一次玩到海島與野生動物的家庭與情侶。"
+      },
+      {
+        "zh": "巴拉望愛妮島跳島",
+        "days": "6–7 天",
+        "note": "從公主港或愛妮島出發,搭船遊大小礁湖、跳島浮潛,再看普林塞薩港地下河。旺季在乾季十一至五月,適合想拍潟湖美景、玩水的旅客。"
+      },
+      {
+        "zh": "長灘島度假",
+        "days": "4–5 天",
+        "note": "以白沙灘為核心,玩水上活動、看日落帆船,島小步行可達。適合只想曬太陽耍廢、預算彈性的年輕族群,旺季房價漲幅大。"
+      },
+      {
+        "zh": "馬尼拉＋八打雁潛水",
+        "days": "5 天",
+        "note": "馬尼拉逛王城區、大教堂與博物館,再到阿尼洛或八打雁玩微距潛水與浮潛。適合時間有限、想都會加潛水一次滿足的旅客。"
+      },
+      {
+        "zh": "科隆沉船潛水",
+        "days": "5–6 天",
+        "note": "科隆鎮出發,潛二戰沉船群、雙湖與熱門浮潛點,水面景色也秀麗。適合已有潛水證、專程玩沉船的進階玩家。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "呂宋北部梯田健行",
+        "note": "從巴拿威走到巴達德,住伊富高族村落,綠意最盛在六到七月。山路彎多、班次稀少,建議包車並多留緩衝時間。"
+      },
+      {
+        "zh": "錫亞高衝浪島",
+        "note": "以「雲九」浪點與潟湖跳島聞名,近年才熱門。雨季風浪大,颱風季要緊盯氣象,住宿旺季常客滿。"
+      },
+      {
+        "zh": "卡米金島火山小島",
+        "note": "七座火山構成的小島,有水下十字架、白沙洲與溫泉瀑布,遊客稀少。需經卡加延德奧羅轉機或搭船,班次有限。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "animals-eagle.jpg",
+      "title": "Philippine Eagle Pithecophaga jefferyi",
+      "author": "Ramon FVelasquez",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Philippine_Eagle_Pithecophaga_jefferyi.jpg"
+    },
+    {
+      "file": "animals-tarsier.jpg",
+      "title": "Philippine tarsier (Carlito syrichta fraterculus) Bohol 2",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Philippine_tarsier_(Carlito_syrichta_fraterculus)_Bohol_2.jpg"
+    },
+    {
+      "file": "animals-carabao.jpg",
+      "title": "Philippine water buffalo (carabao)",
+      "author": "Pinoydiscus",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Philippine_water_buffalo_(carabao).JPG"
+    },
+    {
+      "file": "animals-whaleshark.jpg",
+      "title": "Butanding Whale Shark (Donsol, Sorsogon) (794278440)",
+      "author": "Shubert Ciencia from Nueva Ecija, Philippines",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Butanding_Whale_Shark_(Donsol,_Sorsogon)_(794278440).jpg"
+    },
+    {
+      "file": "animals-tamaraw.jpg",
+      "title": "Bubalus mindorensis by Gregg Yan 01",
+      "author": "LaDez",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bubalus_mindorensis_by_Gregg_Yan_01.jpg"
+    },
+    {
+      "file": "foods-adobo.jpg",
+      "title": "Chicken adobo meal 20231025",
+      "author": "Ian Lopez ( Ianlopez1115 )",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Chicken_adobo_meal_20231025.jpg"
+    },
+    {
+      "file": "foods-sinigang.jpg",
+      "title": "Sinigang na baboy",
+      "author": "Anne Molina",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sinigang_na_baboy.jpg"
+    },
+    {
+      "file": "foods-lechon.jpg",
+      "title": "Lechon philippines",
+      "author": "Judgefloro",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Lechon_philippines.jpg"
+    },
+    {
+      "file": "foods-halohalo.jpg",
+      "title": "A glass of Halo-Halo (shaved or crushed ice dessert in the Philippines)",
+      "author": "Asecretfanfare",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:A_glass_of_Halo-Halo_(shaved_or_crushed_ice_dessert_in_the_Philippines).jpg"
+    },
+    {
+      "file": "foods-pancit.jpg",
+      "title": "Pancit Ilonggo Style - 12110089845",
+      "author": "pulaw",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pancit_Ilonggo_Style_-_12110089845.jpg"
+    },
+    {
+      "file": "landmarks-banaue.jpg",
+      "title": "Banaue Rice Terraces center (Banaue, Ifugao; 11-27-2022)",
+      "author": "Patrickroque01",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Banaue_Rice_Terraces_center_(Banaue,_Ifugao;_11-27-2022).jpg"
+    },
+    {
+      "file": "landmarks-undergroundriver.jpg",
+      "title": "Puerto Princesa Subterranean River Cave, Palawan, Philippines",
+      "author": "Vyacheslav Argenberg",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Puerto_Princesa_Subterranean_River_Cave,_Palawan,_Philippines.jpg"
+    }
+  ],
+  "code": "PH"
+}

@@ -1,0 +1,337 @@
+{
+  "name_zh": "奧地利",
+  "name_en": "Austria",
+  "summary": "位於中歐的內陸聯邦國家,首都維也納,由九個邦組成。曾是哈布斯堡王朝與奧匈帝國的核心,一九五五年恢復主權後宣布永久中立。境內多為阿爾卑斯山地,以古典音樂傳統、冬季運動與宜居城市著稱。",
+  "founding": [
+    "東阿爾卑斯與多瑙河谷曾有凱爾特人的諾里庫姆王國,後成為羅馬的諾里庫姆與潘諾尼亞行省,設有溫多波納(維也納)等城鎮。羅馬之後,巴伐利亞人、斯拉夫人與阿瓦爾人遷入,查理曼設立邊疆區;「Ostarrîchi」(東部之地)一名首見於九九六年的文獻。",
+    "自九七六年起巴本堡家族統治此邊疆區,一一五六年升格為公國。一二七八年哈布斯堡的魯道夫一世在馬希費爾德之役擊敗波希米亞的奧托卡二世,取得奧地利,自此統治達六百四十年,以維也納為根據地,靠聯姻與繼承不斷擴張。",
+    "哈布斯堡君主自一四三八年起幾乎壟斷神聖羅馬皇帝之位。維也納在一五二九與一六八三年兩度抵禦鄂圖曼圍城,一六八三年的解圍之役阻止了鄂圖曼在歐洲的擴張。十七至十八世紀,君主國取得匈牙利、波希米亞、克羅埃西亞、加利西亞與部分義大利領地;瑪麗亞·特蕾莎與約瑟夫二世推行中央集權改革。",
+    "法蘭茲二世於一八〇四年改稱奧地利皇帝,一八〇六年解散神聖羅馬帝國。一八一五年後,奧地利在梅特涅主導下領導德意志邦聯。一八六六年敗於普魯士,結束在德意志的領導地位;一八六七年折衷方案成立奧匈二元帝國。",
+    "一九一四年斐迪南大公在塞拉耶佛遇刺,引爆第一次世界大戰。一九一八年戰敗後帝國瓦解,德語區的殘餘部分成為奧地利第一共和。政治對立導致內部衝突與威權統治,一九三八年納粹德國併吞奧地利。",
+    "一九四五年後,奧地利由四國分區佔領,至一九五五年《奧地利國家條約》恢復完整主權,並於同年宣布永久中立。奧地利一九九五年加入歐盟並採用歐元。今日為繁榮的聯邦共和國,維也納屢獲評為全球最宜居城市之一,古典音樂傳統深厚。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "奧地利共和國",
+    "area_km2": 83879,
+    "languages": [
+      "德語"
+    ],
+    "religion": "以天主教為主,另有新教與無宗教者",
+    "currency": "歐元(EUR)",
+    "government": "聯邦制議會民主共和"
+  },
+  "animals": [
+    {
+      "zh": "金鵰",
+      "en": "Golden eagle",
+      "note": "棲息高陶恩等高山地帶的大型猛禽,是奧地利的代表鳥類。",
+      "image": "animals-goldeneagle.jpg"
+    },
+    {
+      "zh": "高地北山羊",
+      "en": "Alpine ibex",
+      "note": "高山岩壁上的野生山羊,經復育重返陶恩山區。",
+      "image": "animals-ibex.jpg"
+    },
+    {
+      "zh": "阿爾卑斯旱獺",
+      "en": "Alpine marmot",
+      "note": "林線以上草原的穴居囓齒類,以哨聲互相示警。",
+      "image": "animals-marmot.jpg"
+    },
+    {
+      "zh": "鬍禿鷲",
+      "en": "Bearded vulture",
+      "note": "以骨為食的大型兀鷲,一九八〇年代起在高陶恩重新引入。",
+      "image": "animals-beardedvulture.jpg"
+    },
+    {
+      "zh": "利皮扎馬",
+      "en": "Lipizzaner",
+      "note": "維也納西班牙騎術學校的白馬,在皮貝爾種馬場育成。",
+      "image": "animals-lipizzaner.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "維也納炸肉排",
+      "en": "Wiener Schnitzel",
+      "note": "裹麵包粉香煎的小牛肉薄片,傳統擠檸檬汁食用。",
+      "image": "foods-schnitzel.jpg"
+    },
+    {
+      "zh": "薩赫蛋糕",
+      "en": "Sachertorte",
+      "note": "夾杏桃果醬、覆黑巧克力糖衣的蛋糕,源自薩赫飯店。",
+      "image": "foods-sachertorte.jpg"
+    },
+    {
+      "zh": "蘋果卷",
+      "en": "Apfelstrudel",
+      "note": "薄如紙的酥皮包裹肉桂蘋果餡,常配香草醬。"
+    },
+    {
+      "zh": "皇帝煎餅",
+      "en": "Kaiserschmarrn",
+      "note": "撕碎並焦糖化的厚煎餅,撒糖粉配果醬。",
+      "image": "foods-kaiserschmarrn.jpg"
+    },
+    {
+      "zh": "水煮牛肉",
+      "en": "Tafelspitz",
+      "note": "牛臀肉在高湯中慢煮,佐蘋果辣根醬,傳為法蘭茲·約瑟夫皇帝所愛。",
+      "image": "foods-tafelspitz.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "熊布朗宮",
+      "en": "Schönbrunn Palace",
+      "note": "哈布斯堡的夏宮與花園,列世界遺產。",
+      "latlon": [
+        48.1849,
+        16.3122
+      ],
+      "image": "landmarks-schonbrunn.jpg"
+    },
+    {
+      "zh": "維也納歷史中心與聖史蒂芬主教座堂",
+      "en": "Historic Centre of Vienna",
+      "note": "世界遺產老城,哥德式主教座堂有花紋琉璃瓦頂。",
+      "latlon": [
+        48.2085,
+        16.3731
+      ],
+      "image": "landmarks-stephansdom.jpg"
+    },
+    {
+      "zh": "哈爾施塔特",
+      "en": "Hallstatt",
+      "note": "湖畔小鎮與古老鹽礦,屬哈爾施塔特—達赫斯坦世界遺產文化景觀。",
+      "latlon": [
+        47.5623,
+        13.6493
+      ],
+      "image": "landmarks-hallstatt.jpg"
+    },
+    {
+      "zh": "薩爾茲堡老城",
+      "en": "Historic Centre of Salzburg",
+      "note": "莫札特故鄉,山頂有霍亨薩爾茲堡要塞,列世界遺產。",
+      "latlon": [
+        47.7981,
+        13.047
+      ]
+    },
+    {
+      "zh": "大格洛克納高山公路",
+      "en": "Grossglockner High Alpine Road",
+      "note": "通往奧地利最高峰與帕斯特澤冰河的觀景山路。",
+      "latlon": [
+        47.0742,
+        12.83
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "莫札特",
+      "en": "Wolfgang Amadeus Mozart",
+      "note": "生於薩爾茲堡的作曲家,古典時期的代表人物。"
+    },
+    {
+      "zh": "約瑟夫·海頓",
+      "en": "Joseph Haydn",
+      "note": "被譽為「交響曲之父」與弦樂四重奏形式的奠基者。"
+    },
+    {
+      "zh": "西格蒙德·佛洛伊德",
+      "en": "Sigmund Freud",
+      "note": "精神分析學創始人,長年在維也納行醫與著述。"
+    },
+    {
+      "zh": "瑪麗亞·特蕾莎",
+      "en": "Maria Theresa",
+      "note": "唯一以女性身分統治哈布斯堡領地的君主,推行十八世紀改革。"
+    },
+    {
+      "zh": "古斯塔夫·克林姆",
+      "en": "Gustav Klimt",
+      "note": "維也納分離派畫家,代表作《吻》以金箔裝飾聞名。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "維也納的音樂與咖啡館",
+      "note": "看一場歌劇或音樂會、逛藝術史博物館與美景宮,再跑幾家百年咖啡館;一、二月是舞會季,十二月有聖誕市集。"
+    },
+    {
+      "zh": "薩爾茲堡與鹽湖區",
+      "note": "薩爾茲堡老城、哈爾施塔特與沃夫岡湖,夏季適合玩湖,七、八月有薩爾茲堡音樂節。"
+    },
+    {
+      "zh": "提洛爾阿爾卑斯",
+      "note": "因斯布魯克、大格洛克納高山公路,夏季健行、冬季滑雪。"
+    }
+  ],
+  "events": [
+    {
+      "year": 996,
+      "zh": "文獻首次出現「Ostarrîchi」(奧地利)之名。"
+    },
+    {
+      "year": 1278,
+      "zh": "哈布斯堡的魯道夫一世在馬希費爾德之役取勝,開啟六百餘年統治。"
+    },
+    {
+      "year": 1683,
+      "zh": "維也納之圍解圍,鄂圖曼帝國在中歐的擴張受阻。"
+    },
+    {
+      "year": 1867,
+      "zh": "奧匈折衷方案成立,形成奧匈二元帝國。"
+    },
+    {
+      "year": 1914,
+      "zh": "斐迪南大公在塞拉耶佛遇刺,引爆第一次世界大戰。"
+    },
+    {
+      "year": 1938,
+      "zh": "納粹德國併吞奧地利。"
+    },
+    {
+      "year": 1955,
+      "zh": "《奧地利國家條約》簽署,恢復主權並宣布永久中立。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "維也納＋薩爾茲堡＋哈爾施塔特",
+        "days": "7–8 天",
+        "note": "熊布朗宮、聖史蒂芬教堂與美術館,西行鹽湖區、哈爾施塔特湖畔小鎮與薩爾茲堡莫札特故居,聯邦鐵路串聯。第一次到奧地利、想一次收帝國古都與湖光山色的自由行首選。"
+      },
+      {
+        "zh": "奧地利＋捷克:維也納—布拉格—庫倫洛夫",
+        "days": "8–9 天",
+        "note": "兩座中歐古都加波希米亞小鎮,巴士或火車約四小時互通。適合假期充足、想一次玩兩國的旅客。"
+      },
+      {
+        "zh": "音樂與咖啡館的維也納定點",
+        "days": "4–5 天",
+        "note": "國家歌劇院或金色大廳聽一場、逛藝術史博物館與美景宮的克林姆,跑幾家百年咖啡館。適合愛古典樂與藝術、想慢慢玩一座城的旅客。"
+      },
+      {
+        "zh": "提洛爾阿爾卑斯自駕",
+        "days": "6–7 天",
+        "note": "因斯布魯克金頂與跳台、大格洛克納高山公路、湖區與山中纜車。適合會開車、想看雪山冰河與高山公路的旅客,夏季通行。"
+      },
+      {
+        "zh": "多瑙河瓦豪河谷＋維也納",
+        "days": "5–6 天",
+        "note": "梅爾克修道院、瓦豪河谷葡萄園單車或遊船、克雷姆斯小鎮,再回維也納。適合喜歡河谷田園、修道院與白酒的旅客。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "施泰爾馬克南部葡萄酒之路",
+        "note": "起伏的葡萄園、南瓜籽油與「施泰爾托斯卡尼」風光,格拉茲可作據點。需開車,淡季安靜。"
+      },
+      {
+        "zh": "克恩頓湖區與山頂城堡",
+        "note": "霍赫奧斯特維茨山頂城堡與沃特湖等溫暖湖泊,鄰近斯洛維尼亞,比提洛爾清靜。"
+      },
+      {
+        "zh": "塞默靈鐵路景觀線",
+        "note": "世界第一條山岳鐵路(列世界遺產),高架橋與隧道串連,可在車站之間健行。從維也納出發很方便。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "animals-goldeneagle.jpg",
+      "title": "Steinadler Aquila chrysaetos closeup2 Richard Bartz",
+      "author": "Richard Bartz , Munich aka Makro Freak",
+      "license": "CC BY-SA 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:Steinadler_Aquila_chrysaetos_closeup2_Richard_Bartz.jpg"
+    },
+    {
+      "file": "animals-ibex.jpg",
+      "title": "Steinbock 14962940265 (cropped)",
+      "author": "Bernd Thaller",
+      "license": "CC BY-SA 3.0 at",
+      "source": "https://commons.wikimedia.org/wiki/File:Steinbock_14962940265_(cropped).jpg"
+    },
+    {
+      "file": "animals-marmot.jpg",
+      "title": "Großglockner-Hochalpenstraße Murmeltier 8",
+      "author": "Zairon",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Gro%C3%9Fglockner-Hochalpenstra%C3%9Fe_Murmeltier_8.JPG"
+    },
+    {
+      "file": "animals-beardedvulture.jpg",
+      "title": "Gypaetus barbatus in Vanoise (2)",
+      "author": "Ibex73",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Gypaetus_barbatus_in_Vanoise_(2).jpg"
+    },
+    {
+      "file": "animals-lipizzaner.jpg",
+      "title": "Spanish Riding School 01",
+      "author": "Stefan97",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Spanish_Riding_School_01.jpg"
+    },
+    {
+      "file": "foods-schnitzel.jpg",
+      "title": "Wiener Schnitzel in Vienna",
+      "author": "JIP",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Wiener_Schnitzel_in_Vienna.jpg"
+    },
+    {
+      "file": "foods-sachertorte.jpg",
+      "title": "Sachertorte in Vienna",
+      "author": "Rizka",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sachertorte_in_Vienna.jpg"
+    },
+    {
+      "file": "foods-kaiserschmarrn.jpg",
+      "title": "Kaiserschmarrn und Apfelmus",
+      "author": "Ich",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Kaiserschmarrn_und_Apfelmus.jpg"
+    },
+    {
+      "file": "foods-tafelspitz.jpg",
+      "title": "Tafelspitz (12972000583)",
+      "author": "Thomas Quine",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tafelspitz_(12972000583).jpg"
+    },
+    {
+      "file": "landmarks-schonbrunn.jpg",
+      "title": "Palacio de Schönbrunn, Viena, Austria, 2020-02-02, DD 10",
+      "author": "Diego Delso",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Palacio_de_Sch%C3%B6nbrunn,_Viena,_Austria,_2020-02-02,_DD_10.jpg"
+    },
+    {
+      "file": "landmarks-stephansdom.jpg",
+      "title": "Wien Dom St. Stephan Front 2",
+      "author": "Zairon",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Wien_Dom_St._Stephan_Front_2.JPG"
+    },
+    {
+      "file": "landmarks-hallstatt.jpg",
+      "title": "Panoramic view of Hallstatt village and shoreline from lake",
+      "author": "David Kernan",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Panoramic_view_of_Hallstatt_village_and_shoreline_from_lake.jpg"
+    }
+  ],
+  "code": "AT"
+}

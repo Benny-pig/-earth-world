@@ -1,0 +1,337 @@
+{
+  "name_zh": "荷蘭",
+  "name_en": "Netherlands",
+  "summary": "位於西歐、瀕臨北海的低地國家,憲法首都阿姆斯特丹,中央政府設於海牙。約四分之一國土低於海平面,以圩田與堤防聞名;十七世紀曾為海上貿易強權,今為高度開放的經濟體,鹿特丹港與農業、半導體出口居世界前列。",
+  "founding": [
+    "低地地區位於萊茵河、馬士河與斯海爾德河的三角洲。羅馬時代萊茵河一線是帝國邊界,居住著巴達維與弗里西等部族。中世紀早期先後屬法蘭克王國與神聖羅馬帝國,分裂為荷蘭、海爾德蘭、烏得勒支、布拉班特等伯國與公國,貿易城鎮與治水的「水務會」逐漸興起。",
+    "十五世紀勃艮第公爵統合了大部分低地地區,其後經聯姻歸入哈布斯堡家族,再傳給西班牙的腓力二世。宗教改革、稅賦與自治權的爭端,於一五六八年引爆尼德蘭起義。",
+    "一五七九年北方各省締結烏得勒支同盟,一五八一年簽署《誓絕法案》廢黜腓力二世,荷蘭共和國(七省聯合共和國)成形,由聯省議會與奧蘭治家族的執政領導。八十年戰爭於一六四八年《明斯特和約》結束,西班牙承認其獨立。",
+    "十七世紀的「黃金時代」:阿姆斯特丹成為世界貿易與金融中心,聯合東印度公司(一六〇二年)與西印度公司在各地設立商館與殖民地(東印度、好望角、錫蘭、新阿姆斯特丹、加勒比等,並涉入大西洋奴隸貿易);繪畫(林布蘭、維梅爾)、科學(惠更斯)與宗教寬容使各地人才與難民匯聚。",
+    "一七九五年法國革命軍進入,先後成立巴達維亞共和國與荷蘭王國(拿破崙之弟為王),一八一〇年被併入法國。一八一五年維也納會議成立尼德蘭聯合王國,涵蓋今比利時與盧森堡,由奧蘭治-拿騷家族的威廉一世為王;比利時於一八三〇年脫離。一八四八年憲政改革確立議會政府。",
+    "荷蘭在第一次世界大戰保持中立,第二次世界大戰遭德國入侵佔領(一九四〇至四五年),鹿特丹遭轟炸,並經歷「飢餓的冬天」與大批猶太人被遣送。戰後推動去殖民化(印尼一九四九年、蘇利南一九七五年),並成為比荷盧、北約與歐洲共同體的創始成員。今日以治水工程、自行車文化與開放的社會政策著稱;王國另包含阿魯巴、庫拉索與荷屬聖馬丁。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "荷蘭王國",
+    "area_km2": 41850,
+    "languages": [
+      "荷蘭語"
+    ],
+    "religion": "無國教;約半數國民無宗教信仰,另有天主教與新教",
+    "currency": "歐元(EUR)",
+    "government": "議會制君主立憲"
+  },
+  "animals": [
+    {
+      "zh": "荷士登乳牛",
+      "en": "Holstein Friesian cattle",
+      "note": "源自弗里斯蘭與荷蘭的黑白花乳牛,產乳量高,遍及全球。",
+      "image": "animals-holstein.jpg"
+    },
+    {
+      "zh": "弗里斯蘭馬",
+      "en": "Friesian horse",
+      "note": "原產弗里斯蘭省的黑色古老馬種,鬃尾濃密、步伐華麗。",
+      "image": "animals-friesianhorse.jpg"
+    },
+    {
+      "zh": "黑尾塍鷸",
+      "en": "Black-tailed godwit",
+      "note": "經票選的荷蘭國鳥,春夏在草地繁殖,是圩田濕地的代表鳥。",
+      "image": "animals-godwit.jpg"
+    },
+    {
+      "zh": "斑海豹",
+      "en": "Harbour seal",
+      "note": "棲息瓦登海的淺灘,退潮時成群曬太陽。",
+      "image": "animals-seal.jpg"
+    },
+    {
+      "zh": "馬鹿(赤鹿)",
+      "en": "Red deer",
+      "note": "見於費呂沃地區與東法爾德斯普拉森自然保留區。",
+      "image": "animals-reddeer.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "生醃鯡魚",
+      "en": "Hollandse Nieuwe herring",
+      "note": "鹽漬生鯡配洋蔥,傳統上抓著魚尾仰頭吃。",
+      "image": "foods-haring.jpg"
+    },
+    {
+      "zh": "迷你鬆餅",
+      "en": "Poffertjes",
+      "note": "一口大小的膨鬆小鬆餅,撒糖粉、抹奶油。",
+      "image": "foods-poffertjes.jpg"
+    },
+    {
+      "zh": "焦糖糖漿餅",
+      "en": "Stroopwafel",
+      "note": "兩片薄餅夾焦糖糖漿,源自高達,常擱在熱飲杯口回軟。",
+      "image": "foods-stroopwafel.jpg"
+    },
+    {
+      "zh": "高達與伊丹乳酪",
+      "en": "Gouda and Edam cheese",
+      "note": "以集市城鎮命名的圓輪乳酪,阿克馬有傳統乳酪市集。",
+      "image": "foods-gouda.jpg"
+    },
+    {
+      "zh": "炸肉丸",
+      "en": "Bitterballen",
+      "note": "裹粉油炸的濃醬肉丸,是配啤酒的酒館小點。",
+      "image": "foods-bitterballen.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "阿姆斯特丹運河環帶",
+      "en": "Amsterdam Canal Ring",
+      "note": "十七世紀開鑿的同心運河與山形牆屋,列世界遺產。",
+      "latlon": [
+        52.3667,
+        4.8945
+      ]
+    },
+    {
+      "zh": "小孩堤防風車群",
+      "en": "Kinderdijk",
+      "note": "十八世紀為排水而建的十九座風車,列世界遺產。",
+      "latlon": [
+        51.8836,
+        4.6403
+      ],
+      "image": "landmarks-kinderdijk.jpg"
+    },
+    {
+      "zh": "庫肯霍夫花園",
+      "en": "Keukenhof",
+      "note": "利瑟鎮的球根花園,每年三至五月鬱金香盛開。",
+      "latlon": [
+        52.2697,
+        4.5469
+      ],
+      "image": "landmarks-keukenhof.jpg"
+    },
+    {
+      "zh": "桑斯安斯風車村",
+      "en": "Zaanse Schans",
+      "note": "保存綠色木屋與運轉中風車的露天聚落,近阿姆斯特丹。",
+      "latlon": [
+        52.4744,
+        4.8175
+      ]
+    },
+    {
+      "zh": "海牙和平宮",
+      "en": "Peace Palace",
+      "note": "一九一三年落成,今為國際法院與常設仲裁法院所在地。",
+      "latlon": [
+        52.0866,
+        4.2957
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "林布蘭",
+      "en": "Rembrandt van Rijn",
+      "note": "黃金時代畫家,代表作《夜巡》,擅長光影與肖像。"
+    },
+    {
+      "zh": "維梅爾",
+      "en": "Johannes Vermeer",
+      "note": "台夫特畫家,以《戴珍珠耳環的少女》等室內光線畫聞名。"
+    },
+    {
+      "zh": "梵谷",
+      "en": "Vincent van Gogh",
+      "note": "後印象派畫家,生前默默無聞,身後影響深遠。"
+    },
+    {
+      "zh": "安妮·法蘭克",
+      "en": "Anne Frank",
+      "note": "猶太少女,藏匿於阿姆斯特丹期間寫下日記,歿於納粹集中營。"
+    },
+    {
+      "zh": "伊拉斯謨",
+      "en": "Erasmus of Rotterdam",
+      "note": "文藝復興人文學者,校訂希臘文《新約》,主張寬容與改革。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "三至五月的鬱金香花季",
+      "note": "庫肯霍夫花園與麗絲的球根花田最盛,可租單車穿行花田,務必先訂票。"
+    },
+    {
+      "zh": "阿姆斯特丹與台夫特的博物館與運河",
+      "note": "國家博物館、梵谷美術館與運河遊船全年可訪,四月廿七日國王節最熱鬧。"
+    },
+    {
+      "zh": "秋天的德霍格費呂沃國家公園",
+      "note": "騎園內免費白單車、看庫勒-穆勒美術館的梵谷收藏,九、十月是馬鹿發情季。"
+    }
+  ],
+  "events": [
+    {
+      "year": 1568,
+      "zh": "尼德蘭起義爆發,北方各省反抗西班牙統治。"
+    },
+    {
+      "year": 1581,
+      "zh": "各省簽署《誓絕法案》,廢黜西班牙國王,共和國成形。"
+    },
+    {
+      "year": 1602,
+      "zh": "荷蘭聯合東印度公司成立,開啟海上貿易擴張。"
+    },
+    {
+      "year": 1648,
+      "zh": "《明斯特和約》簽訂,西班牙承認荷蘭共和國獨立。"
+    },
+    {
+      "year": 1815,
+      "zh": "維也納會議成立尼德蘭聯合王國,由奧蘭治家族的威廉一世為王。"
+    },
+    {
+      "year": 1830,
+      "zh": "南方省份脫離,翌年成為比利時。"
+    },
+    {
+      "year": 1940,
+      "zh": "納粹德國入侵並佔領荷蘭,至一九四五年五月解放。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "阿姆斯特丹深度＋風車村",
+        "days": "4–5 天",
+        "note": "國家博物館、梵谷美術館、安妮之家與運河遊船,再一天到桑斯安斯風車村或羊角村。定點玩透一座城、拉車少,是第一次到荷蘭的自由行首選。"
+      },
+      {
+        "zh": "荷蘭經典環線:阿姆斯特丹—海牙—台夫特—鹿特丹",
+        "days": "6–7 天",
+        "note": "加上小孩堤防風車、海牙莫瑞泰斯美術館與鹿特丹的現代建築與市場廳,城際火車班次密。適合想一次看齊古典與現代荷蘭的旅客。"
+      },
+      {
+        "zh": "春季鬱金香花季",
+        "days": "4–5 天",
+        "note": "三月中至五月中,庫肯霍夫花園、麗絲球根花田騎車、阿克馬乳酪市集。專程賞花拍照,務必先買門票並避開週末人潮。"
+      },
+      {
+        "zh": "荷比盧三國",
+        "days": "8–10 天",
+        "note": "阿姆斯特丹、布魯塞爾、布魯日、盧森堡市,火車一兩小時互通。適合假期較長、想一次收三國精華的旅客。"
+      },
+      {
+        "zh": "荷蘭北部與瓦登海",
+        "days": "5–6 天",
+        "note": "阿夫魯戴克攔海大壩、菲仕蘭省的馬與湖區,搭船登特塞爾島賞海豹。適合喜歡自然、水利工程與離島步調的旅客。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "羊角村與東北田園",
+        "note": "沒有汽車、只能撐船或騎車的「綠色威尼斯」,茅草屋倒映水道。中午一日遊人潮多,最好住一晚或一早前往。"
+      },
+      {
+        "zh": "澤蘭省三角洲工程",
+        "note": "看「三角洲工程」的防潮閘與人工島尼爾傑揚斯,順遊蚵鎮與貝類餐廳。需開車,海邊風大。"
+      },
+      {
+        "zh": "馬斯垂克與南林堡丘陵",
+        "note": "荷蘭少見的丘陵地帶,有洞穴、弗萊特廣場與跨境氛圍,適合騎車與逛市集,感覺不太「荷蘭」。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "animals-holstein.jpg",
+      "title": "Holstein Friesian UK Yorkshire July 2011",
+      "author": "Littledumpy34",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Holstein_Friesian_UK_Yorkshire_July_2011.jpg"
+    },
+    {
+      "file": "animals-friesianhorse.jpg",
+      "title": "Friesian horse piaffe",
+      "author": "Annalisa Parisi",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Friesian_horse_piaffe.jpg"
+    },
+    {
+      "file": "animals-godwit.jpg",
+      "title": "Black-tailed godwit (Limosa limosa limosa) in flight Marken",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Black-tailed_godwit_(Limosa_limosa_limosa)_in_flight_Marken.jpg"
+    },
+    {
+      "file": "animals-seal.jpg",
+      "title": "Tertius seehundbank 22.08.2011 15-51-59.2011 15-51-59",
+      "author": "Dirk Ingo Franke",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tertius_seehundbank_22.08.2011_15-51-59.2011_15-51-59.jpg"
+    },
+    {
+      "file": "animals-reddeer.jpg",
+      "title": "Cervus elaphus (Red deer), Veluwe, the Netherlands",
+      "author": "Bj.schoenmakers",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Cervus_elaphus_(Red_deer),_Veluwe,_the_Netherlands.jpg"
+    },
+    {
+      "file": "foods-haring.jpg",
+      "title": "Haring 04",
+      "author": "Takeaway",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Haring_04.jpg"
+    },
+    {
+      "file": "foods-poffertjes.jpg",
+      "title": "Poffertjes 001",
+      "author": "見 Commons File 頁",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Poffertjes_001.jpg"
+    },
+    {
+      "file": "foods-stroopwafel.jpg",
+      "title": "Stroopwafels 01",
+      "author": "Takeaway",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Stroopwafels_01.jpg"
+    },
+    {
+      "file": "foods-gouda.jpg",
+      "title": "005 Cheese shop in Amsterdam, Netherlands",
+      "author": "Marek Ślusarczyk (Tupungato)",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:005_Cheese_shop_in_Amsterdam,_Netherlands.jpg"
+    },
+    {
+      "file": "foods-bitterballen.jpg",
+      "title": "Bitterballen mosterd mayo",
+      "author": "Takeaway",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bitterballen_mosterd_mayo.jpg"
+    },
+    {
+      "file": "landmarks-kinderdijk.jpg",
+      "title": "Kinderdijk windmills 07",
+      "author": "John Samuel",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Kinderdijk_windmills_07.jpg"
+    },
+    {
+      "file": "landmarks-keukenhof.jpg",
+      "title": "Tulip garden Keukenhof 1",
+      "author": "Goutam",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tulip_garden_Keukenhof_1.jpg"
+    }
+  ],
+  "code": "NL"
+}

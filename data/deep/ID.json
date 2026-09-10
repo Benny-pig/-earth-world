@@ -1,0 +1,337 @@
+{
+  "name_zh": "印尼",
+  "name_en": "Indonesia",
+  "summary": "橫跨赤道、由一萬七千多座島嶼組成的東南亞大國,首都雅加達(正推動遷都至加里曼丹的努山塔拉)。人口逾二.七億,是世界人口第四多、穆斯林人口最多的國家,天然資源豐富,為二十國集團成員。",
+  "founding": [
+    "南島語族約在數千年前遷入群島。西元最初幾個世紀起,受印度文化影響的王國陸續興起:七至十三世紀以蘇門答臘為基地的室利佛逝掌握麻六甲與巽他海峽的海上貿易;中爪哇的夏連特拉與馬打蘭王朝則興建了婆羅浮屠與普蘭巴南。",
+    "十三世紀末東爪哇的滿者伯夷崛起,在哈奄·武魯與宰相加查·瑪達時期勢力一度及於群島大部,常被視為近代印尼疆域的先聲。",
+    "伊斯蘭教自十三世紀起隨貿易傳入,淡目、亞齊、萬丹、馬打蘭與香料群島的特爾納特等蘇丹國相繼興起。歐洲人為香料而來,一六〇二年荷蘭聯合東印度公司成立,一六一九年以巴達維亞(今雅加達)為基地,逐步壟斷貿易並向內陸擴張。",
+    "公司於一七九九年解散,領地轉由荷蘭政府接管,成為荷屬東印度。十九世紀推行「強迫種植制」與種植園經濟,並在亞齊等地完成征服。二十世紀初民族運動興起,一九二八年「青年誓言」提出一個民族、一個祖國、一種語言。",
+    "第二次世界大戰期間日本佔領群島。一九四五年八月十七日蘇卡諾與哈達宣布獨立,成立印度尼西亞共和國;荷蘭一度企圖恢復統治,經武裝抗爭與外交折衝,於一九四九年底承認主權。",
+    "一九六五年九月底發生殺害多名軍方將領的政變事件,隨後爆發大規模針對共產黨人及疑似支持者的暴力,估計數十萬人喪生;蘇哈托掌握軍政大權,一九六七年起推行威權的「新秩序」統治,以發展為重。一九九七至九八年亞洲金融風暴引發大規模抗議,蘇哈托下台,進入「改革」時期,實行地方分權與直接選舉。東帝汶於二〇〇二年獨立,亞齊於二〇〇五年達成和平協議。今日印尼為二十國集團經濟體,並依法律推動將首都遷往加里曼丹的努山塔拉。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "印度尼西亞共和國",
+    "area_km2": 1904569,
+    "languages": [
+      "印尼語"
+    ],
+    "religion": "以伊斯蘭教為主(約87%),另有基督宗教、印度教(峇里島)與佛教",
+    "currency": "印尼盾(IDR)",
+    "government": "單一制總統制共和"
+  },
+  "animals": [
+    {
+      "zh": "科莫多龍",
+      "en": "Komodo dragon",
+      "note": "世上最大的蜥蜴,僅棲息於科莫多、林卡與弗洛勒斯等島。",
+      "image": "animals-komodo.jpg"
+    },
+    {
+      "zh": "蘇門答臘虎",
+      "en": "Sumatran tiger",
+      "note": "體型最小的老虎亞種,僅存於蘇門答臘,極度瀕危。",
+      "image": "animals-sumatrantiger.jpg"
+    },
+    {
+      "zh": "蘇門答臘紅毛猩猩",
+      "en": "Sumatran orangutan",
+      "note": "棲於蘇門答臘北部雨林的大型猿類,瀕危。",
+      "image": "animals-orangutan.jpg"
+    },
+    {
+      "zh": "爪哇犀牛",
+      "en": "Javan rhinoceros",
+      "note": "僅存於西爪哇烏戎庫隆國家公園,全球僅數十頭,極度瀕危。",
+      "image": "animals-javanrhino.jpg"
+    },
+    {
+      "zh": "天堂鳥",
+      "en": "Birds-of-paradise",
+      "note": "分布於巴布亞的科別,雄鳥求偶羽飾與舞姿極為華麗。",
+      "image": "animals-bird-of-paradise.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "仁當",
+      "en": "Rendang",
+      "note": "米南加保料理,牛肉以椰漿與香料長時間慢燉至收汁。",
+      "image": "foods-rendang.jpg"
+    },
+    {
+      "zh": "印尼炒飯",
+      "en": "Nasi goreng",
+      "note": "以甜醬油炒飯,常配煎蛋、蝦餅與醃菜,近似國民菜。",
+      "image": "foods-nasigoreng.jpg"
+    },
+    {
+      "zh": "沙嗲",
+      "en": "Sate",
+      "note": "醃肉串炭烤淋花生醬,雞肉沙嗲最為普遍。",
+      "image": "foods-sate.jpg"
+    },
+    {
+      "zh": "加多加多",
+      "en": "Gado-gado",
+      "note": "燙青菜、豆腐與蛋淋上花生醬的沙拉。",
+      "image": "foods-gadogado.jpg"
+    },
+    {
+      "zh": "巴克索",
+      "en": "Bakso",
+      "note": "牛肉丸湯麵,街頭攤車叫賣的平民小吃。",
+      "image": "foods-bakso.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "婆羅浮屠",
+      "en": "Borobudur",
+      "note": "中爪哇約九世紀的佛塔,世界最大佛教建築,列世界遺產。",
+      "latlon": [
+        -7.6079,
+        110.2038
+      ],
+      "image": "landmarks-borobudur.jpg"
+    },
+    {
+      "zh": "普蘭巴南",
+      "en": "Prambanan",
+      "note": "中爪哇九世紀的印度教神廟群,尖塔林立,列世界遺產。",
+      "latlon": [
+        -7.752,
+        110.4915
+      ],
+      "image": "landmarks-prambanan.jpg"
+    },
+    {
+      "zh": "布羅莫火山",
+      "en": "Mount Bromo",
+      "note": "東爪哇騰格爾火山口內的活火山,以沙海與日出景觀著稱。",
+      "latlon": [
+        -7.9425,
+        112.953
+      ]
+    },
+    {
+      "zh": "科莫多國家公園",
+      "en": "Komodo National Park",
+      "note": "科莫多龍棲地,帕達爾島展望與粉紅沙灘,列世界自然遺產。",
+      "latlon": [
+        -8.5586,
+        119.489
+      ]
+    },
+    {
+      "zh": "海神廟(丹那洛)",
+      "en": "Tanah Lot",
+      "note": "峇里島立於外海岩礁上的海濱神廟,退潮時可步行前往。",
+      "latlon": [
+        -8.6212,
+        115.0868
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "蘇卡諾",
+      "en": "Sukarno",
+      "note": "宣布獨立並出任首任總統,不結盟運動的推手之一。"
+    },
+    {
+      "zh": "穆罕默德·哈達",
+      "en": "Mohammad Hatta",
+      "note": "與蘇卡諾共同宣讀獨立宣言,首任副總統。"
+    },
+    {
+      "zh": "蘇哈托",
+      "en": "Suharto",
+      "note": "第二任總統,一九六七至一九九八年主政的「新秩序」時期。"
+    },
+    {
+      "zh": "卡蒂妮",
+      "en": "Raden Ajeng Kartini",
+      "note": "倡導女子教育與女性地位的先驅,列為民族英雄。"
+    },
+    {
+      "zh": "普拉姆迪亞·阿南達·杜爾",
+      "en": "Pramoedya Ananta Toer",
+      "note": "小說家,代表作《布魯島四部曲》寫於流放期間。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "日惹的婆羅浮屠與普蘭巴南",
+      "note": "看佛塔日出、印度教群廟與蘇丹王宮,體驗蠟染與銀器工坊;乾季四至十月較佳。"
+    },
+    {
+      "zh": "峇里島烏布與海濱",
+      "note": "烏布梯田、猴林與神廟,搭配水明漾、烏魯瓦圖的海灘與日落舞蹈。"
+    },
+    {
+      "zh": "六至九月的科莫多與弗洛勒斯",
+      "note": "乾季適合搭船看科莫多龍、粉紅沙灘與帕達爾島,並延伸潛水行程。"
+    }
+  ],
+  "events": [
+    {
+      "year": 800,
+      "zh": "夏連特拉王朝在中爪哇興建婆羅浮屠佛塔。"
+    },
+    {
+      "year": 1293,
+      "zh": "滿者伯夷王國在東爪哇建立,勢力一度及於群島大部。"
+    },
+    {
+      "year": 1602,
+      "zh": "荷蘭聯合東印度公司成立,一六一九年以巴達維亞為基地。"
+    },
+    {
+      "year": 1830,
+      "zh": "荷蘭在爪哇推行「強迫種植制」,確立殖民種植園經濟。"
+    },
+    {
+      "year": 1928,
+      "zh": "「青年誓言」提出一個民族、一個祖國、一種語言。"
+    },
+    {
+      "year": 1945,
+      "zh": "蘇卡諾與哈達宣布獨立,荷蘭於一九四九年底承認主權。"
+    },
+    {
+      "year": 1998,
+      "zh": "亞洲金融風暴後大規模抗議,蘇哈托下台,進入「改革」時期。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "峇里島經典",
+        "days": "5–7 天",
+        "note": "烏布梯田與猴林、海神廟與烏魯瓦圖看日落與凱恰克舞、水明漾海灘,再跳一天藍夢島。台灣有直飛航班,適合第一次到印尼、想度假加文化的家庭與情侶。"
+      },
+      {
+        "zh": "日惹文化雙遺產",
+        "days": "4–5 天",
+        "note": "婆羅浮屠日出、普蘭巴南印度教群廟、蘇丹王宮與銀器蠟染工坊,可加默拉皮火山吉普車。適合對佛教與印度教古蹟有興趣的旅客。"
+      },
+      {
+        "zh": "峇里島＋科莫多跳島",
+        "days": "8–10 天",
+        "note": "峇里島玩幾天後飛納閩巴瑤,搭船看科莫多龍、粉紅沙灘與帕達爾島展望。適合想把度假與探險、浮潛結合的旅客。"
+      },
+      {
+        "zh": "布羅莫與伊真火山",
+        "days": "5–6 天",
+        "note": "泗水進出,布羅莫看火山日出、伊真火山看藍色火焰與硫磺湖。需半夜摸黑健行,適合體力尚可、愛拍火山地景的旅客。"
+      },
+      {
+        "zh": "雅加達＋萬隆",
+        "days": "4–5 天",
+        "note": "首都獨立廣場與老城區、萬隆的火山溫泉與暢貨中心,高鐵已通車。適合想看印尼都會與近郊生活的旅客。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "蘇拉威西塔納托拉查",
+        "note": "看懸崖墓葬、船形屋與繁複的喪禮儀式,七、八月喪禮季最盛。從望加錫拉車很久,路況顛簸,要有心理準備。"
+      },
+      {
+        "zh": "西巴布亞四王群島潛水",
+        "note": "公認全球珊瑚礁最豐富的海域之一,以船宿或民宿為主。費用高、地點偏遠,機位與船位務必提早很久預訂。"
+      },
+      {
+        "zh": "蘇門答臘多巴湖與武吉拉旺",
+        "note": "多巴湖中的沙摩西島有巴塔克文化,武吉拉旺可徒步找紅毛猩猩。城際車程長,全年多雨。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "animals-komodo.jpg",
+      "title": "Komodo dragon (Varanus komodoensis)",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Komodo_dragon_(Varanus_komodoensis).jpg"
+    },
+    {
+      "file": "animals-sumatrantiger.jpg",
+      "title": "Sumatran tiger (Panthera tigris sumatrae)",
+      "author": "Theo Kruse Burgers' Zoo",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sumatran_tiger_(Panthera_tigris_sumatrae).jpg"
+    },
+    {
+      "file": "animals-orangutan.jpg",
+      "title": "Sumatran orangutan (8187377063)",
+      "author": "gbohne from Berlin, Germany",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sumatran_orangutan_(8187377063).jpg"
+    },
+    {
+      "file": "animals-javanrhino.jpg",
+      "title": "Dead Javan Rhino",
+      "author": "Charles te Mechelen",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Dead_Javan_Rhino.jpg"
+    },
+    {
+      "file": "animals-bird-of-paradise.jpg",
+      "title": "Blue Bird of Paradise Paradisaea rudolphi (48837228088)",
+      "author": "gailhampshire from Cradley, Malvern, U.K",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Blue_Bird_of_Paradise_Paradisaea_rudolphi_(48837228088).jpg"
+    },
+    {
+      "file": "foods-rendang.jpg",
+      "title": "Beef Rendang.",
+      "author": "Miansari66",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Beef_Rendang..JPG"
+    },
+    {
+      "file": "foods-nasigoreng.jpg",
+      "title": "Nasi goreng indonesia",
+      "author": "Helito",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Nasi_goreng_indonesia.jpg"
+    },
+    {
+      "file": "foods-sate.jpg",
+      "title": "Sate ayam-Jakarta",
+      "author": "Lord Mountbatten",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sate_ayam-Jakarta.JPG"
+    },
+    {
+      "file": "foods-gadogado.jpg",
+      "title": "Gado gado jakarta",
+      "author": "Piknikdong",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Gado_gado_jakarta.jpg"
+    },
+    {
+      "file": "foods-bakso.jpg",
+      "title": "Bakso Indonesian Meatball Soup from Solo",
+      "author": "Bajinra",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bakso_Indonesian_Meatball_Soup_from_Solo.jpg"
+    },
+    {
+      "file": "landmarks-borobudur.jpg",
+      "title": "Borobudur-Nothwest-view",
+      "author": "Gunawan Kartapranata",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Borobudur-Nothwest-view.jpg"
+    },
+    {
+      "file": "landmarks-prambanan.jpg",
+      "title": "Prambanan temple, Central Java, Indonesia, 20220818 1311 9139",
+      "author": "Jakub Hałun",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Prambanan_temple,_Central_Java,_Indonesia,_20220818_1311_9139.jpg"
+    }
+  ],
+  "code": "ID"
+}

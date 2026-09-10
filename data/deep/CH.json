@@ -1,0 +1,340 @@
+{
+  "name_zh": "瑞士",
+  "name_en": "Switzerland",
+  "summary": "位於中歐阿爾卑斯山區的內陸聯邦國家,聯邦政府設於伯恩。由二十六個邦組成,通行德、法、義、羅曼什四種語言;長期奉行武裝中立,以銀行金融、精密製造、製藥、鐘錶與觀光聞名,人均所得居世界前列。",
+  "founding": [
+    "阿爾卑斯地區在羅馬時代屬赫爾維蒂行省。中世紀早期阿勒曼尼人與勃艮第人遷入,地區納入神聖羅馬帝國,由哈布斯堡、策林根等貴族分別統治;策林根家族建立了伯恩與弗里堡。",
+    "傳統上以一二九一年為聯邦起點:烏里、施維茨與下瓦爾登三個森林州締結同盟誓約,共同對抗哈布斯堡的宗主權(留下呂特利草地宣誓與威廉·泰爾的傳說)。莫爾加滕(一三一五年)與森帕赫(一三八六年)的勝利鞏固了自治,同盟擴大到八州、再到十三州。",
+    "瑞士士兵以驍勇著稱,一度成為各國爭相僱用的傭兵。一五一五年在馬里尼亞諾敗於法國後,擴張停止,轉向中立。宗教改革(蘇黎世的茨溫利、日內瓦的喀爾文)使各州分裂為新教與天主教陣營。一六四八年《西發里亞和約》正式承認瑞士脫離帝國。",
+    "一七九八年法國入侵,強加中央集權的赫爾維蒂共和國;拿破崙一八〇三年的《調停法案》恢復較鬆散的邦聯。一八一五年維也納會議確認瑞士永久中立與現今疆界(納入瓦萊、日內瓦、紐沙泰爾)。一八四七年自由派與保守天主教各州間爆發短暫的「分離同盟戰爭」。",
+    "一八四八年通過聯邦憲法,由鬆散邦聯轉為聯邦制國家,設中央政府、統一貨幣與單一市場,各邦仍保有廣泛權限;一八七四與一八九一年擴充公民投票與提案等直接民主工具。伯恩成為聯邦當局所在地。",
+    "瑞士在兩次世界大戰維持武裝中立,並成為紅十字會(一八六三年於日內瓦創立)與眾多聯合國機構的所在地。其繁榮建立在銀行、精密工業、製藥、鐘錶與觀光之上。瑞士遲至二〇〇二年才加入聯合國,且非歐盟成員,以雙邊條約處理對歐關係;女性遲至一九七一年才取得聯邦層級投票權。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "瑞士聯邦",
+    "area_km2": 41285,
+    "languages": [
+      "德語",
+      "法語",
+      "義大利語",
+      "羅曼什語"
+    ],
+    "religion": "無國教;以天主教與新教為兩大宗,無宗教者比例上升",
+    "currency": "瑞士法郎(CHF)",
+    "government": "聯邦制半直接民主,行政由七人聯邦委員會集體領導"
+  },
+  "animals": [
+    {
+      "zh": "高地北山羊",
+      "en": "Alpine ibex",
+      "note": "棲息陡峭岩壁的野生山羊,角長而彎;曾近絕跡,經復育重返阿爾卑斯。",
+      "image": "animals-ibex.jpg"
+    },
+    {
+      "zh": "阿爾卑斯旱獺",
+      "en": "Alpine marmot",
+      "note": "高山草原的穴居囓齒類,遇險以尖銳哨聲示警。",
+      "image": "animals-marmot.jpg"
+    },
+    {
+      "zh": "聖伯納犬",
+      "en": "St. Bernard dog",
+      "note": "大聖伯納山口修道院培育的雪地救難犬,體型碩大。",
+      "image": "animals-stbernard.jpg"
+    },
+    {
+      "zh": "岩羚羊",
+      "en": "Alpine chamois",
+      "note": "善於在碎石坡與峭壁間跳躍的羚羊,冬季毛色轉深。",
+      "image": "animals-chamois.jpg"
+    },
+    {
+      "zh": "鬍禿鷲",
+      "en": "Bearded vulture",
+      "note": "翼展近三公尺的猛禽,以骨頭為食;一九八〇年代起重新引入阿爾卑斯。",
+      "image": "animals-beardedvulture.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "起司鍋",
+      "en": "Fondue",
+      "note": "格呂耶爾等乳酪加白酒融化,以長叉沾麵包同鍋分食。",
+      "image": "foods-fondue.jpg"
+    },
+    {
+      "zh": "烤半輪起司(拉可雷特)",
+      "en": "Raclette",
+      "note": "將烤軟的乳酪刮到水煮馬鈴薯與醃菜上食用。",
+      "image": "foods-raclette.jpg"
+    },
+    {
+      "zh": "馬鈴薯煎餅(洛斯蒂)",
+      "en": "Rösti",
+      "note": "刨絲馬鈴薯煎成金黃薄餅,原是伯恩農家早餐。",
+      "image": "foods-rosti.jpg"
+    },
+    {
+      "zh": "瑞士牛奶巧克力",
+      "en": "Swiss milk chocolate",
+      "note": "十九世紀在此發明牛奶巧克力與精磨工法,質地細滑。",
+      "image": "foods-chocolate.jpg"
+    },
+    {
+      "zh": "畢爾夏穀麥",
+      "en": "Bircher muesli",
+      "note": "燕麥、水果與優格調成的冷麥片,由畢爾夏醫師提出。",
+      "image": "foods-birchermuesli.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "馬特洪峰",
+      "en": "Matterhorn",
+      "note": "策馬特上方高四四七八公尺的金字塔形山峰,阿爾卑斯的象徵。",
+      "latlon": [
+        45.9763,
+        7.6586
+      ],
+      "image": "landmarks-matterhorn.jpg"
+    },
+    {
+      "zh": "少女峰與阿萊奇冰河",
+      "en": "Jungfrau and Aletsch Glacier",
+      "note": "世界遺產山區,設有「歐洲之巔」高山鐵路車站。",
+      "latlon": [
+        46.5377,
+        8.0016
+      ],
+      "image": "landmarks-jungfrau.jpg"
+    },
+    {
+      "zh": "萊茵瀑布",
+      "en": "Rhine Falls",
+      "note": "沙夫豪森附近的瀑布,是歐洲水量最大的平原瀑布。",
+      "latlon": [
+        47.6779,
+        8.6154
+      ]
+    },
+    {
+      "zh": "伯恩老城",
+      "en": "Old City of Bern",
+      "note": "阿勒河曲流環抱的中世紀城區,拱廊與鐘樓,列世界遺產。",
+      "latlon": [
+        46.948,
+        7.4474
+      ]
+    },
+    {
+      "zh": "琉森卡佩爾廊橋",
+      "en": "Chapel Bridge, Lucerne",
+      "note": "十四世紀的木造有頂廊橋,橋旁立有八角水塔。",
+      "latlon": [
+        47.0517,
+        8.3076
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "亨利·杜南",
+      "en": "Henry Dunant",
+      "note": "紅十字會創辦人,一九〇一年首屆諾貝爾和平獎得主。"
+    },
+    {
+      "zh": "威廉·泰爾",
+      "en": "William Tell",
+      "note": "傳說中的神射手,一箭射穿兒子頭上蘋果,象徵反抗暴政。"
+    },
+    {
+      "zh": "盧梭",
+      "en": "Jean-Jacques Rousseau",
+      "note": "生於日內瓦的啟蒙思想家,著有《社會契約論》。"
+    },
+    {
+      "zh": "歐拉",
+      "en": "Leonhard Euler",
+      "note": "生於巴塞爾的數學家,著述極豐,奠定分析學與圖論基礎。"
+    },
+    {
+      "zh": "羅傑·費德勒",
+      "en": "Roger Federer",
+      "note": "巴塞爾出身的網球選手,奪二十座大滿貫男單冠軍。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "夏季少女峰地區健行",
+      "note": "以格林德瓦、勞特布龍嫩為據點,六至九月步道開放,山景與瀑布谷最美。"
+    },
+    {
+      "zh": "策馬特看馬特洪峰",
+      "note": "無汽車的山城,搭戈爾內格拉特齒軌列車上山,清晨看山尖染紅。"
+    },
+    {
+      "zh": "冬季達沃斯或聖莫里茲滑雪",
+      "note": "知名雪場與溫泉,可搭冰河列車做一段景觀縱貫(全年行駛)。"
+    }
+  ],
+  "events": [
+    {
+      "year": 1291,
+      "zh": "烏里、施維茨、下瓦爾登締結同盟誓約,傳統上視為聯邦的起點。"
+    },
+    {
+      "year": 1499,
+      "zh": "士瓦本戰爭後,聯邦實質脫離神聖羅馬帝國的管轄。"
+    },
+    {
+      "year": 1648,
+      "zh": "《西發里亞和約》正式承認瑞士獨立。"
+    },
+    {
+      "year": 1815,
+      "zh": "維也納會議確認瑞士永久中立與現今疆界。"
+    },
+    {
+      "year": 1848,
+      "zh": "聯邦憲法通過,由邦聯轉為聯邦制國家,伯恩成為聯邦所在地。"
+    },
+    {
+      "year": 1971,
+      "zh": "公民投票通過後,瑞士女性取得聯邦層級的選舉權。"
+    },
+    {
+      "year": 2002,
+      "zh": "公民投票通過,瑞士加入聯合國。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "少女峰地區＋琉森",
+        "days": "6–7 天",
+        "note": "因特拉肯進出,少女峰車站、雪朗峰、格林德瓦與勞特布龍嫩瀑布谷,再加琉森廊橋與鐵力士山。買瑞士旅行通行證划算,是第一次到瑞士、想一次看齊雪山的自由行首選。"
+      },
+      {
+        "zh": "冰河列車景觀縱貫:策馬特—聖莫里茲",
+        "days": "7–8 天",
+        "note": "從馬特洪峰腳下的策馬特搭冰河列車翻越阿爾卑斯到聖莫里茲,沿途布里格、庫爾與伯連納線。適合愛搭火車看窗景、不想天天換飯店的旅客。"
+      },
+      {
+        "zh": "瑞士精華大環線",
+        "days": "8–10 天",
+        "note": "蘇黎世、琉森、少女峰、蒙特勒西庸城堡、日內瓦、伯恩,火車串成一圈。適合假期充足、城市與雪山都不想錯過的旅客。"
+      },
+      {
+        "zh": "義語區提契諾",
+        "days": "5–6 天",
+        "note": "盧加諾、洛卡諾與貝林佐納三座古堡,棕櫚與湖濱像到了義大利,搭聖哥達基線隧道從北部一小時多可達。適合想避開人潮、喜歡湖光的旅客。"
+      },
+      {
+        "zh": "蘇黎世＋萊茵瀑布",
+        "days": "4–5 天",
+        "note": "蘇黎世舊城與湖濱、歐洲水量最大的萊茵瀑布、施泰因暖鎮的彩繪屋。停留天數短、想輕鬆玩瑞士北部時適合。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "阿萊奇冰河健行",
+        "note": "從貝特默阿爾卑或里德阿爾卑走冰河展望步道,眺望阿爾卑斯最長的冰河。需要腳力,天氣變化快。"
+      },
+      {
+        "zh": "瓦萊州山谷與葡萄園",
+        "note": "錫永、齊納爾與洛奇谷等乾燥晴朗的側谷,梯田葡萄園綿延,德法語混雜,深處班次稀少。"
+      },
+      {
+        "zh": "阿彭策爾丘陵健行",
+        "note": "埃本阿爾卑的峭壁山屋與起伏的前阿爾卑斯草原,傳統村落保存完好。地區小、週日巴士班次少。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "animals-ibex.jpg",
+      "title": "002 Wild Alpine Ibex Swiss Alps and Creux du Van Photo by Giles Laurent",
+      "author": "Giles Laurent",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:002_Wild_Alpine_Ibex_Swiss_Alps_and_Creux_du_Van_Photo_by_Giles_Laurent.jpg"
+    },
+    {
+      "file": "animals-marmot.jpg",
+      "title": "071 Wild marmot at Grand Muveran Nature Reserve Photo by Giles Laurent",
+      "author": "Photography captured by Giles Laurent",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:071_Wild_marmot_at_Grand_Muveran_Nature_Reserve_Photo_by_Giles_Laurent.jpg"
+    },
+    {
+      "file": "animals-stbernard.jpg",
+      "title": "Nevada du Grand-Saint-Bernard",
+      "author": "Fondation Barry",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Nevada_du_Grand-Saint-Bernard.jpeg"
+    },
+    {
+      "file": "animals-chamois.jpg",
+      "title": "Altenfelden Chamois Rupicapra rupicapra-2076",
+      "author": "Isiwal",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Altenfelden_Chamois_Rupicapra_rupicapra-2076.jpg"
+    },
+    {
+      "file": "animals-beardedvulture.jpg",
+      "title": "010e Wild Bearded Vulture in flight at Pfyn-Finges (Switzerland) Photo by Giles Laurent",
+      "author": "Giles Laurent",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:010e_Wild_Bearded_Vulture_in_flight_at_Pfyn-Finges_(Switzerland)_Photo_by_Giles_Laurent.jpg"
+    },
+    {
+      "file": "foods-fondue.jpg",
+      "title": "Swiss cheese fondue",
+      "author": "Brücke-Osteuropa",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Swiss_cheese_fondue.JPG"
+    },
+    {
+      "file": "foods-raclette.jpg",
+      "title": "Raclette 009",
+      "author": "Arnaud 25",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Raclette_009.jpg"
+    },
+    {
+      "file": "foods-rosti.jpg",
+      "title": "Rösti auf blauem Teller",
+      "author": "Poupou l'quourouce",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:R%C3%B6sti_auf_blauem_Teller.jpg"
+    },
+    {
+      "file": "foods-chocolate.jpg",
+      "title": "2021-11-07 17 05 14 A sample of Toblerone swiss milk chocolate with honey and almond nougat in the Franklin Farm section of Oak Hill, Fairfax County, Virginia",
+      "author": "Famartin",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:2021-11-07_17_05_14_A_sample_of_Toblerone_swiss_milk_chocolate_with_honey_and_almond_nougat_in_the_Franklin_Farm_section_of_Oak_Hill,_Fairfax_County,_Virginia.jpg"
+    },
+    {
+      "file": "foods-birchermuesli.jpg",
+      "title": "Muesli with Berries",
+      "author": "David Stewart",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Muesli_with_Berries.jpg"
+    },
+    {
+      "file": "landmarks-matterhorn.jpg",
+      "title": "CH.VS.Zermatt 2021-10-17 Matterhorn 8726",
+      "author": "Roy Egloff",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:CH.VS.Zermatt_2021-10-17_Matterhorn_8726.jpg"
+    },
+    {
+      "file": "landmarks-jungfrau.jpg",
+      "title": "Jungfrau, Mönch and Eiger aerial photograph (South side, above of Aletsch glacier), Gletscherhorn and Kranzberg Südgipfel, October 2024 (cropped)",
+      "author": "Nattes à chat , photocropper: User:LudwigSebastianMicheler",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Jungfrau,_M%C3%B6nch_and_Eiger_aerial_photograph_(South_side,_above_of_Aletsch_glacier),_Gletscherhorn_and_Kranzberg_S%C3%BCdgipfel,_October_2024_(cropped).jpg"
+    }
+  ],
+  "code": "CH"
+}

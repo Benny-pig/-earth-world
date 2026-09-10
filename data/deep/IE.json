@@ -1,0 +1,338 @@
+{
+  "name_zh": "愛爾蘭",
+  "name_en": "Ireland",
+  "summary": "位於西歐、佔愛爾蘭島約六分之五的島國,首都都柏林。歷經數百年英格蘭與英國統治,一九二二年成立自由邦、一九四九年成為共和國;島的東北部為留在英國的北愛爾蘭。一九九〇年代起以「凱爾特之虎」轉型為跨國科技與製藥業的高所得樞紐。",
+  "founding": [
+    "愛爾蘭島在末次冰期後有人定居;約西元前五至前三世紀,凱爾特(蓋爾)語言、法律與文化傳布全島,形成眾多小王國,並有名義上的至高王駐於塔拉。與不列顛不同,愛爾蘭從未被納入羅馬帝國。",
+    "基督教於五世紀傳入,與聖巴特里克的傳教相連。愛爾蘭修道院(如克朗麥克諾伊斯、格倫達洛)成為學術中心,產出《凱爾經》等泥金裝飾手抄本,並向歐洲各地派出傳教士。自七九五年起,維京人的劫掠帶動了都柏林、沃特福德與利默里克等沿海城鎮的興起。",
+    "一一六九年盎格魯-諾曼領主應一位失勢國王之邀入侵,英王亨利二世隨即主張對愛爾蘭的領主權。數百年間英格蘭的控制以都柏林周邊(「柵欄區」)最為穩固。十六至十七世紀的都鐸與斯圖亞特征服、殖民(尤其在阿爾斯特安置英格蘭與蘇格蘭新教徒)以及克倫威爾戰爭,瓦解了舊蓋爾秩序,天主教地主大批喪失土地。",
+    "一八〇一年《聯合法案》將愛爾蘭併入聯合王國。一八四五至五二年的大饑荒因馬鈴薯枯萎病與普遍貧困而起,約一百萬人死亡、另有百萬人外移,開啟長期的人口下降與龐大的海外離散社群。爭取土地改革與自治的運動貫穿十九世紀。",
+    "一九一六年復活節起義及其領袖遭處決、一九一八年大選結果,引向一九一九至二一年的獨立戰爭。一九二一年《英愛條約》成立享有自治的愛爾蘭自由邦,但將東北六郡劃為留在英國的北愛爾蘭;對條約的分歧引發一九二二至二三年的短暫內戰。",
+    "該國於一九四九年退出大英國協並宣布為共和國,在第二次世界大戰保持中立,一九七三年加入歐洲共同體。北愛爾蘭數十年的「衝突」大致因一九九八年《貝爾法斯特協議》(受難日協議)而平息,協議並經南北公投認可。一九九〇年代起,「凱爾特之虎」使愛爾蘭轉型為高所得、全球化的經濟體,並成為跨國科技與製藥企業的樞紐。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "愛爾蘭",
+    "area_km2": 70273,
+    "languages": [
+      "愛爾蘭語",
+      "英語"
+    ],
+    "religion": "以天主教為主(約七成),無宗教者比例上升",
+    "currency": "歐元(EUR)",
+    "government": "議會制共和(單一制),設兩院制國會"
+  },
+  "animals": [
+    {
+      "zh": "愛爾蘭獵狼犬",
+      "en": "Irish Wolfhound",
+      "note": "身形高大的古老視獵犬,昔日用於獵狼與獵鹿。",
+      "image": "animals-wolfhound.jpg"
+    },
+    {
+      "zh": "馬鹿(赤鹿)",
+      "en": "Red deer",
+      "note": "凱里郡基拉尼一帶有本地原生的鹿群。",
+      "image": "animals-reddeer.jpg"
+    },
+    {
+      "zh": "大西洋海鸚",
+      "en": "Atlantic puffin",
+      "note": "喙色鮮豔的海鳥,在斯凱利格與薩爾提群島的海崖群聚繁殖。",
+      "image": "animals-puffin.jpg"
+    },
+    {
+      "zh": "愛爾蘭野兔",
+      "en": "Irish hare",
+      "note": "當地特有的亞種,全年活動於高地與草原,不換白毛。",
+      "image": "animals-irishhare.jpg"
+    },
+    {
+      "zh": "康尼馬拉小馬",
+      "en": "Connemara pony",
+      "note": "原產愛爾蘭西部的本地小馬,耐勞、性情溫馴。"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "愛爾蘭燉肉",
+      "en": "Irish stew",
+      "note": "羊肉與馬鈴薯、洋蔥、胡蘿蔔同燉的家常鍋物。",
+      "image": "foods-irishstew.jpg"
+    },
+    {
+      "zh": "培根佐高麗菜",
+      "en": "Bacon and cabbage",
+      "note": "水煮鹹培根配高麗菜與馬鈴薯的傳統晚餐。",
+      "image": "foods-baconcabbage.jpg"
+    },
+    {
+      "zh": "蘇打麵包",
+      "en": "Soda bread",
+      "note": "以小蘇打與白脫牛奶發酵、不需靜置的快速麵包。",
+      "image": "foods-sodabread.jpg"
+    },
+    {
+      "zh": "海鮮巧達濃湯",
+      "en": "Seafood chowder",
+      "note": "魚肉與貝類煮成的奶油濃湯,沿海餐館常配蘇打麵包。",
+      "image": "foods-chowder.jpg"
+    },
+    {
+      "zh": "愛爾蘭全套早餐",
+      "en": "Full Irish breakfast",
+      "note": "煎蛋、香腸、培根、黑白布丁與烤番茄的豐盛拼盤。",
+      "image": "foods-fullirish.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "莫赫斷崖",
+      "en": "Cliffs of Moher",
+      "note": "克萊爾郡高逾兩百公尺的海崖,是大西洋海岸公路的名景。",
+      "latlon": [
+        52.9715,
+        -9.4309
+      ],
+      "image": "landmarks-moher.jpg"
+    },
+    {
+      "zh": "都柏林三一學院與《凱爾經》",
+      "en": "Trinity College and the Book of Kells",
+      "note": "老圖書館長廳收藏九世紀的泥金裝飾福音書。",
+      "latlon": [
+        53.3438,
+        -6.2546
+      ],
+      "image": "landmarks-trinity.jpg"
+    },
+    {
+      "zh": "紐格蘭奇史前墓",
+      "en": "Newgrange",
+      "note": "博因河谷約西元前三千二百年的通道式墓塚,冬至日出時陽光射入墓室,列世界遺產。",
+      "latlon": [
+        53.6947,
+        -6.4755
+      ],
+      "image": "landmarks-newgrange.jpg"
+    },
+    {
+      "zh": "凱里之環與基拉尼國家公園",
+      "en": "Ring of Kerry and Killarney National Park",
+      "note": "環繞艾佛拉半島的濱海景觀環線,湖泊與山巒交錯。",
+      "latlon": [
+        51.9946,
+        -9.5669
+      ]
+    },
+    {
+      "zh": "卡舍爾岩",
+      "en": "Rock of Cashel",
+      "note": "蒂珀雷里郡石灰岩丘上的中世紀教會建築群,曾是芒斯特王座所在。",
+      "latlon": [
+        52.5207,
+        -7.8907
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "聖巴特里克",
+      "en": "Saint Patrick",
+      "note": "五世紀傳教士,愛爾蘭的主保聖人,三葉草為其象徵。"
+    },
+    {
+      "zh": "詹姆斯·喬伊斯",
+      "en": "James Joyce",
+      "note": "現代主義小說家,代表作《尤利西斯》以都柏林一日為背景。"
+    },
+    {
+      "zh": "葉慈",
+      "en": "W. B. Yeats",
+      "note": "詩人,一九二三年諾貝爾文學獎得主,推動愛爾蘭文藝復興。"
+    },
+    {
+      "zh": "麥可·柯林斯",
+      "en": "Michael Collins",
+      "note": "獨立運動領袖,參與談判一九二一年條約,於內戰中身亡。"
+    },
+    {
+      "zh": "波諾",
+      "en": "Bono",
+      "note": "搖滾樂團 U2 主唱,長期參與國際人道與扶貧倡議。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "都柏林的文學與酒館",
+      "note": "三一學院、文學酒館與坦普爾酒吧區,並可一日往返格倫達洛或紐格蘭奇。"
+    },
+    {
+      "zh": "沿大西洋海岸公路自駕",
+      "note": "莫赫斷崖、丁格爾半島與康尼馬拉,五至九月日照長、光線最美。"
+    },
+    {
+      "zh": "三月的聖巴特里克節",
+      "note": "三月十七日前後全國遊行與慶典,都柏林最盛,人潮眾多要早訂住宿。"
+    }
+  ],
+  "events": [
+    {
+      "year": -300,
+      "zh": "凱爾特(蓋爾)語言與文化在愛爾蘭島普遍確立。"
+    },
+    {
+      "year": 432,
+      "zh": "傳教士巴特里克來到愛爾蘭(傳統繫年),基督教逐漸傳布。"
+    },
+    {
+      "year": 1169,
+      "zh": "盎格魯-諾曼人入侵,英格蘭王室主張對愛爾蘭的領主權。"
+    },
+    {
+      "year": 1801,
+      "zh": "《聯合法案》生效,愛爾蘭併入聯合王國。"
+    },
+    {
+      "year": 1845,
+      "zh": "馬鈴薯枯萎病引發大饑荒,約百萬人死亡、百萬人外移。"
+    },
+    {
+      "year": 1922,
+      "zh": "《英愛條約》生效,愛爾蘭自由邦成立,北方六郡留在英國。"
+    },
+    {
+      "year": 1998,
+      "zh": "《貝爾法斯特協議》(受難日協議)簽署,北愛爾蘭衝突大致平息。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "都柏林＋西海岸經典環線",
+        "days": "8–10 天",
+        "note": "都柏林三一學院與健力士酒廠,西行高威、莫赫斷崖、丁格爾半島與凱里之環,再回都柏林。第一次到愛爾蘭、想一次收都會與大西洋海岸的自駕行首選,注意靠左行駛。"
+      },
+      {
+        "zh": "都柏林定點＋近郊一日遊",
+        "days": "4–5 天",
+        "note": "市區博物館與酒館,分別參加威克洛山區格倫達洛、五千年的紐格蘭奇墓、莫赫斷崖的一日團。適合不想開車、想深度玩首都的旅客。"
+      },
+      {
+        "zh": "大西洋海岸公路南段自駕",
+        "days": "6–7 天",
+        "note": "科克、金賽爾美食小鎮、凱里之環、丁格爾與斯凱利格群島船班。適合能開靠左車、愛海岸風景與海鮮的旅客。"
+      },
+      {
+        "zh": "愛爾蘭＋北愛爾蘭",
+        "days": "8–9 天",
+        "note": "都柏林、貝爾法斯特的鐵達尼號紀念館與巨人堤道、德里城牆,跨越南北兩地。適合想一次看整座島、對近代史有興趣的旅客。"
+      },
+      {
+        "zh": "西部藝術與蓋爾文化:高威＋康尼馬拉＋阿倫群島",
+        "days": "5–6 天",
+        "note": "高威城區、康尼馬拉山湖,搭渡輪到阿倫群島看石牆與史前石堡。適合喜歡音樂、手工藝與愛爾蘭語文化的旅客。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "多內加爾郡與斯利夫利格海崖",
+        "note": "比莫赫更高的斯利夫利格海崖、格倫維格國家公園與蓋爾語區。位於偏遠西北,天氣多變,需自駕。"
+      },
+      {
+        "zh": "西科克群島:謝爾金與克利爾島",
+        "note": "賞鳥與賞鯨的小島,以愛爾蘭語為日常。仰賴渡輪,床位有限,建議先訂。"
+      },
+      {
+        "zh": "香農河遊船",
+        "note": "自駕運河船在阿斯隆、克朗麥克諾伊斯與德格湖之間慢行。是悠閒的水上旅行,船要提早很久預訂。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "animals-wolfhound.jpg",
+      "title": "Irish Wolfhound Austin Celtic Festival Texas 2023",
+      "author": "Larry D. Moore",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Irish_Wolfhound_Austin_Celtic_Festival_Texas_2023.jpg"
+    },
+    {
+      "file": "animals-reddeer.jpg",
+      "title": "Red Deer of Ireland, Killarney, 2021-06-22",
+      "author": "瑞丽江的河水",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Red_Deer_of_Ireland,_Killarney,_2021-06-22.jpg"
+    },
+    {
+      "file": "animals-puffin.jpg",
+      "title": "Atlantic Puffin, Jul 2026, Great Saltee Island, Ireland",
+      "author": "YuchengGao",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Atlantic_Puffin,_Jul_2026,_Great_Saltee_Island,_Ireland.jpg"
+    },
+    {
+      "file": "animals-irishhare.jpg",
+      "title": "Female Irish mountain hare",
+      "author": "AlanWolfe",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Female_Irish_mountain_hare.jpg"
+    },
+    {
+      "file": "foods-irishstew.jpg",
+      "title": "Traditional Irish Stew is made with Lamb in Ireland",
+      "author": "Zackgallagher",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Traditional_Irish_Stew_is_made_with_Lamb_in_Ireland.jpg"
+    },
+    {
+      "file": "foods-baconcabbage.jpg",
+      "title": "Bacon and Cabbage in Ireland",
+      "author": "Zackgallagher",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bacon_and_Cabbage_in_Ireland.jpg"
+    },
+    {
+      "file": "foods-sodabread.jpg",
+      "title": "Irish brown soda bread",
+      "author": "O'Dea",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Irish_brown_soda_bread.JPG"
+    },
+    {
+      "file": "foods-chowder.jpg",
+      "title": "Seafood Chowder Bread Guiness",
+      "author": "Benreis",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Seafood_Chowder_Bread_Guiness.JPG"
+    },
+    {
+      "file": "foods-fullirish.jpg",
+      "title": "Full Irish Breakfast (4758138078)",
+      "author": "IrishFireside from Ishpeming, MI, USA",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Full_Irish_Breakfast_(4758138078).jpg"
+    },
+    {
+      "file": "landmarks-moher.jpg",
+      "title": "CliffsofMoher 001",
+      "author": "Höstblomma",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:CliffsofMoher_001.jpg"
+    },
+    {
+      "file": "landmarks-trinity.jpg",
+      "title": "Long Room Interior, Trinity College Dublin, Ireland - Diliff",
+      "author": "Diliff",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Long_Room_Interior,_Trinity_College_Dublin,_Ireland_-_Diliff.jpg"
+    },
+    {
+      "file": "landmarks-newgrange.jpg",
+      "title": "The Famous Five Thousand Years Old Newgrange Passage Tomb Monument as Seen from Rossnaree House in County Meath in Ireland",
+      "author": "Professionalnorwegianphotographer",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:The_Famous_Five_Thousand_Years_Old_Newgrange_Passage_Tomb_Monument_as_Seen_from_Rossnaree_House_in_County_Meath_in_Ireland.jpg"
+    }
+  ],
+  "code": "IE"
+}
