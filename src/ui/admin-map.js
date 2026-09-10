@@ -32,6 +32,18 @@ export function createAdminMap() {
     return { toXY, vb };
   }
 
+  // 幾何在投影座標下的對角線長度 —— 當「這個區有多大」的粗略指標,用於標籤淘汰
+  function geomSpan(geom, toXY) {
+    let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+    const polys = geom.type === "Polygon" ? [geom.coordinates] : geom.coordinates;
+    for (const poly of polys) for (const ring of poly) for (const pt of ring) {
+      const [x, y] = toXY(pt[0], pt[1]);
+      if (x < minX) minX = x; if (x > maxX) maxX = x;
+      if (y < minY) minY = y; if (y > maxY) maxY = y;
+    }
+    return Math.hypot(maxX - minX, maxY - minY);
+  }
+
   function pathD(geom, toXY) {
     const polys = geom.type === "Polygon" ? [geom.coordinates] : geom.coordinates;
     let d = "";
@@ -63,6 +75,7 @@ export function createAdminMap() {
     svg.appendChild(g);
 
     const fontUnit = Math.max(vb.w, vb.h) / 68;
+    const viewDiag = Math.hypot(vb.w, vb.h);
 
     for (const f of fc.features) {
       const path = document.createElementNS(svgNS, "path");
@@ -71,6 +84,7 @@ export function createAdminMap() {
       path.dataset.name = f.properties.name_zht || f.properties.name;
       g.appendChild(path);
     }
+    const labels = [];
     for (const f of fc.features) {
       const p = f.properties;
       if (p.lon == null || p.lat == null) continue;
@@ -78,21 +92,24 @@ export function createAdminMap() {
       const t = document.createElementNS(svgNS, "text");
       t.setAttribute("x", x); t.setAttribute("y", y);
       t.setAttribute("class", "admin-label");
-      t.setAttribute("font-size", fontUnit);
       t.textContent = p.name_zht || p.name;
       g.appendChild(t);
+      labels.push({ el: t, span: geomSpan(f.geometry, toXY) });
     }
+    labels.sort((a, b) => b.span - a.span);        // 由大到小 —— 最大的幾個永遠顯示
+    const alwaysN = Math.min(labels.length, 8);
+
+    let starEl = null;
     if (Array.isArray(opts.capital) && opts.capital.length === 2) {
       const [clat, clon] = opts.capital;
       const [x, y] = toXY(clon, clat);
-      const star = document.createElementNS(svgNS, "text");
-      star.setAttribute("x", x); star.setAttribute("y", y);
-      star.setAttribute("class", "admin-capital");
-      star.setAttribute("font-size", fontUnit * 1.4);
-      star.setAttribute("text-anchor", "middle");
-      star.setAttribute("dominant-baseline", "middle");
-      star.textContent = "★";
-      g.appendChild(star);
+      starEl = document.createElementNS(svgNS, "text");
+      starEl.setAttribute("x", x); starEl.setAttribute("y", y);
+      starEl.setAttribute("class", "admin-capital");
+      starEl.setAttribute("text-anchor", "middle");
+      starEl.setAttribute("dominant-baseline", "middle");
+      starEl.textContent = "★";
+      g.appendChild(starEl);
     }
 
     let lastDragEnd = 0;
@@ -107,7 +124,25 @@ export function createAdminMap() {
 
     // ── 縮放 / 平移 ─────────────────────────────────────────
     let scale = 1, tx = 0, ty = 0;
-    const apply = () => g.setAttribute("transform", `translate(${tx} ${ty}) scale(${scale})`);
+    // 標籤字級隨縮放「次線性」增長:全景時小,放大時變大但不爆;
+    // 同時依縮放淘汰太擠的小區標籤(最大的幾個永遠留著)
+    const relayoutLabels = () => {
+      const k = 0.64 * Math.pow(scale, 0.34);        // 螢幕上看到的相對倍率
+      const fs = fontUnit * k / scale;               // 乘上 <g> 的 scale 後 ≈ fontUnit*k
+      for (let i = 0; i < labels.length; i++) {
+        const L = labels[i];
+        L.el.setAttribute("font-size", fs);
+        L.el.style.strokeWidth = Math.max(1.4, 2.3 * k) + "px";
+        const show = i < alwaysN || L.span * scale > viewDiag * 0.05;
+        L.el.style.display = show ? "" : "none";
+      }
+      if (starEl) starEl.setAttribute("font-size", fs * 1.7);
+    };
+    const apply = () => {
+      g.setAttribute("transform", `translate(${tx} ${ty}) scale(${scale})`);
+      relayoutLabels();
+    };
+    relayoutLabels();
     const svgPt = (evt) => {
       const rect = svg.getBoundingClientRect();
       return {
