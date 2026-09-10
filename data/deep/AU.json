@@ -30,7 +30,8 @@
     {
       "zh": "無尾熊",
       "en": "Koala",
-      "note": "以尤加利葉為食的樹棲有袋類,多數時間在睡眠,分佈於東部森林。"
+      "note": "以尤加利葉為食的樹棲有袋類,多數時間在睡眠,分佈於東部森林。",
+      "image": "animals-koala.jpg"
     },
     {
       "zh": "鴨嘴獸",
@@ -41,12 +42,14 @@
     {
       "zh": "笑翠鳥",
       "en": "Laughing kookaburra",
-      "note": "體型最大的翠鳥,清晨齊聲鳴叫聲似人類大笑。"
+      "note": "體型最大的翠鳥,清晨齊聲鳴叫聲似人類大笑。",
+      "image": "animals-kookaburra.jpg"
     },
     {
       "zh": "鴯鶓",
       "en": "Emu",
-      "note": "澳洲最大鳥類、世界第二高鳥,不會飛,與袋鼠同列國徽。"
+      "note": "澳洲最大鳥類、世界第二高鳥,不會飛,與袋鼠同列國徽。",
+      "image": "animals-emu.jpg"
     }
   ],
   "foods": [
@@ -59,22 +62,26 @@
     {
       "zh": "維吉麥醬",
       "en": "Vegemite",
-      "note": "以酵母萃取物製成的深色鹹味抹醬,薄塗於奶油吐司上。"
+      "note": "以酵母萃取物製成的深色鹹味抹醬,薄塗於奶油吐司上。",
+      "image": "foods-vegemite.jpg"
     },
     {
       "zh": "紐澳軍團餅乾",
       "en": "Anzac biscuit",
-      "note": "以燕麥、椰絲與金黃糖漿烤成的耐存餅乾,與一戰紀念相連。"
+      "note": "以燕麥、椰絲與金黃糖漿烤成的耐存餅乾,與一戰紀念相連。",
+      "image": "foods-anzac-biscuit.jpg"
     },
     {
       "zh": "拉明頓蛋糕",
       "en": "Lamington",
-      "note": "海綿蛋糕方塊裹巧克力醬再沾椰絲,常見於募款義賣。"
+      "note": "海綿蛋糕方塊裹巧克力醬再沾椰絲,常見於募款義賣。",
+      "image": "foods-lamington.jpg"
     },
     {
       "zh": "澳白咖啡",
       "en": "Flat white",
-      "note": "濃縮咖啡加細緻蒸奶,澳洲與紐西蘭都聲稱是其發源地。"
+      "note": "濃縮咖啡加細緻蒸奶,澳洲與紐西蘭都聲稱是其發源地。",
+      "image": "foods-flat-white.jpg"
     }
   ],
   "landmarks": [
@@ -105,7 +112,8 @@
       "latlon": [
         -18.2871,
         147.6992
-      ]
+      ],
+      "image": "landmarks-great-barrier-reef.jpg"
     },
     {
       "zh": "十二使徒岩",
@@ -124,14 +132,16 @@
       "latlon": [
         -33.7333,
         150.3119
-      ]
+      ],
+      "image": "landmarks-blue-mountains.jpg"
     }
   ],
   "people": [
     {
       "zh": "史蒂夫·厄文",
       "en": "Steve Irwin",
-      "note": "「鱷魚先生」電視主持人與保育家,二00六年潛水時遇刺魟身亡。"
+      "note": "「鱷魚先生」電視主持人與保育家,二00六年潛水時遇刺魟身亡。",
+      "image": "people-steve-irwin.jpg"
     },
     {
       "zh": "凱西·弗里曼",
@@ -142,17 +152,20 @@
     {
       "zh": "霍華德·弗洛里",
       "en": "Howard Florey",
-      "note": "藥理學家,將青黴素開發成可量產藥物,一九四五年獲諾貝爾獎。"
+      "note": "藥理學家,將青黴素開發成可量產藥物,一九四五年獲諾貝爾獎。",
+      "image": "people-howard-florey.jpg"
     },
     {
       "zh": "派屈克·懷特",
       "en": "Patrick White",
-      "note": "小說家,一九七三年獲諾貝爾文學獎,澳洲迄今唯一得主。"
+      "note": "小說家,一九七三年獲諾貝爾文學獎,澳洲迄今唯一得主。",
+      "image": "people-patrick-white.jpg"
     },
     {
       "zh": "凱特·布蘭琪",
       "en": "Cate Blanchett",
-      "note": "演員,兩度獲奧斯卡獎,曾任雪梨劇團藝術總監。"
+      "note": "演員,兩度獲奧斯卡獎,曾任雪梨劇團藝術總監。",
+      "image": "people-cate-blanchett.jpg"
     }
   ],
   "recommended": [
@@ -248,6 +261,97 @@
       "author": "Jason Pini/AusAID",
       "license": "CC BY 2.0",
       "source": "https://commons.wikimedia.org/wiki/File:Cathy_Freeman_(cropped).jpg"
+    },
+    {
+      "file": "animals-koala.jpg",
+      "title": "Koala in a tree",
+      "author": "Till Niermann",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Koala_in_Zoo_Duisburg.jpg"
+    },
+    {
+      "file": "animals-kookaburra.jpg",
+      "title": "Laughing kookaburra",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Laughing_kookaburra_(Dacelo_novaeguineae_novaeguineae)_Hobart.jpg"
+    },
+    {
+      "file": "animals-emu.jpg",
+      "title": "Emu at Tidbinbilla, Australia",
+      "author": "JJ Harrison",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Emu_1_-_Tidbinbilla.jpg"
+    },
+    {
+      "file": "foods-vegemite.jpg",
+      "title": "Jars of Vegemite",
+      "author": "Willis Lam",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Two_Vegemite_Jars_(41062016175).jpg"
+    },
+    {
+      "file": "foods-anzac-biscuit.jpg",
+      "title": "Anzac biscuits",
+      "author": "pfctdayelise",
+      "license": "CC BY-SA 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:ANZAC_biscuits_(14_April_2006).jpg"
+    },
+    {
+      "file": "foods-lamington.jpg",
+      "title": "Lamingtons",
+      "author": "jules",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Lamingtons.jpg"
+    },
+    {
+      "file": "foods-flat-white.jpg",
+      "title": "Flat white coffee",
+      "author": "Tokimemooo",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Flat_White_by_Nijat_Zayidov.jpg"
+    },
+    {
+      "file": "landmarks-great-barrier-reef.jpg",
+      "title": "Aerial view of the Great Barrier Reef",
+      "author": "Ank Kumar",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Aerial_View_of_Great_Barrier_Reef_(Ank_Kumar)_02.jpg"
+    },
+    {
+      "file": "landmarks-blue-mountains.jpg",
+      "title": "Three Sisters, Blue Mountains at sunset",
+      "author": "JJ Harrison",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Three_Sisters_Sunset.jpg"
+    },
+    {
+      "file": "people-steve-irwin.jpg",
+      "title": "Steve Irwin, December 2005",
+      "author": "Richard Giles",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Steve_Irwin,_December_2005.jpg"
+    },
+    {
+      "file": "people-howard-florey.jpg",
+      "title": "Howard Florey, 1960",
+      "author": "Australian News and Information Bureau",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Howard_Florey_1960_(cropped).jpg"
+    },
+    {
+      "file": "people-patrick-white.jpg",
+      "title": "Patrick White, 1973",
+      "author": "Anefo / Dutch National Archives",
+      "license": "CC BY-SA 3.0 NL",
+      "source": "https://commons.wikimedia.org/wiki/File:Patrick_White_1973.jpg"
+    },
+    {
+      "file": "people-cate-blanchett.jpg",
+      "title": "Cate Blanchett",
+      "author": "Harald Krichel",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Cate_Blanchett-63298_(cropped_2).jpg"
     }
   ],
   "code": "AU"

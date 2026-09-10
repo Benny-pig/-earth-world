@@ -42,12 +42,14 @@
     {
       "zh": "金獅面狨",
       "en": "Golden lion tamarin",
-      "note": "全身金色的小型猴,僅棲於里約州大西洋森林,曾瀕臨絕種。"
+      "note": "全身金色的小型猴,僅棲於里約州大西洋森林,曾瀕臨絕種。",
+      "image": "animals-golden-lion-tamarin.jpg"
     },
     {
       "zh": "亞馬遜河豚",
       "en": "Amazon river dolphin",
-      "note": "又稱粉紅河豚,成年偏粉紅色,是亞馬遜與奧里諾科水系特有。"
+      "note": "又稱粉紅河豚,成年偏粉紅色,是亞馬遜與奧里諾科水系特有。",
+      "image": "animals-amazon-river-dolphin.jpg"
     }
   ],
   "foods": [
@@ -60,22 +62,26 @@
     {
       "zh": "巴西烤肉",
       "en": "Churrasco",
-      "note": "源自南部高喬牧人的炭烤大塊肉,以長鐵籤串烤、現場切食。"
+      "note": "源自南部高喬牧人的炭烤大塊肉,以長鐵籤串烤、現場切食。",
+      "image": "foods-churrasco.jpg"
     },
     {
       "zh": "起司麵包",
       "en": "Pão de queijo",
-      "note": "以木薯粉與乳酪做成的小圓麵包,外脆內軟,源自米納斯吉拉斯。"
+      "note": "以木薯粉與乳酪做成的小圓麵包,外脆內軟,源自米納斯吉拉斯。",
+      "image": "foods-pao-de-queijo.jpg"
     },
     {
       "zh": "巴西莓碗",
       "en": "Açaí na tigela",
-      "note": "亞馬遜巴西莓打成冰沙,加香蕉與燕麥,常見於海灘攤販。"
+      "note": "亞馬遜巴西莓打成冰沙,加香蕉與燕麥,常見於海灘攤販。",
+      "image": "foods-acai-na-tigela.jpg"
     },
     {
       "zh": "卡琵莉亞調酒",
       "en": "Caipirinha",
-      "note": "以甘蔗酒 cachaça、萊姆與糖調製的國民雞尾酒。"
+      "note": "以甘蔗酒 cachaça、萊姆與糖調製的國民雞尾酒。",
+      "image": "foods-caipirinha.jpg"
     }
   ],
   "landmarks": [
@@ -126,7 +132,8 @@
       "latlon": [
         -3.1362,
         -59.904
-      ]
+      ],
+      "image": "landmarks-meeting-of-waters.jpg"
     }
   ],
   "people": [
@@ -145,17 +152,20 @@
     {
       "zh": "奧斯卡·尼邁耶",
       "en": "Oscar Niemeyer",
-      "note": "現代主義建築師,主導巴西利亞的公共建築設計。"
+      "note": "現代主義建築師,主導巴西利亞的公共建築設計。",
+      "image": "people-oscar-niemeyer.jpg"
     },
     {
       "zh": "安東尼奧·卡洛斯·裘賓",
       "en": "Antônio Carlos Jobim",
-      "note": "作曲家,巴薩諾瓦代表人物,〈伊帕內瑪的女孩〉作者之一。"
+      "note": "作曲家,巴薩諾瓦代表人物,〈伊帕內瑪的女孩〉作者之一。",
+      "image": "people-antonio-carlos-jobim.jpg"
     },
     {
       "zh": "保羅·科爾賀",
       "en": "Paulo Coelho",
-      "note": "小說家,《牧羊少年奇幻之旅》譯成數十種語言暢銷全球。"
+      "note": "小說家,《牧羊少年奇幻之旅》譯成數十種語言暢銷全球。",
+      "image": "people-paulo-coelho.jpg"
     }
   ],
   "recommended": [
@@ -272,6 +282,76 @@
       "author": "Paul Lannuier",
       "license": "CC BY-SA 2.0",
       "source": "https://commons.wikimedia.org/wiki/File:Ayrton_Senna_1988_Canada.jpg"
+    },
+    {
+      "file": "animals-golden-lion-tamarin.jpg",
+      "title": "Golden lion tamarin",
+      "author": "Jeroen Kransen",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Golden_lion_tamarin_portrait3.jpg"
+    },
+    {
+      "file": "animals-amazon-river-dolphin.jpg",
+      "title": "Amazon river dolphin (boto)",
+      "author": "Dennis Otten",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Inia.jpg"
+    },
+    {
+      "file": "foods-churrasco.jpg",
+      "title": "Traditional churrasco in southern Brazil",
+      "author": "GSelau",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Traditional_Churrasco_at_South_Brazil.jpg"
+    },
+    {
+      "file": "foods-pao-de-queijo.jpg",
+      "title": "Pao de queijo (Brazilian cheese bread)",
+      "author": "Melsj",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:P%C3%A3o_de_queijo_2.jpg"
+    },
+    {
+      "file": "foods-acai-na-tigela.jpg",
+      "title": "Açaí na tigela",
+      "author": "Melsj",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:A%C3%A7a%C3%AD_na_tigela_1.jpg"
+    },
+    {
+      "file": "foods-caipirinha.jpg",
+      "title": "Caipirinha",
+      "author": "Weetjesman",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Caipirinha_2007.JPG"
+    },
+    {
+      "file": "landmarks-meeting-of-waters.jpg",
+      "title": "Meeting of Waters near Manaus",
+      "author": "Dennis G. Jarvis",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Brazil-00285_-_Meeting_of_Waters_(48961509103).jpg"
+    },
+    {
+      "file": "people-oscar-niemeyer.jpg",
+      "title": "Oscar Niemeyer",
+      "author": "Roger Pic (derivative by MrPanyGoff)",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Oscar_Niemeyer,_Pic,_9_-_edit.jpg"
+    },
+    {
+      "file": "people-antonio-carlos-jobim.jpg",
+      "title": "Tom Jobim, 1965",
+      "author": "Unknown",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Tom_Jobim,_1965.jpg"
+    },
+    {
+      "file": "people-paulo-coelho.jpg",
+      "title": "Paulo Coelho",
+      "author": "nrkbeta",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Paulo_Coelho_nrkbeta.jpg"
     }
   ],
   "code": "BR"

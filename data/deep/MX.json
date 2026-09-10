@@ -31,22 +31,26 @@
     {
       "zh": "美洲豹",
       "en": "Jaguar",
-      "note": "美洲最大貓科動物,在古代文明中象徵權力與夜晚。"
+      "note": "美洲最大貓科動物,在古代文明中象徵權力與夜晚。",
+      "image": "animals-jaguar.jpg"
     },
     {
       "zh": "帝王斑蝶",
       "en": "Monarch butterfly",
-      "note": "每年由北美遷徙數千公里,到米卻肯州冷杉林群聚越冬。"
+      "note": "每年由北美遷徙數千公里,到米卻肯州冷杉林群聚越冬。",
+      "image": "animals-monarch-butterfly.jpg"
     },
     {
       "zh": "金鵰",
       "en": "Golden eagle",
-      "note": "墨西哥國徽上叼蛇立於仙人掌的鷹即以牠為原型。"
+      "note": "墨西哥國徽上叼蛇立於仙人掌的鷹即以牠為原型。",
+      "image": "animals-golden-eagle.jpg"
     },
     {
       "zh": "加灣鼠海豚",
       "en": "Vaquita",
-      "note": "僅見於加利福尼亞灣北端的小型鼠海豚,是全球最瀕危的海洋哺乳類。"
+      "note": "僅見於加利福尼亞灣北端的小型鼠海豚,是全球最瀕危的海洋哺乳類。",
+      "image": "animals-vaquita.jpg"
     }
   ],
   "foods": [
@@ -59,22 +63,26 @@
     {
       "zh": "莫雷醬",
       "en": "Mole",
-      "note": "混合辣椒、香料與巧克力等數十種食材燉煮的濃醬,普埃布拉最著名。"
+      "note": "混合辣椒、香料與巧克力等數十種食材燉煮的濃醬,普埃布拉最著名。",
+      "image": "foods-mole.jpg"
     },
     {
       "zh": "塔馬利",
       "en": "Tamale",
-      "note": "玉米麵團包餡以玉米葉或香蕉葉蒸熟,源自前哥倫布時期。"
+      "note": "玉米麵團包餡以玉米葉或香蕉葉蒸熟,源自前哥倫布時期。",
+      "image": "foods-tamale.jpg"
     },
     {
       "zh": "酪梨醬",
       "en": "Guacamole",
-      "note": "以酪梨、洋蔥、辣椒與萊姆搗成,阿茲特克時代即已食用。"
+      "note": "以酪梨、洋蔥、辣椒與萊姆搗成,阿茲特克時代即已食用。",
+      "image": "foods-guacamole.jpg"
     },
     {
       "zh": "龍舌蘭酒",
       "en": "Tequila",
-      "note": "以哈利斯科州藍色龍舌蘭釀製的蒸餾酒,受原產地名稱保護。"
+      "note": "以哈利斯科州藍色龍舌蘭釀製的蒸餾酒,受原產地名稱保護。",
+      "image": "foods-tequila.jpg"
     }
   ],
   "landmarks": [
@@ -125,7 +133,8 @@
       "latlon": [
         21.019,
         -101.2574
-      ]
+      ],
+      "image": "landmarks-guanajuato.jpg"
     }
   ],
   "people": [
@@ -144,17 +153,20 @@
     {
       "zh": "貝尼托·胡亞雷斯",
       "en": "Benito Juárez",
-      "note": "薩波特克裔總統,推動政教分離改革,抵抗法國干預。"
+      "note": "薩波特克裔總統,推動政教分離改革,抵抗法國干預。",
+      "image": "people-benito-juarez.jpg"
     },
     {
       "zh": "奧克塔維奧·帕斯",
       "en": "Octavio Paz",
-      "note": "詩人與評論家,《孤獨的迷宮》作者,一九九0年獲諾貝爾文學獎。"
+      "note": "詩人與評論家,《孤獨的迷宮》作者,一九九0年獲諾貝爾文學獎。",
+      "image": "people-octavio-paz.jpg"
     },
     {
       "zh": "吉勒摩·戴托羅",
       "en": "Guillermo del Toro",
-      "note": "電影導演,以《羊男的迷宮》《水底情深》獲多項奧斯卡獎。"
+      "note": "電影導演,以《羊男的迷宮》《水底情深》獲多項奧斯卡獎。",
+      "image": "people-guillermo-del-toro.jpg"
     }
   ],
   "recommended": [
@@ -257,6 +269,90 @@
       "author": "Carl Van Vechten",
       "license": "Public domain",
       "source": "https://commons.wikimedia.org/wiki/File:Diego_Rivera_1932.jpg"
+    },
+    {
+      "file": "animals-jaguar.jpg",
+      "title": "Male jaguar",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Jaguar_(Panthera_onca_palustris)_male_Rio_Negro_2.JPG"
+    },
+    {
+      "file": "animals-monarch-butterfly.jpg",
+      "title": "Monarch butterfly",
+      "author": "Thomas Bresson",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Danaus_plexippus_(7).jpg"
+    },
+    {
+      "file": "animals-golden-eagle.jpg",
+      "title": "Golden eagle",
+      "author": "Michael Gabler",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Aquila_chrysaetos_(Linnaeus_1758).jpg"
+    },
+    {
+      "file": "animals-vaquita.jpg",
+      "title": "Vaquita porpoises in the Gulf of California",
+      "author": "Paula Olson, NOAA",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Vaquita4_Olson_NOAA.jpg"
+    },
+    {
+      "file": "foods-mole.jpg",
+      "title": "Mole poblano",
+      "author": "Pabliotecario",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mole_poblano_de_fiesta.jpg"
+    },
+    {
+      "file": "foods-tamale.jpg",
+      "title": "Tamales with salsa",
+      "author": "Alejandra Mendoza Santillan",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tamales_norte%C3%B1os_con_salsa.jpg"
+    },
+    {
+      "file": "foods-guacamole.jpg",
+      "title": "Guacamole",
+      "author": "Nikodem Nijaki",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Guacamole_IMGP1271.jpg"
+    },
+    {
+      "file": "foods-tequila.jpg",
+      "title": "Blue agave field in Jalisco (tequila's source)",
+      "author": "Tomas Castelazo",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Agave_field_in_Jalisco,_Mexico.jpg"
+    },
+    {
+      "file": "landmarks-guanajuato.jpg",
+      "title": "Panorama of Guanajuato at dusk",
+      "author": "Oescalona",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Panorama_Guanajuato_Atardecer.jpg"
+    },
+    {
+      "file": "people-benito-juarez.jpg",
+      "title": "Benito Juarez",
+      "author": "Unknown",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Photograph_of_Benito_Juarez.jpg"
+    },
+    {
+      "file": "people-octavio-paz.jpg",
+      "title": "Octavio Paz, 1984",
+      "author": "Rafael Doniz",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Octavio_Paz_1984.jpg"
+    },
+    {
+      "file": "people-guillermo-del-toro.jpg",
+      "title": "Guillermo del Toro, 2017",
+      "author": "GuillemMedina",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Guillermo_del_Toro_in_2017.jpg"
     }
   ],
   "code": "MX"

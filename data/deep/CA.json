@@ -37,17 +37,20 @@
     {
       "zh": "北極熊",
       "en": "Polar bear",
-      "note": "分佈於哈德遜灣與北極海岸,加拿大擁有全球約三分之二族群。"
+      "note": "分佈於哈德遜灣與北極海岸,加拿大擁有全球約三分之二族群。",
+      "image": "animals-polar-bear.jpg"
     },
     {
       "zh": "加拿大雁",
       "en": "Canada goose",
-      "note": "黑頸白頰的候鳥,遷徙時排成 V 字隊形,已引入多國。"
+      "note": "黑頸白頰的候鳥,遷徙時排成 V 字隊形,已引入多國。",
+      "image": "animals-canada-goose.jpg"
     },
     {
       "zh": "普通潛鳥",
       "en": "Common loon",
-      "note": "叫聲淒清的湖泊水鳥,印在一元硬幣上,俗稱 loonie。"
+      "note": "叫聲淒清的湖泊水鳥,印在一元硬幣上,俗稱 loonie。",
+      "image": "animals-common-loon.jpg"
     }
   ],
   "foods": [
@@ -66,17 +69,20 @@
     {
       "zh": "魁北克肉派",
       "en": "Tourtière",
-      "note": "耶誕與新年食用的香料絞肉餡餅,魁北克傳統菜。"
+      "note": "耶誕與新年食用的香料絞肉餡餅,魁北克傳統菜。",
+      "image": "foods-tourtiere.jpg"
     },
     {
       "zh": "奶油塔",
       "en": "Butter tart",
-      "note": "酥皮盛裝奶油、糖與蛋液烤成的甜塔,被視為加拿大代表甜點。"
+      "note": "酥皮盛裝奶油、糖與蛋液烤成的甜塔,被視為加拿大代表甜點。",
+      "image": "foods-butter-tart.jpg"
     },
     {
       "zh": "納奈莫條",
       "en": "Nanaimo bar",
-      "note": "免烤三層冷藏甜點,得名自卑詩省納奈莫市。"
+      "note": "免烤三層冷藏甜點,得名自卑詩省納奈莫市。",
+      "image": "foods-nanaimo-bar.jpg"
     }
   ],
   "landmarks": [
@@ -135,7 +141,8 @@
     {
       "zh": "泰瑞·福克斯",
       "en": "Terry Fox",
-      "note": "截肢後跨國義跑為癌症研究募款,成為全國英雄。"
+      "note": "截肢後跨國義跑為癌症研究募款,成為全國英雄。",
+      "image": "people-terry-fox.jpg"
     },
     {
       "zh": "韋恩·格雷茨基",
@@ -146,17 +153,20 @@
     {
       "zh": "詹姆斯·奈史密斯",
       "en": "James Naismith",
-      "note": "一八九一年發明籃球運動的體育教師,生於安大略。"
+      "note": "一八九一年發明籃球運動的體育教師,生於安大略。",
+      "image": "people-james-naismith.jpg"
     },
     {
       "zh": "弗雷德里克·班廷",
       "en": "Frederick Banting",
-      "note": "與團隊分離出胰島素,一九二三年獲諾貝爾生理醫學獎。"
+      "note": "與團隊分離出胰島素,一九二三年獲諾貝爾生理醫學獎。",
+      "image": "people-frederick-banting.jpg"
     },
     {
       "zh": "瑪格麗特·愛特伍",
       "en": "Margaret Atwood",
-      "note": "小說家,《使女的故事》作者,兩度獲布克獎。"
+      "note": "小說家,《使女的故事》作者,兩度獲布克獎。",
+      "image": "people-margaret-atwood.jpg"
     }
   ],
   "recommended": [
@@ -273,6 +283,76 @@
       "author": "Rick Dikeman",
       "license": "CC BY-SA 3.0",
       "source": "https://commons.wikimedia.org/wiki/File:Wayne_Gretzky_1997.jpg"
+    },
+    {
+      "file": "animals-polar-bear.jpg",
+      "title": "Polar bear on drift ice near Svalbard",
+      "author": "Andreas Weith",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Polar_bear_(Ursus_maritimus)_in_the_drift_ice_region_north_of_Svalbard.jpg"
+    },
+    {
+      "file": "animals-canada-goose.jpg",
+      "title": "Canada goose in flight",
+      "author": "Alan D. Wilson (crop by Diliff)",
+      "license": "CC BY-SA 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:Canada_goose_flight_cropped_and_NR.jpg"
+    },
+    {
+      "file": "animals-common-loon.jpg",
+      "title": "Common loon on water",
+      "author": "Cephas",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Gavia_immer1_BS.jpg"
+    },
+    {
+      "file": "foods-tourtiere.jpg",
+      "title": "Tourtiere (Quebec meat pie)",
+      "author": "George Showman",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tourtiere_table.jpg"
+    },
+    {
+      "file": "foods-butter-tart.jpg",
+      "title": "Butter tart",
+      "author": "Stephanie Spencer",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Butter_tart.JPG"
+    },
+    {
+      "file": "foods-nanaimo-bar.jpg",
+      "title": "Nanaimo bar",
+      "author": "Stephanie Spencer",
+      "license": "CC BY 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:Nanaimo_bar.JPG"
+    },
+    {
+      "file": "people-terry-fox.jpg",
+      "title": "Terry Fox during the Marathon of Hope, 1980",
+      "author": "Jeremy Gilbert",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:TerryFoxToronto19800712.JPG"
+    },
+    {
+      "file": "people-james-naismith.jpg",
+      "title": "Dr. James Naismith",
+      "author": "Unknown",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Dr._James_Naismith.jpg"
+    },
+    {
+      "file": "people-frederick-banting.jpg",
+      "title": "Sir Frederick Banting",
+      "author": "Arthur Goss",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Fredrick_banting.jpg"
+    },
+    {
+      "file": "people-margaret-atwood.jpg",
+      "title": "Margaret Atwood, 2015",
+      "author": "Frankie Fouganthin",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Margaret_Atwood_in_2015.jpg"
     }
   ],
   "code": "CA"

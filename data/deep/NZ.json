@@ -38,17 +38,20 @@
     {
       "zh": "喙頭蜥",
       "en": "Tuatara",
-      "note": "外形似蜥蜴的爬行動物,是喙頭目唯一現存物種,被稱為活化石。"
+      "note": "外形似蜥蜴的爬行動物,是喙頭目唯一現存物種,被稱為活化石。",
+      "image": "animals-tuatara.jpg"
     },
     {
       "zh": "鴞鸚鵡",
       "en": "Kākāpō",
-      "note": "世界最重、不會飛的夜行鸚鵡,極度瀕危,靠嚴密保育回穩。"
+      "note": "世界最重、不會飛的夜行鸚鵡,極度瀕危,靠嚴密保育回穩。",
+      "image": "animals-kakapo.jpg"
     },
     {
       "zh": "恐鳥",
       "en": "Moa",
-      "note": "已滅絕的巨型不飛鳥,最高逾三公尺,約在毛利人抵達後數百年內消失。"
+      "note": "已滅絕的巨型不飛鳥,最高逾三公尺,約在毛利人抵達後數百年內消失。",
+      "image": "animals-moa.jpg"
     }
   ],
   "foods": [
@@ -61,22 +64,26 @@
     {
       "zh": "毛利地窯料理",
       "en": "Hāngī",
-      "note": "把肉與根莖類放在燒熱石頭上、覆土燜蒸數小時的傳統烹法。"
+      "note": "把肉與根莖類放在燒熱石頭上、覆土燜蒸數小時的傳統烹法。",
+      "image": "foods-hangi.jpg"
     },
     {
       "zh": "奇異果",
       "en": "Kiwifruit",
-      "note": "自中國引進後在紐西蘭商業化,以品牌行銷全球,又稱紐西蘭奇異果。"
+      "note": "自中國引進後在紐西蘭商業化,以品牌行銷全球,又稱紐西蘭奇異果。",
+      "image": "foods-kiwifruit.jpg"
     },
     {
       "zh": "綠殼貽貝",
       "en": "Greenshell mussel",
-      "note": "紐西蘭特有的大型青口,馬爾堡峽灣為主要養殖區。"
+      "note": "紐西蘭特有的大型青口,馬爾堡峽灣為主要養殖區。",
+      "image": "foods-greenshell-mussel.jpg"
     },
     {
       "zh": "炸魚薯條",
       "en": "Fish and chips",
-      "note": "承襲英國的國民外帶食物,常用當地的 hoki 或藍鱈。"
+      "note": "承襲英國的國民外帶食物,常用當地的 hoki 或藍鱈。",
+      "image": "foods-fish-and-chips.jpg"
     }
   ],
   "landmarks": [
@@ -127,7 +134,8 @@
       "latlon": [
         -35.265,
         174.085
-      ]
+      ],
+      "image": "landmarks-waitangi.jpg"
     }
   ],
   "people": [
@@ -146,17 +154,20 @@
     {
       "zh": "彼得·傑克森",
       "en": "Peter Jackson",
-      "note": "電影導演,在紐西蘭拍攝《魔戒》三部曲,帶動當地影視產業。"
+      "note": "電影導演,在紐西蘭拍攝《魔戒》三部曲,帶動當地影視產業。",
+      "image": "people-peter-jackson.jpg"
     },
     {
       "zh": "姬莉·蒂·卡納瓦",
       "en": "Kiri Te Kanawa",
-      "note": "毛利裔女高音,活躍於世界各大歌劇院,曾於英國王室婚禮演唱。"
+      "note": "毛利裔女高音,活躍於世界各大歌劇院,曾於英國王室婚禮演唱。",
+      "image": "people-kiri-te-kanawa.jpg"
     },
     {
       "zh": "凱瑟琳·曼斯菲爾德",
       "en": "Katherine Mansfield",
-      "note": "現代主義短篇小說家,作品多以威靈頓的童年為背景。"
+      "note": "現代主義短篇小說家,作品多以威靈頓的童年為背景。",
+      "image": "people-katherine-mansfield.jpg"
     }
   ],
   "recommended": [
@@ -266,6 +277,83 @@
       "author": "Unknown author (Nobel Foundation)",
       "license": "Public domain",
       "source": "https://commons.wikimedia.org/wiki/File:Ernest_Rutherford_(Nobel).jpg"
+    },
+    {
+      "file": "animals-tuatara.jpg",
+      "title": "Tuatara at Zealandia, Wellington",
+      "author": "Judi Lapsley Miller",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tuatara_at_Zealandia_EcoSanctuary.jpg"
+    },
+    {
+      "file": "animals-kakapo.jpg",
+      "title": "Sirocco the kakapo",
+      "author": "Department of Conservation (New Zealand)",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Kakapo_Sirocco_1.jpg"
+    },
+    {
+      "file": "animals-moa.jpg",
+      "title": "South Island giant moa skeleton (Dinornis robustus)",
+      "author": "York Museums Trust staff",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Dinornis_robustus,_South_Island_Giant_Moa_-_three_quarter_view_on_black_YORYM_2004_20.jpg"
+    },
+    {
+      "file": "foods-hangi.jpg",
+      "title": "Hangi pit being uncovered",
+      "author": "RaviGogna",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Hangi_pit_(2011).jpg"
+    },
+    {
+      "file": "foods-kiwifruit.jpg",
+      "title": "Kiwifruit, whole and halved",
+      "author": "Luc Viatour",
+      "license": "CC BY-SA 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:Kiwi_(Actinidia_chinensis)_1_Luc_Viatour.jpg"
+    },
+    {
+      "file": "foods-greenshell-mussel.jpg",
+      "title": "New Zealand green-lipped (greenshell) mussel",
+      "author": "Shaun Lee",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:New_Zealand_Green-lipped_Mussel_(Perna_canaliculus).jpg"
+    },
+    {
+      "file": "foods-fish-and-chips.jpg",
+      "title": "Fish and chips",
+      "author": "Gvjekoslav",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Fish_and_Chips_Bath,_UK.jpg"
+    },
+    {
+      "file": "landmarks-waitangi.jpg",
+      "title": "Carved Maori meeting house on the Waitangi Treaty Grounds",
+      "author": "Steve",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Marae_on_Waitangi_Treaty_Ground.jpg"
+    },
+    {
+      "file": "people-peter-jackson.jpg",
+      "title": "Peter Jackson, 2014",
+      "author": "Gage Skidmore",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Peter_Jackson_SDCC_2014.jpg"
+    },
+    {
+      "file": "people-kiri-te-kanawa.jpg",
+      "title": "Dame Kiri Te Kanawa",
+      "author": "New Zealand Government, Office of the Governor-General",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Kiri_Te_Kanawa_80th_birthday_(cropped).jpg"
+    },
+    {
+      "file": "people-katherine-mansfield.jpg",
+      "title": "Katherine Mansfield",
+      "author": "Archives New Zealand",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Katherine_Mansfield_(15356040674).jpg"
     }
   ],
   "code": "NZ"

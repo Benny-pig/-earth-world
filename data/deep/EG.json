@@ -29,22 +29,26 @@
     {
       "zh": "尼羅鱷",
       "en": "Nile crocodile",
-      "note": "非洲最大的爬行動物，亞斯文以南的尼羅河可見。"
+      "note": "非洲最大的爬行動物，亞斯文以南的尼羅河可見。",
+      "image": "animals-nile-crocodile.jpg"
     },
     {
       "zh": "耳廓狐",
       "en": "Fennec fox",
-      "note": "大耳的小型狐，夜行於沙漠、靠大耳散熱。"
+      "note": "大耳的小型狐，夜行於沙漠、靠大耳散熱。",
+      "image": "animals-fennec-fox.jpg"
     },
     {
       "zh": "埃及聖䴉",
       "en": "Sacred ibis",
-      "note": "古埃及視為神鳥，如今在埃及境內已相當罕見。"
+      "note": "古埃及視為神鳥，如今在埃及境內已相當罕見。",
+      "image": "animals-sacred-ibis.jpg"
     },
     {
       "zh": "埃及貓",
       "en": "Egyptian Mau",
-      "note": "天然帶斑點的家貓品種，外型近似古壁畫中的貓。"
+      "note": "天然帶斑點的家貓品種，外型近似古壁畫中的貓。",
+      "image": "animals-egyptian-mau.jpg"
     }
   ],
   "foods": [
@@ -57,22 +61,26 @@
     {
       "zh": "蠶豆泥",
       "en": "Ful medames",
-      "note": "燉煮的蠶豆淋橄欖油、加香料，是常見的早餐。"
+      "note": "燉煮的蠶豆淋橄欖油、加香料，是常見的早餐。",
+      "image": "foods-ful-medames.jpg"
     },
     {
       "zh": "塔米亞",
       "en": "Ta'meya",
-      "note": "以去皮蠶豆製成的埃及式炸豆餅（法拉費）。"
+      "note": "以去皮蠶豆製成的埃及式炸豆餅（法拉費）。",
+      "image": "foods-taameya.jpg"
     },
     {
       "zh": "埃及圓餅",
       "en": "Aish baladi",
-      "note": "全麥發酵的口袋麵包，幾乎每餐必備。"
+      "note": "全麥發酵的口袋麵包，幾乎每餐必備。",
+      "image": "foods-aish-baladi.jpg"
     },
     {
       "zh": "野麻嬰湯",
       "en": "Molokhia",
-      "note": "口感黏稠的綠葉菜湯，常配飯或麵包與雞肉、兔肉。"
+      "note": "口感黏稠的綠葉菜湯，常配飯或麵包與雞肉、兔肉。",
+      "image": "foods-molokhia.jpg"
     }
   ],
   "landmarks": [
@@ -103,7 +111,8 @@
       "latlon": [
         22.3372,
         31.6258
-      ]
+      ],
+      "image": "landmarks-abu-simbel.jpg"
     },
     {
       "zh": "帝王谷",
@@ -279,6 +288,69 @@
       "author": "Unknown (Egyptian government press photographer)",
       "license": "Public domain",
       "source": "https://commons.wikimedia.org/wiki/File:Umm_Kulthum_2.jpg"
+    },
+    {
+      "file": "animals-nile-crocodile.jpg",
+      "title": "Nile crocodile head",
+      "author": "Leigh Bedford",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Nile_crocodile_head.jpg"
+    },
+    {
+      "file": "animals-fennec-fox.jpg",
+      "title": "Fennec fox",
+      "author": "Anass ERRIHANI",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Fennec_Fox_Peek.jpg"
+    },
+    {
+      "file": "animals-sacred-ibis.jpg",
+      "title": "African sacred ibis",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sacred_ibis_(Threskiornis_aethiopicus).jpg"
+    },
+    {
+      "file": "animals-egyptian-mau.jpg",
+      "title": "Egyptian Mau cat",
+      "author": "liz west",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Egyptian_Mau_Bronze.jpg"
+    },
+    {
+      "file": "foods-ful-medames.jpg",
+      "title": "Ful medames",
+      "author": "Miansari66",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ful_Medames.JPG"
+    },
+    {
+      "file": "foods-taameya.jpg",
+      "title": "Egyptian ta'meya (falafel)",
+      "author": "Mohammed khaleefa",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Egypt_falafel.jpg"
+    },
+    {
+      "file": "foods-aish-baladi.jpg",
+      "title": "Egyptian baladi bread",
+      "author": "Cairocamels (B. Simpson)",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Baladi_bread.JPG"
+    },
+    {
+      "file": "foods-molokhia.jpg",
+      "title": "Egyptian molokhia",
+      "author": "Habib M'henni",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Molokheya_Egypt,_2012.JPG"
+    },
+    {
+      "file": "landmarks-abu-simbel.jpg",
+      "title": "Facade of the Great Temple of Abu Simbel",
+      "author": "Abumalek ahmed mohamed",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:The_great_temple_of_Abu_simbel..JPG"
     }
   ],
   "code": "EG"
