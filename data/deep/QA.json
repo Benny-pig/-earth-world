@@ -1,0 +1,355 @@
+{
+  "name_zh": "卡達",
+  "name_en": "Qatar",
+  "summary": "深入波斯灣的半島國家,首都杜哈,國土幾乎全為平坦沙漠。過去以採珠與貿易為生,二十世紀中葉發現石油、其後開發北方氣田,成為全球最大液化天然氣出口國之一,人均所得名列世界前茅。2022 年主辦阿拉伯世界首次的世界盃足球賽。",
+  "founding": [
+    "卡達半島自古由貝都因部族居住,以採珠、捕魚與轉口貿易維生。十九世紀,阿勒薩尼家族在半島崛起;1868 年英國與卡達簽約,承認卡達為有別於巴林的實體,常被視為卡達作為國家的起點。1871 至 1913 年鄂圖曼帝國在此駐軍。",
+    "1916 年,卡達與英國簽訂保護條約,外交與防務由英國掌理。1930 年代,養殖珍珠興起與經濟大蕭條使採珠業崩潰,半島經濟一度困頓。",
+    "1939 年在杜坎發現石油,因二戰延後至 1949 年才開始出口,石油收入逐步改變這個小國。1971 年英國撤出波斯灣,卡達於 9 月宣布獨立。",
+    "1995 年,謝赫哈馬德·本·哈利法·阿勒薩尼掌權,推動基礎建設、教育與媒體現代化;1996 年半島電視台開播。憑藉北方氣田的液化天然氣出口,卡達成為人均所得極高的國家,並積極投入國際外交與體育賽事。",
+    "2013 年,謝赫塔米姆·本·哈馬德繼任埃米爾。2017 年,沙烏地阿拉伯、阿聯、巴林與埃及以多項爭議為由,對卡達實施外交與貿易封鎖;2021 年 1 月各方在沙烏地阿爾烏拉簽署協議,封鎖解除。",
+    "近年卡達持續以「國家願景 2030」推動經濟多元化與文化投資,興建博物館、教育城與新市鎮盧塞爾。2022 年 11 至 12 月主辦世界盃足球賽,是首屆在阿拉伯國家舉行的賽事。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "卡達國",
+    "area_km2": 11586,
+    "languages": [
+      "阿拉伯語"
+    ],
+    "religion": "伊斯蘭教(遜尼派)為國教",
+    "currency": "卡達里亞爾(QAR)",
+    "government": "埃米爾世襲的君主專制"
+  },
+  "animals": [
+    {
+      "zh": "阿拉伯大羚羊",
+      "en": "Arabian oryx",
+      "note": "國家象徵動物,也是卡達航空的標誌形象。",
+      "image": "QA-a-oryx.jpg"
+    },
+    {
+      "zh": "單峰駱駝",
+      "en": "Arabian camel",
+      "note": "沙漠生活與駱駝賽、馴鷹文化密不可分。",
+      "image": "QA-a-camel.jpg"
+    },
+    {
+      "zh": "鯨鯊",
+      "en": "Whale shark",
+      "note": "夏季在北方油田海域聚集,為世界最大群聚之一。",
+      "image": "QA-a-whaleshark.jpg"
+    },
+    {
+      "zh": "玳瑁",
+      "en": "Hawksbill turtle",
+      "note": "每年於富韋拉特等北岸沙灘上岸產卵。",
+      "image": "QA-a-turtle.jpg"
+    },
+    {
+      "zh": "獵隼",
+      "en": "Saker falcon",
+      "note": "馴鷹是列入非物質遺產的傳統,獵隼最受推崇。",
+      "image": "QA-a-falcon.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "馬赫布斯",
+      "en": "Machboos",
+      "note": "香料飯燉肉或海鮮,配乾檸檬,卡達國菜。",
+      "image": "QA-f-machboos.jpg"
+    },
+    {
+      "zh": "卡拉克奶茶",
+      "en": "Karak",
+      "note": "濃紅茶加煉乳與荳蔻煮成的甜茶,街頭人手一杯。"
+    },
+    {
+      "zh": "哈里斯",
+      "en": "Harees",
+      "note": "小麥與肉搗煮成濃糊,齋月與節慶常見。",
+      "image": "QA-f-harees.jpg"
+    },
+    {
+      "zh": "炸麵球",
+      "en": "Luqaimat",
+      "note": "酵母麵團炸成金黃小球,淋椰棗糖漿或蜂蜜。"
+    },
+    {
+      "zh": "薩利德燉餅",
+      "en": "Thareed",
+      "note": "薄餅泡進蔬菜燉肉湯汁,層層鋪疊的傳統菜。"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "伊斯蘭藝術博物館",
+      "en": "Museum of Islamic Art",
+      "note": "貝聿銘設計、建在人工島上的杜哈地標。",
+      "latlon": [
+        25.2953,
+        51.5397
+      ],
+      "image": "QA-l-mia.jpg"
+    },
+    {
+      "zh": "瓦其夫市集",
+      "en": "Souq Waqif",
+      "note": "重建的傳統市集,香料、金飾、餐館與馴鷹店。",
+      "latlon": [
+        25.2875,
+        51.533
+      ],
+      "image": "QA-l-souq.jpg"
+    },
+    {
+      "zh": "卡達國家博物館",
+      "en": "National Museum of Qatar",
+      "note": "努維爾設計的「沙漠玫瑰」造型建築。",
+      "latlon": [
+        25.2861,
+        51.5511
+      ],
+      "image": "QA-l-nmoq.jpg"
+    },
+    {
+      "zh": "珍珠島",
+      "en": "The Pearl-Qatar",
+      "note": "填海造出的人工島,遊艇碼頭與地中海式街廓。",
+      "latlon": [
+        25.37,
+        51.55
+      ],
+      "image": "QA-l-pearl.jpg"
+    },
+    {
+      "zh": "哈爾阿達伊德(內陸海)",
+      "en": "Khor Al Adaid",
+      "note": "沙丘直逼海水的潮汐潟湖,是自然保護區。",
+      "latlon": [
+        24.98,
+        51.21
+      ],
+      "image": "QA-l-khor.jpg"
+    }
+  ],
+  "people": [
+    {
+      "zh": "謝赫賈西姆·本·穆罕默德·阿勒薩尼",
+      "en": "Sheikh Jassim bin Mohammed Al Thani",
+      "note": "被尊為現代卡達的奠基者。"
+    },
+    {
+      "zh": "謝赫哈馬德·本·哈利法·阿勒薩尼",
+      "en": "Sheikh Hamad bin Khalifa Al Thani",
+      "note": "前埃米爾,1995 年起推動現代化與天然氣出口。"
+    },
+    {
+      "zh": "謝赫莫扎·賓特·納賽爾",
+      "en": "Sheikha Moza bint Nasser",
+      "note": "卡達基金會與「教育城」的重要推手。"
+    },
+    {
+      "zh": "謝赫塔米姆·本·哈馬德·阿勒薩尼",
+      "en": "Sheikh Tamim bin Hamad Al Thani",
+      "note": "2013 年繼任的現任埃米爾。"
+    },
+    {
+      "zh": "穆塔茲·埃薩·巴爾希姆",
+      "en": "Mutaz Essa Barshim",
+      "note": "跳高選手,2020 東京奧運金牌、多屆世錦賽冠軍。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "杜哈轉機停留",
+      "note": "伊斯蘭藝術博物館、瓦其夫市集與濱海大道,半天沙漠團即可豐富行程,11 至 3 月最宜。"
+    },
+    {
+      "zh": "杜哈城市＋內陸海沙漠",
+      "note": "市區博物館群加上哈爾阿達伊德衝沙與過夜營地,再走祖巴拉考古城。"
+    },
+    {
+      "zh": "文化深度遊",
+      "note": "伊斯蘭藝術博物館、國家博物館、卡塔拉文化村與姆謝雷卜舊城改造區,適合博物館愛好者。"
+    }
+  ],
+  "events": [
+    {
+      "year": 1868,
+      "zh": "英國與卡達簽約,承認卡達有別於巴林,常視為建國起點。"
+    },
+    {
+      "year": 1916,
+      "zh": "卡達與英國簽訂保護條約。"
+    },
+    {
+      "year": 1939,
+      "zh": "在杜坎發現石油。"
+    },
+    {
+      "year": 1971,
+      "zh": "英國撤出波斯灣,卡達宣布獨立。"
+    },
+    {
+      "year": 1995,
+      "zh": "謝赫哈馬德·本·哈利法掌權,啟動現代化與天然氣開發。"
+    },
+    {
+      "year": 2017,
+      "zh": "沙烏地、阿聯等國對卡達實施外交與貿易封鎖,2021 年解除。"
+    },
+    {
+      "year": 2022,
+      "zh": "主辦世界盃足球賽,為首屆在阿拉伯國家舉行。"
+    }
+  ],
+  "souvenirs": [
+    {
+      "zh": "椰棗與椰棗糖漿(dibs)",
+      "note": "各式品種椰棗與濃稠椰棗蜜。"
+    },
+    {
+      "zh": "沉香與香薰、阿拉伯香精",
+      "note": "oud、bakhoor 與中東香水。"
+    },
+    {
+      "zh": "珍珠與珍珠飾品",
+      "note": "呼應卡達採珠歷史的天然或養殖珍珠。"
+    },
+    {
+      "zh": "卡拉克茶與綜合香料",
+      "note": "沖泡包、baharat 香料與乾檸檬(loomi)。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "杜哈轉機停留",
+        "days": "2–3 天",
+        "note": "伊斯蘭藝術博物館、瓦其夫市集、濱海大道與國家博物館,加一場半日沙漠團。台灣有卡達航空直航杜哈,很適合往返歐非時安排停留。"
+      },
+      {
+        "zh": "杜哈城市＋內陸海沙漠",
+        "days": "4–5 天",
+        "note": "市區博物館與文化村兩天,一天到哈爾阿達伊德衝沙、過夜營地,一天走祖巴拉世界遺產。"
+      },
+      {
+        "zh": "杜哈文化深度",
+        "days": "3–4 天",
+        "note": "伊斯蘭藝術博物館、國家博物館、卡塔拉文化村、姆謝雷卜舊城改造區與珍珠島,慢慢逛。"
+      },
+      {
+        "zh": "杜哈＋盧塞爾＋教育城",
+        "days": "4–5 天",
+        "note": "舊城與市集之外,看新市鎮盧塞爾、世足決賽球場與教育城建築群,搭配衝沙。"
+      },
+      {
+        "zh": "卡達＋杜拜",
+        "days": "6–7 天",
+        "note": "杜哈與杜拜各三天,兩座波斯灣城市的博物館、市集與沙漠一次比較。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "哈爾阿達伊德過夜露營",
+        "note": "沙丘臨海的內陸海,適合越野與星空過夜,須由持照業者帶入。"
+      },
+      {
+        "zh": "澤克里特半島",
+        "note": "電影城遺跡、理查·塞拉的鋼板地景雕塑與蕈狀岩,需自駕前往。"
+      },
+      {
+        "zh": "鯨鯊季出海(5–9 月)",
+        "note": "北方海域的鯨鯊聚集,由合法業者安排出海觀察。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "QA-a-oryx.jpg",
+      "title": "Arabian oryx",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AArabian_oryx_(oryx_leucoryx).jpg"
+    },
+    {
+      "file": "QA-a-camel.jpg",
+      "title": "Camel and falcon in Qatar's desert",
+      "author": "Ralf Steinberger",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ACamel_and_falcon_in_Qatar%27s_desert_(32703499761).jpg"
+    },
+    {
+      "file": "QA-a-whaleshark.jpg",
+      "title": "Whale shark",
+      "author": "Simon Pierce / Marine Megafauna",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AWhale_shark_swimming_while_filter_feeding_off_the_Gulf_of_Mexico.jpg"
+    },
+    {
+      "file": "QA-a-turtle.jpg",
+      "title": "Hawksbill turtle",
+      "author": "Derek Keats",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AHawksbill_turtle_at_Elphinstone_Reef,_Red_Sea,_Egypt_(36522421716).jpg"
+    },
+    {
+      "file": "QA-a-falcon.jpg",
+      "title": "Saker falcon, Qatar",
+      "author": "Qatari (Flickr)",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AFalco_cherrug_Qatar.jpg"
+    },
+    {
+      "file": "QA-f-machboos.jpg",
+      "title": "Machboos",
+      "author": "Miansari66",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AMachboos.JPG"
+    },
+    {
+      "file": "QA-f-harees.jpg",
+      "title": "Harees",
+      "author": "Miansari66",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AHarees.JPG"
+    },
+    {
+      "file": "QA-l-mia.jpg",
+      "title": "Museum of Islamic Art, Doha",
+      "author": "Šarūnas Burdulis",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AMuseum_of_Islamic_Art,_Doha_(42258469495).jpg"
+    },
+    {
+      "file": "QA-l-souq.jpg",
+      "title": "Souq Waqif",
+      "author": "Diego Delso",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASouq_Waqif,_Doha,_Catar,_2013-08-05,_DD_107.JPG"
+    },
+    {
+      "file": "QA-l-nmoq.jpg",
+      "title": "National Museum of Qatar",
+      "author": "CallMeBarcode",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ANational_Museum_of_Qatar.jpg"
+    },
+    {
+      "file": "QA-l-pearl.jpg",
+      "title": "The Pearl-Qatar marina",
+      "author": "Alex Sergeev",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AThe_Pearl_Marina_in_Nov_2013.jpg"
+    },
+    {
+      "file": "QA-l-khor.jpg",
+      "title": "Khor Al Adaid (Inland Sea)",
+      "author": "FLASHPACKER TRAVELGUIDE",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AKhor_Al_Adaid_Inland_Sea_and_desert_in_Katar.jpg"
+    }
+  ],
+  "code": "QA"
+}

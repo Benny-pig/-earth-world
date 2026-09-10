@@ -1,0 +1,355 @@
+{
+  "name_zh": "保加利亞",
+  "name_en": "Bulgaria",
+  "summary": "位於巴爾幹半島東部、瀕黑海的國家,首都索菲亞。境內兼有巴爾幹山、里拉—羅多彼山地與多瑙河平原。是斯拉夫字母(西里爾字母)的發源地之一,現為歐盟與北約成員,並於 2026 年 1 月加入歐元區。",
+  "founding": [
+    "保加利亞這片土地上,古代居住著色雷斯人,曾建立奧德里西亞王國,後歸羅馬。681 年,阿斯帕魯赫可汗率保加爾人渡多瑙河,與當地斯拉夫部族結盟,建立第一保加利亞帝國,並獲拜占庭承認,是巴爾幹最早的斯拉夫—突厥系國家。",
+    "864 年,鮑里斯一世率國改信基督教。九世紀末至十世紀初,以普雷斯拉夫與奧赫里德為中心的文人整理出西里爾字母並大量翻譯典籍,使古教會斯拉夫語文獻蓬勃發展。西美昂大帝在位期間(893–927)國力與文化達到鼎盛,自稱沙皇。",
+    "1018 年,拜占庭帝國吞併保加利亞。1185 年,阿森與彼得兄弟起義,建立以大特爾諾沃為都的第二保加利亞帝國,十三世紀初一度稱霸巴爾幹。1396 年,保加利亞被鄂圖曼帝國征服,進入約五百年的統治期。",
+    "十八至十九世紀民族復興運動興起,推動教育、教會自主與武裝抗爭。1876 年四月起義遭鎮壓;隨後的俄土戰爭後,1878 年《柏林條約》重建保加利亞公國,仍名義上臣屬鄂圖曼。1885 年與東魯米利亞合併,1908 年宣布完全獨立、升為王國。",
+    "巴爾幹戰爭與兩次世界大戰中,保加利亞多站在戰敗一方。1944 年蘇軍進入,1946 年廢除君主制、成立人民共和國,由共產黨長期執政,托多爾·日夫科夫主政逾三十年。",
+    "1989 年共黨政權垮台,翌年舉行首次多黨選舉,轉向民主與市場經濟。2004 年加入北約,2007 年加入歐盟;2024 年獲准、2026 年 1 月 1 日正式加入歐元區,以歐元取代保加利亞列弗(BGN)。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "保加利亞共和國",
+    "area_km2": 110994,
+    "languages": [
+      "保加利亞語"
+    ],
+    "religion": "以保加利亞正教會為主,另有少數穆斯林",
+    "currency": "歐元(EUR)",
+    "government": "議會制共和國"
+  },
+  "animals": [
+    {
+      "zh": "歐亞棕熊",
+      "en": "Brown bear",
+      "note": "里拉、羅多彼山區有數百頭,受法律保護。",
+      "image": "BG-a-bear.jpg"
+    },
+    {
+      "zh": "卡拉卡昌犬",
+      "en": "Karakachan dog",
+      "note": "古老的護畜犬種,守護山區羊群防狼熊。",
+      "image": "BG-a-karakachan.jpg"
+    },
+    {
+      "zh": "捲羽鵜鶘",
+      "en": "Dalmatian pelican",
+      "note": "在斯雷伯爾納湖有歐洲少見的繁殖群,世界遺產。",
+      "image": "BG-a-pelican.jpg"
+    },
+    {
+      "zh": "歐洲黃鼠",
+      "en": "European souslik",
+      "note": "乾草原的穴居嚙齒類,是猛禽的重要食物。",
+      "image": "BG-a-souslik.jpg"
+    },
+    {
+      "zh": "白肩鵰",
+      "en": "Eastern imperial eagle",
+      "note": "平原稀有猛禽,保育計畫下族群緩慢回升。",
+      "image": "BG-a-eagle.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "起司酥皮派",
+      "en": "Banitsa",
+      "note": "薄酥皮捲白乳酪與蛋液烤成,早餐與節慶常見。",
+      "image": "BG-f-banitsa.jpg"
+    },
+    {
+      "zh": "紹普沙拉",
+      "en": "Shopska salad",
+      "note": "番茄、小黃瓜、洋蔥拌白乳酪碎,國民開胃菜。",
+      "image": "BG-f-shopska.jpg"
+    },
+    {
+      "zh": "塔拉托冷湯",
+      "en": "Tarator",
+      "note": "優格加小黃瓜、蒜、核桃與蒔蘿的夏日冷湯。",
+      "image": "BG-f-tarator.jpg"
+    },
+    {
+      "zh": "紅椒抹醬",
+      "en": "Lyutenitsa",
+      "note": "紅椒與番茄(有時加茄子)熬成的濃稠抹醬。",
+      "image": "BG-f-lyutenitsa.jpg"
+    },
+    {
+      "zh": "保加利亞優格",
+      "en": "Kiselo mlyako",
+      "note": "含保加利亞乳桿菌的酸奶,被視為國民食品。",
+      "image": "BG-f-yoghurt.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "里拉修道院",
+      "en": "Rila Monastery",
+      "note": "群山環抱的東正教修道院,彩繪拱廊,世界遺產。",
+      "latlon": [
+        42.1333,
+        23.3403
+      ],
+      "image": "BG-l-rila.jpg"
+    },
+    {
+      "zh": "亞歷山大·涅夫斯基主教座堂",
+      "en": "Alexander Nevsky Cathedral",
+      "note": "索菲亞的巨型金頂新拜占庭式教堂。",
+      "latlon": [
+        42.6959,
+        23.3328
+      ],
+      "image": "BG-l-nevski.jpg"
+    },
+    {
+      "zh": "普羅夫迪夫老城",
+      "en": "Plovdiv Old Town",
+      "note": "石板巷弄、民族復興宅邸與露天羅馬劇場。",
+      "latlon": [
+        42.147,
+        24.75
+      ]
+    },
+    {
+      "zh": "內塞伯爾古城",
+      "en": "Nesebar",
+      "note": "黑海岩岬上的中世紀教堂群與木造老屋,世界遺產。",
+      "latlon": [
+        42.66,
+        27.73
+      ]
+    },
+    {
+      "zh": "沙皇城堡(大特爾諾沃)",
+      "en": "Tsarevets",
+      "note": "第二保加利亞帝國都城的山頭要塞。",
+      "latlon": [
+        43.0817,
+        25.6553
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "瓦西爾·萊夫斯基",
+      "en": "Vasil Levski",
+      "note": "民族革命家,籌組國內抗鄂圖曼網絡,被稱「自由使徒」。"
+    },
+    {
+      "zh": "伊凡·瓦佐夫",
+      "en": "Ivan Vazov",
+      "note": "被譽為「保加利亞文學族長」,小說《軛下》。"
+    },
+    {
+      "zh": "約翰·阿塔納索夫",
+      "en": "John Atanasoff",
+      "note": "父為保加利亞裔,設計早期電子數位計算機。"
+    },
+    {
+      "zh": "赫里斯托·斯托伊奇科夫",
+      "en": "Hristo Stoichkov",
+      "note": "足球員,1994 年金球獎,率隊奪世界盃殿軍。"
+    },
+    {
+      "zh": "西美昂一世",
+      "en": "Simeon I the Great",
+      "note": "第一帝國君主(893–927),國力與文化的黃金時代。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "索菲亞＋里拉修道院＋普羅夫迪夫",
+      "note": "首都、山中修道院與歐洲最古老連續有人居住的城市之一,4 至 10 月皆宜。"
+    },
+    {
+      "zh": "夏季的七里拉湖",
+      "note": "6 月底至 9 月搭纜車再健行,一天走完七座高山湖,天氣多變要帶雨具。"
+    },
+    {
+      "zh": "黑海夏季海岸",
+      "note": "7、8 月在瓦爾納、內塞伯爾、索佐波爾曬太陽,古城與沙灘一次滿足。"
+    }
+  ],
+  "events": [
+    {
+      "year": 681,
+      "zh": "阿斯帕魯赫建立第一保加利亞帝國,獲拜占庭承認。"
+    },
+    {
+      "year": 864,
+      "zh": "鮑里斯一世率國改信基督教。"
+    },
+    {
+      "year": 1185,
+      "zh": "阿森與彼得起義,建立第二保加利亞帝國,都大特爾諾沃。"
+    },
+    {
+      "year": 1396,
+      "zh": "保加利亞被鄂圖曼帝國征服。"
+    },
+    {
+      "year": 1878,
+      "zh": "《柏林條約》重建保加利亞公國。"
+    },
+    {
+      "year": 1989,
+      "zh": "共黨政權垮台,翌年舉行首次多黨選舉。"
+    },
+    {
+      "year": 2007,
+      "zh": "加入歐盟。"
+    }
+  ],
+  "souvenirs": [
+    {
+      "zh": "玫瑰精油與玫瑰保養品",
+      "note": "卡贊勒克「玫瑰谷」出產,保加利亞為世界主要玫瑰油產地。"
+    },
+    {
+      "zh": "特羅揚陶器",
+      "note": "手工滴彩「孔雀眼」紋樣的釉陶盤碗。"
+    },
+    {
+      "zh": "奇普羅夫齊掛毯",
+      "note": "雙面平織的羊毛掛毯,列入非物質遺產。"
+    },
+    {
+      "zh": "馬爾特尼察(martenitsa)",
+      "note": "3 月 1 日互贈的紅白絨線飾物,祈願健康。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "索菲亞＋里拉修道院＋普羅夫迪夫",
+        "days": "4–5 天",
+        "note": "索菲亞的教堂與羅馬遺跡兩天,一天南下里拉修道院與博亞納教堂,一天進普羅夫迪夫老城。台灣多經伊斯坦堡、維也納或法蘭克福轉機。"
+      },
+      {
+        "zh": "保加利亞環線:索菲亞—普羅夫迪夫—大特爾諾沃—內塞伯爾",
+        "days": "7–8 天",
+        "note": "串聯首都、老城、帝國舊都與黑海古城,自駕或跟團,一趟看完山、城與海。"
+      },
+      {
+        "zh": "保加利亞＋羅馬尼亞",
+        "days": "8–10 天",
+        "note": "布加勒斯特—大特爾諾沃—索菲亞,跨多瑙河把兩國首都與中世紀城鎮串起來。"
+      },
+      {
+        "zh": "黑海海岸",
+        "days": "5–6 天",
+        "note": "瓦爾納、內塞伯爾、索佐波爾的沙灘與古城,夏季旺、住宿要早訂。"
+      },
+      {
+        "zh": "索菲亞＋七里拉湖健行",
+        "days": "4–5 天",
+        "note": "以首都為據點,一天纜車加健行走七湖,一天里拉修道院,體力中等。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "羅多彼山區村落",
+        "note": "希羅卡拉卡、特里格勒峽谷與「魔鬼喉嚨」洞,風笛與山歌文化濃厚,建議自駕。"
+      },
+      {
+        "zh": "西北角:貝洛格拉德奇克與馬古拉洞",
+        "note": "紅岩古堡與史前岩畫洞穴,遊客稀少、交通不便。"
+      },
+      {
+        "zh": "布茲盧賈紀念碑與共產遺產",
+        "note": "山頂「飛碟」造型的廢棄黨代會堂,搭配希普卡山口與紀念教堂。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "BG-a-bear.jpg",
+      "title": "Brown bear, Belitsa",
+      "author": "Иван",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABrown_Bear_in_Belitsa_Park.jpg"
+    },
+    {
+      "file": "BG-a-karakachan.jpg",
+      "title": "Karakachan dog",
+      "author": "Georgi Hristozov",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AKarakachan-Sirma_1.jpg"
+    },
+    {
+      "file": "BG-a-pelican.jpg",
+      "title": "Dalmatian pelican",
+      "author": "Tim Sträter",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3APelecanus_crispus_in_water.jpg"
+    },
+    {
+      "file": "BG-a-souslik.jpg",
+      "title": "European souslik",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AEuropean_souslik_(Spermophilus_citellus)_Obrovisko.jpg"
+    },
+    {
+      "file": "BG-a-eagle.jpg",
+      "title": "Eastern imperial eagle",
+      "author": "Koshy Koshy",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AEastern_Imperial_Eagle_(24979452083).jpg"
+    },
+    {
+      "file": "BG-f-banitsa.jpg",
+      "title": "Banitsa",
+      "author": "Savannah Rivka Powell",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ATraditional_homemade_Bulgarian_pastry_banitsa.jpg"
+    },
+    {
+      "file": "BG-f-shopska.jpg",
+      "title": "Shopska salad",
+      "author": "Zhelyazkov",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AShopska_salad_with_bulgarian_plum_rakia.JPG"
+    },
+    {
+      "file": "BG-f-tarator.jpg",
+      "title": "Tarator",
+      "author": "Gillgaramond",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ATarator_(Bulgarian_cold_soup).jpg"
+    },
+    {
+      "file": "BG-f-lyutenitsa.jpg",
+      "title": "Lyutenitsa",
+      "author": "Off-shell",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ALutenica.jpg"
+    },
+    {
+      "file": "BG-f-yoghurt.jpg",
+      "title": "Yoghurt",
+      "author": "Rainer Zenz",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AJoghurt.jpg"
+    },
+    {
+      "file": "BG-l-rila.jpg",
+      "title": "Rila Monastery",
+      "author": "Laurens R. Krol",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3A2016-07-31_Bulgaria,_Rila_Monastery_DSC_9213_DxO.jpg"
+    },
+    {
+      "file": "BG-l-nevski.jpg",
+      "title": "Alexander Nevsky Cathedral, Sofia",
+      "author": "Plamen Agov",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AAlexanderNevskyCathedral-Sofia-6.jpg"
+    }
+  ],
+  "code": "BG"
+}

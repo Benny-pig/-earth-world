@@ -175,6 +175,10 @@ export function createEncyclopedia() {
     if (Array.isArray(d.recommended) && d.recommended.length)
       h += section("推薦玩法", d.recommended.map((r) => `<p><b>${esc(r.zh)}</b> — ${esc(r.note || "")}</p>`).join(""));
 
+    if (Array.isArray(d.souvenirs) && d.souvenirs.length)
+      h += section("必買伴手禮", `<ul class="enc-buys">` + d.souvenirs.map((s) =>
+        `<li><b>${esc(s.zh)}</b>${s.note ? ` — ${esc(s.note)}` : ""}${s.where ? ` <span class="enc-dim">(${esc(s.where)})</span>` : ""}</li>`).join("") + `</ul>`);
+
     const itin = d.itineraries || {};
     if ((Array.isArray(itin.hot) && itin.hot.length) || (Array.isArray(itin.niche) && itin.niche.length)) {
       let ih = "";

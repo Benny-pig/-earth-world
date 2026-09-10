@@ -1,0 +1,356 @@
+{
+  "name_zh": "以色列",
+  "name_en": "Israel",
+  "summary": "位於地中海東岸的國家,自行宣布首都為耶路撒冷,國際多在特拉維夫設使館。國土狹長,從北部丘陵到南部內蓋夫沙漠,並瀕死海與紅海。1948 年建國,與周邊多國曾多次交戰,以巴衝突至今未解。",
+  "founding": [
+    "以色列一帶是猶太教、基督教與伊斯蘭教共同的聖地。傳統記載中,約西元前十世紀出現以色列聯合王國,後分裂為北國以色列與南國猶大。西元前 722 年北國亡於亞述,西元前 586 年南國亡於巴比倫,耶路撒冷第一聖殿被毀,居民被擄。",
+    "波斯時期部分猶太人返回、重建第二聖殿。歷經希臘化、哈斯蒙尼王朝與羅馬統治,西元 70 年羅馬鎮壓猶太起義、摧毀第二聖殿,132 至 135 年巴爾科赫巴起義失敗後,猶太人大規模流散各地。此後這片土地先後由羅馬—拜占庭、阿拉伯哈里發國、十字軍、馬穆魯克與鄂圖曼帝國統治。",
+    "十九世紀末,面對歐洲反猶浪潮,錫安主義運動興起,主張猶太人在此建立民族家園;1897 年赫茨爾在巴塞爾召開第一次錫安主義大會。此後數波猶太移民(阿利亞)遷入鄂圖曼、繼而英國託管下的巴勒斯坦,與當地阿拉伯居民的緊張逐漸升高。",
+    "1917 年英國發表《貝爾福宣言》,表示支持在巴勒斯坦建立猶太民族家園;1920 年起英國託管。1947 年聯合國通過分治決議,建議分設猶太國與阿拉伯國,猶太方接受、阿拉伯方反對。1948 年 5 月 14 日,以色列宣布建國。",
+    "建國隔日,周邊阿拉伯國家出兵,爆發第一次中東戰爭。戰爭造成約七十萬巴勒斯坦人流離失所,阿拉伯方稱之為「浩劫」(Nakba);1949 年停火,以色列控制的範圍超過分治方案。隨後數十萬來自歐洲及阿拉伯、穆斯林國家的猶太人移入。",
+    "1967 年六日戰爭,以色列占領約旦河西岸、加薩、西奈半島、戈蘭高地與東耶路撒冷;1973 年贖罪日戰爭後,1979 年與埃及、1994 年與約旦簽署和約。1993 至 1995 年《奧斯陸協議》設立巴勒斯坦自治政府,但最終地位問題懸而未決,衝突反覆再起。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "以色列國",
+    "area_km2": 22072,
+    "languages": [
+      "希伯來語",
+      "阿拉伯語(具特殊地位)"
+    ],
+    "religion": "以猶太教為多數,另有伊斯蘭教、基督教與德魯茲信仰",
+    "currency": "新謝克爾(ILS)",
+    "government": "議會制共和國"
+  },
+  "animals": [
+    {
+      "zh": "努比亞羱羊",
+      "en": "Nubian ibex",
+      "note": "隱蓋迪、內蓋盆等沙漠峭壁上常見的野山羊。",
+      "image": "IL-a-ibex.jpg"
+    },
+    {
+      "zh": "阿拉伯大羚羊",
+      "en": "Arabian oryx",
+      "note": "曾在野外絕跡,經人工繁殖後在南部重新引入。",
+      "image": "IL-a-oryx.jpg"
+    },
+    {
+      "zh": "蹄兔",
+      "en": "Rock hyrax",
+      "note": "岩地群居的小型草食動物,常在石縫間曬太陽。",
+      "image": "IL-a-hyrax.jpg"
+    },
+    {
+      "zh": "戴勝",
+      "en": "Hoopoe",
+      "note": "頭頂扇形羽冠,2008 年票選為以色列國鳥。",
+      "image": "IL-a-hoopoe.jpg"
+    },
+    {
+      "zh": "山瞪羚",
+      "en": "Mountain gazelle",
+      "note": "丘陵與旱谷的本土瞪羚,是重點保育物種。",
+      "image": "IL-a-gazelle.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "法拉費",
+      "en": "Falafel",
+      "note": "鷹嘴豆泥油炸的丸子,夾口袋餅與沙拉。",
+      "image": "IL-f-falafel.jpg"
+    },
+    {
+      "zh": "鷹嘴豆泥",
+      "en": "Hummus",
+      "note": "鷹嘴豆與芝麻醬打成的抹醬,配溫麵餅。",
+      "image": "IL-f-hummus.jpg"
+    },
+    {
+      "zh": "番茄燉蛋",
+      "en": "Shakshuka",
+      "note": "番茄辣椒醬汁中水波蛋,鐵鍋上桌的早午餐。",
+      "image": "IL-f-shakshuka.jpg"
+    },
+    {
+      "zh": "薩比奇",
+      "en": "Sabich",
+      "note": "口袋餅夾炸茄子、水煮蛋、沙拉與芒果醬。",
+      "image": "IL-f-sabich.jpg"
+    },
+    {
+      "zh": "馬拉比奶凍",
+      "en": "Malabi",
+      "note": "玫瑰水香的牛奶布丁,淋糖漿撒碎堅果。",
+      "image": "IL-f-malabi.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "西牆(哭牆)",
+      "en": "Western Wall",
+      "note": "第二聖殿外牆遺構,猶太教最重要的祈禱地。",
+      "latlon": [
+        31.7767,
+        35.2345
+      ],
+      "image": "IL-l-western.jpg"
+    },
+    {
+      "zh": "圓頂清真寺",
+      "en": "Dome of the Rock",
+      "note": "聖殿山上的金頂伊斯蘭聖所,建於七世紀末。",
+      "latlon": [
+        31.778,
+        35.2354
+      ],
+      "image": "IL-l-dome.jpg"
+    },
+    {
+      "zh": "馬薩達",
+      "en": "Masada",
+      "note": "俯瞰死海的岩頂要塞,猶太起義最後據點,世界遺產。",
+      "latlon": [
+        31.3157,
+        35.3536
+      ]
+    },
+    {
+      "zh": "死海",
+      "en": "Dead Sea",
+      "note": "地表最低點,鹽度極高可漂浮,岸邊有礦泥。",
+      "latlon": [
+        31.559,
+        35.4732
+      ]
+    },
+    {
+      "zh": "海法巴哈伊花園",
+      "en": "Bahá'í Gardens",
+      "note": "卡梅爾山坡上的階梯式花園與金頂陵寢,世界遺產。",
+      "latlon": [
+        32.8144,
+        34.987
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "大衛·本-古里安",
+      "en": "David Ben-Gurion",
+      "note": "宣讀建國宣言的首任總理。"
+    },
+    {
+      "zh": "果爾達·梅厄",
+      "en": "Golda Meir",
+      "note": "以色列首位、至今唯一的女性總理。"
+    },
+    {
+      "zh": "伊扎克·拉賓",
+      "en": "Yitzhak Rabin",
+      "note": "總理,推動《奧斯陸協議》,1995 年遇刺身亡。"
+    },
+    {
+      "zh": "阿達·尤納特",
+      "en": "Ada Yonath",
+      "note": "結構生物學家,2009 年諾貝爾化學獎。"
+    },
+    {
+      "zh": "蓋兒·加朵",
+      "en": "Gal Gadot",
+      "note": "演員,以《神力女超人》廣為人知。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "耶路撒冷＋死海＋馬薩達",
+      "note": "老城三教聖地、死海漂浮與馬薩達日出,3–5 天即可,春秋氣候最佳。"
+    },
+    {
+      "zh": "加利利與拿撒勒的聖地巡禮",
+      "note": "拿撒勒、迦百農、加利利海與約旦河,適合基督徒朝聖或歷史行程。"
+    },
+    {
+      "zh": "特拉維夫濱海城市假期",
+      "note": "白城建築、雅法老港、海灘與夜生活,搭配凱撒利亞、海法一日遊。"
+    }
+  ],
+  "events": [
+    {
+      "year": -957,
+      "zh": "傳統記載耶路撒冷第一聖殿落成(所羅門王時期)。"
+    },
+    {
+      "year": -586,
+      "zh": "巴比倫攻陷耶路撒冷,毀第一聖殿,居民被擄。"
+    },
+    {
+      "year": 70,
+      "zh": "羅馬鎮壓猶太起義,摧毀第二聖殿,猶太人漸次流散。"
+    },
+    {
+      "year": 1897,
+      "zh": "第一次錫安主義大會在巴塞爾召開。"
+    },
+    {
+      "year": 1917,
+      "zh": "英國發表《貝爾福宣言》,英軍進入巴勒斯坦。"
+    },
+    {
+      "year": 1948,
+      "zh": "以色列宣布建國;第一次中東戰爭爆發,大量巴勒斯坦人流離。"
+    },
+    {
+      "year": 1967,
+      "zh": "六日戰爭,以色列占領西岸、加薩、西奈、戈蘭與東耶路撒冷。"
+    }
+  ],
+  "souvenirs": [
+    {
+      "zh": "死海礦物保養品",
+      "note": "泥膜、鹽與礦物護膚品,超市與品牌專櫃都有。"
+    },
+    {
+      "zh": "耶路撒冷彩繪陶器",
+      "note": "亞美尼亞工坊手繪的藍綠花磚與盤碟。"
+    },
+    {
+      "zh": "猶太宗教工藝品",
+      "note": "燭台(menorah)、門框經卷盒與「哈姆薩」護符。"
+    },
+    {
+      "zh": "中東香料與甜點",
+      "note": "扎塔(za'atar)綜合香料、哈爾瓦芝麻糖與椰棗蜜。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "耶路撒冷＋伯利恆＋死海＋馬薩達",
+        "days": "5–6 天",
+        "note": "耶路撒冷老城三教聖地與大屠殺紀念館,一天到伯利恆(巴勒斯坦自治區),一天死海漂浮加馬薩達日出。台灣多經伊斯坦堡、杜哈或曼谷轉機。"
+      },
+      {
+        "zh": "聖地朝聖:耶路撒冷＋加利利",
+        "days": "8–10 天",
+        "note": "耶路撒冷、伯利恆之外,北上拿撒勒、迦百農、加利利海與約旦河受洗地,適合宗教與歷史深度行程。"
+      },
+      {
+        "zh": "特拉維夫＋雅法＋凱撒利亞＋海法＋阿卡",
+        "days": "4–5 天",
+        "note": "白城建築、雅法老港、羅馬港城凱撒利亞、海法巴哈伊花園與阿卡十字軍古城,沿海岸北行。"
+      },
+      {
+        "zh": "耶路撒冷＋內蓋夫＋埃拉特",
+        "days": "7–8 天",
+        "note": "由聖城南下拉蒙坑、米茲佩拉蒙看星,最後到紅海邊的埃拉特浮潛,沙漠與海一次收。"
+      },
+      {
+        "zh": "以色列＋約旦",
+        "days": "8–10 天",
+        "note": "耶路撒冷經邊境到佩特拉與瓦地倫,再回死海,兩國經典景點串成一線。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "以色列國家步道分段健行",
+        "note": "全長約千公里的縱貫步道,可挑內蓋夫或加利利路段,春秋為宜、須備水。"
+      },
+      {
+        "zh": "埃拉特紅海潛水",
+        "note": "珊瑚礁自然保護區與海底天文台,適合浮潛與初階潛水。"
+      },
+      {
+        "zh": "加利利與戈蘭高地酒莊路線",
+        "note": "北部涼爽丘陵的酒莊巡禮,搭配自然保護區與健行。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "IL-a-ibex.jpg",
+      "title": "Nubian ibex, Ein Gedi",
+      "author": "Yuvalr",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ATwo_Nubian_Ibexes,_Ein_Gedi_nature_reserve,_The_Judean_desert,_Israel.jpg"
+    },
+    {
+      "file": "IL-a-oryx.jpg",
+      "title": "Arabian oryx",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AArabian_oryx_(oryx_leucoryx).jpg"
+    },
+    {
+      "file": "IL-a-hyrax.jpg",
+      "title": "Rock hyrax",
+      "author": "Greg Schechter",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AIsrael._Rock_Hyrax_(15356302714).jpg"
+    },
+    {
+      "file": "IL-a-hoopoe.jpg",
+      "title": "Hoopoe (national bird)",
+      "author": "Sivan S.",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3A2015-07-10_07.55.33_Hoopoe_-_Upupa_epops_-_%D7%93%D7%95%D7%9B%D7%99%D7%A4%D7%AA.jpg"
+    },
+    {
+      "file": "IL-a-gazelle.jpg",
+      "title": "Mountain gazelle",
+      "author": "SuperJew",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AMountain_Gazelle.jpg"
+    },
+    {
+      "file": "IL-f-falafel.jpg",
+      "title": "Falafel in pita",
+      "author": "Israel_photo_gallery",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AFalafel_in_a_pita.jpg"
+    },
+    {
+      "file": "IL-f-hummus.jpg",
+      "title": "Hummus plate",
+      "author": "Orenrosenfeld",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AHummus_plate.jpg"
+    },
+    {
+      "file": "IL-f-shakshuka.jpg",
+      "title": "Shakshuka",
+      "author": "Gilabrand",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AShakshuka_011.jpg"
+    },
+    {
+      "file": "IL-f-sabich.jpg",
+      "title": "Sabich",
+      "author": "Gilabrand",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASabich.jpg"
+    },
+    {
+      "file": "IL-f-malabi.jpg",
+      "title": "Malabi",
+      "author": "Cabeza2000",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AIsraeli_malabi_dessert.jpg"
+    },
+    {
+      "file": "IL-l-western.jpg",
+      "title": "Western Wall plaza",
+      "author": "Jorge Láscar",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AWestern_Wall_Plaza_(10804490996).jpg"
+    },
+    {
+      "file": "IL-l-dome.jpg",
+      "title": "Dome of the Rock",
+      "author": "Godot13",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AJerusalem-2013(2)-Temple_Mount-Dome_of_the_Rock_(SE_exposure).jpg"
+    }
+  ],
+  "code": "IL"
+}

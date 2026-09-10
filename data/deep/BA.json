@@ -1,0 +1,357 @@
+{
+  "name_zh": "波士尼亞與赫塞哥維納",
+  "name_en": "Bosnia and Herzegovina",
+  "summary": "位於巴爾幹半島西部、幾乎被陸地包圍的國家,首都塞拉耶佛,僅約 20 公里亞得里亞海岸線。境內以多山地形與莫斯塔爾古橋、塞拉耶佛老城著稱。1992 至 1995 年經歷戰爭,依《岱頓協定》分為兩個政治實體並存的聯邦國家。",
+  "founding": [
+    "這片土地在羅馬時代屬達爾馬提亞與潘諾尼亞行省,六至七世紀斯拉夫人遷入。中世紀出現以「波士尼亞」為名的班國,信仰上除天主教、東正教外還有獨特的「波士尼亞教會」。1377 年,特弗爾特科一世加冕為波士尼亞國王,王國一度勢力可觀。",
+    "1463 年,鄂圖曼帝國征服波士尼亞王國,赫塞哥維納也在 1482 年前後陷落。此後約四百年的鄂圖曼統治期間,大量居民改信伊斯蘭教,塞拉耶佛與莫斯塔爾發展為擁有清真寺、市集與石橋的鄂圖曼城市,形成穆斯林、東正教與天主教並存的社會。",
+    "1878 年柏林會議後,奧匈帝國取得波赫的管理權,1908 年正式併吞,引發列強緊張。奧匈帶來鐵路、行政與建築的現代化,但族群與宗教間的緊張也持續累積。",
+    "1914 年 6 月 28 日,奧匈皇儲斐迪南大公在塞拉耶佛遇刺,成為第一次世界大戰的導火線。1918 年戰後,波赫併入塞爾維亞人、克羅埃西亞人和斯洛維尼亞人王國(後稱南斯拉夫)。二戰期間屬軸心國扶植的克羅埃西亞獨立國,境內戰鬥慘烈。",
+    "戰後,波赫成為南斯拉夫聯邦六個共和國之一,以多民族共居為特色,1984 年塞拉耶佛主辦冬季奧運。1992 年,波赫經公投宣布獨立,隨即爆發波士尼亞戰爭,包括長達近四年的塞拉耶佛圍城與 1995 年的斯雷布雷尼察事件。",
+    "1995 年底簽署《岱頓協定》,結束戰爭。協定將國家分為「波赫聯邦」與「塞族共和國」兩個實體,外加布爾奇科特區,並設三人輪值主席團與國際高級代表。波赫自 2016 年提出入盟申請,2022 年獲歐盟候選國地位。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "波士尼亞與赫塞哥維納",
+    "area_km2": 51197,
+    "languages": [
+      "波士尼亞語",
+      "塞爾維亞語",
+      "克羅埃西亞語"
+    ],
+    "religion": "伊斯蘭教(遜尼派)、塞爾維亞正教、羅馬天主教三大群體並存",
+    "currency": "波赫可兌換馬克(BAM)",
+    "government": "議會制共和國(三人輪值主席團)"
+  },
+  "animals": [
+    {
+      "zh": "歐亞棕熊",
+      "en": "Brown bear",
+      "note": "廣布於中部與東部山林,是最具代表性的大型獸。",
+      "image": "BA-a-bear.jpg"
+    },
+    {
+      "zh": "灰狼",
+      "en": "Grey wolf",
+      "note": "山區族群相對穩定,狩獵管理下數量可觀。",
+      "image": "BA-a-wolf.jpg"
+    },
+    {
+      "zh": "巴爾幹猞猁",
+      "en": "Balkan lynx",
+      "note": "歐洲最瀕危的貓科之一,僅存於西南山區。",
+      "image": "BA-a-lynx.jpg"
+    },
+    {
+      "zh": "波士尼亞山地馬",
+      "en": "Bosnian mountain horse",
+      "note": "耐勞的本土矮種馬,山區農林運輸的老夥伴。",
+      "image": "BA-a-horse.jpg"
+    },
+    {
+      "zh": "西域兀鷲",
+      "en": "Griffon vulture",
+      "note": "曾廣布,今在部分峽谷有小規模族群與復育。",
+      "image": "BA-a-vulture.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "塞拉耶佛烤肉腸",
+      "en": "Ćevapi",
+      "note": "碎肉腸夾圓麵餅(somun),配洋蔥與凝乳。",
+      "image": "BA-f-cevapi.jpg"
+    },
+    {
+      "zh": "捲餅派",
+      "en": "Burek / Pita",
+      "note": "薄酥皮捲肉、乳酪、菠菜或馬鈴薯烤成的螺旋派。"
+    },
+    {
+      "zh": "波士尼亞燉鍋",
+      "en": "Bosanski lonac",
+      "note": "肉塊與多種蔬菜層疊、長時間文火慢燉的一鍋菜。"
+    },
+    {
+      "zh": "焦糖烤蘋果",
+      "en": "Tufahija",
+      "note": "去核蘋果糖煮後填核桃,淋糖漿與鮮奶油。",
+      "image": "BA-f-tufahija.jpg"
+    },
+    {
+      "zh": "波士尼亞咖啡",
+      "en": "Bosanska kahva",
+      "note": "銅壺(džezva)煮的細粉咖啡,配方糖與土耳其軟糖。",
+      "image": "BA-f-coffee.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "莫斯塔爾古橋",
+      "en": "Stari Most",
+      "note": "十六世紀鄂圖曼石拱橋,戰時被毀後重建,世界遺產。",
+      "latlon": [
+        43.3373,
+        17.815
+      ],
+      "image": "BA-l-mostar.jpg"
+    },
+    {
+      "zh": "塞拉耶佛老城(巴什查爾希亞)",
+      "en": "Baščaršija",
+      "note": "鄂圖曼時代市集區,中央有木頂賽比爾水亭。",
+      "latlon": [
+        43.8595,
+        18.431
+      ],
+      "image": "BA-l-bascarsija.jpg"
+    },
+    {
+      "zh": "布拉加伊泉源修道院",
+      "en": "Blagaj Tekke",
+      "note": "白色蘇非道堂緊貼崖壁,建在布納河湧泉口。",
+      "latlon": [
+        43.2569,
+        17.8983
+      ],
+      "image": "BA-l-blagaj.jpg"
+    },
+    {
+      "zh": "克拉維察瀑布",
+      "en": "Kravice Waterfalls",
+      "note": "赫塞哥維納的弧形寬幅瀑布,夏季可下水。",
+      "latlon": [
+        43.1567,
+        17.6114
+      ],
+      "image": "BA-l-kravice.jpg"
+    },
+    {
+      "zh": "維舍格勒的索科洛維奇橋",
+      "en": "Mehmed Paša Sokolović Bridge",
+      "note": "十六世紀十一孔石橋,小說《德里納河上的橋》舞台,世界遺產。",
+      "latlon": [
+        43.7825,
+        19.2881
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "伊沃·安德里奇",
+      "en": "Ivo Andrić",
+      "note": "作家,《德里納河上的橋》,1961 年諾貝爾文學獎。"
+    },
+    {
+      "zh": "弗拉迪米爾·普雷洛格",
+      "en": "Vladimir Prelog",
+      "note": "化學家,生於塞拉耶佛,1975 年諾貝爾化學獎。"
+    },
+    {
+      "zh": "梅沙·塞利莫維奇",
+      "en": "Meša Selimović",
+      "note": "小說家,代表作《修道僧與死亡》。"
+    },
+    {
+      "zh": "埃米爾·庫斯圖里察",
+      "en": "Emir Kusturica",
+      "note": "電影導演,生於塞拉耶佛,兩度奪坎城金棕櫚。"
+    },
+    {
+      "zh": "埃丁·哲科",
+      "en": "Edin Džeko",
+      "note": "足球前鋒,波赫國家隊史上頭號射手。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "塞拉耶佛與莫斯塔爾",
+      "note": "老城市集、跳橋表演與布拉加伊、波奇泰利、克拉維察瀑布,4 至 10 月最舒適。"
+    },
+    {
+      "zh": "從杜布羅夫尼克或斯普利特加訪莫斯塔爾",
+      "note": "一日或一夜行程即可把古橋、布拉加伊與波奇泰利納入達爾馬提亞海岸之旅。"
+    },
+    {
+      "zh": "赫塞哥維納酒鄉與瀑布",
+      "note": "莫斯塔爾、特雷比涅一帶的 Žilavka、Blatina 葡萄酒配上湧泉與瀑布,適合租車。"
+    }
+  ],
+  "events": [
+    {
+      "year": 1189,
+      "zh": "庫林班頒發特許狀,是波士尼亞最早的國家文書之一。"
+    },
+    {
+      "year": 1377,
+      "zh": "特弗爾特科一世加冕為波士尼亞國王。"
+    },
+    {
+      "year": 1463,
+      "zh": "鄂圖曼帝國征服波士尼亞王國。"
+    },
+    {
+      "year": 1878,
+      "zh": "柏林會議後奧匈帝國取得波赫管理權。"
+    },
+    {
+      "year": 1914,
+      "zh": "斐迪南大公在塞拉耶佛遇刺,引爆第一次世界大戰。"
+    },
+    {
+      "year": 1992,
+      "zh": "波赫經公投宣布獨立,波士尼亞戰爭爆發。"
+    },
+    {
+      "year": 1995,
+      "zh": "簽署《岱頓協定》,戰爭結束,國家分為兩個實體。"
+    }
+  ],
+  "souvenirs": [
+    {
+      "zh": "銅壺咖啡具組",
+      "note": "džezva 銅壺加小杯,塞拉耶佛市集手工敲製。"
+    },
+    {
+      "zh": "巴什查爾希亞銅雕器物",
+      "note": "鏨刻花紋的盤、盒與彈殼工藝品。"
+    },
+    {
+      "zh": "科尼茨木雕",
+      "note": "深浮雕的胡桃木家具與小物,列入非物質遺產。"
+    },
+    {
+      "zh": "土耳其軟糖與玫瑰醬",
+      "note": "rahat lokum 與玫瑰花瓣果醬,配咖啡。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "塞拉耶佛＋莫斯塔爾",
+        "days": "4–5 天",
+        "note": "塞拉耶佛老城、隧道博物館與 1984 冬奧遺跡兩天,莫斯塔爾古橋與布拉加伊、波奇泰利、克拉維察瀑布一到兩天。台灣多經伊斯坦堡或維也納轉機。"
+      },
+      {
+        "zh": "達爾馬提亞海岸加訪波赫",
+        "days": "2–3 天",
+        "note": "從杜布羅夫尼克或斯普利特搭巴士或包車,一日或一夜把莫斯塔爾古橋與周邊景點納入克羅埃西亞行程。"
+      },
+      {
+        "zh": "塞拉耶佛＋亞伊采＋特拉夫尼克環線",
+        "days": "5–6 天",
+        "note": "中部的亞伊采城中瀑布、普利瓦湖與特拉夫尼克古堡,租車走山路串聯,人潮較少。"
+      },
+      {
+        "zh": "塞拉耶佛歷史深度",
+        "days": "3–4 天",
+        "note": "拉丁橋刺殺點、圍城年代遺跡、老城市集與纜車上特雷貝維奇山,搭配弗雷洛博斯涅泉源公園。"
+      },
+      {
+        "zh": "赫塞哥維納酒與水",
+        "days": "4–5 天",
+        "note": "莫斯塔爾、特雷比涅、布拉加伊、斯托拉茨一線,結合葡萄酒、湧泉、瀑布與鄂圖曼小鎮。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "蘇特耶斯卡國家公園",
+        "note": "佩魯契察原始林與全國最高峰馬格利奇山,適合多日健行,需嚮導。"
+      },
+      {
+        "zh": "塔拉峽谷泛舟",
+        "note": "歐洲最深峽谷之一,4 至 10 月可安排一日泛舟,部分河段跨蒙特內哥羅。"
+      },
+      {
+        "zh": "維舍格勒與安德里奇城",
+        "note": "索科洛維奇石橋與導演庫斯圖里察打造的「安德里奇城」石造街區。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "BA-a-bear.jpg",
+      "title": "Eurasian brown bear (cub)",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AEurasian_brown_bear_(Ursus_arctos_arctos)_cub_14_months.jpg"
+    },
+    {
+      "file": "BA-a-wolf.jpg",
+      "title": "Grey wolf",
+      "author": "Miroslav Duchacek",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AEuropean_grey_wolf_in_Prague_zoo.jpg"
+    },
+    {
+      "file": "BA-a-lynx.jpg",
+      "title": "Balkan lynx",
+      "author": "albinfo",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ATirana_Zoo_Balkan_Lynx_(OSCAL19_trip).jpg"
+    },
+    {
+      "file": "BA-a-horse.jpg",
+      "title": "Bosnian mountain horse",
+      "author": "Agan (bs.wikipedia)",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABosanski_brdski_konj_pastuh_(cropped)_2.jpg"
+    },
+    {
+      "file": "BA-a-vulture.jpg",
+      "title": "Griffon vulture in flight",
+      "author": "Artemy Voikhansky",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AGyps_Fulvus_in_flight.jpg"
+    },
+    {
+      "file": "BA-f-cevapi.jpg",
+      "title": "Sarajevo ćevapi",
+      "author": "BiHVolim",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASarajevo_%C4%86evapi_(1).JPG"
+    },
+    {
+      "file": "BA-f-tufahija.jpg",
+      "title": "Tufahija",
+      "author": "Miansari66",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ATufahije_1.JPG"
+    },
+    {
+      "file": "BA-f-coffee.jpg",
+      "title": "Bosnian coffee set",
+      "author": "Aleksandra Đuričić",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASet_za_kafu_01.jpg"
+    },
+    {
+      "file": "BA-l-mostar.jpg",
+      "title": "Stari Most, Mostar",
+      "author": "Ramirez",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AMostar_Old_Town_Panorama_2007.jpg"
+    },
+    {
+      "file": "BA-l-bascarsija.jpg",
+      "title": "Baščaršija and Sebilj, Sarajevo",
+      "author": "Milan Suvajac",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASarajevo_Bascarsija_Sebilj_2007-08-16.jpg"
+    },
+    {
+      "file": "BA-l-blagaj.jpg",
+      "title": "Blagaj Tekke at the Buna spring",
+      "author": "Bosancica by MK",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABlagaj_Tekke,_the_spring_of_the_Buna_river,_Bosnia_and_Herzegovina_01.jpg"
+    },
+    {
+      "file": "BA-l-kravice.jpg",
+      "title": "Kravica Waterfalls",
+      "author": "old_s",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AKravica_waterfall_july_2012.jpg"
+    }
+  ],
+  "code": "BA"
+}

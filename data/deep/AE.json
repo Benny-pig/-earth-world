@@ -1,0 +1,355 @@
+{
+  "name_zh": "阿拉伯聯合大公國",
+  "name_en": "United Arab Emirates",
+  "summary": "位於阿拉伯半島東南、瀕波斯灣的聯邦國家,由七個酋長國組成,首都阿布達比,最大城為杜拜。過去以採珠與貿易維生,1958 年後發現石油而快速致富,如今以航空、觀光、金融與房地產聞名,外籍居民占人口約九成。",
+  "founding": [
+    "如今阿聯所在的海岸,古代以採珠、捕魚、轉口貿易與貝都因游牧為生。十九世紀,當地各酋長與英國簽訂一系列海上停戰條約(1820 年《大海事條約》、1853 年永久停戰、1892 年專屬協定),形成受英國保護的「特魯西爾酋長國」(停戰諸國),外交與防務由英國掌理。",
+    "1930 年代,日本養殖珍珠興起加上全球經濟大蕭條,使採珠業崩潰,沿岸經濟一度陷入困境。",
+    "1958 年,阿布達比外海發現石油,1962 年開始出口;杜拜也在 1966 年發現石油。1968 年英國宣布將撤出蘇伊士以東,阿布達比的札耶德酋長與杜拜的拉希德酋長主導籌組聯邦。",
+    "1971 年 12 月 2 日,阿布達比、杜拜、沙迦、阿治曼、烏姆蓋萬與富查伊拉六個酋長國組成阿拉伯聯合大公國,札耶德出任首任總統;哈伊馬角於 1972 年 2 月加入,聯邦成員增至七個。",
+    "建國後,阿聯把石油收入投入基礎建設、教育與主權基金,並積極分散經濟。杜拜發展轉口港、航空(阿聯酋航空)、觀光與金融,2010 年哈里發塔落成;阿布達比則以能源、文化(羅浮宮阿布達比)與投資為主軸。",
+    "近年阿聯推動太空與能源計畫:2020 年與以色列簽署《亞伯拉罕協議》建交;2021 年「希望號」探測器進入火星軌道,同年杜拜主辦延期舉行的 2020 世界博覽會;巴拉卡核電廠陸續投入運轉,是阿拉伯世界首座商轉核電站。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "阿拉伯聯合大公國",
+    "area_km2": 83600,
+    "languages": [
+      "阿拉伯語"
+    ],
+    "religion": "伊斯蘭教(遜尼派)為國教,外籍居民信仰多元",
+    "currency": "阿聯迪拉姆(AED)",
+    "government": "七個酋長國組成的聯邦君主制"
+  },
+  "animals": [
+    {
+      "zh": "阿拉伯大羚羊",
+      "en": "Arabian oryx",
+      "note": "曾野外滅絕,阿聯是重新引入與繁殖的主要推手。",
+      "image": "AE-a-oryx.jpg"
+    },
+    {
+      "zh": "單峰駱駝",
+      "en": "Arabian camel",
+      "note": "有機器人騎師的駱駝賽事是當地特色運動。",
+      "image": "AE-a-camel.jpg"
+    },
+    {
+      "zh": "獵隼(獵鷹)",
+      "en": "Falcon",
+      "note": "馴鷹是列入非物質遺產的傳統,獵隼為國家象徵。",
+      "image": "AE-a-falcon.jpg"
+    },
+    {
+      "zh": "阿拉伯塔爾羊",
+      "en": "Arabian tahr",
+      "note": "哈賈爾山區的特有山羊,數量稀少受嚴格保護。",
+      "image": "AE-a-tahr.jpg"
+    },
+    {
+      "zh": "儒艮",
+      "en": "Dugong",
+      "note": "阿布達比海域擁有僅次於澳洲的世界第二大族群。",
+      "image": "AE-a-dugong.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "馬赫布斯",
+      "en": "Machboos",
+      "note": "香料飯燉雞、羊或魚,配乾檸檬提味,家常主食。"
+    },
+    {
+      "zh": "炸麵球",
+      "en": "Luqaimat",
+      "note": "酵母麵團炸成金黃小球,淋椰棗糖漿。"
+    },
+    {
+      "zh": "哈里斯",
+      "en": "Harees",
+      "note": "小麥與肉長時間搗煮成濃稠糊狀,齋月常見。",
+      "image": "AE-f-harees.jpg"
+    },
+    {
+      "zh": "巴拉利特",
+      "en": "Balaleet",
+      "note": "甜味細麵拌荳蔻、番紅花,上鋪煎蛋的早餐。",
+      "image": "AE-f-balaleet.jpg"
+    },
+    {
+      "zh": "哈米爾麵餅",
+      "en": "Khameer",
+      "note": "加椰棗糖漿與茴香的發酵圓餅,配起司或蜂蜜。",
+      "image": "AE-f-khameer.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "哈里發塔",
+      "en": "Burj Khalifa",
+      "note": "杜拜的 828 公尺摩天樓,現為世界最高建築。",
+      "latlon": [
+        25.1972,
+        55.2744
+      ],
+      "image": "AE-l-burj.jpg"
+    },
+    {
+      "zh": "謝赫札耶德大清真寺",
+      "en": "Sheikh Zayed Grand Mosque",
+      "note": "阿布達比的白色大理石清真寺,可容數萬人。",
+      "latlon": [
+        24.4128,
+        54.475
+      ],
+      "image": "AE-l-szgm.jpg"
+    },
+    {
+      "zh": "羅浮宮阿布達比",
+      "en": "Louvre Abu Dhabi",
+      "note": "努維爾設計的「光雨」穹頂美術館,建在海上。",
+      "latlon": [
+        24.5339,
+        54.3981
+      ],
+      "image": "AE-l-louvre.jpg"
+    },
+    {
+      "zh": "朱美拉棕櫚島",
+      "en": "Palm Jumeirah",
+      "note": "填海造出的棕櫚樹形人工島,住宅與度假村林立。",
+      "latlon": [
+        25.1122,
+        55.1389
+      ],
+      "image": "AE-l-palm.jpg"
+    },
+    {
+      "zh": "艾因綠洲",
+      "en": "Al Ain Oasis",
+      "note": "以古老灌溉渠(falaj)供水的棗椰園,世界遺產。",
+      "latlon": [
+        24.2172,
+        55.7608
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "謝赫札耶德·本·蘇爾坦·阿勒納哈揚",
+      "en": "Sheikh Zayed bin Sultan Al Nahyan",
+      "note": "阿聯建國之父與首任總統。"
+    },
+    {
+      "zh": "謝赫穆罕默德·本·拉希德·阿勒馬克圖姆",
+      "en": "Mohammed bin Rashid Al Maktoum",
+      "note": "杜拜統治者、阿聯副總統兼總理。"
+    },
+    {
+      "zh": "謝赫穆罕默德·本·札耶德·阿勒納哈揚",
+      "en": "Mohamed bin Zayed Al Nahyan",
+      "note": "阿布達比統治者、阿聯現任總統。"
+    },
+    {
+      "zh": "哈札·曼蘇里",
+      "en": "Hazza Al Mansouri",
+      "note": "2019 年升空,阿聯與阿拉伯世界首位太空人之一。"
+    },
+    {
+      "zh": "謝赫拉·卡西米",
+      "en": "Lubna Al Qasimi",
+      "note": "阿聯首位女性內閣部長。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "杜拜城市假期",
+      "note": "哈里發塔、杜拜購物中心、沙漠越野與老城渡船,11 至 3 月涼季最宜。"
+    },
+    {
+      "zh": "阿布達比文化與主題樂園",
+      "note": "大清真寺、羅浮宮、總統府與法拉利世界、亞斯島樂園,可從杜拜當日往返。"
+    },
+    {
+      "zh": "哈伊馬角傑貝爾傑斯山",
+      "note": "阿聯最高峰的鐵索攀岩與長索道,冬季山區涼爽。"
+    }
+  ],
+  "events": [
+    {
+      "year": 1820,
+      "zh": "當地酋長與英國簽署《大海事條約》,形成停戰諸國。"
+    },
+    {
+      "year": 1892,
+      "zh": "《專屬協定》使停戰海岸成為英國保護地。"
+    },
+    {
+      "year": 1958,
+      "zh": "阿布達比外海發現石油。"
+    },
+    {
+      "year": 1971,
+      "zh": "六個酋長國組成阿拉伯聯合大公國,札耶德任首任總統。"
+    },
+    {
+      "year": 1972,
+      "zh": "哈伊馬角加入聯邦,成員增至七個。"
+    },
+    {
+      "year": 2010,
+      "zh": "杜拜哈里發塔落成,成為世界最高建築。"
+    },
+    {
+      "year": 2021,
+      "zh": "「希望號」探測器進入火星軌道;杜拜主辦 2020 世博會。"
+    }
+  ],
+  "souvenirs": [
+    {
+      "zh": "椰棗與駱駝奶巧克力",
+      "note": "精緻禮盒的椰棗與駱駝奶製巧克力。"
+    },
+    {
+      "zh": "沉香與阿拉伯香精",
+      "note": "oud、bakhoor 與濃郁的中東香水。"
+    },
+    {
+      "zh": "黃金飾品",
+      "note": "杜拜黃金市場按重量計價的金飾。"
+    },
+    {
+      "zh": "阿拉伯咖啡壺與薩杜織品",
+      "note": "dallah 銅壺、駱駝擺飾與幾何紋掛毯。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "杜拜定點",
+        "days": "4–5 天",
+        "note": "哈里發塔與觀景台、杜拜購物中心與音樂噴泉、沙漠衝沙晚餐、老城香料與黃金市場加渡船。台灣有直航,適合第一次到中東的旅客。"
+      },
+      {
+        "zh": "杜拜＋阿布達比",
+        "days": "5–6 天",
+        "note": "杜拜行程之外,一天到阿布達比走大清真寺、羅浮宮、總統府與亞斯島樂園。兩城車程約一個半小時。"
+      },
+      {
+        "zh": "杜拜轉機順遊",
+        "days": "2–3 天",
+        "note": "飛歐洲或非洲途中在杜拜停留,把哈里發塔、購物中心與一場沙漠團排進去。"
+      },
+      {
+        "zh": "杜拜＋阿布達比＋沙漠＋哈伊馬角",
+        "days": "6–7 天",
+        "note": "兩大城之外加一晚沙漠營地,再北上傑貝爾傑斯山玩鐵索與長索道。"
+      },
+      {
+        "zh": "阿聯＋阿曼",
+        "days": "7–8 天",
+        "note": "杜拜—馬斯喀特—穆桑代姆峽灣,城市、山海與峽灣一次串起。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "利瓦綠洲與空曠之地沙丘",
+        "note": "半島南緣的高聳沙丘與莫雷布爬坡賽場,適合越野與過夜,需自駕或包車。"
+      },
+      {
+        "zh": "哈賈爾山區:哈塔與富查伊拉東岸",
+        "note": "山中水壩、皮艇與東海岸潛水,可避開城市人潮。"
+      },
+      {
+        "zh": "西爾巴尼亞斯島野生動物之旅",
+        "note": "阿拉伯野生動物園的大羚羊、長頸鹿與獵豹,搭配島上度假村。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "AE-a-oryx.jpg",
+      "title": "Arabian oryx, Dubai Desert Conservation Reserve",
+      "author": "Josephyousry",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AArabian_Oryx_at_DDCR.jpg"
+    },
+    {
+      "file": "AE-a-camel.jpg",
+      "title": "Camel racing with robot jockeys",
+      "author": "Lars Plougmann",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ACamels_with_robot_jockies.jpg"
+    },
+    {
+      "file": "AE-a-falcon.jpg",
+      "title": "Peregrine falcon in flight",
+      "author": "Kevin Cole",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3APeregrine_Falcon_in_flight.jpg"
+    },
+    {
+      "file": "AE-a-tahr.jpg",
+      "title": "Arabian tahr",
+      "author": "Aodh Airam",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AArabian_tahr_(Arabitragus_jayakari).jpg"
+    },
+    {
+      "file": "AE-a-dugong.jpg",
+      "title": "Dugong",
+      "author": "Julien Willem",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ADugong_Marsa_Alam.jpg"
+    },
+    {
+      "file": "AE-f-harees.jpg",
+      "title": "Harees",
+      "author": "Krista",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AAl_fanar_harees_(7797136886).jpg"
+    },
+    {
+      "file": "AE-f-balaleet.jpg",
+      "title": "Balaleet",
+      "author": "Mohamed Toorani",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AHomemade_Balaleet,_2023.jpg"
+    },
+    {
+      "file": "AE-f-khameer.jpg",
+      "title": "Khameer bread",
+      "author": "Jasmine57",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AKhameer.jpg"
+    },
+    {
+      "file": "AE-l-burj.jpg",
+      "title": "Burj Khalifa",
+      "author": "Jpbowen",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABurj_Khalifa_from_the_sea,_Dubai.jpg"
+    },
+    {
+      "file": "AE-l-szgm.jpg",
+      "title": "Sheikh Zayed Grand Mosque",
+      "author": "Matti Blume",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASZGM,_Abu_Dhabi_(IMG_20230812_132052).jpg"
+    },
+    {
+      "file": "AE-l-louvre.jpg",
+      "title": "Louvre Abu Dhabi",
+      "author": "Boubloub",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ALouvreAD_water.jpg"
+    },
+    {
+      "file": "AE-l-palm.jpg",
+      "title": "Palm Jumeirah",
+      "author": "Alec Wilson",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3APalm_Jumeirah,Dubai_(15048707596).jpg"
+    }
+  ],
+  "code": "AE"
+}

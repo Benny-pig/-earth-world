@@ -1,0 +1,355 @@
+{
+  "name_zh": "沙烏地阿拉伯",
+  "name_en": "Saudi Arabia",
+  "summary": "占據阿拉伯半島大部分的君主制國家,首都利雅德,國土多為沙漠,包括世界最大的流沙區「空曠之地」。是伊斯蘭教發源地,境內有麥加與麥地那兩大聖城。經濟長期依賴石油,近年推動「2030 願景」多元化改革並開放觀光。",
+  "founding": [
+    "阿拉伯半島是伊斯蘭教的發源地。約西元 570 年,先知穆罕默德生於麥加;622 年他遷往麥地那,伊斯蘭曆由此起算。此後由麥加、麥地那向外擴張的哈里發國影響橫跨三大洲;半島內陸的內志地區則長期由部落與綠洲城鎮構成,漢志一帶名義上臣屬鄂圖曼。",
+    "1727 年,穆罕默德·伊本·沙特在德拉伊耶掌權,並於 1744 年前後與宗教學者穆罕默德·伊本·阿卜杜勒·瓦哈布結盟,建立第一沙特國(德拉伊耶酋長國),勢力一度擴及半島大部分。1818 年,鄂圖曼—埃及聯軍攻陷德拉伊耶,第一沙特國覆滅。",
+    "第二沙特國(內志酋長國,1824–1891)重建又衰落,最終敗於拉希德家族。1902 年,阿卜杜勒-阿齊茲·伊本·沙特從科威特出兵、奇襲奪回利雅德,此後三十年間陸續統一內志與漢志。",
+    "1932 年,阿卜杜勒-阿齊茲宣布合併為「沙烏地阿拉伯王國」,自任國王。1938 年在東部達曼一帶發現大規模油田,二戰後開始大量出口,阿美石油公司帶來鉅額收入,國家在數十年間從貝都因社會迅速轉型。",
+    "沙烏地是 1960 年石油輸出國組織(OPEC)的創始成員,並以「兩聖寺守護者」自居,在伊斯蘭世界扮演重要角色。冷戰期間與美國建立密切的安全與能源關係。",
+    "2016 年推出「2030 願景」,目標降低對石油的依賴、發展觀光、娛樂與製造業,並進行一系列社會改革,包括 2018 年允許女性開車、放寬監護制度、重開電影院,2019 年開放一般旅遊簽證,同時推動 NEOM 等大型開發計畫。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "沙烏地阿拉伯王國",
+    "area_km2": 2149690,
+    "languages": [
+      "阿拉伯語"
+    ],
+    "religion": "伊斯蘭教(遜尼派)為國教",
+    "currency": "沙烏地里亞爾(SAR)",
+    "government": "伊斯蘭教法為本的絕對君主制"
+  },
+  "animals": [
+    {
+      "zh": "阿拉伯大羚羊",
+      "en": "Arabian oryx",
+      "note": "國家象徵動物,曾野外滅絕,靠人工繁殖重返沙漠。",
+      "image": "SA-a-oryx.jpg"
+    },
+    {
+      "zh": "單峰駱駝",
+      "en": "Arabian camel",
+      "note": "貝都因生活與駱駝賽、選美文化的核心。",
+      "image": "SA-a-camel.jpg"
+    },
+    {
+      "zh": "阿拉伯豹",
+      "en": "Arabian leopard",
+      "note": "半島最瀕危的大型貓科,野外僅存約百餘隻。",
+      "image": "SA-a-leopard.jpg"
+    },
+    {
+      "zh": "阿拉伯狒狒",
+      "en": "Hamadryas baboon",
+      "note": "西南阿西爾山區成群活動,常見於路邊。",
+      "image": "SA-a-baboon.jpg"
+    },
+    {
+      "zh": "努比亞羱羊",
+      "en": "Nubian ibex",
+      "note": "岩壁上的大角野山羊,是多個自然保護區的重點物種。",
+      "image": "SA-a-ibex.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "卡布薩",
+      "en": "Kabsa",
+      "note": "香料飯鋪雞或羊肉,公認的沙烏地國菜。",
+      "image": "SA-f-kabsa.jpg"
+    },
+    {
+      "zh": "曼迪",
+      "en": "Mandi",
+      "note": "在地坑或悶爐中低溫烤肉,連同米飯一起上桌。",
+      "image": "SA-f-mandi.jpg"
+    },
+    {
+      "zh": "椰棗",
+      "en": "Dates",
+      "note": "阿吉瓦、蘇卡里等品種,是待客與齋月開齋的必備。",
+      "image": "SA-f-dates.jpg"
+    },
+    {
+      "zh": "阿拉伯咖啡(qahwa)",
+      "en": "Arabic coffee",
+      "note": "淺焙加荳蔻的淡咖啡,以長嘴壺配椰棗待客。",
+      "image": "SA-f-qahwa.jpg"
+    },
+    {
+      "zh": "庫納法",
+      "en": "Kunafa",
+      "note": "細絲酥麵夾乳酪烤香、淋糖漿的熱甜點。",
+      "image": "SA-f-kunafa.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "禁寺與天房(麥加)",
+      "en": "Masjid al-Haram & Kaaba",
+      "note": "伊斯蘭最神聖之地,非穆斯林不得進入麥加。",
+      "latlon": [
+        21.4225,
+        39.8262
+      ],
+      "image": "SA-l-kaaba.jpg"
+    },
+    {
+      "zh": "先知寺(麥地那)",
+      "en": "Al-Masjid an-Nabawi",
+      "note": "伊斯蘭第二大聖寺,綠色圓頂下為先知陵。",
+      "latlon": [
+        24.4672,
+        39.6111
+      ],
+      "image": "SA-l-nabawi.jpg"
+    },
+    {
+      "zh": "黑格拉(瑪甸沙勒)",
+      "en": "Hegra",
+      "note": "納巴泰人鑿岩而成的陵墓群,沙烏地首個世界遺產。",
+      "latlon": [
+        26.7917,
+        37.9542
+      ]
+    },
+    {
+      "zh": "德拉伊耶圖賴夫區",
+      "en": "At-Turaif, Diriyah",
+      "note": "第一沙特國的泥磚舊都,列入世界遺產。",
+      "latlon": [
+        24.7339,
+        46.575
+      ]
+    },
+    {
+      "zh": "吉達老城(巴拉德)",
+      "en": "Historic Jeddah",
+      "note": "紅海邊的珊瑚石老屋與木雕窗花,世界遺產。",
+      "latlon": [
+        21.4858,
+        39.1858
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "先知穆罕默德",
+      "en": "Prophet Muhammad",
+      "note": "約 570 年生於麥加,伊斯蘭教的創立者。"
+    },
+    {
+      "zh": "阿卜杜勒-阿齊茲·伊本·沙特",
+      "en": "Abdulaziz Ibn Saud",
+      "note": "1932 年建立沙烏地阿拉伯王國的首任國王。"
+    },
+    {
+      "zh": "費薩爾國王",
+      "en": "King Faisal",
+      "note": "1960–70 年代推動行政與教育現代化的國王。"
+    },
+    {
+      "zh": "穆罕默德·本·薩勒曼",
+      "en": "Mohammed bin Salman",
+      "note": "王儲兼首相,主導「2030 願景」改革。"
+    },
+    {
+      "zh": "哈亞特·辛迪",
+      "en": "Hayat Sindi",
+      "note": "醫學科學家,研發低成本即時診斷工具。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "歐拉(AlUla)",
+      "note": "黑格拉岩墓、象形岩與舊城,10 至 3 月涼季前往,是新開放觀光的招牌。"
+    },
+    {
+      "zh": "利雅德＋德拉伊耶＋世界邊緣",
+      "note": "首都博物館、泥磚舊都與近郊斷崖,冬季氣候舒適。"
+    },
+    {
+      "zh": "阿西爾高地(阿卜哈)",
+      "note": "西南山區涼爽多霧、梯田與石屋村,夏季是避暑勝地。"
+    }
+  ],
+  "events": [
+    {
+      "year": 570,
+      "zh": "先知穆罕默德生於麥加(傳統紀年)。"
+    },
+    {
+      "year": 622,
+      "zh": "穆罕默德自麥加遷往麥地那,伊斯蘭曆由此起算。"
+    },
+    {
+      "year": 1727,
+      "zh": "第一沙特國在德拉伊耶建立。"
+    },
+    {
+      "year": 1932,
+      "zh": "阿卜杜勒-阿齊茲宣布成立沙烏地阿拉伯王國。"
+    },
+    {
+      "year": 1938,
+      "zh": "東部發現大規模油田。"
+    },
+    {
+      "year": 1960,
+      "zh": "沙烏地成為石油輸出國組織(OPEC)創始成員。"
+    },
+    {
+      "year": 2016,
+      "zh": "推出「2030 願景」經濟與社會改革計畫。"
+    }
+  ],
+  "souvenirs": [
+    {
+      "zh": "椰棗與椰棗甜點",
+      "note": "阿吉瓦、蘇卡里等品種,禮盒包裝常見。"
+    },
+    {
+      "zh": "沉香與香薰(oud、bakhoor)",
+      "note": "木塊、香餅與阿拉伯香精(attar)。"
+    },
+    {
+      "zh": "阿拉伯咖啡壺(dallah)",
+      "note": "黃銅長嘴壺,搭配小杯與荳蔻。"
+    },
+    {
+      "zh": "薩杜編織(Sadu)",
+      "note": "貝都因幾何紋樣的羊毛織品,列入非物質遺產。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "歐拉＋黑格拉",
+        "days": "4–5 天",
+        "note": "納巴泰岩墓、象形岩、舊城與鏡宮音樂廳,住沙漠度假村。台灣多經杜哈、杜拜或伊斯坦堡轉機,是沙烏地觀光的頭號目的地。"
+      },
+      {
+        "zh": "利雅德＋德拉伊耶＋世界邊緣＋歐拉",
+        "days": "6–7 天",
+        "note": "首都的國家博物館與現代地標,近郊泥磚舊都與斷崖,再飛歐拉。冬季前往最舒適。"
+      },
+      {
+        "zh": "吉達＋歐拉",
+        "days": "5–6 天",
+        "note": "吉達老城珊瑚石街區與紅海濱海大道,搭配歐拉岩墓,古城加沙漠。"
+      },
+      {
+        "zh": "利雅德＋吉達＋歐拉大環線",
+        "days": "8–10 天",
+        "note": "一趟收內志首都、紅海門戶與納巴泰遺址,需搭國內線串聯。"
+      },
+      {
+        "zh": "麥加＋麥地那(僅限穆斯林)",
+        "days": "5–7 天",
+        "note": "副朝(Umrah)行程,參拜禁寺天房與先知寺;非穆斯林不得進入兩聖城中心。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "阿西爾高地:阿卜哈與里賈勒阿爾瑪",
+        "note": "西南綠意山區、彩繪石屋村與空中纜車,夏季涼爽,需國內線加租車。"
+      },
+      {
+        "zh": "法拉桑群島",
+        "note": "紅海南端的珊瑚礁群島,適合潛水與賞鳥,渡輪班次有限。"
+      },
+      {
+        "zh": "空曠之地(魯卜哈利)沙漠探險",
+        "note": "世界最大流沙區的越野與過夜行程,須有經驗嚮導與完整補給。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "SA-a-oryx.jpg",
+      "title": "Arabian oryx, Uruq Bani Ma'arid",
+      "author": "Saudi Press Agency",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AUruq_Bani_Ma%27arid_Reserve,_Saudi_Arabia_(2025).jpg"
+    },
+    {
+      "file": "SA-a-camel.jpg",
+      "title": "Dromedary camels at sunrise",
+      "author": "Florian Prischl",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASunrise_up_with_camels_near_Nuweiba.jpg"
+    },
+    {
+      "file": "SA-a-leopard.jpg",
+      "title": "Arabian leopard",
+      "author": "Norman Ali Khalaf",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AArabian_Leopard_Panthera_pardus_nimr_in_Sharjah_Photo_Prof_Dr_Norman_Ali_Khalaf_2022.jpg"
+    },
+    {
+      "file": "SA-a-baboon.jpg",
+      "title": "Hamadryas baboon",
+      "author": "Jan Ebr & Ivana Ebrová",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3APapio_hamadryas_260302661.jpg"
+    },
+    {
+      "file": "SA-a-ibex.jpg",
+      "title": "Nubian ibex, King Salman Reserve",
+      "author": "Unknown author",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ATwo_Nubian_Ibex_Spotted_at_King_Salman_Reserve,_Saudi_Arabia.jpg"
+    },
+    {
+      "file": "SA-f-kabsa.jpg",
+      "title": "Kabsa",
+      "author": "Sammy Six",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AKabsa_(6486384335).jpg"
+    },
+    {
+      "file": "SA-f-mandi.jpg",
+      "title": "Mandi",
+      "author": "Evan Bench",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AYemeni_food_-_Mandi_-_2011.jpg"
+    },
+    {
+      "file": "SA-f-dates.jpg",
+      "title": "Dates",
+      "author": "Ferdous",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ADates.jpg"
+    },
+    {
+      "file": "SA-f-qahwa.jpg",
+      "title": "Arabic coffee (qahwa)",
+      "author": "Cloud Consciousness",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AArabian_Coffee.jpg"
+    },
+    {
+      "file": "SA-f-kunafa.jpg",
+      "title": "Kunafa",
+      "author": "TravelerMK",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3A%D0%9A%D1%83%D0%BD%D0%B0%D1%84%D0%B0.jpg"
+    },
+    {
+      "file": "SA-l-kaaba.jpg",
+      "title": "The Kaaba, Mecca",
+      "author": "Adli Wahid",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AThe_Kaaba_during_Hajj_-_edited.jpg"
+    },
+    {
+      "file": "SA-l-nabawi.jpg",
+      "title": "Green Dome, Prophet's Mosque, Medina",
+      "author": "TheHadiRahim",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AWide_shot_of_the_Green_Dome_at_The_Prophet%27s_Mosque_(Al_Masjid-e-Nabawi).jpg"
+    }
+  ],
+  "code": "SA"
+}

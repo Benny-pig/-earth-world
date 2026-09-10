@@ -1,0 +1,355 @@
+{
+  "name_zh": "克羅埃西亞",
+  "name_en": "Croatia",
+  "summary": "位於中歐與地中海交界、形狀像迴力鏢的國家,首都札格雷布。亞得里亞海岸有上千座島嶼,內陸則有普利特維采等石灰岩湖群。1991 年脫離南斯拉夫獨立並經歷戰爭,2013 年加入歐盟,2023 年進入歐元區與申根區。",
+  "founding": [
+    "羅馬時代,今日克羅埃西亞沿海屬達爾馬提亞行省,內陸屬潘諾尼亞。七世紀,克羅埃西亞人隨斯拉夫人遷徙潮進入此地;九世紀出現特爾皮米爾等公爵領導的公國,並逐步接受西方基督教。約 925 年,托米斯拉夫被視為第一位克羅埃西亞國王,中世紀克羅埃西亞王國成形。",
+    "1102 年,克羅埃西亞貴族與匈牙利王室達成協議,兩國進入共主邦聯,克羅埃西亞保有自己的議會(薩博爾)與總督(班)。此後數百年,沿海的達爾馬提亞多受威尼斯共和國控制,內陸則面對鄂圖曼帝國的長期戰爭,形成「軍事邊疆」防線。",
+    "1527 年,克羅埃西亞議會推選哈布斯堡的斐迪南一世為王,此後克羅埃西亞土地長期屬於哈布斯堡(後為奧匈)帝國。十九世紀民族復興運動興起,爭取語言與自治權利。",
+    "1918 年奧匈帝國瓦解,克羅埃西亞先加入斯洛維尼亞人、克羅埃西亞人和塞爾維亞人國,隨即併入塞爾維亞人、克羅埃西亞人和斯洛維尼亞人王國(後稱南斯拉夫)。第二次世界大戰期間,軸心國扶植的「克羅埃西亞獨立國」統治大部分地區,戰後成為南斯拉夫聯邦六共和國之一。",
+    "1980 年代末聯邦體制鬆動。1991 年 6 月克羅埃西亞宣布獨立,隨即與境內塞族武裝及南斯拉夫人民軍爆發克羅埃西亞獨立戰爭;1995 年的軍事行動收復大部分失地,戰爭大致結束,1998 年東斯拉沃尼亞和平重返。",
+    "戰後克羅埃西亞重建並推動歐洲整合。2009 年加入北約,2013 年 7 月 1 日成為歐盟第二十八個成員國,2023 年 1 月同時採用歐元並加入申根區。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "克羅埃西亞共和國",
+    "area_km2": 56594,
+    "languages": [
+      "克羅埃西亞語"
+    ],
+    "religion": "以羅馬天主教為主",
+    "currency": "歐元(EUR)",
+    "government": "議會制共和國"
+  },
+  "animals": [
+    {
+      "zh": "達爾馬提亞犬",
+      "en": "Dalmatian dog",
+      "note": "得名自達爾馬提亞地區的白底黑斑犬種。",
+      "image": "HR-a-dalmatian.jpg"
+    },
+    {
+      "zh": "松貂",
+      "en": "Pine marten",
+      "note": "克語稱 kuna,曾是古代貨幣單位與舊貨幣名。",
+      "image": "HR-a-marten.jpg"
+    },
+    {
+      "zh": "西域兀鷲",
+      "en": "Griffon vulture",
+      "note": "在茨雷斯島海崖形成歐洲少見的繁殖群。",
+      "image": "HR-a-griffon.jpg"
+    },
+    {
+      "zh": "歐亞棕熊",
+      "en": "Brown bear",
+      "note": "分布於韋萊比特山與戈爾斯基科塔爾森林。",
+      "image": "HR-a-bear.jpg"
+    },
+    {
+      "zh": "瓶鼻海豚",
+      "en": "Bottlenose dolphin",
+      "note": "亞得里亞海常見鯨豚,以克瓦內爾灣族群最知名。",
+      "image": "HR-a-dolphin.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "鐵鐘罩燜烤",
+      "en": "Peka",
+      "note": "肉或章魚連蔬菜放炭火下、以鐵罩覆蓋慢燜。"
+    },
+    {
+      "zh": "墨魚汁燉飯",
+      "en": "Crni rižot",
+      "note": "以墨魚與其墨汁煮成的黑色燉飯,達爾馬提亞名菜。",
+      "image": "HR-f-crni.jpg"
+    },
+    {
+      "zh": "紅酒燉牛肉",
+      "en": "Pašticada",
+      "note": "牛肉先醃再以紅酒、乾李慢燉,配麵疙瘩。",
+      "image": "HR-f-pasticada.jpg"
+    },
+    {
+      "zh": "帕格島綿羊乳酪",
+      "en": "Paški sir",
+      "note": "羊隻食鹽味牧草,乳酪帶鹹香與硬質口感。",
+      "image": "HR-f-pag.jpg"
+    },
+    {
+      "zh": "扎戈列餡捲",
+      "en": "Zagorski štrukli",
+      "note": "麵皮包茅屋乳酪,水煮或焗烤,札格雷布地區名點。",
+      "image": "HR-f-strukli.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "杜布羅夫尼克老城",
+      "en": "Dubrovnik Old Town",
+      "note": "近乎完整的環城牆包圍的石造古城,列入世界遺產。",
+      "latlon": [
+        42.6407,
+        18.1077
+      ],
+      "image": "HR-l-dubrovnik.jpg"
+    },
+    {
+      "zh": "戴克里先宮(斯普利特)",
+      "en": "Diocletian's Palace",
+      "note": "羅馬皇帝退位行宮,老城至今在宮牆內生活,世界遺產。",
+      "latlon": [
+        43.5081,
+        16.4404
+      ],
+      "image": "HR-l-split.jpg"
+    },
+    {
+      "zh": "普利特維采湖群國家公園",
+      "en": "Plitvice Lakes",
+      "note": "十六座階梯狀湖泊與瀑布相連,列入世界遺產。",
+      "latlon": [
+        44.8806,
+        15.6169
+      ],
+      "image": "HR-l-plitvice.jpg"
+    },
+    {
+      "zh": "普拉競技場",
+      "en": "Pula Arena",
+      "note": "保存完整的羅馬圓形競技場,現為表演場地。",
+      "latlon": [
+        44.8731,
+        13.8503
+      ]
+    },
+    {
+      "zh": "羅維尼",
+      "en": "Rovinj",
+      "note": "伊斯特拉半島的威尼斯風港鎮,聖尤菲米亞教堂高踞其上。",
+      "latlon": [
+        45.0811,
+        13.6387
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "尼古拉·特斯拉",
+      "en": "Nikola Tesla",
+      "note": "電機發明家,生於今克羅埃西亞的塞族家庭。"
+    },
+    {
+      "zh": "魯傑爾·博斯科維奇",
+      "en": "Ruđer Bošković",
+      "note": "十八世紀博學家,提出原子力場理論,生於杜布羅夫尼克。"
+    },
+    {
+      "zh": "伊凡·梅什特羅維奇",
+      "en": "Ivan Meštrović",
+      "note": "二十世紀雕塑大師,作品遍及全球公共空間。"
+    },
+    {
+      "zh": "盧卡·莫德里奇",
+      "en": "Luka Modrić",
+      "note": "足球中場,2018 年金球獎,率隊獲世界盃亞軍。"
+    },
+    {
+      "zh": "亞妮察·科斯特利奇",
+      "en": "Janica Kostelić",
+      "note": "高山滑雪選手,奪四面奧運金牌。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "5 月與 9 月的達爾馬提亞海岸",
+      "note": "避開盛夏人潮與高溫,海水仍暖,遊船與古城散步都舒適。"
+    },
+    {
+      "zh": "初夏的伊斯特拉半島",
+      "note": "6 月松露季前後,租車走羅維尼、普拉與內陸山城,配海鮮與橄欖油。"
+    },
+    {
+      "zh": "春秋的普利特維采與克爾卡",
+      "note": "4 至 6 月或 9 至 10 月水量足、遊客少,兩座瀑布公園可一次安排。"
+    }
+  ],
+  "events": [
+    {
+      "year": 925,
+      "zh": "托米斯拉夫被視為首位克羅埃西亞國王(傳統紀年)。"
+    },
+    {
+      "year": 1102,
+      "zh": "克羅埃西亞與匈牙利進入共主邦聯。"
+    },
+    {
+      "year": 1527,
+      "zh": "克羅埃西亞議會推選哈布斯堡的斐迪南一世為王。"
+    },
+    {
+      "year": 1918,
+      "zh": "加入塞爾維亞人、克羅埃西亞人和斯洛維尼亞人王國。"
+    },
+    {
+      "year": 1991,
+      "zh": "宣布獨立,克羅埃西亞獨立戰爭爆發。"
+    },
+    {
+      "year": 1995,
+      "zh": "軍事行動收復大部分失地,戰爭大致結束。"
+    },
+    {
+      "year": 2013,
+      "zh": "加入歐盟。"
+    }
+  ],
+  "souvenirs": [
+    {
+      "zh": "利西塔紅心(licitar)",
+      "note": "紅色蜂蜜麵團模製的裝飾心,列入非物質遺產。"
+    },
+    {
+      "zh": "克羅埃西亞領帶(kravata)",
+      "note": "現代領帶源自克羅埃西亞士兵的頸巾。"
+    },
+    {
+      "zh": "帕格島蕾絲",
+      "note": "以針縫製的細緻蕾絲,列入非物質遺產。"
+    },
+    {
+      "zh": "赫瓦爾島薰衣草與伊斯特拉松露",
+      "note": "薰衣草精油香包與松露醬、松露油。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "杜布羅夫尼克—斯普利特—普利特維采—札格雷布",
+        "days": "8–10 天",
+        "note": "由南向北串聯環城牆古城、戴克里先宮、瀑布湖群與首都,沿途可跳島赫瓦爾或科爾丘拉。台灣多經伊斯坦堡、杜哈或法蘭克福轉機,是最經典的縱走。"
+      },
+      {
+        "zh": "伊斯特拉半島",
+        "days": "5–6 天",
+        "note": "以羅維尼為基地走普拉競技場、波雷奇教堂與內陸山城莫托溫、格羅日尼揚,配松露與葡萄酒。適合租車慢遊。"
+      },
+      {
+        "zh": "達爾馬提亞跳島",
+        "days": "7–8 天",
+        "note": "斯普利特出發,搭渡輪或遊艇串聯赫瓦爾、維斯與科爾丘拉,最後進杜布羅夫尼克。夏季船班密、住宿要早訂。"
+      },
+      {
+        "zh": "札格雷布＋普利特維采＋札達爾＋克爾卡",
+        "days": "5–6 天",
+        "note": "首都文化、兩座瀑布國家公園與札達爾的海管風琴,行程緊湊但拉車不長。"
+      },
+      {
+        "zh": "杜布羅夫尼克＋蒙特內哥羅一日",
+        "days": "4–5 天",
+        "note": "以杜布羅夫尼克為據點,一天南下科托爾峽灣,一天走城牆與洛克魯姆島。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "科爾納提群島航行",
+        "note": "近百座無人石灰岩島組成的國家公園,適合一日或多日帆船行程。"
+      },
+      {
+        "zh": "斯拉沃尼亞內陸",
+        "note": "奧西耶克、科帕奇基里特濕地與德亞科沃馬場,葡萄酒與觀鳥為主,遊客稀少。"
+      },
+      {
+        "zh": "帕克萊尼采與韋萊比特健行",
+        "note": "峽谷攀岩與普雷穆日奇山徑,適合有經驗的登山者,夏季前往。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "HR-a-dalmatian.jpg",
+      "title": "Dalmatian dog",
+      "author": "Lucasbosch",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ADalmatian_fetching_a_stick.jpg"
+    },
+    {
+      "file": "HR-a-marten.jpg",
+      "title": "European pine marten",
+      "author": "Christian Fischer",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AMartesMartes.jpg"
+    },
+    {
+      "file": "HR-a-griffon.jpg",
+      "title": "Griffon vulture in flight",
+      "author": "Artemy Voikhansky",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AThe_flight_of_a_griffon.jpg"
+    },
+    {
+      "file": "HR-a-bear.jpg",
+      "title": "Eurasian brown bear (mother and cub)",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AEurasian_brown_bear_(Ursus_arctos_arctos)_mother_and_cub.jpg"
+    },
+    {
+      "file": "HR-a-dolphin.jpg",
+      "title": "Bottlenose dolphins, Adriatic",
+      "author": "Rob Schleiffert",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ADolphins_Croatia_(20022107230).jpg"
+    },
+    {
+      "file": "HR-f-crni.jpg",
+      "title": "Crni rižot (cuttlefish-ink risotto)",
+      "author": "Haydn Blackey",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ACrni_Rizoto_-_Pizzeria_Desetka_(14848569142).jpg"
+    },
+    {
+      "file": "HR-f-pasticada.jpg",
+      "title": "Pašticada with gnocchi",
+      "author": "Popo le Chien",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File%3APasticada.jpg"
+    },
+    {
+      "file": "HR-f-pag.jpg",
+      "title": "Paški sir (Pag cheese)",
+      "author": "Isiwal",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3A20140507_Pa%C5%A1ki_sir_cheese_from_Pag.jpg"
+    },
+    {
+      "file": "HR-f-strukli.jpg",
+      "title": "Zagorski štrukli",
+      "author": "Gveret Tered",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AZagorski_%C5%A0trukli_-_La_%C5%A0truk_restaurant.jpg"
+    },
+    {
+      "file": "HR-l-dubrovnik.jpg",
+      "title": "Dubrovnik old town",
+      "author": "kallerna",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ADubrovnik_Old_Town_1.jpg"
+    },
+    {
+      "file": "HR-l-split.jpg",
+      "title": "Peristyle, Diocletian's Palace, Split",
+      "author": "TimeTravelRome",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3APeristyle_of_Diocletian%27s_Palace_-_Split_-_51389330950.jpg"
+    },
+    {
+      "file": "HR-l-plitvice.jpg",
+      "title": "Plitvice Lakes",
+      "author": "dronepicr",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AGalova%C4%8Dki_Buk_Waterfall_at_Galovac_lake_in_Plitvice_Lakes_National_Park,_Croatia_(48669966883).jpg"
+    }
+  ],
+  "code": "HR"
+}

@@ -1,0 +1,355 @@
+{
+  "name_zh": "斯洛維尼亞",
+  "name_en": "Slovenia",
+  "summary": "位於阿爾卑斯山東南、亞得里亞海與潘諾尼亞平原交會處的小國,首都盧比安納。國土超過一半是森林,兼有高山、喀斯特洞穴與短短 47 公里的海岸線。1991 年脫離南斯拉夫獨立,現為歐盟、北約與歐元區成員。",
+  "founding": [
+    "斯洛維尼亞地區在羅馬時代屬於諾里庫姆與潘諾尼亞行省。六世紀末,斯拉夫人遷入東阿爾卑斯山谷地;七世紀在今日克恩滕一帶形成卡蘭塔尼亞公國,是最早的斯拉夫政治體之一,新公即位時的「石座」儀式後來被視為斯洛維尼亞政治傳統的源頭。",
+    "八世紀中葉,卡蘭塔尼亞為求援而承認法蘭克—巴伐利亞的宗主權,基督教隨之傳入。此後這片土地長期屬於神聖羅馬帝國;十四世紀起,卡尼奧拉、施蒂利亞與克恩滕等地陸續落入哈布斯堡王朝手中,由維也納統治達數百年,德語為行政與上層語言。",
+    "十六世紀宗教改革期間,新教牧師普里莫日·特魯巴爾於 1550 年印行首批斯洛維尼亞文書籍,替斯洛維尼亞語奠定書面基礎。1809 至 1813 年拿破崙短暫設立「伊利里亞省」,以盧比安納為首府,激發了民族意識;十九世紀民族復興運動逐漸成形。",
+    "1918 年奧匈帝國解體,斯洛維尼亞加入塞爾維亞人、克羅埃西亞人和斯洛維尼亞人王國(後改稱南斯拉夫)。第二次世界大戰期間,國土被納粹德國、義大利與匈牙利瓜分,游擊隊展開抵抗;戰後成為南斯拉夫聯邦六個共和國中最北、最富裕的一個。",
+    "1980 年代末,經濟與政治壓力升高,斯洛維尼亞推動民主化。1990 年公投壓倒性支持獨立,1991 年 6 月 25 日宣布獨立,隨後爆發僅十日的短暫戰爭,聯邦軍撤出。",
+    "1991 年底新憲法生效,斯洛維尼亞確立議會民主與市場經濟。2004 年加入歐盟與北約,2007 年採用歐元並加入申根區,是前南斯拉夫國家中最早完成歐洲整合的一個。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "斯洛維尼亞共和國",
+    "area_km2": 20271,
+    "languages": [
+      "斯洛維尼亞語"
+    ],
+    "religion": "以羅馬天主教為主,無國教",
+    "currency": "歐元(EUR)",
+    "government": "議會制共和國"
+  },
+  "animals": [
+    {
+      "zh": "歐亞棕熊",
+      "en": "Brown bear",
+      "note": "歐洲密度最高的棕熊族群之一,主要在南部森林。",
+      "image": "SI-a-bear.jpg"
+    },
+    {
+      "zh": "洞螈",
+      "en": "Olm",
+      "note": "喀斯特地下水的盲眼白色兩棲類,俗稱「人魚」。",
+      "image": "SI-a-olm.jpg"
+    },
+    {
+      "zh": "利皮察馬",
+      "en": "Lipizzaner horse",
+      "note": "起源於利皮察皇家育馬場的白色古典馬種。",
+      "image": "SI-a-lipizzaner.jpg"
+    },
+    {
+      "zh": "卡尼奧拉蜜蜂",
+      "en": "Carniolan honey bee",
+      "note": "溫馴的本土蜜蜂亞種,養蜂是全國性傳統。",
+      "image": "SI-a-bee.jpg"
+    },
+    {
+      "zh": "阿爾卑斯山羊",
+      "en": "Alpine ibex",
+      "note": "特里格拉夫國家公園高山峭壁上的大角野山羊。",
+      "image": "SI-a-ibex.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "波提察捲",
+      "en": "Potica",
+      "note": "薄麵皮捲入核桃或龍蒿餡烤成的節慶蛋糕捲。",
+      "image": "SI-f-potica.jpg"
+    },
+    {
+      "zh": "卡尼奧拉香腸",
+      "en": "Kranjska klobasa",
+      "note": "以豬肉與培根製、原產卡尼奧拉的地理標示香腸。",
+      "image": "SI-f-kranjska.jpg"
+    },
+    {
+      "zh": "餡捲丸子",
+      "en": "Štruklji",
+      "note": "麵皮包乳酪、核桃或龍蒿餡水煮或烤的家常菜。",
+      "image": "SI-f-struklji.jpg"
+    },
+    {
+      "zh": "布萊德奶油蛋糕",
+      "en": "Kremna rezina",
+      "note": "布萊德湖畔名點,酥皮夾厚卡士達與鮮奶油。",
+      "image": "SI-f-kremna.jpg"
+    },
+    {
+      "zh": "喀斯特生火腿",
+      "en": "Pršut",
+      "note": "布拉風乾的鹽漬生火腿,切薄片為前菜。",
+      "image": "SI-f-prsut.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "布萊德湖",
+      "en": "Lake Bled",
+      "note": "湖心小島有教堂,岸邊懸崖上是中世紀城堡。",
+      "latlon": [
+        46.3625,
+        14.09
+      ],
+      "image": "SI-l-bled.jpg"
+    },
+    {
+      "zh": "波斯托伊納鐘乳石洞",
+      "en": "Postojna Cave",
+      "note": "可搭小火車深入的巨大喀斯特洞穴,養有洞螈。",
+      "latlon": [
+        45.7833,
+        14.2036
+      ],
+      "image": "SI-l-postojna.jpg"
+    },
+    {
+      "zh": "普雷德亞馬城堡",
+      "en": "Predjama Castle",
+      "note": "嵌進 123 公尺高懸崖洞口的中世紀城堡。",
+      "latlon": [
+        45.8158,
+        14.1272
+      ]
+    },
+    {
+      "zh": "盧比安納三重橋",
+      "en": "Triple Bridge",
+      "note": "建築師普列奇尼克設計的三橋並列,通往老城。",
+      "latlon": [
+        46.0514,
+        14.5061
+      ]
+    },
+    {
+      "zh": "皮蘭",
+      "en": "Piran",
+      "note": "亞得里亞海邊保存完好的威尼斯風港鎮。",
+      "latlon": [
+        45.5286,
+        13.5683
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "法蘭策·普雷謝倫",
+      "en": "France Prešeren",
+      "note": "浪漫主義詩人,作品《祝酒歌》成為國歌歌詞。"
+    },
+    {
+      "zh": "約熱·普列奇尼克",
+      "en": "Jože Plečnik",
+      "note": "建築師,以橋樑、市場與河岸重塑盧比安納市容。"
+    },
+    {
+      "zh": "普里莫日·特魯巴爾",
+      "en": "Primož Trubar",
+      "note": "新教改革者,印行首批斯洛維尼亞文書籍。"
+    },
+    {
+      "zh": "盧卡·東契奇",
+      "en": "Luka Dončić",
+      "note": "NBA 籃球明星,帶領斯洛維尼亞奪歐錦賽冠軍。"
+    },
+    {
+      "zh": "塔迪·波加查",
+      "en": "Tadej Pogačar",
+      "note": "公路自行車選手,多度奪環法賽總冠軍。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "布萊德＋盧比安納＋波斯托伊納",
+      "note": "湖光、首都老城與鐘乳石洞三點一線,4 至 10 月天氣穩定,是最省事的初訪組合。"
+    },
+    {
+      "zh": "夏季的朱利安阿爾卑斯山",
+      "note": "6 至 9 月走博興湖、七湖谷與弗爾希奇山口,轉進索查河谷玩泛舟與健行。"
+    },
+    {
+      "zh": "皮蘭與喀斯特地區",
+      "note": "海邊威尼斯風古鎮配上利皮察馬場、什科茨揚洞與生火腿產區,適合租車慢遊。"
+    }
+  ],
+  "events": [
+    {
+      "year": 658,
+      "zh": "東阿爾卑斯山出現斯拉夫人的卡蘭塔尼亞公國。"
+    },
+    {
+      "year": 745,
+      "zh": "卡蘭塔尼亞承認法蘭克宗主權,基督教傳入。"
+    },
+    {
+      "year": 1335,
+      "zh": "哈布斯堡王朝取得卡尼奧拉,開啟數百年統治。"
+    },
+    {
+      "year": 1550,
+      "zh": "特魯巴爾印行首批斯洛維尼亞文書籍。"
+    },
+    {
+      "year": 1918,
+      "zh": "斯洛維尼亞加入塞爾維亞人、克羅埃西亞人和斯洛維尼亞人王國。"
+    },
+    {
+      "year": 1991,
+      "zh": "宣布獨立,爆發十日戰爭。"
+    },
+    {
+      "year": 2007,
+      "zh": "採用歐元並加入申根區。"
+    }
+  ],
+  "souvenirs": [
+    {
+      "zh": "伊德里亞蕾絲",
+      "note": "以線軸手工編織的鏤空蕾絲,列入非物質遺產。"
+    },
+    {
+      "zh": "蜂蜜薑餅心(lectar)",
+      "note": "紅色蜂蜜麵團模製、表面擠花的裝飾餅。"
+    },
+    {
+      "zh": "皮蘭海鹽",
+      "note": "傳統鹽田日曬的海鹽與鹽花。"
+    },
+    {
+      "zh": "彩繪蜂箱板",
+      "note": "民俗故事題材的小幅木製蜂箱畫板。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "布萊德＋盧比安納＋波斯托伊納",
+        "days": "5–6 天",
+        "note": "布萊德湖與博興湖兩天、盧比安納老城與城堡一天,再走波斯托伊納洞與普雷德亞馬城堡。台灣經維也納、法蘭克福或伊斯坦堡轉機,是第一次到斯洛維尼亞的標準路線。"
+      },
+      {
+        "zh": "盧比安納＋皮蘭＋喀斯特",
+        "days": "5–6 天",
+        "note": "首都接海邊皮蘭、波爾托羅日,穿插利皮察馬場與什科茨揚洞世界遺產。海岸加地下奇景,步調悠閒。"
+      },
+      {
+        "zh": "斯洛維尼亞＋克羅埃西亞",
+        "days": "7–8 天",
+        "note": "盧比安納—布萊德—普利特維采湖—札格雷布一路南下,一趟收兩國精華,自駕最順。"
+      },
+      {
+        "zh": "朱利安阿爾卑斯山環線",
+        "days": "5–6 天",
+        "note": "布萊德、博興、弗爾希奇山口到索查河谷,健行、泛舟與一戰博物館。夏季前往、山路彎多。"
+      },
+      {
+        "zh": "盧比安納定點城市假期",
+        "days": "3–4 天",
+        "note": "以首都為據點,白天走老城、龍橋與中央市場,搭配布萊德或波斯托伊納一日團,適合週末長假。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "索查河谷戶外運動",
+        "note": "科巴里德一帶泛舟、峽谷溯溪與一戰遺跡,夏季水量足、須跟有證照的業者。"
+      },
+      {
+        "zh": "洛加爾山谷與卡姆尼克阿爾卑斯",
+        "note": "三面環山的冰蝕槽谷,適合開車兼健行,大眾運輸稀少建議自駕。"
+      },
+      {
+        "zh": "戈里斯卡·布爾達葡萄酒鄉",
+        "note": "緊鄰義大利邊界的丘陵酒莊區,可安排品酒與農莊住宿。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "SI-a-bear.jpg",
+      "title": "Eurasian brown bear",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AEurasian_brown_bear_(Ursus_arctos_arctos)_female_3.jpg"
+    },
+    {
+      "file": "SI-a-olm.jpg",
+      "title": "Olm (Proteus anguinus)",
+      "author": "Alexwlchan",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AOlmInVivarium.jpg"
+    },
+    {
+      "file": "SI-a-lipizzaner.jpg",
+      "title": "Lipizzaner horses at Lipica",
+      "author": "strecosa",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ALipica-2891902.jpg"
+    },
+    {
+      "file": "SI-a-bee.jpg",
+      "title": "Carniolan honey bee",
+      "author": "Richard Bartz",
+      "license": "CC BY-SA 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File%3AApis_mellifera_carnica_worker_hive_entrance_3.jpg"
+    },
+    {
+      "file": "SI-a-ibex.jpg",
+      "title": "Alpine ibex",
+      "author": "Tiia Monto",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ACapra_ibex_2.jpg"
+    },
+    {
+      "file": "SI-f-potica.jpg",
+      "title": "Potica",
+      "author": "Rick Kimpel",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3APotica_(381310606).jpg"
+    },
+    {
+      "file": "SI-f-kranjska.jpg",
+      "title": "Kranjska klobasa",
+      "author": "J.O.",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AKranjska_klobasa.jpg"
+    },
+    {
+      "file": "SI-f-struklji.jpg",
+      "title": "Štruklji",
+      "author": "FocalPoint",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AStruklji_2.jpg"
+    },
+    {
+      "file": "SI-f-kremna.jpg",
+      "title": "Kremna rezina (Bled cream cake)",
+      "author": "UkPaolo",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AKremna_rezina.jpg"
+    },
+    {
+      "file": "SI-f-prsut.jpg",
+      "title": "Pršut (dry-cured ham)",
+      "author": "Wikiarius",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3APr%C5%A1ut.jpg"
+    },
+    {
+      "file": "SI-l-bled.jpg",
+      "title": "Lake Bled",
+      "author": "Jakub Hałun",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABled_Island_and_Bled_Castle,_Slovenia,_20240504_0908_8342.jpg"
+    },
+    {
+      "file": "SI-l-postojna.jpg",
+      "title": "Postojna Cave",
+      "author": "Szilas",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File%3APostojna_cave_2008-02-01_interior_02.jpg"
+    }
+  ],
+  "code": "SI"
+}

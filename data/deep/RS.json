@@ -1,0 +1,355 @@
+{
+  "name_zh": "塞爾維亞",
+  "name_en": "Serbia",
+  "summary": "位於巴爾幹半島中部的內陸國,首都貝爾格勒扼守多瑙河與薩瓦河交會處。歷史上是中世紀塞爾維亞帝國與東正教文化中心,二十世紀先後為兩個南斯拉夫的核心。2008 年科索沃單方面宣布獨立,塞爾維亞不予承認;塞國自 2012 年起為歐盟候選國。",
+  "founding": [
+    "塞爾維亞人的祖先於七世紀隨斯拉夫人遷入巴爾幹,在拉什卡一帶形成早期公國。1166 年前後,斯特凡·奈曼雅統一各地、建立奈曼雅王朝;1217 年其子加冕為王,1219 年聖薩瓦促成塞爾維亞正教會取得自主地位,教會與王權緊密結合,奠定民族認同的核心。",
+    "十四世紀中葉,斯特凡·杜尚在 1346 年稱「塞爾維亞人與希臘人的沙皇」,帝國版圖擴及馬其頓、伊庇魯斯與色薩利,是塞爾維亞中世紀的鼎盛期。杜尚死後帝國分裂;1389 年科索沃戰役後,塞爾維亞逐步淪為鄂圖曼附庸,1459 年被完全併入鄂圖曼帝國。",
+    "鄂圖曼統治延續約三個半世紀。1804 年爆發第一次塞爾維亞起義,1815 年第二次起義後獲得自治;1830 年成為自治公國,1878 年柏林會議承認塞爾維亞完全獨立,1882 年升為王國。",
+    "1914 年 6 月,奧匈帝國皇儲斐迪南大公在塞拉耶佛遇刺,引爆第一次世界大戰。戰後的 1918 年,塞爾維亞與周邊斯拉夫地區合組塞爾維亞人、克羅埃西亞人和斯洛維尼亞人王國,即後來的南斯拉夫,貝爾格勒為首都。",
+    "第二次世界大戰後,塞爾維亞成為南斯拉夫社會主義聯邦六個共和國之一。1990 年代聯邦解體,伴隨多場戰爭;1999 年因科索沃問題,北約對南聯盟進行為期約十一週的空襲。2003 年國名改為「塞爾維亞和蒙特內哥羅」。",
+    "2006 年蒙特內哥羅公投獨立,塞爾維亞成為單一繼承國。2008 年科索沃單方面宣布獨立,塞爾維亞及部分國家不予承認,雙方在歐盟斡旋下持續對話。塞爾維亞自 2012 年起為歐盟候選國,同時與俄羅斯、中國維持密切關係。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "塞爾維亞共和國",
+    "area_km2": 77474,
+    "languages": [
+      "塞爾維亞語"
+    ],
+    "religion": "以塞爾維亞正教會為主",
+    "currency": "塞爾維亞第納爾(RSD)",
+    "government": "議會制共和國"
+  },
+  "animals": [
+    {
+      "zh": "灰狼",
+      "en": "Grey wolf",
+      "note": "山區與林地皆有分布,是巴爾幹食物鏈頂端掠食者。",
+      "image": "RS-a-wolf.jpg"
+    },
+    {
+      "zh": "歐洲黃鼠",
+      "en": "European ground squirrel",
+      "note": "草原與牧地的穴居嚙齒類,常直立張望。",
+      "image": "RS-a-souslik.jpg"
+    },
+    {
+      "zh": "沙爾山犬",
+      "en": "Šarplaninac",
+      "note": "體格壯碩的護畜犬,原產於南部沙爾山區。",
+      "image": "RS-a-sar.jpg"
+    },
+    {
+      "zh": "西域兀鷲",
+      "en": "Griffon vulture",
+      "note": "在烏瓦茨峽谷有受保護的大型群落。",
+      "image": "RS-a-vulture.jpg"
+    },
+    {
+      "zh": "白肩鵰",
+      "en": "Eastern imperial eagle",
+      "note": "平原稀有猛禽,是保育與復育的重點物種。",
+      "image": "RS-a-eagle.jpg"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "烤肉腸",
+      "en": "Ćevapi",
+      "note": "小指狀碎肉腸炭烤,配洋蔥、麵餅與紅椒醬。",
+      "image": "RS-f-cevapi.jpg"
+    },
+    {
+      "zh": "阿伊瓦爾紅椒醬",
+      "en": "Ajvar",
+      "note": "烤紅椒(有時加茄子)磨成的抹醬,秋天大量醃製。",
+      "image": "RS-f-ajvar.jpg"
+    },
+    {
+      "zh": "凱馬克乳脂",
+      "en": "Kajmak",
+      "note": "牛奶表層凝結的濃厚乳脂,抹麵包或配烤肉。",
+      "image": "RS-f-kajmak.jpg"
+    },
+    {
+      "zh": "肉餅",
+      "en": "Pljeskavica",
+      "note": "大而扁的碎肉排,常夾麵餅或填乳酪。",
+      "image": "RS-f-pljeskavica.jpg"
+    },
+    {
+      "zh": "李子白蘭地",
+      "en": "Šljivovica",
+      "note": "以李子蒸餾的烈酒,是塞爾維亞的國民飲品。",
+      "image": "RS-f-rakija.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "貝爾格勒要塞(卡萊梅格丹)",
+      "en": "Belgrade Fortress",
+      "note": "俯瞰多瑙河與薩瓦河交會口的古堡與公園。",
+      "latlon": [
+        44.8225,
+        20.4508
+      ],
+      "image": "RS-l-kalemegdan.jpg"
+    },
+    {
+      "zh": "聖薩瓦教堂",
+      "en": "Church of Saint Sava",
+      "note": "世界最大的東正教教堂之一,巨大白色穹頂。",
+      "latlon": [
+        44.7981,
+        20.4689
+      ],
+      "image": "RS-l-stsava.jpg"
+    },
+    {
+      "zh": "斯圖代尼察修道院",
+      "en": "Studenica Monastery",
+      "note": "十二世紀白色大理石修道院,列入世界遺產。",
+      "latlon": [
+        43.4853,
+        20.5314
+      ]
+    },
+    {
+      "zh": "魔鬼城",
+      "en": "Đavolja varoš",
+      "note": "頂著石帽的土柱地形,約二百根尖塔並立。",
+      "latlon": [
+        43.0022,
+        21.4147
+      ]
+    },
+    {
+      "zh": "彼得羅瓦拉丁要塞",
+      "en": "Petrovaradin Fortress",
+      "note": "多瑙河畔的巴洛克星形要塞,EXIT 音樂節場地。",
+      "latlon": [
+        45.2528,
+        19.8622
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "尼古拉·特斯拉",
+      "en": "Nikola Tesla",
+      "note": "電機發明家,塞族出身,貝爾格勒機場以他命名。"
+    },
+    {
+      "zh": "米哈伊洛·普平",
+      "en": "Mihajlo Pupin",
+      "note": "物理學家與發明家,改進長途電話傳輸技術。"
+    },
+    {
+      "zh": "米盧廷·米蘭科維奇",
+      "en": "Milutin Milanković",
+      "note": "提出解釋冰期循環的「米蘭科維奇週期」。"
+    },
+    {
+      "zh": "武克·卡拉季奇",
+      "en": "Vuk Karadžić",
+      "note": "語言改革者,標準化現代塞爾維亞語與拼寫。"
+    },
+    {
+      "zh": "諾瓦克·喬科維奇",
+      "en": "Novak Djoković",
+      "note": "網球選手,大滿貫單打冠軍數量居歷史前列。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "貝爾格勒週末城市假期",
+      "note": "卡萊梅格丹、澤蒙老城與河上浮動酒吧(splav),夜生活熱鬧、物價相對低。"
+    },
+    {
+      "zh": "西部塞爾維亞:茲拉蒂博爾與莫克拉山",
+      "note": "搭「沙爾干八字」窄軌小火車、看木造村 Drvengrad,配塔拉國家公園,夏秋皆宜。"
+    },
+    {
+      "zh": "多瑙河鐵門峽谷",
+      "note": "從貝爾格勒沿多瑙河到戈盧巴茨要塞與鐵門峽谷、勒潘斯基維爾遺址,適合一日或兩日遊船。"
+    }
+  ],
+  "events": [
+    {
+      "year": 1217,
+      "zh": "斯特凡·首冠王加冕,塞爾維亞王國建立。"
+    },
+    {
+      "year": 1346,
+      "zh": "斯特凡·杜尚稱帝,塞爾維亞帝國達到鼎盛。"
+    },
+    {
+      "year": 1389,
+      "zh": "科索沃戰役後,塞爾維亞逐步淪為鄂圖曼附庸。"
+    },
+    {
+      "year": 1459,
+      "zh": "塞爾維亞被完全併入鄂圖曼帝國。"
+    },
+    {
+      "year": 1804,
+      "zh": "第一次塞爾維亞起義爆發。"
+    },
+    {
+      "year": 1878,
+      "zh": "柏林會議承認塞爾維亞完全獨立。"
+    },
+    {
+      "year": 2006,
+      "zh": "蒙特內哥羅獨立,塞爾維亞成為單一繼承國。"
+    }
+  ],
+  "souvenirs": [
+    {
+      "zh": "李子白蘭地(šljivovica)",
+      "note": "農家自釀或酒莊瓶裝的塞式國民烈酒。"
+    },
+    {
+      "zh": "皮羅特地毯(ćilim)",
+      "note": "雙面平織、幾何圖案的羊毛掛毯。"
+    },
+    {
+      "zh": "歐潘齊皮鞋(opanci)",
+      "note": "尖翹鞋頭的傳統手工皮鞋。"
+    },
+    {
+      "zh": "阿伊瓦爾與覆盆子產品",
+      "note": "瓶裝紅椒醬與果醬;塞國為覆盆子出口大國。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "貝爾格勒＋諾維薩德",
+        "days": "3–4 天",
+        "note": "首都卡萊梅格丹、聖薩瓦教堂與波希米亞街,搭配一小時車程的諾維薩德與彼得羅瓦拉丁要塞。台灣多經伊斯坦堡、杜哈或維也納轉機,適合初訪。"
+      },
+      {
+        "zh": "貝爾格勒＋弗魯什卡山修道院群",
+        "days": "4–5 天",
+        "note": "以諾維薩德為據點,一天走弗魯什卡山國家公園十多座東正教修道院,一天逛斯雷姆斯基卡爾洛夫奇酒鄉。"
+      },
+      {
+        "zh": "中部修道院與自然環線",
+        "days": "5–6 天",
+        "note": "斯圖代尼察、日查修道院與科帕奧尼克山,租車串聯世界遺產與山區,節奏中等。"
+      },
+      {
+        "zh": "西部塞爾維亞:茲拉蒂博爾＋莫克拉山＋塔拉",
+        "days": "5–6 天",
+        "note": "沙爾干八字窄軌火車、木造村 Drvengrad、德里納河小屋與塔拉國家公園,山林度假為主。"
+      },
+      {
+        "zh": "多瑙河鐵門峽谷",
+        "days": "4–5 天",
+        "note": "貝爾格勒沿多瑙河東行,戈盧巴茨要塞、鐵門峽谷遊船與勒潘斯基維爾史前遺址。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "烏瓦茨峽谷",
+        "note": "看兀鷲群與河曲地形,搭船進峽谷、登觀景台,鄰近茲拉塔爾山。"
+      },
+      {
+        "zh": "EXIT 音樂節",
+        "note": "每年 7 月在諾維薩德彼得羅瓦拉丁要塞舉行的大型電音與搖滾祭。"
+      },
+      {
+        "zh": "古查銅管樂節",
+        "note": "8 月在古查舉辦的巴爾幹銅管樂大會,喧鬧奔放、極具地方色彩。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "RS-a-wolf.jpg",
+      "title": "Grey wolf",
+      "author": "Marie Hale",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AEuropean_grey_wolf_(4964499030).jpg"
+    },
+    {
+      "file": "RS-a-souslik.jpg",
+      "title": "European ground squirrel",
+      "author": "Divlja Srbija",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ATekunica_u_polju_kamilice.jpg"
+    },
+    {
+      "file": "RS-a-sar.jpg",
+      "title": "Šarplaninac",
+      "author": "Sakal33",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASarplaninac_male_dog_Muri-Em%C3%ADr_2_years_old.jpg"
+    },
+    {
+      "file": "RS-a-vulture.jpg",
+      "title": "Griffon vulture in flight",
+      "author": "Pierre Dalous",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AGyps_fulvus_in_flight_-_Spain.jpg"
+    },
+    {
+      "file": "RS-a-eagle.jpg",
+      "title": "Eastern imperial eagle",
+      "author": "AngMoKio",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AKaiseradler_Aquila_heliaca_3_amk.jpg"
+    },
+    {
+      "file": "RS-f-cevapi.jpg",
+      "title": "Ćevapi",
+      "author": "young shanahan",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASerbian_%C4%86evapi.jpg"
+    },
+    {
+      "file": "RS-f-ajvar.jpg",
+      "title": "Ajvar",
+      "author": "VLGJ",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AHomemade_ajvar.jpg"
+    },
+    {
+      "file": "RS-f-kajmak.jpg",
+      "title": "Kajmak with priganice",
+      "author": "Milica Buha",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AKajmak_i_priganice.jpg"
+    },
+    {
+      "file": "RS-f-pljeskavica.jpg",
+      "title": "Pljeskavica",
+      "author": "Fred Cherrygarden",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3APljeskavica_at_Znak_Pitanja.jpg"
+    },
+    {
+      "file": "RS-f-rakija.jpg",
+      "title": "Šljivovica (plum rakija)",
+      "author": "Pinosavac",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3ARakija.jpg"
+    },
+    {
+      "file": "RS-l-kalemegdan.jpg",
+      "title": "Belgrade Fortress (Kalemegdan)",
+      "author": "Zcvetkovic",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABelgrade_Fortress_Kalemegdan-9878.NEF.jpg"
+    },
+    {
+      "file": "RS-l-stsava.jpg",
+      "title": "Church of Saint Sava",
+      "author": "Petar Milošević",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AChurch_of_Saint_Sava_(Belgrade,_Serbia).jpg"
+    }
+  ],
+  "code": "RS"
+}

@@ -1,0 +1,355 @@
+{
+  "name_zh": "斯洛伐克",
+  "name_en": "Slovakia",
+  "summary": "位於中歐、被喀爾巴阡山與多瑙河界定的內陸國,首都布拉提斯拉瓦緊鄰奧地利邊界。境內大半是山地與森林,塔特拉山是全國象徵。曾與捷克組成聯邦,1993 年和平分家後獨立,現為歐盟、北約與歐元區成員。",
+  "founding": [
+    "斯洛伐克人的祖先是六世紀起遷入喀爾巴阡山北麓的西斯拉夫部族。七世紀時,他們與鄰近的斯拉夫人共同加入商人薩摩建立的部落聯盟,以對抗阿瓦爾人;八世紀在尼特拉一帶出現獨立的公國。九世紀,尼特拉與摩拉維亞合併為大摩拉維亞公國,勢力涵蓋今日的斯洛伐克、捷克與周邊地區。",
+    "863 年,拜占庭派遣傳教士西里爾與美多德前來大摩拉維亞,創制格拉哥里字母、以斯拉夫語傳教並翻譯經典,奠定斯拉夫文化與東正教在此的根基。這段歷史後來被斯洛伐克視為民族與文字傳統的起點。九〇七年前後,大摩拉維亞在馬扎爾人(匈牙利人)的攻勢下瓦解。",
+    "此後約一千年,斯洛伐克地區併入匈牙利王國,稱為「上匈牙利」。十六世紀鄂圖曼帝國占領布達後,布拉提斯拉瓦(當時稱普雷斯堡)一度成為匈牙利王國的首都與加冕城市,長達兩百多年。斯洛伐克人多為農民與礦工,貴族與城市上層則以匈牙利語、德語為主。",
+    "十八世紀末至十九世紀,民族復興運動興起。1843 年,路德維特·什圖爾以中部方言為基礎,確立現代斯洛伐克標準語,推動報刊、文學與民族意識。1918 年第一次世界大戰結束、奧匈帝國解體,斯洛伐克與捷克合組捷克斯洛伐克共和國。",
+    "1939 至 1945 年,在納粹德國扶植下出現名義獨立的斯洛伐克國;1944 年爆發斯洛伐克民族起義反抗。戰後恢復捷克斯洛伐克,1948 年起由共產黨統治,1968 年「布拉格之春」改革遭華沙公約組織軍隊鎮壓,翌年改行聯邦制。",
+    "1989 年天鵝絨革命結束共黨統治。1993 年 1 月 1 日,捷克與斯洛伐克透過談判和平分立,史稱「天鵝絨離婚」,斯洛伐克正式成為獨立國家。2004 年加入歐盟與北約,2007 年進入申根區,2009 年採用歐元。"
+  ],
+  "quick_facts": {
+    "official_name_zh": "斯洛伐克共和國",
+    "area_km2": 49035,
+    "languages": [
+      "斯洛伐克語"
+    ],
+    "religion": "以羅馬天主教為主,另有信義宗與希臘禮天主教",
+    "currency": "歐元(EUR)",
+    "government": "議會制共和國"
+  },
+  "animals": [
+    {
+      "zh": "歐亞棕熊",
+      "en": "Brown bear",
+      "note": "塔特拉山區有穩定族群,是國家公園的代表大型獸。",
+      "image": "SK-a-bear.jpg"
+    },
+    {
+      "zh": "塔特拉旱獺",
+      "en": "Tatra marmot",
+      "note": "高山草原的特有亞種,以尖銳哨聲互相示警。",
+      "image": "SK-a-marmot.jpg"
+    },
+    {
+      "zh": "塔特拉岩羚羊",
+      "en": "Tatra chamois",
+      "note": "僅分布於塔特拉山的特有亞種,善於在峭壁跳躍。",
+      "image": "SK-a-chamois.jpg"
+    },
+    {
+      "zh": "歐亞猞猁",
+      "en": "Eurasian lynx",
+      "note": "森林中的大型貓科,獨行、夜間狩獵,受法律保護。",
+      "image": "SK-a-lynx.jpg"
+    },
+    {
+      "zh": "金鵰",
+      "en": "Golden eagle",
+      "note": "山區的頂級猛禽,是斯洛伐克國徽之外常見的象徵鳥。"
+    }
+  ],
+  "foods": [
+    {
+      "zh": "羊乳酪馬鈴薯麵疙瘩",
+      "en": "Bryndzové halušky",
+      "note": "小麵疙瘩拌羊乳酪與炒培根,公認的國民料理。",
+      "image": "SK-f-halusky.jpg"
+    },
+    {
+      "zh": "布林札羊乳酪",
+      "en": "Bryndza",
+      "note": "以羊奶製成的軟質鹹乳酪,是多道傳統菜的基底。",
+      "image": "SK-f-bryndza.jpg"
+    },
+    {
+      "zh": "酸菜湯",
+      "en": "Kapustnica",
+      "note": "酸白菜燉香腸、乾菇與李乾,耶誕夜必備的湯品。",
+      "image": "SK-f-kapustnica.jpg"
+    },
+    {
+      "zh": "煙燻綿羊乳酪",
+      "en": "Oštiepok",
+      "note": "壓模成蛋形的煙燻半硬乳酪,常切片煎食。",
+      "image": "SK-f-ostiepok.jpg"
+    },
+    {
+      "zh": "馬鈴薯薄餅",
+      "en": "Lokše",
+      "note": "馬鈴薯麵團烙成的薄餅,可包鵝油、罌粟籽或鵝肝。"
+    }
+  ],
+  "landmarks": [
+    {
+      "zh": "布拉提斯拉瓦城堡",
+      "en": "Bratislava Castle",
+      "note": "俯瞰多瑙河的四角白色城堡,是首都地標。",
+      "latlon": [
+        48.142,
+        17.1
+      ],
+      "image": "SK-l-bratislava.jpg"
+    },
+    {
+      "zh": "斯皮什城堡",
+      "en": "Spiš Castle",
+      "note": "中歐最大的城堡遺址之一,列入世界遺產。",
+      "latlon": [
+        48.9989,
+        20.7683
+      ],
+      "image": "SK-l-spis.jpg"
+    },
+    {
+      "zh": "什特爾布斯凱湖",
+      "en": "Štrbské Pleso",
+      "note": "高塔特拉山的冰蝕湖與度假village,登山健行門戶。",
+      "latlon": [
+        49.12,
+        20.06
+      ],
+      "image": "SK-l-strbske.jpg"
+    },
+    {
+      "zh": "博伊尼采城堡",
+      "en": "Bojnice Castle",
+      "note": "浪漫主義改建的童話式城堡,附設動物園與溫泉。",
+      "latlon": [
+        48.7797,
+        18.5786
+      ],
+      "image": "SK-l-bojnice.jpg"
+    },
+    {
+      "zh": "弗爾科利內茨",
+      "en": "Vlkolínec",
+      "note": "保存完整的木造山村,列入世界遺產。",
+      "latlon": [
+        49.0403,
+        19.2953
+      ]
+    }
+  ],
+  "people": [
+    {
+      "zh": "米蘭·拉斯提斯拉夫·什特凡尼克",
+      "en": "Milan Rastislav Štefánik",
+      "note": "天文學家與將領,捷克斯洛伐克三位建國者之一。"
+    },
+    {
+      "zh": "路德維特·什圖爾",
+      "en": "Ľudovít Štúr",
+      "note": "語言學家與政治家,確立現代斯洛伐克標準語。"
+    },
+    {
+      "zh": "亞歷山大·杜布切克",
+      "en": "Alexander Dubček",
+      "note": "1968 年「布拉格之春」改革的領導人。"
+    },
+    {
+      "zh": "奧雷爾·斯托多拉",
+      "en": "Aurel Stodola",
+      "note": "工程學者,蒸汽與燃氣渦輪機理論的奠基人。"
+    },
+    {
+      "zh": "彼得·薩根",
+      "en": "Peter Sagan",
+      "note": "公路自行車選手,三度奪世界錦標賽冠軍。"
+    }
+  ],
+  "recommended": [
+    {
+      "zh": "夏季的高塔特拉山",
+      "note": "6 至 9 月纜車直上稜線,健行走什特爾布斯凱湖與綠湖環線,山屋需提早預訂。"
+    },
+    {
+      "zh": "布拉提斯拉瓦＋維也納一日跨國",
+      "note": "兩城搭火車或多瑙河快船僅約一小時,可在首都老城與城堡半日,再進維也納。"
+    },
+    {
+      "zh": "斯洛伐克天堂國家公園健行",
+      "note": "5 至 10 月走峽谷木梯與瀑布鐵索路線,搭配斯皮什城堡,是東部經典組合。"
+    }
+  ],
+  "events": [
+    {
+      "year": 833,
+      "zh": "尼特拉與摩拉維亞合併,大摩拉維亞公國成形。"
+    },
+    {
+      "year": 863,
+      "zh": "西里爾與美多德抵達大摩拉維亞傳教並創制斯拉夫字母。"
+    },
+    {
+      "year": 907,
+      "zh": "大摩拉維亞在馬扎爾人攻勢下瓦解,斯洛伐克地區漸入匈牙利王國。"
+    },
+    {
+      "year": 1843,
+      "zh": "什圖爾確立現代斯洛伐克標準語。"
+    },
+    {
+      "year": 1918,
+      "zh": "捷克斯洛伐克共和國成立。"
+    },
+    {
+      "year": 1993,
+      "zh": "捷克與斯洛伐克和平分立,斯洛伐克獨立。"
+    },
+    {
+      "year": 2009,
+      "zh": "斯洛伐克加入歐元區。"
+    }
+  ],
+  "souvenirs": [
+    {
+      "zh": "莫德拉陶器",
+      "note": "手繪藍白花卉的錫釉陶,產自莫德拉鎮。"
+    },
+    {
+      "zh": "煙燻綿羊乳酪與乳酪辮",
+      "note": "oštiepok、korbáčik,真空包裝好攜帶。"
+    },
+    {
+      "zh": "塔特拉茶(Tatratea)",
+      "note": "以草本與莓果調製的高酒精香甜利口酒。"
+    },
+    {
+      "zh": "藍印花布",
+      "note": "靛藍防染印花的手工布藝,列入非物質遺產。"
+    }
+  ],
+  "itineraries": {
+    "hot": [
+      {
+        "zh": "布拉提斯拉瓦＋維也納",
+        "days": "3–4 天",
+        "note": "首都老城、城堡與多瑙河散步兩天,再搭火車或快船到維也納接歐洲行程。台灣多在維也納或法蘭克福轉機,適合第一次到中歐、想輕鬆起步的旅客。"
+      },
+      {
+        "zh": "高塔特拉山健行",
+        "days": "4–5 天",
+        "note": "以什特爾布斯凱湖或老斯莫科維茨為基地,搭齒軌與纜車上山,分段走稜線步道與山中湖。6 至 9 月為旺季,山屋與住宿需提早訂。"
+      },
+      {
+        "zh": "布拉提斯拉瓦＋斯皮什城堡＋斯洛伐克天堂",
+        "days": "5–6 天",
+        "note": "西邊首都接東部的萊沃恰古城、斯皮什城堡與斯洛伐克天堂國家公園峽谷步道,需租車串聯,適合喜歡古蹟加自然的旅客。"
+      },
+      {
+        "zh": "城堡巡禮:博伊尼采—奧拉瓦—斯皮什",
+        "days": "5–6 天",
+        "note": "自駕從西向東收集三座代表性城堡,沿途經過班斯卡·比斯特里察與礦業古鎮,節奏中等。"
+      },
+      {
+        "zh": "布拉提斯拉瓦＋科希策",
+        "days": "4–5 天",
+        "note": "搭火車橫貫全國,東部第二大城科希策有哥德式主教座堂與熱鬧舊城,可再走鄰近的葡萄酒鄉與洞穴。"
+      }
+    ],
+    "niche": [
+      {
+        "zh": "東部木造教堂群",
+        "note": "巴爾代約夫周邊的哥德式與東儀木造教堂,部分列入世界遺產;班次稀疏,建議自駕。"
+      },
+      {
+        "zh": "斯洛伐克喀斯特洞穴",
+        "note": "多米查洞、奧赫廷斯卡霰石洞等地下奇景,夏季開放、需預約導覽。"
+      },
+      {
+        "zh": "皮耶什佳尼溫泉療養",
+        "note": "以泥療聞名的百年溫泉小鎮,適合安排數日慢步與spa。"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "file": "SK-a-bear.jpg",
+      "title": "Eurasian brown bear",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AEurasian_brown_bear_(Ursus_arctos_arctos)_female_1.jpg"
+    },
+    {
+      "file": "SK-a-marmot.jpg",
+      "title": "Tatra marmot in the High Tatras",
+      "author": "Krzysztof Górecki",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AM.marmota_latirostris_in_Ve%C4%BEk%C3%A1_Studen%C3%A1_dolina_2.jpg"
+    },
+    {
+      "file": "SK-a-chamois.jpg",
+      "title": "Tatra chamois",
+      "author": "Jakub Fryš",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ATatra_Chamois.jpg"
+    },
+    {
+      "file": "SK-a-lynx.jpg",
+      "title": "Eurasian lynx",
+      "author": "Böhringer Friedrich",
+      "license": "CC BY-SA 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File%3ALynx_lynx,_Luchs_02.JPG"
+    },
+    {
+      "file": "SK-f-halusky.jpg",
+      "title": "Bryndzové halušky",
+      "author": "Backpack Foodie",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABryndzove_halusky_slovak_cuisine.jpg"
+    },
+    {
+      "file": "SK-f-bryndza.jpg",
+      "title": "Bryndza cheese",
+      "author": "Maciarka",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABryndza_cheese.jpg"
+    },
+    {
+      "file": "SK-f-kapustnica.jpg",
+      "title": "Kapustnica sauerkraut soup",
+      "author": "young shanahan",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AKapustnica_(Sauerkraut_soup).jpg"
+    },
+    {
+      "file": "SK-f-ostiepok.jpg",
+      "title": "Oštiepok smoked sheep cheese",
+      "author": "Politikundwirtschaft",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AOstiepok_industriell.jpg"
+    },
+    {
+      "file": "SK-l-bratislava.jpg",
+      "title": "Bratislava Castle",
+      "author": "Uoaei1",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABratislava_Castle_Pano_S_01.jpg"
+    },
+    {
+      "file": "SK-l-spis.jpg",
+      "title": "Spiš Castle",
+      "author": "Ingo Mehling",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASpissky_hrad_west.jpg"
+    },
+    {
+      "file": "SK-l-strbske.jpg",
+      "title": "Štrbské Pleso",
+      "author": "Adrian Tync",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3A%C5%A0trbsk%C3%A9_pleso_%26_Hotel_Patria_2022.jpg"
+    },
+    {
+      "file": "SK-l-bojnice.jpg",
+      "title": "Bojnice Castle",
+      "author": "Pudelek (Marcin Szala)",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABojnice_(Bojnitz)_Castle_(by_Pudelek).jpg"
+    }
+  ],
+  "code": "SK"
+}
