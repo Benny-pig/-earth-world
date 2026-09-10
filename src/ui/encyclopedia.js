@@ -1,11 +1,14 @@
 import { esc } from "/src/lib/esc.js";
 import { createAdminMap } from "/src/ui/admin-map.js";
 
-const ADMIN_MAP_COUNTRIES = new Set(["TW", "JP", "US"]);
-
 export function createEncyclopedia() {
   const adminMap = createAdminMap();
   const regionCache = new Map();
+
+  // 哪些國家有一級行政區地圖(data/admin1/index.json;載入前先當作沒有)
+  let adminSet = null;
+  fetch("/data/admin1/index.json").then((r) => (r.ok ? r.json() : [])).then((a) => { adminSet = new Set(a); }).catch(() => { adminSet = new Set(); });
+  const hasAdminMap = (code) => adminSet && adminSet.has(code);
   const el = document.getElementById("encyclopedia");
   const titleEl = el.querySelector(".enc-title");
   const bodyEl = document.getElementById("enc-body");
@@ -208,7 +211,7 @@ export function createEncyclopedia() {
       `</div>` +
       `<p class="enc-dim" style="font-size:11px;margin-top:8px">連到各旅行社「${esc(nm)}」搜尋結果與機票比價;實際價格、檔期以各站為準。</p>`);
 
-    if (ADMIN_MAP_COUNTRIES.has(code))
+    if (hasAdminMap(code))
       h += section("縣市地圖",
         `<p class="enc-dim" style="font-size:12px">點縣市看特色與推薦。★ = 首都。</p>` +
         `<div id="enc-admin-map"></div><div id="enc-region-info"></div>`);
@@ -229,7 +232,7 @@ export function createEncyclopedia() {
     }), 1200);
     if (ccy) renderFx(code, ccy);
 
-    if (ADMIN_MAP_COUNTRIES.has(code)) {
+    if (hasAdminMap(code)) {
       const mapBox = document.getElementById("enc-admin-map");
       const cap = window.__earth && window.__earth.content && window.__earth.content[code];
       adminMap.render(mapBox, code, {
