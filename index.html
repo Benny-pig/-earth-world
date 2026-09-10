@@ -269,6 +269,15 @@
   #encyclopedia .admin-label { fill: #eef4ff; paint-order: stroke; stroke: rgba(6,10,20,.9); stroke-width: 3px; stroke-linejoin: round; vector-effect: non-scaling-stroke; text-anchor: middle; dominant-baseline: middle; pointer-events: none; font-family: system-ui, "Microsoft JhengHei", sans-serif; }
   #encyclopedia .admin-capital { fill: #ffd76a; pointer-events: none; }
   #encyclopedia #enc-region-info { margin-top: 12px; min-height: 20px; }
+  #encyclopedia .transit-svg { width: 100%; height: auto; max-height: 68vh; display: block; background: #fbfbfd; border-radius: 10px; touch-action: none; cursor: grab; overflow: hidden; }
+  #encyclopedia .transit-svg:active { cursor: grabbing; }
+  #encyclopedia .transit-line { opacity: .92; }
+  #encyclopedia .transit-dot { fill: #fff; stroke-width: 1.4; vector-effect: non-scaling-stroke; }
+  #encyclopedia .transit-int { fill: #fff; stroke: #16181d; stroke-width: 1.8; vector-effect: non-scaling-stroke; }
+  #encyclopedia .transit-label { fill: #16181d; paint-order: stroke; stroke: #fbfbfd; stroke-width: 2px; stroke-linejoin: round; vector-effect: non-scaling-stroke; font-family: system-ui, "Microsoft JhengHei", sans-serif; pointer-events: none; }
+  #encyclopedia .transit-legend { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 10px; font-size: 12px; color: var(--enc-ink-dim); }
+  #encyclopedia .transit-legend span { display: inline-flex; align-items: center; gap: 6px; }
+  #encyclopedia .transit-legend i { width: 16px; height: 4px; border-radius: 2px; display: inline-block; }
   #encyclopedia[data-enc-theme="journal"] .admin-map-svg { background: #efe7d6; }
   #encyclopedia[data-enc-theme="journal"] .admin-region { fill: rgba(166,120,70,.16); stroke: rgba(120,90,50,.5); }
   #encyclopedia[data-enc-theme="journal"] .admin-region:hover { fill: rgba(166,120,70,.34); }

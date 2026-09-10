@@ -1,8 +1,13 @@
 import { esc } from "/src/lib/esc.js";
 import { createAdminMap } from "/src/ui/admin-map.js";
+import { createTransitMap } from "/src/ui/transit-map.js";
+
+// 有捷運路網示意圖的國家 → 城市檔名(data/transit/<city>.json)
+const TRANSIT = { TW: "taipei" };
 
 export function createEncyclopedia() {
   const adminMap = createAdminMap();
+  const transitMap = createTransitMap();
   const regionCache = new Map();
 
   // 哪些國家有一級行政區地圖(data/admin1/index.json;載入前先當作沒有)
@@ -223,6 +228,11 @@ export function createEncyclopedia() {
         `<p class="enc-dim" style="font-size:12px">點縣市看特色與推薦。★ = 首都。</p>` +
         `<div id="enc-admin-map"></div><div id="enc-region-info"></div>`);
 
+    if (TRANSIT[code])
+      h += section("捷運路網圖",
+        `<p class="enc-dim" style="font-size:12px">白心大圈 = 轉乘站。自由行搭捷運最實用。</p>` +
+        `<div id="enc-transit-map"></div>`);
+
     if (Array.isArray(d.credits) && d.credits.length)
       h += section("圖片來源", `<ul class="enc-credits">` + d.credits.map((c) => {
         const head = `${esc(c.title || c.file)} — ${esc(c.author)} / ${esc(c.license)}`;
@@ -246,6 +256,11 @@ export function createEncyclopedia() {
         capital: cap && cap.capital_latlon,
         onPick: (name) => renderRegionInfo(code, name),
       });
+    }
+
+    if (TRANSIT[code]) {
+      const tBox = document.getElementById("enc-transit-map");
+      if (tBox) transitMap.render(tBox, TRANSIT[code]);
     }
   }
 
