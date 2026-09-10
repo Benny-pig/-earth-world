@@ -178,7 +178,13 @@
     width: 130px; padding: 6px 9px; border-radius: 7px; font: inherit;
     background: rgba(20,26,44,.9); color: #eef4ff; border: 1px solid rgba(120,170,255,.3);
   }
-  #encyclopedia .enc-fx-swap { color: #8fd4ff; font-size: 16px; }
+  #encyclopedia .enc-fx-swap {
+    color: #8fd4ff; font-size: 15px; cursor: pointer; line-height: 1;
+    background: rgba(77,163,255,.16); border: 1px solid rgba(120,170,255,.4);
+    border-radius: 8px; padding: 7px 10px; font-family: inherit;
+  }
+  #encyclopedia .enc-fx-swap:hover { background: rgba(77,163,255,.32); }
+  #encyclopedia .enc-flight { background: rgba(120,200,140,.14); border-color: rgba(140,220,160,.4); }
   #encyclopedia .enc-fx-src { font-size: 10.5px; margin-top: 8px; }
   #encyclopedia .enc-sub { font-size: 12.5px; letter-spacing: .08em; color: #8fd4ff; margin: 14px 0 8px; font-weight: 700; }
   #encyclopedia .enc-route { padding: 9px 0; border-bottom: 1px dashed rgba(120,170,255,.14); }
@@ -193,7 +199,8 @@
   }
   #encyclopedia .enc-agency:hover { background: rgba(77,163,255,.28); }
   #encyclopedia .enc-theme-btn { font-size: 13px; }
-  #encyclopedia .admin-map-svg { width: 100%; height: auto; max-height: 62vh; display: block; background: rgba(255,255,255,.03); border-radius: 10px; }
+  #encyclopedia .admin-map-svg { width: 100%; height: auto; max-height: 62vh; display: block; background: rgba(255,255,255,.03); border-radius: 10px; touch-action: none; cursor: grab; overflow: hidden; }
+  #encyclopedia .admin-map-svg:active { cursor: grabbing; }
   #encyclopedia .admin-region { fill: rgba(120,170,255,.14); stroke: rgba(160,200,255,.55); stroke-width: .04; cursor: pointer; transition: fill .12s; vector-effect: non-scaling-stroke; }
   #encyclopedia .admin-region:hover { fill: rgba(120,190,255,.34); }
   #encyclopedia .admin-region.sel { fill: rgba(77,163,255,.6); stroke: #cfe6ff; }

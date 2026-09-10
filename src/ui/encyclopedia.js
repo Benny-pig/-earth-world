@@ -79,7 +79,7 @@ export function createEncyclopedia() {
       `1 ${esc(ccy)} ≈ <b>${trimNum(inv)}</b> 新臺幣</p>` +
       `<div class="enc-fx-conv">` +
         `<label>新臺幣 <input type="number" id="fx-twd" value="1000" min="0" step="any"></label>` +
-        `<span class="enc-fx-swap">⇄</span>` +
+        `<button type="button" class="enc-fx-swap" id="fx-swap" title="互換兩邊數值">⇄</button>` +
         `<label>${esc(ccy)} <input type="number" id="fx-for" min="0" step="any"></label>` +
       `</div>` +
       `<p class="enc-dim enc-fx-src">匯率更新:${esc(upd)} UTC · 資料 open.er-api.com</p>`;
@@ -90,6 +90,13 @@ export function createEncyclopedia() {
     };
     twd.addEventListener("input", () => sync("twd"));
     forr.addEventListener("input", () => sync("for"));
+    // ⇄ 把兩邊的「數字」互換(拿外幣的數值當新臺幣、反之),來回試算
+    box.querySelector("#fx-swap").addEventListener("click", () => {
+      const a = twd.value; twd.value = forr.value || ""; forr.value = "";
+      // 以新的 TWD 值重算另一邊;若原本兩邊都空就放回原值
+      if (!twd.value && a) twd.value = a;
+      sync("twd");
+    });
     sync("twd");
   }
 
@@ -178,18 +185,28 @@ export function createEncyclopedia() {
       h += section("行程建議", ih);
     }
 
-    // 台灣旅行社「一鍵搜尋」—— 不爬價格(天天變),連到各家該國搜尋頁,使用者自行比價
-    const q = encodeURIComponent(d.name_zh || code);
+    // 台灣旅行社「一鍵搜尋」+ 機票查詢 —— 不內嵌即時價格(套裝與票價天天變、且爬取違反 ToS),
+    // 連到各家該國搜尋頁 / Google Flights,使用者在原站比價。
+    const nm = d.name_zh || code;
+    const q = encodeURIComponent(nm);
+    const g = (t) => `https://www.google.com/search?q=${encodeURIComponent(t)}`;
     const AGENCIES = [
       ["雄獅旅遊", `https://travel.liontravel.com/search?keyword=${q}`],
       ["易遊網", `https://www.eztravel.com.tw/search?keyword=${q}`],
       ["KKday", `https://www.kkday.com/zh-tw/search?keyword=${q}`],
       ["Klook", `https://www.klook.com/zh-TW/search/?query=${q}`],
+      ["東南旅遊", g(`東南旅遊 ${nm} 行程`)],
+      ["喜鴻假期", g(`喜鴻假期 ${nm} 行程`)],
+      ["可樂旅遊", g(`可樂旅遊 ${nm} 行程`)],
+      ["百威旅遊", g(`百威旅遊 ${nm} 行程`)],
     ];
     h += section("找台灣出發的行程",
       `<div class="enc-agencies">` + AGENCIES.map(([n, u]) =>
         `<a href="${esc(u)}" target="_blank" rel="noopener" class="enc-agency">${esc(n)} ↗</a>`).join("") + `</div>` +
-      `<p class="enc-dim" style="font-size:11px;margin-top:8px">連到各旅行社的「${esc(d.name_zh || code)}」搜尋結果,價格與檔期以各站為準。</p>`);
+      `<div class="enc-agencies" style="margin-top:10px">` +
+        `<a href="https://www.google.com/travel/flights?q=${encodeURIComponent(`台北 飛 ${nm} 機票`)}" target="_blank" rel="noopener" class="enc-agency enc-flight">✈ 查台北出發機票(Google Flights)</a>` +
+      `</div>` +
+      `<p class="enc-dim" style="font-size:11px;margin-top:8px">連到各旅行社「${esc(nm)}」搜尋結果與機票比價;實際價格、檔期以各站為準。</p>`);
 
     if (ADMIN_MAP_COUNTRIES.has(code))
       h += section("縣市地圖",

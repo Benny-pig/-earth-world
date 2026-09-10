@@ -59,6 +59,8 @@ export function createAdminMap() {
     svg.setAttribute("viewBox", `${vb.x} ${vb.y} ${vb.w} ${vb.h}`);
     svg.setAttribute("class", "admin-map-svg");
     svg.setAttribute("role", "img");
+    const g = document.createElementNS(svgNS, "g");   // 縮放 / 平移都作用在這層
+    svg.appendChild(g);
 
     const fontUnit = Math.max(vb.w, vb.h) / 68;
 
@@ -67,9 +69,8 @@ export function createAdminMap() {
       path.setAttribute("d", pathD(f.geometry, toXY));
       path.setAttribute("class", "admin-region");
       path.dataset.name = f.properties.name_zht || f.properties.name;
-      svg.appendChild(path);
+      g.appendChild(path);
     }
-    // 標名(畫在多邊形之上)
     for (const f of fc.features) {
       const p = f.properties;
       if (p.lon == null || p.lat == null) continue;
@@ -79,9 +80,8 @@ export function createAdminMap() {
       t.setAttribute("class", "admin-label");
       t.setAttribute("font-size", fontUnit);
       t.textContent = p.name_zht || p.name;
-      svg.appendChild(t);
+      g.appendChild(t);
     }
-    // 首都星號
     if (Array.isArray(opts.capital) && opts.capital.length === 2) {
       const [clat, clon] = opts.capital;
       const [x, y] = toXY(clon, clat);
@@ -92,10 +92,12 @@ export function createAdminMap() {
       star.setAttribute("text-anchor", "middle");
       star.setAttribute("dominant-baseline", "middle");
       star.textContent = "★";
-      svg.appendChild(star);
+      g.appendChild(star);
     }
 
-    svg.addEventListener("click", (e) => {
+    let lastDragEnd = 0;
+    g.addEventListener("click", (e) => {
+      if (Date.now() - lastDragEnd < 160) return;   // 剛拖曳過 → 不算點選
       const r = e.target.closest(".admin-region");
       if (!r) return;
       if (selected) selected.classList.remove("sel");
@@ -103,7 +105,58 @@ export function createAdminMap() {
       if (onPick) onPick(r.dataset.name);
     });
 
+    // ── 縮放 / 平移 ─────────────────────────────────────────
+    let scale = 1, tx = 0, ty = 0;
+    const apply = () => g.setAttribute("transform", `translate(${tx} ${ty}) scale(${scale})`);
+    const svgPt = (evt) => {
+      const rect = svg.getBoundingClientRect();
+      return {
+        x: vb.x + (evt.clientX - rect.left) / rect.width * vb.w,
+        y: vb.y + (evt.clientY - rect.top) / rect.height * vb.h,
+      };
+    };
+    svg.addEventListener("wheel", (e) => {
+      e.preventDefault();
+      const p = svgPt(e);
+      const k = e.deltaY < 0 ? 1.18 : 1 / 1.18;
+      const ns = Math.min(12, Math.max(1, scale * k));
+      if (ns === scale) return;
+      // 以游標為中心縮放
+      tx = p.x - (p.x - tx) * (ns / scale);
+      ty = p.y - (p.y - ty) * (ns / scale);
+      scale = ns;
+      if (scale === 1) { tx = 0; ty = 0; }
+      apply();
+    }, { passive: false });
+    let drag = null;
+    svg.addEventListener("pointerdown", (e) => {
+      drag = { x: e.clientX, y: e.clientY, tx, ty, moved: false };
+      svg.setPointerCapture(e.pointerId);
+    });
+    svg.addEventListener("pointermove", (e) => {
+      if (!drag) return;
+      const rect = svg.getBoundingClientRect();
+      const dx = (e.clientX - drag.x) / rect.width * vb.w;
+      const dy = (e.clientY - drag.y) / rect.height * vb.h;
+      if (Math.hypot(e.clientX - drag.x, e.clientY - drag.y) > 3) drag.moved = true;
+      tx = drag.tx + dx; ty = drag.ty + dy;
+      apply();
+    });
+    const endDrag = (e) => {
+      if (drag && drag.moved) lastDragEnd = Date.now();
+      drag = null;
+      try { svg.releasePointerCapture(e.pointerId); } catch {}
+    };
+    svg.addEventListener("pointerup", endDrag);
+    svg.addEventListener("pointercancel", endDrag);
+    svg.addEventListener("dblclick", () => { scale = 1; tx = 0; ty = 0; apply(); });
+
     container.innerHTML = "";
+    const hint = document.createElement("p");
+    hint.className = "enc-dim";
+    hint.style.cssText = "font-size:11px;margin:0 0 6px";
+    hint.textContent = "滾輪縮放 · 拖曳平移 · 雙擊還原";
+    container.appendChild(hint);
     container.appendChild(svg);
   }
 
