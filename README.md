@@ -34,7 +34,8 @@
 **推薦玩法**、**圖片來源**。Esc / 返回 收起、回到地球(側欄保留)。
 
 - 內容每國一檔:`data/deep/<CODE>.json`,**點「詳細介紹」時才載入**(Map 快取;沒有該檔 → 顯示「建置中」)。
-- 目前有 20 個重點國:`JP TW US KR CN TH VN IN FR IT ES DE GB GR EG CA MX BR AU NZ`。其餘之後分批補。
+- 目前有 20 個重點國:`JP TW US KR CN TH VN IN FR IT ES DE GB GR EG CA MX BR AU NZ`,每國約 20 張圖。其餘國家之後分批補。
+- 每張卡片(動物/食物/景點/名人)標題與圖片都連到中文維基;另有「匯率換算(對新臺幣)」即時匯率 + 換算輸入框。
 - 圖片:`assets/deep/<CODE>/*.jpg`,全部來自 **Wikimedia Commons**,授權限 **CC0 / 公有領域 / CC BY / CC BY-SA**,
   每張都在該國 JSON 的 `credits` 標註作者 / 授權 / 來源網址,大百科頁底列出。
 - 加新國家:內容 subagent 依 `.superpowers/sdd/country-encyclopedia/content-brief-template.md` 產 `batch-deep-N.json`
