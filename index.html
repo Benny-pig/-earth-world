@@ -180,6 +180,52 @@
   }
   #encyclopedia .enc-fx-swap { color: #8fd4ff; font-size: 16px; }
   #encyclopedia .enc-fx-src { font-size: 10.5px; margin-top: 8px; }
+  #encyclopedia .enc-sub { font-size: 12.5px; letter-spacing: .08em; color: #8fd4ff; margin: 14px 0 8px; font-weight: 700; }
+  #encyclopedia .enc-route { padding: 9px 0; border-bottom: 1px dashed rgba(120,170,255,.14); }
+  #encyclopedia .enc-route b { font-size: 13.5px; }
+  #encyclopedia .enc-route-days { margin-left: 8px; font-size: 11px; color: #8fd4ff; background: rgba(77,163,255,.14); padding: 1px 7px; border-radius: 999px; }
+  #encyclopedia .enc-route p { font-size: 12.5px; margin: 5px 0 0; color: #cdd8ef; }
+  #encyclopedia .enc-route-niche b::before { content: "✦ "; color: #8fd4ff; }
+  #encyclopedia .enc-agencies { display: flex; flex-wrap: wrap; gap: 10px; }
+  #encyclopedia .enc-agency {
+    padding: 8px 15px; border-radius: 999px; text-decoration: none; font-size: 13px; font-weight: 600;
+    background: rgba(77,163,255,.14); border: 1px solid rgba(120,170,255,.35); color: #dfe8ff;
+  }
+  #encyclopedia .enc-agency:hover { background: rgba(77,163,255,.28); }
+  #encyclopedia .enc-theme-btn { font-size: 13px; }
+  /* ── 主題:旅誌(暖色編輯風)────────────────────────────── */
+  #encyclopedia[data-enc-theme="journal"] {
+    background: #f3ede0; color: #3b332a;
+    background-image: radial-gradient(rgba(120,90,50,.05) .5px, transparent .5px); background-size: 4px 4px;
+  }
+  #encyclopedia[data-enc-theme="journal"] .enc-topbar { background: #ece3d2; border-bottom-color: rgba(120,90,50,.25); }
+  #encyclopedia[data-enc-theme="journal"] .enc-topbar button { color: #5a4b39; border-color: rgba(120,90,50,.35); }
+  #encyclopedia[data-enc-theme="journal"] .enc-topbar button:hover { background: rgba(166,87,46,.14); }
+  #encyclopedia[data-enc-theme="journal"] .enc-title,
+  #encyclopedia[data-enc-theme="journal"] h2,
+  #encyclopedia[data-enc-theme="journal"] h3 { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", serif; }
+  #encyclopedia[data-enc-theme="journal"] h2 { color: #2c2419; }
+  #encyclopedia[data-enc-theme="journal"] h3 { color: #a6572e; border-bottom-color: rgba(166,87,46,.3); }
+  #encyclopedia[data-enc-theme="journal"] .enc-en,
+  #encyclopedia[data-enc-theme="journal"] .enc-dim,
+  #encyclopedia[data-enc-theme="journal"] .enc-card .enc-card-en { color: #8a7a63; }
+  #encyclopedia[data-enc-theme="journal"] .enc-facts dt,
+  #encyclopedia[data-enc-theme="journal"] .enc-sub,
+  #encyclopedia[data-enc-theme="journal"] .enc-year,
+  #encyclopedia[data-enc-theme="journal"] .enc-route-days,
+  #encyclopedia[data-enc-theme="journal"] .enc-card-title .enc-ext { color: #a6572e; }
+  #encyclopedia[data-enc-theme="journal"] .enc-facts dd,
+  #encyclopedia[data-enc-theme="journal"] .enc-card p,
+  #encyclopedia[data-enc-theme="journal"] .enc-route p { color: #4a4033; }
+  #encyclopedia[data-enc-theme="journal"] .enc-card {
+    background: #fbf7ee; border-color: rgba(120,90,50,.2); box-shadow: 0 2px 10px rgba(90,70,40,.08);
+  }
+  #encyclopedia[data-enc-theme="journal"] .enc-card img { background: #efe7d6; height: 150px; }
+  #encyclopedia[data-enc-theme="journal"] .enc-timeline li { border-bottom-color: rgba(120,90,50,.18); }
+  #encyclopedia[data-enc-theme="journal"] .enc-route { border-bottom-color: rgba(120,90,50,.2); }
+  #encyclopedia[data-enc-theme="journal"] .enc-route-days,
+  #encyclopedia[data-enc-theme="journal"] .enc-agency { background: rgba(166,87,46,.12); border-color: rgba(166,87,46,.35); color: #5a4b39; }
+  #encyclopedia[data-enc-theme="journal"] .enc-fx-conv input { background: #fbf7ee; color: #3b332a; border-color: rgba(120,90,50,.35); }
   #encyclopedia .enc-timeline { list-style: none; padding: 0; margin: 0; }
   #encyclopedia .enc-timeline li { display: grid; grid-template-columns: 68px 1fr; gap: 12px; padding: 7px 0; border-bottom: 1px dashed rgba(120,170,255,.12); }
   #encyclopedia .enc-timeline .enc-year { color: #8fd4ff; font-variant-numeric: tabular-nums; }
@@ -274,6 +320,7 @@
     <div class="enc-topbar">
       <button class="enc-back" aria-label="返回地球">‹ 返回</button>
       <span class="enc-title"></span>
+      <button class="enc-theme-btn" aria-label="切換版面主題">🌙 深空</button>
       <button class="enc-close" aria-label="關閉">×</button>
     </div>
     <div class="enc-scroll"><div id="enc-body"></div></div>

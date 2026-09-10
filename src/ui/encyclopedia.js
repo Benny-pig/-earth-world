@@ -14,6 +14,20 @@ export function createEncyclopedia() {
     if (e.key === "Escape" && el.classList.contains("open")) { e.stopImmediatePropagation(); close(); }
   });
 
+  // 版面主題:深空(預設)/ 旅誌(暖色編輯風),記住選擇
+  const themeBtn = el.querySelector(".enc-theme-btn");
+  const THEME_KEY = "earth-world.enc-theme";
+  function applyTheme(t) {
+    if (t === "journal") { el.setAttribute("data-enc-theme", "journal"); if (themeBtn) themeBtn.textContent = "☀ 旅誌"; }
+    else { el.removeAttribute("data-enc-theme"); if (themeBtn) themeBtn.textContent = "🌙 深空"; }
+  }
+  try { applyTheme(localStorage.getItem(THEME_KEY)); } catch {}
+  if (themeBtn) themeBtn.addEventListener("click", () => {
+    const next = el.getAttribute("data-enc-theme") === "journal" ? "dark" : "journal";
+    applyTheme(next);
+    try { localStorage.setItem(THEME_KEY, next); } catch {}
+  });
+
   const cache = new Map();
   let reqSeq = 0;
 
@@ -142,6 +156,35 @@ export function createEncyclopedia() {
 
     if (Array.isArray(d.recommended) && d.recommended.length)
       h += section("推薦玩法", d.recommended.map((r) => `<p><b>${esc(r.zh)}</b> — ${esc(r.note || "")}</p>`).join(""));
+
+    const itin = d.itineraries || {};
+    if ((Array.isArray(itin.hot) && itin.hot.length) || (Array.isArray(itin.niche) && itin.niche.length)) {
+      let ih = "";
+      if (Array.isArray(itin.hot) && itin.hot.length) {
+        ih += `<h4 class="enc-sub">熱門路線</h4>` + itin.hot.map((r) =>
+          `<div class="enc-route"><b>${esc(r.zh || r.title)}</b>` +
+          `${r.days ? `<span class="enc-route-days">${esc(r.days)}</span>` : ""}` +
+          `<p>${esc(r.note || "")}</p></div>`).join("");
+      }
+      if (Array.isArray(itin.niche) && itin.niche.length) {
+        ih += `<h4 class="enc-sub">私房 / 冷門</h4>` + itin.niche.map((r) =>
+          `<div class="enc-route enc-route-niche"><b>${esc(r.zh || r.title)}</b><p>${esc(r.note || "")}</p></div>`).join("");
+      }
+      h += section("行程建議", ih);
+    }
+
+    // 台灣旅行社「一鍵搜尋」—— 不爬價格(天天變),連到各家該國搜尋頁,使用者自行比價
+    const q = encodeURIComponent(d.name_zh || code);
+    const AGENCIES = [
+      ["雄獅旅遊", `https://travel.liontravel.com/search?keyword=${q}`],
+      ["易遊網", `https://www.eztravel.com.tw/search?keyword=${q}`],
+      ["KKday", `https://www.kkday.com/zh-tw/search?keyword=${q}`],
+      ["Klook", `https://www.klook.com/zh-TW/search/?query=${q}`],
+    ];
+    h += section("找台灣出發的行程",
+      `<div class="enc-agencies">` + AGENCIES.map(([n, u]) =>
+        `<a href="${esc(u)}" target="_blank" rel="noopener" class="enc-agency">${esc(n)} ↗</a>`).join("") + `</div>` +
+      `<p class="enc-dim" style="font-size:11px;margin-top:8px">連到各旅行社的「${esc(d.name_zh || code)}」搜尋結果,價格與檔期以各站為準。</p>`);
 
     if (Array.isArray(d.credits) && d.credits.length)
       h += section("圖片來源", `<ul class="enc-credits">` + d.credits.map((c) => {
