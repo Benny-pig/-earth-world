@@ -28,7 +28,7 @@ export function createGlobe({ onAllTexturesFailed } = {}) {
     () => { console.warn("[globe] 貼圖載入失敗:", url); res(null); },
   ));
 
-  const geometry = new THREE.SphereGeometry(1, 96, 96);
+  const geometry = new THREE.SphereGeometry(1, 160, 160);
   const material = new THREE.MeshStandardMaterial({ color: 0x2b3a55, metalness: 0.0, roughness: 1.0 });
   const mesh = new THREE.Mesh(geometry, material);
   object.add(mesh);

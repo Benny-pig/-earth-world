@@ -64,6 +64,24 @@
   }
   #ocean-labels .ocean-label .zh { display: block; font-size: 16px; }
   #ocean-labels .ocean-label .en { display: block; font-size: 10px; letter-spacing: 0.15em; opacity: 0.75; margin-top: 2px; }
+  #physical-labels { position: fixed; inset: 0; pointer-events: none; z-index: 37; overflow: hidden; }
+  #physical-labels .physical-label {
+    position: absolute; top: 0; left: 0; white-space: nowrap; text-align: center;
+    font: 12px/1.25 system-ui, "Microsoft JhengHei", sans-serif;
+    color: #eaf1ff; text-shadow: 0 0 4px rgba(0,0,0,.9), 0 0 10px rgba(0,0,0,.7);
+    opacity: 0; transition: opacity .35s ease; will-change: transform, opacity;
+  }
+  #physical-labels .pl-ico { display: block; font-size: 9px; line-height: 1; margin-bottom: 1px; opacity: .8; }
+  #physical-labels .pl-zh { display: block; font-size: 12px; letter-spacing: .06em; }
+  #physical-labels .pl-en { display: block; font-size: 8.5px; letter-spacing: .04em; opacity: .62; margin-top: 1px; }
+  #physical-labels .pl-mountain, #physical-labels .pl-peak { color: #f0e6d2; }
+  #physical-labels .pl-mountain .pl-ico, #physical-labels .pl-peak .pl-ico { color: #d9b98a; }
+  #physical-labels .pl-river .pl-ico, #physical-labels .pl-lake .pl-ico { color: #8fd4ff; }
+  #physical-labels .pl-river, #physical-labels .pl-lake { color: #dbeeff; }
+  #physical-labels .pl-desert { color: #f6e3b8; }
+  #physical-labels .pl-desert .pl-ico { color: #e8c06a; }
+  #physical-labels .pl-plateau, #physical-labels .pl-plain, #physical-labels .pl-other { color: #e7e2d6; }
+  #physical-labels .pl-plateau .pl-ico, #physical-labels .pl-plain .pl-ico, #physical-labels .pl-other .pl-ico { color: #b7c3a8; }
   #side-panel {
     position: fixed; top: 0; right: 0; height: 100%; width: 380px; max-width: 86vw;
     transform: translateX(105%); transition: transform .45s cubic-bezier(.22,.61,.36,1);
@@ -412,6 +430,7 @@
   </div>
   <div id="country-labels"></div>
   <div id="ocean-labels"></div>
+  <div id="physical-labels"></div>
   <div id="side-panel"><button class="close" aria-label="關閉">×</button><div id="side-panel-body"></div></div>
   <div id="clock-weather"><div class="cw-hint">將滑鼠移到國家並點擊,看當地時間與天氣</div></div>
   <div id="audio-ui">

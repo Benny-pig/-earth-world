@@ -14,6 +14,7 @@ import { setZhHantNames } from "/src/countries/country-names.js";
 import { createTooltip } from "/src/ui/tooltip.js";
 import { createOceanLabels } from "/src/scene/ocean-labels.js";
 import { createCountryLabels } from "/src/scene/country-labels.js";
+import { createPhysicalLabels } from "/src/scene/physical-labels.js";
 import { createSidePanel } from "/src/ui/side-panel.js";
 import { createClockWeather } from "/src/ui/clock-weather.js";
 import { createTwClock } from "/src/ui/tw-clock.js";
@@ -169,6 +170,8 @@ export function start() {
 
   const oceanLabels = createOceanLabels({ globeObject: globe.object, camera, renderer });
   window.__earth.oceanLabels = oceanLabels;
+  const physicalLabels = createPhysicalLabels({ globeObject: globe.object, camera, renderer });
+  window.__earth.physicalLabels = physicalLabels;
 
   // hover 暫停:用 raycaster 判斷游標是否指到地球(Task 7 會擴充成國家偵測,這裡先做地球層級)
   const raycaster = new THREE.Raycaster();
@@ -319,6 +322,7 @@ export function start() {
     rig.update(dt);
 
     oceanLabels.update();
+    physicalLabels.update();
     if (window.__earth.countryLabels) window.__earth.countryLabels.update();
 
     composer.render();
