@@ -35,7 +35,11 @@
 
 - 內容每國一檔:`data/deep/<CODE>.json`,**點「詳細介紹」時才載入**(Map 快取;沒有該檔 → 顯示「建置中」)。
 - 目前有 20 個重點國:`JP TW US KR CN TH VN IN FR IT ES DE GB GR EG CA MX BR AU NZ`,每國約 20 張圖。其餘國家之後分批補。
-- 每張卡片(動物/食物/景點/名人)標題與圖片都連到中文維基;另有「匯率換算(對新臺幣)」即時匯率 + 換算輸入框。
+- 每張卡片(動物/食物/景點/名人)標題與圖片都連到中文維基。
+- 「匯率換算(對新臺幣)」:即時匯率(open.er-api.com,每日更新)+ 雙向換算輸入框。
+- 「行程建議」:每國 5 條熱門路線(含天數)+ 3 條私房路線;「找台灣出發的行程」一鍵連到雄獅/易遊網/KKday/Klook 的該國搜尋頁。
+- 「縣市地圖」(臺灣/日本/美國):2D 一級行政區地圖,全縣市繁中標名、首都 ★,點縣市看特色 + 推薦。資料 Natural Earth ne_10m_admin_1(公有領域)。
+- 右上角可切換版面主題:「深空」(深色)/「旅誌」(米白編輯風)。
 - 圖片:`assets/deep/<CODE>/*.jpg`,全部來自 **Wikimedia Commons**,授權限 **CC0 / 公有領域 / CC BY / CC BY-SA**,
   每張都在該國 JSON 的 `credits` 標註作者 / 授權 / 來源網址,大百科頁底列出。
 - 加新國家:內容 subagent 依 `.superpowers/sdd/country-encyclopedia/content-brief-template.md` 產 `batch-deep-N.json`
