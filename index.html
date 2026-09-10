@@ -186,8 +186,18 @@
   #encyclopedia .enc-credits { font-size: 11.5px; color: #8093b5; }
   #encyclopedia .enc-credits li { margin: 3px 0; }
   #encyclopedia .enc-dim { color: #9fb2d8; }
+  #encyclopedia .enc-sec { margin: 0; }
+  @keyframes encRise { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+  #encyclopedia .enc-reveal { animation: encRise .5s cubic-bezier(.22,.61,.36,1) forwards; }
+  #encyclopedia .enc-reveal:nth-of-type(1) { animation-delay: .02s; }
+  #encyclopedia .enc-reveal:nth-of-type(2) { animation-delay: .09s; }
+  #encyclopedia .enc-reveal:nth-of-type(3) { animation-delay: .16s; }
+  #encyclopedia .enc-reveal:nth-of-type(4) { animation-delay: .22s; }
+  #encyclopedia .enc-reveal:nth-of-type(5) { animation-delay: .28s; }
+  #encyclopedia .enc-reveal:nth-of-type(n+6) { animation-delay: .33s; }
   @media (prefers-reduced-motion: reduce) {
     #encyclopedia { transition: none; }
+    #encyclopedia .enc-reveal { animation: none; }
   }
   #tw-clock {
     position: fixed; top: 18px; left: 18px; z-index: 42;

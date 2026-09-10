@@ -97,7 +97,11 @@ export function createEncyclopedia() {
       `<p>${esc(it.note || "")}</p></div></div>`;
   }
 
-  function section(title, inner) { return `<h3>${esc(title)}</h3>${inner}`; }
+  // 進場動畫純 CSS(@keyframes,無 fill-mode)—— 動畫沒跑 / 被節流也不會卡在隱形,
+  // 因為結束後元素回到自然樣式(可見)。錯開由 CSS :nth-of-type 處理。
+  function section(title, inner) {
+    return `<section class="enc-sec enc-reveal"><h3>${esc(title)}</h3>${inner}</section>`;
+  }
 
   function render(code, d) {
     titleEl.textContent = d.name_zh || code;
@@ -149,6 +153,10 @@ export function createEncyclopedia() {
 
     bodyEl.innerHTML = h;
     scrollEl.scrollTop = 0;
+    // 安全網:進場動畫萬一沒跑完(分頁被節流等),1.2 秒後強制顯示,絕不讓內容卡在隱形
+    setTimeout(() => bodyEl.querySelectorAll(".enc-reveal").forEach((n) => {
+      if (getComputedStyle(n).opacity === "0") n.style.opacity = "1";
+    }), 1200);
     if (ccy) renderFx(code, ccy);
   }
 
