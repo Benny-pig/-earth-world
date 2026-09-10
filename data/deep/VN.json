@@ -24,27 +24,32 @@
     {
       "zh": "亞洲水牛",
       "en": "Water buffalo",
-      "note": "農村耕作與生活的象徵,常見於水田與村塘。"
+      "note": "農村耕作與生活的象徵,常見於水田與村塘。",
+      "image": "animals-water-buffalo.jpg"
     },
     {
       "zh": "赤腿白臀葉猴",
       "en": "Red-shanked douc",
-      "note": "中部森林的彩色葉猴,被稱為「穿花褲的猴子」。"
+      "note": "中部森林的彩色葉猴,被稱為「穿花褲的猴子」。",
+      "image": "animals-red-shanked-douc.jpg"
     },
     {
       "zh": "中南大羚",
       "en": "Saola",
-      "note": "一九九二年才在長山山脈被發現的牛科動物,極度瀕危,有「亞洲獨角獸」之稱。"
+      "note": "一九九二年才在長山山脈被發現的牛科動物,極度瀕危,有「亞洲獨角獸」之稱。",
+      "image": "animals-saola.jpg"
     },
     {
       "zh": "亞洲象",
       "en": "Asian elephant",
-      "note": "昔日用於運輸與慶典,現野生族群零星分布於中部高地。"
+      "note": "昔日用於運輸與慶典,現野生族群零星分布於中部高地。",
+      "image": "animals-asian-elephant.jpg"
     },
     {
       "zh": "湄公河巨鯰",
       "en": "Mekong giant catfish",
-      "note": "湄公河的大型淡水魚,體長可逾兩公尺。"
+      "note": "湄公河的大型淡水魚,體長可逾兩公尺。",
+      "image": "animals-mekong-giant-catfish.jpg"
     }
   ],
   "foods": [
@@ -63,17 +68,20 @@
     {
       "zh": "生春捲",
       "en": "Goi cuon",
-      "note": "米紙捲蝦、豬肉、米線與生菜,沾花生醬或魚露。"
+      "note": "米紙捲蝦、豬肉、米線與生菜,沾花生醬或魚露。",
+      "image": "foods-goi-cuon.jpg"
     },
     {
       "zh": "越南滴漏咖啡",
       "en": "Ca phe sua da",
-      "note": "金屬濾杯滴煮的濃咖啡加煉乳與冰塊。"
+      "note": "金屬濾杯滴煮的濃咖啡加煉乳與冰塊。",
+      "image": "foods-ca-phe-sua-da.jpg"
     },
     {
       "zh": "烤肉米線",
       "en": "Bun cha",
-      "note": "炭烤豬肉餅與五花肉泡在酸甜魚露,配米線與生菜,河內名食。"
+      "note": "炭烤豬肉餅與五花肉泡在酸甜魚露,配米線與生菜,河內名食。",
+      "image": "foods-bun-cha.jpg"
     }
   ],
   "landmarks": [
@@ -124,7 +132,8 @@
       "latlon": [
         17.5333,
         106.1167
-      ]
+      ],
+      "image": "landmarks-phong-nha-ke-bang.jpg"
     }
   ],
   "people": [
@@ -137,22 +146,26 @@
     {
       "zh": "二徵夫人",
       "en": "Trung Sisters",
-      "note": "西元四十年起兵反抗漢朝統治的姊妹,越南最早的民族英雄象徵。"
+      "note": "西元四十年起兵反抗漢朝統治的姊妹,越南最早的民族英雄象徵。",
+      "image": "people-trung-sisters.jpg"
     },
     {
       "zh": "阮攸",
       "en": "Nguyen Du",
-      "note": "十九世紀詩人,長篇敘事詩《金雲翹傳》被奉為國民文學。"
+      "note": "十九世紀詩人,長篇敘事詩《金雲翹傳》被奉為國民文學。",
+      "image": "people-nguyen-du.jpg"
     },
     {
       "zh": "武元甲",
       "en": "Vo Nguyen Giap",
-      "note": "軍事統帥,指揮奠邊府戰役等關鍵戰事。"
+      "note": "軍事統帥,指揮奠邊府戰役等關鍵戰事。",
+      "image": "people-vo-nguyen-giap.jpg"
     },
     {
       "zh": "嘉隆帝(阮福映)",
       "en": "Gia Long",
-      "note": "一八○二年統一越南、建立阮朝的開國君主。"
+      "note": "一八○二年統一越南、建立阮朝的開國君主。",
+      "image": "people-gia-long.jpg"
     }
   ],
   "recommended": [
@@ -248,6 +261,97 @@
       "author": "不詳(一九四六年攝)",
       "license": "Public domain",
       "source": "https://commons.wikimedia.org/wiki/File:Ho_Chi_Minh_1946.jpg"
+    },
+    {
+      "file": "animals-water-buffalo.jpg",
+      "title": "Domestic water buffalo (Bubalus bubalis)",
+      "author": "Alexander Vasenin",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Water_buffalo_at_Rinca.jpg"
+    },
+    {
+      "file": "animals-red-shanked-douc.jpg",
+      "title": "Red-shanked douc langur, Son Tra, Vietnam",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Red-shanked_douc_langur_(Pygathrix_nemaeus)_male_Son_Tra.jpg"
+    },
+    {
+      "file": "animals-asian-elephant.jpg",
+      "title": "Wild Asian elephants",
+      "author": "Thapalens",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Herd_of_wild_Asian_elephants_in_the_grasslands_of_Kaziranga.jpg"
+    },
+    {
+      "file": "animals-mekong-giant-catfish.jpg",
+      "title": "Mekong giant catfish (Pangasianodon gigas)",
+      "author": "Cool critter channel",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mekong_giant_catfish.jpg"
+    },
+    {
+      "file": "foods-goi-cuon.jpg",
+      "title": "Vietnamese fresh summer rolls (gỏi cuốn) with peanut sauce",
+      "author": "T.Tseng",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Spring_rolls_with_peanut_sauce.jpg"
+    },
+    {
+      "file": "foods-ca-phe-sua-da.jpg",
+      "title": "Vietnamese iced coffee",
+      "author": "Vinnie Cartabiano",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Vietnamese_iced_coffee_-_Jan_31,_2018.jpg"
+    },
+    {
+      "file": "foods-bun-cha.jpg",
+      "title": "Bún chả, Hanoi",
+      "author": "Valentin Orange",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bun-cha-hanoi.jpg"
+    },
+    {
+      "file": "landmarks-phong-nha-ke-bang.jpg",
+      "title": "Phong Nha-Ke Bang National Park karst landscape",
+      "author": "Genghiskhanviet",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Phongnhakebang2.jpg"
+    },
+    {
+      "file": "people-trung-sisters.jpg",
+      "title": "The Trung Sisters riding elephants (Dong Ho folk painting)",
+      "author": "Unknown (Dong Ho woodblock print)",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Hai_ba_trung_Dong_Ho_painting.jpg"
+    },
+    {
+      "file": "people-nguyen-du.jpg",
+      "title": "Statue of the poet Nguyễn Du, Nghi Xuân, Hà Tĩnh",
+      "author": "Vienvo03",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tượng_đài_cụ_Nguyễn_Du.jpg"
+    },
+    {
+      "file": "people-vo-nguyen-giap.jpg",
+      "title": "General Võ Nguyên Giáp (2008)",
+      "author": "Ricardo Stuckert / Agência Brasil",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Vo_Nguyen_Giap_2008.jpg"
+    },
+    {
+      "file": "people-gia-long.jpg",
+      "title": "Emperor Gia Long",
+      "author": "Unknown (imperial court portrait)",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Emperor_Gia_Long.jpg"
+    },
+    {
+      "file": "animals-saola.jpg",
+      "title": "Saola (Pseudoryx nghetinhensis), Vietnam",
+      "author": "James Hardcastle",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pseudoryx_nghetinhensis_318197.jpg"
     }
   ],
   "code": "VN"

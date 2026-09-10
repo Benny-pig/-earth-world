@@ -33,7 +33,8 @@
     {
       "zh": "臺灣獼猴",
       "en": "Formosan rock macaque",
-      "note": "臺灣特有種獼猴,群居於中低海拔山林,適應力強。"
+      "note": "臺灣特有種獼猴,群居於中低海拔山林,適應力強。",
+      "image": "animals-formosan-rock-macaque.jpg"
     },
     {
       "zh": "臺灣藍鵲",
@@ -50,7 +51,8 @@
     {
       "zh": "櫻花鉤吻鮭",
       "en": "Formosan landlocked salmon",
-      "note": "冰河孑遺的陸封型鮭魚,主要棲息於雪山山脈的七家灣溪。"
+      "note": "冰河孑遺的陸封型鮭魚,主要棲息於雪山山脈的七家灣溪。",
+      "image": "animals-formosan-landlocked-salmon.jpg"
     }
   ],
   "foods": [
@@ -69,7 +71,8 @@
     {
       "zh": "滷肉飯",
       "en": "Braised pork rice",
-      "note": "白飯淋上滷得油亮的碎豬肉與醬汁,是最庶民的日常主食。"
+      "note": "白飯淋上滷得油亮的碎豬肉與醬汁,是最庶民的日常主食。",
+      "image": "foods-braised-pork-rice.jpg"
     },
     {
       "zh": "小籠包",
@@ -80,7 +83,8 @@
     {
       "zh": "蚵仔煎",
       "en": "Oyster omelette",
-      "note": "鮮蚵、蛋與番薯粉漿煎成,淋上甜鹹醬料,是夜市經典。"
+      "note": "鮮蚵、蛋與番薯粉漿煎成,淋上甜鹹醬料,是夜市經典。",
+      "image": "foods-oyster-omelette.jpg"
     }
   ],
   "landmarks": [
@@ -131,7 +135,8 @@
       "latlon": [
         25.1024,
         121.5485
-      ]
+      ],
+      "image": "landmarks-national-palace-museum.jpg"
     }
   ],
   "people": [
@@ -150,17 +155,20 @@
     {
       "zh": "鄧麗君",
       "en": "Teresa Teng",
-      "note": "華語流行樂傳奇歌手,歌聲風靡整個東亞與東南亞。"
+      "note": "華語流行樂傳奇歌手,歌聲風靡整個東亞與東南亞。",
+      "image": "people-teresa-teng.jpg"
     },
     {
       "zh": "張忠謀",
       "en": "Morris Chang",
-      "note": "創辦台積電（TSMC），開創晶圓專業代工模式,重塑全球半導體產業。"
+      "note": "創辦台積電（TSMC），開創晶圓專業代工模式,重塑全球半導體產業。",
+      "image": "people-morris-chang.jpg"
     },
     {
       "zh": "侯孝賢",
       "en": "Hou Hsiao-hsien",
-      "note": "臺灣新電影代表導演,《悲情城市》獲威尼斯影展金獅獎。"
+      "note": "臺灣新電影代表導演,《悲情城市》獲威尼斯影展金獅獎。",
+      "image": "people-hou-hsiao-hsien.jpg"
     }
   ],
   "recommended": [
@@ -291,6 +299,62 @@
       "author": "Nicolas Genin",
       "license": "CC BY-SA 2.0",
       "source": "https://commons.wikimedia.org/wiki/File:Ang_Lee_-_66%C3%A8me_Festival_de_Venise_(Mostra).jpg"
+    },
+    {
+      "file": "animals-formosan-rock-macaque.jpg",
+      "title": "Formosan rock macaque, Yangmingshan",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Taiwanese_macaque_(Macaca_cyclopis)_female_Yangmingshan.jpg"
+    },
+    {
+      "file": "animals-formosan-landlocked-salmon.jpg",
+      "title": "Formosan landlocked salmon, Wuling Farm",
+      "author": "Thumbhero",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Formosan_Landlocked_Salmon_in_Wuling_Farm,_Taichung,_Taiwan.jpg"
+    },
+    {
+      "file": "foods-braised-pork-rice.jpg",
+      "title": "Lu rou fan (Taiwanese braised pork rice)",
+      "author": "ja:User:Hadge",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Luroufan.JPG"
+    },
+    {
+      "file": "foods-oyster-omelette.jpg",
+      "title": "Oyster omelette (Ô-á-tsian)",
+      "author": "Sin-siông",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:金門飲食-13.jpg"
+    },
+    {
+      "file": "landmarks-national-palace-museum.jpg",
+      "title": "National Palace Museum, Taipei",
+      "author": "Gary Lee Todd",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:National_Palace_Museum,_Taipei_03.jpg"
+    },
+    {
+      "file": "people-teresa-teng.jpg",
+      "title": "Teresa Teng performing in New York (1980)",
+      "author": "Teresa Teng Foundation",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Teresa_Teng_NY2.png"
+    },
+    {
+      "file": "people-morris-chang.jpg",
+      "title": "Morris Chang at APEC 2021",
+      "author": "Wang Yu Ching / Office of the President, Taiwan",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:2021-11-12_Morris_Chang_represented_Taiwan_on_APEC_Economic_Leaders%27_Meeting.jpg"
+    },
+    {
+      "file": "people-hou-hsiao-hsien.jpg",
+      "title": "Hou Hsiao-hsien at The Assassin premiere, Paris (2016)",
+      "author": "JJ Georges",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:The_Assassin_Paris_premiere_7.JPG"
     }
   ],
   "code": "TW"

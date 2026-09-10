@@ -36,17 +36,20 @@
     {
       "zh": "灰熊",
       "en": "Grizzly bear",
-      "note": "棕熊的北美亞種,主要分布於洛磯山脈與阿拉斯加。"
+      "note": "棕熊的北美亞種,主要分布於洛磯山脈與阿拉斯加。",
+      "image": "animals-grizzly-bear.jpg"
     },
     {
       "zh": "郊狼",
       "en": "Coyote",
-      "note": "適應力極強的犬科動物,已擴散至全美各地,包括都市邊緣。"
+      "note": "適應力極強的犬科動物,已擴散至全美各地,包括都市邊緣。",
+      "image": "animals-coyote.jpg"
     },
     {
       "zh": "美洲短吻鱷",
       "en": "American alligator",
-      "note": "分布於東南部濕地,是佛羅里達與路易斯安那的代表物種。"
+      "note": "分布於東南部濕地,是佛羅里達與路易斯安那的代表物種。",
+      "image": "animals-american-alligator.jpg"
     }
   ],
   "foods": [
@@ -59,22 +62,26 @@
     {
       "zh": "熱狗",
       "en": "Hot dog",
-      "note": "香腸夾長型麵包,是棒球場與街邊攤的經典小吃。"
+      "note": "香腸夾長型麵包,是棒球場與街邊攤的經典小吃。",
+      "image": "foods-hot-dog.jpg"
     },
     {
       "zh": "燒烤",
       "en": "Barbecue",
-      "note": "以低溫慢燻牛胸肉、豬肋排,德州、堪薩斯等地風味各異。"
+      "note": "以低溫慢燻牛胸肉、豬肋排,德州、堪薩斯等地風味各異。",
+      "image": "foods-barbecue.jpg"
     },
     {
       "zh": "蘋果派",
       "en": "Apple pie",
-      "note": "格狀酥皮包裹肉桂蘋果餡,常被拿來代表「美國味」。"
+      "note": "格狀酥皮包裹肉桂蘋果餡,常被拿來代表「美國味」。",
+      "image": "foods-apple-pie.jpg"
     },
     {
       "zh": "感恩節火雞",
       "en": "Roast turkey",
-      "note": "感恩節與耶誕節的主菜,整隻烤製並佐以肉汁與填料。"
+      "note": "感恩節與耶誕節的主菜,整隻烤製並佐以肉汁與填料。",
+      "image": "foods-roast-turkey.jpg"
     }
   ],
   "landmarks": [
@@ -157,7 +164,8 @@
     {
       "zh": "馬克·吐溫",
       "en": "Mark Twain",
-      "note": "作家,《頑童歷險記》被視為美國文學的奠基之作。"
+      "note": "作家,《頑童歷險記》被視為美國文學的奠基之作。",
+      "image": "people-mark-twain.jpg"
     }
   ],
   "recommended": [
@@ -288,6 +296,62 @@
       "author": "Louis Bachrach, Bachrach Studios (restored by Michel Vuijlsteke)",
       "license": "Public domain",
       "source": "https://commons.wikimedia.org/wiki/File:Thomas_Edison2.jpg"
+    },
+    {
+      "file": "animals-grizzly-bear.jpg",
+      "title": "Grizzly bear, Denali National Park, Alaska",
+      "author": "Diego Delso",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Oso_gris_(Ursus_arctos_horribilis),_Parque_nacional_y_reserva_Denali,_Alaska,_Estados_Unidos,_2017-08-30,_DD_70.jpg"
+    },
+    {
+      "file": "animals-coyote.jpg",
+      "title": "Coyote in Yosemite National Park",
+      "author": "Christopher Bruno",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Coyote_portrait.jpg"
+    },
+    {
+      "file": "animals-american-alligator.jpg",
+      "title": "American alligator",
+      "author": "Postdlf",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:American_Alligator.jpg"
+    },
+    {
+      "file": "foods-hot-dog.jpg",
+      "title": "Hot dog in a bun",
+      "author": "TheCulinaryGeek",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Hot_Dog_(5076302395).jpg"
+    },
+    {
+      "file": "foods-barbecue.jpg",
+      "title": "Barbecue plate at Black's Barbecue, Lockhart, Texas",
+      "author": "T.Tseng",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Barbecue_plate_at_Black%27s_Barbecue.jpg"
+    },
+    {
+      "file": "foods-apple-pie.jpg",
+      "title": "Apple pie",
+      "author": "jeffreyw",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mmm...apple_pie_(4028525142).jpg"
+    },
+    {
+      "file": "foods-roast-turkey.jpg",
+      "title": "Roast Thanksgiving turkey",
+      "author": "Jim, the Photographer",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Roast_turkey_from_fall_season.jpg"
+    },
+    {
+      "file": "people-mark-twain.jpg",
+      "title": "Mark Twain, portrait by A. F. Bradley (1907)",
+      "author": "A. F. Bradley, New York",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Mark_Twain_by_AF_Bradley.jpg"
     }
   ],
   "code": "US"

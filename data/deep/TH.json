@@ -30,22 +30,26 @@
     {
       "zh": "白掌長臂猿",
       "en": "Lar gibbon",
-      "note": "熱帶雨林樹冠層的靈長類,以晨間鳴唱聞名。"
+      "note": "熱帶雨林樹冠層的靈長類,以晨間鳴唱聞名。",
+      "image": "animals-lar-gibbon.jpg"
     },
     {
       "zh": "暹羅鬥魚",
       "en": "Siamese fighting fish",
-      "note": "原生於泰國中部水田,雄魚色彩豔麗且好鬥,二○一九年獲訂為國魚。"
+      "note": "原生於泰國中部水田,雄魚色彩豔麗且好鬥,二○一九年獲訂為國魚。",
+      "image": "animals-siamese-fighting-fish.jpg"
     },
     {
       "zh": "暹羅貓",
       "en": "Siamese cat",
-      "note": "原產泰國的古老品種,曾為宮廷與寺院所養。"
+      "note": "原產泰國的古老品種,曾為宮廷與寺院所養。",
+      "image": "animals-siamese-cat.jpg"
     },
     {
       "zh": "灣鱷",
       "en": "Saltwater crocodile",
-      "note": "昔日分布沿海與河口,現野生族群稀少。"
+      "note": "昔日分布沿海與河口,現野生族群稀少。",
+      "image": "animals-saltwater-crocodile.jpg"
     }
   ],
   "foods": [
@@ -58,22 +62,26 @@
     {
       "zh": "冬蔭功",
       "en": "Tom yum goong",
-      "note": "香茅、南薑、檸檬葉與辣椒煮成的酸辣蝦湯。"
+      "note": "香茅、南薑、檸檬葉與辣椒煮成的酸辣蝦湯。",
+      "image": "foods-tom-yum-goong.jpg"
     },
     {
       "zh": "綠咖哩",
       "en": "Green curry",
-      "note": "綠咖哩醬加椰漿燉肉與茄子,香辣濃郁。"
+      "note": "綠咖哩醬加椰漿燉肉與茄子,香辣濃郁。",
+      "image": "foods-green-curry.jpg"
     },
     {
       "zh": "芒果糯米飯",
       "en": "Mango sticky rice",
-      "note": "椰漿糯米配熟芒果,再淋上椰奶的經典甜點。"
+      "note": "椰漿糯米配熟芒果,再淋上椰奶的經典甜點。",
+      "image": "foods-mango-sticky-rice.jpg"
     },
     {
       "zh": "打拋豬",
       "en": "Pad kaphrao",
-      "note": "絞肉與聖羅勒、辣椒快炒,佐白飯與煎蛋。"
+      "note": "絞肉與聖羅勒、辣椒快炒,佐白飯與煎蛋。",
+      "image": "foods-pad-kaphrao.jpg"
     }
   ],
   "landmarks": [
@@ -132,27 +140,32 @@
     {
       "zh": "拉瑪一世",
       "en": "King Rama I (Phutthayotfa Chulalok)",
-      "note": "卻克里王朝開國君主,一七八二年定都曼谷。"
+      "note": "卻克里王朝開國君主,一七八二年定都曼谷。",
+      "image": "people-rama-i.jpg"
     },
     {
       "zh": "鄭信(達信王)",
       "en": "King Taksin",
-      "note": "大城陷落後領導復國,建立吞武里王朝。"
+      "note": "大城陷落後領導復國,建立吞武里王朝。",
+      "image": "people-king-taksin.jpg"
     },
     {
       "zh": "拉瑪五世(朱拉隆功)",
       "en": "King Chulalongkorn",
-      "note": "推動廢奴與現代化改革,被尊為「大帝」。"
+      "note": "推動廢奴與現代化改革,被尊為「大帝」。",
+      "image": "people-king-chulalongkorn.jpg"
     },
     {
       "zh": "蒲美蓬(拉瑪九世)",
       "en": "Bhumibol Adulyadej",
-      "note": "在位七十年的國王,推動皇家發展計畫。"
+      "note": "在位七十年的國王,推動皇家發展計畫。",
+      "image": "people-bhumibol-adulyadej.jpg"
     },
     {
       "zh": "阿比查邦·魏拉希達庫",
       "en": "Apichatpong Weerasethakul",
-      "note": "電影導演,《波米叔叔的前世今生》奪坎城金棕櫚。"
+      "note": "電影導演,《波米叔叔的前世今生》奪坎城金棕櫚。",
+      "image": "people-apichatpong-weerasethakul.jpg"
     }
   ],
   "recommended": [
@@ -248,6 +261,97 @@
       "author": "Wiriya Somboonphol",
       "license": "CC BY-SA 4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Wat_Mahathat_Sukhothai.jpg"
+    },
+    {
+      "file": "animals-lar-gibbon.jpg",
+      "title": "Lar gibbon, Kaeng Krachan National Park, Thailand",
+      "author": "JJ Harrison",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Hylobates_lar_-_Kaeng_Krachan_WB.jpg"
+    },
+    {
+      "file": "animals-siamese-fighting-fish.jpg",
+      "title": "Siamese fighting fish (Betta splendens), male",
+      "author": "Daniella Vereeken",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:DVJ_Betta_splendens_001.jpg"
+    },
+    {
+      "file": "animals-siamese-cat.jpg",
+      "title": "Seal point Siamese cat",
+      "author": "Jwads82",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:A_classic_seal_point_Siamese_cat.jpg"
+    },
+    {
+      "file": "animals-saltwater-crocodile.jpg",
+      "title": "Saltwater crocodile (Crocodylus porosus)",
+      "author": "Bernard DUPONT",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Saltwater_Crocodile_(Crocodylus_porosus)_(10106331165).jpg"
+    },
+    {
+      "file": "foods-green-curry.jpg",
+      "title": "Thai green curry",
+      "author": "Guilhem Vellut",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Green_Curry,_Siam_House,_Paris_001.jpg"
+    },
+    {
+      "file": "foods-pad-kaphrao.jpg",
+      "title": "Pad kaphrao mu with rice and fried egg, Bangkok",
+      "author": "Bitterschoko",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ka-phrao_mu_(basil_fried_pork)_with_rice_%26_egg,_Bangkok,_2019-03-31_(1).jpg"
+    },
+    {
+      "file": "people-rama-i.jpg",
+      "title": "King Rama I (Phutthayotfa Chulalok), Grand Palace portrait",
+      "author": "Unknown",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:King_Rama_I_of_Siam_(Yodfa_Chulalok)_Portrait.jpg"
+    },
+    {
+      "file": "people-king-chulalongkorn.jpg",
+      "title": "King Chulalongkorn (Rama V) in Raj Pattern costume, 1890",
+      "author": "August E. Kaulfuss",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:King_Chulalongkorn_wears_Raj_Pattern_Costume_Photo_Kaulfuss_1890.jpg"
+    },
+    {
+      "file": "people-bhumibol-adulyadej.jpg",
+      "title": "King Bhumibol Adulyadej (Rama IX)",
+      "author": "Office of the Prime Minister, Thailand",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Bhumibol_Adulyadej.jpg"
+    },
+    {
+      "file": "people-apichatpong-weerasethakul.jpg",
+      "title": "Apichatpong Weerasethakul",
+      "author": "Parichart",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Apichatpong_Portrait_02.jpg"
+    },
+    {
+      "file": "foods-tom-yum-goong.jpg",
+      "title": "Tom yum goong (hot and sour prawn soup)",
+      "author": "OpenCage",
+      "license": "CC BY-SA 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:Tom_yum.jpg"
+    },
+    {
+      "file": "foods-mango-sticky-rice.jpg",
+      "title": "Mango sticky rice with coconut sauce",
+      "author": "GrammarFascist",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mango_over_sticky_rice_with_coconut_sauce.jpg"
+    },
+    {
+      "file": "people-king-taksin.jpg",
+      "title": "King Taksin of Thonburi, contemporary portrait painting",
+      "author": "Unknown (Ayutthaya/Thonburi-era court painting)",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:King_Taksin_of_Thonburi_Portrait_Painting.png"
     }
   ],
   "code": "TH"

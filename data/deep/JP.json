@@ -42,12 +42,14 @@
     {
       "zh": "綠雉",
       "en": "Green pheasant",
-      "note": "日本特有種,雄鳥羽色鮮豔,被定為日本的國鳥。"
+      "note": "日本特有種,雄鳥羽色鮮豔,被定為日本的國鳥。",
+      "image": "animals-green-pheasant.jpg"
     },
     {
       "zh": "錦鯉",
       "en": "Koi",
-      "note": "由食用鯉魚選育出的觀賞魚,體色斑斕,象徵好運。"
+      "note": "由食用鯉魚選育出的觀賞魚,體色斑斕,象徵好運。",
+      "image": "animals-koi.jpg"
     }
   ],
   "foods": [
@@ -66,17 +68,20 @@
     {
       "zh": "天婦羅",
       "en": "Tempura",
-      "note": "海鮮與蔬菜裹上薄麵衣油炸,講究酥脆而不油膩。"
+      "note": "海鮮與蔬菜裹上薄麵衣油炸,講究酥脆而不油膩。",
+      "image": "foods-tempura.jpg"
     },
     {
       "zh": "味噌湯",
       "en": "Miso soup",
-      "note": "以發酵豆醬與高湯煮成,是日式定食的基本湯品。"
+      "note": "以發酵豆醬與高湯煮成,是日式定食的基本湯品。",
+      "image": "foods-miso-soup.jpg"
     },
     {
       "zh": "和牛",
       "en": "Wagyu beef",
-      "note": "油花細緻的高級牛肉,以神戶牛、松阪牛最負盛名。"
+      "note": "油花細緻的高級牛肉,以神戶牛、松阪牛最負盛名。",
+      "image": "foods-wagyu-beef.jpg"
     }
   ],
   "landmarks": [
@@ -127,7 +132,8 @@
       "latlon": [
         34.8394,
         134.6939
-      ]
+      ],
+      "image": "landmarks-himeji-castle.jpg"
     }
   ],
   "people": [
@@ -140,12 +146,14 @@
     {
       "zh": "黑澤明",
       "en": "Akira Kurosawa",
-      "note": "國際影響深遠的電影導演,代表作《七武士》與《羅生門》。"
+      "note": "國際影響深遠的電影導演,代表作《七武士》與《羅生門》。",
+      "image": "people-akira-kurosawa.jpg"
     },
     {
       "zh": "村上春樹",
       "en": "Haruki Murakami",
-      "note": "當代最暢銷的日本小說家,作品已譯成逾50種語言。"
+      "note": "當代最暢銷的日本小說家,作品已譯成逾50種語言。",
+      "image": "people-haruki-murakami.jpg"
     },
     {
       "zh": "紫式部",
@@ -156,7 +164,8 @@
     {
       "zh": "手塚治虫",
       "en": "Osamu Tezuka",
-      "note": "有「漫畫之神」之稱,《原子小金剛》奠定日本現代動漫的基礎。"
+      "note": "有「漫畫之神」之稱,《原子小金剛》奠定日本現代動漫的基礎。",
+      "image": "people-osamu-tezuka.jpg"
     }
   ],
   "recommended": [
@@ -280,6 +289,69 @@
       "author": "Tosa Mitsuoki",
       "license": "Public domain",
       "source": "https://commons.wikimedia.org/wiki/File:Tosa_Mitsuoki_001.jpg"
+    },
+    {
+      "file": "animals-green-pheasant.jpg",
+      "title": "Green pheasant male in Japan",
+      "author": "Alpsdake",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Phasianus_versicolor_in_Japan.JPG"
+    },
+    {
+      "file": "animals-koi.jpg",
+      "title": "Koi carp in a pond",
+      "author": "Bernard Spragg. NZ",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Koi_carp._(Cyprinus_carpio)_(27986997703).jpg"
+    },
+    {
+      "file": "foods-tempura.jpg",
+      "title": "Tempura set meal",
+      "author": "Ocdp",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tempura_003.jpg"
+    },
+    {
+      "file": "foods-miso-soup.jpg",
+      "title": "A bowl of miso soup with tofu",
+      "author": "Douglas Perkins",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:A_bowl_of_miso_soup.jpg"
+    },
+    {
+      "file": "foods-wagyu-beef.jpg",
+      "title": "Kobe beef fillets (Wagyu)",
+      "author": "Orlando G. Calvo",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:4_Kobe_Beef,_Kobe_Japan.jpg"
+    },
+    {
+      "file": "landmarks-himeji-castle.jpg",
+      "title": "Himeji Castle keep",
+      "author": "ja:User:Reggaeman",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Himeji_Castle_The_Keep_Towers.jpg"
+    },
+    {
+      "file": "people-akira-kurosawa.jpg",
+      "title": "Akira Kurosawa on the set of Seven Samurai (1953)",
+      "author": "Eiga no tomo (Japanese film magazine)",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Akirakurosawa-onthesetof7samurai-1953-page88_(cropped).jpg"
+    },
+    {
+      "file": "people-haruki-murakami.jpg",
+      "title": "Haruki Murakami (2009)",
+      "author": "Galoren.com",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Murakami_Haruki_(2009).jpg"
+    },
+    {
+      "file": "people-osamu-tezuka.jpg",
+      "title": "Osamu Tezuka portrait (1953)",
+      "author": "Asahi Shimbun",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Tezuka_Osamu.JPG"
     }
   ],
   "code": "JP"

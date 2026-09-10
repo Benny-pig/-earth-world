@@ -24,27 +24,32 @@
     {
       "zh": "珍島犬",
       "en": "Jindo dog",
-      "note": "原產全羅南道珍島的忠犬品種,列為南韓天然紀念物。"
+      "note": "原產全羅南道珍島的忠犬品種,列為南韓天然紀念物。",
+      "image": "animals-jindo-dog.jpg"
     },
     {
       "zh": "東北虎(韓國虎)",
       "en": "Siberian tiger",
-      "note": "昔日遍布半島,是民間傳說與神話中的常見角色。"
+      "note": "昔日遍布半島,是民間傳說與神話中的常見角色。",
+      "image": "animals-siberian-tiger.jpg"
     },
     {
       "zh": "丹頂鶴",
       "en": "Red-crowned crane",
-      "note": "冬季造訪非軍事區一帶的大型候鳥,象徵長壽與純潔。"
+      "note": "冬季造訪非軍事區一帶的大型候鳥,象徵長壽與純潔。",
+      "image": "animals-red-crowned-crane.jpg"
     },
     {
       "zh": "喜鵲",
       "en": "Oriental magpie",
-      "note": "常見於村落,被視為帶來喜訊的「報喜鳥」。"
+      "note": "常見於村落,被視為帶來喜訊的「報喜鳥」。",
+      "image": "animals-oriental-magpie.jpg"
     },
     {
       "zh": "長尾斑羚",
       "en": "Long-tailed goral",
-      "note": "棲息山地岩壁的瀕危有蹄類,也是天然紀念物。"
+      "note": "棲息山地岩壁的瀕危有蹄類,也是天然紀念物。",
+      "image": "animals-long-tailed-goral.jpg"
     }
   ],
   "foods": [
@@ -63,17 +68,20 @@
     {
       "zh": "韓式烤肉",
       "en": "Bulgogi and galbi",
-      "note": "醬醃牛肉在桌上炭火或鐵盤現烤,佐生菜包食。"
+      "note": "醬醃牛肉在桌上炭火或鐵盤現烤,佐生菜包食。",
+      "image": "foods-bulgogi-galbi.jpg"
     },
     {
       "zh": "辣炒年糕",
       "en": "Tteokbokki",
-      "note": "圓柱年糕與魚板以辣甜醬翻炒,是國民級街頭小吃。"
+      "note": "圓柱年糕與魚板以辣甜醬翻炒,是國民級街頭小吃。",
+      "image": "foods-tteokbokki.jpg"
     },
     {
       "zh": "參雞湯",
       "en": "Samgyetang",
-      "note": "童子雞塞入糯米、人參與紅棗慢燉,夏季伏日進補。"
+      "note": "童子雞塞入糯米、人參與紅棗慢燉,夏季伏日進補。",
+      "image": "foods-samgyetang.jpg"
     }
   ],
   "landmarks": [
@@ -124,34 +132,40 @@
       "latlon": [
         37.5826,
         126.985
-      ]
+      ],
+      "image": "landmarks-bukchon-hanok-village.jpg"
     }
   ],
   "people": [
     {
       "zh": "世宗大王",
       "en": "Sejong the Great",
-      "note": "朝鮮第四代君主,主持創制韓文字母諺文,獎勵科學與農政。"
+      "note": "朝鮮第四代君主,主持創制韓文字母諺文,獎勵科學與農政。",
+      "image": "people-sejong-the-great.jpg"
     },
     {
       "zh": "李舜臣",
       "en": "Yi Sun-sin",
-      "note": "壬辰戰爭水軍統帥,以龜船屢敗日本艦隊。"
+      "note": "壬辰戰爭水軍統帥,以龜船屢敗日本艦隊。",
+      "image": "people-yi-sun-sin.jpg"
     },
     {
       "zh": "潘基文",
       "en": "Ban Ki-moon",
-      "note": "外交官,二○○七至二○一六年任聯合國第八任秘書長。"
+      "note": "外交官,二○○七至二○一六年任聯合國第八任秘書長。",
+      "image": "people-ban-ki-moon.jpg"
     },
     {
       "zh": "白南準",
       "en": "Nam June Paik",
-      "note": "錄像藝術先驅,被視為「錄像藝術之父」。"
+      "note": "錄像藝術先驅,被視為「錄像藝術之父」。",
+      "image": "people-nam-june-paik.jpg"
     },
     {
       "zh": "奉俊昊",
       "en": "Bong Joon-ho",
-      "note": "電影導演,《寄生上流》奪坎城金棕櫚與奧斯卡最佳影片。"
+      "note": "電影導演,《寄生上流》奪坎城金棕櫚與奧斯卡最佳影片。",
+      "image": "people-bong-joon-ho.jpg"
     }
   ],
   "recommended": [
@@ -240,6 +254,104 @@
       "author": "travel oriented",
       "license": "CC BY-SA 2.0",
       "source": "https://commons.wikimedia.org/wiki/File:Seoul_Tower_from_Namsan_Park_(9595146693).jpg"
+    },
+    {
+      "file": "animals-jindo-dog.jpg",
+      "title": "Korea Jindo Dog",
+      "author": "Canarian",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Korea_Jindo_Dog.jpg"
+    },
+    {
+      "file": "animals-siberian-tiger.jpg",
+      "title": "Siberian (Amur) tiger in snow",
+      "author": "albinfo",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Siberian_Tiger_enjoying_snow_69.jpg"
+    },
+    {
+      "file": "animals-long-tailed-goral.jpg",
+      "title": "Long-tailed goral, National Institute of Ecology, Korea",
+      "author": "YoungJun Kim",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Adult_male_amur_goral_standing_on_rock_at_National_Institute_of_Ecology,_Korea.jpg"
+    },
+    {
+      "file": "foods-bulgogi-galbi.jpg",
+      "title": "Bulgogi (Korean marinated beef)",
+      "author": "ayustety",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Korean.cuisine-Bulgogi-01.jpg"
+    },
+    {
+      "file": "foods-tteokbokki.jpg",
+      "title": "Tteokbokki (spicy rice cakes)",
+      "author": "Sung Sook",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Korean.snacks-Tteokbokki-06.jpg"
+    },
+    {
+      "file": "landmarks-bukchon-hanok-village.jpg",
+      "title": "Bukchon Hanok Village, Seoul",
+      "author": "Basile Morin",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bukchon-ro_11-gil_street_with_hanok_houses_and_blue_sky_in_Bukchon_Hanok_Village_Seoul.jpg"
+    },
+    {
+      "file": "people-sejong-the-great.jpg",
+      "title": "Statue of King Sejong the Great, Gwanghwamun Square",
+      "author": "Republic of Korea (Korea.net)",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Statue_of_King_Sejong.jpg"
+    },
+    {
+      "file": "people-yi-sun-sin.jpg",
+      "title": "Statue of Admiral Yi Sun-sin, Sejongno, Seoul",
+      "author": "Brücke-Osteuropa",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Yi_Sun-sin_3.jpg"
+    },
+    {
+      "file": "people-ban-ki-moon.jpg",
+      "title": "Ban Ki-moon, UN Secretary-General",
+      "author": "The Official CTBTO Photostream",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:UN_Secretary_General_Ban_Ki-moon_(9998815106).jpg"
+    },
+    {
+      "file": "people-nam-june-paik.jpg",
+      "title": "Nam June Paik (1959)",
+      "author": "Kim Eon-ho",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Paik_Nam_June_(cropped).jpg"
+    },
+    {
+      "file": "animals-red-crowned-crane.jpg",
+      "title": "Red-crowned crane, Hokkaido",
+      "author": "tetu",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Japanese_crane.jpg"
+    },
+    {
+      "file": "animals-oriental-magpie.jpg",
+      "title": "Oriental magpie (Pica serica), Daejeon",
+      "author": "Yoo Chung",
+      "license": "CC BY-SA 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:Korean_magpie_in_Daejeon_(side_profile).jpg"
+    },
+    {
+      "file": "foods-samgyetang.jpg",
+      "title": "Samgyetang (ginseng chicken soup), Seoul",
+      "author": "Charles Haynes",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Samgyetang_Chicken_Ginseng_Soup.jpg"
+    },
+    {
+      "file": "people-bong-joon-ho.jpg",
+      "title": "Bong Joon-ho at Filmfest München (2019)",
+      "author": "Ilya Hirschberg (Kreecher)",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bong_Joon-ho_FilmFest_Muenchen_04Jul2019.jpg"
     }
   ],
   "code": "KR"

@@ -30,22 +30,26 @@
     {
       "zh": "川金絲猴",
       "en": "Golden snub-nosed monkey",
-      "note": "棲息高山森林的橙金色靈長類,群居於川、陝、甘一帶。"
+      "note": "棲息高山森林的橙金色靈長類,群居於川、陝、甘一帶。",
+      "image": "animals-golden-snub-nosed-monkey.jpg"
     },
     {
       "zh": "揚子鱷",
       "en": "Chinese alligator",
-      "note": "長江下游特有的小型鱷,野生數量稀少。"
+      "note": "長江下游特有的小型鱷,野生數量稀少。",
+      "image": "animals-chinese-alligator.jpg"
     },
     {
       "zh": "丹頂鶴",
       "en": "Red-crowned crane",
-      "note": "在東北濕地繁殖的大型涉禽,文化上象徵長壽。"
+      "note": "在東北濕地繁殖的大型涉禽,文化上象徵長壽。",
+      "image": "animals-red-crowned-crane.jpg"
     },
     {
       "zh": "藏羚羊",
       "en": "Tibetan antelope",
-      "note": "青藏高原特有,曾因盜獵瀕危,近年族群回升。"
+      "note": "青藏高原特有,曾因盜獵瀕危,近年族群回升。",
+      "image": "animals-tibetan-antelope.jpg"
     }
   ],
   "foods": [
@@ -58,22 +62,26 @@
     {
       "zh": "小籠包",
       "en": "Xiaolongbao",
-      "note": "江南薄皮灌湯包,以蒸籠現蒸,咬破吸湯。"
+      "note": "江南薄皮灌湯包,以蒸籠現蒸,咬破吸湯。",
+      "image": "foods-xiaolongbao.jpg"
     },
     {
       "zh": "麻婆豆腐",
       "en": "Mapo tofu",
-      "note": "四川名菜,豆腐與牛絞肉燴以豆瓣、花椒,麻辣鮮香。"
+      "note": "四川名菜,豆腐與牛絞肉燴以豆瓣、花椒,麻辣鮮香。",
+      "image": "foods-mapo-tofu.jpg"
     },
     {
       "zh": "餃子",
       "en": "Jiaozi",
-      "note": "麵皮包餡水煮或煎製,北方年節必食。"
+      "note": "麵皮包餡水煮或煎製,北方年節必食。",
+      "image": "foods-jiaozi.jpg"
     },
     {
       "zh": "火鍋",
       "en": "Hot pot",
-      "note": "圍爐涮煮肉片與蔬菜,以重慶、四川的紅油麻辣鍋最具代表。"
+      "note": "圍爐涮煮肉片與蔬菜,以重慶、四川的紅油麻辣鍋最具代表。",
+      "image": "foods-hot-pot.jpg"
     }
   ],
   "landmarks": [
@@ -138,22 +146,26 @@
     {
       "zh": "秦始皇",
       "en": "Qin Shi Huang",
-      "note": "首位統一中國的皇帝,建立郡縣制並統一文字與度量衡。"
+      "note": "首位統一中國的皇帝,建立郡縣制並統一文字與度量衡。",
+      "image": "people-qin-shi-huang.jpg"
     },
     {
       "zh": "李白",
       "en": "Li Bai",
-      "note": "唐代詩人,以豪放飄逸的詩風被譽為「詩仙」。"
+      "note": "唐代詩人,以豪放飄逸的詩風被譽為「詩仙」。",
+      "image": "people-li-bai.jpg"
     },
     {
       "zh": "蔡倫",
       "en": "Cai Lun",
-      "note": "東漢宦官,改良造紙術,推動書寫材料普及。"
+      "note": "東漢宦官,改良造紙術,推動書寫材料普及。",
+      "image": "people-cai-lun.jpg"
     },
     {
       "zh": "鄧小平",
       "en": "Deng Xiaoping",
-      "note": "一九七八年後主導改革開放政策的領導人。"
+      "note": "一九七八年後主導改革開放政策的領導人。",
+      "image": "people-deng-xiaoping.jpg"
     }
   ],
   "recommended": [
@@ -256,6 +268,90 @@
       "author": "傳吳道子(唐代)",
       "license": "Public domain",
       "source": "https://commons.wikimedia.org/wiki/File:Confucius_Tang_Dynasty.jpg"
+    },
+    {
+      "file": "animals-golden-snub-nosed-monkey.jpg",
+      "title": "Golden snub-nosed monkeys, Qinling Mountains, China",
+      "author": "Giovanni Mari",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Golden_Snub-nosed_Monkeys,_Qinling_Mountains_-_China.jpg"
+    },
+    {
+      "file": "animals-tibetan-antelope.jpg",
+      "title": "Tibetan antelope (chiru) in China",
+      "author": "James Eaton",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pantholops_hodgsonii_367800821.jpg"
+    },
+    {
+      "file": "foods-xiaolongbao.jpg",
+      "title": "Xiaolongbao (soup dumplings)",
+      "author": "K-UNIT",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Soup_dumplings.jpg"
+    },
+    {
+      "file": "foods-mapo-tofu.jpg",
+      "title": "Mapo tofu",
+      "author": "Guilhem Vellut",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mapo_Tofu,_Les_Saveurs_du_Sichuan,_Paris_001.jpg"
+    },
+    {
+      "file": "foods-hot-pot.jpg",
+      "title": "Hot pot with raw ingredients and simmering broth",
+      "author": "Praneeth Thalla",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Hot_Pot.jpg"
+    },
+    {
+      "file": "people-li-bai.jpg",
+      "title": "Li Bai Strolling, ink painting by Liang Kai",
+      "author": "Liang Kai",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Liang_Kai_-_Li_Bai_Strolling.jpg"
+    },
+    {
+      "file": "people-cai-lun.jpg",
+      "title": "Cai Lun, inventor of paper (historical portrait)",
+      "author": "Unknown",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Cai-lun.jpg"
+    },
+    {
+      "file": "animals-chinese-alligator.jpg",
+      "title": "Chinese alligator (Alligator sinensis)",
+      "author": "David J. Stang",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Alligator_sinensis_1zz.jpg"
+    },
+    {
+      "file": "animals-red-crowned-crane.jpg",
+      "title": "Red-crowned cranes at Zhalong Wetland, China",
+      "author": "Refrain (zh.wikipedia)",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Grus_japonensis-Zhalong.jpg"
+    },
+    {
+      "file": "foods-jiaozi.jpg",
+      "title": "Chinese jiaozi dumplings on a plate",
+      "author": "David Pursehouse",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Chinese_dumplings_(Jiaozi)_(2196005904).jpg"
+    },
+    {
+      "file": "people-qin-shi-huang.jpg",
+      "title": "Qin Shi Huang, First Emperor of China (album portrait)",
+      "author": "Unknown (historical album portrait)",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Qin_Shi_Huang.jpg"
+    },
+    {
+      "file": "people-deng-xiaoping.jpg",
+      "title": "Deng Xiaoping",
+      "author": "U.S. federal government",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Deng_Xiaoping_(cropped).jpg"
     }
   ],
   "code": "CN"
