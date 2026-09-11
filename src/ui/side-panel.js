@@ -60,8 +60,9 @@ export function createSidePanel({ onClose, onMore }) {
         const [mo, dy] = d.date.slice(5).split("-");
         return `${Number(mo)}/${Number(dy)}`;
       })();
+      const popTier = d.pop == null ? "" : d.pop >= 60 ? " fc-pop-high" : d.pop >= 30 ? " fc-pop-mid" : " fc-pop-low";
       const pop = (d.pop == null || Number.isNaN(d.pop))
-        ? "" : `<span class="fc-pop">☔ ${d.pop}%</span>`;
+        ? "" : `<span class="fc-pop${popTier}">☔ ${d.pop}%</span>`;
       const mm = (d.precip != null && d.precip >= 0.5)
         ? `<span class="fc-mm">${d.precip.toFixed(d.precip < 10 ? 1 : 0)}mm</span>` : "";
       const tmax = Number.isNaN(d.tmax) ? "—" : `${d.tmax}°`;
@@ -73,7 +74,9 @@ export function createSidePanel({ onClose, onMore }) {
         `<span class="fc-temp">${tmax}<i>${tmin}</i></span>${pop}${mm}</div>`;
     }).join("");
     return `<div class="fc-grid">${cells}</div>` +
-      `<p class="fc-note">資料 Open-Meteo(多模式綜合)。預報愈後段誤差愈大;長期旅遊規劃請參考下方「適合旅遊月份」。</p>`;
+      `<p class="fc-note">資料來源 Open-Meteo(多模式綜合預報)—— 是氣象模型的預測,並非即時觀測,` +
+      `即使「今天」也可能與實際天氣不同(尤其局部短暫對流雨最難預報準)。天數愈後誤差愈大,建議出發前 1–2 天再查一次；` +
+      `長期旅遊規劃請參考下方「適合旅遊月份」。</p>`;
   }
 
   function renderForecast(days) {

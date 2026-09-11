@@ -26,7 +26,7 @@ export function createClockWeather({ onForecast } = {}) {
       `<div class="cw-country">${current.name_zh}</div>` +
       dateLine +
       timeLine +
-      `<div class="cw-weather">${weatherHtml || "天氣 —"}</div>`;
+      `<div class="cw-weather">${weatherHtml || "天氣 —"}${weatherHtml ? `<span class="cw-weather-note">模型預報,非即時觀測</span>` : ""}</div>`;
   }
 
   function parseForecast(daily) {
