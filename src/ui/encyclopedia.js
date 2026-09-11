@@ -3,7 +3,7 @@ import { createAdminMap } from "/src/ui/admin-map.js";
 import { createTransitMap } from "/src/ui/transit-map.js";
 
 // 有捷運路網示意圖的國家 → 城市檔名(data/transit/<city>.json)
-const TRANSIT = { TW: "taipei", JP: "tokyo", KR: "seoul", US: "newyork" };
+const TRANSIT = { TW: "taipei", JP: "tokyo", KR: "seoul", US: "newyork", SG: "singapore" };
 
 export function createEncyclopedia() {
   const adminMap = createAdminMap();

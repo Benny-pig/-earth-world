@@ -50,6 +50,21 @@
       "en": "Dugong",
       "note": "阿布達比海域擁有僅次於澳洲的世界第二大族群。",
       "image": "AE-a-dugong.jpg"
+    },
+    {
+      "zh": "阿拉伯狼",
+      "en": "Arabian wolf",
+      "note": "灰狼的沙漠亞種,體型較小,夜間於哈賈爾山區獵食。"
+    },
+    {
+      "zh": "沙貓",
+      "en": "Sand cat",
+      "note": "適應沙漠的小型野貓,腳底密毛可耐高溫沙地。"
+    },
+    {
+      "zh": "綠蠵龜",
+      "en": "Green sea turtle",
+      "note": "阿布達比沿海沙灘是重要產卵地,夏季可見上岸。"
     }
   ],
   "foods": [
@@ -80,6 +95,21 @@
       "en": "Khameer",
       "note": "加椰棗糖漿與茴香的發酵圓餅,配起司或蜂蜜。",
       "image": "AE-f-khameer.jpg"
+    },
+    {
+      "zh": "芭斯波沙",
+      "en": "Basbousa",
+      "note": "粗粒小麥粉烤成的濕潤甜糕,淋糖漿並點綴杏仁。"
+    },
+    {
+      "zh": "阿拉伯烤全羊",
+      "en": "Ouzi",
+      "note": "香料醃羊肉與米飯同烤至軟嫩,是宴客大菜。"
+    },
+    {
+      "zh": "塔布勒沙拉",
+      "en": "Tabbouleh",
+      "note": "香芹碎與布格麥拌番茄檸檬汁,清爽解膩。"
     }
   ],
   "landmarks": [
@@ -131,6 +161,34 @@
         24.2172,
         55.7608
       ]
+    },
+    {
+      "zh": "杜拜相框",
+      "en": "Dubai Frame",
+      "note": "高150公尺的巨型金色框架,同框老城與新城天際線。",
+      "latlon": [
+        25.2358,
+        55.2978
+      ],
+      "image": "landmarks-dubai-frame.jpg"
+    },
+    {
+      "zh": "卡斯爾瓦坦總統府",
+      "en": "Qasr Al Watan",
+      "note": "阿布達比對外開放的總統府,展示阿拉伯治國文化。",
+      "latlon": [
+        24.4539,
+        54.3086
+      ]
+    },
+    {
+      "zh": "阿爾法赫迪歷史區",
+      "en": "Al Fahidi Historic District",
+      "note": "杜拜灣畔風塔老屋區,巷弄間有咖啡館與藝廊。",
+      "latlon": [
+        25.2637,
+        55.2996
+      ]
     }
   ],
   "people": [
@@ -158,6 +216,21 @@
       "zh": "謝赫拉·卡西米",
       "en": "Lubna Al Qasimi",
       "note": "阿聯首位女性內閣部長。"
+    },
+    {
+      "zh": "拉希德·本·賽義德·阿勒馬克圖姆",
+      "en": "Rashid bin Saeed Al Maktoum",
+      "note": "杜拜統治者,主導港口與機場建設打下現代化基礎。"
+    },
+    {
+      "zh": "蘇丹·阿爾內亞迪",
+      "en": "Sultan Al Neyadi",
+      "note": "阿聯第二位太空人,2023年完成阿拉伯世界首次太空漫步。"
+    },
+    {
+      "zh": "謝赫法蒂瑪·賓特·穆巴拉克",
+      "en": "Sheikha Fatima bint Mubarak",
+      "note": "被尊稱「國家之母」,長年推動阿聯婦女權益與教育。"
     }
   ],
   "recommended": [
@@ -349,7 +422,81 @@
       "author": "Alec Wilson",
       "license": "CC BY-SA 2.0",
       "source": "https://commons.wikimedia.org/wiki/File%3APalm_Jumeirah,Dubai_(15048707596).jpg"
+    },
+    {
+      "file": "landmarks-dubai-frame.jpg",
+      "title": "Dubai Frame",
+      "author": "Anees sumra anwar",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Dubai_frame.jpg"
     }
   ],
-  "code": "AE"
+  "code": "AE",
+  "street_food": [
+    {
+      "zh": "沙威瑪",
+      "note": "烤肉削片捲餅皮夾蔬菜醬料,街邊攤與小店隨處可見。"
+    },
+    {
+      "zh": "卡拉克奶茶",
+      "note": "濃紅茶加淡奶與荳蔻、番紅花,南亞裔小店常見飲品。",
+      "where": "德伊拉與卡拉馬一帶"
+    },
+    {
+      "zh": "炸鷹嘴豆餅",
+      "note": "鷹嘴豆泥捏餅炸至金黃,夾入餅皮配芝麻醬。"
+    },
+    {
+      "zh": "印度街頭酸辣小食(chaat)",
+      "note": "脆片拌優格、酸甜醬與香料,深受南亞移民社群喜愛。",
+      "where": "德伊拉市集"
+    },
+    {
+      "zh": "現榨石榴汁",
+      "note": "市集攤位現榨,酸甜解渴,常配椰棗一起賣。"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "杜拜購物節",
+      "month": "12月至1月",
+      "note": "全城折扣、煙火與抽獎,是年度最大消費盛事。"
+    },
+    {
+      "zh": "開齋節",
+      "month": "依伊斯蘭曆(約3-4月)",
+      "note": "齋戒月結束後的節慶,家庭聚會並互贈禮物。"
+    },
+    {
+      "zh": "國慶日",
+      "month": "12月2日",
+      "note": "紀念1971年建國,街頭與建築掛滿國旗燈飾。"
+    },
+    {
+      "zh": "阿爾達夫拉駱駝節",
+      "month": "12月",
+      "note": "西部沙漠舉行的駱駝選美與賽駱駝盛會,呈現貝都因傳統。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "مرحبا",
+        "romanized": "Marhaba"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "شكرا",
+        "romanized": "Shukran"
+      },
+      {
+        "phrase": "再見",
+        "local": "مع السلامة",
+        "romanized": "Ma'as salama"
+      }
+    ],
+    "money_note": "行動支付與信用卡在城市內幾乎通用,小額消費或傳統市集仍常用現金。",
+    "tipping": "帳單常已內含服務費,額外給消費金額5–10%小費屬常見但非強制的禮貌。"
+  }
 }

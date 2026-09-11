@@ -38,7 +38,8 @@
     {
       "zh": "馬里努阿犬",
       "en": "Malinois",
-      "note": "比利時牧羊犬的一種,警覺敏捷,廣泛用於警犬與軍犬。"
+      "note": "比利時牧羊犬的一種,警覺敏捷,廣泛用於警犬與軍犬。",
+      "image": "animals-malinois.jpg"
     },
     {
       "zh": "野豬",
@@ -51,6 +52,21 @@
       "en": "Racing pigeon",
       "note": "現代賽鴿運動十九世紀在比利時興起,頂級種鴿身價驚人。",
       "image": "animals-racingpigeon.jpg"
+    },
+    {
+      "zh": "阿登紅鹿",
+      "en": "Ardennes red deer",
+      "note": "阿登森林最大型的野生哺乳類,秋季發情季吼聲響徹林間。"
+    },
+    {
+      "zh": "法蘭德斯巨兔",
+      "en": "Flemish Giant rabbit",
+      "note": "體型碩大的比利時原生兔種,常作為觀賞與展示用途。"
+    },
+    {
+      "zh": "歐亞水獺",
+      "en": "Eurasian otter",
+      "note": "一度在比利時絕跡,近年於瓦隆河川陸續發現蹤跡。"
     }
   ],
   "foods": [
@@ -83,6 +99,21 @@
       "en": "Carbonnade flamande",
       "note": "牛肉以褐色啤酒與洋蔥慢燉,微甜濃郁。",
       "image": "foods-carbonnade.jpg"
+    },
+    {
+      "zh": "修道院啤酒",
+      "en": "Trappist beer",
+      "note": "由修道院僧侶監製或授權釀造,是比利時啤酒文化的頂點。"
+    },
+    {
+      "zh": "香料餅乾",
+      "en": "Speculoos",
+      "note": "肉桂與薑等香料調味的脆餅,常見於咖啡配餅。"
+    },
+    {
+      "zh": "列日糖漿",
+      "en": "Sirop de Liège",
+      "note": "蘋果、梨與棗以慢火熬成的深色果漬,抹麵包或配起司。"
     }
   ],
   "landmarks": [
@@ -123,7 +154,8 @@
       "latlon": [
         51.0536,
         3.7304
-      ]
+      ],
+      "image": "landmarks-ghent.jpg"
     },
     {
       "zh": "原子塔",
@@ -132,6 +164,34 @@
       "latlon": [
         50.8949,
         4.3416
+      ],
+      "image": "landmarks-atomium.jpg"
+    },
+    {
+      "zh": "滑鐵盧獅子丘",
+      "en": "Lion's Mound",
+      "note": "紀念1815年滑鐵盧戰役的人工土丘,頂端立有銅獅。",
+      "latlon": [
+        50.6787,
+        4.411
+      ]
+    },
+    {
+      "zh": "圖爾奈主教座堂",
+      "en": "Tournai Cathedral",
+      "note": "羅馬式與哥德式並存的五塔教堂,列世界遺產。",
+      "latlon": [
+        50.6058,
+        3.3888
+      ]
+    },
+    {
+      "zh": "迪南要塞",
+      "en": "Citadel of Dinan",
+      "note": "俯瞰默茲河的岩頂要塞,可搭纜車登頂。",
+      "latlon": [
+        50.2611,
+        4.9119
       ]
     }
   ],
@@ -139,27 +199,47 @@
     {
       "zh": "揚·范艾克",
       "en": "Jan van Eyck",
-      "note": "早期尼德蘭繪畫大師,以油畫技法與《根特祭壇畫》聞名。"
+      "note": "早期尼德蘭繪畫大師,以油畫技法與《根特祭壇畫》聞名。",
+      "image": "people-vaneyck.jpg"
     },
     {
       "zh": "雷內·馬格利特",
       "en": "René Magritte",
-      "note": "超現實主義畫家,〈形象的叛逆〉的菸斗畫廣為人知。"
+      "note": "超現實主義畫家,〈形象的叛逆〉的菸斗畫廣為人知。",
+      "image": "people-magritte.jpg"
     },
     {
       "zh": "阿道夫·薩克斯",
       "en": "Adolphe Sax",
-      "note": "迪南出身的樂器製造家,一八四〇年代發明薩克斯風。"
+      "note": "迪南出身的樂器製造家,一八四〇年代發明薩克斯風。",
+      "image": "people-sax.jpg"
     },
     {
       "zh": "喬治·勒梅特",
       "en": "Georges Lemaître",
-      "note": "神父兼物理學家,最早提出宇宙膨脹與「原始原子」構想。"
+      "note": "神父兼物理學家,最早提出宇宙膨脹與「原始原子」構想。",
+      "image": "people-lemaitre.jpg"
     },
     {
       "zh": "埃爾熱",
       "en": "Hergé",
-      "note": "漫畫家,創作《丁丁歷險記》,奠定歐洲連環漫畫傳統。"
+      "note": "漫畫家,創作《丁丁歷險記》,奠定歐洲連環漫畫傳統。",
+      "image": "people-herge.jpg"
+    },
+    {
+      "zh": "奧黛麗·赫本",
+      "en": "Audrey Hepburn",
+      "note": "生於布魯塞爾的傳奇女星,後期投身聯合國兒童基金會工作。"
+    },
+    {
+      "zh": "尚-克勞德·范·達美",
+      "en": "Jean-Claude Van Damme",
+      "note": "動作片演員,以武術背景闖蕩好萊塢動作電影。"
+    },
+    {
+      "zh": "彼得·保羅·魯本斯",
+      "en": "Peter Paul Rubens",
+      "note": "巴洛克畫派巨匠,安特衛普故居現為博物館。"
     }
   ],
   "recommended": [
@@ -333,7 +413,125 @@
       "author": "Ank Kumar",
       "license": "CC BY-SA 4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Rozenhoedkaai_(canal)_and_Belfry_of_Bruges,_Bruges,_Belgium_(Ank_Kumar,_Infosys_Limited)_09.jpg"
+    },
+    {
+      "file": "animals-malinois.jpg",
+      "title": "Malinois portrait",
+      "author": "U.S. Department of Defense",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Malinois_portrait.jpg"
+    },
+    {
+      "file": "landmarks-ghent.jpg",
+      "title": "Belgio - Gand - ponte San Michele, chiesa San Michele e fiume Lys",
+      "author": "Mario Falcetti",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Belgio_-_Gand_-_ponte_San_Michele,_chiesa_San_Michele_e_fiume_Lys.jpg"
+    },
+    {
+      "file": "landmarks-atomium.jpg",
+      "title": "Atomium, Bruselas, Bélgica, 2021-12-15, DD 148-150 HDR",
+      "author": "Diego Delso",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Atomium,_Bruselas,_B%C3%A9lgica,_2021-12-15,_DD_148-150_HDR.jpg"
+    },
+    {
+      "file": "people-vaneyck.jpg",
+      "title": "Ghent Altarpiece by Jan van Eyck ALL",
+      "author": "見 Commons File 頁",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Ghent_Altarpiece_by_Jan_van_Eyck_ALL.jpg"
+    },
+    {
+      "file": "people-magritte.jpg",
+      "title": "Portrait en buste du peintre surréaliste René Magritte (cropped)",
+      "author": "Anonyme, photographe",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Portrait_en_buste_du_peintre_surr%C3%A9aliste_Ren%C3%A9_Magritte_(cropped).jpg"
+    },
+    {
+      "file": "people-sax.jpg",
+      "title": "Adolphe Sax 4a",
+      "author": "Unknown author Unknown author",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Adolphe_Sax_4a.jpg"
+    },
+    {
+      "file": "people-lemaitre.jpg",
+      "title": "Lemaitre (cropped)",
+      "author": "unknown photographer (Caltech)",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Lemaitre_(cropped).jpg"
+    },
+    {
+      "file": "people-herge.jpg",
+      "title": "Tintin-Wandgemaelde in Bruessel",
+      "author": "Photograph: Martin Monroe (willismonroe) / Mural: Art Mural / Motif: Hergé",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tintin-Wandgemaelde_in_Bruessel.jpg"
     }
   ],
-  "code": "BE"
+  "code": "BE",
+  "street_food": [
+    {
+      "zh": "薯條攤(Frituur)",
+      "note": "街邊薯條專賣攤,現炸兩次沾多種醬料自選。"
+    },
+    {
+      "zh": "鬆餅攤",
+      "note": "節慶市集常見的現烤鬆餅車,可加巧克力或糖粉。"
+    },
+    {
+      "zh": "生醃牛肉三明治(filet américain)",
+      "note": "生牛絞肉拌美乃滋香料,夾麵包是常見輕食。"
+    },
+    {
+      "zh": "淡菜季節攤",
+      "note": "秋季市集常見清蒸淡菜攤位,配薯條一起賣。",
+      "where": "秋季市集"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "賓什狂歡節",
+      "month": "2-3月(懺悔星期二)",
+      "note": "世界遺產級的傳統嘉年華,「吉爾」角色戴羽毛頭飾遊行。"
+    },
+    {
+      "zh": "布魯塞爾花毯節",
+      "month": "8月(雙年)",
+      "note": "大廣場鋪滿數十萬朵鮮花組成的巨型地毯圖案。"
+    },
+    {
+      "zh": "聖誕市集季",
+      "month": "11月底至1月初",
+      "note": "布魯塞爾與根特廣場擺滿木屋攤位與燈飾。"
+    },
+    {
+      "zh": "國慶日",
+      "month": "7月21日",
+      "note": "布魯塞爾舉行軍事遊行與煙火,紀念利奧波德一世登基。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "Bonjour / Hallo",
+        "romanized": "Bonjour / Hallo"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "Merci / Dank u",
+        "romanized": "Merci / Dank u"
+      },
+      {
+        "phrase": "再見",
+        "local": "Au revoir / Tot ziens",
+        "romanized": "Au revoir / Tot ziens"
+      }
+    ],
+    "money_note": "卡片與行動支付非常普及,許多小店甚至已不收現金。",
+    "tipping": "帳單通常已含服務費,額外留些零錢或湊整數屬禮貌但非必要。"
+  }
 }

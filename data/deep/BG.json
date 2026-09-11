@@ -50,6 +50,21 @@
       "en": "Eastern imperial eagle",
       "note": "平原稀有猛禽,保育計畫下族群緩慢回升。",
       "image": "BG-a-eagle.jpg"
+    },
+    {
+      "zh": "灰狼",
+      "en": "Grey wolf",
+      "note": "巴爾幹山脈仍有穩定族群,是保加利亞最大的野生犬科動物。"
+    },
+    {
+      "zh": "巴爾幹岩羚",
+      "en": "Balkan chamois",
+      "note": "棲息里拉、皮林等高山岩壁,擅長在陡峭地形跳躍。"
+    },
+    {
+      "zh": "歐亞猞猁",
+      "en": "Eurasian lynx",
+      "note": "曾一度絕跡,近年透過保育計畫在山林重新出現蹤跡。"
     }
   ],
   "foods": [
@@ -82,6 +97,21 @@
       "en": "Kiselo mlyako",
       "note": "含保加利亞乳桿菌的酸奶,被視為國民食品。",
       "image": "BG-f-yoghurt.jpg"
+    },
+    {
+      "zh": "凱巴切烤肉條",
+      "en": "Kebapche",
+      "note": "長條狀的碳烤絞肉,常與紹普沙拉一起上桌。"
+    },
+    {
+      "zh": "陶罐燉菜",
+      "en": "Gyuvech",
+      "note": "肉與多種蔬菜放入陶罐慢烤,連罐上桌保溫。"
+    },
+    {
+      "zh": "玫瑰花瓣果醬",
+      "en": "Rose petal jam",
+      "note": "用卡贊勒克玫瑰谷產的花瓣熬煮,香氣濃郁少見。"
     }
   ],
   "landmarks": [
@@ -131,6 +161,34 @@
         43.0817,
         25.6553
       ]
+    },
+    {
+      "zh": "卡贊勒克色雷斯人墓",
+      "en": "Kazanlak Thracian Tomb",
+      "note": "西元前四世紀色雷斯貴族墓室,壁畫保存完整,列世界遺產。",
+      "latlon": [
+        42.6167,
+        25.4
+      ]
+    },
+    {
+      "zh": "七里拉湖",
+      "en": "Seven Rila Lakes",
+      "note": "冰川侵蝕形成的七座高山湖泊,搭纜車後健行可一日走完。",
+      "latlon": [
+        42.1833,
+        23.3333
+      ]
+    },
+    {
+      "zh": "布茲盧賈紀念碑",
+      "en": "Buzludzha Monument",
+      "note": "山頂廢棄的共產時期飛碟形黨代會堂,現為熱門探索地標。",
+      "latlon": [
+        42.7358,
+        25.4028
+      ],
+      "image": "landmarks-buzludzha.jpg"
     }
   ],
   "people": [
@@ -158,6 +216,21 @@
       "zh": "西美昂一世",
       "en": "Simeon I the Great",
       "note": "第一帝國君主(893–927),國力與文化的黃金時代。"
+    },
+    {
+      "zh": "赫里斯托·波特夫",
+      "en": "Hristo Botev",
+      "note": "詩人與革命家,反抗鄂圖曼統治時陣亡,被視為民族英雄。"
+    },
+    {
+      "zh": "格里戈爾·迪米特洛夫",
+      "en": "Grigor Dimitrov",
+      "note": "職業網球選手,保加利亞史上排名最高的男子選手。"
+    },
+    {
+      "zh": "鮑里斯三世",
+      "en": "Tsar Boris III",
+      "note": "二次大戰期間在位的沙皇,任內國家政局動盪。"
     }
   ],
   "recommended": [
@@ -349,7 +422,75 @@
       "author": "Plamen Agov",
       "license": "CC BY-SA 4.0",
       "source": "https://commons.wikimedia.org/wiki/File%3AAlexanderNevskyCathedral-Sofia-6.jpg"
+    },
+    {
+      "file": "landmarks-buzludzha.jpg",
+      "title": "Buzludzha Monument",
+      "author": "Mark Ahsmann",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:20140622_Buzludzha_070.jpg"
     }
   ],
-  "code": "BG"
+  "code": "BG",
+  "street_food": [
+    {
+      "zh": "起司酥皮派攤",
+      "note": "banitsa 街邊烘焙店現烤,是早餐與趕路時的常見選擇。"
+    },
+    {
+      "zh": "凱巴切烤肉串攤",
+      "note": "市集裡現烤肉條夾麵包,配紅椒醬更下飯。"
+    },
+    {
+      "zh": "波扎(boza)飲料攤",
+      "note": "發酵麥芽製成的濃稠微酸飲品,傳統早餐搭配。"
+    },
+    {
+      "zh": "蜜糖甜甜圈(mekitsi)攤",
+      "note": "炸麵餅灑糖粉或蜂蜜,市集裡熱騰騰現炸現賣。"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "玫瑰節",
+      "month": "6月初",
+      "note": "卡贊勒克玫瑰谷慶祝採收季,選出玫瑰皇后並舉行遊行。"
+    },
+    {
+      "zh": "解放日",
+      "month": "3月3日",
+      "note": "紀念1878年《柏林條約》後脫離鄂圖曼統治,全國放假。"
+    },
+    {
+      "zh": "保加利亞文字與文化日",
+      "month": "5月24日",
+      "note": "紀念西里爾字母發明,學校與圖書館舉行紀念活動。"
+    },
+    {
+      "zh": "蘇爾瓦卡新年報喜",
+      "month": "1月1日",
+      "note": "兒童持裝飾棍棒(survachka)敲打親友背部祈福,是新年傳統。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "Здравей",
+        "romanized": "Zdravey"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "Благодаря",
+        "romanized": "Blagodarya"
+      },
+      {
+        "phrase": "再見",
+        "local": "Довиждане",
+        "romanized": "Dovizhdane"
+      }
+    ],
+    "money_note": "2026年起歐元已取代保加利亞列弗,城市商店多可刷卡,鄉間小店仍偏好現金。",
+    "tipping": "沒有強制規定,餐廳留消費金額約10%作為小費是常見禮貌。"
+  }
 }

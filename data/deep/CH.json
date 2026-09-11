@@ -53,6 +53,21 @@
       "en": "Bearded vulture",
       "note": "翼展近三公尺的猛禽,以骨頭為食;一九八〇年代起重新引入阿爾卑斯。",
       "image": "animals-beardedvulture.jpg"
+    },
+    {
+      "zh": "金雕",
+      "en": "Golden eagle",
+      "note": "阿爾卑斯山區的頂級猛禽,常在山谷上升氣流間盤旋。"
+    },
+    {
+      "zh": "歐洲馬鹿",
+      "en": "Red deer",
+      "note": "阿爾卑斯森林常見大型鹿,秋季發情期公鹿低吼求偶。"
+    },
+    {
+      "zh": "雪兔",
+      "en": "Mountain hare",
+      "note": "冬季換上全白毛色的高山兔,躲藏岩隙間避寒避敵。"
     }
   ],
   "foods": [
@@ -85,6 +100,21 @@
       "en": "Bircher muesli",
       "note": "燕麥、水果與優格調成的冷麥片,由畢爾夏醫師提出。",
       "image": "foods-birchermuesli.jpg"
+    },
+    {
+      "zh": "蘇黎世式炒小牛肉",
+      "en": "Zürcher Geschnetzeltes",
+      "note": "小牛肉片與蘑菇燴白酒奶油醬,配洛斯蒂。"
+    },
+    {
+      "zh": "瑞士乾肉腸",
+      "en": "Cervelat",
+      "note": "被稱為「國民香腸」的粗短煙燻腸,烤肉架上常見。"
+    },
+    {
+      "zh": "恩加丁核桃塔",
+      "en": "Engadiner Nusstorte",
+      "note": "恩加丁河谷傳統甜點,焦糖核桃餡包在酥皮中。"
     }
   ],
   "landmarks": [
@@ -115,7 +145,8 @@
       "latlon": [
         47.6779,
         8.6154
-      ]
+      ],
+      "image": "landmarks-rhinefalls.jpg"
     },
     {
       "zh": "伯恩老城",
@@ -124,7 +155,8 @@
       "latlon": [
         46.948,
         7.4474
-      ]
+      ],
+      "image": "landmarks-bern.jpg"
     },
     {
       "zh": "琉森卡佩爾廊橋",
@@ -133,6 +165,34 @@
       "latlon": [
         47.0517,
         8.3076
+      ],
+      "image": "landmarks-chapelbridge.jpg"
+    },
+    {
+      "zh": "西庸城堡",
+      "en": "Château de Chillon",
+      "note": "萊蒙湖畔的中世紀水上城堡,拜倫詩作曾以此為題。",
+      "latlon": [
+        46.4142,
+        6.9271
+      ]
+    },
+    {
+      "zh": "皮拉圖斯山",
+      "en": "Mount Pilatus",
+      "note": "琉森近郊的觀景山,傳說是彼拉多亡魂棲息之地。",
+      "latlon": [
+        46.9783,
+        8.2513
+      ]
+    },
+    {
+      "zh": "大聖伯納隘口",
+      "en": "Great St Bernard Pass",
+      "note": "連接瑞士與義大利的高山隘口,聖伯納犬救援站發源地。",
+      "latlon": [
+        45.8694,
+        7.17
       ]
     }
   ],
@@ -140,27 +200,47 @@
     {
       "zh": "亨利·杜南",
       "en": "Henry Dunant",
-      "note": "紅十字會創辦人,一九〇一年首屆諾貝爾和平獎得主。"
+      "note": "紅十字會創辦人,一九〇一年首屆諾貝爾和平獎得主。",
+      "image": "people-dunant.jpg"
     },
     {
       "zh": "威廉·泰爾",
       "en": "William Tell",
-      "note": "傳說中的神射手,一箭射穿兒子頭上蘋果,象徵反抗暴政。"
+      "note": "傳說中的神射手,一箭射穿兒子頭上蘋果,象徵反抗暴政。",
+      "image": "people-tell.jpg"
     },
     {
       "zh": "盧梭",
       "en": "Jean-Jacques Rousseau",
-      "note": "生於日內瓦的啟蒙思想家,著有《社會契約論》。"
+      "note": "生於日內瓦的啟蒙思想家,著有《社會契約論》。",
+      "image": "people-rousseau.jpg"
     },
     {
       "zh": "歐拉",
       "en": "Leonhard Euler",
-      "note": "生於巴塞爾的數學家,著述極豐,奠定分析學與圖論基礎。"
+      "note": "生於巴塞爾的數學家,著述極豐,奠定分析學與圖論基礎。",
+      "image": "people-euler.jpg"
     },
     {
       "zh": "羅傑·費德勒",
       "en": "Roger Federer",
-      "note": "巴塞爾出身的網球選手,奪二十座大滿貫男單冠軍。"
+      "note": "巴塞爾出身的網球選手,奪二十座大滿貫男單冠軍。",
+      "image": "people-federer.jpg"
+    },
+    {
+      "zh": "卡爾·古斯塔夫·榮格",
+      "en": "Carl Jung",
+      "note": "心理學家,分析心理學創始人,在蘇黎世執業與講學。"
+    },
+    {
+      "zh": "阿爾伯托·賈科梅蒂",
+      "en": "Alberto Giacometti",
+      "note": "格勞賓登出身的雕塑家,以細長人形雕塑聞名。"
+    },
+    {
+      "zh": "馬丁娜·辛吉絲",
+      "en": "Martina Hingis",
+      "note": "網球選手,十六歲即登上世界球后寶座。"
     }
   ],
   "recommended": [
@@ -334,7 +414,130 @@
       "author": "Nattes à chat , photocropper: User:LudwigSebastianMicheler",
       "license": "CC BY-SA 4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Jungfrau,_M%C3%B6nch_and_Eiger_aerial_photograph_(South_side,_above_of_Aletsch_glacier),_Gletscherhorn_and_Kranzberg_S%C3%BCdgipfel,_October_2024_(cropped).jpg"
+    },
+    {
+      "file": "landmarks-rhinefalls.jpg",
+      "title": "Neuhausen Rhine Falls panorama 1",
+      "author": "Ymblanter",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Neuhausen_Rhine_Falls_panorama_1.jpg"
+    },
+    {
+      "file": "landmarks-bern.jpg",
+      "title": "Bern Altstadt von Rosengarten 20211007",
+      "author": "Daniel Kraft",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bern_Altstadt_von_Rosengarten_20211007.jpg"
+    },
+    {
+      "file": "landmarks-chapelbridge.jpg",
+      "title": "Chapel Bridge (Kapellbrücke), Lucerne, Switzerland 02",
+      "author": "Godot13",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Chapel_Bridge_(Kapellbr%C3%BCcke),_Lucerne,_Switzerland_02.jpg"
+    },
+    {
+      "file": "people-dunant.jpg",
+      "title": "Henry Dunant-young",
+      "author": "Frédéric Boissonnas",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Henry_Dunant-young.jpg"
+    },
+    {
+      "file": "people-tell.jpg",
+      "title": "2019 Tell Monument Statue (Telldenkmal) Altdorf Uri Switzerland Ank Kumar Infosys Limited 03",
+      "author": "Ank Kumar",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:2019_Tell_Monument_Statue_(Telldenkmal)_Altdorf_Uri_Switzerland_Ank_Kumar_Infosys_Limited_03.jpg"
+    },
+    {
+      "file": "people-rousseau.jpg",
+      "title": "Maurice Quentin de La Tour - Portrait of Jean-Jacques Rousseau - WGA12360",
+      "author": "Maurice Quentin de La Tour",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Maurice_Quentin_de_La_Tour_-_Portrait_of_Jean-Jacques_Rousseau_-_WGA12360.jpg"
+    },
+    {
+      "file": "people-euler.jpg",
+      "title": "Leonhard Euler - Jakob Emanuel Handmann (Kunstmuseum Basel)",
+      "author": "Jakob Emanuel Handmann",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Leonhard_Euler_-_Jakob_Emanuel_Handmann_(Kunstmuseum_Basel).jpg"
+    },
+    {
+      "file": "people-federer.jpg",
+      "title": "Roger Federer 2015 Dubai Tennis Championships",
+      "author": "RomanHedgehog",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Roger_Federer_2015_Dubai_Tennis_Championships.jpg"
     }
   ],
-  "code": "CH"
+  "code": "CH",
+  "street_food": [
+    {
+      "zh": "烤杏仁",
+      "where": "蘇黎世耶誕市集",
+      "note": "糖炒杏仁香甜溫熱,冬天暖手暖胃的市集小攤。"
+    },
+    {
+      "zh": "起司恰巴塔堡",
+      "note": "格呂耶爾起司夾入酥脆麵包,山區小站常見午餐。"
+    },
+    {
+      "zh": "巧克力可頌",
+      "note": "烘焙坊常見款式,可頌中包整條巧克力棒。"
+    },
+    {
+      "zh": "熱紅酒",
+      "where": "巴塞爾耶誕市集",
+      "note": "紅酒加香料溫熱而成,冬季市集必備禦寒熱飲。"
+    },
+    {
+      "zh": "烤栗子",
+      "note": "秋冬街頭小攤現烤,紙袋盛裝邊走邊吃。"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "巴塞爾狂歡節",
+      "month": "2月或3月",
+      "note": "清晨鼓笛遊行,面具與提燈是這個新教城市狂歡節的特色。"
+    },
+    {
+      "zh": "日內瓦登蜡節",
+      "month": "12月",
+      "note": "紀念1602年擊退薩伏依夜襲,遊行時砸巧克力鍋慶祝。"
+    },
+    {
+      "zh": "阿爾卑斯牧民下山節",
+      "month": "9月",
+      "note": "牛群戴花冠自高山牧場下山,盛裝遊行慶祝夏季放牧結束。"
+    },
+    {
+      "zh": "蒙特勒爵士音樂節",
+      "month": "7月",
+      "note": "萊蒙湖畔的國際爵士音樂盛事,始於一九六七年。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "Grüezi(德語區)",
+        "romanized": "Grüezi"
+      },
+      {
+        "phrase": "你好",
+        "local": "Bonjour(法語區)",
+        "romanized": "Bonjour"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "Danke / Merci",
+        "romanized": "Danke / Merci"
+      }
+    ],
+    "money_note": "雖是高物價國家,但行動支付與信用卡普及,小額消費也可刷卡。",
+    "tipping": "服務費通常已含在帳單中,額外小費非必要,常將找零湊整數留下。"
+  }
 }

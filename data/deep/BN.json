@@ -48,6 +48,21 @@
       "zh": "巽他雲豹",
       "en": "Sunda clouded leopard",
       "note": "婆羅洲與蘇門答臘特有的中型貓科,犬齒比例居貓科之冠。"
+    },
+    {
+      "zh": "巽他穿山甲",
+      "en": "Sunda pangolin",
+      "note": "全身覆鱗甲的夜行性動物,因盜獵嚴重而數量稀少。"
+    },
+    {
+      "zh": "馬來鱷",
+      "en": "False gharial (Tomistoma)",
+      "note": "長吻淡水鱷,棲息於淡武廊等河流沼澤地帶。"
+    },
+    {
+      "zh": "婆羅洲鬚豬",
+      "en": "Bearded pig",
+      "note": "臉頰有鬚毛的野豬,會隨果實產季在雨林間長途遷移。"
     }
   ],
   "foods": [
@@ -78,6 +93,21 @@
       "en": "Kuih cincin",
       "note": "用椰糖與米粉做的環狀花紋炸餅,是節慶甜點。",
       "image": "BN-f-kuihcincin.jpg"
+    },
+    {
+      "zh": "咖椰吐司",
+      "en": "Kaya toast",
+      "note": "烤吐司抹椰漿蛋醬,配溏心蛋是常見早餐組合。"
+    },
+    {
+      "zh": "娘惹炒麵",
+      "en": "Mee goreng",
+      "note": "黃麵拌辣醬與蔬菜、蛋一起炒,是普遍的平價主食。"
+    },
+    {
+      "zh": "千層椰糕",
+      "en": "Kuih lapis",
+      "note": "多層彩色椰漿糕點,口感軟糯,節慶市集常見。"
     }
   ],
   "landmarks": [
@@ -129,6 +159,34 @@
         4.55,
         115.1667
       ]
+    },
+    {
+      "zh": "皇家御用品博物館",
+      "en": "Royal Regalia Museum",
+      "note": "展示蘇丹登基禮器與加冕馬車,呈現汶萊王室文化。",
+      "latlon": [
+        4.8897,
+        114.9425
+      ],
+      "image": "landmarks-royal-regalia-museum.jpg"
+    },
+    {
+      "zh": "姆林布恩湖",
+      "en": "Tasek Merimbun",
+      "note": "汶萊最大的天然湖泊,湖畔設有生態步道與瞭望台。",
+      "latlon": [
+        4.5333,
+        114.7333
+      ]
+    },
+    {
+      "zh": "穆阿拉海灘",
+      "en": "Muara Beach",
+      "note": "首都近郊的沙灘與港口,是當地人假日出遊的去處。",
+      "latlon": [
+        5.0167,
+        115.0667
+      ]
     }
   ],
   "people": [
@@ -157,6 +215,21 @@
       "zh": "阿卜杜勒·馬廷",
       "en": "Abdul Mateen",
       "note": "蘇丹之子,二〇二四年的婚禮盛況吸引大量國際關注。"
+    },
+    {
+      "zh": "蘇丹穆罕默德沙",
+      "en": "Sultan Muhammad Shah",
+      "note": "汶萊首位信奉伊斯蘭教的統治者,被視為建立蘇丹國的始祖。"
+    },
+    {
+      "zh": "蘇丹沙里夫阿里",
+      "en": "Sultan Sharif Ali",
+      "note": "第三任蘇丹,引入伊斯蘭法制並興建首座清真寺。"
+    },
+    {
+      "zh": "王儲比拉",
+      "en": "Al-Muhtadee Billah",
+      "note": "現任蘇丹之子,是王位的法定繼承人與現任攝政。"
     }
   ],
   "recommended": [
@@ -343,7 +416,75 @@
       "author": "Chin Yu Chu",
       "license": "CC BY-SA 2.0",
       "source": "https://commons.wikimedia.org/wiki/File%3ASultan_Hassanal_Bolkiah_-_53857993945.jpg"
+    },
+    {
+      "file": "landmarks-royal-regalia-museum.jpg",
+      "title": "Royal Regalia Building, Brunei",
+      "author": "Bernard Spragg. NZ",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Royal_Regalia_Building,_Brunei;_2009.jpg"
     }
   ],
-  "code": "BN"
+  "code": "BN",
+  "street_food": [
+    {
+      "zh": "打包飯攤(nasi katok)",
+      "note": "白飯配炸雞與參巴辣醬,平價包裝,深夜也買得到。"
+    },
+    {
+      "zh": "沙嗲攤",
+      "note": "炭烤肉串沾花生醬,配飯糰與生黃瓜切片。"
+    },
+    {
+      "zh": "印度煎餅攤(roti canai)",
+      "note": "手拉薄餅煎至微焦,沾咖哩醬汁一起吃。"
+    },
+    {
+      "zh": "環形炸餅攤(kuih cincin)",
+      "note": "椰糖與米粉炸成環狀花紋,是傳統市集點心。"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "開齋節",
+      "month": "依伊斯蘭曆(約3-4月)",
+      "note": "齋戒月結束的慶祝,皇宮開放讓民眾晉見蘇丹並用餐。"
+    },
+    {
+      "zh": "蘇丹登基紀念日",
+      "month": "8月",
+      "note": "全國懸掛國旗與蘇丹肖像,並舉行閱兵與煙火慶祝。"
+    },
+    {
+      "zh": "國慶日",
+      "month": "2月23日",
+      "note": "紀念1984年脫離英國完全獨立,首都有大型慶典。"
+    },
+    {
+      "zh": "先知誕辰紀念日",
+      "month": "依伊斯蘭曆",
+      "note": "穆斯林社群舉行遊行與誦經活動紀念先知穆罕默德誕辰。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "Selamat datang / Apa khabar",
+        "romanized": "Selamat datang / Apa khabar"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "Terima kasih",
+        "romanized": "Terima kasih"
+      },
+      {
+        "phrase": "再見",
+        "local": "Selamat tinggal",
+        "romanized": "Selamat tinggal"
+      }
+    ],
+    "money_note": "汶萊元與新加坡元等值流通,城市商店可刷卡,小吃攤與夜市多用現金。",
+    "tipping": "沒有小費文化,帳單通常不含服務費也不需額外給小費。"
+  }
 }

@@ -51,6 +51,21 @@
       "en": "Common loon",
       "note": "叫聲淒清的湖泊水鳥,印在一元硬幣上,俗稱 loonie。",
       "image": "animals-common-loon.jpg"
+    },
+    {
+      "zh": "北美山貓",
+      "en": "Canada lynx",
+      "note": "北方森林中善於捕食雪兔的中型貓科,腳掌寬大利於雪地行走。"
+    },
+    {
+      "zh": "大角羊",
+      "en": "Bighorn sheep",
+      "note": "洛磯山脈常見野生羊,雄性有厚重螺旋角,公路旁常可見。"
+    },
+    {
+      "zh": "大西洋海鸚",
+      "en": "Atlantic puffin",
+      "note": "紐芬蘭外海島嶼夏季繁殖,橘色嘴喙是招牌特徵。"
     }
   ],
   "foods": [
@@ -83,6 +98,21 @@
       "en": "Nanaimo bar",
       "note": "免烤三層冷藏甜點,得名自卑詩省納奈莫市。",
       "image": "foods-nanaimo-bar.jpg"
+    },
+    {
+      "zh": "猶太培根三明治",
+      "en": "Peameal bacon sandwich",
+      "note": "多倫多招牌,黃玉米粉醃漬里肌肉夾入圓麵包。"
+    },
+    {
+      "zh": "海狸尾炸餅",
+      "en": "BeaverTails",
+      "note": "渥太華起源的手拉扁油炸麵團,撒糖霜或肉桂糖。"
+    },
+    {
+      "zh": "薩斯卡通莓派",
+      "en": "Saskatoon berry pie",
+      "note": "草原三省特有莓果製成的酸甜派,原住民傳統食材。"
     }
   ],
   "landmarks": [
@@ -135,6 +165,33 @@
         -71.2048
       ],
       "image": "landmarks-chateau-frontenac.jpg"
+    },
+    {
+      "zh": "佩姬灣燈塔",
+      "en": "Peggy's Cove Lighthouse",
+      "note": "新斯科細亞海岸的紅頂燈塔,建於花崗岩礁上。",
+      "latlon": [
+        44.4915,
+        -63.9169
+      ]
+    },
+    {
+      "zh": "芬地灣霍普韋爾岩石",
+      "en": "Hopewell Rocks, Bay of Fundy",
+      "note": "世界潮差最大的海灣,潮間石柱退潮時可步行穿越。",
+      "latlon": [
+        45.8167,
+        -64.5667
+      ]
+    },
+    {
+      "zh": "綠山牆之家",
+      "en": "Green Gables Heritage Place",
+      "note": "愛德華王子島上《清秀佳人》場景原型的農舍。",
+      "latlon": [
+        46.4858,
+        -63.3845
+      ]
     }
   ],
   "people": [
@@ -167,6 +224,21 @@
       "en": "Margaret Atwood",
       "note": "小說家,《使女的故事》作者,兩度獲布克獎。",
       "image": "people-margaret-atwood.jpg"
+    },
+    {
+      "zh": "露西·莫德·蒙哥馬利",
+      "en": "Lucy Maud Montgomery",
+      "note": "《清秀佳人》作者,故事場景設在愛德華王子島。"
+    },
+    {
+      "zh": "亞歷山大·葛拉漢·貝爾",
+      "en": "Alexander Graham Bell",
+      "note": "電話發明人,晚年定居布雷頓角並持續發明研究。"
+    },
+    {
+      "zh": "席琳·狄翁",
+      "en": "Céline Dion",
+      "note": "魁北克出身的國際歌后,以《鐵達尼號》主題曲聞名。"
     }
   ],
   "recommended": [
@@ -398,5 +470,68 @@
         "note": "加拿大最東的省份,有格羅摩恩的峽灣、地函裸露的 Tablelands 地質奇景,5 到 6 月還能在海岸看到漂來的冰山。航班少、島內拉車遠、天氣多變,建議預留寬鬆天數並自駕。"
       }
     ]
+  },
+  "street_food": [
+    {
+      "zh": "蒙特婁煙燻肉三明治",
+      "where": "蒙特婁 Mile End 老店",
+      "note": "厚切煙燻牛肉夾裸麥麵包,配黃芥末,經典熟食店味。"
+    },
+    {
+      "zh": "Ketchup 洋芋片",
+      "note": "番茄醬口味洋芋片是加拿大限定零食,超商必買。"
+    },
+    {
+      "zh": "蒙特婁式貝果",
+      "where": "聖維克多街貝果店",
+      "note": "蜂蜜水煮再窯烤,比紐約貝果更薄更甜。"
+    },
+    {
+      "zh": "Timbits 甜甜圈球",
+      "note": "Tim Hortons 招牌小甜甜圈,多種口味混裝販售。"
+    },
+    {
+      "zh": "楓糖雪對",
+      "where": "春季楓糖屋(sugar shack)",
+      "note": "熱楓糖漿澆在雪上瞬間凝結成軟糖,用木棒捲起吃。"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "加拿大國慶日",
+      "month": "7月1日",
+      "note": "全國放假慶祝建國,煙火與紅白裝飾隨處可見。"
+    },
+    {
+      "zh": "渥太華冬季樂",
+      "month": "2月",
+      "note": "麗都運河化身世界最長天然溜冰場,配合冰雕展覽。"
+    },
+    {
+      "zh": "卡加利牛仔節",
+      "month": "7月",
+      "note": "號稱「世上最盛大的戶外表演」,牛仔競技與遊行熱鬧非凡。"
+    },
+    {
+      "zh": "魁北克冬季狂歡節",
+      "month": "2月",
+      "note": "北美最大冬季嘉年華,雪雕、遊行與吉祥物雪人巴涵活躍街頭。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "Hello / Bonjour",
+        "romanized": "Hello / Bonjour"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "Thank you / Merci",
+        "romanized": "Thank you / Merci"
+      }
+    ],
+    "money_note": "信用卡與行動支付(Tap)幾乎人人接受,小額消費也能刷卡,現金使用率持續下降。",
+    "tipping": "餐廳普遍給消費金額15–20%小費,刷卡機通常直接跳出建議選項。"
   }
 }

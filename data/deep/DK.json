@@ -50,6 +50,21 @@
       "en": "White stork",
       "note": "昔日常在農舍屋頂築巢的吉祥鳥,如今在丹麥數量稀少。",
       "image": "animals-white-stork.jpg"
+    },
+    {
+      "zh": "紅狐",
+      "en": "Red fox",
+      "note": "分布全國的野生犬科動物,近郊公園也可見蹤跡。"
+    },
+    {
+      "zh": "歐洲野兔",
+      "en": "European hare",
+      "note": "農地與草原常見,冬季毛色略灰但不轉白。"
+    },
+    {
+      "zh": "斑海豹",
+      "en": "Harbour seal",
+      "note": "瓦登海世界遺產潮間帶常見,退潮時成群曬太陽。"
     }
   ],
   "foods": [
@@ -82,6 +97,21 @@
       "en": "Sild",
       "note": "糖醋或咖哩醃漬的鯡魚,是開放式三明治與節慶餐桌常客。",
       "image": "foods-pickled-herring.jpg"
+    },
+    {
+      "zh": "丹麥式紅腸熱狗",
+      "en": "Rød pølse",
+      "note": "街頭經典紅色香腸,夾麵包加洋蔥酥與甜酸黃瓜。"
+    },
+    {
+      "zh": "丹麥燕麥粥",
+      "en": "Øllebrød",
+      "note": "以啤酒與黑麵包熬煮的傳統粥品,常加奶油食用。"
+    },
+    {
+      "zh": "丹麥奶油圈餅",
+      "en": "Vaniliekranse",
+      "note": "耶誕節常見的奶油圈餅,酥脆帶香草味。"
     }
   ],
   "landmarks": [
@@ -112,7 +142,8 @@
       "latlon": [
         55.6737,
         12.5681
-      ]
+      ],
+      "image": "landmarks-tivoli.jpg"
     },
     {
       "zh": "克倫堡宮",
@@ -121,7 +152,8 @@
       "latlon": [
         56.0389,
         12.6216
-      ]
+      ],
+      "image": "landmarks-kronborg.jpg"
     },
     {
       "zh": "耶靈墳塚與符文石",
@@ -130,6 +162,34 @@
       "latlon": [
         55.7562,
         9.419
+      ],
+      "image": "landmarks-jelling.jpg"
+    },
+    {
+      "zh": "腓特烈堡宮",
+      "en": "Frederiksborg Castle",
+      "note": "文藝復興風格的水上宮殿,現為國家歷史博物館。",
+      "latlon": [
+        55.9349,
+        12.3006
+      ]
+    },
+    {
+      "zh": "路易斯安那現代美術館",
+      "en": "Louisiana Museum of Modern Art",
+      "note": "海濱林間的現代美術館,建築與自然景觀相互映照。",
+      "latlon": [
+        55.7803,
+        12.5661
+      ]
+    },
+    {
+      "zh": "默恩島白堊斷崖",
+      "en": "Møns Klint",
+      "note": "丹麥少見的高聳白色海崖,健行下到海灘還能找化石。",
+      "latlon": [
+        54.9575,
+        12.5386
       ]
     }
   ],
@@ -137,27 +197,47 @@
     {
       "zh": "漢斯·克里斯蒂安·安徒生",
       "en": "Hans Christian Andersen",
-      "note": "童話作家,《美人魚》《醜小鴨》《國王的新衣》流傳全球。"
+      "note": "童話作家,《美人魚》《醜小鴨》《國王的新衣》流傳全球。",
+      "image": "people-andersen.jpg"
     },
     {
       "zh": "索倫·齊克果",
       "en": "Søren Kierkegaard",
-      "note": "十九世紀哲學家,被視為存在主義的先驅。"
+      "note": "十九世紀哲學家,被視為存在主義的先驅。",
+      "image": "people-kierkegaard.jpg"
     },
     {
       "zh": "尼爾斯·波耳",
       "en": "Niels Bohr",
-      "note": "物理學家,提出原子模型,一九二二年獲諾貝爾物理獎。"
+      "note": "物理學家,提出原子模型,一九二二年獲諾貝爾物理獎。",
+      "image": "people-bohr.jpg"
     },
     {
       "zh": "卡倫·白列森",
       "en": "Karen Blixen",
-      "note": "作家,回憶錄《遠離非洲》以筆名 Isak Dinesen 發表。"
+      "note": "作家,回憶錄《遠離非洲》以筆名 Isak Dinesen 發表。",
+      "image": "people-blixen.jpg"
     },
     {
       "zh": "第谷·布拉赫",
       "en": "Tycho Brahe",
-      "note": "文藝復興天文學家,留下精密的行星觀測資料。"
+      "note": "文藝復興天文學家,留下精密的行星觀測資料。",
+      "image": "people-tycho.jpg"
+    },
+    {
+      "zh": "拉斯·馮·提爾",
+      "en": "Lars von Trier",
+      "note": "電影導演,道格瑪95運動發起人之一,風格強烈。"
+    },
+    {
+      "zh": "格倫特威",
+      "en": "N.F.S. Grundtvig",
+      "note": "神學家與教育家,丹麥民眾高中教育理念的奠基者。"
+    },
+    {
+      "zh": "約恩·烏松",
+      "en": "Jørn Utzon",
+      "note": "建築師,設計出雪梨歌劇院的標誌性帆形屋頂。"
     }
   ],
   "recommended": [
@@ -331,7 +411,125 @@
       "author": "OleNeitzel",
       "license": "CC BY 4.0",
       "source": "https://commons.wikimedia.org/wiki/File%3ANyhavn_houses_and_boats.jpg"
+    },
+    {
+      "file": "landmarks-tivoli.jpg",
+      "title": "Tivoli Gardens, Copenhagen, Denmark",
+      "author": "Junielib",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ATivoli_Gardens%2C_Copenhagen%2C_Denmark.jpg"
+    },
+    {
+      "file": "landmarks-kronborg.jpg",
+      "title": "Kronborg April 2026 01",
+      "author": "ArildV",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AKronborg_April_2026_01.jpg"
+    },
+    {
+      "file": "landmarks-jelling.jpg",
+      "title": "Jellingstenene",
+      "author": "Charlotteshj",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AJellingstenene.jpg"
+    },
+    {
+      "file": "people-andersen.jpg",
+      "title": "Hans Christian Andersen by Thora Hallager 1869",
+      "author": "Thora Hallager",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3AHans_Christian_Andersen_by_Thora_Hallager_1869.jpg"
+    },
+    {
+      "file": "people-kierkegaard.jpg",
+      "title": "Christian Olavius Zeuthen - Søren Kierkegaard som café-gæst - 1843",
+      "author": "Christian Olavius Zeuthen (1812-1890)",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3AChristian_Olavius_Zeuthen_-_S%C3%B8ren_Kierkegaard_som_caf%C3%A9-g%C3%A6st_-_1843.png"
+    },
+    {
+      "file": "people-bohr.jpg",
+      "title": "Niels Bohr",
+      "author": "The American Institute of Physics credits the photo [1] to AB Lagrelius &amp; Westphal , which is the Swedish company used by the Nobel Foun…",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3ANiels_Bohr.jpg"
+    },
+    {
+      "file": "people-blixen.jpg",
+      "title": "Karen Blixen 1959 photo by Carl Van Vechten",
+      "author": "Carl Van Vechten",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3AKaren_Blixen_1959_photo_by_Carl_Van_Vechten.jpg"
+    },
+    {
+      "file": "people-tycho.jpg",
+      "title": "Jacques de Gheyn Ii - Portrait of Tycho Brahe, astronomer (without a hat) - Google Art Project",
+      "author": "Jacques de Gheyn II",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3AJacques_de_Gheyn_Ii_-_Portrait_of_Tycho_Brahe%2C_astronomer_%28without_a_hat%29_-_Google_Art_Project.jpg"
     }
   ],
-  "code": "DK"
+  "code": "DK",
+  "street_food": [
+    {
+      "zh": "紅腸熱狗攤",
+      "note": "街角經典的紅腸熱狗車,配洋蔥酥與甜黃瓜是道地吃法。"
+    },
+    {
+      "zh": "炸魚餅",
+      "where": "新港碼頭攤販",
+      "note": "炸魚餅夾麵包或配沙拉,海港城市常見的輕食。"
+    },
+    {
+      "zh": "肉桂捲",
+      "note": "丹麥式肉桂捲比一般更扎實濕潤,清晨現烤最香。"
+    },
+    {
+      "zh": "熱紅酒",
+      "where": "耶誕市集",
+      "note": "香料紅酒配杏仁與葡萄乾,冬季市集招牌熱飲。"
+    },
+    {
+      "zh": "巧克力軟糖球",
+      "note": "巧克力外殼包蛋白霜與果醬夾心,超市常見零食。"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "仲夏節",
+      "month": "6月23日",
+      "note": "傍晚點燃篝火慶祝夏至,象徵驅趕邪靈迎接夏天。"
+    },
+    {
+      "zh": "羅斯基勒音樂節",
+      "month": "6月底至7月初",
+      "note": "北歐最大搖滾音樂節之一,吸引大量國際樂迷。"
+    },
+    {
+      "zh": "哥本哈根耶誕市集",
+      "month": "11月底至12月",
+      "note": "蒂沃利與新港點燈,熱紅酒與手工藝營造hygge氛圍。"
+    },
+    {
+      "zh": "憲法日",
+      "month": "6月5日",
+      "note": "紀念一八四九年六月憲法頒布的國定假日。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "Hej",
+        "romanized": "Hej"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "Tak",
+        "romanized": "Tak"
+      }
+    ],
+    "money_note": "丹麥是高度無現金社會,幾乎所有商店與攤販都接受卡片與行動支付。",
+    "tipping": "服務費通常已含在帳單中,不強制額外給小費,滿意時可留些零錢。"
+  }
 }

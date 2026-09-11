@@ -50,6 +50,22 @@
       "en": "Mouflon",
       "note": "十九世紀引進的野綿羊,捷克族群數量居歐洲前列。",
       "image": "animals-mouflon.jpg"
+    },
+    {
+      "zh": "歐亞河狸",
+      "en": "Eurasian beaver",
+      "note": "曾在捷克絕跡,近年沿河流重新引入並自然擴散。",
+      "image": "animals-eurasian-beaver.jpg"
+    },
+    {
+      "zh": "烏林梟",
+      "en": "Ural owl",
+      "note": "森林中大型夜行猛禽,舒馬瓦國家公園偶可聽見低沉叫聲。"
+    },
+    {
+      "zh": "歐洲野兔",
+      "en": "European hare",
+      "note": "農田常見的大型野兔,奔跑速度可達時速六十公里以上。"
     }
   ],
   "foods": [
@@ -68,7 +84,8 @@
     {
       "zh": "皮爾森啤酒",
       "en": "Pilsner",
-      "note": "一八四二年誕生於皮爾森的金黃色下層發酵啤酒,風行全球。"
+      "note": "一八四二年誕生於皮爾森的金黃色下層發酵啤酒,風行全球。",
+      "image": "foods-pilsner.jpg"
     },
     {
       "zh": "炸乳酪",
@@ -81,6 +98,21 @@
       "en": "Trdelník",
       "note": "繞在鐵棒上烤、沾糖與堅果的中空捲餅,布拉格觀光區熱賣(其實源自周邊地區)。",
       "image": "foods-trdelnik.jpg"
+    },
+    {
+      "zh": "馬鈴薯煎餅",
+      "en": "Bramborák",
+      "note": "刨絲馬鈴薯加大蒜與馬鬱蘭煎成的鹹香煎餅,市集常見。"
+    },
+    {
+      "zh": "蜂蜜蛋糕",
+      "en": "Medovník",
+      "note": "層層蜂蜜海綿與奶油夾餡疊成的傳統甜點。"
+    },
+    {
+      "zh": "水果糰子",
+      "en": "Ovocné knedlíky",
+      "note": "麵團包整顆水果水煮,撒糖粉與融化奶油食用。"
     }
   ],
   "landmarks": [
@@ -121,7 +153,8 @@
       "latlon": [
         48.8127,
         14.315
-      ]
+      ],
+      "image": "landmarks-cesky-krumlov.jpg"
     },
     {
       "zh": "賽德萊茨人骨教堂",
@@ -130,6 +163,34 @@
       "latlon": [
         49.961,
         15.2886
+      ],
+      "image": "landmarks-sedlec-ossuary.jpg"
+    },
+    {
+      "zh": "卡爾斯坦城堡",
+      "en": "Karlštejn Castle",
+      "note": "查理四世為存放皇室珍寶所建的哥德式城堡。",
+      "latlon": [
+        49.9394,
+        14.1878
+      ]
+    },
+    {
+      "zh": "摩拉維亞喀斯特",
+      "en": "Moravian Karst",
+      "note": "布爾諾以北的鐘乳石洞群,普恩克瓦洞穴可搭船遊覽。",
+      "latlon": [
+        49.3833,
+        16.7167
+      ]
+    },
+    {
+      "zh": "泰爾契歷史城區",
+      "en": "Telč",
+      "note": "文藝復興風格山牆屋圍繞廣場的小鎮,列世界遺產。",
+      "latlon": [
+        49.1858,
+        15.4508
       ]
     }
   ],
@@ -137,17 +198,20 @@
     {
       "zh": "揚·胡斯",
       "en": "Jan Hus",
-      "note": "十五世紀宗教改革先驅,遭火刑後引發胡斯戰爭。"
+      "note": "十五世紀宗教改革先驅,遭火刑後引發胡斯戰爭。",
+      "image": "people-hus.jpg"
     },
     {
       "zh": "安東寧·德弗札克",
       "en": "Antonín Dvořák",
-      "note": "作曲家,《新世界交響曲》與《斯拉夫舞曲》廣為流傳。"
+      "note": "作曲家,《新世界交響曲》與《斯拉夫舞曲》廣為流傳。",
+      "image": "people-dvorak.jpg"
     },
     {
       "zh": "法蘭茲·卡夫卡",
       "en": "Franz Kafka",
-      "note": "以德語寫作的布拉格猶太作家,《變形記》《審判》影響現代文學。"
+      "note": "以德語寫作的布拉格猶太作家,《變形記》《審判》影響現代文學。",
+      "image": "people-kafka.jpg"
     },
     {
       "zh": "米蘭·昆德拉",
@@ -157,7 +221,23 @@
     {
       "zh": "瓦茨拉夫·哈維爾",
       "en": "Václav Havel",
-      "note": "劇作家與異議人士,天鵝絨革命後任總統。"
+      "note": "劇作家與異議人士,天鵝絨革命後任總統。",
+      "image": "people-havel.jpg"
+    },
+    {
+      "zh": "古斯塔夫·馬勒",
+      "en": "Gustav Mahler",
+      "note": "作曲家,生於波希米亞的猶太家庭,交響曲影響深遠。"
+    },
+    {
+      "zh": "阿爾豐斯·慕夏",
+      "en": "Alphonse Mucha",
+      "note": "新藝術運動代表畫家,海報與裝飾風格獨具一格。"
+    },
+    {
+      "zh": "瑪蒂娜·娜拉提洛娃",
+      "en": "Martina Navratilova",
+      "note": "網球選手,冷戰時期歸化美國籍的傳奇球后。"
     }
   ],
   "recommended": [
@@ -326,7 +406,131 @@
       "author": "Scotch Mist",
       "license": "CC BY-SA 4.0",
       "source": "https://commons.wikimedia.org/wiki/File%3APrague_Town_Hall_Clock_2021_16.jpg"
+    },
+    {
+      "file": "foods-pilsner.jpg",
+      "title": "Pilsner Urquell beer glass (1)",
+      "author": "I would appreciate being notified if you use my work outside Wikimedia. Do not copy this image illegally by ignoring the terms of the licens…",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3APilsner_Urquell_beer_glass_%281%29.jpg"
+    },
+    {
+      "file": "landmarks-cesky-krumlov.jpg",
+      "title": "Český Krumlov (Krummau) - panorama - old city",
+      "author": "Pudelek (Marcin Szala)",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3A%C4%8Cesk%C3%BD_Krumlov_%28Krummau%29_-_panorama_-_old_city.JPG"
+    },
+    {
+      "file": "landmarks-sedlec-ossuary.jpg",
+      "title": "Sedlec Ossuary 2010 1",
+      "author": "Perituss",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASedlec_Ossuary_2010_1.jpg"
+    },
+    {
+      "file": "people-hus.jpg",
+      "title": "Vaclav Brozik - Hus",
+      "author": "Václav Brožík",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3AVaclav_Brozik_-_Hus.jpg"
+    },
+    {
+      "file": "people-dvorak.jpg",
+      "title": "Antonín Dvořák, portrait",
+      "author": "Unknown author Unknown author",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3AAnton%C3%ADn_Dvo%C5%99%C3%A1k%2C_portrait.jpg"
+    },
+    {
+      "file": "people-kafka.jpg",
+      "title": "Kafka",
+      "author": "Unknown photographer",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3AKafka.jpg"
+    },
+    {
+      "file": "people-havel.jpg",
+      "title": "Václav Havel in 1990 portrait 2",
+      "author": "Matica slovenská",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AV%C3%A1clav_Havel_in_1990_portrait_2.jpg"
+    },
+    {
+      "file": "animals-eurasian-beaver.jpg",
+      "title": "Castor fiber, Prague, Rokytka river",
+      "author": "Skot",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Castor_fiber_(Bobr_evropský),_Prague,_Rokytka_river.jpg"
     }
   ],
-  "code": "CZ"
+  "code": "CZ",
+  "street_food": [
+    {
+      "zh": "烤香腸",
+      "where": "耶誕市集/啤酒花園",
+      "note": "粗煙燻香腸現烤,配黃芥末與麵包食用。"
+    },
+    {
+      "zh": "蒜香馬鈴薯煎餅攤",
+      "note": "街頭小攤現煎的蒜香馬鈴薯餅,趁熱撒鹽最香。"
+    },
+    {
+      "zh": "煙囪捲餅冰淇淋",
+      "where": "布拉格舊城區",
+      "note": "煙囪捲餅裡塞一球冰淇淋,是觀光區的變化版吃法。"
+    },
+    {
+      "zh": "起司炸餅堡",
+      "note": "炸乳酪夾進麵包當漢堡吃,學生族群的宵夜首選。"
+    },
+    {
+      "zh": "薑餅",
+      "where": "耶誕市集",
+      "note": "香料薑餅裝飾成心形或人形,常見的伴手禮。"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "布拉格之春音樂節",
+      "month": "5月",
+      "note": "始於一九四六年的國際古典音樂節,開幕曲固定演出史麥塔納《我的祖國》。"
+    },
+    {
+      "zh": "復活節潑水傳統",
+      "month": "3月或4月",
+      "note": "男孩以編織柳枝鞭輕打女孩祈福,並互贈彩繪雞蛋。"
+    },
+    {
+      "zh": "馬迪格拉狂歡面具節",
+      "month": "2月",
+      "note": "齋戒期前的傳統面具遊行,鄉村地區保留最完整。"
+    },
+    {
+      "zh": "布拉格耶誕市集",
+      "month": "12月",
+      "note": "舊城廣場點燈,熱紅酒與薑餅飄香,是全歐洲最熱門的耶誕市集之一。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "Ahoj(非正式)",
+        "romanized": "Ahoj"
+      },
+      {
+        "phrase": "你好",
+        "local": "Dobrý den(正式)",
+        "romanized": "Dobrý den"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "Děkuji",
+        "romanized": "Děkuji"
+      }
+    ],
+    "money_note": "信用卡與行動支付在城市普及,但鄉間小店仍偏好使用捷克克朗現金。",
+    "tipping": "餐廳習慣抹去尾數或加10%左右,非強制但相當普遍。"
+  }
 }

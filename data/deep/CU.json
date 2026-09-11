@@ -48,6 +48,22 @@
       "en": "Polymita painted snail",
       "note": "古巴東部特有的樹蝸牛,螺殼有鮮豔螺旋條紋,因採集而受威脅。",
       "image": "CU-a-polymita.jpg"
+    },
+    {
+      "zh": "古巴岩鬣蜥",
+      "en": "Cuban rock iguana",
+      "note": "分佈於離島與海岸礁岩的大型蜥蜴,青年島一帶常見。",
+      "image": "animals-cuban-iguana.jpg"
+    },
+    {
+      "zh": "古巴啄木鳥",
+      "en": "Fernandina's flicker",
+      "note": "世上最稀有的啄木鳥之一,僅見於薩帕塔沼澤一帶。"
+    },
+    {
+      "zh": "海牛",
+      "en": "West Indian manatee",
+      "note": "沿海與河口偶見的溫馴草食海洋動物,受保育關注。"
     }
   ],
   "foods": [
@@ -78,6 +94,21 @@
       "en": "Cuban sandwich",
       "note": "古巴麵包夾烤豬、火腿、瑞士起司、酸黃瓜與芥末,壓熱後食用。",
       "image": "CU-f-sandwich.jpg"
+    },
+    {
+      "zh": "古巴咖啡",
+      "en": "Café Cubano",
+      "note": "濃縮咖啡加糖快速攪打出泡沫,街角小窗口現點現喝。"
+    },
+    {
+      "zh": "莫吼希多雞尾酒",
+      "en": "Mojito",
+      "note": "薄荷、萊姆與蘭姆酒調成,相傳是海明威最愛。"
+    },
+    {
+      "zh": "古巴玉米糕",
+      "en": "Tamal",
+      "note": "玉米粉包肉蒸熟或水煮,以玉米葉包裹的家常小吃。"
     }
   ],
   "landmarks": [
@@ -129,6 +160,34 @@
         -82.3564
       ],
       "image": "CU-l-morro.jpg"
+    },
+    {
+      "zh": "聖地牙哥莫羅城堡",
+      "en": "Castillo del Morro, Santiago",
+      "note": "東部海港的十七世紀要塞,與哈瓦那同名城堡不同,列世界遺產。",
+      "latlon": [
+        19.9706,
+        -75.869
+      ]
+    },
+    {
+      "zh": "巴拉德羅海灘",
+      "en": "Varadero Beach",
+      "note": "半島上二十公里長的白沙灘,是加勒比海知名度假地。",
+      "latlon": [
+        23.1367,
+        -81.2833
+      ]
+    },
+    {
+      "zh": "切·格瓦拉紀念館與陵墓",
+      "en": "Che Guevara Mausoleum",
+      "note": "聖克拉拉的革命紀念建築群,安放格瓦拉的遺骸。",
+      "latlon": [
+        22.3961,
+        -79.9925
+      ],
+      "image": "landmarks-che-guevara-mausoleum.jpg"
     }
   ],
   "people": [
@@ -157,6 +216,21 @@
       "zh": "塞莉亞·克魯茲",
       "en": "Celia Cruz",
       "note": "「莎莎女王」,古巴裔歌手,流亡美國後將古巴音樂推向世界。"
+    },
+    {
+      "zh": "亞歷霍·卡彭鐵爾",
+      "en": "Alejo Carpentier",
+      "note": "小說家,魔幻現實主義文學的先驅人物之一。"
+    },
+    {
+      "zh": "孔帕伊·塞孔多",
+      "en": "Compay Segundo",
+      "note": "音樂家,《樂士浮生錄》樂團的靈魂人物之一。"
+    },
+    {
+      "zh": "卡洛斯·芬萊",
+      "en": "Carlos Finlay",
+      "note": "醫師,發現蚊子傳播黃熱病的機制,影響全球公衛。"
     }
   ],
   "recommended": [
@@ -341,7 +415,82 @@
       "author": "Keystone-France",
       "license": "Public domain",
       "source": "https://commons.wikimedia.org/wiki/File:Jos%C3%A9_Ra%C3%BAl_Capablanca_1931.jpg"
+    },
+    {
+      "file": "animals-cuban-iguana.jpg",
+      "title": "Cuban rock iguana, Cayo Largo",
+      "author": "Panther",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Iguana_at_the_Iguanas_island_near_Cayo_Largo_shot_01.jpg"
+    },
+    {
+      "file": "landmarks-che-guevara-mausoleum.jpg",
+      "title": "Che Guevara Mausoleum, Santa Clara, Cuba",
+      "author": "Jan Pešula",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Che_Guevara_Mausoleum_Santa_Clara_Cuba.jpg"
     }
   ],
-  "code": "CU"
+  "code": "CU",
+  "street_food": [
+    {
+      "zh": "古巴咖啡窗口攤",
+      "note": "街角小窗口現點現做濃縮咖啡,加糖攪出綿密泡沫。"
+    },
+    {
+      "zh": "炸豬皮薄片",
+      "note": "薄脆炸豬皮或蕉片,路邊小攤常見下酒零食。"
+    },
+    {
+      "zh": "甘蔗汁",
+      "note": "現榨甘蔗汁加檬檬,街頭小販常見清涼飲品。"
+    },
+    {
+      "zh": "私營披薩窗口",
+      "where": "哈瓦那街角小店",
+      "note": "薄餅現烤的平價街頭披薩,常配辣油食用。"
+    },
+    {
+      "zh": "炸蕉餅",
+      "note": "蕉泥或黑豆炸成小餅,街頭攤常見鹹香小吃。"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "哈瓦那雪茄節",
+      "month": "2月",
+      "note": "國際雪茄愛好者齊聚,品評新年份雪茄與參觀種植區。"
+    },
+    {
+      "zh": "聖地牙哥狂歡節",
+      "month": "7月",
+      "note": "最具非洲色彩的狂歡節,康加遊行與街頭樂隊熱鬧非凡。"
+    },
+    {
+      "zh": "哈瓦那國際爵士音樂節",
+      "month": "12月或1月",
+      "note": "匯集古巴與國際爵士樂手的年度音樂盛事。"
+    },
+    {
+      "zh": "革命勝利紀念日",
+      "month": "1月1日",
+      "note": "紀念一九五九年革命成功的全國性節日。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "Hola",
+        "romanized": "Hola"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "Gracias",
+        "romanized": "Gracias"
+      }
+    ],
+    "money_note": "現金仍是主流,信用卡受國際制裁影響幾乎無法使用,建議帶足現金兌換。",
+    "tipping": "服務業普遍依賴小費補充收入,餐廳與導遊給5–10%小費是常見禮數。"
+  }
 }

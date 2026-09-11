@@ -52,6 +52,21 @@
       "en": "Griffon vulture",
       "note": "曾廣布,今在部分峽谷有小規模族群與復育。",
       "image": "BA-a-vulture.jpg"
+    },
+    {
+      "zh": "歐亞水獺",
+      "en": "Eurasian otter",
+      "note": "棲息於內雷特瓦河等水系,對水質乾淨度要求高。"
+    },
+    {
+      "zh": "金鵰",
+      "en": "Golden eagle",
+      "note": "盤旋於山區峭壁上的大型猛禽,是林區生態指標。"
+    },
+    {
+      "zh": "多瑙鮭",
+      "en": "Huchen (Danube salmon)",
+      "note": "歐洲最大的淡水鮭科魚類,棲息薩瓦河流域支流。"
     }
   ],
   "foods": [
@@ -82,6 +97,21 @@
       "en": "Bosanska kahva",
       "note": "銅壺(džezva)煮的細粉咖啡,配方糖與土耳其軟糖。",
       "image": "BA-f-coffee.jpg"
+    },
+    {
+      "zh": "阿伊瓦爾紅椒醬",
+      "en": "Ajvar",
+      "note": "烤紅椒與茄子熬成的濃稠醬,塗麵包或配烤肉皆宜。"
+    },
+    {
+      "zh": "包心菜捲",
+      "en": "Sarma",
+      "note": "醃酸白菜葉包絞肉與米,長時間慢燉入味。"
+    },
+    {
+      "zh": "糖漿椰棗形餅",
+      "en": "Hurmašice",
+      "note": "椰棗形狀的核仁小餅浸糖漿,是常見的節慶甜點。"
     }
   ],
   "landmarks": [
@@ -133,6 +163,34 @@
         43.7825,
         19.2881
       ]
+    },
+    {
+      "zh": "亞伊采瀑布",
+      "en": "Jajce Waterfall",
+      "note": "位於城中心、普利瓦河直落而下的市內瀑布。",
+      "latlon": [
+        44.3417,
+        17.2667
+      ],
+      "image": "landmarks-jajce-waterfall.jpg"
+    },
+    {
+      "zh": "特拉夫尼克古堡",
+      "en": "Travnik Fortress",
+      "note": "中世紀山城要塞,曾是鄂圖曼時期波士尼亞總督駐地。",
+      "latlon": [
+        44.2333,
+        17.6667
+      ]
+    },
+    {
+      "zh": "塞拉耶佛隧道博物館",
+      "en": "Sarajevo Tunnel of Hope",
+      "note": "圍城期間居民挖掘的地下補給通道遺址。",
+      "latlon": [
+        43.8225,
+        18.3346
+      ]
     }
   ],
   "people": [
@@ -160,6 +218,21 @@
       "zh": "埃丁·哲科",
       "en": "Edin Džeko",
       "note": "足球前鋒,波赫國家隊史上頭號射手。"
+    },
+    {
+      "zh": "特弗爾特科一世",
+      "en": "Tvrtko I",
+      "note": "1377年加冕為波士尼亞國王,在位期間國勢達到高峰。"
+    },
+    {
+      "zh": "丹尼斯·塔諾維奇",
+      "en": "Danis Tanović",
+      "note": "電影導演,以描寫波士尼亞戰爭的作品獲奧斯卡最佳外語片。"
+    },
+    {
+      "zh": "茲拉塔·菲利波維奇",
+      "en": "Zlata Filipović",
+      "note": "童年戰時日記出版成書,被稱為「塞拉耶佛的安妮」。"
     }
   ],
   "recommended": [
@@ -351,7 +424,75 @@
       "author": "old_s",
       "license": "CC0",
       "source": "https://commons.wikimedia.org/wiki/File%3AKravica_waterfall_july_2012.jpg"
+    },
+    {
+      "file": "landmarks-jajce-waterfall.jpg",
+      "title": "Jajce Waterfall Total",
+      "author": "Julian Nyča",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Jajce_Waterfall_Total.jpg"
     }
   ],
-  "code": "BA"
+  "code": "BA",
+  "street_food": [
+    {
+      "zh": "塞拉耶佛烤肉腸攤",
+      "note": "ćevapi 現烤現裝,配洋蔥與軟麵餅,市集裡最常見的快食。"
+    },
+    {
+      "zh": "波奇克起司捲",
+      "note": "螺旋狀酥皮捲白起司,街邊烘焙店現烤現賣。"
+    },
+    {
+      "zh": "波士尼亞咖啡攤",
+      "note": "銅壺小火慢煮的細粉咖啡,配一小塊軟糖。"
+    },
+    {
+      "zh": "烤玉米攤",
+      "note": "夏季市集常見的炭烤玉米,刷鹽水後直接啃食。"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "塞拉耶佛電影節",
+      "month": "8月",
+      "note": "巴爾幹地區重要的國際電影節,戰後由影人發起延續至今。"
+    },
+    {
+      "zh": "拜拉姆(開齋節與宰牲節)",
+      "month": "依伊斯蘭曆",
+      "note": "穆斯林社群的重要節日,家族聚餐並互相拜訪。"
+    },
+    {
+      "zh": "巴什查爾希亞之夜文化活動",
+      "month": "7月",
+      "note": "塞拉耶佛老城夏季舉辦的音樂與手工藝市集活動。"
+    },
+    {
+      "zh": "東正教聖誕節",
+      "month": "1月7日",
+      "note": "依儒略曆慶祝,塞族社群的重要宗教節日。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "Zdravo",
+        "romanized": "Zdravo"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "Hvala",
+        "romanized": "Hvala"
+      },
+      {
+        "phrase": "再見",
+        "local": "Doviđenja",
+        "romanized": "Dovidjenja"
+      }
+    ],
+    "money_note": "城市商店與餐廳多可刷卡,但市集與小攤仍以可兌換馬克現金為主。",
+    "tipping": "沒有硬性規定,餐廳留消費金額約10%或湊整付款是普遍作法。"
+  }
 }

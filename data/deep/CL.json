@@ -50,6 +50,22 @@
       "en": "Southern pudú",
       "note": "世界最小的鹿之一,肩高約四十公分,棲息南部溫帶雨林。",
       "image": "CL-a-pudu.jpg"
+    },
+    {
+      "zh": "智利火焰鶴",
+      "en": "Chilean flamingo",
+      "note": "高原鹽湖常見粉紅水鳥,阿他加馬地區數量眾多。",
+      "image": "animals-chilean-flamingo.jpg"
+    },
+    {
+      "zh": "南美海獅",
+      "en": "South American sea lion",
+      "note": "沿岸港口常見,瓦爾帕萊索碼頭常有牠們曬太陽。"
+    },
+    {
+      "zh": "南美灰狐",
+      "en": "Culpeo",
+      "note": "分布廣泛的野生犬科,常見於百內國家公園步道旁。"
     }
   ],
   "foods": [
@@ -82,6 +98,21 @@
       "en": "Curanto",
       "note": "奇洛埃島的地坑石烤料理,以貝類、肉類與馬鈴薯餅層層堆疊燜熟。",
       "image": "CL-f-curanto.jpg"
+    },
+    {
+      "zh": "智利烤肉",
+      "en": "Asado",
+      "note": "週末家庭聚會的炭烤牛肉大餐,與阿根廷asado略異。"
+    },
+    {
+      "zh": "智利玉米粽",
+      "en": "Humita",
+      "note": "磨碎新鮮玉米調味後包玉米葉蒸煮,夏季常見小吃。"
+    },
+    {
+      "zh": "皮斯可酸酒",
+      "en": "Pisco Sour",
+      "note": "皮斯可白蘭地加檸檬汁與糖調成,智利國飲之一。"
     }
   ],
   "landmarks": [
@@ -131,6 +162,34 @@
         -46.6469,
         -72.6236
       ]
+    },
+    {
+      "zh": "拉諾拉拉庫採石場",
+      "en": "Rano Raraku",
+      "note": "復活節島上摩艾石像的誕生地,山坡散布未完成雕像。",
+      "latlon": [
+        -27.1225,
+        -109.2886
+      ]
+    },
+    {
+      "zh": "聖克里斯托巴爾山",
+      "en": "Cerro San Cristóbal",
+      "note": "首都聖地牙哥制高點,山頂立有巨型聖母像。",
+      "latlon": [
+        -33.4244,
+        -70.6349
+      ],
+      "image": "landmarks-cerro-san-cristobal.jpg"
+    },
+    {
+      "zh": "塔蒂奧地熱噴泉",
+      "en": "El Tatio geysers",
+      "note": "世界海拔最高的地熱噴泉群,清晨蒸氣柱景觀最壯觀。",
+      "latlon": [
+        -22.3372,
+        -68.0128
+      ]
     }
   ],
   "people": [
@@ -158,6 +217,21 @@
       "zh": "伊莎貝·阿言德",
       "en": "Isabel Allende",
       "note": "小說家,《精靈之屋》為魔幻寫實代表作,是最暢銷的西語作家之一。"
+    },
+    {
+      "zh": "維奧萊塔·帕拉",
+      "en": "Violeta Parra",
+      "note": "民謠音樂家與詩人,《人生萬歲》作者,新民歌運動先驅。"
+    },
+    {
+      "zh": "亞歷西斯·桑切斯",
+      "en": "Alexis Sánchez",
+      "note": "智利足球明星,長年效力歐洲頂級聯賽球隊。"
+    },
+    {
+      "zh": "米歇爾·巴切萊特",
+      "en": "Michelle Bachelet",
+      "note": "智利首位女總統,後任聯合國人權事務高級專員。"
     }
   ],
   "recommended": [
@@ -349,7 +423,82 @@
       "author": "Diego Delso",
       "license": "CC BY-SA 4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Valle_de_la_Luna,_San_Pedro_de_Atacama,_Chile,_2016-02-01,_DD_160.JPG"
+    },
+    {
+      "file": "animals-chilean-flamingo.jpg",
+      "title": "Phoenicopterus chilensis at Salar de Atacama",
+      "author": "Haplochromis",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Phoenicopterus_chilensis_at_Salar_de_Atacama_6.JPG"
+    },
+    {
+      "file": "landmarks-cerro-san-cristobal.jpg",
+      "title": "Vista panorámica de Santiago desde el cerro San Cristóbal",
+      "author": "Rjcastillo",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Vista_Panorámica_de_Santiago_desde_el_cerro_San_Cristóbal.jpg"
     }
   ],
-  "code": "CL"
+  "code": "CL",
+  "street_food": [
+    {
+      "zh": "起司炸餡餅",
+      "note": "街邊小攤現炸起司口味餡餅,趁熱吃最香濃。"
+    },
+    {
+      "zh": "烤玉米",
+      "note": "路邊攤現烤玉米棒,刷上鹽與奶油風味十足。"
+    },
+    {
+      "zh": "皮斯可酸酒攤",
+      "note": "海邊或市集常見現調 Pisco Sour,酸甜開胃。"
+    },
+    {
+      "zh": "海鮮炸餡餅",
+      "where": "瓦爾帕萊索漁市",
+      "note": "海鮮口味餡餅,是港口城市常見的平價小吃。"
+    },
+    {
+      "zh": "焦糖牛奶捲餅",
+      "note": "薄餅夾焦糖牛奶醬,街頭甜點攤常見人氣款。"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "智利國慶周",
+      "month": "9月18日前後",
+      "note": "全國放假慶祝獨立,吃empanada、跳Cueca舞、放風箏。"
+    },
+    {
+      "zh": "復活節島 Tapati 節",
+      "month": "2月",
+      "note": "拉帕努伊傳統運動、雕刻與舞蹈競賽,展現玻里尼西亞文化。"
+    },
+    {
+      "zh": "拉蒂拉納聖母節",
+      "month": "7月",
+      "note": "北部大型宗教嘉年華,融合原住民與西班牙元素的面具舞。"
+    },
+    {
+      "zh": "瓦爾帕萊索跨年煙火",
+      "month": "12月31日",
+      "note": "太平洋沿岸城市舉辦南美最大跨年煙火秀之一。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "Hola",
+        "romanized": "Hola"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "Gracias",
+        "romanized": "Gracias"
+      }
+    ],
+    "money_note": "城市信用卡與行動支付普及,市集與小鎮小額消費仍多用現金。",
+    "tipping": "餐廳帳單常見加收10%服務費(propina),多數人會額外留這筆錢。"
+  }
 }

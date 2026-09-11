@@ -50,6 +50,21 @@
       "en": "Lipizzaner",
       "note": "維也納西班牙騎術學校的白馬,在皮貝爾種馬場育成。",
       "image": "animals-lipizzaner.jpg"
+    },
+    {
+      "zh": "紅鹿",
+      "en": "Red deer",
+      "note": "阿爾卑斯林地常見的大型鹿科,秋季發情期公鹿會低吼求偶。"
+    },
+    {
+      "zh": "阿爾卑斯山椒魚",
+      "en": "Alpine salamander",
+      "note": "全黑無斑的山椒魚,罕見於高海拔潮濕林地,直接產下幼體。"
+    },
+    {
+      "zh": "歐洲野貓",
+      "en": "European wildcat",
+      "note": "外型似家貓但體型較壯,棲息於邊境森林深處。"
     }
   ],
   "foods": [
@@ -68,7 +83,8 @@
     {
       "zh": "蘋果卷",
       "en": "Apfelstrudel",
-      "note": "薄如紙的酥皮包裹肉桂蘋果餡,常配香草醬。"
+      "note": "薄如紙的酥皮包裹肉桂蘋果餡,常配香草醬。",
+      "image": "foods-apfelstrudel.jpg"
     },
     {
       "zh": "皇帝煎餅",
@@ -81,6 +97,21 @@
       "en": "Tafelspitz",
       "note": "牛臀肉在高湯中慢煮,佐蘋果辣根醬,傳為法蘭茲·約瑟夫皇帝所愛。",
       "image": "foods-tafelspitz.jpg"
+    },
+    {
+      "zh": "起司麵疙瘩",
+      "en": "Kasnocken",
+      "note": "麵疙瘩拌融化山區乳酪與炸洋蔥,山區小屋常見暖食。"
+    },
+    {
+      "zh": "維也納香腸",
+      "en": "Würstel",
+      "note": "街頭香腸攤的經典選項,配芥末與麵包簡單飽足。"
+    },
+    {
+      "zh": "林茲塔",
+      "en": "Linzer torte",
+      "note": "傳為世界最古老的水果塔之一,格紋酥皮包覆紅醋栗果醬。"
     }
   ],
   "landmarks": [
@@ -121,7 +152,8 @@
       "latlon": [
         47.7981,
         13.047
-      ]
+      ],
+      "image": "landmarks-salzburg.jpg"
     },
     {
       "zh": "大格洛克納高山公路",
@@ -130,6 +162,34 @@
       "latlon": [
         47.0742,
         12.83
+      ],
+      "image": "landmarks-grossglockner.jpg"
+    },
+    {
+      "zh": "梅爾克修道院",
+      "en": "Melk Abbey",
+      "note": "俯瞰多瑙河與瓦豪河谷的巴洛克本篤會修道院。",
+      "latlon": [
+        48.2264,
+        15.3286
+      ]
+    },
+    {
+      "zh": "美景宮",
+      "en": "Belvedere Palace",
+      "note": "巴洛克夏宮,收藏克林姆《吻》等重要畫作。",
+      "latlon": [
+        48.1913,
+        16.381
+      ]
+    },
+    {
+      "zh": "因斯布魯克金頂屋",
+      "en": "Golden Roof",
+      "note": "老城地標,兩千多片鎏金瓦片覆頂的陽台建築。",
+      "latlon": [
+        47.2682,
+        11.3928
       ]
     }
   ],
@@ -137,27 +197,47 @@
     {
       "zh": "莫札特",
       "en": "Wolfgang Amadeus Mozart",
-      "note": "生於薩爾茲堡的作曲家,古典時期的代表人物。"
+      "note": "生於薩爾茲堡的作曲家,古典時期的代表人物。",
+      "image": "people-mozart.jpg"
     },
     {
       "zh": "約瑟夫·海頓",
       "en": "Joseph Haydn",
-      "note": "被譽為「交響曲之父」與弦樂四重奏形式的奠基者。"
+      "note": "被譽為「交響曲之父」與弦樂四重奏形式的奠基者。",
+      "image": "people-haydn.jpg"
     },
     {
       "zh": "西格蒙德·佛洛伊德",
       "en": "Sigmund Freud",
-      "note": "精神分析學創始人,長年在維也納行醫與著述。"
+      "note": "精神分析學創始人,長年在維也納行醫與著述。",
+      "image": "people-freud.jpg"
     },
     {
       "zh": "瑪麗亞·特蕾莎",
       "en": "Maria Theresa",
-      "note": "唯一以女性身分統治哈布斯堡領地的君主,推行十八世紀改革。"
+      "note": "唯一以女性身分統治哈布斯堡領地的君主,推行十八世紀改革。",
+      "image": "people-mariatheresa.jpg"
     },
     {
       "zh": "古斯塔夫·克林姆",
       "en": "Gustav Klimt",
-      "note": "維也納分離派畫家,代表作《吻》以金箔裝飾聞名。"
+      "note": "維也納分離派畫家,代表作《吻》以金箔裝飾聞名。",
+      "image": "people-klimt.jpg"
+    },
+    {
+      "zh": "法蘭茲·舒伯特",
+      "en": "Franz Schubert",
+      "note": "浪漫主義早期作曲家,以藝術歌曲創作聞名於世。"
+    },
+    {
+      "zh": "埃爾溫·薛丁格",
+      "en": "Erwin Schrödinger",
+      "note": "物理學家,量子力學波動方程與「薛丁格的貓」思想實驗提出者。"
+    },
+    {
+      "zh": "阿諾·史瓦辛格",
+      "en": "Arnold Schwarzenegger",
+      "note": "健美選手出身的演員,後當選加州州長。"
     }
   ],
   "recommended": [
@@ -331,7 +411,125 @@
       "author": "David Kernan",
       "license": "CC BY 4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Panoramic_view_of_Hallstatt_village_and_shoreline_from_lake.jpg"
+    },
+    {
+      "file": "foods-apfelstrudel.jpg",
+      "title": "Apfelstrudel in Österreich",
+      "author": "Naturpuur",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Apfelstrudel_in_%C3%96sterreich.jpg"
+    },
+    {
+      "file": "landmarks-salzburg.jpg",
+      "title": "Salzburg grosse Panorama original",
+      "author": "Acritely",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Salzburg_grosse_Panorama_original.jpg"
+    },
+    {
+      "file": "landmarks-grossglockner.jpg",
+      "title": "Großglockner-hochalpenstraße5755",
+      "author": "Ewald Gabardi",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Gro%C3%9Fglockner-hochalpenstra%C3%9Fe5755.JPG"
+    },
+    {
+      "file": "people-mozart.jpg",
+      "title": "Barbara Krafft - Porträt Wolfgang Amadeus Mozart (1819)",
+      "author": "Barbara Krafft",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Barbara_Krafft_-_Portr%C3%A4t_Wolfgang_Amadeus_Mozart_(1819).jpg"
+    },
+    {
+      "file": "people-haydn.jpg",
+      "title": "Francesco Bartolozzi - Portrait of Joseph Haydn - B1994.4.667 - Yale Center for British Art",
+      "author": "Francesco Bartolozzi",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Francesco_Bartolozzi_-_Portrait_of_Joseph_Haydn_-_B1994.4.667_-_Yale_Center_for_British_Art.jpg"
+    },
+    {
+      "file": "people-freud.jpg",
+      "title": "Sigmund Freud LIFE",
+      "author": "Max Halberstadt",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Sigmund_Freud_LIFE.jpg"
+    },
+    {
+      "file": "people-mariatheresa.jpg",
+      "title": "Empress Maria-Theresia De Visch",
+      "author": "Matthias de Visch / After Martin van Meytens",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Empress_Maria-Theresia_De_Visch.jpg"
+    },
+    {
+      "file": "people-klimt.jpg",
+      "title": "The Kiss - Gustav Klimt - Google Cultural Institute",
+      "author": "Gustav Klimt",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:The_Kiss_-_Gustav_Klimt_-_Google_Cultural_Institute.jpg"
     }
   ],
-  "code": "AT"
+  "code": "AT",
+  "street_food": [
+    {
+      "zh": "香腸攤(Würstelstand)",
+      "note": "街角常見的香腸小攤,現烤現切配麵包與芥末醬。"
+    },
+    {
+      "zh": "起司麵包捲",
+      "note": "烘焙店常見的簡便早餐,外層灑起司碎烤至微焦。"
+    },
+    {
+      "zh": "栗子攤",
+      "note": "秋冬街頭常見現烤糖炒栗子,紙袋裝著邊走邊吃。"
+    },
+    {
+      "zh": "熱紅酒攤",
+      "note": "聖誕市集裡加了肉桂丁香的熱紅酒,是冬季市集必喝。",
+      "where": "聖誕市集"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "維也納新年音樂會",
+      "month": "1月1日",
+      "note": "金色大廳的華爾滋新年音樂會,全球轉播歷史悠久。"
+    },
+    {
+      "zh": "薩爾茲堡音樂節",
+      "month": "7-8月",
+      "note": "以莫札特故鄉為舞台的古典音樂與歌劇盛會。"
+    },
+    {
+      "zh": "聖誕市集季",
+      "month": "11月底至12月",
+      "note": "各城廣場擺滿木屋攤位,賣手工藝品與熱紅酒。"
+    },
+    {
+      "zh": "舞會季",
+      "month": "1-2月",
+      "note": "維也納傳統華爾滋舞會季節,歌劇院舞會最受矚目。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "Hallo",
+        "romanized": "Hallo"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "Danke",
+        "romanized": "Danke"
+      },
+      {
+        "phrase": "再見",
+        "local": "Auf Wiedersehen",
+        "romanized": "Auf Wiedersehen"
+      }
+    ],
+    "money_note": "卡片與行動支付普及,但小店與傳統咖啡館部分仍偏好現金,建議隨身備小額歐元。",
+    "tipping": "帳單不含服務費,餐廳習慣將金額湊整或加5–10%作為小費。"
+  }
 }

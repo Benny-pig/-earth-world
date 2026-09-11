@@ -47,6 +47,21 @@
       "zh": "亞美尼亞鷗",
       "en": "Armenian gull",
       "note": "繁殖於賽凡湖等高山湖泊的鷗類,分布局限於高加索到中東一帶。"
+    },
+    {
+      "zh": "賽凡湖鱒魚",
+      "en": "Sevan trout (Ishkhan)",
+      "note": "賽凡湖特有鱒魚,曾因過度捕撈與水位下降而銳減。"
+    },
+    {
+      "zh": "亞美尼亞蝰蛇",
+      "en": "Armenian viper",
+      "note": "分布於南部乾燥山地的毒蛇,體色偏灰褐。"
+    },
+    {
+      "zh": "高加索紅鹿",
+      "en": "Caucasian red deer",
+      "note": "曾一度稀少,經保育計畫在山林中逐漸恢復族群。"
     }
   ],
   "foods": [
@@ -78,6 +93,21 @@
       "en": "Gata",
       "note": "加了奶酥餡的圓形甜麵包,不同城鎮有各自的花紋與做法。",
       "image": "AM-f-gata.jpg"
+    },
+    {
+      "zh": "金加洛夫哈茨",
+      "en": "Zhingyalov hats",
+      "note": "麵皮包七種以上野菜香草烤或煎,源自阿爾察赫地區。"
+    },
+    {
+      "zh": "南瓜鑄飯",
+      "en": "Ghapama",
+      "note": "南瓜挖空填入米飯、果乾與核桃烤製,節慶常見。"
+    },
+    {
+      "zh": "巴斯圖爾馬",
+      "en": "Basturma",
+      "note": "香料醃製風乾牛肉,切薄片配麵包或當下酒菜。"
     }
   ],
   "landmarks": [
@@ -130,6 +160,34 @@
         46.2503
       ],
       "image": "AM-l-tatev.jpg"
+    },
+    {
+      "zh": "諾拉凡克修道院",
+      "en": "Noravank",
+      "note": "建於險峻峽谷紅岩間的13世紀修道院,以精細石雕聞名。",
+      "latlon": [
+        39.6961,
+        45.2233
+      ],
+      "image": "landmarks-noravank.jpg"
+    },
+    {
+      "zh": "賽凡湖修道院",
+      "en": "Sevanavank",
+      "note": "建在賽凡湖畔小半島上的中世紀修道院,可遠眺湖景。",
+      "latlon": [
+        40.6167,
+        44.9333
+      ]
+    },
+    {
+      "zh": "葉里溫階梯藝廊",
+      "en": "Cascade Complex",
+      "note": "巨型階梯式建築兼戶外雕塑公園,登頂可望亞拉拉特山。",
+      "latlon": [
+        40.1937,
+        44.5133
+      ]
     }
   ],
   "people": [
@@ -158,6 +216,21 @@
       "zh": "夏爾·阿茲納吾爾",
       "en": "Charles Aznavour",
       "note": "法國-亞美尼亞裔歌手與演員,二十世紀最具代表性的法語香頌歌手之一。"
+    },
+    {
+      "zh": "威廉·薩羅揚",
+      "en": "William Saroyan",
+      "note": "亞美尼亞裔美國作家,曾獲普立茲獎與奧斯卡劇本獎。"
+    },
+    {
+      "zh": "提格朗·佩特羅相",
+      "en": "Tigran Petrosian",
+      "note": "第九任國際棋王,以防守見長的西洋棋大師。"
+    },
+    {
+      "zh": "加雷金二世",
+      "en": "Karekin II",
+      "note": "現任亞美尼亞使徒教會最高牧首。"
     }
   ],
   "recommended": [
@@ -349,7 +422,75 @@
       "author": "Yerevantsi",
       "license": "CC BY 4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Tigranes_coin_Vienna-1.jpg"
+    },
+    {
+      "file": "landmarks-noravank.jpg",
+      "title": "Noravank panorama",
+      "author": "Alexander Naumov",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Noravank_panorama.jpg"
     }
   ],
-  "code": "AM"
+  "code": "AM",
+  "street_food": [
+    {
+      "zh": "烤肉夾餅",
+      "note": "khorovats 烤肉切片夾入薄餅,路邊攤常見快食選項。"
+    },
+    {
+      "zh": "石窯烤餅捲",
+      "note": "lavash 現烤現捲起司或蜂蜜,趁熱吃最香。"
+    },
+    {
+      "zh": "葵花籽與乾果攤",
+      "note": "市集裡秤重賣的炒葵花籽、杏仁與各式乾果。"
+    },
+    {
+      "zh": "石榴汁",
+      "note": "秋季市集現榨石榴汁,色澤鮮紅、酸甜提神。"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "主顯節(基督受洗日)",
+      "month": "1月6日",
+      "note": "教堂舉行水的祝聖儀式,信眾至河邊或湖邊取聖水。"
+    },
+    {
+      "zh": "復活節",
+      "month": "依教會曆(3-4月)",
+      "note": "東正教傳統的重要節日,家庭聚餐並染彩蛋。"
+    },
+    {
+      "zh": "凡達瓦爾節(變容節)",
+      "month": "7月中",
+      "note": "傳統的潑水節慶,年輕人互相潑水嬉戲慶祝豐收。"
+    },
+    {
+      "zh": "獨立日",
+      "month": "9月21日",
+      "note": "紀念1991年恢復獨立,首都有閱兵與音樂會。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "Բարև",
+        "romanized": "Barev"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "Շնորհակալություն",
+        "romanized": "Shnorhakalutyun"
+      },
+      {
+        "phrase": "再見",
+        "local": "Ցտեսություն",
+        "romanized": "Tsdesutyun"
+      }
+    ],
+    "money_note": "首都商店與餐廳多可刷卡,鄉間小店與市集仍以德拉姆現金交易為主。",
+    "tipping": "沒有強制小費文化,餐廳留消費金額5–10%作為服務感謝已相當足夠。"
+  }
 }
