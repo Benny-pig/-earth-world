@@ -184,6 +184,25 @@ export function createEncyclopedia() {
       h += section("必買伴手禮", `<ul class="enc-buys">` + d.souvenirs.map((s) =>
         `<li><b>${esc(s.zh)}</b>${s.note ? ` — ${esc(s.note)}` : ""}${s.where ? ` <span class="enc-dim">(${esc(s.where)})</span>` : ""}</li>`).join("") + `</ul>`);
 
+    if (Array.isArray(d.street_food) && d.street_food.length)
+      h += section("經典小吃 / 夜市", `<ul class="enc-buys enc-street-food">` + d.street_food.map((s) =>
+        `<li><b>${esc(s.zh)}</b>${s.note ? ` — ${esc(s.note)}` : ""}${s.where ? ` <span class="enc-dim">(${esc(s.where)})</span>` : ""}</li>`).join("") + `</ul>`);
+
+    if (Array.isArray(d.festivals) && d.festivals.length)
+      h += section("節慶與慶典", `<ul class="enc-buys enc-festivals">` + d.festivals.map((f) =>
+        `<li>${f.month ? `<span class="enc-dim">${esc(f.month)}</span> ` : ""}<b>${esc(f.zh)}</b>${f.note ? ` — ${esc(f.note)}` : ""}</li>`).join("") + `</ul>`);
+
+    const pi = d.practical_info;
+    if (pi && ((Array.isArray(pi.greetings) && pi.greetings.length) || pi.tipping || pi.money_note)) {
+      let ph = "";
+      if (Array.isArray(pi.greetings) && pi.greetings.length)
+        ph += `<dl class="enc-facts enc-practical">` + pi.greetings.map((g) =>
+          `<dt>${esc(g.phrase)}</dt><dd>${esc(g.local || "")}${g.romanized ? ` <span class="enc-dim">(${esc(g.romanized)})</span>` : ""}</dd>`).join("") + `</dl>`;
+      if (pi.money_note) ph += `<p>${esc(pi.money_note)}</p>`;
+      if (pi.tipping) ph += `<p>${esc(pi.tipping)}</p>`;
+      h += section("實用資訊", ph);
+    }
+
     const itin = d.itineraries || {};
     if ((Array.isArray(itin.hot) && itin.hot.length) || (Array.isArray(itin.niche) && itin.niche.length)) {
       let ih = "";

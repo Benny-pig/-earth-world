@@ -67,21 +67,17 @@
   #physical-labels { position: fixed; inset: 0; pointer-events: none; z-index: 37; overflow: hidden; }
   #physical-labels .physical-label {
     position: absolute; top: 0; left: 0; white-space: nowrap; text-align: center;
-    font: 12px/1.25 system-ui, "Microsoft JhengHei", sans-serif;
-    color: #eaf1ff; text-shadow: 0 0 4px rgba(0,0,0,.9), 0 0 10px rgba(0,0,0,.7);
+    font: italic 10px/1.2 system-ui, "Microsoft JhengHei", sans-serif;
+    color: #9aabc4; text-shadow: 0 0 3px rgba(0,0,0,.9), 0 1px 2px rgba(0,0,0,.8);
     opacity: 0; transition: opacity .35s ease; will-change: transform, opacity;
   }
-  #physical-labels .pl-ico { display: block; font-size: 9px; line-height: 1; margin-bottom: 1px; opacity: .8; }
-  #physical-labels .pl-zh { display: block; font-size: 12px; letter-spacing: .06em; }
-  #physical-labels .pl-en { display: block; font-size: 8.5px; letter-spacing: .04em; opacity: .62; margin-top: 1px; }
-  #physical-labels .pl-mountain, #physical-labels .pl-peak { color: #f0e6d2; }
-  #physical-labels .pl-mountain .pl-ico, #physical-labels .pl-peak .pl-ico { color: #d9b98a; }
-  #physical-labels .pl-river .pl-ico, #physical-labels .pl-lake .pl-ico { color: #8fd4ff; }
-  #physical-labels .pl-river, #physical-labels .pl-lake { color: #dbeeff; }
-  #physical-labels .pl-desert { color: #f6e3b8; }
-  #physical-labels .pl-desert .pl-ico { color: #e8c06a; }
-  #physical-labels .pl-plateau, #physical-labels .pl-plain, #physical-labels .pl-other { color: #e7e2d6; }
-  #physical-labels .pl-plateau .pl-ico, #physical-labels .pl-plain .pl-ico, #physical-labels .pl-other .pl-ico { color: #b7c3a8; }
+  #physical-labels .pl-ico { display: block; font-size: 8px; line-height: 1; margin-bottom: 1px; opacity: .85; font-style: normal; }
+  #physical-labels .pl-zh { display: block; font-size: 10px; letter-spacing: .04em; }
+  #physical-labels .pl-en { display: block; font-size: 7px; letter-spacing: .03em; opacity: .58; margin-top: 1px; }
+  #physical-labels .pl-mountain .pl-ico, #physical-labels .pl-peak .pl-ico { color: #c9a876; }
+  #physical-labels .pl-river .pl-ico, #physical-labels .pl-lake .pl-ico { color: #6fa8cf; }
+  #physical-labels .pl-desert .pl-ico { color: #cfa858; }
+  #physical-labels .pl-plateau .pl-ico, #physical-labels .pl-plain .pl-ico, #physical-labels .pl-other .pl-ico { color: #93a181; }
   #side-panel {
     position: fixed; top: 0; right: 0; height: 100%; width: 380px; max-width: 86vw;
     transform: translateX(105%); transition: transform .45s cubic-bezier(.22,.61,.36,1);

@@ -74,7 +74,7 @@ export function createAdminMap() {
     const g = document.createElementNS(svgNS, "g");   // 縮放 / 平移都作用在這層
     svg.appendChild(g);
 
-    const fontUnit = Math.max(vb.w, vb.h) / 68;
+    const fontUnit = Math.max(vb.w, vb.h) / 78;
     const viewDiag = Math.hypot(vb.w, vb.h);
 
     for (const f of fc.features) {
@@ -127,7 +127,7 @@ export function createAdminMap() {
     // 標籤字級隨縮放「次線性」增長:全景時小,放大時變大但不爆;
     // 同時依縮放淘汰太擠的小區標籤(最大的幾個永遠留著)
     const relayoutLabels = () => {
-      const k = 0.64 * Math.pow(scale, 0.34);        // 螢幕上看到的相對倍率
+      const k = 0.64 * Math.pow(scale, 0.56);        // 螢幕上看到的相對倍率(拉到最大 ~4 倍)
       const fs = fontUnit * k / scale;               // 乘上 <g> 的 scale 後 ≈ fontUnit*k
       for (let i = 0; i < labels.length; i++) {
         const L = labels[i];
