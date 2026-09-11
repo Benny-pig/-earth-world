@@ -36,12 +36,14 @@
     {
       "zh": "盧西塔諾馬",
       "en": "Lusitano horse",
-      "note": "世上最古老的馬種之一,體態圓潤,用於古典馬術與鬥牛。"
+      "note": "世上最古老的馬種之一,體態圓潤,用於古典馬術與鬥牛。",
+      "image": "animals-lusitano.jpg"
     },
     {
       "zh": "葡萄牙水犬",
       "en": "Portuguese Water Dog",
-      "note": "阿爾加維漁民的助手犬,善泳,毛捲不易脫落。"
+      "note": "阿爾加維漁民的助手犬,善泳,毛捲不易脫落。",
+      "image": "animals-waterdog.jpg"
     },
     {
       "zh": "大紅鸛(火烈鳥)",
@@ -60,7 +62,8 @@
     {
       "zh": "鹽漬鱈魚",
       "en": "Bacalhau",
-      "note": "曬乾的鹽醃鱈魚,號稱有上百種料理法,聖誕餐桌必備。"
+      "note": "曬乾的鹽醃鱈魚,號稱有上百種料理法,聖誕餐桌必備。",
+      "image": "foods-bacalhau.jpg"
     },
     {
       "zh": "葡式三明治(法蘭西那)",
@@ -71,7 +74,8 @@
     {
       "zh": "炭烤沙丁魚",
       "en": "Grilled sardines",
-      "note": "炭火直烤的沙丁魚,是里斯本六月聖安東尼節的代表。"
+      "note": "炭火直烤的沙丁魚,是里斯本六月聖安東尼節的代表。",
+      "image": "foods-sardines.jpg"
     },
     {
       "zh": "波特酒",
@@ -136,7 +140,8 @@
     {
       "zh": "航海家亨利王子",
       "en": "Henry the Navigator",
-      "note": "贊助早期非洲沿岸航行,推動葡萄牙的海上探險時代。"
+      "note": "贊助早期非洲沿岸航行,推動葡萄牙的海上探險時代。",
+      "image": "people-henry.jpg"
     },
     {
       "zh": "瓦斯科·達伽馬",
@@ -147,17 +152,20 @@
     {
       "zh": "賈梅士",
       "en": "Luís de Camões",
-      "note": "民族詩人,史詩《盧濟塔尼亞人之歌》歌詠航海事業。"
+      "note": "民族詩人,史詩《盧濟塔尼亞人之歌》歌詠航海事業。",
+      "image": "people-camoes.jpg"
     },
     {
       "zh": "費爾南多·佩索亞",
       "en": "Fernando Pessoa",
-      "note": "里斯本的現代主義詩人,以眾多「異名」寫作。"
+      "note": "里斯本的現代主義詩人,以眾多「異名」寫作。",
+      "image": "people-pessoa.jpg"
     },
     {
       "zh": "阿瑪莉亞·羅德里格斯",
       "en": "Amália Rodrigues",
-      "note": "「法朵女王」,將葡萄牙傳統歌謠法朵推向世界。"
+      "note": "「法朵女王」,將葡萄牙傳統歌謠法朵推向世界。",
+      "image": "people-amalia.jpg"
     }
   ],
   "recommended": [
@@ -331,6 +339,62 @@
       "author": "Unknown master of the Portuguese School..",
       "license": "Public domain",
       "source": "https://commons.wikimedia.org/wiki/File:Lisboa-Museu_Nacional_de_Arte_Antiga-Retrato_dito_de_Vasco_da_Gama-20140917.jpg"
+    },
+    {
+      "file": "animals-lusitano.jpg",
+      "title": "Lusitano stallion1",
+      "author": "Lbpetersen",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Lusitano_stallion1.jpg"
+    },
+    {
+      "file": "animals-waterdog.jpg",
+      "title": "Cão de agua Português 2",
+      "author": "Silke Hollje-Schumacher",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:C%C3%A3o_de_agua_Portugu%C3%AAs_2.jpg"
+    },
+    {
+      "file": "foods-bacalhau.jpg",
+      "title": "Bacalhau à minhota edited",
+      "author": "User:Adriao",
+      "license": "CC BY-SA 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:Bacalhau_%C3%A0_minhota_edited.jpg"
+    },
+    {
+      "file": "foods-sardines.jpg",
+      "title": "Grilled Sardines in-the-Charcoal with salad 7.50€ (3784714323)",
+      "author": "Yusuke Kawasaki from Tokyo, Japan",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Grilled_Sardines_in-the-Charcoal_with_salad_7.50%E2%82%AC_(3784714323).jpg"
+    },
+    {
+      "file": "people-henry.jpg",
+      "title": "Henry the Navigator (Cronicas)",
+      "author": "Unknown author Unknown author",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Henry_the_Navigator_(Cronicas).jpg"
+    },
+    {
+      "file": "people-camoes.jpg",
+      "title": "Camões, por Fernão Gomes",
+      "author": "Fernão Gomes",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Cam%C3%B5es,_por_Fern%C3%A3o_Gomes.jpg"
+    },
+    {
+      "file": "people-pessoa.jpg",
+      "title": "Pessoa chapeu",
+      "author": "Template:Cavalão",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Pessoa_chapeu.jpg"
+    },
+    {
+      "file": "people-amalia.jpg",
+      "title": "Amalia Rodrigues Portugese fado-zangeres op Schiphol, Bestanddeelnr 916-9841",
+      "author": "Harry Pot for Anefo",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Amalia_Rodrigues_Portugese_fado-zangeres_op_Schiphol,_Bestanddeelnr_916-9841.jpg"
     }
   ],
   "code": "PT"

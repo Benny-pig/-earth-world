@@ -67,7 +67,8 @@
     {
       "zh": "酸黑麥湯(祖雷克)",
       "en": "Żurek",
-      "note": "以發酵黑麥汁煮成的酸湯,常加白香腸與水煮蛋。"
+      "note": "以發酵黑麥汁煮成的酸湯,常加白香腸與水煮蛋。",
+      "image": "foods-zurek.jpg"
     },
     {
       "zh": "炸豬排",
@@ -110,7 +111,8 @@
       "latlon": [
         50.027,
         19.203
-      ]
+      ],
+      "image": "landmarks-auschwitz.jpg"
     },
     {
       "zh": "維利奇卡鹽礦",
@@ -137,27 +139,32 @@
     {
       "zh": "哥白尼",
       "en": "Nicolaus Copernicus",
-      "note": "托倫出身的天文學家,提出以太陽為中心的宇宙模型。"
+      "note": "托倫出身的天文學家,提出以太陽為中心的宇宙模型。",
+      "image": "people-copernicus.jpg"
     },
     {
       "zh": "蕭邦",
       "en": "Frédéric Chopin",
-      "note": "浪漫時期作曲家與鋼琴家,生於華沙近郊。"
+      "note": "浪漫時期作曲家與鋼琴家,生於華沙近郊。",
+      "image": "people-chopin.jpg"
     },
     {
       "zh": "瑪麗·居禮",
       "en": "Marie Curie",
-      "note": "生於華沙的物理與化學家,兩度獲諾貝爾獎。"
+      "note": "生於華沙的物理與化學家,兩度獲諾貝爾獎。",
+      "image": "people-curie.jpg"
     },
     {
       "zh": "若望·保祿二世",
       "en": "Pope John Paul II",
-      "note": "曾任克拉科夫總主教,一九七八至二〇〇五年在位的教宗。"
+      "note": "曾任克拉科夫總主教,一九七八至二〇〇五年在位的教宗。",
+      "image": "people-jp2.jpg"
     },
     {
       "zh": "萊赫·華勒沙",
       "en": "Lech Wałęsa",
-      "note": "團結工聯領袖,一九八三年諾貝爾和平獎得主,後任總統。"
+      "note": "團結工聯領袖,一九八三年諾貝爾和平獎得主,後任總統。",
+      "image": "people-walesa.jpg"
     }
   ],
   "recommended": [
@@ -331,6 +338,55 @@
       "author": "Rhododendrites",
       "license": "CC BY-SA 4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Market_Square_Warsaw_(22594p).jpg"
+    },
+    {
+      "file": "foods-zurek.jpg",
+      "title": "Zurek Sour Rye Soup, Warsaw",
+      "author": "Ken Eckert",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Zurek_Sour_Rye_Soup,_Warsaw.jpg"
+    },
+    {
+      "file": "landmarks-auschwitz.jpg",
+      "title": "AuschwitzCampEntrance",
+      "author": "見 Commons File 頁",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:AuschwitzCampEntrance.jpg"
+    },
+    {
+      "file": "people-copernicus.jpg",
+      "title": "Nikolaus Kopernikus",
+      "author": "Unknown author Unknown author",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Nikolaus_Kopernikus.jpg"
+    },
+    {
+      "file": "people-chopin.jpg",
+      "title": "Frederic Chopin photo",
+      "author": "Louis-Auguste Bisson",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Frederic_Chopin_photo.jpeg"
+    },
+    {
+      "file": "people-curie.jpg",
+      "title": "Marie Curie, portrait, 1900",
+      "author": "Unknown author Unknown author",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Marie_Curie,_portrait,_1900.jpg"
+    },
+    {
+      "file": "people-jp2.jpg",
+      "title": "JPII 29 09 2004 2",
+      "author": "Radomił Binek",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:JPII_29_09_2004_2.JPG"
+    },
+    {
+      "file": "people-walesa.jpg",
+      "title": "Lech Walesa 1980",
+      "author": "Unknown author Unknown author",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Lech_Walesa_1980.jpg"
     }
   ],
   "code": "PL"

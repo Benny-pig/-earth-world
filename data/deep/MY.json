@@ -112,7 +112,8 @@
       "latlon": [
         2.1896,
         102.2501
-      ]
+      ],
+      "image": "landmarks-malacca.jpg"
     },
     {
       "zh": "檳城喬治市",
@@ -121,7 +122,8 @@
       "latlon": [
         5.4145,
         100.3292
-      ]
+      ],
+      "image": "landmarks-georgetown.jpg"
     },
     {
       "zh": "黑風洞",
@@ -130,34 +132,40 @@
       "latlon": [
         3.2379,
         101.684
-      ]
+      ],
+      "image": "landmarks-batucaves.jpg"
     }
   ],
   "people": [
     {
       "zh": "東姑阿都拉曼",
       "en": "Tunku Abdul Rahman",
-      "note": "首任首相,領導馬來亞獨立,被尊為「獨立之父」。"
+      "note": "首任首相,領導馬來亞獨立,被尊為「獨立之父」。",
+      "image": "people-tunku.jpg"
     },
     {
       "zh": "馬哈迪·莫哈末",
       "en": "Mahathir Mohamad",
-      "note": "任期最長的首相,推動工業化與多項大型建設。"
+      "note": "任期最長的首相,推動工業化與多項大型建設。",
+      "image": "people-mahathir.jpg"
     },
     {
       "zh": "楊紫瓊",
       "en": "Michelle Yeoh",
-      "note": "怡保出身的演員,以《媽的多重宇宙》成為首位華裔奧斯卡影后。"
+      "note": "怡保出身的演員,以《媽的多重宇宙》成為首位華裔奧斯卡影后。",
+      "image": "people-yeoh.jpg"
     },
     {
       "zh": "李宗偉",
       "en": "Lee Chong Wei",
-      "note": "羽球名將,長年世界排名第一,奪三面奧運銀牌。"
+      "note": "羽球名將,長年世界排名第一,奪三面奧運銀牌。",
+      "image": "people-leechongwei.jpg"
     },
     {
       "zh": "比南利",
       "en": "P. Ramlee",
-      "note": "演員、導演兼作曲家,代表馬來電影與流行歌曲的黃金年代。"
+      "note": "演員、導演兼作曲家,代表馬來電影與流行歌曲的黃金年代。",
+      "image": "people-pramlee.jpg"
     }
   ],
   "recommended": [
@@ -331,6 +339,62 @@
       "author": "kallerna",
       "license": "CC BY-SA 4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Kinabalu_Sabah_Borneo_Kampong_Kundasang_7.jpg"
+    },
+    {
+      "file": "landmarks-malacca.jpg",
+      "title": "Malacca Clock Tower",
+      "author": "Philip Nalangan",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Malacca_Clock_Tower.jpg"
+    },
+    {
+      "file": "landmarks-georgetown.jpg",
+      "title": "Heritage buildings on Lebuh Kimberley (Kimberley Street) in George Town, Penang - 53783669280",
+      "author": "philip.mallis",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Heritage_buildings_on_Lebuh_Kimberley_(Kimberley_Street)_in_George_Town,_Penang_-_53783669280.jpg"
+    },
+    {
+      "file": "landmarks-batucaves.jpg",
+      "title": "Batu Caves Temple Cave Stairs 2015",
+      "author": "KQuhen",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Batu_Caves_Temple_Cave_Stairs_2015.jpg"
+    },
+    {
+      "file": "people-tunku.jpg",
+      "title": "Tunku Abdul Rahman Official Portrait",
+      "author": "Information Department, Ministry Of Communications and Kini X",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Tunku_Abdul_Rahman_Official_Portrait.jpg"
+    },
+    {
+      "file": "people-mahathir.jpg",
+      "title": "Mahathir Mohamad 13112018 (cropped)",
+      "author": "kremlin.ru",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mahathir_Mohamad_13112018_(cropped).jpg"
+    },
+    {
+      "file": "people-yeoh.jpg",
+      "title": "Michelle Yeoh-2256",
+      "author": "Harald Krichel",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Michelle_Yeoh-2256.jpg"
+    },
+    {
+      "file": "people-leechongwei.jpg",
+      "title": "Yonex IFB 2013 - Quarterfinal - Lee Chong Wei vs Boonsak Ponsana 27",
+      "author": "Pierre-Yves Beaudouin",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Yonex_IFB_2013_-_Quarterfinal_-_Lee_Chong_Wei_vs_Boonsak_Ponsana_27.jpg"
+    },
+    {
+      "file": "people-pramlee.jpg",
+      "title": "P. Ramlee 1",
+      "author": "Arthur Hirai",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:P._Ramlee_1.jpg"
     }
   ],
   "code": "MY"

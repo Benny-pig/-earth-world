@@ -49,7 +49,8 @@
     {
       "zh": "康尼馬拉小馬",
       "en": "Connemara pony",
-      "note": "原產愛爾蘭西部的本地小馬,耐勞、性情溫馴。"
+      "note": "原產愛爾蘭西部的本地小馬,耐勞、性情溫馴。",
+      "image": "animals-connemarapony.jpg"
     }
   ],
   "foods": [
@@ -122,7 +123,8 @@
       "latlon": [
         51.9946,
         -9.5669
-      ]
+      ],
+      "image": "landmarks-ringofkerry.jpg"
     },
     {
       "zh": "卡舍爾岩",
@@ -131,34 +133,40 @@
       "latlon": [
         52.5207,
         -7.8907
-      ]
+      ],
+      "image": "landmarks-cashel.jpg"
     }
   ],
   "people": [
     {
       "zh": "聖巴特里克",
       "en": "Saint Patrick",
-      "note": "五世紀傳教士,愛爾蘭的主保聖人,三葉草為其象徵。"
+      "note": "五世紀傳教士,愛爾蘭的主保聖人,三葉草為其象徵。",
+      "image": "people-patrick.jpg"
     },
     {
       "zh": "詹姆斯·喬伊斯",
       "en": "James Joyce",
-      "note": "現代主義小說家,代表作《尤利西斯》以都柏林一日為背景。"
+      "note": "現代主義小說家,代表作《尤利西斯》以都柏林一日為背景。",
+      "image": "people-joyce.jpg"
     },
     {
       "zh": "葉慈",
       "en": "W. B. Yeats",
-      "note": "詩人,一九二三年諾貝爾文學獎得主,推動愛爾蘭文藝復興。"
+      "note": "詩人,一九二三年諾貝爾文學獎得主,推動愛爾蘭文藝復興。",
+      "image": "people-yeats.jpg"
     },
     {
       "zh": "麥可·柯林斯",
       "en": "Michael Collins",
-      "note": "獨立運動領袖,參與談判一九二一年條約,於內戰中身亡。"
+      "note": "獨立運動領袖,參與談判一九二一年條約,於內戰中身亡。",
+      "image": "people-collins.jpg"
     },
     {
       "zh": "波諾",
       "en": "Bono",
-      "note": "搖滾樂團 U2 主唱,長期參與國際人道與扶貧倡議。"
+      "note": "搖滾樂團 U2 主唱,長期參與國際人道與扶貧倡議。",
+      "image": "people-bono.jpg"
     }
   ],
   "recommended": [
@@ -332,6 +340,62 @@
       "author": "Professionalnorwegianphotographer",
       "license": "CC BY-SA 4.0",
       "source": "https://commons.wikimedia.org/wiki/File:The_Famous_Five_Thousand_Years_Old_Newgrange_Passage_Tomb_Monument_as_Seen_from_Rossnaree_House_in_County_Meath_in_Ireland.jpg"
+    },
+    {
+      "file": "animals-connemarapony.jpg",
+      "title": "Connemara Pony, Inis Ni-Inishnee - geograph.org.uk - 1290370",
+      "author": "Trish Steel",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Connemara_Pony,_Inis_Ni-Inishnee_-_geograph.org.uk_-_1290370.jpg"
+    },
+    {
+      "file": "landmarks-ringofkerry.jpg",
+      "title": "Ladies View in summer, Ring of Kerry, Killarney National Park",
+      "author": "Marco Ober",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ladies_View_in_summer,_Ring_of_Kerry,_Killarney_National_Park.jpg"
+    },
+    {
+      "file": "landmarks-cashel.jpg",
+      "title": "Rock of Cashel Co. Tipperary 2",
+      "author": "Michael Deligan",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Rock_of_Cashel_Co._Tipperary_2.jpg"
+    },
+    {
+      "file": "people-patrick.jpg",
+      "title": "Saint Patrick Catholic Church (Junction City, Ohio) - stained glass, Saint Patrick - detail",
+      "author": "Nheyob",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Saint_Patrick_Catholic_Church_(Junction_City,_Ohio)_-_stained_glass,_Saint_Patrick_-_detail.jpg"
+    },
+    {
+      "file": "people-joyce.jpg",
+      "title": "Portrait of James Joyce P529",
+      "author": "Jacques-Émile Blanche",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Portrait_of_James_Joyce_P529.jpg"
+    },
+    {
+      "file": "people-yeats.jpg",
+      "title": "William Butler Yeats by John Butler Yeats 1900",
+      "author": "John Butler Yeats",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:William_Butler_Yeats_by_John_Butler_Yeats_1900.jpg"
+    },
+    {
+      "file": "people-collins.jpg",
+      "title": "Michael Collins 1922",
+      "author": "Agence de presse Meurisse",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Michael_Collins_1922.jpg"
+    },
+    {
+      "file": "people-bono.jpg",
+      "title": "Bono portrait by John Hewson",
+      "author": "John Hewson",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bono_portrait_by_John_Hewson.png"
     }
   ],
   "code": "IE"

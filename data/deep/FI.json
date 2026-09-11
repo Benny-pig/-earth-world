@@ -113,7 +113,8 @@
       "latlon": [
         66.5436,
         25.8472
-      ]
+      ],
+      "image": "landmarks-santa-claus-village.jpg"
     },
     {
       "zh": "岩石教堂",
@@ -122,7 +123,8 @@
       "latlon": [
         60.1732,
         24.9253
-      ]
+      ],
+      "image": "landmarks-temppeliaukio.jpg"
     },
     {
       "zh": "奧拉溫林納城堡",
@@ -131,34 +133,40 @@
       "latlon": [
         61.8639,
         28.8989
-      ]
+      ],
+      "image": "landmarks-olavinlinna.jpg"
     }
   ],
   "people": [
     {
       "zh": "尚·西貝流士",
       "en": "Jean Sibelius",
-      "note": "作曲家,交響詩《芬蘭頌》成為民族象徵。"
+      "note": "作曲家,交響詩《芬蘭頌》成為民族象徵。",
+      "image": "people-sibelius.jpg"
     },
     {
       "zh": "阿爾瓦·奧圖",
       "en": "Alvar Aalto",
-      "note": "現代主義建築師與家具設計師,作品遍及芬蘭各地。"
+      "note": "現代主義建築師與家具設計師,作品遍及芬蘭各地。",
+      "image": "people-aalto.jpg"
     },
     {
       "zh": "托芙·揚松",
       "en": "Tove Jansson",
-      "note": "畫家與作家,創造「嚕嚕米」系列。"
+      "note": "畫家與作家,創造「嚕嚕米」系列。",
+      "image": "people-jansson.jpg"
     },
     {
       "zh": "帕沃·努爾米",
       "en": "Paavo Nurmi",
-      "note": "一九二〇年代長跑名將「飛翔的芬蘭人」,奪九面奧運金牌。"
+      "note": "一九二〇年代長跑名將「飛翔的芬蘭人」,奪九面奧運金牌。",
+      "image": "people-nurmi.jpg"
     },
     {
       "zh": "林納斯·托瓦茲",
       "en": "Linus Torvalds",
-      "note": "程式設計師,開創 Linux 作業系統核心。"
+      "note": "程式設計師,開創 Linux 作業系統核心。",
+      "image": "people-torvalds.jpg"
     }
   ],
   "recommended": [
@@ -327,6 +335,62 @@
       "author": "kallerna",
       "license": "CC BY-SA 3.0",
       "source": "https://commons.wikimedia.org/wiki/File%3ASuomenlinna_merelt%C3%A4_1.jpg"
+    },
+    {
+      "file": "landmarks-santa-claus-village.jpg",
+      "title": "Santa Claus Village Rovaniemi 2022-09-15 07",
+      "author": "Leonhard Lenz",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASanta_Claus_Village_Rovaniemi_2022-09-15_07.jpg"
+    },
+    {
+      "file": "landmarks-temppeliaukio.jpg",
+      "title": "Interior of Temppeliaukio Church - 2006-07-16",
+      "author": "Szilas",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AInterior_of_Temppeliaukio_Church_-_2006-07-16.jpg"
+    },
+    {
+      "file": "landmarks-olavinlinna.jpg",
+      "title": "Olavinlinna Savonlinna",
+      "author": "Mikkoau",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AOlavinlinna_Savonlinna.jpg"
+    },
+    {
+      "file": "people-sibelius.jpg",
+      "title": "Jean Sibelius 1923",
+      "author": "Photographerː Henry Buergel Goodwin",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AJean_Sibelius_1923.jpg"
+    },
+    {
+      "file": "people-aalto.jpg",
+      "title": "Alvar-Aalto-1969",
+      "author": "Hans Paul",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3AAlvar-Aalto-1969.jpg"
+    },
+    {
+      "file": "people-jansson.jpg",
+      "title": "Tove Jansson 1956",
+      "author": "Reino Loppinen / Lehtikuva",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3ATove_Jansson_1956.jpg"
+    },
+    {
+      "file": "people-nurmi.jpg",
+      "title": "Paavo Nurmi and Wäinö Aaltonen",
+      "author": "Unknown author Unknown author",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3APaavo_Nurmi_and_W%C3%A4in%C3%B6_Aaltonen.jpg"
+    },
+    {
+      "file": "people-torvalds.jpg",
+      "title": "LinuxCon Europe Linus Torvalds 03 (cropped)",
+      "author": "Krd (photo) Von Sprat (crop/extraction)",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ALinuxCon_Europe_Linus_Torvalds_03_%28cropped%29.jpg"
     }
   ],
   "code": "FI"

@@ -62,7 +62,8 @@
     {
       "zh": "玉米糊",
       "en": "Mămăligă",
-      "note": "玉米粉煮成的稠糊,是傳統主食,可搭乳酪、酸奶或燉肉。"
+      "note": "玉米粉煮成的稠糊,是傳統主食,可搭乳酪、酸奶或燉肉。",
+      "image": "foods-mamaliga.jpg"
     },
     {
       "zh": "炭烤肉腸",
@@ -79,7 +80,8 @@
     {
       "zh": "李子白蘭地",
       "en": "Țuică",
-      "note": "以李子蒸餾的烈酒,鄉間自釀,常在餐前飲用。"
+      "note": "以李子蒸餾的烈酒,鄉間自釀,常在餐前飲用。",
+      "image": "foods-tuica.jpg"
     }
   ],
   "landmarks": [
@@ -130,34 +132,40 @@
       "latlon": [
         46.2191,
         24.7925
-      ]
+      ],
+      "image": "landmarks-sighisoara.jpg"
     }
   ],
   "people": [
     {
       "zh": "弗拉德三世(刺穿者)",
       "en": "Vlad the Impaler",
-      "note": "十五世紀瓦拉幾亞大公,以嚴酷手段抵抗鄂圖曼,是「德古拉」原型。"
+      "note": "十五世紀瓦拉幾亞大公,以嚴酷手段抵抗鄂圖曼,是「德古拉」原型。",
+      "image": "people-vlad.jpg"
     },
     {
       "zh": "康斯坦丁·布朗庫西",
       "en": "Constantin Brâncuși",
-      "note": "現代雕塑先驅,《無盡之柱》《吻》等作極具影響力。"
+      "note": "現代雕塑先驅,《無盡之柱》《吻》等作極具影響力。",
+      "image": "people-brancusi.jpg"
     },
     {
       "zh": "喬治·埃內斯庫",
       "en": "George Enescu",
-      "note": "作曲家與小提琴家,《羅馬尼亞狂想曲》最為人知。"
+      "note": "作曲家與小提琴家,《羅馬尼亞狂想曲》最為人知。",
+      "image": "people-enescu.jpg"
     },
     {
       "zh": "娜迪婭·科馬內奇",
       "en": "Nadia Comăneci",
-      "note": "體操選手,一九七六年奧運獲奧運史上首個滿分十分。"
+      "note": "體操選手,一九七六年奧運獲奧運史上首個滿分十分。",
+      "image": "people-comaneci.jpg"
     },
     {
       "zh": "埃利·維瑟爾",
       "en": "Elie Wiesel",
-      "note": "生於錫蓋特的猶太作家,大屠殺見證者,獲諾貝爾和平獎。"
+      "note": "生於錫蓋特的猶太作家,大屠殺見證者,獲諾貝爾和平獎。",
+      "image": "people-wiesel.jpg"
     }
   ],
   "recommended": [
@@ -331,6 +339,62 @@
       "author": "Valeria23",
       "license": "CC BY-SA 3.0 ro",
       "source": "https://commons.wikimedia.org/wiki/File%3AManastirea_Voronet-vedere_laterala.JPG"
+    },
+    {
+      "file": "foods-mamaliga.jpg",
+      "title": "Mamaliga",
+      "author": "見 Wikimedia Commons 檔案頁",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AMamaliga.jpg"
+    },
+    {
+      "file": "foods-tuica.jpg",
+      "title": "Palinca de prune",
+      "author": "Nicubunu",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3APalinca_de_prune.jpg"
+    },
+    {
+      "file": "landmarks-sighisoara.jpg",
+      "title": "Panoramic Schäßburg Medieval Citadel (20903916345)",
+      "author": "Andrei-Daniel Nicolae from Coventry, United Kingdom",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3APanoramic_Sch%C3%A4%C3%9Fburg_Medieval_Citadel_%2820903916345%29.jpg"
+    },
+    {
+      "file": "people-vlad.jpg",
+      "title": "Vlad Tepes 002",
+      "author": "Anonymous Unknown author",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3AVlad_Tepes_002.jpg"
+    },
+    {
+      "file": "people-brancusi.jpg",
+      "title": "Constantin Brancusi c.1905",
+      "author": "Unknown author Unknown author",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3AConstantin_Brancusi_c.1905.jpg"
+    },
+    {
+      "file": "people-enescu.jpg",
+      "title": "Georges Enesco 1930",
+      "author": "E. Joaillier, Paris (photographer)",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3AGeorges_Enesco_1930.jpg"
+    },
+    {
+      "file": "people-comaneci.jpg",
+      "title": "Nadia Comaneci 1977",
+      "author": "Dave Gilbert",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ANadia_Comaneci_1977.jpg"
+    },
+    {
+      "file": "people-wiesel.jpg",
+      "title": "5.2.10ElieWieselByDavidShankbone",
+      "author": "User:David Shankbone",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3A5.2.10ElieWieselByDavidShankbone.jpg"
     }
   ],
   "code": "RO"

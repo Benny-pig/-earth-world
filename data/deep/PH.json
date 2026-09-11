@@ -113,7 +113,8 @@
       "latlon": [
         9.829,
         124.173
-      ]
+      ],
+      "image": "landmarks-chocolatehills.jpg"
     },
     {
       "zh": "馬榮火山",
@@ -122,7 +123,8 @@
       "latlon": [
         13.2572,
         123.6856
-      ]
+      ],
+      "image": "landmarks-mayon.jpg"
     },
     {
       "zh": "維甘古城",
@@ -131,34 +133,40 @@
       "latlon": [
         17.5747,
         120.3869
-      ]
+      ],
+      "image": "landmarks-vigan.jpg"
     }
   ],
   "people": [
     {
       "zh": "荷西·黎剎",
       "en": "José Rizal",
-      "note": "民族英雄,小說《不許犯我》喚起改革意識,一八九六年遭處決。"
+      "note": "民族英雄,小說《不許犯我》喚起改革意識,一八九六年遭處決。",
+      "image": "people-rizal.jpg"
     },
     {
       "zh": "拉普拉普",
       "en": "Lapulapu",
-      "note": "麥克坦島酋長,一五二一年擊退並殺死麥哲倫。"
+      "note": "麥克坦島酋長,一五二一年擊退並殺死麥哲倫。",
+      "image": "people-lapulapu.jpg"
     },
     {
       "zh": "柯拉蓉·艾奎諾",
       "en": "Corazon Aquino",
-      "note": "首位女總統,一九八六年領導「人民力量革命」。"
+      "note": "首位女總統,一九八六年領導「人民力量革命」。",
+      "image": "people-cory.jpg"
     },
     {
       "zh": "曼尼·帕奎奧",
       "en": "Manny Pacquiao",
-      "note": "跨八個量級奪世界拳王的拳擊手,後任參議員。"
+      "note": "跨八個量級奪世界拳王的拳擊手,後任參議員。",
+      "image": "people-pacquiao.jpg"
     },
     {
       "zh": "萊婭·薩隆加",
       "en": "Lea Salonga",
-      "note": "歌手,首演音樂劇《西貢小姐》金姑娘,並為迪士尼配唱。"
+      "note": "歌手,首演音樂劇《西貢小姐》金姑娘,並為迪士尼配唱。",
+      "image": "people-leasalonga.jpg"
     }
   ],
   "recommended": [
@@ -332,6 +340,62 @@
       "author": "Vyacheslav Argenberg",
       "license": "CC BY 4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Puerto_Princesa_Subterranean_River_Cave,_Palawan,_Philippines.jpg"
+    },
+    {
+      "file": "landmarks-chocolatehills.jpg",
+      "title": "Chocolate Hills Bohol 2",
+      "author": "Lady01v",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Chocolate_Hills_Bohol_2.jpg"
+    },
+    {
+      "file": "landmarks-mayon.jpg",
+      "title": "Mayon Volcano, Albay, Philippines",
+      "author": "Johrabino",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mayon_Volcano,_Albay,_Philippines.jpg"
+    },
+    {
+      "file": "landmarks-vigan.jpg",
+      "title": "Calle Crisologo, Vigan City - Vigan2184",
+      "author": "lumoplank",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Calle_Crisologo,_Vigan_City_-_Vigan2184.jpg"
+    },
+    {
+      "file": "people-rizal.jpg",
+      "title": "Jose Rizal full",
+      "author": "unknown author",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Jose_Rizal_full.jpg"
+    },
+    {
+      "file": "people-lapulapu.jpg",
+      "title": "Lapu-Lapu Monument Illuminated",
+      "author": "JoyiCPH",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Lapu-Lapu_Monument_Illuminated.jpg"
+    },
+    {
+      "file": "people-cory.jpg",
+      "title": "Corazon Aquino 1986",
+      "author": "Airman Gerald B. Johnson",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Corazon_Aquino_1986.jpg"
+    },
+    {
+      "file": "people-pacquiao.jpg",
+      "title": "Manny Pacquiao",
+      "author": "Mike Gonzalez ( TheCoffee )",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Manny_Pacquiao.jpg"
+    },
+    {
+      "file": "people-leasalonga.jpg",
+      "title": "Lea salonga 2021 2",
+      "author": "The Tony Awards",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Lea_salonga_2021_2.jpg"
     }
   ],
   "code": "PH"

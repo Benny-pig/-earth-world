@@ -112,7 +112,8 @@
       "latlon": [
         -7.9425,
         112.953
-      ]
+      ],
+      "image": "landmarks-bromo.jpg"
     },
     {
       "zh": "科莫多國家公園",
@@ -121,7 +122,8 @@
       "latlon": [
         -8.5586,
         119.489
-      ]
+      ],
+      "image": "landmarks-komodo-park.jpg"
     },
     {
       "zh": "海神廟(丹那洛)",
@@ -130,34 +132,40 @@
       "latlon": [
         -8.6212,
         115.0868
-      ]
+      ],
+      "image": "landmarks-tanahlot.jpg"
     }
   ],
   "people": [
     {
       "zh": "蘇卡諾",
       "en": "Sukarno",
-      "note": "宣布獨立並出任首任總統,不結盟運動的推手之一。"
+      "note": "宣布獨立並出任首任總統,不結盟運動的推手之一。",
+      "image": "people-sukarno.jpg"
     },
     {
       "zh": "穆罕默德·哈達",
       "en": "Mohammad Hatta",
-      "note": "與蘇卡諾共同宣讀獨立宣言,首任副總統。"
+      "note": "與蘇卡諾共同宣讀獨立宣言,首任副總統。",
+      "image": "people-hatta.jpg"
     },
     {
       "zh": "蘇哈托",
       "en": "Suharto",
-      "note": "第二任總統,一九六七至一九九八年主政的「新秩序」時期。"
+      "note": "第二任總統,一九六七至一九九八年主政的「新秩序」時期。",
+      "image": "people-suharto.jpg"
     },
     {
       "zh": "卡蒂妮",
       "en": "Raden Ajeng Kartini",
-      "note": "倡導女子教育與女性地位的先驅,列為民族英雄。"
+      "note": "倡導女子教育與女性地位的先驅,列為民族英雄。",
+      "image": "people-kartini.jpg"
     },
     {
       "zh": "普拉姆迪亞·阿南達·杜爾",
       "en": "Pramoedya Ananta Toer",
-      "note": "小說家,代表作《布魯島四部曲》寫於流放期間。"
+      "note": "小說家,代表作《布魯島四部曲》寫於流放期間。",
+      "image": "people-pramoedya.jpg"
     }
   ],
   "recommended": [
@@ -331,6 +339,62 @@
       "author": "Jakub Hałun",
       "license": "CC BY-SA 4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Prambanan_temple,_Central_Java,_Indonesia,_20220818_1311_9139.jpg"
+    },
+    {
+      "file": "landmarks-bromo.jpg",
+      "title": "Gunung Bromo sunrise - Indonesia",
+      "author": "Thomas Fuhrmann",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Gunung_Bromo_sunrise_-_Indonesia.jpg"
+    },
+    {
+      "file": "landmarks-komodo-park.jpg",
+      "title": "Padar Island, Komodo National Park, Indonesia, 20250822 0929 2659",
+      "author": "Jakub Hałun",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Padar_Island,_Komodo_National_Park,_Indonesia,_20250822_0929_2659.jpg"
+    },
+    {
+      "file": "landmarks-tanahlot.jpg",
+      "title": "Tanah Lot, Bali, Indonesia, 20220827 0957 1103",
+      "author": "Jakub Hałun",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tanah_Lot,_Bali,_Indonesia,_20220827_0957_1103.jpg"
+    },
+    {
+      "file": "people-sukarno.jpg",
+      "title": "Presiden Sukarno",
+      "author": "Onbekend /Anonymous",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Presiden_Sukarno.jpg"
+    },
+    {
+      "file": "people-hatta.jpg",
+      "title": "Mohammad Hatta 1950",
+      "author": "Unknown author Unknown author",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mohammad_Hatta_1950.jpg"
+    },
+    {
+      "file": "people-suharto.jpg",
+      "title": "President Suharto, 1973 (Cropped)",
+      "author": "Government of Indonesia (uncredited)",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:President_Suharto,_1973_(Cropped).jpg"
+    },
+    {
+      "file": "people-kartini.jpg",
+      "title": "COLLECTIE TROPENMUSEUM Portret van Raden Ajeng Kartini TMnr 10018776",
+      "author": "fotografer tidak diketahui.",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:COLLECTIE_TROPENMUSEUM_Portret_van_Raden_Ajeng_Kartini_TMnr_10018776.jpg"
+    },
+    {
+      "file": "people-pramoedya.jpg",
+      "title": "Pramoedya Ananta Toer, Pekan Buku Indonesia 1954, p214",
+      "author": "Uncredited, possibly employee(s) of Gunung Agung",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Pramoedya_Ananta_Toer,_Pekan_Buku_Indonesia_1954,_p214.jpg"
     }
   ],
   "code": "ID"

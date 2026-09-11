@@ -112,7 +112,8 @@
       "latlon": [
         59.321,
         17.886
-      ]
+      ],
+      "image": "landmarks-drottningholm.jpg"
     },
     {
       "zh": "尤卡斯亞爾維冰旅館",
@@ -121,7 +122,8 @@
       "latlon": [
         67.851,
         20.596
-      ]
+      ],
+      "image": "landmarks-icehotel.jpg"
     },
     {
       "zh": "維斯比",
@@ -130,34 +132,40 @@
       "latlon": [
         57.638,
         18.296
-      ]
+      ],
+      "image": "landmarks-visby.jpg"
     }
   ],
   "people": [
     {
       "zh": "卡爾·林奈",
       "en": "Carl Linnaeus",
-      "note": "十八世紀博物學家,創立生物「二名法」分類系統。"
+      "note": "十八世紀博物學家,創立生物「二名法」分類系統。",
+      "image": "people-linnaeus.jpg"
     },
     {
       "zh": "阿佛烈·諾貝爾",
       "en": "Alfred Nobel",
-      "note": "化學家與發明家,發明黃色炸藥,遺囑設立諾貝爾獎。"
+      "note": "化學家與發明家,發明黃色炸藥,遺囑設立諾貝爾獎。",
+      "image": "people-nobel.jpg"
     },
     {
       "zh": "英格瑪·柏格曼",
       "en": "Ingmar Bergman",
-      "note": "電影導演,《第七封印》《野草莓》影響現代藝術電影。"
+      "note": "電影導演,《第七封印》《野草莓》影響現代藝術電影。",
+      "image": "people-bergman.jpg"
     },
     {
       "zh": "阿斯特麗德·林格倫",
       "en": "Astrid Lindgren",
-      "note": "兒童文學作家,創造「長襪皮皮」等經典角色。"
+      "note": "兒童文學作家,創造「長襪皮皮」等經典角色。",
+      "image": "people-lindgren.jpg"
     },
     {
       "zh": "ABBA",
       "en": "ABBA",
-      "note": "一九七〇年代的流行樂團,以《Dancing Queen》等曲風靡全球。"
+      "note": "一九七〇年代的流行樂團,以《Dancing Queen》等曲風靡全球。",
+      "image": "people-abba.jpg"
     }
   ],
   "recommended": [
@@ -331,6 +339,62 @@
       "author": "Jules Verne Times Two",
       "license": "CC BY-SA 4.0",
       "source": "https://commons.wikimedia.org/wiki/File%3ALateral_view_of_the_Vasa_ship%2C_Vasa_Museum%2C_Stockholm%2C_Sweden_julesvernex2.jpg"
+    },
+    {
+      "file": "landmarks-drottningholm.jpg",
+      "title": "Drottningholm Palace (by Pudelek) 1",
+      "author": "Pudelek",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ADrottningholm_Palace_%28by_Pudelek%29_1.jpg"
+    },
+    {
+      "file": "landmarks-icehotel.jpg",
+      "title": "ICEHOTEL Main Hall (2014) by Alessandro Falca & AnnaSofia Mååg",
+      "author": "Lars Thulin",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AICEHOTEL_Main_Hall_%282014%29_by_Alessandro_Falca_%26_AnnaSofia_M%C3%A5%C3%A5g.jpg"
+    },
+    {
+      "file": "landmarks-visby.jpg",
+      "title": "Visby, Gotland, Sweden (6126619340)",
+      "author": "Berit from Redhill/Surrey, UK",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AVisby%2C_Gotland%2C_Sweden_%286126619340%29.jpg"
+    },
+    {
+      "file": "people-linnaeus.jpg",
+      "title": "Carl von Linné",
+      "author": "Alexander Roslin",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3ACarl_von_Linn%C3%A9.jpg"
+    },
+    {
+      "file": "people-nobel.jpg",
+      "title": "AlfredNobel adjusted",
+      "author": "Gösta Florman (1831–1900) / The Royal Library",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3AAlfredNobel_adjusted.jpg"
+    },
+    {
+      "file": "people-bergman.jpg",
+      "title": "A-portrait-of-the-Swedish-film-director-Ingmar-Bergman-352117610185",
+      "author": "Unknown photographer",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3AA-portrait-of-the-Swedish-film-director-Ingmar-Bergman-352117610185.jpg"
+    },
+    {
+      "file": "people-lindgren.jpg",
+      "title": "Astrid Lindgren (cropped)",
+      "author": "Unknown author Unknown author",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3AAstrid_Lindgren_%28cropped%29.jpg"
+    },
+    {
+      "file": "people-abba.jpg",
+      "title": "ABBA - TopPop 1974 5",
+      "author": "AVRO",
+      "license": "CC BY-SA 3.0 nl",
+      "source": "https://commons.wikimedia.org/wiki/File%3AABBA_-_TopPop_1974_5.png"
     }
   ],
   "code": "SE"

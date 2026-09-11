@@ -24,7 +24,8 @@
     {
       "zh": "普利犬",
       "en": "Puli",
-      "note": "匈牙利的牧羊犬,一身像拖把的繩狀捲毛是最大特徵。"
+      "note": "匈牙利的牧羊犬,一身像拖把的繩狀捲毛是最大特徵。",
+      "image": "animals-puli.jpg"
     },
     {
       "zh": "匈牙利灰牛",
@@ -47,7 +48,8 @@
     {
       "zh": "大鴇",
       "en": "Great bustard",
-      "note": "歐洲最重的飛行鳥類之一,棲息於霍爾托巴吉的開闊草原。"
+      "note": "歐洲最重的飛行鳥類之一,棲息於霍爾托巴吉的開闊草原。",
+      "image": "animals-great-bustard.jpg"
     }
   ],
   "foods": [
@@ -72,12 +74,14 @@
     {
       "zh": "托卡伊貴腐酒",
       "en": "Tokaji Aszú",
-      "note": "以貴腐葡萄釀成的金黃甜酒,曾被譽為「酒中之王」。"
+      "note": "以貴腐葡萄釀成的金黃甜酒,曾被譽為「酒中之王」。",
+      "image": "foods-tokaji.jpg"
     },
     {
       "zh": "煙囪蛋糕",
       "en": "Kürtőskalács",
-      "note": "繞棒烘烤、表面焦糖化的中空甜捲,源自塞凱伊人。"
+      "note": "繞棒烘烤、表面焦糖化的中空甜捲,源自塞凱伊人。",
+      "image": "foods-kurtoskalacs.jpg"
     }
   ],
   "landmarks": [
@@ -136,12 +140,14 @@
     {
       "zh": "李斯特·費倫茨",
       "en": "Franz Liszt",
-      "note": "浪漫時期鋼琴巨匠與作曲家,《匈牙利狂想曲》聞名。"
+      "note": "浪漫時期鋼琴巨匠與作曲家,《匈牙利狂想曲》聞名。",
+      "image": "people-liszt.jpg"
     },
     {
       "zh": "巴爾托克·貝拉",
       "en": "Béla Bartók",
-      "note": "作曲家與民族音樂學者,大量採集中東歐民謠。"
+      "note": "作曲家與民族音樂學者,大量採集中東歐民謠。",
+      "image": "people-bartok.jpg"
     },
     {
       "zh": "馮·諾伊曼",
@@ -151,7 +157,8 @@
     {
       "zh": "裴多菲·山多爾",
       "en": "Sándor Petőfi",
-      "note": "民族詩人,一八四八年革命的象徵,〈民族之歌〉傳世。"
+      "note": "民族詩人,一八四八年革命的象徵,〈民族之歌〉傳世。",
+      "image": "people-petofi.jpg"
     },
     {
       "zh": "魯比克·艾爾諾",
@@ -331,6 +338,55 @@
       "author": "Babak Mansouri",
       "license": "Public domain",
       "source": "https://commons.wikimedia.org/wiki/File%3AErno_Rubik_Genius_Gala_2014.jpg"
+    },
+    {
+      "file": "animals-puli.jpg",
+      "title": "Puli 600",
+      "author": "Sannse",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3APuli_600.jpg"
+    },
+    {
+      "file": "animals-great-bustard.jpg",
+      "title": "Otis tarda, Hortobagy, Hungary 1",
+      "author": "Francesco Veronesi from Italy",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AOtis_tarda%2C_Hortobagy%2C_Hungary_1.jpg"
+    },
+    {
+      "file": "foods-tokaji.jpg",
+      "title": "Tokaji Aszu 5 puttonyos",
+      "author": "Pumeks",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ATokaji_Aszu_5_puttonyos.jpg"
+    },
+    {
+      "file": "foods-kurtoskalacs.jpg",
+      "title": "Kürtőskalács 3",
+      "author": "OrionNimrod",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AK%C3%BCrt%C5%91skal%C3%A1cs_3.jpg"
+    },
+    {
+      "file": "people-liszt.jpg",
+      "title": "Franz Liszt 1858",
+      "author": "Franz Hanfstaengl",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3AFranz_Liszt_1858.jpg"
+    },
+    {
+      "file": "people-bartok.jpg",
+      "title": "Béla Bartók WDL11594",
+      "author": "見 Wikimedia Commons 檔案頁",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3AB%C3%A9la_Bart%C3%B3k_WDL11594.png"
+    },
+    {
+      "file": "people-petofi.jpg",
+      "title": "Petőfi 1848-ban Barabás Miklós rajza",
+      "author": "Miklós Barabás",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3APet%C5%91fi_1848-ban_Barab%C3%A1s_Mikl%C3%B3s_rajza.jpg"
     }
   ],
   "code": "HU"

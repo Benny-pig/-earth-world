@@ -92,7 +92,8 @@
       "latlon": [
         52.3667,
         4.8945
-      ]
+      ],
+      "image": "landmarks-canalring.jpg"
     },
     {
       "zh": "小孩堤防風車群",
@@ -121,7 +122,8 @@
       "latlon": [
         52.4744,
         4.8175
-      ]
+      ],
+      "image": "landmarks-zaanseschans.jpg"
     },
     {
       "zh": "海牙和平宮",
@@ -130,34 +132,40 @@
       "latlon": [
         52.0866,
         4.2957
-      ]
+      ],
+      "image": "landmarks-peacepalace.jpg"
     }
   ],
   "people": [
     {
       "zh": "林布蘭",
       "en": "Rembrandt van Rijn",
-      "note": "黃金時代畫家,代表作《夜巡》,擅長光影與肖像。"
+      "note": "黃金時代畫家,代表作《夜巡》,擅長光影與肖像。",
+      "image": "people-rembrandt.jpg"
     },
     {
       "zh": "維梅爾",
       "en": "Johannes Vermeer",
-      "note": "台夫特畫家,以《戴珍珠耳環的少女》等室內光線畫聞名。"
+      "note": "台夫特畫家,以《戴珍珠耳環的少女》等室內光線畫聞名。",
+      "image": "people-vermeer.jpg"
     },
     {
       "zh": "梵谷",
       "en": "Vincent van Gogh",
-      "note": "後印象派畫家,生前默默無聞,身後影響深遠。"
+      "note": "後印象派畫家,生前默默無聞,身後影響深遠。",
+      "image": "people-vangogh.jpg"
     },
     {
       "zh": "安妮·法蘭克",
       "en": "Anne Frank",
-      "note": "猶太少女,藏匿於阿姆斯特丹期間寫下日記,歿於納粹集中營。"
+      "note": "猶太少女,藏匿於阿姆斯特丹期間寫下日記,歿於納粹集中營。",
+      "image": "people-annefrank.jpg"
     },
     {
       "zh": "伊拉斯謨",
       "en": "Erasmus of Rotterdam",
-      "note": "文藝復興人文學者,校訂希臘文《新約》,主張寬容與改革。"
+      "note": "文藝復興人文學者,校訂希臘文《新約》,主張寬容與改革。",
+      "image": "people-erasmus.jpg"
     }
   ],
   "recommended": [
@@ -331,6 +339,62 @@
       "author": "Goutam",
       "license": "CC BY-SA 4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Tulip_garden_Keukenhof_1.jpg"
+    },
+    {
+      "file": "landmarks-canalring.jpg",
+      "title": "Herengracht, Amsterdam in the Blue Hour",
+      "author": "Anne Dirkse (www.annedirkse.com)",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Herengracht,_Amsterdam_in_the_Blue_Hour.jpg"
+    },
+    {
+      "file": "landmarks-zaanseschans.jpg",
+      "title": "Zaanse-Schans-Rene-Cortin-1",
+      "author": "René Cortin",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Zaanse-Schans-Rene-Cortin-1.jpg"
+    },
+    {
+      "file": "landmarks-peacepalace.jpg",
+      "title": "La haye palais paix jardin face",
+      "author": "Velvet",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:La_haye_palais_paix_jardin_face.JPG"
+    },
+    {
+      "file": "people-rembrandt.jpg",
+      "title": "Rembrandt van Rijn - Self-Portrait - Google Art Project",
+      "author": "Rembrandt",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Rembrandt_van_Rijn_-_Self-Portrait_-_Google_Art_Project.jpg"
+    },
+    {
+      "file": "people-vermeer.jpg",
+      "title": "1665 Girl with a Pearl Earring",
+      "author": "Johannes Vermeer",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:1665_Girl_with_a_Pearl_Earring.jpg"
+    },
+    {
+      "file": "people-vangogh.jpg",
+      "title": "Vincent van Gogh - Self-Portrait - Google Art Project",
+      "author": "Vincent van Gogh",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project.jpg"
+    },
+    {
+      "file": "people-annefrank.jpg",
+      "title": "Anne Frank, 1940",
+      "author": "Photo Collection Anne Frank House",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Anne_Frank,_1940.jpg"
+    },
+    {
+      "file": "people-erasmus.jpg",
+      "title": "Hans Holbein d. J. - Portrait of Erasmus of Rotterdam Writing - WGA11498",
+      "author": "Hans Holbein the Younger",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Hans_Holbein_d._J._-_Portrait_of_Erasmus_of_Rotterdam_Writing_-_WGA11498.jpg"
     }
   ],
   "code": "NL"

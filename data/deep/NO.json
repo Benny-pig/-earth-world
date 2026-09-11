@@ -112,7 +112,8 @@
       "latlon": [
         60.397,
         5.323
-      ]
+      ],
+      "image": "landmarks-bryggen.jpg"
     },
     {
       "zh": "尼達洛斯大教堂",
@@ -121,7 +122,8 @@
       "latlon": [
         63.427,
         10.397
-      ]
+      ],
+      "image": "landmarks-nidaros.jpg"
     },
     {
       "zh": "羅弗敦群島",
@@ -130,34 +132,40 @@
       "latlon": [
         68.15,
         13.6
-      ]
+      ],
+      "image": "landmarks-lofoten.jpg"
     }
   ],
   "people": [
     {
       "zh": "亨里克·易卜生",
       "en": "Henrik Ibsen",
-      "note": "現代戲劇之父,《玩偶之家》《人民公敵》影響世界劇場。"
+      "note": "現代戲劇之父,《玩偶之家》《人民公敵》影響世界劇場。",
+      "image": "people-ibsen.jpg"
     },
     {
       "zh": "愛德華·孟克",
       "en": "Edvard Munch",
-      "note": "表現主義畫家,《吶喊》成為現代焦慮的標誌性圖像。"
+      "note": "表現主義畫家,《吶喊》成為現代焦慮的標誌性圖像。",
+      "image": "people-munch.jpg"
     },
     {
       "zh": "愛德華·葛利格",
       "en": "Edvard Grieg",
-      "note": "浪漫時期作曲家,《皮爾金組曲》《a小調鋼琴協奏曲》傳世。"
+      "note": "浪漫時期作曲家,《皮爾金組曲》《a小調鋼琴協奏曲》傳世。",
+      "image": "people-grieg.jpg"
     },
     {
       "zh": "羅爾德·亞孟森",
       "en": "Roald Amundsen",
-      "note": "極地探險家,一九一一年率隊首度抵達南極點。"
+      "note": "極地探險家,一九一一年率隊首度抵達南極點。",
+      "image": "people-amundsen.jpg"
     },
     {
       "zh": "弗里喬夫·南森",
       "en": "Fridtjof Nansen",
-      "note": "極地科學家與外交家,主持戰後難民救濟,獲諾貝爾和平獎。"
+      "note": "極地科學家與外交家,主持戰後難民救濟,獲諾貝爾和平獎。",
+      "image": "people-nansen.jpg"
     }
   ],
   "recommended": [
@@ -331,6 +339,62 @@
       "author": "Svein Magne Tunli",
       "license": "CC BY-SA 4.0",
       "source": "https://commons.wikimedia.org/wiki/File%3APreikestolen-lysefjord-tunliweb.jpg"
+    },
+    {
+      "file": "landmarks-bryggen.jpg",
+      "title": "Bryggen Hanseatic wharf at night Bergen Norway",
+      "author": "Smtunli",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABryggen_Hanseatic_wharf_at_night_Bergen_Norway.jpg"
+    },
+    {
+      "file": "landmarks-nidaros.jpg",
+      "title": "Catedral de Nidaros, Trondheim, Noruega, 2019-09-06, DD 103",
+      "author": "Diego Delso",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ACatedral_de_Nidaros%2C_Trondheim%2C_Noruega%2C_2019-09-06%2C_DD_103.jpg"
+    },
+    {
+      "file": "landmarks-lofoten.jpg",
+      "title": "Hamnøy Reine Moskenes Lofoten norway tunliweb 01",
+      "author": "Svein-Magne Tunli - tunliweb.no",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AHamn%C3%B8y_Reine_Moskenes_Lofoten_norway_tunliweb_01.jpg"
+    },
+    {
+      "file": "people-ibsen.jpg",
+      "title": "Henrik Ibsen by Gustav Borgen NFB-19775",
+      "author": "Gustav Borgen",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3AHenrik_Ibsen_by_Gustav_Borgen_NFB-19775.jpg"
+    },
+    {
+      "file": "people-munch.jpg",
+      "title": "Edvard Munch - The Scream - Google Art Project",
+      "author": "Edvard Munch",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3AEdvard_Munch_-_The_Scream_-_Google_Art_Project.jpg"
+    },
+    {
+      "file": "people-grieg.jpg",
+      "title": "Edvard Grieg composer",
+      "author": "Charles Gerschel",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3AEdvard_Grieg_composer.jpg"
+    },
+    {
+      "file": "people-amundsen.jpg",
+      "title": "Roald Amundsen cph.3b17878",
+      "author": "Lomen Bros., Nome, Alaska",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3ARoald_Amundsen_cph.3b17878.jpg"
+    },
+    {
+      "file": "people-nansen.jpg",
+      "title": "Fridtjof Nansen (1861-1930) portrait",
+      "author": "Creator:Studio Phebus",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3AFridtjof_Nansen_%281861-1930%29_portrait.jpg"
     }
   ],
   "code": "NO"

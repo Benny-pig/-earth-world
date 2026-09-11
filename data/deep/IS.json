@@ -121,7 +121,8 @@
       "latlon": [
         64.3271,
         -20.1199
-      ]
+      ],
+      "image": "landmarks-gullfoss.jpg"
     },
     {
       "zh": "傑古沙龍冰河湖",
@@ -130,34 +131,40 @@
       "latlon": [
         64.0784,
         -16.2306
-      ]
+      ],
+      "image": "landmarks-jokulsarlon.jpg"
     }
   ],
   "people": [
     {
       "zh": "斯諾里·斯圖魯松",
       "en": "Snorri Sturluson",
-      "note": "十三世紀史家與政治人物,著《散文埃達》與《王朝史》。"
+      "note": "十三世紀史家與政治人物,著《散文埃達》與《王朝史》。",
+      "image": "people-snorri.jpg"
     },
     {
       "zh": "約恩·西格松",
       "en": "Jón Sigurðsson",
-      "note": "十九世紀獨立運動領袖,生日六月十七日定為國慶。"
+      "note": "十九世紀獨立運動領袖,生日六月十七日定為國慶。",
+      "image": "people-jon-sigurdsson.jpg"
     },
     {
       "zh": "哈爾多爾·拉克斯內斯",
       "en": "Halldór Laxness",
-      "note": "小說家,一九五五年獲諾貝爾文學獎。"
+      "note": "小說家,一九五五年獲諾貝爾文學獎。",
+      "image": "people-laxness.jpg"
     },
     {
       "zh": "碧玉",
       "en": "Björk",
-      "note": "實驗流行音樂家,以獨特嗓音與視覺風格聞名國際。"
+      "note": "實驗流行音樂家,以獨特嗓音與視覺風格聞名國際。",
+      "image": "people-bjork.jpg"
     },
     {
       "zh": "維格迪絲·芬博阿多蒂爾",
       "en": "Vigdís Finnbogadóttir",
-      "note": "一九八〇年當選總統,是世界首位民選的女性國家元首。"
+      "note": "一九八〇年當選總統,是世界首位民選的女性國家元首。",
+      "image": "people-vigdis.jpg"
     }
   ],
   "recommended": [
@@ -331,6 +338,55 @@
       "author": "Andreas Tille",
       "license": "CC BY-SA 3.0",
       "source": "https://commons.wikimedia.org/wiki/File%3AStrokkur_geyser_eruption%2C_close-up_view.jpg"
+    },
+    {
+      "file": "landmarks-gullfoss.jpg",
+      "title": "Iceland - 2017-02-22 - Gullfoss - 3684",
+      "author": "Pierre-Selim Huard",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AIceland_-_2017-02-22_-_Gullfoss_-_3684.jpg"
+    },
+    {
+      "file": "landmarks-jokulsarlon.jpg",
+      "title": "Icebergs in the Jökulsárlón Glacier Lagoon, Iceland",
+      "author": "Marine SABRES",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AIcebergs_in_the_J%C3%B6kuls%C3%A1rl%C3%B3n_Glacier_Lagoon%2C_Iceland.jpg"
+    },
+    {
+      "file": "people-snorri.jpg",
+      "title": "SnorriByVigland",
+      "author": "photo by Einar Einarsson Kvaran aka Carptrash",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASnorriByVigland.jpg"
+    },
+    {
+      "file": "people-jon-sigurdsson.jpg",
+      "title": "Jón Sigurðsson",
+      "author": "Unknown author Unknown author",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3AJ%C3%B3n_Sigur%C3%B0sson.jpg"
+    },
+    {
+      "file": "people-laxness.jpg",
+      "title": "Halldór Kiljan Laxness 1955",
+      "author": "Nobel Foundation",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3AHalld%C3%B3r_Kiljan_Laxness_1955.jpg"
+    },
+    {
+      "file": "people-bjork.jpg",
+      "title": "Björk at Cannes",
+      "author": "Georges Biard",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABj%C3%B6rk_at_Cannes.jpg"
+    },
+    {
+      "file": "people-vigdis.jpg",
+      "title": "Vigdís Finnbogadóttir President of Iceland 1985 (sq cropped)",
+      "author": "Sten-Åke Stenberg",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AVigd%C3%ADs_Finnbogad%C3%B3ttir_President_of_Iceland_1985_%28sq_cropped%29.jpg"
     }
   ],
   "code": "IS"
