@@ -49,6 +49,21 @@
       "zh": "高加索黑琴雞",
       "en": "Caucasian grouse",
       "note": "高山草甸的特有雉類,雄鳥全身黑亮、尾羽下垂,求偶時集體展示。"
+    },
+    {
+      "zh": "高加索雪雞",
+      "en": "Caucasian snowcock",
+      "note": "棲息於高加索山脈高海拔岩壁的大型雉科鳥類。"
+    },
+    {
+      "zh": "歐亞猞猁",
+      "en": "Eurasian lynx",
+      "note": "喬治亞山區森林中的隱密貓科獵食者,數量稀少。"
+    },
+    {
+      "zh": "高加索灰蜜蜂",
+      "en": "Caucasian grey bee",
+      "note": "舌吻特別長的原生蜂種,是當地養蜂業的重要資產。"
     }
   ],
   "foods": [
@@ -80,6 +95,21 @@
       "en": "Churchkhela",
       "note": "核桃串成串後反覆浸入濃縮葡萄汁凝固,像蠟燭般吊掛販售。",
       "image": "GE-f-churchkhela.jpg"
+    },
+    {
+      "zh": "核桃醃茄子卷",
+      "en": "Badrijani Nigvzit",
+      "note": "薄切茄子片包捲核桃泥醬,酸甜微辣的經典冷盤。"
+    },
+    {
+      "zh": "番茄燉雞",
+      "en": "Chakhokhbili",
+      "note": "以番茄、洋蔥與香草慢燉而成的家常燉雞料理。"
+    },
+    {
+      "zh": "喬治亞燉蔬菜",
+      "en": "Ajapsandali",
+      "note": "茄子、甜椒與番茄燉煮的夏季家常菜,常見冷食。"
     }
   ],
   "landmarks": [
@@ -131,6 +161,36 @@
         41.3811,
         43.2847
       ]
+    },
+    {
+      "zh": "卡茲別克山",
+      "en": "Mount Kazbek",
+      "note": "高加索山脈的休眠火山,山腰有著名的格爾蓋蒂三一教堂。",
+      "latlon": [
+        42.697,
+        44.5168
+      ],
+      "image": "landmarks-mount-kazbek.jpg"
+    },
+    {
+      "zh": "巴統海濱",
+      "en": "Batumi",
+      "note": "黑海岸邊的度假城市,棕櫚大道與現代建築並存。",
+      "latlon": [
+        41.6168,
+        41.6367
+      ],
+      "image": "landmarks-batumi.jpg"
+    },
+    {
+      "zh": "第比利斯硫磺浴場",
+      "en": "Abanotubani",
+      "note": "第比利斯舊城的天然溫泉浴場區,磚拱屋頂是城市標誌之一。",
+      "latlon": [
+        41.6896,
+        44.8092
+      ],
+      "image": "landmarks-abanotubani.jpg"
     }
   ],
   "people": [
@@ -158,6 +218,24 @@
       "zh": "約瑟夫·史達林",
       "en": "Joseph Stalin",
       "note": "生於哥里,一九二〇年代起長期領導蘇聯,對二十世紀歷史影響深遠。"
+    },
+    {
+      "zh": "尼科·皮羅斯馬尼",
+      "en": "Niko Pirosmani",
+      "note": "自學成才的素人畫家,以描繪喬治亞市井生活聞名於世。",
+      "image": "people-niko-pirosmani.jpg"
+    },
+    {
+      "zh": "諾娜·加普林達什維利",
+      "en": "Nona Gaprindashvili",
+      "note": "首位獲國際大師稱號的女性棋手,長年稱霸女子棋壇。",
+      "image": "people-nona-gaprindashvili.jpg"
+    },
+    {
+      "zh": "愛德華·舍瓦爾德納澤",
+      "en": "Eduard Shevardnadze",
+      "note": "曾任蘇聯外交部長,後成為獨立後喬治亞的總統。",
+      "image": "people-eduard-shevardnadze.jpg"
     }
   ],
   "recommended": [
@@ -349,7 +427,110 @@
       "author": "Florian Pinel",
       "license": "CC BY-SA 3.0",
       "source": "https://commons.wikimedia.org/wiki/File:Ushguli_Svaneti_Georgia.JPG"
+    },
+    {
+      "file": "landmarks-mount-kazbek.jpg",
+      "title": "卡茲別克山",
+      "author": "Rafał Kozubek",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mount_Kazbek_from_peak_3219_m.jpg"
+    },
+    {
+      "file": "landmarks-batumi.jpg",
+      "title": "巴統海濱大道",
+      "author": "Sosotedrd",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Batumi_Boulevard_Magnolia.jpg"
+    },
+    {
+      "file": "landmarks-abanotubani.jpg",
+      "title": "第比利斯硫磺浴場",
+      "author": "Lohen11",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Banys_a_Abanotubani.jpg"
+    },
+    {
+      "file": "people-niko-pirosmani.jpg",
+      "title": "尼科·皮羅斯馬尼",
+      "author": "Eduard Klar",
+      "license": "Public Domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Niko_Pirosmani_1916.jpg"
+    },
+    {
+      "file": "people-nona-gaprindashvili.jpg",
+      "title": "諾娜·加普林達什維利",
+      "author": "Gerhard Hund",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Nona_Gaprindaschwili_1982.jpg"
+    },
+    {
+      "file": "people-eduard-shevardnadze.jpg",
+      "title": "愛德華·舍瓦爾德納澤",
+      "author": "Robert D. Ward / 美國國防部",
+      "license": "Public Domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Eduard_shevardnadze_(cropped).jpg"
     }
   ],
-  "code": "GE"
+  "code": "GE",
+  "street_food": [
+    {
+      "zh": "起司蛋船麵包",
+      "note": "船型起司麵包中央加一顆生蛋,趁熱攪拌後享用。"
+    },
+    {
+      "zh": "玉米起司餅",
+      "note": "市場常見的玉米麵餅,搭配鹹起司一起烤製。"
+    },
+    {
+      "zh": "醃漬花蕾小菜",
+      "note": "傳統市集常見的醃漬野生花蕾,酸香開胃。"
+    },
+    {
+      "zh": "蜂蜜核桃酥",
+      "note": "新年市集常見的蜂蜜核桃甜點,口感酥脆香甜。"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "第比利斯市節",
+      "month": "10月",
+      "note": "首都的城市生日慶典,街頭滿是音樂、美食與傳統表演。"
+    },
+    {
+      "zh": "葡萄收穫節",
+      "month": "9-10月",
+      "note": "卡赫季葡萄產區的採收慶典,慶祝新一年的葡萄酒釀造。"
+    },
+    {
+      "zh": "喬治亞獨立紀念日",
+      "month": "5月26日",
+      "note": "紀念一九一八年首次宣布獨立的國定假日。"
+    },
+    {
+      "zh": "東正教復活節",
+      "month": "依東正教曆(約4-5月)",
+      "note": "全國最重要的宗教節日,教堂通宵舉行守夜彌撒。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "გამარჯობა",
+        "romanized": "gamarjoba"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "მადლობა",
+        "romanized": "madloba"
+      },
+      {
+        "phrase": "再見",
+        "local": "ნახვამდის",
+        "romanized": "nakhvamdis"
+      }
+    ],
+    "money_note": "喬治亞現金與卡片並行,大城市餐廳可刷卡,市集與小商店多只收現金。",
+    "tipping": "沒有強制小費文化,但在旅遊城市餐廳留5-10%小費已漸普遍。"
+  }
 }

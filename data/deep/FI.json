@@ -51,6 +51,21 @@
       "en": "Reindeer",
       "note": "拉普蘭的半馴養牲口,常見於公路旁,是薩米經濟的支柱。",
       "image": "animals-reindeer.jpg"
+    },
+    {
+      "zh": "猞猁",
+      "en": "Eurasian lynx",
+      "note": "棲息於芬蘭森林深處的野生貓科動物,性情隱密難見蹤跡。"
+    },
+    {
+      "zh": "西方松雞",
+      "en": "Western capercaillie",
+      "note": "北方針葉林的大型雞形目鳥類,求偶炫耀舞姿十分獨特。"
+    },
+    {
+      "zh": "白尾海鵰",
+      "en": "White-tailed eagle",
+      "note": "北歐最大猛禽之一,常見於沿海與湖泊上空盤旋獵食。"
     }
   ],
   "foods": [
@@ -83,6 +98,21 @@
       "en": "Salmiakki",
       "note": "加氯化銨的黑色甘草糖,鹹嗆的味道是北歐特有的口味。",
       "image": "foods-salmiakki.jpg"
+    },
+    {
+      "zh": "芬蘭肉丸",
+      "en": "Lihapullat",
+      "note": "配奶油醬汁與馬鈴薯泥的家庭料理,家家做法略有不同。"
+    },
+    {
+      "zh": "燻鮭魚湯",
+      "en": "Lohikeitto",
+      "note": "鮭魚、馬鈴薯與奶油熬煮的乳白魚湯,冬季暖身首選。"
+    },
+    {
+      "zh": "坦佩雷黑香腸",
+      "en": "Mustamakkara",
+      "note": "坦佩雷特產黑血腸,常配藍莓醬與牛奶一起享用。"
     }
   ],
   "landmarks": [
@@ -135,6 +165,33 @@
         28.8989
       ],
       "image": "landmarks-olavinlinna.jpg"
+    },
+    {
+      "zh": "圖爾庫城堡",
+      "en": "Turku Castle",
+      "note": "建於十三世紀的中世紀城堡,曾是芬蘭最重要的行政中心。",
+      "latlon": [
+        60.4317,
+        22.2333
+      ]
+    },
+    {
+      "zh": "科利國家公園",
+      "en": "Koli National Park",
+      "note": "以起伏丘陵與皮耶利內湖景色聞名,是芬蘭代表性風景區。",
+      "latlon": [
+        63.0964,
+        29.8319
+      ]
+    },
+    {
+      "zh": "奧蘭群島",
+      "en": "Åland Islands",
+      "note": "波羅的海上高度自治的瑞典語群島,首府馬里港以帆船聞名。",
+      "latlon": [
+        60.0973,
+        19.9348
+      ]
     }
   ],
   "people": [
@@ -167,6 +224,21 @@
       "en": "Linus Torvalds",
       "note": "程式設計師,開創 Linux 作業系統核心。",
       "image": "people-torvalds.jpg"
+    },
+    {
+      "zh": "埃利亞斯·隆洛特",
+      "en": "Elias Lönnrot",
+      "note": "醫師與語言學家,編纂民族史詩《卡勒瓦拉》奠定文化認同。"
+    },
+    {
+      "zh": "阿基·郭利斯馬基",
+      "en": "Aki Kaurismäki",
+      "note": "以冷調幽默風格聞名國際的芬蘭電影導演。"
+    },
+    {
+      "zh": "烏爾霍·凱科寧",
+      "en": "Urho Kekkonen",
+      "note": "任期長達二十五年的芬蘭總統,主導冷戰時期的中立外交。"
     }
   ],
   "recommended": [
@@ -393,5 +465,67 @@
       "source": "https://commons.wikimedia.org/wiki/File%3ALinuxCon_Europe_Linus_Torvalds_03_%28cropped%29.jpg"
     }
   ],
-  "code": "FI"
+  "code": "FI",
+  "street_food": [
+    {
+      "zh": "烤香腸",
+      "note": "路邊小攤常見的芬蘭烤香腸,配黃芥末與麵包一起吃。"
+    },
+    {
+      "zh": "芬蘭甜甜圈",
+      "note": "市集常見的油炸甜甜圈,灑上糖粉配咖啡食用。"
+    },
+    {
+      "zh": "薄煎餅",
+      "note": "傳統家常薄煎餅,可甜可鹹,常配果醬享用。"
+    },
+    {
+      "zh": "醃鯡魚小點",
+      "note": "市集攤販常見的鹽漬鯡魚,配黑麥麵包一起吃。",
+      "where": "赫爾辛基集市廣場"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "仲夏節",
+      "month": "6月",
+      "note": "慶祝一年中最長的白晝,家家戶戶到湖邊小屋烤肉、生營火。"
+    },
+    {
+      "zh": "五一勞動節/學生節",
+      "month": "5月1日",
+      "note": "全國性的春天狂歡日,大學生戴上白帽遊行慶祝。"
+    },
+    {
+      "zh": "獨立紀念日",
+      "month": "12月6日",
+      "note": "紀念一九一七年獨立,晚間家家窗邊點兩支蠟燭。"
+    },
+    {
+      "zh": "赫爾辛基燈節",
+      "month": "1月",
+      "note": "冬季最暗的月份以燈光藝術點亮市區街道與建築。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "Hei",
+        "romanized": "hei"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "Kiitos",
+        "romanized": "kiitos"
+      },
+      {
+        "phrase": "再見",
+        "local": "Näkemiin",
+        "romanized": "nakemiin"
+      }
+    ],
+    "money_note": "芬蘭高度電子化,幾乎所有場合都用信用卡或手機感應支付,現金已很少見。",
+    "tipping": "沒有強制小費文化,服務費通常已含在帳單裡,滿意留些零錢即可。"
+  }
 }

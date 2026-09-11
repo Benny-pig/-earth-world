@@ -50,6 +50,21 @@
       "en": "Great bustard",
       "note": "歐洲最重的飛行鳥類之一,棲息於霍爾托巴吉的開闊草原。",
       "image": "animals-great-bustard.jpg"
+    },
+    {
+      "zh": "匈牙利篷毛犬",
+      "en": "Komondor",
+      "note": "外型如白色拖把的古老牧羊犬,擅長守護羊群。"
+    },
+    {
+      "zh": "歐洲黃鼠",
+      "en": "European ground squirrel",
+      "note": "棲息於匈牙利大平原草地的小型齧齒動物,常成群挖洞群居。"
+    },
+    {
+      "zh": "白尾海鵰",
+      "en": "White-tailed eagle",
+      "note": "巴拉頓湖與蒂薩河流域可見的大型猛禽。"
     }
   ],
   "foods": [
@@ -82,6 +97,21 @@
       "en": "Kürtőskalács",
       "note": "繞棒烘烤、表面焦糖化的中空甜捲,源自塞凱伊人。",
       "image": "foods-kurtoskalacs.jpg"
+    },
+    {
+      "zh": "漁夫魚湯",
+      "en": "Halászlé",
+      "note": "以河魚與紅椒粉熬煮的酸辣魚湯,多瑙河沿岸家常菜。"
+    },
+    {
+      "zh": "多波什蛋糕",
+      "en": "Dobos Torte",
+      "note": "五層海綿蛋糕夾巧克力奶油,表面覆焦糖脆片。"
+    },
+    {
+      "zh": "紅椒香腸",
+      "en": "Kolbász",
+      "note": "以紅椒粉調味風乾的傳統香腸,家家配方略有不同。"
     }
   ],
   "landmarks": [
@@ -134,6 +164,34 @@
         17.73
       ],
       "image": "landmarks-balaton.jpg"
+    },
+    {
+      "zh": "布達城堡",
+      "en": "Buda Castle",
+      "note": "多瑙河畔山丘上的皇宮建築群,俯瞰整座布達佩斯市區。",
+      "latlon": [
+        47.4964,
+        19.04
+      ],
+      "image": "landmarks-buda-castle.jpg"
+    },
+    {
+      "zh": "霍羅克伊民俗村",
+      "en": "Hollókő",
+      "note": "保存帕洛茨族傳統木造民居的世界遺產村落。",
+      "latlon": [
+        47.9833,
+        19.5833
+      ]
+    },
+    {
+      "zh": "托卡伊葡萄酒產區",
+      "en": "Tokaj wine region",
+      "note": "以貴腐甜酒聞名的葡萄酒鄉,產區列入世界遺產。",
+      "latlon": [
+        48.1198,
+        21.4086
+      ]
     }
   ],
   "people": [
@@ -165,6 +223,21 @@
       "en": "Ernő Rubik",
       "note": "建築師與設計師,一九七四年發明「魔術方塊」。",
       "image": "people-rubik.jpg"
+    },
+    {
+      "zh": "卡塔琳·卡里科",
+      "en": "Katalin Karikó",
+      "note": "研究mRNA技術的生化學家,獲頒諾貝爾生理醫學獎。"
+    },
+    {
+      "zh": "安德烈·柯特茲",
+      "en": "André Kertész",
+      "note": "現代攝影先驅之一,以生活紀實影像影響後世攝影美學。"
+    },
+    {
+      "zh": "加博爾·丹尼斯",
+      "en": "Dennis Gabor",
+      "note": "發明全像攝影術的物理學家,獲頒諾貝爾物理獎。"
     }
   ],
   "recommended": [
@@ -387,7 +460,75 @@
       "author": "Miklós Barabás",
       "license": "Public domain",
       "source": "https://commons.wikimedia.org/wiki/File%3APet%C5%91fi_1848-ban_Barab%C3%A1s_Mikl%C3%B3s_rajza.jpg"
+    },
+    {
+      "file": "landmarks-buda-castle.jpg",
+      "title": "布達城堡",
+      "author": "Paulo Cerqueira",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Buda_castle_-_panoramio.jpg"
     }
   ],
-  "code": "HU"
+  "code": "HU",
+  "street_food": [
+    {
+      "zh": "起司烤餅",
+      "note": "市集常見的鹹香小圓餅,表面撒滿起司烤至金黃。"
+    },
+    {
+      "zh": "熱紅酒",
+      "note": "聖誕市集必喝的香料熱紅酒,冬天暖身首選。"
+    },
+    {
+      "zh": "炸甜甜圈",
+      "note": "傳統匈牙利炸甜甜圈,外酥內軟灑上糖粉。"
+    },
+    {
+      "zh": "烤栗子與玉米",
+      "note": "布達佩斯街頭冬季常見的烤物小攤。"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "建國紀念日",
+      "month": "8月20日",
+      "note": "紀念匈牙利建國與聖伊斯特凡,夜晚多瑙河畔有煙火表演。"
+    },
+    {
+      "zh": "布達佩斯春季藝術節",
+      "month": "3-4月",
+      "note": "全國規模最大的藝文盛會,涵蓋音樂、戲劇與展覽。"
+    },
+    {
+      "zh": "聖馬丁節",
+      "month": "11月11日",
+      "note": "傳統上品嚐新釀葡萄酒與烤鵝的秋季節慶。"
+    },
+    {
+      "zh": "復活節灑水節",
+      "month": "依復活節(約3-4月)",
+      "note": "傳統上男子以香水或清水灑向女子祈求健康美麗。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "Szia",
+        "romanized": "sia"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "Köszönöm",
+        "romanized": "kosonom"
+      },
+      {
+        "phrase": "再見",
+        "local": "Viszlát",
+        "romanized": "viszlat"
+      }
+    ],
+    "money_note": "匈牙利以福林為主要貨幣,城市卡片支付普及,傳統市集常只收現金。",
+    "tipping": "餐廳習慣給10%左右小費,通常直接告知服務生含小費的總金額。"
+  }
 }

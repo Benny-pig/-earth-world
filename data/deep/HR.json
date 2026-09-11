@@ -50,6 +50,21 @@
       "en": "Bottlenose dolphin",
       "note": "亞得里亞海常見鯨豚,以克瓦內爾灣族群最知名。",
       "image": "HR-a-dolphin.jpg"
+    },
+    {
+      "zh": "歐亞猞猁",
+      "en": "Eurasian lynx",
+      "note": "曾在克羅埃西亞絕跡,後於戈爾斯基科塔爾山林重新復育。"
+    },
+    {
+      "zh": "灰狼",
+      "en": "Grey wolf",
+      "note": "分布於迪納拉山區,是克羅埃西亞森林生態的重要掠食者。"
+    },
+    {
+      "zh": "歐亞水獺",
+      "en": "Eurasian otter",
+      "note": "普利特維采湖群等淨水環境中可見蹤跡的水生動物。"
     }
   ],
   "foods": [
@@ -81,6 +96,21 @@
       "en": "Zagorski štrukli",
       "note": "麵皮包茅屋乳酪,水煮或焗烤,札格雷布地區名點。",
       "image": "HR-f-strukli.jpg"
+    },
+    {
+      "zh": "達爾馬提亞生火腿",
+      "en": "Pršut",
+      "note": "以海風與煙燻慢慢風乾的傳統生火腿,常配起司享用。"
+    },
+    {
+      "zh": "章魚沙拉",
+      "en": "Salata od hobotnice",
+      "note": "水煮章魚拌橄欖油與洋蔥的沿海涼拌菜。"
+    },
+    {
+      "zh": "炸糖球",
+      "en": "Fritule",
+      "note": "節慶常見的迷你炸甜甜圈,加葡萄乾與蘭姆酒調味。"
     }
   ],
   "landmarks": [
@@ -131,6 +161,35 @@
         45.0811,
         13.6387
       ]
+    },
+    {
+      "zh": "赫瓦爾島",
+      "en": "Hvar",
+      "note": "以薰衣草田與充足陽光聞名的亞得里亞海度假島嶼。",
+      "latlon": [
+        43.1729,
+        16.4415
+      ],
+      "image": "landmarks-hvar.jpg"
+    },
+    {
+      "zh": "科納提群島",
+      "en": "Kornati Islands",
+      "note": "由上百座無人島組成的國家公園,以石灰岩海岸線著稱。",
+      "latlon": [
+        43.8,
+        15.3333
+      ]
+    },
+    {
+      "zh": "特羅吉爾古城",
+      "en": "Trogir",
+      "note": "保存完好的中世紀石造小城,整座舊城列為世界遺產。",
+      "latlon": [
+        43.5147,
+        16.2508
+      ],
+      "image": "landmarks-trogir.jpg"
     }
   ],
   "people": [
@@ -158,6 +217,23 @@
       "zh": "亞妮察·科斯特利奇",
       "en": "Janica Kostelić",
       "note": "高山滑雪選手,奪四面奧運金牌。"
+    },
+    {
+      "zh": "戴克里先",
+      "en": "Diocletian",
+      "note": "出身達爾馬提亞的羅馬皇帝,晚年退位隱居於斯普利特宮殿。"
+    },
+    {
+      "zh": "安德麗雅·莫霍羅維奇契",
+      "en": "Andrija Mohorovičić",
+      "note": "地震學家,發現地殼與地函分界的莫霍面。",
+      "image": "people-andrija-mohorovicic.jpg"
+    },
+    {
+      "zh": "戈蘭·伊萬尼塞維奇",
+      "en": "Goran Ivanišević",
+      "note": "溫布頓男單冠軍,克羅埃西亞最具代表性的網球選手。",
+      "image": "people-goran-ivanisevic.jpg"
     }
   ],
   "recommended": [
@@ -349,7 +425,96 @@
       "author": "dronepicr",
       "license": "CC BY 2.0",
       "source": "https://commons.wikimedia.org/wiki/File%3AGalova%C4%8Dki_Buk_Waterfall_at_Galovac_lake_in_Plitvice_Lakes_National_Park,_Croatia_(48669966883).jpg"
+    },
+    {
+      "file": "landmarks-hvar.jpg",
+      "title": "赫瓦爾島城",
+      "author": "Boris Tylevich",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:City_of_Hvar,_Island_of_Hvar.jpg"
+    },
+    {
+      "file": "landmarks-trogir.jpg",
+      "title": "特羅吉爾古城",
+      "author": "Yamen",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Historic_City_of_Trogir_001.jpg"
+    },
+    {
+      "file": "people-andrija-mohorovicic.jpg",
+      "title": "安德麗雅·莫霍羅維奇契",
+      "author": "作者不詳",
+      "license": "Public Domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Andrija_Mohorovicic_crop.jpg"
+    },
+    {
+      "file": "people-goran-ivanisevic.jpg",
+      "title": "戈蘭·伊萬尼塞維奇",
+      "author": "Christophe95",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Goran_Ivani%C5%A1evi%C4%87_2014a.jpg"
     }
   ],
-  "code": "HR"
+  "code": "HR",
+  "street_food": [
+    {
+      "zh": "起司肉餡酥皮餅",
+      "note": "街頭常見的酥皮餡餅,常包絞肉或起司內餡。"
+    },
+    {
+      "zh": "烤肉腸",
+      "note": "巴爾幹風味的手指狀烤肉腸,配洋蔥與扁麵包一起吃。"
+    },
+    {
+      "zh": "義式風冰淇淋",
+      "note": "沿海城市盛行的義式冰淇淋店,種類選擇眾多。"
+    },
+    {
+      "zh": "松露小點",
+      "note": "伊斯特拉半島特產松露製作的小吃,香氣濃郁。"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "杜布羅夫尼克夏季藝術節",
+      "month": "7-8月",
+      "note": "老城牆內外舉行的戲劇音樂盛會,已有超過半世紀歷史。"
+    },
+    {
+      "zh": "國慶日",
+      "month": "6月25日",
+      "note": "紀念一九九一年宣布獨立的國定假日。"
+    },
+    {
+      "zh": "里耶卡狂歡節",
+      "month": "2月",
+      "note": "克羅埃西亞規模最大的狂歡節遊行,面具與花車齊聚。"
+    },
+    {
+      "zh": "聖布萊斯節",
+      "month": "2月3日",
+      "note": "杜布羅夫尼克守護聖人紀念日,全城舉行遊行慶祝。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "Bok",
+        "romanized": "bok"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "Hvala",
+        "romanized": "hvala"
+      },
+      {
+        "phrase": "再見",
+        "local": "Doviđenja",
+        "romanized": "dovidjenja"
+      }
+    ],
+    "money_note": "克羅埃西亞已改用歐元,城市普遍可刷卡與感應支付,鄉間小店仍偏好現金。",
+    "tipping": "沒有強制規定,餐廳給10%左右小費是常見的禮貌作法。"
+  }
 }

@@ -51,6 +51,21 @@
       "en": "Mountain gazelle",
       "note": "丘陵與旱谷的本土瞪羚,是重點保育物種。",
       "image": "IL-a-gazelle.jpg"
+    },
+    {
+      "zh": "條紋鬣狗",
+      "en": "Striped hyena",
+      "note": "內蓋夫沙漠常見的夜行性食腐動物,性情害羞不主動攻擊人。"
+    },
+    {
+      "zh": "埃及果蝠",
+      "en": "Egyptian fruit bat",
+      "note": "以視覺與回聲定位覓食的果蝠,是重要的科學研究對象。"
+    },
+    {
+      "zh": "金背胡狼",
+      "en": "Golden jackal",
+      "note": "適應力強的沙漠犬科動物,常在夜間出沒於荒野與農地邊緣。"
     }
   ],
   "foods": [
@@ -83,6 +98,21 @@
       "en": "Malabi",
       "note": "玫瑰水香的牛奶布丁,淋糖漿撒碎堅果。",
       "image": "IL-f-malabi.jpg"
+    },
+    {
+      "zh": "沙威瑪",
+      "en": "Shawarma",
+      "note": "旋轉烤肉切片包入皮塔餅或夾餅,是常見的速食料理。"
+    },
+    {
+      "zh": "猶太辮子麵包",
+      "en": "Challah",
+      "note": "安息日餐桌上的傳統編織麵包,口感鬆軟略帶甜味。"
+    },
+    {
+      "zh": "芝麻糖",
+      "en": "Halva",
+      "note": "以芝麻醬製成的濃郁甜點,常見多種口味與堅果配料。"
     }
   ],
   "landmarks": [
@@ -132,6 +162,35 @@
         32.8144,
         34.987
       ]
+    },
+    {
+      "zh": "加利利海",
+      "en": "Sea of Galilee",
+      "note": "以色列最大的淡水湖,周邊是重要的宗教歷史景點。",
+      "latlon": [
+        32.83,
+        35.59
+      ],
+      "image": "landmarks-sea-of-galilee.jpg"
+    },
+    {
+      "zh": "拉蒙火山口",
+      "en": "Ramon Crater",
+      "note": "內蓋夫沙漠中最大的侵蝕地形坑谷,展現多彩岩層景觀。",
+      "latlon": [
+        30.6047,
+        34.8
+      ],
+      "image": "landmarks-ramon-crater.jpg"
+    },
+    {
+      "zh": "特拉維夫白城",
+      "en": "White City of Tel Aviv",
+      "note": "集中大量包浩斯風格建築的街區,列為世界文化遺產。",
+      "latlon": [
+        32.0745,
+        34.7739
+      ]
     }
   ],
   "people": [
@@ -159,6 +218,24 @@
       "zh": "蓋兒·加朵",
       "en": "Gal Gadot",
       "note": "演員,以《神力女超人》廣為人知。"
+    },
+    {
+      "zh": "阿摩司·奧茲",
+      "en": "Amos Oz",
+      "note": "以色列重要作家,作品常探討身分認同與家庭記憶。",
+      "image": "people-amos-oz.jpg"
+    },
+    {
+      "zh": "伊扎克·帕爾曼",
+      "en": "Itzhak Perlman",
+      "note": "享譽國際的小提琴家,四歲罹患小兒麻痺後仍堅持演奏。",
+      "image": "people-itzhak-perlman.jpg"
+    },
+    {
+      "zh": "丹尼爾·卡納曼",
+      "en": "Daniel Kahneman",
+      "note": "行為經濟學先驅,獲頒諾貝爾經濟學獎的心理學家。",
+      "image": "people-daniel-kahneman.jpg"
     }
   ],
   "recommended": [
@@ -350,7 +427,103 @@
       "author": "Godot13",
       "license": "CC BY-SA 4.0",
       "source": "https://commons.wikimedia.org/wiki/File%3AJerusalem-2013(2)-Temple_Mount-Dome_of_the_Rock_(SE_exposure).jpg"
+    },
+    {
+      "file": "landmarks-sea-of-galilee.jpg",
+      "title": "加利利海衛星景色",
+      "author": "NASA Expedition 20 crew",
+      "license": "Public Domain (NASA)",
+      "source": "https://commons.wikimedia.org/wiki/File:Lake_Tiberias_(Sea_of_Galilee),_Northern_Israel.jpg"
+    },
+    {
+      "file": "landmarks-ramon-crater.jpg",
+      "title": "拉蒙火山口空拍景色",
+      "author": "Andrew Shiva",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Israel-2013-Aerial_00-Negev-Makhtesh_Ramon.jpg"
+    },
+    {
+      "file": "people-amos-oz.jpg",
+      "title": "阿摩司·奧茲",
+      "author": "Bernard Gotfryd / 美國國會圖書館",
+      "license": "Public Domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Amos_Oz,_Israeli_author.jpg"
+    },
+    {
+      "file": "people-itzhak-perlman.jpg",
+      "title": "伊扎克·帕爾曼",
+      "author": "Shealah Craighead / 美國白宮",
+      "license": "Public Domain",
+      "source": "https://commons.wikimedia.org/wiki/File:ItzhakPerlman2007.jpg"
+    },
+    {
+      "file": "people-daniel-kahneman.jpg",
+      "title": "丹尼爾·卡納曼",
+      "author": "Eirik Solheim",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Daniel_Kahneman_(3283955327)_(cropped).jpg"
     }
   ],
-  "code": "IL"
+  "code": "IL",
+  "street_food": [
+    {
+      "zh": "耶路撒冷芝麻圈餅",
+      "note": "街頭常見沾芝麻的長型麵包圈,常配鹹香料一起吃。"
+    },
+    {
+      "zh": "起司菠菜酥皮餅",
+      "note": "市場常見的填餡酥皮點心,內餡多為起司或菠菜。"
+    },
+    {
+      "zh": "鮮榨石榴汁",
+      "note": "市集常見的鮮榨果汁攤,石榴汁與柑橘汁最受歡迎。"
+    },
+    {
+      "zh": "烤玉米",
+      "note": "街頭小販常見的烤玉米,簡單卻十分受歡迎的小吃。"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "逾越節",
+      "month": "猶太曆尼散月(約3-4月)",
+      "note": "紀念以色列人出埃及的重要節日,家家舉行逾越節晚宴。"
+    },
+    {
+      "zh": "猶太新年",
+      "month": "猶太曆提斯利月(約9月)",
+      "note": "猶太曆新年的開始,傳統會吃蘋果沾蜂蜜祈求甜美一年。"
+    },
+    {
+      "zh": "光明節",
+      "month": "猶太曆基斯流月(約12月)",
+      "note": "紀念聖殿燈油奇蹟的節日,連續八天點燃燭台。"
+    },
+    {
+      "zh": "獨立紀念日",
+      "month": "依猶太曆(約4-5月)",
+      "note": "紀念一九四八年建國的國定假日,全國舉行煙火與晚會。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "שלום",
+        "romanized": "shalom"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "תודה",
+        "romanized": "toda"
+      },
+      {
+        "phrase": "再見",
+        "local": "להתראות",
+        "romanized": "lehitraot"
+      }
+    ],
+    "money_note": "以色列信用卡與行動支付相當普及,但市集小販有時仍偏好現金交易。",
+    "tipping": "餐廳帳單通常不含服務費,習慣給12-15%小費,計程車與咖啡店則無強制小費。"
+  }
 }

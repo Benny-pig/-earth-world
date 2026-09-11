@@ -51,6 +51,21 @@
       "en": "Connemara pony",
       "note": "原產愛爾蘭西部的本地小馬,耐勞、性情溫馴。",
       "image": "animals-connemarapony.jpg"
+    },
+    {
+      "zh": "遊隼",
+      "en": "Peregrine falcon",
+      "note": "俯衝速度最快的猛禽,在愛爾蘭懸崖峭壁上築巢繁殖。"
+    },
+    {
+      "zh": "灰海豹",
+      "en": "Grey seal",
+      "note": "愛爾蘭沿岸常見的大型海洋哺乳動物,秋季上岸產仔。"
+    },
+    {
+      "zh": "歐亞水獺",
+      "en": "Eurasian otter",
+      "note": "愛爾蘭河川與湖泊環境指標物種,族群狀況相對穩定。"
     }
   ],
   "foods": [
@@ -83,6 +98,21 @@
       "en": "Full Irish breakfast",
       "note": "煎蛋、香腸、培根、黑白布丁與烤番茄的豐盛拼盤。",
       "image": "foods-fullirish.jpg"
+    },
+    {
+      "zh": "愛爾蘭咖啡",
+      "en": "Irish coffee",
+      "note": "威士忌加咖啡再覆上鮮奶油的暖身飲品,傳說源自香農機場。"
+    },
+    {
+      "zh": "黑布丁",
+      "en": "Black pudding",
+      "note": "以豬血與燕麥製成的傳統香腸,是全套早餐的常見配菜。"
+    },
+    {
+      "zh": "馬鈴薯煎餅",
+      "en": "Boxty",
+      "note": "生熟馬鈴薯混合煎製的傳統餅,常見於早餐或配肉食用。"
     }
   ],
   "landmarks": [
@@ -135,6 +165,33 @@
         -7.8907
       ],
       "image": "landmarks-cashel.jpg"
+    },
+    {
+      "zh": "阿倫群島",
+      "en": "Aran Islands",
+      "note": "位於高威灣外海的三座島嶼,保留愛爾蘭語與傳統石牆風景。",
+      "latlon": [
+        53.124,
+        -9.698
+      ]
+    },
+    {
+      "zh": "基爾肯尼城堡",
+      "en": "Kilkenny Castle",
+      "note": "諾曼時期建造的河畔城堡,現為熱門的公園與歷史景點。",
+      "latlon": [
+        52.6469,
+        -7.2517
+      ]
+    },
+    {
+      "zh": "健力士啤酒博物館",
+      "en": "Guinness Storehouse",
+      "note": "都柏林釀酒廠改建的體驗式博物館,頂樓可俯瞰城市全景。",
+      "latlon": [
+        53.3419,
+        -6.2867
+      ]
     }
   ],
   "people": [
@@ -167,6 +224,21 @@
       "en": "Bono",
       "note": "搖滾樂團 U2 主唱,長期參與國際人道與扶貧倡議。",
       "image": "people-bono.jpg"
+    },
+    {
+      "zh": "奧斯卡·王爾德",
+      "en": "Oscar Wilde",
+      "note": "以機智諷刺著稱的劇作家與小說家,著有《格雷的畫像》。"
+    },
+    {
+      "zh": "謝默斯·希尼",
+      "en": "Seamus Heaney",
+      "note": "諾貝爾文學獎詩人,作品常描寫愛爾蘭鄉土與家族記憶。"
+    },
+    {
+      "zh": "瑪麗·羅賓遜",
+      "en": "Mary Robinson",
+      "note": "愛爾蘭首位女總統,後任聯合國人權事務高級專員。"
     }
   ],
   "recommended": [
@@ -398,5 +470,66 @@
       "source": "https://commons.wikimedia.org/wiki/File:Bono_portrait_by_John_Hewson.png"
     }
   ],
-  "code": "IE"
+  "code": "IE",
+  "street_food": [
+    {
+      "zh": "炸魚薯條",
+      "note": "愛爾蘭海港城鎮常見的外帶小吃,搭配鹽與醋調味。"
+    },
+    {
+      "zh": "馬鈴薯烤餅",
+      "note": "傳統馬鈴薯烤餅,常見於早餐攤與市集。"
+    },
+    {
+      "zh": "烤起司三明治",
+      "note": "酒吧常見的烤起司三明治小食,簡單飽足。"
+    },
+    {
+      "zh": "燕麥能量棒",
+      "note": "市集常見的手工燕麥棒,常加蜂蜜與果乾。"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "聖巴特里克節",
+      "month": "3月17日",
+      "note": "愛爾蘭最重要的節日,都柏林舉行盛大遊行,滿城綠意。"
+    },
+    {
+      "zh": "高威牡蠣節",
+      "month": "9月",
+      "note": "西部港市高威舉辦的美食慶典,以生蠔品嚐大賽聞名。"
+    },
+    {
+      "zh": "布魯姆日",
+      "month": "6月16日",
+      "note": "紀念作家喬伊斯小說《尤利西斯》情節發生的那一天。"
+    },
+    {
+      "zh": "薰風節",
+      "month": "10月31日",
+      "note": "被視為萬聖節起源的古老凱爾特節日,象徵夏季結束。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "Dia dhuit",
+        "romanized": "dee-a gwit"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "Go raibh maith agat",
+        "romanized": "guh rev mah agut"
+      },
+      {
+        "phrase": "再見",
+        "local": "Slán",
+        "romanized": "slawn"
+      }
+    ],
+    "money_note": "愛爾蘭普遍使用信用卡與感應支付,現金主要用於小型鄉村商店。",
+    "tipping": "餐廳沒有強制小費,滿意服務可留10%左右,酒吧點飲料通常不需要小費。"
+  }
 }

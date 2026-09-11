@@ -50,6 +50,21 @@
       "en": "Birds-of-paradise",
       "note": "分布於巴布亞的科別,雄鳥求偶羽飾與舞姿極為華麗。",
       "image": "animals-bird-of-paradise.jpg"
+    },
+    {
+      "zh": "蘇門答臘象",
+      "en": "Sumatran elephant",
+      "note": "體型較亞洲象略小的瀕危亞種,棲息於蘇門答臘雨林。"
+    },
+    {
+      "zh": "峇里島椋鳥",
+      "en": "Bali myna",
+      "note": "峇里島特有的白色鳴鳥,野外數量一度僅存個位數,極度瀕危。"
+    },
+    {
+      "zh": "婆羅洲紅毛猩猩",
+      "en": "Bornean orangutan",
+      "note": "與蘇門答臘紅毛猩猩為近親,主要棲息於婆羅洲低地雨林。"
     }
   ],
   "foods": [
@@ -82,6 +97,21 @@
       "en": "Bakso",
       "note": "牛肉丸湯麵,街頭攤車叫賣的平民小吃。",
       "image": "foods-bakso.jpg"
+    },
+    {
+      "zh": "印尼炒麵",
+      "en": "Mie goreng",
+      "note": "甜醬油調味的炒麵,常加蔬菜與雞肉或蝦仁。"
+    },
+    {
+      "zh": "香料烤雞",
+      "en": "Ayam bakar",
+      "note": "以薑黃與香料醃製後炭烤的雞肉料理,街頭餐館常見。"
+    },
+    {
+      "zh": "水果酸辣沙拉",
+      "en": "Rujak",
+      "note": "混合多種生果蔬與棕糖辣醬拌成的酸辣涼拌小吃。"
     }
   ],
   "landmarks": [
@@ -134,6 +164,33 @@
         115.0868
       ],
       "image": "landmarks-tanahlot.jpg"
+    },
+    {
+      "zh": "多巴湖",
+      "en": "Lake Toba",
+      "note": "由超級火山噴發形成的巨大火山口湖,湖中有薩摩西島。",
+      "latlon": [
+        2.6845,
+        98.8756
+      ]
+    },
+    {
+      "zh": "拉惹安巴群島",
+      "en": "Raja Ampat",
+      "note": "西巴布亞外海的珊瑚礁天堂,是全球海洋生物多樣性最高的海域之一。",
+      "latlon": [
+        -0.2333,
+        130.5167
+      ]
+    },
+    {
+      "zh": "德加拉朗梯田",
+      "en": "Tegalalang Rice Terrace",
+      "note": "峇里島烏布近郊層層堆疊的水稻梯田景觀。",
+      "latlon": [
+        -8.431,
+        115.2777
+      ]
     }
   ],
   "people": [
@@ -166,6 +223,21 @@
       "en": "Pramoedya Ananta Toer",
       "note": "小說家,代表作《布魯島四部曲》寫於流放期間。",
       "image": "people-pramoedya.jpg"
+    },
+    {
+      "zh": "拉登·沙勒",
+      "en": "Raden Saleh",
+      "note": "十九世紀爪哇畫家,融合歐洲浪漫主義與本土題材開創印尼西畫先河。"
+    },
+    {
+      "zh": "蘇西·蘇珊蒂",
+      "en": "Susi Susanti",
+      "note": "羽球奧運金牌選手,為印尼贏得歷史上首面奧運金牌。"
+    },
+    {
+      "zh": "梅嘉娃蒂·蘇卡諾普特麗",
+      "en": "Megawati Sukarnoputri",
+      "note": "印尼首位女總統,蘇卡諾之女。"
     }
   ],
   "recommended": [
@@ -397,5 +469,70 @@
       "source": "https://commons.wikimedia.org/wiki/File:Pramoedya_Ananta_Toer,_Pekan_Buku_Indonesia_1954,_p214.jpg"
     }
   ],
-  "code": "ID"
+  "code": "ID",
+  "street_food": [
+    {
+      "zh": "炸天貝與豆腐",
+      "note": "街頭常見的炸豆製品小吃,沾甜辣醬一起吃。"
+    },
+    {
+      "zh": "烤玉米",
+      "note": "塗抹辣醬與奶油後炭烤的玉米,街頭攤販常見。"
+    },
+    {
+      "zh": "綜合冰品",
+      "note": "碎冰配椰漿、果凍與甜豆的清涼街頭甜點。"
+    },
+    {
+      "zh": "炸香蕉",
+      "note": "裹粉油炸的甜香蕉,是經典的街頭甜點。"
+    },
+    {
+      "zh": "糯米粽配沙嗲",
+      "note": "傳統糯米粽,常搭配沙嗲醬一起食用。"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "獨立紀念日",
+      "month": "8月17日",
+      "note": "紀念一九四五年宣布獨立,全國舉行升旗典禮與趣味競賽。"
+    },
+    {
+      "zh": "開齋節",
+      "month": "依伊斯蘭曆",
+      "note": "齋戒月結束後的重要節日,家家團聚並互相拜訪。"
+    },
+    {
+      "zh": "寧靜日",
+      "month": "3月(峇里島曆新年)",
+      "note": "峇里島全島停止活動、禁止外出的靜默日,象徵反思淨化。"
+    },
+    {
+      "zh": "葛拉根節",
+      "month": "依峇里曆",
+      "note": "峇里島慶祝善惡對抗、善勝惡的重要宗教節日。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "Halo",
+        "romanized": "halo"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "Terima kasih",
+        "romanized": "terima kasih"
+      },
+      {
+        "phrase": "再見",
+        "local": "Selamat tinggal",
+        "romanized": "selamat tinggal"
+      }
+    ],
+    "money_note": "印尼多數交易仍以現金為主,城市便利商店與商場逐漸普及電子支付。",
+    "tipping": "沒有強制小費文化,但給街頭小販或司機一些零錢常被視為友善之舉。"
+  }
 }
