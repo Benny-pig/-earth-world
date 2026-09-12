@@ -51,6 +51,22 @@
       "en": "Dromedary camel",
       "note": "撒哈拉邊緣居民的馱獸與坐騎,梅爾祖卡沙丘的駝隊行程最經典。",
       "image": "MA-a-camel.jpg"
+    },
+    {
+      "zh": "白鸛",
+      "en": "White stork",
+      "note": "常在城牆、清真寺尖塔與遺跡上築巢,馬拉喀什巴迪皇宮牆頭最常見。",
+      "image": "animals-white-stork.jpg"
+    },
+    {
+      "zh": "沙漠巨蜥",
+      "en": "Desert monitor",
+      "note": "體長可逾一公尺的大型蜥蜴,棲息撒哈拉邊緣的乾燥岩地與灌叢。"
+    },
+    {
+      "zh": "條紋鬣狗",
+      "en": "Striped hyena",
+      "note": "夜行性掠食兼食腐動物,出沒於阿特拉斯山與偏遠丘陵。"
     }
   ],
   "foods": [
@@ -83,6 +99,22 @@
       "en": "Moroccan mint tea",
       "note": "綠茶加大量鮮薄荷與糖,從高處沖入杯中起泡,是待客必備。",
       "image": "MA-f-tea.jpg"
+    },
+    {
+      "zh": "摩洛哥千層薄餅",
+      "en": "Msemen",
+      "note": "手拉成方形的油煎千層餅,早餐配蜂蜜或果醬吃。"
+    },
+    {
+      "zh": "茄子番茄沙拉",
+      "en": "Zaalouk",
+      "note": "茄子與番茄慢煮成泥狀冷盤,配麵包沾食,常見於家庭餐桌。"
+    },
+    {
+      "zh": "摩洛哥杏仁蜜餅",
+      "en": "Chebakia",
+      "note": "油炸花形麵點裹蜂蜜與芝麻,是齋戒月開齋的經典甜食。",
+      "image": "foods-chebakia.jpg"
     }
   ],
   "landmarks": [
@@ -132,6 +164,34 @@
         33.6083,
         -7.6326
       ]
+    },
+    {
+      "zh": "巴迪皇宮遺址",
+      "en": "El Badi Palace",
+      "note": "馬拉喀什十六世紀宮殿遺跡,如今殘垣與鸛鳥巢是攝影熱點。",
+      "latlon": [
+        31.6203,
+        -7.9827
+      ]
+    },
+    {
+      "zh": "哈桑塔",
+      "en": "Hassan Tower",
+      "note": "拉巴特未完工的十二世紀清真寺宣禮塔,旁為穆罕默德五世陵墓。",
+      "latlon": [
+        34.0219,
+        -6.8228
+      ],
+      "image": "landmarks-hassan-tower.jpg"
+    },
+    {
+      "zh": "托德拉峽谷",
+      "en": "Todra Gorge",
+      "note": "阿特拉斯山南麓的紅色峭壁峽谷,狹處寬僅十餘公尺,是攀岩勝地。",
+      "latlon": [
+        31.5486,
+        -5.5806
+      ]
     }
   ],
   "people": [
@@ -159,6 +219,22 @@
       "zh": "希查姆·艾爾·奎羅伊",
       "en": "Hicham El Guerrouj",
       "note": "中距離跑者,一千五百公尺與一英里世界紀錄保持人,雅典奧運雙金。"
+    },
+    {
+      "zh": "穆罕默德六世",
+      "en": "Mohammed VI",
+      "note": "一九九九年即位至今的現任國王,推動基礎建設與部分社會改革。",
+      "image": "people-mohammed-vi.jpg"
+    },
+    {
+      "zh": "優素福·伊本·塔什芬",
+      "en": "Yusuf ibn Tashfin",
+      "note": "穆拉比特王朝建立者,一〇六二年興建馬拉喀什並定為首都。"
+    },
+    {
+      "zh": "法圖瑪·菲赫莉",
+      "en": "Fatima al-Fihri",
+      "note": "九世紀富商之女,在非斯創立卡拉維因大學,被視為世界最早的大學之一。"
     }
   ],
   "recommended": [
@@ -350,7 +426,98 @@
       "author": "Jorge Franganillo",
       "license": "CC BY 2.0",
       "source": "https://commons.wikimedia.org/wiki/File:Fez_Chouara_Tannery_(54238811661).jpg"
+    },
+    {
+      "file": "animals-white-stork.jpg",
+      "title": "築巢中的白鸛,馬拉喀什",
+      "author": "Mike Prince",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Eurasian_White_Stork_(5038319963).jpg"
+    },
+    {
+      "file": "foods-chebakia.jpg",
+      "title": "摩洛哥蜜餅 Chebbakiyya",
+      "author": "مصطفى ملو",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Chebbakiyya_from_Morocco.jpg"
+    },
+    {
+      "file": "landmarks-hassan-tower.jpg",
+      "title": "哈桑塔與清真寺柱廊,拉巴特",
+      "author": "Timothy A. Gonsalves",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Hassan_Tower_Columns_Rabat_Nov25_A7CR_08839.jpg"
+    },
+    {
+      "file": "people-mohammed-vi.jpg",
+      "title": "穆罕默德六世國王",
+      "author": "U. Dettmar/ABr (Agência Brasil)",
+      "license": "CC BY 3.0 BR",
+      "source": "https://commons.wikimedia.org/wiki/File:Mohammed_VI_of_Morocco.jpg"
     }
   ],
-  "code": "MA"
+  "code": "MA",
+  "street_food": [
+    {
+      "zh": "水煮蝸牛",
+      "en": null,
+      "note": "香料湯汁煮的小蝸牛,插牙籤挑食,是德吉瑪廣場夜市經典。",
+      "where": "德吉瑪廣場夜市"
+    },
+    {
+      "zh": "烤沙丁魚三明治",
+      "note": "港口城市常見,烤好的沙丁魚夾法棍麵包配辣醬。"
+    },
+    {
+      "zh": "現烤 Msemen 夾蜂蜜",
+      "note": "早市攤位現煎現吃,趁熱抹奶油蜂蜜。"
+    },
+    {
+      "zh": "杏仁牛奶飲",
+      "note": "市集現榨的甜杏仁露,冬季也常見熱飲版本。"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "開齋節",
+      "month": "伊斯蘭曆10月1日",
+      "note": "齋戒月結束後的節日,全家團聚、互贈點心。"
+    },
+    {
+      "zh": "玫瑰節",
+      "month": "5月",
+      "note": "南部玫瑰谷凱拉特姆古納鎮慶祝大馬士革玫瑰採收。"
+    },
+    {
+      "zh": "埃西拉壁畫藝術節",
+      "month": "7-8月",
+      "note": "北部海濱古城牆面被畫上各國藝術家的壁畫。"
+    },
+    {
+      "zh": "宰牲節",
+      "month": "伊斯蘭曆12月10日",
+      "note": "紀念先知易卜拉欣獻祭,家家戶戶宰羊分享。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "السلام عليكم",
+        "romanized": "Salam alaykum"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "شكرا",
+        "romanized": "Shukran"
+      },
+      {
+        "phrase": "再見",
+        "local": "مع السلامة",
+        "romanized": "Bslama"
+      }
+    ],
+    "money_note": "市集與小商店仍以現金為主,大城市飯店與連鎖店可用信用卡,ATM普及。",
+    "tipping": "小費文化普遍,餐廳、導遊與腳夫給小費是常態,約消費金額的百分之五到十。"
+  }
 }

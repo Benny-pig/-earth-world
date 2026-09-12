@@ -50,6 +50,21 @@
       "en": "Proboscis monkey",
       "note": "婆羅洲特有,雄猴垂鼻突出,群棲於紅樹林與河岸。",
       "image": "animals-proboscis.jpg"
+    },
+    {
+      "zh": "馬來熊",
+      "en": "Sun bear",
+      "note": "世界最小型熊種,胸前有月牙狀斑紋,棲息於低地雨林。"
+    },
+    {
+      "zh": "綠蠵龜",
+      "en": "Green turtle",
+      "note": "刁曼島與沙巴外海的沙灘是重要產卵地,設有保育計畫。"
+    },
+    {
+      "zh": "婆羅洲侏儒象",
+      "en": "Bornean pygmy elephant",
+      "note": "體型較亞洲象小,僅分布於沙巴東部低地雨林。"
     }
   ],
   "foods": [
@@ -82,6 +97,21 @@
       "en": "Roti canai",
       "note": "甩打起酥的麵餅,配咖哩或扁豆糊,嘛嘛檔常備。",
       "image": "foods-roticanai.jpg"
+    },
+    {
+      "zh": "炒粿條",
+      "en": "Char kway teow",
+      "note": "扁米粉大火快炒蝦仁、臘腸與豆芽,檳城版本以鑊氣聞名。"
+    },
+    {
+      "zh": "海南雞飯",
+      "en": "Hainanese chicken rice",
+      "note": "白斬雞配油香雞飯與薑蓉辣椒醬,馬來西亞華人社群的日常菜。"
+    },
+    {
+      "zh": "娘惹糕",
+      "en": "Kuih",
+      "note": "峇峇娘惹傳統糕點,色彩繽紛、多以椰漿與班蘭葉調味。"
     }
   ],
   "landmarks": [
@@ -134,6 +164,33 @@
         101.684
       ],
       "image": "landmarks-batucaves.jpg"
+    },
+    {
+      "zh": "姆祿國家公園",
+      "en": "Gunung Mulu National Park",
+      "note": "砂拉越世界遺產,以巨大洞穴系統與尖峰石林聞名。",
+      "latlon": [
+        4.0483,
+        114.8083
+      ]
+    },
+    {
+      "zh": "布城粉紅清真寺",
+      "en": "Putra Mosque, Putrajaya",
+      "note": "行政首都布城的地標清真寺,粉紅色圓頂倒映在人工湖面。",
+      "latlon": [
+        2.9339,
+        101.691
+      ]
+    },
+    {
+      "zh": "蘭卡威天空之橋",
+      "en": "Langkawi Sky Bridge",
+      "note": "架設於山頂的曲形吊橋,可俯瞰安達曼海與周邊島嶼。",
+      "latlon": [
+        6.3803,
+        99.6706
+      ]
     }
   ],
   "people": [
@@ -166,6 +223,21 @@
       "en": "P. Ramlee",
       "note": "演員、導演兼作曲家,代表馬來電影與流行歌曲的黃金年代。",
       "image": "people-pramlee.jpg"
+    },
+    {
+      "zh": "敦拉薩",
+      "en": "Tun Abdul Razak",
+      "note": "第二任首相,推行以扶助土著為主的新經濟政策。"
+    },
+    {
+      "zh": "妮可·大衛",
+      "en": "Nicol David",
+      "note": "壁球名將,長年蟬聯世界球后,是馬來西亞最成功的個人運動員之一。"
+    },
+    {
+      "zh": "拿督拉特",
+      "en": "Lat (Mohammad Nor Khalid)",
+      "note": "國寶級漫畫家,以《甘榜男孩》系列描繪馬來西亞多元社會生活。"
     }
   ],
   "recommended": [
@@ -397,5 +469,75 @@
       "source": "https://commons.wikimedia.org/wiki/File:P._Ramlee_1.jpg"
     }
   ],
-  "code": "MY"
+  "code": "MY",
+  "street_food": [
+    {
+      "zh": "煎蕊",
+      "en": "Cendol",
+      "note": "刨冰淋椰漿與棕櫚糖漿,配紅豆與綠色粉條,消暑經典。"
+    },
+    {
+      "zh": "囉惹",
+      "en": "Rojak",
+      "note": "水果蔬菜拌蝦膏甜辣醬,酸甜鹹辣層次豐富。"
+    },
+    {
+      "zh": "拉茶",
+      "en": "Teh tarik",
+      "note": "高沖起泡的煉乳奶茶,嘛嘛檔(印度穆斯林檔口)必點。"
+    },
+    {
+      "zh": "客家釀豆腐",
+      "en": "Yong tau foo",
+      "note": "豆腐、油條、蔬菜釀入魚漿煮成清湯或乾拌,夜市常見。"
+    },
+    {
+      "zh": "福建炒麵",
+      "en": "Hokkien mee",
+      "note": "粗麵以黑醬油與豬油大火拌炒,吉隆坡與檳城做法各異。"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "開齋節",
+      "month": "伊斯蘭曆10月1日",
+      "note": "全國性假期,馬來社群開放住家宴客(open house)。"
+    },
+    {
+      "zh": "農曆新年",
+      "month": "農曆正月",
+      "note": "華人社群最重要的節日,舞獅、團圓飯與紅包遍及全國。"
+    },
+    {
+      "zh": "大寶森節",
+      "month": "1-2月",
+      "note": "印度教徒在黑風洞進行穿刺苦行朝聖,場面震撼。"
+    },
+    {
+      "zh": "屠妖節",
+      "month": "10-11月",
+      "note": "印度教「光明節」,家家戶戶點油燈慶祝光明戰勝黑暗。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "Apa khabar",
+        "romanized": "Apa khabar"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "Terima kasih",
+        "romanized": "Terima kasih"
+      },
+      {
+        "phrase": "再見",
+        "local": "Selamat tinggal",
+        "romanized": "Selamat tinggal"
+      }
+    ],
+    "money_note": "城市普遍可用信用卡與電子錢包(如 Touch 'n Go),小販與夜市仍多收現金。",
+    "tipping": "沒有強制小費文化,飯店與餐廳常已收一成服務費,額外給小費非必要但受歡迎。"
+  }
 }

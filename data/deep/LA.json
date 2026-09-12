@@ -49,6 +49,21 @@
       "en": "Mekong giant catfish",
       "note": "世界最大的淡水魚之一,可重達三百公斤,湄公河族群瀕危。",
       "image": "LA-a-catfish.jpg"
+    },
+    {
+      "zh": "黑頰長臂猿",
+      "en": "Black crested gibbon",
+      "note": "棲息於北部山林的瀕危靈長類,以清亮的鳴叫聲著稱。"
+    },
+    {
+      "zh": "馬來熊",
+      "en": "Sun bear",
+      "note": "體型最小的熊種,胸前有明顯的月牙形斑紋。"
+    },
+    {
+      "zh": "綠孔雀",
+      "en": "Green peafowl",
+      "note": "分布於寮國低地森林,野外族群因棲地縮減而日益稀少。"
     }
   ],
   "foods": [
@@ -80,6 +95,21 @@
       "zh": "烤雞",
       "en": "Ping kai",
       "note": "抹上香茅、蒜與魚露的半剖雞用竹夾炭烤,配糯米與辣醬(jeow)。"
+    },
+    {
+      "zh": "寮式香腸",
+      "en": "Sai Oua",
+      "note": "以香茅、南薑等香料調味的烤香腸,風味濃郁辛香。"
+    },
+    {
+      "zh": "香蕉葉蒸魚",
+      "en": "Mok Pa",
+      "note": "魚肉拌香料後以香蕉葉包裹蒸熟,保留原汁鮮味。"
+    },
+    {
+      "zh": "寮式法國麵包三明治",
+      "en": "Khao Ji",
+      "note": "承襲法國殖民時期的長棍麵包,夾入肉醬與醃菜。"
     }
   ],
   "landmarks": [
@@ -131,6 +161,36 @@
         19.7492,
         101.9931
       ]
+    },
+    {
+      "zh": "香通寺",
+      "en": "Wat Xieng Thong",
+      "note": "龍坡邦最具代表性的寺廟,屋簷低垂線條優雅。",
+      "latlon": [
+        19.8968,
+        102.1372
+      ],
+      "image": "landmarks-wat-xieng-thong.jpg"
+    },
+    {
+      "zh": "四千島",
+      "en": "Si Phan Don",
+      "note": "南部湄公河上散布的河中島群,以瀑布與河豚聞名。",
+      "latlon": [
+        14.1167,
+        105.9333
+      ],
+      "image": "landmarks-si-phan-don.jpg"
+    },
+    {
+      "zh": "波羅芬高原",
+      "en": "Bolaven Plateau",
+      "note": "南部火山高原,土壤肥沃,是寮國知名的咖啡產區。",
+      "latlon": [
+        15.2,
+        106.4
+      ],
+      "image": "landmarks-bolaven-plateau.jpg"
     }
   ],
   "people": [
@@ -158,6 +218,21 @@
       "zh": "凱山·豐威漢",
       "en": "Kaysone Phomvihane",
       "note": "寮國人民革命黨長期領導人,建國後主政近二十年。"
+    },
+    {
+      "zh": "西薩旺·馮",
+      "en": "Sisavang Vong",
+      "note": "法國保護時期的龍坡邦國王,後成為寮王國首任國王。"
+    },
+    {
+      "zh": "蘇瓦納·富馬",
+      "en": "Souvanna Phouma",
+      "note": "多次出任首相的中立派政治人物,主張三派聯合政府。"
+    },
+    {
+      "zh": "富米·諾薩萬",
+      "en": "Phoumi Nosavan",
+      "note": "寮國內戰時期的右翼將領,曾主導多次政變行動。"
     }
   ],
   "recommended": [
@@ -349,7 +424,93 @@
       "author": "Basile Morin",
       "license": "CC BY-SA 4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Clothed_statues_of_the_Buddha_in_the_ruined_Khmer_Hindu_temple_of_Wat_Phou,_Champasak,_Laos.jpg"
+    },
+    {
+      "file": "landmarks-wat-xieng-thong.jpg",
+      "title": "香通寺",
+      "author": "xiquinhosilva",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Luang_Prabang_-_Wat_Xieng_Thong.jpg"
+    },
+    {
+      "file": "landmarks-si-phan-don.jpg",
+      "title": "四千島",
+      "author": "Dario Severi",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Si_Phan_Don.jpg"
+    },
+    {
+      "file": "landmarks-bolaven-plateau.jpg",
+      "title": "波羅芬高原咖啡園",
+      "author": "Christophe95",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Coffee_plantations_Bolaven_Plateau_01.jpg"
     }
   ],
-  "code": "LA"
+  "code": "LA",
+  "street_food": [
+    {
+      "zh": "夜市烤肉串",
+      "note": "龍坡邦夜市常見的炭烤肉串,沾辣醬享用。"
+    },
+    {
+      "zh": "炸昆蟲",
+      "note": "炸蟋蟀或竹蟲是寮國市集中常見的蛋白質零食。"
+    },
+    {
+      "zh": "寮式雞絲湯麵",
+      "note": "以雞高湯與米粉煮成的湯麵,是常見的早餐選擇。"
+    },
+    {
+      "zh": "糯米甜點",
+      "note": "糯米拌椰奶包入蕉葉蒸熟,口感軟糯香甜。"
+    },
+    {
+      "zh": "新鮮果汁攤",
+      "note": "市集裡現打的熱帶水果汁,是消暑的平價選擇。"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "寮國新年",
+      "month": "4月",
+      "note": "又稱潑水節,人們互相潑水祈求洗去舊年晦氣。"
+    },
+    {
+      "zh": "塔鑾節",
+      "month": "農曆11月",
+      "note": "永珍塔鑾寺舉行的全國性佛教慶典與市集活動。"
+    },
+    {
+      "zh": "火箭節",
+      "month": "5月",
+      "note": "施放自製火箭祈求雨水降臨,是農耕社會的傳統儀式。"
+    },
+    {
+      "zh": "送水燈節",
+      "month": "10月",
+      "note": "結夏安居結束後放水燈祈福,河面點點燈火漂流而下。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "ສະບາຍດີ",
+        "romanized": "Sabaidee"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "ຂອບໃຈ",
+        "romanized": "Khop chai"
+      },
+      {
+        "phrase": "再見",
+        "local": "ລາກ່ອນ",
+        "romanized": "La kon"
+      }
+    ],
+    "money_note": "基普、泰銖與美元在市場常混合使用,現金仍是主要支付方式。",
+    "tipping": "傳統上無強制小費,但觀光業與導遊漸漸習慣收取少許小費作為謝意。"
+  }
 }

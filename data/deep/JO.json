@@ -50,6 +50,21 @@
       "en": "Sinai rosefinch",
       "note": "約旦國鳥,雄鳥帶粉紅色,常在佩特拉岩壁間活動。",
       "image": "JO-a-rosefinch.jpg"
+    },
+    {
+      "zh": "阿拉伯豹",
+      "en": "Arabian leopard",
+      "note": "極度瀕危的貓科動物,僅存少量族群棲息於南部山區。"
+    },
+    {
+      "zh": "條紋鬣狗",
+      "en": "Striped hyena",
+      "note": "夜行性食腐動物,分布於約旦沙漠與丘陵地帶。"
+    },
+    {
+      "zh": "埃及兀鷲",
+      "en": "Egyptian vulture",
+      "note": "體型較小的候鳥猛禽,常見於瓦地倫等岩漠地形。"
     }
   ],
   "foods": [
@@ -81,6 +96,21 @@
       "en": "Knafeh",
       "note": "細麵絲或粗麵糊夾鹹起司烤製,淋糖漿、撒開心果,趁熱吃。",
       "image": "JO-f-knafeh.jpg"
+    },
+    {
+      "zh": "貝都因坑烤肉",
+      "en": "Zarb",
+      "note": "將肉類與蔬菜埋入沙地火坑慢烤,是貝都因傳統烹調法。"
+    },
+    {
+      "zh": "塔布勒沙拉",
+      "en": "Tabbouleh",
+      "note": "以香芹、番茄與布格麥拌成的清爽沙拉,常作為配菜。"
+    },
+    {
+      "zh": "薄荷茶",
+      "en": "Shai bi Na'ana",
+      "note": "加入新鮮薄荷葉的甜紅茶,是待客的日常飲品。"
     }
   ],
   "landmarks": [
@@ -131,6 +161,36 @@
         31.9548,
         35.9344
       ]
+    },
+    {
+      "zh": "馬達巴馬賽克地圖",
+      "en": "Madaba Mosaic Map",
+      "note": "教堂地板上的拜占庭時期馬賽克地圖,描繪聖地地理。",
+      "latlon": [
+        31.7197,
+        35.7934
+      ],
+      "image": "landmarks-madaba-map.jpg"
+    },
+    {
+      "zh": "尼波山",
+      "en": "Mount Nebo",
+      "note": "傳說摩西臨終前眺望應許之地的山丘,可遠眺死海。",
+      "latlon": [
+        31.7684,
+        35.7256
+      ],
+      "image": "landmarks-mount-nebo.jpg"
+    },
+    {
+      "zh": "亞喀巴紅海濱",
+      "en": "Aqaba",
+      "note": "約旦唯一的出海口,以珊瑚礁潛水與紅海景致聞名。",
+      "latlon": [
+        29.5321,
+        35.0063
+      ],
+      "image": "landmarks-aqaba-coast.jpg"
     }
   ],
   "people": [
@@ -158,6 +218,21 @@
       "zh": "艾哈邁德·阿布加烏什",
       "en": "Ahmad Abughaush",
       "note": "跆拳道選手,二〇一六里約奧運奪得約旦史上首面奧運金牌。"
+    },
+    {
+      "zh": "努爾王后",
+      "en": "Queen Noor",
+      "note": "已故海珊國王的美籍王后,長期投身教育與環保公益。"
+    },
+    {
+      "zh": "費瑟爾親王",
+      "en": "Prince Feisal bin Hussein",
+      "note": "空軍出身的王室成員,也是航太與治沙工程的推動者。"
+    },
+    {
+      "zh": "阿拉爾",
+      "en": "Arar (Mustafa Wahbi al-Tal)",
+      "note": "約旦最知名的現代詩人,作品融入民間口語與家鄉情懷。"
     }
   ],
   "recommended": [
@@ -349,7 +424,93 @@
       "author": "Alexandermcnabb",
       "license": "CC BY-SA 4.0",
       "source": "https://commons.wikimedia.org/wiki/File%3ADead_Sea,_Jordanian_Shore.jpg"
+    },
+    {
+      "file": "landmarks-madaba-map.jpg",
+      "title": "馬達巴馬賽克地圖(歷史影像)",
+      "author": "Matson Photograph Collection (Library of Congress)",
+      "license": "Public Domain",
+      "source": "https://commons.wikimedia.org/wiki/File:East_of_the_Jordan_and_Dead_Sea._Mosaic_map_of_Jerusalem_on_mosaic_floor_LOC_matpc.06461.jpg"
+    },
+    {
+      "file": "landmarks-mount-nebo.jpg",
+      "title": "尼波山",
+      "author": "Freedom's Falcon",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mount_Nebo_View.jpg"
+    },
+    {
+      "file": "landmarks-aqaba-coast.jpg",
+      "title": "亞喀巴紅海濱",
+      "author": "Sana Janakat",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Aqaba,_Southern_Jordan_2012_25.jpg"
     }
   ],
-  "code": "JO"
+  "code": "JO",
+  "street_food": [
+    {
+      "zh": "沙威瑪",
+      "note": "旋轉烤肉削片夾入餅皮,是約旦街頭最常見的速食。"
+    },
+    {
+      "zh": "法拉費三明治",
+      "note": "炸鷹嘴豆餅夾蔬菜與芝麻醬,價格親民的素食選擇。"
+    },
+    {
+      "zh": "曼阿基什",
+      "note": "灑上百里香橄欖油烤製的扁餅,常作為早餐。"
+    },
+    {
+      "zh": "甘蔗汁攤",
+      "note": "現榨甘蔗汁是安曼街頭常見的清涼飲品。"
+    },
+    {
+      "zh": "杏仁米布丁",
+      "note": "冬季常見的溫熱甜湯,灑上椰絲與堅果碎粒。"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "傑拉什文化藝術節",
+      "month": "7月",
+      "note": "在古羅馬遺址舉行的音樂與戲劇盛會,已有數十年歷史。"
+    },
+    {
+      "zh": "開齋節",
+      "month": "依回曆",
+      "note": "齋戒月結束後的節慶,家族團聚並分享甜點。"
+    },
+    {
+      "zh": "宰牲節",
+      "month": "依回曆",
+      "note": "紀念先知易卜拉欣的節日,家家戶戶分享肉食予貧困者。"
+    },
+    {
+      "zh": "獨立日",
+      "month": "5月25日",
+      "note": "紀念一九四六年脫離英國託管獨立,舉行閱兵與慶典。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "مرحبا",
+        "romanized": "Marhaba"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "شكرا",
+        "romanized": "Shukran"
+      },
+      {
+        "phrase": "再見",
+        "local": "مع السلامة",
+        "romanized": "Ma'a as-salama"
+      }
+    ],
+    "money_note": "飯店與商場多可刷卡,傳統市集與計程車仍普遍偏好現金第納爾。",
+    "tipping": "服務業普遍期待一成左右小費,即使帳單已加收服務費,留些零錢仍受歡迎。"
+  }
 }

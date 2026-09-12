@@ -50,6 +50,21 @@
       "en": "Icelandic sheep",
       "note": "數量多於人口,夏季放牧高地、秋季由人與馬圈趕下山。",
       "image": "animals-icelandic-sheep.jpg"
+    },
+    {
+      "zh": "港海豹",
+      "en": "Harbor seal",
+      "note": "常見於冰島沿岸沙洲,退潮時會成群曬太陽。"
+    },
+    {
+      "zh": "白尾海鵰",
+      "en": "White-tailed eagle",
+      "note": "冰島最大的猛禽,一度瀕危,現受嚴格保護。"
+    },
+    {
+      "zh": "北極燕鷗",
+      "en": "Arctic tern",
+      "note": "候鳥中遷徙距離最長的物種之一,夏季在冰島繁殖。"
     }
   ],
   "foods": [
@@ -81,6 +96,21 @@
       "en": "Kjötsúpa",
       "note": "帶骨羊肉與根莖蔬菜熬煮的清燉湯,是冬季家常暖食。",
       "image": "foods-kjotsupa.jpg"
+    },
+    {
+      "zh": "冰島熱狗",
+      "en": "Pylsur",
+      "note": "以羊肉為主的傳統熱狗,配生洋蔥與甜芥末醬。"
+    },
+    {
+      "zh": "燉魚泥",
+      "en": "Plokkfiskur",
+      "note": "白肉魚與馬鈴薯一起搗成的家常燉菜,配黑麥麵包食用。"
+    },
+    {
+      "zh": "黑死酒",
+      "en": "Brennivín",
+      "note": "以葛縷子調味的傳統烈酒,常搭配發酵鯊魚肉飲用。"
     }
   ],
   "landmarks": [
@@ -133,6 +163,34 @@
         -16.2306
       ],
       "image": "landmarks-jokulsarlon.jpg"
+    },
+    {
+      "zh": "雷尼斯黑沙灘",
+      "en": "Reynisfjara",
+      "note": "南岸的黑色玄武岩沙灘,海蝕柱與六角石柱景觀壯麗。",
+      "latlon": [
+        63.4039,
+        -19.042
+      ],
+      "image": "landmarks-reynisfjara-beach.jpg"
+    },
+    {
+      "zh": "斯科加瀑布",
+      "en": "Skógafoss",
+      "note": "南部最壯觀的瀑布之一,晴天常見彩虹橫跨水簾。",
+      "latlon": [
+        63.5321,
+        -19.5116
+      ]
+    },
+    {
+      "zh": "米湖地熱區",
+      "en": "Mývatn",
+      "note": "北部火山湖區,周邊有泥漿噴氣孔與熔岩地形。",
+      "latlon": [
+        65.6,
+        -17
+      ]
     }
   ],
   "people": [
@@ -165,6 +223,21 @@
       "en": "Vigdís Finnbogadóttir",
       "note": "一九八〇年當選總統,是世界首位民選的女性國家元首。",
       "image": "people-vigdis.jpg"
+    },
+    {
+      "zh": "殷格·亞納遜",
+      "en": "Ingólfur Arnarson",
+      "note": "傳統上被視為冰島首位定居者,落腳於今雷克雅維克。"
+    },
+    {
+      "zh": "埃伊納爾·約恩松",
+      "en": "Einar Jónsson",
+      "note": "冰島第一位重要雕塑家,作品融合神話與宗教題材。"
+    },
+    {
+      "zh": "奧拉維爾·拉格納·格里姆松",
+      "en": "Ólafur Ragnar Grímsson",
+      "note": "任期最長的冰島總統,曾主導金融危機後的公投決策。"
     }
   ],
   "recommended": [
@@ -387,7 +460,75 @@
       "author": "Sten-Åke Stenberg",
       "license": "CC BY-SA 2.0",
       "source": "https://commons.wikimedia.org/wiki/File%3AVigd%C3%ADs_Finnbogad%C3%B3ttir_President_of_Iceland_1985_%28sq_cropped%29.jpg"
+    },
+    {
+      "file": "landmarks-reynisfjara-beach.jpg",
+      "title": "雷尼斯黑沙灘",
+      "author": "Mike Norton",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Black_Sand_Beach_Iceland,_Reynisfjara_Beach.jpg"
     }
   ],
-  "code": "IS"
+  "code": "IS",
+  "street_food": [
+    {
+      "zh": "雷克雅維克老牌熱狗攤",
+      "note": "市中心一處熱狗攤數十年來深受在地人與遊客喜愛。"
+    },
+    {
+      "zh": "甘草巧克力",
+      "note": "甘草糖裹上巧克力,是冰島人偏愛的零食口味。"
+    },
+    {
+      "zh": "酥炸甜甬",
+      "note": "扭結狀的油炸麵團,口感類似甜甜圈,常配咖啡食用。"
+    },
+    {
+      "zh": "冰島霜淇淋",
+      "note": "即使冬季也常見排隊買霜淇淋的「兜風吃冰」文化。"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "索拉布羅特節",
+      "month": "1-2月",
+      "note": "冬季古式食物節,品嘗發酵鯊魚肉等傳統菜餚。"
+    },
+    {
+      "zh": "國慶日",
+      "month": "6月17日",
+      "note": "紀念一九四四年共和國成立,全國舉行遊行與慶典。"
+    },
+    {
+      "zh": "仲夏節",
+      "month": "6月",
+      "note": "日照近乎永晝的時節,人們戶外野餐、露營慶祝。"
+    },
+    {
+      "zh": "西人島節慶",
+      "month": "8月",
+      "note": "西人島上的傳統夏季音樂與營火派對,已有百年歷史。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "Halló",
+        "romanized": "Halló"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "Takk",
+        "romanized": "Takk"
+      },
+      {
+        "phrase": "再見",
+        "local": "Bless",
+        "romanized": "Bless"
+      }
+    ],
+    "money_note": "幾乎全面無現金化,信用卡與感應支付通用,連小攤販與公廁都能刷卡。",
+    "tipping": "沒有小費文化,服務費已包含在價格中,不需要額外給小費。"
+  }
 }

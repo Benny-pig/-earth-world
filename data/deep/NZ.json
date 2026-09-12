@@ -52,6 +52,21 @@
       "en": "Moa",
       "note": "已滅絕的巨型不飛鳥,最高逾三公尺,約在毛利人抵達後數百年內消失。",
       "image": "animals-moa.jpg"
+    },
+    {
+      "zh": "藍企鵝",
+      "en": "Little blue penguin",
+      "note": "世界體型最小的企鵝,黃昏時成群自海中返巢,奧塔哥半島可觀賞。"
+    },
+    {
+      "zh": "紐西蘭海獅",
+      "en": "New Zealand sea lion",
+      "note": "全球最稀有的海獅之一,主要棲息於南部奧克蘭群島。"
+    },
+    {
+      "zh": "圖伊鳥",
+      "en": "Tūī",
+      "note": "喉部有白色羽簇的蜜雀,擅長模仿各種鳴叫聲。"
     }
   ],
   "foods": [
@@ -84,6 +99,21 @@
       "en": "Fish and chips",
       "note": "承襲英國的國民外帶食物,常用當地的 hoki 或藍鱈。",
       "image": "foods-fish-and-chips.jpg"
+    },
+    {
+      "zh": "紐西蘭羊肉",
+      "en": "New Zealand lamb",
+      "note": "牧草放養的羊肉品質聞名國際,烤羊排是餐廳招牌菜。"
+    },
+    {
+      "zh": "麥蘆卡蜂蜜",
+      "en": "Mānuka honey",
+      "note": "以麥蘆卡樹花蜜製成,以獨特抗菌活性聞名,價格較一般蜂蜜高。"
+    },
+    {
+      "zh": "檸檬汽水",
+      "en": "Lemon & Paeroa (L&P)",
+      "note": "源自帕埃羅亞小鎮的國民汽水,帶檸檬與礦泉水氣泡口感。"
     }
   ],
   "landmarks": [
@@ -136,6 +166,33 @@
         174.085
       ],
       "image": "landmarks-waitangi.jpg"
+    },
+    {
+      "zh": "蒂卡波湖好牧羊人教堂",
+      "en": "Church of the Good Shepherd, Lake Tekapo",
+      "note": "湖畔小石教堂,背景是雪山與土耳其藍湖水,是熱門拍照地。",
+      "latlon": [
+        -44.0067,
+        170.478
+      ]
+    },
+    {
+      "zh": "懷托摩螢火蟲洞",
+      "en": "Waitomo Glowworm Caves",
+      "note": "石灰岩洞內滿佈發光的紐西蘭特有螢火蟲幼蟲,搭船穿越洞穴仰望如星空。",
+      "latlon": [
+        -38.261,
+        175.1043
+      ]
+    },
+    {
+      "zh": "東加里羅國家公園",
+      "en": "Tongariro National Park",
+      "note": "活火山地貌的雙重世界遺產,也是《魔戒》魔多場景的取景地之一。",
+      "latlon": [
+        -39.1319,
+        175.6425
+      ]
     }
   ],
   "people": [
@@ -168,6 +225,21 @@
       "en": "Katherine Mansfield",
       "note": "現代主義短篇小說家,作品多以威靈頓的童年為背景。",
       "image": "people-katherine-mansfield.jpg"
+    },
+    {
+      "zh": "凱特·雪柏德",
+      "en": "Kate Sheppard",
+      "note": "婦女普選權運動領袖,促成一八九三年紐西蘭成為全球首個賦予婦女投票權的國家。"
+    },
+    {
+      "zh": "珍·康萍",
+      "en": "Jane Campion",
+      "note": "電影導演,以《鋼琴師和她的情人》成為首位獲坎城金棕櫚獎的女性導演之一。"
+    },
+    {
+      "zh": "塔伊加·維迪提",
+      "en": "Taika Waititi",
+      "note": "毛利與猶太裔電影導演,執導《雷神索爾3》與《追捕野蠻人》等作品。"
     }
   ],
   "recommended": [
@@ -399,5 +471,72 @@
         "note": "從蘇格蘭風的但尼丁往南,原始海岸線上有黃眼企鵝、海獅、化石森林與被強風吹歪的斯洛普角樹。遊客稀少、餐宿選擇少,道路多為鄉間路,適合想遠離觀光動線的人。"
       }
     ]
+  },
+  "street_food": [
+    {
+      "zh": "肉派",
+      "en": "Meat pie",
+      "note": "紐西蘭國民速食,加油站與麵包店必備,口味多元。"
+    },
+    {
+      "zh": "蜂巢脆糖冰淇淋",
+      "en": "Hokey pokey ice cream",
+      "note": "香草冰淇淋混合焦糖脆粒,是紐西蘭人氣冰品口味第一名。"
+    },
+    {
+      "zh": "銀魚煎餅",
+      "en": "Whitebait fritter",
+      "note": "西岸春季限定的河口小魚煎餅,簡單煎過配檸檬吃。"
+    },
+    {
+      "zh": "巧克力魚餅乾",
+      "en": "Chocolate fish",
+      "note": "魚形棉花糖裹巧克力,常作為孩子表現良好的小獎勵零食。"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "懷唐伊日",
+      "month": "2月6日",
+      "note": "紀念一八四〇年《懷唐伊條約》簽訂,島嶼灣有紀念儀式與傳統獨木舟下水。"
+    },
+    {
+      "zh": "光明節",
+      "en": "Matariki",
+      "month": "6-7月",
+      "note": "毛利新年,以昴宿星團在冬季重新升起為起點,近年已列為國定假日。"
+    },
+    {
+      "zh": "蒂馬塔提尼藝術節",
+      "en": "Te Matatini",
+      "month": "2-3月(隔年舉行)",
+      "note": "全國最大的毛利戰舞(kapa haka)競賽,團隊競逐全國冠軍。"
+    },
+    {
+      "zh": "皇后鎮冬季藝術節",
+      "month": "6月",
+      "note": "南島滑雪季開幕慶典,有煙火、遊行與冬季主題活動。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "Kia ora",
+        "romanized": "Kia ora"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "Ka pai / Thank you",
+        "romanized": "Ka pai"
+      },
+      {
+        "phrase": "再見",
+        "local": "Ka kite",
+        "romanized": "Ka kite"
+      }
+    ],
+    "money_note": "信用卡與Eftpos卡幾乎通行全國,現金使用率很低,只有少數小型市集才需要現金。",
+    "tipping": "沒有小費文化,薪資已含服務費用,給小費非必要,偶爾在高級餐廳可視服務酌情給予。"
   }
 }

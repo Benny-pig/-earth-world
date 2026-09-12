@@ -49,6 +49,22 @@
       "en": "Grey heron",
       "note": "幾乎每座島的碼頭與淺灘都能見到,靜立守候獵魚。",
       "image": "MV-a-heron.jpg"
+    },
+    {
+      "zh": "綠蠵龜",
+      "en": "Green turtle",
+      "note": "潟湖與海草床常見的大型海龜,多座環礁設有保育巡守。",
+      "image": "animals-green-turtle.jpg"
+    },
+    {
+      "zh": "小丑魚",
+      "en": "Clownfish",
+      "note": "與海葵共生,是環礁潟湖浮潛最容易見到的魚種之一。"
+    },
+    {
+      "zh": "狐蝠",
+      "en": "Flying fox",
+      "note": "當地稱果蝠,黃昏時成群飛出覓食椰棗與果實。"
     }
   ],
   "foods": [
@@ -78,6 +94,21 @@
       "en": "Kandu kukulhu",
       "note": "鮪魚以椰漿與香料燉成的咖哩,配米飯或麵包果。",
       "image": "MV-f-kandukukulhu.jpg"
+    },
+    {
+      "zh": "薄餅",
+      "en": "Roshi",
+      "note": "手工烙的無酵薄餅,撕開沾咖哩或魚醬,是家常主食搭配。"
+    },
+    {
+      "zh": "椰奶米布丁",
+      "en": "Bondibaiy",
+      "note": "米與椰奶、糖慢煮成的甜點,節慶場合常見。"
+    },
+    {
+      "zh": "炸魚餅",
+      "en": "Bajiya",
+      "note": "咖哩魚肉與椰絲餡的三角酥皮炸物,茶館點心之一。"
     }
   ],
   "landmarks": [
@@ -129,6 +160,34 @@
         73.5405
       ],
       "image": "MV-l-hulhumale.jpg"
+    },
+    {
+      "zh": "馬爾地夫國家博物館",
+      "en": "National Museum of Maldives",
+      "note": "馬列蘇丹公園內的博物館,收藏歷代蘇丹遺物與早期佛教文物。",
+      "latlon": [
+        4.1755,
+        73.5099
+      ]
+    },
+    {
+      "zh": "富瓦穆拉淡水湖",
+      "en": "Bandaara Kilhi, Fuvahmulah",
+      "note": "馬爾地夫少見的天然淡水湖,所在的富瓦穆拉島是唯一橫跨赤道的獨立環礁。",
+      "latlon": [
+        -0.297,
+        73.424
+      ],
+      "image": "landmarks-fuvahmulah-lake.jpg"
+    },
+    {
+      "zh": "甘島英軍基地遺跡",
+      "en": "RAF Gan",
+      "note": "阿杜環礁南端二戰與冷戰時期的英國空軍基地遺跡,現部分改建為度假設施。",
+      "latlon": [
+        -0.6935,
+        73.1554
+      ]
     }
   ],
   "people": [
@@ -157,6 +216,21 @@
       "zh": "穆罕默德·穆伊茲",
       "en": "Mohamed Muizzu",
       "note": "工程背景出身,曾任馬列市長,二〇二三年當選總統。"
+    },
+    {
+      "zh": "穆罕默德·阿明·迪迪",
+      "en": "Muhammad Amin Didi",
+      "note": "推動教育與行政現代化改革的政治家,後成為首任總統。"
+    },
+    {
+      "zh": "阿卜杜拉·亞明",
+      "en": "Abdulla Yameen",
+      "note": "二〇一三至二〇一八年總統,任內推動跨海大橋等大型基礎建設。"
+    },
+    {
+      "zh": "伊本·白圖泰",
+      "en": "Ibn Battuta",
+      "note": "十四世紀曾在馬爾地夫擔任伊斯蘭教法官,留下對當地社會的詳細記述。"
     }
   ],
   "recommended": [
@@ -343,7 +417,87 @@
       "author": "The President's Office",
       "license": "CC BY 4.0",
       "source": "https://commons.wikimedia.org/wiki/File%3AMohamed_Nasheed_portrait_(2).jpg"
+    },
+    {
+      "file": "animals-green-turtle.jpg",
+      "title": "馬爾地夫的綠蠵龜",
+      "author": "Thibdx",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:A_green_sea_turtle_in_Maldives.jpg"
+    },
+    {
+      "file": "landmarks-fuvahmulah-lake.jpg",
+      "title": "富瓦穆拉的班達拉淡水湖",
+      "author": "Ibrahim Asad",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bandaara_Kulhi_-_panoramio.jpg"
     }
   ],
-  "code": "MV"
+  "code": "MV",
+  "street_food": [
+    {
+      "zh": "綜合茶點炸物",
+      "en": "Hedhikaa",
+      "note": "馬列小茶館必備的各式炸物拼盤,配辣椒醬與熱茶。",
+      "where": "馬列的地方茶館(hotaa)"
+    },
+    {
+      "zh": "魚肉椰絲蒸糕",
+      "en": "Kulhi boakiba",
+      "note": "鮪魚椰絲與香料蒸成的糕點,切塊當茶點。"
+    },
+    {
+      "zh": "魚乾零食",
+      "en": "Valo mas",
+      "note": "曬乾煙燻的鮪魚乾絲,配飯或直接當零嘴。"
+    },
+    {
+      "zh": "現剖椰子水",
+      "en": "Kurumba",
+      "note": "街邊隨處可見現剖的鮮嫩椰子,消暑解渴。"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "開齋節",
+      "month": "伊斯蘭曆10月1日",
+      "note": "齋戒月結束後閤家團聚慶祝的節日。"
+    },
+    {
+      "zh": "獨立日",
+      "month": "7月26日",
+      "note": "紀念一九六五年脫離英國獨立,首都有升旗與遊行儀式。"
+    },
+    {
+      "zh": "宰牲節",
+      "month": "伊斯蘭曆12月10日",
+      "note": "紀念先知易卜拉欣獻祭,家戶分享肉食。"
+    },
+    {
+      "zh": "國慶日",
+      "month": "伊斯蘭曆1月1日",
+      "note": "紀念一五七三年塔庫魯法努驅逐葡萄牙駐軍的登陸日。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "ސަލާމް",
+        "romanized": "Salaam"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "ޝުކުރިއްޔާ",
+        "romanized": "Shukuriyya"
+      },
+      {
+        "phrase": "再見",
+        "local": "ބާއި",
+        "romanized": "Bái"
+      }
+    ],
+    "money_note": "度假村普遍可用美元與信用卡,當地島與市集則以現金(盧非亞或美元)為主,行動支付尚不普及。",
+    "tipping": "度假村服務費通常已含在帳單中,額外小費非強制但漸成慣例,約消費金額一成。"
+  }
 }

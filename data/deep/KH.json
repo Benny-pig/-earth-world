@@ -49,6 +49,21 @@
       "en": "Pileated gibbon",
       "note": "吳哥森林與豆蔻山可聞其晨間鳴唱,雌雄毛色差異大。",
       "image": "KH-a-gibbon.jpg"
+    },
+    {
+      "zh": "暹羅鱷",
+      "en": "Siamese crocodile",
+      "note": "洞里薩湖區的原生淡水鱷魚,野外族群數量已十分稀少。"
+    },
+    {
+      "zh": "綠孔雀",
+      "en": "Green peafowl",
+      "note": "分布於柬埔寨北部森林,雄鳥羽色較藍孔雀更為翠綠。"
+    },
+    {
+      "zh": "亞洲金貓",
+      "en": "Asian golden cat",
+      "note": "棲息於低地森林的中型野生貓科動物,晝伏夜出。"
     }
   ],
   "foods": [
@@ -81,6 +96,21 @@
       "en": "Prahok",
       "note": "發酵淡水魚糜,鹹味濃厚,是許多菜餚的基礎調味。",
       "image": "KH-f-prahok.jpg"
+    },
+    {
+      "zh": "柬式法國麵包",
+      "en": "Nom Pang",
+      "note": "受法國殖民影響的三明治,夾入肉醬與醃菜。"
+    },
+    {
+      "zh": "糯米粽",
+      "en": "Num Ansom",
+      "note": "以香蕉葉包裹糯米與綠豆餡蒸製,節慶常見食品。"
+    },
+    {
+      "zh": "棕櫚糖椰奶甜湯",
+      "en": "Palm sugar dessert",
+      "note": "以柬埔寨特產棕櫚糖調味的椰奶甜點,風味樸實香甜。"
     }
   ],
   "landmarks": [
@@ -131,6 +161,36 @@
         11.5645,
         104.931
       ]
+    },
+    {
+      "zh": "洞里薩湖水上村",
+      "en": "Tonle Sap floating village",
+      "note": "東南亞最大淡水湖上的高腳屋與水上聚落。",
+      "latlon": [
+        12.883,
+        104.04
+      ],
+      "image": "landmarks-tonle-sap-lake.jpg"
+    },
+    {
+      "zh": "龍蟠水池",
+      "en": "Neak Pean",
+      "note": "吳哥王朝的人工島寺廟,象徵印度神話中的聖湖。",
+      "latlon": [
+        13.459,
+        103.899
+      ],
+      "image": "landmarks-neak-pean.jpg"
+    },
+    {
+      "zh": "波哥山國家公園",
+      "en": "Bokor National Park",
+      "note": "法國殖民時期的高山避暑勝地,現存廢棄教堂與賭場遺跡。",
+      "latlon": [
+        10.6167,
+        104.0333
+      ],
+      "image": "landmarks-bokor-national-park.jpg"
     }
   ],
   "people": [
@@ -158,6 +218,21 @@
       "zh": "洪森",
       "en": "Hun Sen",
       "note": "一九八五至二〇二三年任總理,長期主導柬埔寨政局。"
+    },
+    {
+      "zh": "辛西薩莫特",
+      "en": "Sinn Sisamouth",
+      "note": "西哈努克時代的傳奇歌手,被譽為「柬埔寨貓王」。"
+    },
+    {
+      "zh": "諾羅敦·拉那烈",
+      "en": "Norodom Ranariddh",
+      "note": "西哈努克之子,曾出任柬埔寨首相與國會議長。"
+    },
+    {
+      "zh": "喬森潘",
+      "en": "Khieu Samphan",
+      "note": "紅色高棉時期擔任國家元首,後於特別法庭受審。"
     }
   ],
   "recommended": [
@@ -349,7 +424,88 @@
       "author": "David Sim",
       "license": "CC BY 2.0",
       "source": "https://commons.wikimedia.org/wiki/File%3ATree_roots_and_temple,_Ta_Prohm,_Angkor,_Cambodia.jpg"
+    },
+    {
+      "file": "landmarks-tonle-sap-lake.jpg",
+      "title": "洞里薩湖",
+      "author": "Wowan1978",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sunset_at_Tonle_Sap_Lake.jpg"
+    },
+    {
+      "file": "landmarks-neak-pean.jpg",
+      "title": "龍蟠水池",
+      "author": "Christophe95",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Neak_Pean.jpg"
+    },
+    {
+      "file": "landmarks-bokor-national-park.jpg",
+      "title": "波哥山",
+      "author": "Heng Soni (ហេងសូនី)",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bokor.jpg"
     }
   ],
-  "code": "KH"
+  "code": "KH",
+  "street_food": [
+    {
+      "zh": "炸狼蛛",
+      "note": "源自貢布地區的特色小吃,油炸後外酥內軟。"
+    },
+    {
+      "zh": "烤香蕉",
+      "note": "整根香蕉炭烤後刷上椰糖漿,是夜市常見甜點。"
+    },
+    {
+      "zh": "米製煎餅",
+      "note": "米漿煎成薄餅包入豆芽與豬肉,沾魚露食用。"
+    },
+    {
+      "zh": "甘蔗汁",
+      "note": "現榨甘蔗汁加冰塊,是酷熱氣候下的常見飲品。"
+    },
+    {
+      "zh": "烤肉串",
+      "note": "醃過的豬肉或牛肉串炭烤,是夜市攤位的招牌小吃。"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "高棉新年",
+      "month": "4月",
+      "note": "又稱潑水節,家家戶戶清掃佈置迎接新的一年。"
+    },
+    {
+      "zh": "送水節",
+      "month": "11月",
+      "note": "紀念洞里薩湖水流方向轉變,舉行盛大龍舟競賽。"
+    },
+    {
+      "zh": "亡靈節",
+      "month": "農曆9-10月",
+      "note": "為期半個月的祭祖節日,人們到寺廟供奉祖先。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "ជំរាបសួរ",
+        "romanized": "Chumreap suor"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "អរគុណ",
+        "romanized": "Arkoun"
+      },
+      {
+        "phrase": "再見",
+        "local": "លាហើយ",
+        "romanized": "Lea haeuy"
+      }
+    ],
+    "money_note": "美元與柬埔寨瑞爾並行流通,大額多用美元、找零用瑞爾,現金仍是主流。",
+    "tipping": "傳統上無強制小費,但餐廳與按摩留一些零錢作為謝意已漸普遍。"
+  }
 }

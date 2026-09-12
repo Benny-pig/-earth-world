@@ -51,6 +51,21 @@
       "en": "Lesser flamingo",
       "note": "曾在納庫魯湖等鹼水湖聚成數十萬隻的粉紅色湖岸。",
       "image": "KE-a-flamingo.jpg"
+    },
+    {
+      "zh": "黑犀牛",
+      "en": "Black rhinoceros",
+      "note": "極度瀕危的犀牛物種,肯亞多座保護區設有專責巡邏隊。"
+    },
+    {
+      "zh": "獵豹",
+      "en": "Cheetah",
+      "note": "陸地上奔跑速度最快的動物,常見於馬賽馬拉開闊草原。"
+    },
+    {
+      "zh": "格氏斑馬",
+      "en": "Grevy's zebra",
+      "note": "肯亞北部特有的斑馬,條紋較細密,耳朵明顯較大。"
     }
   ],
   "foods": [
@@ -83,6 +98,21 @@
       "en": "Mandazi",
       "note": "微甜的油炸麵團,常加椰奶或小豆蔻,配茶當早餐或點心。",
       "image": "KE-f-mandazi.jpg"
+    },
+    {
+      "zh": "肯亞香料奶茶",
+      "en": "Chai",
+      "note": "以牛奶與茶葉同煮並加入香料,是肯亞人的日常飲品。"
+    },
+    {
+      "zh": "燉豆玉米",
+      "en": "Githeri",
+      "note": "玉米粒與豆類燉煮而成的家常主食,營養且飽足。"
+    },
+    {
+      "zh": "印度煎餅",
+      "en": "Chapati",
+      "note": "受南亞移民影響的薄煎餅,常搭配燉菜一起食用。"
     }
   ],
   "landmarks": [
@@ -132,6 +162,36 @@
         -2.2686,
         40.902
       ]
+    },
+    {
+      "zh": "圖爾卡納湖",
+      "en": "Lake Turkana",
+      "note": "世界最大的鹼水湖,湖畔出土大量早期人族化石。",
+      "latlon": [
+        3.5,
+        36
+      ],
+      "image": "landmarks-lake-turkana.jpg"
+    },
+    {
+      "zh": "蒙巴薩耶穌堡",
+      "en": "Fort Jesus",
+      "note": "葡萄牙人十六世紀所建的海岸要塞,見證多方勢力更替。",
+      "latlon": [
+        -4.0635,
+        39.6767
+      ],
+      "image": "landmarks-fort-jesus.jpg"
+    },
+    {
+      "zh": "察沃國家公園",
+      "en": "Tsavo National Park",
+      "note": "肯亞面積最大的國家公園,以紅土象群景象聞名。",
+      "latlon": [
+        -2.98,
+        38.75
+      ],
+      "image": "landmarks-tsavo-mudanda-rock.jpg"
     }
   ],
   "people": [
@@ -159,6 +219,21 @@
       "zh": "埃利烏德·基普喬蓋",
       "en": "Eliud Kipchoge",
       "note": "馬拉松名將,兩屆奧運金牌,曾在非正式賽事跑進兩小時。"
+    },
+    {
+      "zh": "理查·李奇",
+      "en": "Richard Leakey",
+      "note": "古人類學家,在圖爾卡納湖區主導多項重要化石發掘。"
+    },
+    {
+      "zh": "姆瓦伊·齊貝吉",
+      "en": "Mwai Kibaki",
+      "note": "肯亞第三任總統,任內推動免費初等教育政策。"
+    },
+    {
+      "zh": "凱瑟琳·恩德雷巴",
+      "en": "Catherine Ndereba",
+      "note": "長跑名將,多次贏得波士頓馬拉松與世界錦標賽冠軍。"
     }
   ],
   "recommended": [
@@ -350,7 +425,93 @@
       "author": "Galkey",
       "license": "CC BY-SA 4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Mount_Kenya_Peaks.jpg"
+    },
+    {
+      "file": "landmarks-lake-turkana.jpg",
+      "title": "圖爾卡納湖",
+      "author": "CaptChandra",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Lake_Turkana_in_Kenya_01.jpg"
+    },
+    {
+      "file": "landmarks-fort-jesus.jpg",
+      "title": "耶穌堡(1635年歷史平面圖)",
+      "author": "Pedro Barreto de Resende",
+      "license": "Public Domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Fortaleza_de_mombaca.jpg"
+    },
+    {
+      "file": "landmarks-tsavo-mudanda-rock.jpg",
+      "title": "察沃東國家公園(姆丹達岩)",
+      "author": "CT Cooper",
+      "license": "Public Domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Mudanda_Rock_in_Tsavo_East_National_Park.jpg"
     }
   ],
-  "code": "KE"
+  "code": "KE",
+  "street_food": [
+    {
+      "zh": "烤玉米",
+      "note": "路邊炭烤的整根玉米,常撒上辣椒粉與檸檬汁調味。"
+    },
+    {
+      "zh": "炸麵包",
+      "note": "微甜的油炸麵團,常作為早餐或茶點搭配奶茶。"
+    },
+    {
+      "zh": "串烤肉",
+      "note": "醃製肉塊串起炭烤,是肯亞街頭常見的下酒小吃。"
+    },
+    {
+      "zh": "肯亞薩摩薩",
+      "note": "受南亞影響的三角炸餃,內餡多為絞肉或蔬菜。"
+    },
+    {
+      "zh": "甘蔗汁",
+      "note": "現榨甘蔗汁清涼解渴,是市集攤販常見飲品。"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "東非動物大遷徙季",
+      "month": "7-10月",
+      "note": "數百萬隻角馬與斑馬渡河遷徙,是全球矚目的自然奇觀。"
+    },
+    {
+      "zh": "獨立日",
+      "month": "12月12日",
+      "note": "紀念一九六三年脫離英國殖民獨立,全國舉行慶祝活動。"
+    },
+    {
+      "zh": "拉穆文化節",
+      "month": "11月",
+      "note": "斯瓦希里海岸古城的傳統文化節,展現獨木舟賽等活動。"
+    },
+    {
+      "zh": "蒙巴薩嘉年華",
+      "month": "約11月",
+      "note": "海岸城市的年度遊行慶典,融合多元族群的音樂舞蹈。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "Jambo / Habari",
+        "romanized": "Jambo / Habari"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "Asante",
+        "romanized": "Asante"
+      },
+      {
+        "phrase": "再見",
+        "local": "Kwaheri",
+        "romanized": "Kwaheri"
+      }
+    ],
+    "money_note": "行動支付M-Pesa極為普及,連小攤販都能收款,現金則常用於傳統市集。",
+    "tipping": "餐廳與導遊給小費頗為常見,約帳單一成或依服務內容給予現金答謝。"
+  }
 }

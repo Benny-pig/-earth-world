@@ -49,6 +49,22 @@
       "zh": "蒙古野驢",
       "en": "Khulan",
       "note": "又稱亞洲野驢,成群奔馳於戈壁草原,是現存最大的野生族群。"
+    },
+    {
+      "zh": "蒙古瞪羚",
+      "en": "Mongolian gazelle",
+      "note": "又稱黃羊,成群遷徙於東方草原,是現存數量最多的有蹄類之一。",
+      "image": "animals-mongolian-gazelle.jpg"
+    },
+    {
+      "zh": "盤羊",
+      "en": "Argali sheep",
+      "note": "世界最大型野羊,雄羊有巨大螺旋角,棲息於西部高山。"
+    },
+    {
+      "zh": "金鵰",
+      "en": "Golden eagle",
+      "note": "西部哈薩克族傳統馴養用於狩獵,獵鷹人節的主角。"
     }
   ],
   "foods": [
@@ -81,6 +97,21 @@
       "en": "Airag",
       "note": "馬奶發酵的微酸低酒精飲料,是夏季草原的待客飲品。",
       "image": "MN-f-airag.jpg"
+    },
+    {
+      "zh": "風乾肉",
+      "en": "Borts",
+      "note": "把肉風乾磨粉便於長途攜帶,是傳統遊牧生活的儲糧方式。"
+    },
+    {
+      "zh": "奶豆腐乾",
+      "en": "Aaruul",
+      "note": "曬乾的酸奶固形物,乾硬耐放,是常見零食與奶製品之一。"
+    },
+    {
+      "zh": "羊肉麵疙瘩湯",
+      "en": "Guriltai shul",
+      "note": "手切麵片與羊肉同煮的家常湯麵,冬季常見主食。"
     }
   ],
   "landmarks": [
@@ -131,6 +162,34 @@
         51.05,
         100.5
       ]
+    },
+    {
+      "zh": "特勒吉國家公園龜岩",
+      "en": "Turtle Rock, Terelj National Park",
+      "note": "外形神似烏龜的巨型花崗岩,是烏蘭巴托近郊最熱門的一日遊景點。",
+      "latlon": [
+        47.9667,
+        107.4667
+      ],
+      "image": "landmarks-turtle-rock.jpg"
+    },
+    {
+      "zh": "鄂爾渾峽谷文化景觀",
+      "en": "Orkhon Valley Cultural Landscape",
+      "note": "遊牧文明兩千多年的核心地帶,列為世界遺產,古都哈拉和林即在此谷中。",
+      "latlon": [
+        47.2,
+        102.5
+      ]
+    },
+    {
+      "zh": "塔旺博格德峰群",
+      "en": "Tavan Bogd",
+      "note": "阿爾泰山脈最高峰群,終年積雪,是哈薩克族與圖瓦人的聖山。",
+      "latlon": [
+        49.1,
+        87.8
+      ]
     }
   ],
   "people": [
@@ -158,6 +217,21 @@
       "zh": "古爾拉格查",
       "en": "Jügderdemidiin Gürragchaa",
       "note": "一九八一年隨蘇聯太空船升空,是首位進入太空的蒙古人。"
+    },
+    {
+      "zh": "窩闊台",
+      "en": "Ögedei Khan",
+      "note": "成吉思汗三子,蒙古帝國第二任大汗,繼續向外擴張版圖。"
+    },
+    {
+      "zh": "滿都海徹辰夫人",
+      "en": "Mandukhai Khatun",
+      "note": "十五世紀攝政的可敦,率軍重新統一四分五裂的蒙古諸部。"
+    },
+    {
+      "zh": "朝青龍明德",
+      "en": "Asashoryu",
+      "note": "蒙古裔相撲力士,在日本相撲界獲第六十八代橫綱頭銜。"
     }
   ],
   "recommended": [
@@ -349,7 +423,85 @@
       "author": "Chongkian",
       "license": "CC BY-SA 4.0",
       "source": "https://commons.wikimedia.org/wiki/File%3AGandantegchinlen_Monastery_(2024).jpg"
+    },
+    {
+      "file": "animals-mongolian-gazelle.jpg",
+      "title": "蒙古瞪羚,托夫省",
+      "author": "stevestevens (iNaturalist)",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mongolian_Gazelle,_Altanbulag,_T%C3%B6v,_Mongolia.jpg"
+    },
+    {
+      "file": "landmarks-turtle-rock.jpg",
+      "title": "特勒吉國家公園龜岩",
+      "author": "BáthoryPéter",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Turtle_Rock,_Gorkhi-Terelj_National_Park.jpg"
     }
   ],
-  "code": "MN"
+  "code": "MN",
+  "street_food": [
+    {
+      "zh": "炸麵團",
+      "en": "Boortsog",
+      "note": "小塊油炸麵食,搭配奶茶食用,也是白月節的必備供品。"
+    },
+    {
+      "zh": "烤羊肉串",
+      "en": "Shorlog",
+      "note": "炭烤羊肉串,那達慕與市集攤位常見。"
+    },
+    {
+      "zh": "自製冰淇淋",
+      "note": "那達慕大會期間路邊攤現做的傳統奶製冰品。"
+    },
+    {
+      "zh": "優格",
+      "en": "Tarag",
+      "note": "夏日常見的濃稠優格飲,遊牧家庭自製自售。"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "那達慕大會",
+      "month": "7月11-13日",
+      "note": "全國性的摔跤、賽馬與射箭競技,慶典氣氛最濃厚的節日。"
+    },
+    {
+      "zh": "白月節",
+      "month": "農曆正月",
+      "note": "蒙古新年,家族拜訪長輩並互贈禮物,吃大量蒙古包子。"
+    },
+    {
+      "zh": "獵鷹人節",
+      "month": "10月",
+      "note": "西部巴彥烏列蓋的哈薩克族騎手展示馴鷹狩獵技藝。"
+    },
+    {
+      "zh": "駱駝節",
+      "month": "3月",
+      "note": "南戈壁舉辦的雙峰駱駝賽跑與選美,慶祝冬季結束。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "Сайн байна уу",
+        "romanized": "Sain baina uu"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "Баярлалаа",
+        "romanized": "Bayarlalaa"
+      },
+      {
+        "phrase": "再見",
+        "local": "Баяртай",
+        "romanized": "Bayartai"
+      }
+    ],
+    "money_note": "烏蘭巴托市區信用卡與行動支付漸普及,草原與鄉間仍以現金(圖格里克)為主,建議備妥小額現鈔。",
+    "tipping": "傳統上沒有強制小費文化,近年餐廳與遊牧體驗團給小費已漸成慣例,約消費金額百分之五到十。"
+  }
 }

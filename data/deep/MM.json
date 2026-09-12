@@ -50,6 +50,21 @@
       "en": "Burmese python",
       "note": "世界最大的蛇類之一,善游泳,棲息於雨林與濕地。",
       "image": "MM-a-python.jpg"
+    },
+    {
+      "zh": "太陽熊",
+      "en": "Sun bear",
+      "note": "世界最小型熊類,胸前有橙黃斑紋,棲息於低地雨林。"
+    },
+    {
+      "zh": "緬甸星龜",
+      "en": "Burmese star tortoise",
+      "note": "背甲有放射狀星紋的特有陸龜,曾因盜獵瀕臨滅絕,現靠復育回穩。"
+    },
+    {
+      "zh": "白掌長臂猿",
+      "en": "White-handed gibbon",
+      "note": "以嘹亮鳴唱在林間宣示領域,常見於南部與北部森林保護區。"
     }
   ],
   "foods": [
@@ -82,6 +97,22 @@
       "en": "Ohn no khao swè",
       "note": "雞肉椰漿咖哩湯配黃麵,加水煮蛋與炸餛飩皮。",
       "image": "MM-f-ohnnokhaoswe.jpg"
+    },
+    {
+      "zh": "撣邦溫豆腐",
+      "en": "Tofu Shan (Tohpu nway)",
+      "note": "鷹嘴豆粉製成的溫熱豆腐,拌辣油蒜末或加入米線湯食用。",
+      "image": "foods-shan-tofu.jpg"
+    },
+    {
+      "zh": "拌飯沙拉",
+      "en": "Htamin thoke",
+      "note": "冷飯拌洋蔥、辣椒、魚露與炸物,是消耗隔夜飯的常見吃法。"
+    },
+    {
+      "zh": "蔬菜炸物拼盤",
+      "en": "Akyaw",
+      "note": "南瓜、茄子等裹粉油炸,常沾莫興加湯汁一起吃。"
     }
   ],
   "landmarks": [
@@ -131,6 +162,35 @@
         17.4816,
         97.0977
       ]
+    },
+    {
+      "zh": "曼德勒皇宮",
+      "en": "Mandalay Palace",
+      "note": "貢榜王朝末代皇宮,護城河環繞的方形宮城,二戰時遭嚴重破壞後重建。",
+      "latlon": [
+        21.9917,
+        96.09
+      ],
+      "image": "landmarks-mandalay-palace.jpg"
+    },
+    {
+      "zh": "彬達雅千佛洞",
+      "en": "Pindaya Caves",
+      "note": "石灰岩洞內安放約八千尊大小佛像,是撣邦重要朝聖地。",
+      "latlon": [
+        20.9167,
+        96.8
+      ]
+    },
+    {
+      "zh": "波帕山",
+      "en": "Mount Popa",
+      "note": "死火山頂立著寺廟的岩峰,是緬甸「納」精靈信仰的中心。",
+      "latlon": [
+        20.9021,
+        95.2569
+      ],
+      "image": "landmarks-mount-popa.jpg"
     }
   ],
   "people": [
@@ -158,6 +218,21 @@
       "zh": "吳丹",
       "en": "U Thant",
       "note": "緬甸外交官,一九六一至一九七一年任聯合國第三任秘書長。"
+    },
+    {
+      "zh": "莽應龍",
+      "en": "Bayinnaung",
+      "note": "東吁王朝盛世君主,十六世紀建立東南亞規模最大的王國。"
+    },
+    {
+      "zh": "敏東王",
+      "en": "Mindon Min",
+      "note": "貢榜王朝改革君主,遷都曼德勒,推動行政與宗教改革。"
+    },
+    {
+      "zh": "德欽哥都邁",
+      "en": "Thakin Kodaw Hmaing",
+      "note": "民族主義詩人與作家,作品鼓舞二十世紀初的獨立運動。"
     }
   ],
   "recommended": [
@@ -349,7 +424,98 @@
       "author": "Jakub Hałun",
       "license": "CC BY-SA 4.0",
       "source": "https://commons.wikimedia.org/wiki/File%3A20160801_Bagan_temples_6701.jpg"
+    },
+    {
+      "file": "foods-shan-tofu.jpg",
+      "title": "緬甸撣邦豆腐 To hpu",
+      "author": "Wagaung",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Burmese_tofu_(to_hpu).jpg"
+    },
+    {
+      "file": "landmarks-mandalay-palace.jpg",
+      "title": "曼德勒皇宮護城河夕照",
+      "author": "Jakub Hałun",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:20160728_Mandalay_Palace_5732.jpg"
+    },
+    {
+      "file": "landmarks-mount-popa.jpg",
+      "title": "波帕山下村落",
+      "author": "Jakub Hałun",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:20160802_Mount_Popa_7176.jpg"
     }
   ],
-  "code": "MM"
+  "code": "MM",
+  "street_food": [
+    {
+      "zh": "油條配豆漿",
+      "en": null,
+      "note": "早市常見的炸麵團,沾豆漿或配莫興加湯一起吃。"
+    },
+    {
+      "zh": "涼拌青芒果沙拉",
+      "note": "酸辣開胃的街頭小吃,常加炸豆與花生碎。"
+    },
+    {
+      "zh": "緬式甩餅",
+      "en": "Palata",
+      "note": "源自印度煎餅的緬甸版本,可鹹可甜,街邊現甩現煎。"
+    },
+    {
+      "zh": "烤玉米與烤番薯",
+      "note": "傍晚街頭常見的烤物攤,配辣鹽粉。"
+    },
+    {
+      "zh": "椰汁西米露",
+      "en": "Mont let saung",
+      "note": "椰奶西米甜湯,夏季街頭消暑點心。"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "潑水節",
+      "month": "4月",
+      "note": "緬甸新年慶典,連續數日互相潑水祈求洗去晦氣。"
+    },
+    {
+      "zh": "點燈節",
+      "month": "農曆8月滿月(約11月)",
+      "note": "家家戶戶點燈,並施放天燈,也是僧侶結夏安居結束的日子。"
+    },
+    {
+      "zh": "光明節",
+      "en": "Thadingyut",
+      "month": "10月",
+      "note": "紀念佛陀自忉利天返回人間,城鄉普遍點燈籠慶祝。"
+    },
+    {
+      "zh": "各地佛塔節",
+      "en": "Paya pwe",
+      "month": "全年不定期",
+      "note": "各地佛塔輪流舉辦的傳統廟會,有市集、戲劇與宗教儀式。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "မင်္ဂလာပါ",
+        "romanized": "Mingalabar"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "ကျေးဇူးတင်ပါတယ်",
+        "romanized": "Kyay zu tin ba de"
+      },
+      {
+        "phrase": "再見",
+        "local": "သွားတော့မယ်",
+        "romanized": "Thwar-daw-me"
+      }
+    ],
+    "money_note": "現金為主,美元與緬元並用於部分觀光場所,信用卡普及率低,建議攜帶美元現鈔兌換。",
+    "tipping": "傳統上無強制小費文化,但觀光業如導遊、司機與按摩師給小費已漸普遍。"
+  }
 }

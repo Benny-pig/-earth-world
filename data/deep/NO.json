@@ -50,6 +50,21 @@
       "en": "White-tailed eagle",
       "note": "歐洲最大的猛禽之一,羅弗敦與峽灣一帶族群穩定。",
       "image": "animals-white-tailed-eagle.jpg"
+    },
+    {
+      "zh": "挪威森林貓",
+      "en": "Norwegian forest cat",
+      "note": "厚重雙層毛的原生貓種,傳說曾是維京船隻的捕鼠貓。"
+    },
+    {
+      "zh": "座頭鯨",
+      "en": "Humpback whale",
+      "note": "冬季隨鯡魚群進入北部峽灣,是特羅姆瑟一帶熱門的賞鯨對象。"
+    },
+    {
+      "zh": "極地狐",
+      "en": "Arctic fox",
+      "note": "冬夏毛色轉換的小型狐狸,棲息於斯瓦爾巴與山區苔原。"
     }
   ],
   "foods": [
@@ -82,6 +97,21 @@
       "en": "Gravlaks",
       "note": "鹽、糖與蒔蘿醃漬的生鮭魚,是斯堪地那維亞共通的前菜。",
       "image": "foods-gravlaks.jpg"
+    },
+    {
+      "zh": "心形鬆餅",
+      "en": "Vafler",
+      "note": "心形烙模烤出的鬆餅,配果醬與酸奶油,咖啡時間常見。"
+    },
+    {
+      "zh": "魚丸湯",
+      "en": "Fiskeboller",
+      "note": "白魚肉打成的魚丸,煮成奶油濃湯或搭配蔬菜。"
+    },
+    {
+      "zh": "肉桂捲",
+      "en": "Skillingsbolle",
+      "note": "挪威風味的肉桂捲,常加荳蔻與珍珠糖粒。"
     }
   ],
   "landmarks": [
@@ -134,6 +164,33 @@
         13.6
       ],
       "image": "landmarks-lofoten.jpg"
+    },
+    {
+      "zh": "北角",
+      "en": "North Cape (Nordkapp)",
+      "note": "歐洲大陸最北端的斷崖,夏季可見午夜太陽。",
+      "latlon": [
+        71.1725,
+        25.7841
+      ]
+    },
+    {
+      "zh": "維格蘭雕塑公園",
+      "en": "Vigeland Park",
+      "note": "奧斯陸弗羅格納公園內逾兩百件人體雕塑,古斯塔夫·維格蘭畢生之作。",
+      "latlon": [
+        59.9267,
+        10.7005
+      ]
+    },
+    {
+      "zh": "於爾內斯木板教堂",
+      "en": "Urnes Stave Church",
+      "note": "現存最古老的木板教堂之一,雕刻融合維京與基督教紋樣,列世界遺產。",
+      "latlon": [
+        61.2986,
+        7.3212
+      ]
     }
   ],
   "people": [
@@ -166,6 +223,21 @@
       "en": "Fridtjof Nansen",
       "note": "極地科學家與外交家,主持戰後難民救濟,獲諾貝爾和平獎。",
       "image": "people-nansen.jpg"
+    },
+    {
+      "zh": "索爾·海爾達爾",
+      "en": "Thor Heyerdahl",
+      "note": "探險家與人類學家,一九四七年駕康提基號木筏橫渡太平洋。"
+    },
+    {
+      "zh": "克努特·哈姆生",
+      "en": "Knut Hamsun",
+      "note": "現代主義小說先驅,《飢餓》等作品獲一九二〇年諾貝爾文學獎。"
+    },
+    {
+      "zh": "格羅·哈萊姆·布倫特蘭",
+      "en": "Gro Harlem Brundtland",
+      "note": "首位女性首相,主持聯合國報告《我們共同的未來》,提出「永續發展」概念。"
     }
   ],
   "recommended": [
@@ -397,5 +469,70 @@
       "source": "https://commons.wikimedia.org/wiki/File%3AFridtjof_Nansen_%281861-1930%29_portrait.jpg"
     }
   ],
-  "code": "NO"
+  "code": "NO",
+  "street_food": [
+    {
+      "zh": "薄餅熱狗",
+      "en": "Pølse i lompe",
+      "note": "挪威國民熱狗,用馬鈴薯薄餅取代麵包捲起來吃。"
+    },
+    {
+      "zh": "鮮蝦開放式三明治",
+      "en": "Reker smørbrød",
+      "note": "黑麥麵包鋪滿鮮蝦與美乃滋,魚市場攤位的招牌輕食。"
+    },
+    {
+      "zh": "麋鹿肉漢堡",
+      "en": "Elgburger",
+      "note": "以野味麋鹿肉製成的漢堡排,加油站與山區小吃店常見。"
+    },
+    {
+      "zh": "街頭鬆餅攤",
+      "en": "Vaffel",
+      "note": "市集與節慶現烤的心形鬆餅,配果醬與酸奶油。"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "憲法日",
+      "month": "5月17日",
+      "note": "國慶日,全民穿傳統服飾 bunad 上街遊行,以兒童遊行為特色。"
+    },
+    {
+      "zh": "仲夏節",
+      "month": "6月23日",
+      "note": "點燃篝火慶祝夏至前夕,沿海地區尤其盛行。"
+    },
+    {
+      "zh": "卑爾根國際藝術節",
+      "month": "5-6月",
+      "note": "北歐歷史最悠久的藝術節之一,涵蓋音樂、戲劇與舞蹈。"
+    },
+    {
+      "zh": "聖誕市集",
+      "month": "12月",
+      "note": "各城鎮廣場搭起攤位賣手工藝品與熱紅酒,北極圈內城市尤具氣氛。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "Hei",
+        "romanized": "Hei"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "Takk",
+        "romanized": "Takk"
+      },
+      {
+        "phrase": "再見",
+        "local": "Ha det",
+        "romanized": "Ha det"
+      }
+    ],
+    "money_note": "幾乎完全無現金社會,絕大多數場所都用卡片或行動支付(Vipps),攜帶現金反而不便。",
+    "tipping": "無強制小費文化,服務費通常已含在帳單中,滿意時可湊整數,非必要。"
+  }
 }

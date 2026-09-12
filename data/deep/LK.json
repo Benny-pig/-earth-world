@@ -51,6 +51,21 @@
       "en": "Sri Lankan junglefowl",
       "note": "島上特有的國鳥,雄鳥羽色橙紅,是家雞的近親。",
       "image": "LK-a-junglefowl.jpg"
+    },
+    {
+      "zh": "懶熊",
+      "en": "Sloth bear",
+      "note": "以白蟻與果實為主食的熊種,胸前有淺色V字斑紋。"
+    },
+    {
+      "zh": "藍孔雀",
+      "en": "Indian peafowl",
+      "note": "斯里蘭卡原生鳥類,常見於乾燥區的森林與農地邊緣。"
+    },
+    {
+      "zh": "沼澤鱷",
+      "en": "Mugger crocodile",
+      "note": "分布於島上河川與人工湖,是當地最常見的鱷魚種類。"
     }
   ],
   "foods": [
@@ -83,6 +98,21 @@
       "en": "Watalappan",
       "note": "棕櫚糖、椰漿與蛋、腰果做的蒸布丁,源自馬來裔社群。",
       "image": "LK-f-watalappan.jpg"
+    },
+    {
+      "zh": "蛋煎餅",
+      "en": "Egg Hopper",
+      "note": "碗狀薄餅中央打入雞蛋煎熟,是常見的早餐選擇。"
+    },
+    {
+      "zh": "蝦餅",
+      "en": "Isso Wade",
+      "note": "扁豆漿裹整隻蝦油炸而成,是海邊常見的下午茶點心。"
+    },
+    {
+      "zh": "錫蘭紅茶",
+      "en": "Ceylon Tea",
+      "note": "高地茶園出產的紅茶,是斯里蘭卡最重要的出口作物之一。"
     }
   ],
   "landmarks": [
@@ -132,6 +162,36 @@
         8.3494,
         80.3964
       ]
+    },
+    {
+      "zh": "波隆納魯沃古城",
+      "en": "Polonnaruwa",
+      "note": "十二世紀的中世紀古都遺址,保存大量佛像與宮殿基座。",
+      "latlon": [
+        7.9403,
+        81.0188
+      ],
+      "image": "landmarks-polonnaruwa.jpg"
+    },
+    {
+      "zh": "亞當峰",
+      "en": "Adam's Peak (Sri Pada)",
+      "note": "山頂岩石留有被視為聖跡的足印,是多宗教共同朝聖地。",
+      "latlon": [
+        6.8096,
+        80.4994
+      ],
+      "image": "landmarks-adams-peak.jpg"
+    },
+    {
+      "zh": "努沃勒埃利亞茶鄉",
+      "en": "Nuwara Eliya",
+      "note": "英國殖民時期開發的高地茶鄉,氣候涼爽有「小英國」之稱。",
+      "latlon": [
+        6.9497,
+        80.7891
+      ],
+      "image": "landmarks-nuwara-eliya-tea.jpg"
     }
   ],
   "people": [
@@ -159,6 +219,21 @@
       "zh": "麥可·翁達傑",
       "en": "Michael Ondaatje",
       "note": "出生於可倫坡的作家,《英倫情人》獲布克獎。"
+    },
+    {
+      "zh": "錢德里卡·庫瑪拉通加",
+      "en": "Chandrika Kumaratunga",
+      "note": "斯里蘭卡首位女總統,任內致力推動內戰和平協商。"
+    },
+    {
+      "zh": "亞瑟·克拉克",
+      "en": "Arthur C. Clarke",
+      "note": "英裔科幻作家,晚年長居斯里蘭卡並在此逝世。"
+    },
+    {
+      "zh": "庫馬爾·桑加卡拉",
+      "en": "Kumar Sangakkara",
+      "note": "板球名將,被視為史上最傑出的擊球手之一。"
     }
   ],
   "recommended": [
@@ -350,7 +425,88 @@
       "author": "Rovin Shanila",
       "license": "CC BY-SA 4.0",
       "source": "https://commons.wikimedia.org/wiki/File%3AKandy_Temple_of_the_Tooth_Relic.jpg"
+    },
+    {
+      "file": "landmarks-polonnaruwa.jpg",
+      "title": "波隆納魯沃古城",
+      "author": "Ramón (Llanera, Spain)",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ancient_City_of_Polonnaruwa_045.jpg"
+    },
+    {
+      "file": "landmarks-adams-peak.jpg",
+      "title": "亞當峰(聖足山)",
+      "author": "Bernard Gagnon",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sri_Pada_05.jpg"
+    },
+    {
+      "file": "landmarks-nuwara-eliya-tea.jpg",
+      "title": "努沃勒埃利亞茶園",
+      "author": "Vyacheslav Argenberg",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sri_Lanka,_Tea_plantations_near_Nuwara_Eliya,_Tea_estate.jpg"
     }
   ],
-  "code": "LK"
+  "code": "LK",
+  "street_food": [
+    {
+      "zh": "香蕉葉飯包",
+      "note": "以香蕉葉包裹米飯、咖哩與滷蛋蒸熟,香氣獨特。"
+    },
+    {
+      "zh": "甜米糕",
+      "note": "以米粉與棕櫚糖油炸而成的環狀甜點,節慶常見。"
+    },
+    {
+      "zh": "木蘋果汁",
+      "note": "以本地特有水果打成的濃郁果汁,風味酸甜獨特。"
+    },
+    {
+      "zh": "辛香醃水果",
+      "note": "醃漬水果拌辣椒與香料,是常見的開胃小食。"
+    },
+    {
+      "zh": "烤玉米",
+      "note": "路邊炭烤玉米刷上辣椒醬,是傍晚常見的街頭小吃。"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "衛塞節",
+      "month": "5月",
+      "note": "紀念佛陀誕生、成道與涅槃,全國張燈結彩並禁售酒肉。"
+    },
+    {
+      "zh": "康提佛牙節遊行",
+      "month": "7-8月",
+      "note": "康提佛牙寺的盛大遊行,大象隊伍與傳統舞蹈齊聚。"
+    },
+    {
+      "zh": "新年",
+      "month": "4月",
+      "note": "僧伽羅與坦米爾社群共同慶祝的傳統新年,闔家團聚。"
+    },
+    {
+      "zh": "大寶森節",
+      "month": "1月",
+      "note": "坦米爾印度教社群的重要節日,信徒以苦行方式還願。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好 / 再見",
+        "local": "ආයුබෝවන්",
+        "romanized": "Ayubowan"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "ස්තුතියි",
+        "romanized": "Sthuthiyi"
+      }
+    ],
+    "money_note": "觀光區與飯店多可刷卡,地方小店與市集仍以現金盧比交易為主。",
+    "tipping": "服務費常已內含於帳單,但給司機、導遊與房務約一成小費是常見禮貌。"
+  }
 }

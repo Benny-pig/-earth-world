@@ -50,6 +50,22 @@
       "en": "Himalayan monal",
       "note": "尼泊爾國鳥(當地稱 Danphe),雄鳥羽色如金屬彩虹。",
       "image": "NP-a-monal.jpg"
+    },
+    {
+      "zh": "喜馬拉雅塔爾羊",
+      "en": "Himalayan tahr",
+      "note": "棲息於陡峭岩壁的野生山羊,安納布爾納與薩加瑪塔一帶可見。"
+    },
+    {
+      "zh": "亞洲黑熊",
+      "en": "Asian black bear",
+      "note": "胸前有白色V字斑紋,出沒於中海拔森林地帶。"
+    },
+    {
+      "zh": "恆河鱷",
+      "en": "Gharial",
+      "note": "吻部細長的特有鱷魚,奇特旺設有復育中心保護這一瀕危物種。",
+      "image": "animals-gharial.jpg"
     }
   ],
   "foods": [
@@ -82,6 +98,21 @@
       "en": "Juju dhau",
       "note": "用陶碗盛裝的濃稠水牛奶優格,有「優格之王」之稱。",
       "image": "NP-f-jujudhau.jpg"
+    },
+    {
+      "zh": "尼式炒麵",
+      "en": "Chow mein",
+      "note": "尼泊爾街頭版本的炒麵,加蛋與蔬菜,分量實在又便宜。"
+    },
+    {
+      "zh": "酥油茶",
+      "en": "Po cha (butter tea)",
+      "note": "高山地區常見的鹹味酥油茶,補充熱量與鹽分。"
+    },
+    {
+      "zh": "香料奶茶",
+      "en": "Chiya",
+      "note": "加薑、荳蔻等香料的甜奶茶,是全國性的日常飲品。"
     }
   ],
   "landmarks": [
@@ -131,6 +162,34 @@
         27.4693,
         83.276
       ]
+    },
+    {
+      "zh": "斯瓦揚布納特(猴廟)",
+      "en": "Swayambhunath",
+      "note": "加德滿都谷地最古老的佛塔之一,山丘上猴群眾多,故俗稱猴廟。",
+      "latlon": [
+        27.7149,
+        85.2903
+      ],
+      "image": "landmarks-swayambhunath.jpg"
+    },
+    {
+      "zh": "帕坦杜巴廣場",
+      "en": "Patan Durbar Square",
+      "note": "馬拉王朝三城邦之一的舊王宮廣場,尼瓦爾木雕與金屬工藝的重鎮。",
+      "latlon": [
+        27.6727,
+        85.3247
+      ]
+    },
+    {
+      "zh": "安納布爾納峰群",
+      "en": "Annapurna massif",
+      "note": "喜馬拉雅中段的高峰群,基地營健行路線是全球健行者的朝聖地。",
+      "latlon": [
+        28.596,
+        83.82
+      ]
     }
   ],
   "people": [
@@ -158,6 +217,21 @@
       "zh": "比蘭德拉",
       "en": "Birendra",
       "note": "一九七二至二〇〇一年在位的國王,二〇〇一年死於王室槍擊事件。"
+    },
+    {
+      "zh": "阿帕·雪巴",
+      "en": "Apa Sherpa",
+      "note": "登頂聖母峰次數最多的雪巴人之一,累計超過二十次成功登頂。"
+    },
+    {
+      "zh": "帕桑·拉姆·雪巴",
+      "en": "Pasang Lhamu Sherpa",
+      "note": "一九九三年成為首位登頂聖母峰的尼泊爾女性,下山時不幸罹難。"
+    },
+    {
+      "zh": "拉克斯米·普拉薩德·德夫科塔",
+      "en": "Laxmi Prasad Devkota",
+      "note": "尼泊爾現代文學之父,詩作融合本土語言與西方浪漫主義。"
     }
   ],
   "recommended": [
@@ -349,7 +423,86 @@
       "author": "Bijay Chaurasia",
       "license": "CC BY-SA 4.0",
       "source": "https://commons.wikimedia.org/wiki/File%3AHistoric_Pagoda_Style_Architecture_in_Kathmandu_Durbar_Square-IMG_4069.jpg"
+    },
+    {
+      "file": "animals-gharial.jpg",
+      "title": "奇特旺國家公園的恆河鱷",
+      "author": "Rucksackschule-dresden",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Gharial_at_Chitwan_National_Park.jpg"
+    },
+    {
+      "file": "landmarks-swayambhunath.jpg",
+      "title": "斯瓦揚布納特佛塔",
+      "author": "Nabin K. Sapkota",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Swayambhunath_Stupa_2018_03.jpg"
     }
   ],
-  "code": "NP"
+  "code": "NP",
+  "street_food": [
+    {
+      "zh": "烤肉串",
+      "en": "Sekuwa",
+      "note": "碳烤醃漬肉串,常配打糕與辣椒沾醬,啤酒攤常見。"
+    },
+    {
+      "zh": "炸洋芋餅",
+      "en": "Aloo chop",
+      "note": "馬鈴薯泥裹粉油炸的小點,街頭攤販常見的下午茶點心。"
+    },
+    {
+      "zh": "酸辣脆殼",
+      "en": "Panipuri",
+      "note": "脆殼裝入酸辣香料水與馬鈴薯餡,一口咬破的街頭經典。"
+    },
+    {
+      "zh": "尼瓦爾米漿煎餅",
+      "en": "Chatamari",
+      "note": "米漿煎成薄餅鋪上肉末與蛋,有「尼泊爾披薩」之稱。"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "達善節",
+      "month": "尼泊爾曆9-10月(約9-10月)",
+      "note": "全國最大節慶,家族團聚、長輩為晚輩點額紅祝福。"
+    },
+    {
+      "zh": "提哈爾燈節",
+      "month": "10-11月",
+      "note": "為期五天的排燈節,分別敬拜烏鴉、狗、牛與兄弟姊妹。"
+    },
+    {
+      "zh": "濕婆節",
+      "month": "2-3月",
+      "note": "帕舒帕蒂納特廟聚集大批朝聖者與苦行僧,徹夜點燈守夜。"
+    },
+    {
+      "zh": "因陀羅節",
+      "month": "9月",
+      "note": "加德滿都谷地慶典,活女神庫瑪麗乘車遊行是最大亮點。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "नमस्ते",
+        "romanized": "Namaste"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "धन्यवाद",
+        "romanized": "Dhanyabad"
+      },
+      {
+        "phrase": "再見",
+        "local": "फेरि भेटौंला",
+        "romanized": "Pheri bhetaunla"
+      }
+    ],
+    "money_note": "加德滿都與觀光區可用信用卡,山區與鄉村多仰賴現金,健行途中建議多帶尼泊爾盧比小額鈔票。",
+    "tipping": "健行嚮導與挑夫的小費是慣例、也是重要收入來源,一般餐廳帳單則多已含服務費。"
+  }
 }

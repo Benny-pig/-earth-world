@@ -50,6 +50,21 @@
       "en": "Red deer",
       "note": "見於費呂沃地區與東法爾德斯普拉森自然保留區。",
       "image": "animals-reddeer.jpg"
+    },
+    {
+      "zh": "歐洲野兔",
+      "en": "European hare",
+      "note": "常見於圩田草地與農地邊緣,春季有明顯的求偶「拳擊」行為。"
+    },
+    {
+      "zh": "灰雁",
+      "en": "Greylag goose",
+      "note": "瓦登海與運河沿岸常見的大型雁種,城市公園也普遍可見。"
+    },
+    {
+      "zh": "歐亞河狸",
+      "en": "Eurasian beaver",
+      "note": "曾在荷蘭絕跡,經重新引入後在河岸濕地建立穩定族群。"
     }
   ],
   "foods": [
@@ -82,6 +97,21 @@
       "en": "Bitterballen",
       "note": "裹粉油炸的濃醬肉丸,是配啤酒的酒館小點。",
       "image": "foods-bitterballen.jpg"
+    },
+    {
+      "zh": "薯條配美乃滋",
+      "en": "Patat met mayonaise",
+      "note": "荷蘭國民速食,粗切薯條擠美乃滋而非番茄醬。"
+    },
+    {
+      "zh": "豌豆濃湯",
+      "en": "Erwtensoep",
+      "note": "以splitpea與煙燻香腸熬煮的冬季濃湯,湯匙插著不倒才算及格。"
+    },
+    {
+      "zh": "荷式蘋果派",
+      "en": "Appeltaart",
+      "note": "厚實的肉桂蘋果派,咖啡館常配一大杓鮮奶油。"
     }
   ],
   "landmarks": [
@@ -134,6 +164,33 @@
         4.2957
       ],
       "image": "landmarks-peacepalace.jpg"
+    },
+    {
+      "zh": "羊角村",
+      "en": "Giethoorn",
+      "note": "沒有道路、只靠水道與小橋通行的村落,有「荷蘭威尼斯」之稱。",
+      "latlon": [
+        52.7405,
+        6.0779
+      ]
+    },
+    {
+      "zh": "阿夫魯戴克攔海大壩",
+      "en": "Afsluitdijk",
+      "note": "一九三二年完工的三十二公里攔海堤壩,將須德海化為淡水湖。",
+      "latlon": [
+        53.0708,
+        5.3417
+      ]
+    },
+    {
+      "zh": "鹿特丹方塊屋",
+      "en": "Cube Houses",
+      "note": "皮特·布洛姆設計的傾斜立方體住宅群,是鹿特丹現代建築地標。",
+      "latlon": [
+        51.9203,
+        4.4881
+      ]
     }
   ],
   "people": [
@@ -166,6 +223,21 @@
       "en": "Erasmus of Rotterdam",
       "note": "文藝復興人文學者,校訂希臘文《新約》,主張寬容與改革。",
       "image": "people-erasmus.jpg"
+    },
+    {
+      "zh": "巴魯赫·斯賓諾莎",
+      "en": "Baruch Spinoza",
+      "note": "理性主義哲學家,主張泛神論,深刻影響後世啟蒙思想。"
+    },
+    {
+      "zh": "安東尼·范·雷文霍克",
+      "en": "Antonie van Leeuwenhoek",
+      "note": "自製顯微鏡觀察微生物,被稱為微生物學之父。"
+    },
+    {
+      "zh": "沉默者威廉",
+      "en": "William of Orange",
+      "note": "尼德蘭起義的領導者,被視為荷蘭獨立建國的奠基者。"
     }
   ],
   "recommended": [
@@ -397,5 +469,75 @@
       "source": "https://commons.wikimedia.org/wiki/File:Hans_Holbein_d._J._-_Portrait_of_Erasmus_of_Rotterdam_Writing_-_WGA11498.jpg"
     }
   ],
-  "code": "NL"
+  "code": "NL",
+  "street_food": [
+    {
+      "zh": "生鯡魚攤",
+      "en": "Haringkar",
+      "note": "路邊魚攤買生醃鯡魚夾麵包,傳統吃法是抓尾仰頭入口。"
+    },
+    {
+      "zh": "炸魚塊",
+      "en": "Kibbeling",
+      "note": "裹粉油炸的鱈魚塊配塔塔醬,魚市場與市集常見。"
+    },
+    {
+      "zh": "可樂餅三明治",
+      "en": "Broodje kroket",
+      "note": "圓柱形炸物夾麵包,自動販賣機牆(FEBO)也買得到。"
+    },
+    {
+      "zh": "現烤糖漿鬆餅",
+      "en": "Verse stroopwafel",
+      "note": "市集現烤現吃,比包裝版更軟熱多汁。"
+    },
+    {
+      "zh": "起司酥炸餅",
+      "en": "Kaassoufflé",
+      "note": "夜市與快餐攤常見的酥炸起司餅,趁熱吃牽絲。"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "國王節",
+      "month": "4月27日",
+      "note": "全民穿橙色服裝上街,阿姆斯特丹運河擠滿慶祝船隻與跳蚤市場。"
+    },
+    {
+      "zh": "解放日",
+      "month": "5月5日",
+      "note": "紀念二戰結束、擺脫德國佔領,前一日為國殤日默哀紀念。"
+    },
+    {
+      "zh": "聖尼古拉斯節",
+      "month": "12月5日",
+      "note": "兒童的耶誕前哨節日,家人互贈禮物與詩詞惡搞小卡。"
+    },
+    {
+      "zh": "阿姆斯特丹燈光節",
+      "month": "11月至次年1月",
+      "note": "運河沿岸展出燈光藝術裝置,可搭船夜遊觀賞。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "Hallo",
+        "romanized": "Hallo"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "Dank je wel",
+        "romanized": "Dank je wel"
+      },
+      {
+        "phrase": "再見",
+        "local": "Tot ziens",
+        "romanized": "Tot ziens"
+      }
+    ],
+    "money_note": "幾乎全面電子支付,許多小店只收簽帳卡不收現金或信用卡,建議準備Maestro相容的銀行卡。",
+    "tipping": "無強制小費文化,帳單常已含服務費,滿意時可湊整數或加一成表示感謝。"
+  }
 }
