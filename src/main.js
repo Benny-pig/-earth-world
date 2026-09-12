@@ -293,6 +293,14 @@ export function start() {
     composer.setSize(window.innerWidth, window.innerHeight);
   });
 
+  // 逐幀對 177 個國家的三角化 mesh 做 raycast 實測平均 ~2.6ms、尖峰可到 30ms+
+  // (見 commit 說明),在高更新率螢幕上等於每秒白白燒好幾十次。hover 判定不需要
+  // 60Hz 這麼即時,節流成最多每 ~50ms 判一次,期間沿用上一次結果,手感沒有差別。
+  const PICK_INTERVAL_MS = 50;
+  let hovered = null;
+  let hitGlobe = false;
+  let lastPickAt = 0;
+
   const clock = new THREE.Clock();
   function loop() {
     const dt = Math.min(clock.getDelta(), 0.1);
@@ -300,17 +308,17 @@ export function start() {
     globe.update(dt);
     clouds.update(dt);
 
-    raycaster.setFromCamera(pointer, camera);
-    let hovered = null;
-    if (window.__earth.countryLayer) hovered = window.__earth.countryLayer.pick(raycaster, globe.mesh);
-    const hitGlobe = hovered || raycaster.intersectObject(globe.mesh, false).length > 0;
-
-    if (window.__earth.countryLayer) {
-      window.__earth.countryLayer.setHover(hovered ? hovered.code : null);
-      window.__earth.countryLayer.update(dt);
+    const now = performance.now();
+    if (now - lastPickAt >= PICK_INTERVAL_MS) {
+      lastPickAt = now;
+      raycaster.setFromCamera(pointer, camera);
+      hovered = window.__earth.countryLayer ? window.__earth.countryLayer.pick(raycaster, globe.mesh) : null;
+      hitGlobe = !!hovered || raycaster.intersectObject(globe.mesh, false).length > 0;
+      if (window.__earth.countryLayer) window.__earth.countryLayer.setHover(hovered ? hovered.code : null);
+      if (hovered) tooltip.show(pointerPx.x, pointerPx.y, hovered.names);
+      else tooltip.hide();
     }
-    if (hovered) tooltip.show(pointerPx.x, pointerPx.y, hovered.names);
-    else tooltip.hide();
+    if (window.__earth.countryLayer) window.__earth.countryLayer.update(dt);
 
     if (hitGlobe) {
       globe.setSpinPaused(true);
