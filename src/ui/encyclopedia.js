@@ -86,8 +86,8 @@ export function createEncyclopedia() {
       `<p class="enc-fx-line">1 新臺幣 (TWD) ≈ <b>${trimNum(rate)}</b> ${esc(ccy)}　·　` +
       `1 ${esc(ccy)} ≈ <b>${trimNum(inv)}</b> 新臺幣</p>` +
       `<div class="enc-fx-conv">` +
-        `<label>新臺幣 <input type="number" id="fx-twd" value="1000" min="0" step="any"></label>` +
-        `<button type="button" class="enc-fx-swap" id="fx-swap" title="互換兩邊數值">⇄</button>` +
+        `<label>新臺幣 <input type="number" id="fx-twd" value="1" min="0" step="any"></label>` +
+        `<button type="button" class="enc-fx-swap" id="fx-swap" title="切換基準幣別">⇄</button>` +
         `<label>${esc(ccy)} <input type="number" id="fx-for" min="0" step="any"></label>` +
       `</div>` +
       `<p class="enc-dim enc-fx-src">匯率更新:${esc(upd)} UTC · 資料 open.er-api.com</p>`;
@@ -98,12 +98,13 @@ export function createEncyclopedia() {
     };
     twd.addEventListener("input", () => sync("twd"));
     forr.addEventListener("input", () => sync("for"));
-    // ⇄ 把兩邊的「數字」互換(拿外幣的數值當新臺幣、反之),來回試算
+    // ⇄ 切換哪一邊是「基準的 1」:例如「1 新臺幣 ≈ 0.03125 美元」按一下變成
+    // 「1 美元 ≈ 31.25 新臺幣」,而不是把兩邊數字互相搬過去、越換越亂。
+    let base = "twd";
     box.querySelector("#fx-swap").addEventListener("click", () => {
-      const a = twd.value; twd.value = forr.value || ""; forr.value = "";
-      // 以新的 TWD 值重算另一邊;若原本兩邊都空就放回原值
-      if (!twd.value && a) twd.value = a;
-      sync("twd");
+      base = base === "twd" ? "for" : "twd";
+      if (base === "twd") { twd.value = "1"; sync("twd"); }
+      else { forr.value = "1"; sync("for"); }
     });
     sync("twd");
   }
