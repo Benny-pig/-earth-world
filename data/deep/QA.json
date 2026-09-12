@@ -50,6 +50,21 @@
       "en": "Saker falcon",
       "note": "馴鷹是列入非物質遺產的傳統,獵隼最受推崇。",
       "image": "QA-a-falcon.jpg"
+    },
+    {
+      "zh": "阿拉伯沙瞪羚",
+      "en": "Arabian sand gazelle",
+      "note": "適應沙漠乾旱環境的瞪羚,曾瀕臨滅絕,靠保育計畫回穩。"
+    },
+    {
+      "zh": "荒漠刺尾蜥",
+      "en": "Spiny-tailed lizard (dhub)",
+      "note": "尾巴布滿刺狀鱗片的沙漠蜥蜴,當地傳統上曾作食用。"
+    },
+    {
+      "zh": "紅樹林大紅鸛",
+      "en": "Greater flamingo",
+      "note": "冬季聚集在北部紅樹林潟湖覓食,粉紅色身影成群壯觀。"
     }
   ],
   "foods": [
@@ -79,6 +94,21 @@
       "zh": "薩利德燉餅",
       "en": "Thareed",
       "note": "薄餅泡進蔬菜燉肉湯汁,層層鋪疊的傳統菜。"
+    },
+    {
+      "zh": "甜味番紅花麵線",
+      "en": "Balaleet",
+      "note": "番紅花與糖煮甜麵線鋪煎蛋,是傳統的甜鹹早餐。"
+    },
+    {
+      "zh": "椰棗煎餅",
+      "en": "Chebab",
+      "note": "加了椰棗糖漿的鬆軟煎餅,常配奶酪當早點。"
+    },
+    {
+      "zh": "濃粥燉雞",
+      "en": "Madrouba",
+      "note": "小麥或米與雞肉久燉成濃稠糊狀,口感類似哈里斯。"
     }
   ],
   "landmarks": [
@@ -131,6 +161,33 @@
         51.21
       ],
       "image": "QA-l-khor.jpg"
+    },
+    {
+      "zh": "卡塔拉文化村",
+      "en": "Katara Cultural Village",
+      "note": "仿古建築群集結劇院、美術館與圓形露天劇場,文化活動聚集地。",
+      "latlon": [
+        25.3595,
+        51.5262
+      ]
+    },
+    {
+      "zh": "澤克里特雕塑地景",
+      "en": "East-West/West-East, Zekreet",
+      "note": "藝術家理查·塞拉在沙漠豎立的四片巨大鋼板地景藝術。",
+      "latlon": [
+        25.5051,
+        50.8963
+      ]
+    },
+    {
+      "zh": "祖巴拉考古遺址",
+      "en": "Al Zubarah Archaeological Site",
+      "note": "十八世紀曾是重要採珠貿易港的廢棄古城,列世界遺產。",
+      "latlon": [
+        25.9803,
+        51.0272
+      ]
     }
   ],
   "people": [
@@ -158,6 +215,21 @@
       "zh": "穆塔茲·埃薩·巴爾希姆",
       "en": "Mutaz Essa Barshim",
       "note": "跳高選手,2020 東京奧運金牌、多屆世錦賽冠軍。"
+    },
+    {
+      "zh": "謝赫阿卜杜拉·本·賈西姆·阿勒薩尼",
+      "en": "Sheikh Abdullah bin Jassim Al Thani",
+      "note": "奠基者之子,任內鞏固卡達現代疆界與統治基礎。"
+    },
+    {
+      "zh": "阿爾莫伊茲·阿里",
+      "en": "Almoez Ali",
+      "note": "足球前鋒,二〇一九年亞洲盃單屆進球紀錄保持人。"
+    },
+    {
+      "zh": "謝赫阿爾馬雅薩·賓特·哈馬德",
+      "en": "Sheikha Al Mayassa bint Hamad Al Thani",
+      "note": "卡達博物館管理局主席,推動當代藝術收藏與文化外交。"
     }
   ],
   "recommended": [
@@ -351,5 +423,70 @@
       "source": "https://commons.wikimedia.org/wiki/File%3AKhor_Al_Adaid_Inland_Sea_and_desert_in_Katar.jpg"
     }
   ],
-  "code": "QA"
+  "code": "QA",
+  "street_food": [
+    {
+      "zh": "沙威瑪捲餅",
+      "note": "烤肉削片捲進薄餅夾生菜與醬料,街頭與市集常見速食。",
+      "where": "瓦其夫市集周邊攤位"
+    },
+    {
+      "zh": "扁餅曼納基什",
+      "note": "麵餅撒上香料或起司烤製,是常見的早餐街頭小吃。",
+      "where": "杜哈各處小攤"
+    },
+    {
+      "zh": "雷加格薄餅",
+      "note": "極薄脆餅捲入奶油與甜煉乳或起司,對摺食用。",
+      "where": "瓦其夫市集小吃攤"
+    },
+    {
+      "zh": "香料烤玉米",
+      "note": "炭烤玉米刷上辣椒萊姆奶油,是夜間市集熱門零嘴。",
+      "where": "濱海大道周邊攤販"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "卡達國慶日",
+      "month": "12月18日",
+      "note": "紀念一八七八年謝赫賈西姆統一部落,全國舉行閱兵與煙火。"
+    },
+    {
+      "zh": "全國體育日",
+      "month": "2月(第二個週二)",
+      "note": "全國停班停課,鼓勵民眾參與各項運動與健走活動。"
+    },
+    {
+      "zh": "開齋節與宰牲節",
+      "month": "伊斯蘭曆",
+      "note": "齋戒月結束與朝聖季的兩大節慶,家庭團聚並互贈禮物。"
+    },
+    {
+      "zh": "卡塔拉傳統帆船節",
+      "month": "11月",
+      "note": "傳統獨桅帆船(dhow)比賽與海洋文化展示活動。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "السلام عليكم",
+        "romanized": "as-salamu alaykum"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "شكرا",
+        "romanized": "shukran"
+      },
+      {
+        "phrase": "再見",
+        "local": "مع السلامة",
+        "romanized": "ma'a as-salama"
+      }
+    ],
+    "money_note": "信用卡與感應支付在杜哈幾乎通行無阻,現金主要用於小型市集攤販與零星小費。",
+    "tipping": "帳單常已加收服務費,額外留 5–10% 現金小費會被視為貼心,司機與行李員給零錢即可。"
+  }
 }

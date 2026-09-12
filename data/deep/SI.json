@@ -50,6 +50,21 @@
       "en": "Alpine ibex",
       "note": "特里格拉夫國家公園高山峭壁上的大角野山羊。",
       "image": "SI-a-ibex.jpg"
+    },
+    {
+      "zh": "歐亞猞猁",
+      "en": "Eurasian lynx",
+      "note": "一九七三年於科切夫森林重新引入,是南部林區的獨行掠食者。"
+    },
+    {
+      "zh": "索查河大理石鱒",
+      "en": "Marble trout",
+      "note": "索查河流域特有的原生鱒魚,體側有大理石紋斑。"
+    },
+    {
+      "zh": "金鵰",
+      "en": "Golden eagle",
+      "note": "朱利安阿爾卑斯山高峰常見的大型猛禽。"
     }
   ],
   "foods": [
@@ -82,6 +97,21 @@
       "en": "Pršut",
       "note": "布拉風乾的鹽漬生火腿,切薄片為前菜。",
       "image": "SI-f-prsut.jpg"
+    },
+    {
+      "zh": "蕎麥玉米糊",
+      "en": "Žganci",
+      "note": "蕎麥或玉米粉煮成的濃稠糊狀主食,配牛奶或油渣。"
+    },
+    {
+      "zh": "酸菜豆子燉湯",
+      "en": "Jota",
+      "note": "酸菜、豆子與馬鈴薯燉煮的冬季家常湯品。"
+    },
+    {
+      "zh": "伊德里亞餃",
+      "en": "Žlikrofi",
+      "note": "馬鈴薯香草餡的小型水餃,產自伊德里亞,受地理標示保護。"
     }
   ],
   "landmarks": [
@@ -131,6 +161,33 @@
         45.5286,
         13.5683
       ]
+    },
+    {
+      "zh": "什科茨揚洞穴",
+      "en": "Škocjan Caves",
+      "note": "列入世界遺產的巨大喀斯特地下峽谷與河流系統。",
+      "latlon": [
+        45.6614,
+        14.0006
+      ]
+    },
+    {
+      "zh": "特里格拉夫山",
+      "en": "Triglav",
+      "note": "全國最高峰,是斯洛維尼亞國旗與國徽上的象徵山峰。",
+      "latlon": [
+        46.3783,
+        13.8368
+      ]
+    },
+    {
+      "zh": "盧比安納龍橋",
+      "en": "Dragon Bridge",
+      "note": "橋頭四尊銅龍雕像,是首都的非官方象徵。",
+      "latlon": [
+        46.0508,
+        14.5089
+      ]
     }
   ],
   "people": [
@@ -158,6 +215,21 @@
       "zh": "塔迪·波加查",
       "en": "Tadej Pogačar",
       "note": "公路自行車選手,多度奪環法賽總冠軍。"
+    },
+    {
+      "zh": "伊凡·康卡爾",
+      "en": "Ivan Cankar",
+      "note": "現代斯洛維尼亞文學代表作家,擅長小說與戲劇。"
+    },
+    {
+      "zh": "赫爾曼·波托奇尼克",
+      "en": "Herman Potočnik",
+      "note": "火箭工程師,一九二八年著作提出環形太空站的構想。"
+    },
+    {
+      "zh": "梅蘭妮亞·川普",
+      "en": "Melania Trump",
+      "note": "出生於斯洛維尼亞的模特兒,曾任美國第一夫人。"
     }
   ],
   "recommended": [
@@ -351,5 +423,66 @@
       "source": "https://commons.wikimedia.org/wiki/File%3APostojna_cave_2008-02-01_interior_02.jpg"
     }
   ],
-  "code": "SI"
+  "code": "SI",
+  "street_food": [
+    {
+      "zh": "布雷克酥皮捲",
+      "en": "Burek",
+      "note": "千層酥皮包肉餡或起司,烘焙坊與街頭小攤都買得到。"
+    },
+    {
+      "zh": "烤栗子",
+      "en": "Pečen kostanj",
+      "note": "秋冬街頭手推車現烤,熱騰騰剝殼即食。"
+    },
+    {
+      "zh": "香腸麵包",
+      "en": "Kranjska klobasa v štruci",
+      "note": "卡尼奧拉香腸夾入麵包,市集攤位的簡便一餐。"
+    },
+    {
+      "zh": "盧比安納開放式廚房市集",
+      "where": "盧比安納週五露天美食市集(Odprta kuhna)、普雷舍倫廣場周邊"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "庫倫特狂歡節",
+      "en": "Kurentovanje",
+      "month": "2月",
+      "note": "普圖伊傳統嘉年華,人們穿毛皮怪獸裝驅趕冬天。"
+    },
+    {
+      "zh": "聖馬丁節",
+      "month": "11月11日",
+      "note": "慶祝新釀葡萄酒正式轉為「酒」,酒莊與餐廳推出特別菜單。"
+    },
+    {
+      "zh": "盧比安納夏季藝術節",
+      "en": "Ljubljana Festival",
+      "month": "7-8月",
+      "note": "首都夏季的音樂、戲劇與舞蹈藝術節。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "Živjo",
+        "romanized": "ZHEEV-yoh"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "Hvala",
+        "romanized": "HVA-la"
+      },
+      {
+        "phrase": "再見",
+        "local": "Nasvidenje",
+        "romanized": "na-SVEE-den-ye"
+      }
+    ],
+    "money_note": "使用歐元,城市店家幾乎都能刷卡,鄉間市集與小型民宿仍以現金較方便。",
+    "tipping": "沒有強制小費文化,餐廳消費後湊整數或加一成表示滿意即可。"
+  }
 }

@@ -49,6 +49,21 @@
       "zh": "金鵰",
       "en": "Golden eagle",
       "note": "山區的頂級猛禽,是斯洛伐克國徽之外常見的象徵鳥。"
+    },
+    {
+      "zh": "白鸛",
+      "en": "White stork",
+      "note": "常在村莊煙囪與電線桿頂築巢,被視為春天到來的象徵。"
+    },
+    {
+      "zh": "歐亞灰狼",
+      "en": "Eurasian grey wolf",
+      "note": "喀爾巴阡山森林中的掠食者,受法律保護但難得一見。"
+    },
+    {
+      "zh": "烏拉爾鴞",
+      "en": "Ural owl",
+      "note": "棲息於原始山毛櫸林的大型森林貓頭鷹。"
     }
   ],
   "foods": [
@@ -80,6 +95,21 @@
       "zh": "馬鈴薯薄餅",
       "en": "Lokše",
       "note": "馬鈴薯麵團烙成的薄餅,可包鵝油、罌粟籽或鵝肝。"
+    },
+    {
+      "zh": "燉牛肚湯",
+      "en": "Držková polievka",
+      "note": "以紅椒調味的濃郁牛肚湯,是傳統的解酒暖胃湯品。"
+    },
+    {
+      "zh": "炸乳酪",
+      "en": "Vyprážaný syr",
+      "note": "裹粉油炸的乳酪排配塔塔醬與薯條,國民酒館菜。"
+    },
+    {
+      "zh": "果醬可麗餅",
+      "en": "Palacinky",
+      "note": "薄煎餅捲果醬、巧克力醬或水果,常見甜點。"
     }
   ],
   "landmarks": [
@@ -131,6 +161,33 @@
         49.0403,
         19.2953
       ]
+    },
+    {
+      "zh": "斯洛伐克天堂國家公園",
+      "en": "Slovenský raj (Slovak Paradise)",
+      "note": "峽谷步道架設鐵梯與棧橋,沿溪穿越瀑布群。",
+      "latlon": [
+        48.9333,
+        20.4167
+      ]
+    },
+    {
+      "zh": "德文城堡",
+      "en": "Devín Castle",
+      "note": "立於多瑙河與摩拉瓦河匯流處崖上的古堡遺址。",
+      "latlon": [
+        48.1775,
+        16.9776
+      ]
+    },
+    {
+      "zh": "多米查洞穴",
+      "en": "Domica Cave",
+      "note": "喀斯特洞穴系統,與匈牙利阿格泰勒克洞穴群共列世界遺產。",
+      "latlon": [
+        48.4394,
+        20.4711
+      ]
     }
   ],
   "people": [
@@ -158,6 +215,21 @@
       "zh": "彼得·薩根",
       "en": "Peter Sagan",
       "note": "公路自行車選手,三度奪世界錦標賽冠軍。"
+    },
+    {
+      "zh": "約瑟夫·穆爾加什",
+      "en": "Jozef Murgaš",
+      "note": "天主教神父兼發明家,二十世紀初在美國研發無線電報技術。"
+    },
+    {
+      "zh": "祖扎娜·查普托娃",
+      "en": "Zuzana Čaputová",
+      "note": "首位女性總統,二〇一九至二〇二四年在任。"
+    },
+    {
+      "zh": "多米尼卡·奇布爾科娃",
+      "en": "Dominika Cibulková",
+      "note": "職業網球選手,二〇一六年奪WTA年終總決賽冠軍。"
     }
   ],
   "recommended": [
@@ -351,5 +423,66 @@
       "source": "https://commons.wikimedia.org/wiki/File%3ABojnice_(Bojnitz)_Castle_(by_Pudelek).jpg"
     }
   ],
-  "code": "SK"
+  "code": "SK",
+  "street_food": [
+    {
+      "zh": "烤香腸",
+      "en": "Klobása",
+      "note": "市集與節慶攤位現烤香腸夾麵包,配芥末醬。"
+    },
+    {
+      "zh": "煙囪捲",
+      "en": "Trdelník",
+      "note": "麵團捲在滾筒上烤,裹糖與核桃粒,布拉提斯拉瓦舊城常見。"
+    },
+    {
+      "zh": "馬鈴薯煎餅",
+      "en": "Zemiakové placky",
+      "note": "磨碎馬鈴薯煎成的鹹香餅,園遊會與市集小吃。"
+    },
+    {
+      "zh": "布拉提斯拉瓦主廣場聖誕市集",
+      "where": "布拉提斯拉瓦舊城主廣場(Hlavné námestie)"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "復活節鞭打與潑水傳統",
+      "en": "Veľkonočná oblievačka",
+      "month": "3-4月(復活節週一)",
+      "note": "男性以柳枝輕拍、潑水祝女性健康美麗,女性回贈彩蛋。"
+    },
+    {
+      "zh": "東部民俗藝術節",
+      "en": "Folklórne slávnosti Východná",
+      "month": "7月",
+      "note": "全國規模最大的傳統服飾與民俗音樂舞蹈節。"
+    },
+    {
+      "zh": "布拉提斯拉瓦聖誕市集",
+      "month": "12月",
+      "note": "主廣場搭起攤位,飄著香料酒與烤栗子的香氣。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "Ahoj / Dobrý deň",
+        "romanized": "AH-hoy / DOB-ree den"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "Ďakujem",
+        "romanized": "DYA-koo-yem"
+      },
+      {
+        "phrase": "再見",
+        "local": "Dovidenia",
+        "romanized": "do-VEE-den-ya"
+      }
+    ],
+    "money_note": "使用歐元,城市商店與餐廳普遍可刷卡,鄉間小店與市集建議準備現金。",
+    "tipping": "餐廳消費後給一成左右小費或湊整數是常見禮貌,並非強制。"
+  }
 }

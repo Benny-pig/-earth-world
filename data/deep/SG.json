@@ -52,6 +52,21 @@
       "en": "Lesser mouse-deer",
       "note": "東南亞最小的偶蹄類,約兔子大小,棲息於次生林。",
       "image": "SG-a-mousedeer.jpg"
+    },
+    {
+      "zh": "水巨蜥",
+      "en": "Water monitor lizard",
+      "note": "常見於運河與濱海灣公園水道邊,體長可逾一公尺仍怕人。"
+    },
+    {
+      "zh": "大狐蝠",
+      "en": "Large flying fox",
+      "note": "黃昏成群飛離烏敏島與雙溪布洛的棲息地覓食果實。"
+    },
+    {
+      "zh": "白胸翡翠",
+      "en": "Collared kingfisher",
+      "note": "城市公園常見的藍綠色鳥類,叫聲響亮好辨識。"
     }
   ],
   "foods": [
@@ -84,6 +99,21 @@
       "en": "Kaya toast",
       "note": "烤麵包夾咖椰醬與冷奶油,配半熟蛋與咖啡烏。",
       "image": "SG-f-kaya.jpg"
+    },
+    {
+      "zh": "印度煎餅",
+      "en": "Roti prata",
+      "note": "印度裔穆斯林傳入的酥脆煎餅,沾咖哩醬,是常見早餐。"
+    },
+    {
+      "zh": "沙嗲",
+      "en": "Satay",
+      "note": "炭烤肉串沾花生醬,配黃瓜洋蔥與馬來粽,夜市經典。"
+    },
+    {
+      "zh": "福建蝦麵",
+      "en": "Hokkien mee",
+      "note": "黃麵米粉以蝦頭高湯燜煮,配蝦仁與豬油渣。"
     }
   ],
   "landmarks": [
@@ -133,6 +163,33 @@
         1.3138,
         103.8159
       ]
+    },
+    {
+      "zh": "牛車水(唐人街)",
+      "en": "Chinatown",
+      "note": "早期華人移民聚居地,廟宇、老店屋與夜市小吃並存。",
+      "latlon": [
+        1.2812,
+        103.8443
+      ]
+    },
+    {
+      "zh": "蘇丹回教堂與甘榜格南",
+      "en": "Sultan Mosque, Kampong Glam",
+      "note": "金頂清真寺與馬來聚落舊區,哈芝巷壁畫與選物店林立。",
+      "latlon": [
+        1.3021,
+        103.859
+      ]
+    },
+    {
+      "zh": "聖淘沙環球影城",
+      "en": "Universal Studios Singapore",
+      "note": "東南亞首座環球影城,是聖淘沙島親子遊的核心景點。",
+      "latlon": [
+        1.254,
+        103.8238
+      ]
     }
   ],
   "people": [
@@ -160,6 +217,21 @@
       "zh": "孫燕姿",
       "en": "Stefanie Sun",
       "note": "華語流行樂天后,二〇〇〇年出道,影響華語歌壇。"
+    },
+    {
+      "zh": "吳作棟",
+      "en": "Goh Chok Tong",
+      "note": "第二任總理(一九九〇至二〇〇四),接續李光耀的治理路線。"
+    },
+    {
+      "zh": "尚達曼",
+      "en": "Tharman Shanmugaratnam",
+      "note": "第九任總統,二〇二三年就任,曾任副總理與財政部長。"
+    },
+    {
+      "zh": "林俊傑",
+      "en": "JJ Lin",
+      "note": "華語流行樂創作歌手,以《江南》《曹操》等作品廣受歡迎。"
     }
   ],
   "recommended": [
@@ -353,5 +425,70 @@
       "source": "https://commons.wikimedia.org/wiki/File%3ASingapore_Merlion-at-Marina-Bay-01.jpg"
     }
   ],
-  "code": "SG"
+  "code": "SG",
+  "street_food": [
+    {
+      "zh": "雲吞麵",
+      "note": "乾拌麵條配叉燒與雲吞,淋辣椒醬與醋,小販中心常見。"
+    },
+    {
+      "zh": "薄餅",
+      "note": "潤餅皮包沙葛絲、蝦仁與花生糖粉,福建與潮州做法略有不同。"
+    },
+    {
+      "zh": "拉茶",
+      "note": "印度風高沖起泡奶茶,嘛嘛檔配煎餅一起點。"
+    },
+    {
+      "zh": "烏打",
+      "note": "香料魚漿以香蕉葉包裹碳烤,鮮香微辣。"
+    },
+    {
+      "zh": "老巴剎、麥士威熟食中心、老機場路熟食中心",
+      "where": "老巴剎、麥士威熟食中心、老機場路熟食中心"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "農曆新年",
+      "month": "農曆正月",
+      "note": "牛車水掛滿燈飾,舞獅表演與年貨市集熱鬧登場。"
+    },
+    {
+      "zh": "屠妖節",
+      "month": "10-11月",
+      "note": "小印度張燈結彩,印度教徒慶祝光明戰勝黑暗。"
+    },
+    {
+      "zh": "開齋節",
+      "month": "伊斯蘭曆10月1日",
+      "note": "芽籠士乃一帶點燈市集,馬來社群開放住家宴客。"
+    },
+    {
+      "zh": "大寶森節",
+      "month": "1-2月",
+      "note": "印度教徒扛卡瓦地徒步遊行至興都廟還願。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "Selamat pagi",
+        "romanized": "se-la-mat pa-gi"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "Terima kasih",
+        "romanized": "te-ri-ma ka-sih"
+      },
+      {
+        "phrase": "你好(華語)",
+        "local": "你好",
+        "romanized": "Nǐ hǎo"
+      }
+    ],
+    "money_note": "PayNow等行動支付與信用卡在城市中極為普及,小販中心與傳統市集仍常備現金。",
+    "tipping": "沒有小費文化,餐廳帳單多已含一成服務費,額外給小費並非必要。"
+  }
 }

@@ -50,6 +50,21 @@
       "en": "Saltwater crocodile",
       "note": "昔日分布沿海與河口,現野生族群稀少。",
       "image": "animals-saltwater-crocodile.jpg"
+    },
+    {
+      "zh": "亞洲水巨蜥",
+      "en": "Asian water monitor",
+      "note": "曼谷倫披尼公園運河邊常見的大型蜥蜴。"
+    },
+    {
+      "zh": "蜂猴",
+      "en": "Sunda slow loris",
+      "note": "夜行性原生靈長類,受保護但常遭非法販售當寵物。"
+    },
+    {
+      "zh": "大犀鳥",
+      "en": "Great hornbill",
+      "note": "分布於考艾等南部與北部雨林保護區的大型鳥類。"
     }
   ],
   "foods": [
@@ -82,6 +97,21 @@
       "en": "Pad kaphrao",
       "note": "絞肉與聖羅勒、辣椒快炒,佐白飯與煎蛋。",
       "image": "foods-pad-kaphrao.jpg"
+    },
+    {
+      "zh": "青木瓜沙拉",
+      "en": "Som tam",
+      "note": "搗製青木瓜絲拌辣椒、魚露與萊姆,源自東北伊森地區。"
+    },
+    {
+      "zh": "咖哩麵",
+      "en": "Khao soi",
+      "note": "清邁名食,椰香咖哩湯配脆麵與軟麵雙重口感。"
+    },
+    {
+      "zh": "泰式奶茶",
+      "en": "Cha yen",
+      "note": "濃紅茶加煉乳與糖倒在碎冰上,色澤橘紅的手搖飲。"
     }
   ],
   "landmarks": [
@@ -134,6 +164,33 @@
         99.703
       ],
       "image": "landmarks-sukhothai.jpg"
+    },
+    {
+      "zh": "清邁雙龍寺",
+      "en": "Wat Phra That Doi Suthep",
+      "note": "素帖山上的金色佛塔寺院,可俯瞰清邁全城。",
+      "latlon": [
+        18.8047,
+        98.9217
+      ]
+    },
+    {
+      "zh": "白廟",
+      "en": "Wat Rong Khun",
+      "note": "清萊當代藝術家設計的純白佛寺,以精細灰泥雕飾聞名。",
+      "latlon": [
+        19.8072,
+        99.755
+      ]
+    },
+    {
+      "zh": "攀牙灣",
+      "en": "Phang Nga Bay",
+      "note": "石灰岩海蝕柱林立的海灣,〇〇七島因龐德電影場景聞名。",
+      "latlon": [
+        8.2833,
+        98.5
+      ]
     }
   ],
   "people": [
@@ -166,6 +223,21 @@
       "en": "Apichatpong Weerasethakul",
       "note": "電影導演,《波米叔叔的前世今生》奪坎城金棕櫚。",
       "image": "people-apichatpong-weerasethakul.jpg"
+    },
+    {
+      "zh": "拉瑪四世(蒙固王)",
+      "en": "King Mongkut",
+      "note": "十九世紀推動早期現代化與對外開放的國王。"
+    },
+    {
+      "zh": "拉瑪十世",
+      "en": "King Vajiralongkorn",
+      "note": "現任泰王,二〇一六年蒲美蓬逝世後繼位。"
+    },
+    {
+      "zh": "播求·班辰",
+      "en": "Buakaw Banchamek",
+      "note": "泰拳選手,國際知名度高,推廣泰拳運動不遺餘力。"
     }
   ],
   "recommended": [
@@ -397,5 +469,75 @@
         "note": "美功鐵道市場火車貼著攤販穿過、丹嫩莎朵水上市場,加上鹽田與椰糖農家,半天就看見庶民泰國。跟團一日遊多但很趕,自己包車可挑清晨人少時段從容拍照。"
       }
     ]
+  },
+  "street_food": [
+    {
+      "zh": "烤豬肉串",
+      "en": "Moo ping",
+      "note": "炭烤醃豬肉串配糯米飯,常見的早餐與宵夜。"
+    },
+    {
+      "zh": "船麵",
+      "en": "Kuay teow reua",
+      "note": "濃郁豬血湯底米粉,昔日在運河船上叫賣得名。"
+    },
+    {
+      "zh": "椰子冰淇淋",
+      "note": "挖空椰殼盛裝,配花生、糯米與煉乳。"
+    },
+    {
+      "zh": "伊森炸雞",
+      "en": "Kai thod",
+      "note": "東北風味醃炸雞,配糯米飯與辣沾醬。"
+    },
+    {
+      "zh": "曼谷洽圖洽週末市集、拉差達夜市、清邁週日夜市",
+      "where": "曼谷洽圖洽週末市集、拉差達夜市、清邁週日夜市"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "水燈節",
+      "en": "Loy Krathong",
+      "month": "11月滿月夜",
+      "note": "將蓮花形水燈放入河流,祈福並送走一年的晦氣。"
+    },
+    {
+      "zh": "佛誕節",
+      "en": "Visakha Bucha",
+      "month": "5月月圓日",
+      "note": "紀念佛陀誕生、成道與涅槃三重要時刻。"
+    },
+    {
+      "zh": "唐人街春節",
+      "month": "農曆正月",
+      "note": "曼谷耀華力路張燈結彩,舞龍舞獅慶祝華人新年。"
+    },
+    {
+      "zh": "宋干節潑水節",
+      "month": "4月",
+      "note": "全國潑水互祝新年,清邁古城的慶祝規模最盛大。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "สวัสดี",
+        "romanized": "Sawasdee (khrap/ka)"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "ขอบคุณ",
+        "romanized": "Khob khun (khrap/ka)"
+      },
+      {
+        "phrase": "再見",
+        "local": "ลาก่อน",
+        "romanized": "La gon"
+      }
+    ],
+    "money_note": "現金在市場與嘟嘟車仍很常見,PromptPay等QR行動支付在城市商店已相當普及。",
+    "tipping": "沒有強制小費文化,但給二十到五十泰銖小費常受歡迎,高檔餐廳可能已加收服務費。"
   }
 }

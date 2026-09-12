@@ -51,6 +51,21 @@
       "en": "Tamaraw",
       "note": "僅分布於民都洛島的小型野牛,數量稀少、極度瀕危。",
       "image": "animals-tamaraw.jpg"
+    },
+    {
+      "zh": "巴拉望孔雀雉",
+      "en": "Palawan peacock-pheasant",
+      "note": "雄鳥開屏時展現藍綠色金屬光澤,僅分布於巴拉望島森林。"
+    },
+    {
+      "zh": "菲律賓鱷",
+      "en": "Philippine crocodile",
+      "note": "體型較小的淡水鱷魚,曾一度僅存數百隻,是復育中的極危物種。"
+    },
+    {
+      "zh": "巨金冠狐蝠",
+      "en": "Giant golden-crowned flying fox",
+      "note": "翼展可達一點七公尺,是世上體型最大的蝙蝠之一。"
     }
   ],
   "foods": [
@@ -83,6 +98,21 @@
       "en": "Pancit",
       "note": "多種炒米粉或麵的統稱,象徵長壽,生日常見。",
       "image": "foods-pancit.jpg"
+    },
+    {
+      "zh": "西西格",
+      "en": "Sisig",
+      "note": "豬頭肉與豬耳切碎煎至焦香,淋檸檬與辣椒,是下酒名菜。"
+    },
+    {
+      "zh": "花生燉牛尾",
+      "en": "Kare-kare",
+      "note": "牛尾與蔬菜以濃稠花生醬燉煮,佐蝦醬提味。"
+    },
+    {
+      "zh": "椰奶米蛋糕",
+      "en": "Bibingka",
+      "note": "香蕉葉墊底烤的米粉椰奶糕,鹹蛋與起司是常見配料。"
     }
   ],
   "landmarks": [
@@ -135,6 +165,33 @@
         120.3869
       ],
       "image": "landmarks-vigan.jpg"
+    },
+    {
+      "zh": "塔阿爾火山",
+      "en": "Taal Volcano",
+      "note": "湖中島上的活火山,是世界最小的活火山之一。",
+      "latlon": [
+        14.0021,
+        120.9932
+      ]
+    },
+    {
+      "zh": "王城區",
+      "en": "Intramuros",
+      "note": "馬尼拉的西班牙殖民舊城牆區,聖地牙哥堡與大教堂皆在其中。",
+      "latlon": [
+        14.5895,
+        120.975
+      ]
+    },
+    {
+      "zh": "土巴塔哈群礁自然公園",
+      "en": "Tubbataha Reefs Natural Park",
+      "note": "蘇祿海中的珊瑚礁保護區,潛水勝地,列世界遺產。",
+      "latlon": [
+        8.85,
+        119.933
+      ]
     }
   ],
   "people": [
@@ -167,6 +224,21 @@
       "en": "Lea Salonga",
       "note": "歌手,首演音樂劇《西貢小姐》金姑娘,並為迪士尼配唱。",
       "image": "people-leasalonga.jpg"
+    },
+    {
+      "zh": "費爾南多·阿莫索羅",
+      "en": "Fernando Amorsolo",
+      "note": "畫家,以描繪鄉村陽光田園景色聞名,人稱「陽光畫家」。"
+    },
+    {
+      "zh": "旺歐德·奧蓋",
+      "en": "Whang-od Oggay",
+      "note": "卡林嘎族傳統手工紋身師,年逾百歲仍持續傳承技藝。"
+    },
+    {
+      "zh": "希迪林·迪亞茲",
+      "en": "Hidilyn Diaz",
+      "note": "舉重選手,二〇二〇東京奧運為菲律賓摘下首面奧運金牌。"
     }
   ],
   "recommended": [
@@ -398,5 +470,75 @@
       "source": "https://commons.wikimedia.org/wiki/File:Lea_salonga_2021_2.jpg"
     }
   ],
-  "code": "PH"
+  "code": "PH",
+  "street_food": [
+    {
+      "zh": "豆花(塔后)",
+      "note": "溫熱豆花淋黑糖蜜與珍珠,街頭挑擔叫賣的傳統早點。",
+      "where": "馬尼拉街頭攤販"
+    },
+    {
+      "zh": "鴨仔蛋",
+      "note": "接近孵化的鴨蛋水煮而成,配鹽與醋,重口味的經典夜市小吃。",
+      "where": "計順市夜市"
+    },
+    {
+      "zh": "烤內臟串",
+      "note": "雞豬內臟醃過炭烤,沾醋辣醬,是下班後的熱門宵夜。",
+      "where": "馬尼拉街邊烤攤"
+    },
+    {
+      "zh": "炸魚丸魚餅",
+      "note": "串成一串油炸,依人數自選沾醬,是校園附近的國民小吃。",
+      "where": "計順市街頭攤車"
+    },
+    {
+      "zh": "香蕉春捲",
+      "note": "香蕉裹糖漿以春捲皮包起油炸,外酥內軟的路邊甜點。",
+      "where": "各地街頭攤販"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "宿霧聖嬰節",
+      "month": "1月",
+      "note": "宿霧盛大的宗教遊行與街舞嘉年華,菲律賓最大節慶之一。"
+    },
+    {
+      "zh": "阿蒂阿蒂漢節",
+      "month": "1月",
+      "note": "卡利博的原住民風彩繪與擊鼓遊行,有「菲律賓狂歡節」之稱。"
+    },
+    {
+      "zh": "帕希亞斯豐收節",
+      "month": "5月",
+      "note": "呂宋盧克班以蔬果與米糕妝點屋舍,感謝豐收的鄉村慶典。"
+    },
+    {
+      "zh": "碧瑤花節",
+      "month": "2月",
+      "note": "山城碧瑤以花車遊行與街舞慶祝春季百花盛開。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "Kumusta",
+        "romanized": "koo-moos-tah"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "Salamat",
+        "romanized": "sah-lah-maht"
+      },
+      {
+        "phrase": "再見",
+        "local": "Paalam",
+        "romanized": "pah-ah-lahm"
+      }
+    ],
+    "money_note": "都市商場與便利商店普遍可刷卡並使用GCash等行動支付,外島與傳統市場仍以現金為主。",
+    "tipping": "餐廳帳單多已含一成服務費,額外留些零錢會受歡迎;司機與導遊給小費也是常見禮貌。"
+  }
 }

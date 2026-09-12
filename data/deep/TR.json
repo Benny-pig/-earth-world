@@ -49,6 +49,21 @@
       "en": "Anatolian brown bear",
       "note": "分布於黑海與東部山區森林的棕熊亞群。",
       "image": "animals-anatolian-bear.jpg"
+    },
+    {
+      "zh": "圖茲湖紅鶴",
+      "en": "Greater flamingo",
+      "note": "圖茲鹽湖夏季聚集數萬隻紅鶴繁殖育雛。"
+    },
+    {
+      "zh": "地中海僧海豹",
+      "en": "Mediterranean monk seal",
+      "note": "世界最瀕危海洋哺乳類之一,愛琴海沿岸偶有蹤跡。"
+    },
+    {
+      "zh": "金豺",
+      "en": "Golden jackal",
+      "note": "安納托利亞平原常見的中型犬科掠食者。"
     }
   ],
   "foods": [
@@ -80,6 +95,21 @@
       "en": "Pide／Lahmacun",
       "note": "船形餅皮鋪餡烤的 pide,與薄脆的肉末薄餅 lahmacun。",
       "image": "foods-pide.jpg"
+    },
+    {
+      "zh": "瑪拉什冰淇淋",
+      "en": "Dondurma",
+      "note": "以蘭莖粉增添彈牙口感的傳統冰淇淋,小販常表演耍冰淇淋招客。"
+    },
+    {
+      "zh": "紅扁豆湯",
+      "en": "Mercimek çorbası",
+      "note": "常見的家常湯品,配檸檬與紅椒油享用。"
+    },
+    {
+      "zh": "茄子鑲肉",
+      "en": "Karnıyarık",
+      "note": "茄子剖開鑲入絞肉番茄餡烤製,家庭料理常見。"
     }
   ],
   "landmarks": [
@@ -131,6 +161,33 @@
         41.0115,
         28.9834
       ]
+    },
+    {
+      "zh": "蘇丹艾哈邁德清真寺(藍色清真寺)",
+      "en": "Blue Mosque",
+      "note": "六座宣禮塔與藍色伊茲尼克磁磚聞名的鄂圖曼清真寺。",
+      "latlon": [
+        41.0054,
+        28.9768
+      ]
+    },
+    {
+      "zh": "大巴札",
+      "en": "Grand Bazaar",
+      "note": "十五世紀建成的有頂市集,數千家店舖是世界最古老的購物商場之一。",
+      "latlon": [
+        41.0106,
+        28.9681
+      ]
+    },
+    {
+      "zh": "尼姆魯特山",
+      "en": "Mount Nemrut",
+      "note": "山頂的巨大石雕頭像陵墓,列入世界遺產。",
+      "latlon": [
+        37.9812,
+        38.7413
+      ]
     }
   ],
   "people": [
@@ -158,6 +215,21 @@
       "zh": "阿齊茲·桑賈爾",
       "en": "Aziz Sancar",
       "note": "分子生物學家,因 DNA 修復研究獲二〇一五年諾貝爾化學獎。"
+    },
+    {
+      "zh": "穆罕默德二世",
+      "en": "Mehmed II (Fatih Sultan Mehmed)",
+      "note": "一四五三年攻陷君士坦丁堡的鄂圖曼蘇丹,人稱「征服者」。"
+    },
+    {
+      "zh": "蘇萊曼一世",
+      "en": "Suleiman the Magnificent",
+      "note": "十六世紀鄂圖曼盛世君主,立法與軍事擴張並重。"
+    },
+    {
+      "zh": "塔爾坎",
+      "en": "Tarkan",
+      "note": "當代最知名的土耳其流行歌手,〈Şımarık〉風靡國際。"
     }
   ],
   "recommended": [
@@ -333,5 +405,78 @@
       "source": "https://commons.wikimedia.org/wiki/File%3AEphesus_Celsus_Library_Fa%C3%A7ade.jpg"
     }
   ],
-  "code": "TR"
+  "code": "TR",
+  "street_food": [
+    {
+      "zh": "芝麻圈麵包",
+      "en": "Simit",
+      "note": "街頭巷尾隨處可見的芝麻脆圈麵包,配紅茶當早餐。"
+    },
+    {
+      "zh": "烤鯖魚三明治",
+      "en": "Balık ekmek",
+      "note": "加拉達橋、埃米諾努碼頭邊船上現烤鯖魚夾麵包。"
+    },
+    {
+      "zh": "淡菜鑲飯",
+      "en": "Midye dolma",
+      "note": "淡菜殼裡塞香料飯,路邊攤現開現吃。"
+    },
+    {
+      "zh": "烤栗子",
+      "en": "Kestane kebabı",
+      "note": "冬季街頭手推車現烤熱栗子。"
+    },
+    {
+      "zh": "伊斯坦堡加拉達橋、伊斯提克拉爾街、埃米諾努碼頭",
+      "where": "伊斯坦堡加拉達橋、伊斯提克拉爾街、埃米諾努碼頭"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "開齋節",
+      "en": "Ramazan Bayramı",
+      "month": "伊斯蘭曆",
+      "note": "齋戒月結束後全家團聚、走親訪友互贈糖果。"
+    },
+    {
+      "zh": "古爾邦節",
+      "en": "Kurban Bayramı",
+      "month": "伊斯蘭曆",
+      "note": "宰牲節,家庭分享肉品予親友與貧困者。"
+    },
+    {
+      "zh": "梅夫拉那紀念日",
+      "en": "Şeb-i Arus",
+      "month": "12月17日",
+      "note": "孔亞紀念魯米逝世,舉行旋轉舞儀式。"
+    },
+    {
+      "zh": "共和國紀念日",
+      "en": "Cumhuriyet Bayramı",
+      "month": "10月29日",
+      "note": "慶祝一九二三年土耳其共和國成立。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "Merhaba",
+        "romanized": "mer-ha-BA"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "Teşekkür ederim",
+        "romanized": "te-shek-KUR ede-rim"
+      },
+      {
+        "phrase": "再見",
+        "local": "Hoşça kal",
+        "romanized": "hosh-CHA kal"
+      }
+    ],
+    "money_note": "城市普遍可刷卡,巴札與小城鎮現金較方便;里拉匯率波動大,建議少量多次兌換。",
+    "tipping": "餐廳習慣給百分之五到十小費(bahşiş),計程車車資常湊整數。"
+  }
 }

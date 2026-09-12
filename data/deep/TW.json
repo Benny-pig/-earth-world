@@ -53,6 +53,21 @@
       "en": "Formosan landlocked salmon",
       "note": "冰河孑遺的陸封型鮭魚,主要棲息於雪山山脈的七家灣溪。",
       "image": "animals-formosan-landlocked-salmon.jpg"
+    },
+    {
+      "zh": "石虎",
+      "en": "Formosan leopard cat",
+      "note": "瀕危的原生野貓,主要分布於苗栗一帶的淺山地區。"
+    },
+    {
+      "zh": "藍腹鷴",
+      "en": "Swinhoe's pheasant",
+      "note": "特有種雉雞,雄鳥藍黑羽色搭配鮮紅肉垂。"
+    },
+    {
+      "zh": "大冠鷲",
+      "en": "Crested serpent eagle",
+      "note": "低海拔常見猛禽,盤旋鳴叫聲極具辨識度。"
     }
   ],
   "foods": [
@@ -85,6 +100,21 @@
       "en": "Oyster omelette",
       "note": "鮮蚵、蛋與番薯粉漿煎成,淋上甜鹹醬料,是夜市經典。",
       "image": "foods-oyster-omelette.jpg"
+    },
+    {
+      "zh": "臭豆腐",
+      "en": "Stinky tofu",
+      "note": "發酵豆腐油炸或清蒸,氣味濃烈卻是夜市人氣王。"
+    },
+    {
+      "zh": "鹽酥雞",
+      "en": "Salt-and-pepper fried chicken",
+      "note": "現炸雞塊配九層塔與胡椒鹽,宵夜首選。"
+    },
+    {
+      "zh": "刈包",
+      "en": "Gua bao",
+      "note": "白饅頭夾滷五花肉、酸菜與花生粉,有「台灣漢堡」之稱。"
     }
   ],
   "landmarks": [
@@ -137,6 +167,33 @@
         121.5485
       ],
       "image": "landmarks-national-palace-museum.jpg"
+    },
+    {
+      "zh": "九份老街",
+      "en": "Jiufen Old Street",
+      "note": "山城茶樓與紅燈籠階梯,以懷舊氛圍聞名的觀光聚落。",
+      "latlon": [
+        25.1097,
+        121.8447
+      ]
+    },
+    {
+      "zh": "野柳地質公園",
+      "en": "Yehliu Geopark",
+      "note": "海蝕蕈狀岩地形,女王頭是招牌景觀。",
+      "latlon": [
+        25.2058,
+        121.6897
+      ]
+    },
+    {
+      "zh": "墾丁國家公園",
+      "en": "Kenting National Park",
+      "note": "臺灣最南端的珊瑚礁海岸與熱帶風情度假區。",
+      "latlon": [
+        21.9483,
+        120.7972
+      ]
     }
   ],
   "people": [
@@ -169,6 +226,21 @@
       "en": "Hou Hsiao-hsien",
       "note": "臺灣新電影代表導演,《悲情城市》獲威尼斯影展金獅獎。",
       "image": "people-hou-hsiao-hsien.jpg"
+    },
+    {
+      "zh": "蔣渭水",
+      "en": "Chiang Wei-shui",
+      "note": "日治時期醫師與社會運動者,推動台灣文化協會與議會設置請願運動。"
+    },
+    {
+      "zh": "陳樹菊",
+      "en": "Chen Shu-chu",
+      "note": "台東菜販,將畢生積蓄捐助教育與孤兒院,獲《時代》雜誌百大影響力人物。"
+    },
+    {
+      "zh": "王建民",
+      "en": "Wang Chien-ming",
+      "note": "旅美職棒投手,二〇〇六、〇七年連兩季奪十九勝,美聯前段班先發。"
     }
   ],
   "recommended": [
@@ -400,5 +472,71 @@
         "note": "四到六月夜裡海面泛藍光,搭配戰地坑道、閩東石屋聚落與芹壁村。船班與航班受風浪、濃霧影響大,行程要多留一到兩天備援。"
       }
     ]
+  },
+  "street_food": [
+    {
+      "zh": "大腸包小腸",
+      "note": "糯米腸夾烤香腸,再配酸菜與蒜末。"
+    },
+    {
+      "zh": "胡椒餅",
+      "en": "Hu jiao bing",
+      "note": "桶爐現烤的黑胡椒肉餡燒餅,饒河街夜市招牌。"
+    },
+    {
+      "zh": "蚵仔麵線",
+      "note": "濃稠麵線羹加蚵仔或大腸,街邊小吃常備。"
+    },
+    {
+      "zh": "棺材板",
+      "note": "台南名物,炸吐司挖空填入濃湯,造型似棺材而得名。"
+    },
+    {
+      "zh": "士林夜市、饒河街觀光夜市、台南花園夜市",
+      "where": "士林夜市、饒河街觀光夜市、台南花園夜市"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "農曆新年",
+      "month": "農曆正月",
+      "note": "全台圍爐、發紅包、逛年貨大街。"
+    },
+    {
+      "zh": "平溪天燈節",
+      "month": "農曆正月十五前後",
+      "note": "寫下願望的天燈點亮夜空,是元宵節代表活動。"
+    },
+    {
+      "zh": "大甲媽祖遶境",
+      "month": "農曆三月",
+      "note": "長達九天八夜的徒步進香隊伍,信眾隨香逾百萬人次。"
+    },
+    {
+      "zh": "中元普渡",
+      "month": "農曆七月",
+      "note": "祭拜孤魂與放水燈的傳統習俗。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "你好",
+        "romanized": "Nǐ hǎo"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "謝謝",
+        "romanized": "Xièxiè"
+      },
+      {
+        "phrase": "再見",
+        "local": "掰掰/再見",
+        "romanized": "Bàibài / Zàijiàn"
+      }
+    ],
+    "money_note": "悠遊卡與行動支付(LINE Pay、街口支付等)普及,但夜市與小吃店仍以現金為主。",
+    "tipping": "沒有強制小費文化,餐廳帳單常已內含一成服務費,計程車與小吃無需額外給小費。"
   }
 }

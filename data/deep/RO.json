@@ -50,6 +50,21 @@
       "en": "Dalmatian pelican",
       "note": "多瑙河三角洲聚集歐洲最大的鵜鶘繁殖群。",
       "image": "animals-pelican.jpg"
+    },
+    {
+      "zh": "歐洲岩羚羊",
+      "en": "Chamois",
+      "note": "棲息喀爾巴阡高山峭壁,擅長在陡坡間跳躍攀爬。"
+    },
+    {
+      "zh": "歐亞雕鴞",
+      "en": "Eurasian eagle-owl",
+      "note": "體型最大的貓頭鷹之一,夜間於森林與峽谷發出低沉鳴叫。"
+    },
+    {
+      "zh": "多瑙河歐鰉",
+      "en": "Beluga sturgeon",
+      "note": "世界最大的淡水洄游魚類之一,溯多瑙河產卵,數量稀少。"
     }
   ],
   "foods": [
@@ -82,6 +97,21 @@
       "en": "Țuică",
       "note": "以李子蒸餾的烈酒,鄉間自釀,常在餐前飲用。",
       "image": "foods-tuica.jpg"
+    },
+    {
+      "zh": "起司炸糰",
+      "en": "Papanași",
+      "note": "起司麵團炸或水煮成圓餅,淋酸奶油與果醬,經典甜點。"
+    },
+    {
+      "zh": "烤蔬菜醬",
+      "en": "Zacuscă",
+      "note": "烤茄子甜椒與番茄慢炒成醬,秋天大量醃製過冬。"
+    },
+    {
+      "zh": "聖誕甜麵包",
+      "en": "Cozonac",
+      "note": "捲入核桃或可可餡的甜麵包卷,是聖誕與復活節的應景點心。"
     }
   ],
   "landmarks": [
@@ -134,6 +164,33 @@
         24.7925
       ],
       "image": "landmarks-sighisoara.jpg"
+    },
+    {
+      "zh": "多瑙河三角洲",
+      "en": "Danube Delta",
+      "note": "歐洲最大濕地之一,蘆葦水道間棲息數百種鳥類,列世界遺產。",
+      "latlon": [
+        45.1547,
+        29.725
+      ]
+    },
+    {
+      "zh": "圖爾達鹽礦",
+      "en": "Turda Salt Mine",
+      "note": "改建成地下遊樂場的百年鹽礦坑,設有摩天輪與划船湖。",
+      "latlon": [
+        46.5904,
+        23.7871
+      ]
+    },
+    {
+      "zh": "匈雅提城堡",
+      "en": "Corvin Castle",
+      "note": "外西凡尼亞規模最大的哥德式城堡,護城河環繞氣勢雄偉。",
+      "latlon": [
+        45.7489,
+        22.3903
+      ]
     }
   ],
   "people": [
@@ -166,6 +223,21 @@
       "en": "Elie Wiesel",
       "note": "生於錫蓋特的猶太作家,大屠殺見證者,獲諾貝爾和平獎。",
       "image": "people-wiesel.jpg"
+    },
+    {
+      "zh": "亨利·科安達",
+      "en": "Henri Coandă",
+      "note": "航空工程師,發明早期噴射推進飛機並發現「科安達效應」。"
+    },
+    {
+      "zh": "西蒙娜·哈勒普",
+      "en": "Simona Halep",
+      "note": "網球選手,曾登世界球后寶座,拿下法網與溫網冠軍。"
+    },
+    {
+      "zh": "米爾恰·埃里亞德",
+      "en": "Mircea Eliade",
+      "note": "宗教史學者與小說家,比較宗教研究的重要奠基者。"
     }
   ],
   "recommended": [
@@ -397,5 +469,70 @@
       "source": "https://commons.wikimedia.org/wiki/File%3A5.2.10ElieWieselByDavidShankbone.jpg"
     }
   ],
-  "code": "RO"
+  "code": "RO",
+  "street_food": [
+    {
+      "zh": "羅馬尼亞扭結麵包",
+      "note": "灑鹽或罌粟籽的圓環麵包,街頭小販現烤現賣。",
+      "where": "布加勒斯特地鐵站周邊"
+    },
+    {
+      "zh": "炸甜甜圈",
+      "note": "撒糖粉的油炸麵團球,市集與遊樂場常見的甜點攤。",
+      "where": "各地市集與遊樂園"
+    },
+    {
+      "zh": "酥皮餡餅",
+      "note": "起司、高麗菜或櫻桃餡的酥皮捲,加油站與小攤都買得到。",
+      "where": "公路休息站與街頭攤位"
+    },
+    {
+      "zh": "炸扁麵包夾料",
+      "note": "炸麵餅夾酸奶油、起司與蒔蘿,源自匈牙利影響的小吃。",
+      "where": "外西凡尼亞市集攤位"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "春天信物節",
+      "month": "3月1日",
+      "note": "親友互贈紅白線繩小飾物,象徵迎接春天與好運。"
+    },
+    {
+      "zh": "仲夏聖約翰節",
+      "month": "6月",
+      "note": "鄉間點篝火、採集藥草花環,慶祝夏至的古老傳統。"
+    },
+    {
+      "zh": "聖誕市集",
+      "month": "12月",
+      "note": "錫比烏、布加勒斯特等城市廣場搭起木屋,賣香料酒與手工藝品。"
+    },
+    {
+      "zh": "喬治·埃內斯庫音樂節",
+      "month": "9月(雙年)",
+      "note": "以作曲家命名的國際古典音樂節,雲集世界頂尖樂團。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "Bună ziua",
+        "romanized": "boo-nuh zee-wah"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "Mulțumesc",
+        "romanized": "mool-tzoo-mesk"
+      },
+      {
+        "phrase": "再見",
+        "local": "La revedere",
+        "romanized": "lah reh-veh-deh-reh"
+      }
+    ],
+    "money_note": "羅馬尼亞使用列伊而非歐元,城市商店餐廳普遍可刷卡,鄉村市集與小吃攤仍以現金為主。",
+    "tipping": "餐廳小費約 10%,帳單通常不含服務費,直接以現金留給服務生較受歡迎。"
+  }
 }

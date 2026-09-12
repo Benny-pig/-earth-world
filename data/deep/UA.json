@@ -49,6 +49,21 @@
       "en": "Przewalski's horse",
       "note": "阿斯卡尼亞-諾瓦保護區與車諾比隔離區皆有野放族群。",
       "image": "animals-przewalski-horse.jpg"
+    },
+    {
+      "zh": "大鴇",
+      "en": "Great bustard",
+      "note": "烏克蘭草原上現存最重的飛行鳥類之一,因棲地流失數量減少。"
+    },
+    {
+      "zh": "黑海寬吻海豚",
+      "en": "Black Sea bottlenose dolphin",
+      "note": "黑海沿岸常見的海豚亞種,敖德薩一帶偶可見蹤。"
+    },
+    {
+      "zh": "歐亞猞猁",
+      "en": "Eurasian lynx",
+      "note": "喀爾巴阡山森林中的獨行貓科掠食者。"
     }
   ],
   "foods": [
@@ -79,6 +94,21 @@
       "zh": "基輔炸雞捲",
       "en": "Chicken Kyiv",
       "note": "雞胸肉包裹香草奶油後裹粉油炸,切開流出金黃奶油。"
+    },
+    {
+      "zh": "蜂蜜千層蛋糕",
+      "en": "Medovik",
+      "note": "多層蜂蜜海綿蛋糕夾酸奶油餡,節慶場合常見。"
+    },
+    {
+      "zh": "馬鈴薯煎餅",
+      "en": "Deruny",
+      "note": "磨碎馬鈴薯煎成金黃薄餅,配酸奶油食用。"
+    },
+    {
+      "zh": "蕎麥粥",
+      "en": "Kasha (Гречка)",
+      "note": "蕎麥煮成的家常主食,配奶油或肉類燉菜。"
     }
   ],
   "landmarks": [
@@ -130,6 +160,33 @@
         30.7417
       ],
       "image": "landmarks-odesa-stairs.jpg"
+    },
+    {
+      "zh": "獨立廣場",
+      "en": "Maidan Nezalezhnosti",
+      "note": "基輔市中心廣場,近年重大政治事件的核心舞台。",
+      "latlon": [
+        50.4501,
+        30.5234
+      ]
+    },
+    {
+      "zh": "聖米迦勒金頂修道院",
+      "en": "St. Michael's Golden-Domed Monastery",
+      "note": "金色圓頂的東正教修道院,現存建築為二十世紀重建。",
+      "latlon": [
+        50.4592,
+        30.5156
+      ]
+    },
+    {
+      "zh": "霍京城堡",
+      "en": "Khotyn Fortress",
+      "note": "德涅斯特河畔的中世紀要塞,曾多次易主。",
+      "latlon": [
+        48.5136,
+        26.4936
+      ]
     }
   ],
   "people": [
@@ -158,6 +215,21 @@
       "zh": "安德烈·舍甫琴科",
       "en": "Andriy Shevchenko",
       "note": "足球前鋒,二〇〇四年金球獎得主,後任烏克蘭國家隊教練。"
+    },
+    {
+      "zh": "列西亞·烏克蘭卡",
+      "en": "Lesya Ukrainka",
+      "note": "十九世紀末女詩人與劇作家,烏克蘭文學代表人物之一。"
+    },
+    {
+      "zh": "謝爾希·科羅廖夫",
+      "en": "Sergei Korolev",
+      "note": "生於日托米爾的火箭工程師,主導蘇聯太空計畫發射史普尼克號。"
+    },
+    {
+      "zh": "弗拉基米爾·澤倫斯基",
+      "en": "Volodymyr Zelensky",
+      "note": "現任總統,原為喜劇演員,二〇二二年俄羅斯入侵後領導戰時政府。"
     }
   ],
   "recommended": [
@@ -328,5 +400,77 @@
       "source": "https://commons.wikimedia.org/wiki/File%3ATaras_Shevchenko_selfportrait_oil_1840.jpg"
     }
   ],
-  "code": "UA"
+  "code": "UA",
+  "street_food": [
+    {
+      "zh": "炸餡餅",
+      "en": "Pyrizhky",
+      "note": "烤或炸的包餡小麵包,內餡從馬鈴薯到櫻桃都有。"
+    },
+    {
+      "zh": "格瓦斯",
+      "en": "Kvass",
+      "note": "黑麥麵包發酵的微氣泡飲料,夏日街頭桶裝現賣。"
+    },
+    {
+      "zh": "葵花籽",
+      "en": "Nasinnya",
+      "note": "街頭巷尾常見的零嘴,常見人邊走邊嗑。"
+    },
+    {
+      "zh": "麵包圈",
+      "en": "Bubliki",
+      "note": "表面撒芝麻或罌粟籽的硬麵包圈,配茶當點心。"
+    },
+    {
+      "zh": "基輔安德烈斜坡市集、利維夫市集廣場周邊攤販",
+      "where": "基輔安德烈斜坡市集、利維夫市集廣場周邊攤販"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "復活節",
+      "en": "Velykden",
+      "month": "東正教曆3-5月間",
+      "note": "傳統彩繪蛋(писанка)是重要工藝與祝福象徵。"
+    },
+    {
+      "zh": "伊凡·庫帕拉節",
+      "en": "Ivana Kupala",
+      "month": "6月6-7日",
+      "note": "青年編花環、跳火堆的仲夏民俗節。"
+    },
+    {
+      "zh": "獨立日",
+      "en": "Den Nezalezhnosti",
+      "month": "8月24日",
+      "note": "紀念一九九一年脫離蘇聯獨立。"
+    },
+    {
+      "zh": "東正教聖誕節",
+      "month": "1月7日",
+      "note": "依儒略曆慶祝,家族團聚共享十二道無肉菜餚。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "Привіт",
+        "romanized": "Pryvit"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "Дякую",
+        "romanized": "Dyakuyu"
+      },
+      {
+        "phrase": "再見",
+        "local": "До побачення",
+        "romanized": "Do pobachennya"
+      }
+    ],
+    "money_note": "城市多可刷卡與行動支付,但戰時部分地區電力與網路不穩,建議隨身備妥現金。",
+    "tipping": "沒有強制小費傳統,城市餐廳給百分之五到十漸成常態,但非必要。"
+  }
 }

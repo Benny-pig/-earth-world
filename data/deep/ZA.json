@@ -54,6 +54,21 @@
       "en": "African penguin",
       "note": "在開普半島的巨石灘等地上岸築巢,是非洲唯一的野生企鵝。",
       "image": "ZA-a-penguin.jpg"
+    },
+    {
+      "zh": "花豹",
+      "en": "Leopard",
+      "note": "非洲五霸中最難得一見的成員,擅長爬樹藏匿獵物。"
+    },
+    {
+      "zh": "長頸鹿",
+      "en": "Giraffe",
+      "note": "陸上最高的動物,克留格爾等保護區常見的草原代表物種。"
+    },
+    {
+      "zh": "大白鯊",
+      "en": "Great white shark",
+      "note": "甘斯拜等外海是著名的鯊魚籠潛點。"
     }
   ],
   "foods": [
@@ -85,6 +100,21 @@
       "en": "Bunny chow",
       "note": "德班發源,將半條吐司挖空、填入咖哩,是印度裔勞工的平價午餐。",
       "image": "ZA-f-bunny.jpg"
+    },
+    {
+      "zh": "香腸卷",
+      "en": "Boerewors roll",
+      "note": "螺旋狀香料牛豬混合香腸,炭烤後夾麵包,是炭烤聚會的靈魂。"
+    },
+    {
+      "zh": "玉米豆粥",
+      "en": "Umngqusho",
+      "note": "玉米粒與豆子燉煮的科薩傳統主食,曼德拉最愛的家鄉菜之一。"
+    },
+    {
+      "zh": "馬爾瓦布丁",
+      "en": "Malva pudding",
+      "note": "杏桃海綿蛋糕淋熱奶油醬,開普馬來裔傳入的經典甜點。"
     }
   ],
   "landmarks": [
@@ -135,6 +165,33 @@
         -24.5833,
         30.8
       ]
+    },
+    {
+      "zh": "巨石灘企鵝保護區",
+      "en": "Boulders Beach",
+      "note": "開普敦近郊可近距離觀賞非洲企鵝上岸築巢的沙灘。",
+      "latlon": [
+        -34.1969,
+        18.4507
+      ]
+    },
+    {
+      "zh": "種族隔離博物館",
+      "en": "Apartheid Museum",
+      "note": "約翰尼斯堡的歷史博物館,完整呈現種族隔離制度始末。",
+      "latlon": [
+        -26.2354,
+        28.0087
+      ]
+    },
+    {
+      "zh": "龍山山脈",
+      "en": "Drakensberg Mountains",
+      "note": "誇祖魯-納塔爾與賴索托邊界的高山屏障,列入世界遺產。",
+      "latlon": [
+        -28.75,
+        28.9167
+      ]
     }
   ],
   "people": [
@@ -162,6 +219,21 @@
       "zh": "娜汀·葛蒂瑪",
       "en": "Nadine Gordimer",
       "note": "小說家,作品刻畫種族隔離下的社會,一九九一年獲諾貝爾文學獎。"
+    },
+    {
+      "zh": "J·R·R·托爾金",
+      "en": "J.R.R. Tolkien",
+      "note": "出生於南非布隆泉的英國作家,著有《魔戒》三部曲。"
+    },
+    {
+      "zh": "特雷弗·諾亞",
+      "en": "Trevor Noah",
+      "note": "喜劇演員,曾主持美國《每日秀》,以混血成長經歷聞名。"
+    },
+    {
+      "zh": "伊隆·馬斯克",
+      "en": "Elon Musk",
+      "note": "生於普利托利亞的企業家,創辦特斯拉與SpaceX等公司。"
     }
   ],
   "recommended": [
@@ -355,5 +427,76 @@
       "source": "https://commons.wikimedia.org/wiki/File:Kruger_National_Park_(ZA),_Landschaft_--_2024_--_0043.jpg"
     }
   ],
-  "code": "ZA"
+  "code": "ZA",
+  "street_food": [
+    {
+      "zh": "烤玉米",
+      "en": "Mielie",
+      "note": "街頭巷尾常見的碳烤玉米棒,刷奶油與辣鹽粉。"
+    },
+    {
+      "zh": "炸麵包",
+      "en": "Vetkoek",
+      "note": "炸至金黃膨鬆的麵團,夾絞肉或果醬內餡。"
+    },
+    {
+      "zh": "咖哩角",
+      "en": "Samosa",
+      "note": "印度裔移民帶來的三角酥炸餃,德班街頭尤其常見。"
+    },
+    {
+      "zh": "加茨比三明治",
+      "en": "Gatsby",
+      "note": "開普敦長條法棍夾滿薯條、肉排與辣醬,份量巨大常多人分食。"
+    },
+    {
+      "zh": "德班街頭攤販、開普敦邦昆山周邊、約堡Market on Main市集",
+      "where": "德班街頭攤販、開普敦邦昆山周邊、約堡Market on Main市集"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "自由日",
+      "month": "4月27日",
+      "note": "紀念一九九四年首次不分種族大選。"
+    },
+    {
+      "zh": "開普敦明斯特爾嘉年華",
+      "en": "Kaapse Klopse",
+      "month": "1月2日",
+      "note": "色彩繽紛的踩街遊行慶祝新年。"
+    },
+    {
+      "zh": "遺產日(全國炭烤日)",
+      "en": "National Braai Day",
+      "month": "9月24日",
+      "note": "全國以炭烤聚會慶祝多元文化遺產。"
+    },
+    {
+      "zh": "婦女節",
+      "month": "8月9日",
+      "note": "紀念一九五六年女性遊行抗議通行證法。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "Sawubona",
+        "romanized": "sah-woo-BOH-nah"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "Ngiyabonga / Dankie",
+        "romanized": "ngi-ya-BON-ga / DAHN-kee"
+      },
+      {
+        "phrase": "再見",
+        "local": "Hamba kahle",
+        "romanized": "HAHM-bah KAH-shleh"
+      }
+    ],
+    "money_note": "信用卡在城市與商場普及,但治安考量下建議少帶現金,鄉間市集與小費需準備零錢。",
+    "tipping": "餐廳小費約消費金額的百分之十到十五,加油站服務員與飯店行李員也習慣給予小費。"
+  }
 }

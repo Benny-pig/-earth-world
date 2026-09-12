@@ -50,6 +50,21 @@
       "en": "American alligator",
       "note": "分布於東南部濕地,是佛羅里達與路易斯安那的代表物種。",
       "image": "animals-american-alligator.jpg"
+    },
+    {
+      "zh": "帝王蝶",
+      "en": "Monarch butterfly",
+      "note": "每年秋季大規模遷徙至墨西哥過冬的著名蝴蝶。"
+    },
+    {
+      "zh": "加州禿鷹",
+      "en": "California condor",
+      "note": "北美最大的陸生鳥類,曾瀕臨滅絕,靠人工復育計畫存續。"
+    },
+    {
+      "zh": "麋鹿",
+      "en": "Elk",
+      "note": "洛磯山脈與黃石地區常見的大型鹿科動物,秋季求偶吼叫聲響徹山谷。"
     }
   ],
   "foods": [
@@ -82,6 +97,21 @@
       "en": "Roast turkey",
       "note": "感恩節與耶誕節的主菜,整隻烤製並佐以肉汁與填料。",
       "image": "foods-roast-turkey.jpg"
+    },
+    {
+      "zh": "南方炸雞",
+      "en": "Southern fried chicken",
+      "note": "裹粉油炸至酥脆的雞肉,美國南方家常與速食代表菜。"
+    },
+    {
+      "zh": "紐約起司蛋糕",
+      "en": "New York cheesecake",
+      "note": "濃郁奶油乳酪烤製的厚實蛋糕,常配果醬或原味享用。"
+    },
+    {
+      "zh": "什錦秋葵飯",
+      "en": "Gumbo",
+      "note": "路易斯安那州的燉煮料理,融合法式、非洲與美洲原住民烹飪傳統。"
     }
   ],
   "landmarks": [
@@ -134,6 +164,33 @@
         -103.4591
       ],
       "image": "landmarks-mount-rushmore.jpg"
+    },
+    {
+      "zh": "黃石國家公園",
+      "en": "Yellowstone National Park",
+      "note": "世界首座國家公園,以間歇泉「老忠實」與地熱景觀聞名。",
+      "latlon": [
+        44.4605,
+        -110.8281
+      ]
+    },
+    {
+      "zh": "時代廣場",
+      "en": "Times Square",
+      "note": "紐約曼哈頓的霓虹廣告與百老匯劇院核心地帶。",
+      "latlon": [
+        40.758,
+        -73.9855
+      ]
+    },
+    {
+      "zh": "華特迪士尼世界",
+      "en": "Walt Disney World",
+      "note": "佛羅里達州奧蘭多的大型主題樂園度假區,全球遊客量最高的度假村之一。",
+      "latlon": [
+        28.3852,
+        -81.5639
+      ]
     }
   ],
   "people": [
@@ -166,6 +223,21 @@
       "en": "Mark Twain",
       "note": "作家,《頑童歷險記》被視為美國文學的奠基之作。",
       "image": "people-mark-twain.jpg"
+    },
+    {
+      "zh": "史蒂夫·賈伯斯",
+      "en": "Steve Jobs",
+      "note": "蘋果公司共同創辦人,重新定義個人電腦與智慧型手機產業。"
+    },
+    {
+      "zh": "麥可·喬丹",
+      "en": "Michael Jordan",
+      "note": "籃球史上最具代表性的球星之一,率公牛隊六度奪NBA總冠軍。"
+    },
+    {
+      "zh": "歐普拉·溫芙蕾",
+      "en": "Oprah Winfrey",
+      "note": "脫口秀主持人與媒體大亨,美國文化與慈善界具影響力人物。"
     }
   ],
   "recommended": [
@@ -397,5 +469,76 @@
         "note": "一趟自駕收齊拱門、尖塔與深谷等五種截然不同的紅岩地貌,人潮比大峽谷少。夏季正午酷熱且補水點少,熱門步道要早出發並帶足飲水。"
       }
     ]
+  },
+  "street_food": [
+    {
+      "zh": "椒鹽脆餅",
+      "en": "Soft pretzel",
+      "note": "紐約街頭餐車經典,配黃芥末醬。"
+    },
+    {
+      "zh": "費城起司牛肉堡",
+      "en": "Philly cheesesteak",
+      "note": "費城街頭窗口現煎牛肉片夾起司長條麵包。"
+    },
+    {
+      "zh": "墨西哥街頭塔可",
+      "en": "Street tacos",
+      "note": "洛杉磯餐車文化代表,薄玉米餅包烤肉配香菜洋蔥。"
+    },
+    {
+      "zh": "紐奧良貝奈特餅",
+      "en": "Beignets",
+      "note": "撒滿糖粉的方形炸麵團,法國區咖啡館的招牌點心。"
+    },
+    {
+      "zh": "紐約街頭餐車、費城南街、洛杉磯街頭餐車、紐奧良法國區",
+      "where": "紐約街頭餐車、費城南街、洛杉磯街頭餐車、紐奧良法國區"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "獨立紀念日",
+      "month": "7月4日",
+      "note": "全國放煙火慶祝一七七六年獨立宣言。"
+    },
+    {
+      "zh": "感恩節遊行",
+      "en": "Macy's Thanksgiving Day Parade",
+      "month": "11月第四個週四",
+      "note": "紐約梅西百貨遊行揭開年末假期序幕。"
+    },
+    {
+      "zh": "紐奧良狂歡節",
+      "en": "Mardi Gras",
+      "month": "2-3月間",
+      "note": "紐奧良街頭遊行與拋擲彩珠的嘉年華。"
+    },
+    {
+      "zh": "萬聖節",
+      "month": "10月31日",
+      "note": "孩童變裝挨家挨戶要糖果,家家戶戶佈置南瓜燈。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "Hello / Hi",
+        "romanized": "heh-LOH"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "Thank you",
+        "romanized": "THANGK-yoo"
+      },
+      {
+        "phrase": "再見",
+        "local": "Goodbye / Bye",
+        "romanized": "bye"
+      }
+    ],
+    "money_note": "信用卡與行動支付(Apple Pay、Google Pay)非常普及,現金使用率低,部分小商店甚至不收現金。",
+    "tipping": "小費文化根深蒂固,餐廳一般給消費金額的百分之十五到二十,計程車與飯店服務也習慣給小費。"
   }
 }

@@ -49,6 +49,21 @@
       "en": "Konik",
       "note": "外形近似已滅絕野馬的灰色矮種馬,用於保留區的自然放牧。",
       "image": "animals-konik.jpg"
+    },
+    {
+      "zh": "白尾海鵰",
+      "en": "White-tailed eagle",
+      "note": "波蘭國徽上老鷹的原型物種,棲息湖泊與河口濕地。"
+    },
+    {
+      "zh": "歐洲河狸",
+      "en": "Eurasian beaver",
+      "note": "曾一度絕跡,經復育計畫後河川與濕地重新常見其身影。"
+    },
+    {
+      "zh": "塔特拉牧羊犬",
+      "en": "Polish Tatra Sheepdog",
+      "note": "白色長毛大型犬,原用於塔特拉山區看護羊群。"
     }
   ],
   "foods": [
@@ -81,6 +96,21 @@
       "en": "Gołąbki",
       "note": "高麗菜葉包肉與米,淋番茄醬汁燜煮。",
       "image": "foods-golabki.jpg"
+    },
+    {
+      "zh": "煙燻羊乳酪",
+      "en": "Oscypek",
+      "note": "塔特拉山區傳統煙燻硬質羊乳酪,表面壓有花紋。"
+    },
+    {
+      "zh": "馬鈴薯煎餅",
+      "en": "Placki ziemniaczane",
+      "note": "刨絲馬鈴薯煎成金黃餅,配酸奶油或糖漿皆宜。"
+    },
+    {
+      "zh": "波蘭起司蛋糕",
+      "en": "Sernik",
+      "note": "以特弗蘿乳酪製成的綿密蛋糕,是傳統下午茶甜點。"
     }
   ],
   "landmarks": [
@@ -133,6 +163,33 @@
         21.0122
       ],
       "image": "landmarks-warsawoldtown.jpg"
+    },
+    {
+      "zh": "比亞沃維耶扎森林",
+      "en": "Białowieża Forest",
+      "note": "歐洲僅存的低地原始林,棲息野生歐洲野牛,列世界遺產。",
+      "latlon": [
+        52.7,
+        23.85
+      ]
+    },
+    {
+      "zh": "馬爾堡城堡",
+      "en": "Malbork Castle",
+      "note": "條頓騎士團建造的全歐最大磚造城堡,列世界遺產。",
+      "latlon": [
+        54.04,
+        19.0274
+      ]
+    },
+    {
+      "zh": "琴斯托霍瓦揚納古拉修道院",
+      "en": "Jasna Góra Monastery",
+      "note": "供奉「黑面聖母」聖像,是波蘭天主教最重要的朝聖地。",
+      "latlon": [
+        50.8118,
+        19.0968
+      ]
     }
   ],
   "people": [
@@ -165,6 +222,21 @@
       "en": "Lech Wałęsa",
       "note": "團結工聯領袖,一九八三年諾貝爾和平獎得主,後任總統。",
       "image": "people-walesa.jpg"
+    },
+    {
+      "zh": "亞當·密茨凱維奇",
+      "en": "Adam Mickiewicz",
+      "note": "民族詩人,史詩《塔杜施先生》是波蘭浪漫主義文學代表作。"
+    },
+    {
+      "zh": "維斯瓦娃·辛波絲卡",
+      "en": "Wisława Szymborska",
+      "note": "詩人,一九九六年獲諾貝爾文學獎,作品以簡練哲思著稱。"
+    },
+    {
+      "zh": "羅伯特·萊萬多夫斯基",
+      "en": "Robert Lewandowski",
+      "note": "足球員,長年效力拜仁慕尼黑,是波蘭史上最佳射手之一。"
     }
   ],
   "recommended": [
@@ -389,5 +461,75 @@
       "source": "https://commons.wikimedia.org/wiki/File:Lech_Walesa_1980.jpg"
     }
   ],
-  "code": "PL"
+  "code": "PL",
+  "street_food": [
+    {
+      "zh": "扎皮耶卡卡",
+      "note": "半根長棍麵包烤蘑菇與起司,淋番茄醬,深夜宵夜首選。",
+      "where": "克拉科夫廣場周邊攤車"
+    },
+    {
+      "zh": "克拉科夫圓環麵包",
+      "note": "灑芝麻或鹽的環狀硬麵包,街頭小販沿街叫賣。",
+      "where": "克拉科夫舊城街頭"
+    },
+    {
+      "zh": "烤香腸夾麵包",
+      "note": "炭烤香腸夾進切開的麵包,擠上芥末,聖誕市集必吃。",
+      "where": "各地聖誕市集攤位"
+    },
+    {
+      "zh": "比利時鬆餅",
+      "note": "現烤鬆餅淋巧克力醬與鮮奶油,老城觀光區隨處可見。",
+      "where": "華沙舊城廣場攤販"
+    },
+    {
+      "zh": "馬鈴薯糰子",
+      "note": "馬鈴薯麵糰包肉餡水煮而成,配油蔥酥食用。",
+      "where": "地方市集小吃攤"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "仲夏聖約翰夜",
+      "month": "6月",
+      "note": "河邊放花環、點篝火慶祝仲夏,源自古老的斯拉夫傳統。"
+    },
+    {
+      "zh": "聖體節",
+      "month": "5-6月(復活節後)",
+      "note": "天主教盛大遊行,街道鋪滿花瓣拼成的臨時祭壇。"
+    },
+    {
+      "zh": "聖誕市集",
+      "month": "12月",
+      "note": "克拉科夫、華沙等城市廣場搭起木屋攤位,賣薑餅與熱紅酒。"
+    },
+    {
+      "zh": "豐收節",
+      "month": "8-9月",
+      "note": "鄉間感謝秋收的傳統慶典,以麥穗編花環遊行。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "Cześć",
+        "romanized": "cheshch"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "Dziękuję",
+        "romanized": "jen-koo-yeh"
+      },
+      {
+        "phrase": "再見",
+        "local": "Do widzenia",
+        "romanized": "do vee-dzeh-nyah"
+      }
+    ],
+    "money_note": "波蘭雖鄰近歐元區仍用茲羅提,城市普遍可刷卡與感應支付,小鎮市集建議備些現金。",
+    "tipping": "餐廳習慣留 10% 左右小費,常直接告知服務生抹零金額;計程車與咖啡廳給小費也很常見。"
+  }
 }

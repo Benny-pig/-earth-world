@@ -50,6 +50,21 @@
       "en": "Greater flamingo",
       "note": "成群覓食於塔古斯、薩多河口與法羅濕地的鹽田潟湖。",
       "image": "animals-flamingo.jpg"
+    },
+    {
+      "zh": "薩多河瓶鼻海豚",
+      "en": "Bottlenose dolphin",
+      "note": "薩多河口棲息歐洲少見的常駐海豚族群,可搭船賞豚。"
+    },
+    {
+      "zh": "伊比利羱羊",
+      "en": "Iberian ibex",
+      "note": "大角野山羊,棲息山區岩壁,近年數量穩定回升。"
+    },
+    {
+      "zh": "葡萄牙波登可犬",
+      "en": "Podengo Português",
+      "note": "古老獵兔犬種,分大中小三型,體態靈巧警覺性高。"
     }
   ],
   "foods": [
@@ -82,6 +97,21 @@
       "en": "Port wine",
       "note": "杜羅河谷產的加烈葡萄酒,在加亞新城的酒窖陳年。",
       "image": "foods-port.jpg"
+    },
+    {
+      "zh": "羽衣甘藍馬鈴薯湯",
+      "en": "Caldo verde",
+      "note": "馬鈴薯打成濃湯底,撒入細絲甘藍與臘腸片,國民家常湯。"
+    },
+    {
+      "zh": "豬排三明治",
+      "en": "Bifana",
+      "note": "醃過的豬排夾進麵包,常淋芥末醬,是街頭經典小吃。"
+    },
+    {
+      "zh": "山區羊乳酪",
+      "en": "Queijo da Serra",
+      "note": "塞拉山區的軟質羊乳酪,以植物凝乳製成,風味濃郁。"
     }
   ],
   "landmarks": [
@@ -134,6 +164,33 @@
         -7.79
       ],
       "image": "landmarks-douro.jpg"
+    },
+    {
+      "zh": "歐比多斯城牆小鎮",
+      "en": "Óbidos",
+      "note": "白牆藍邊小屋環繞城牆的中世紀小鎮,以櫻桃酒巧克力杯聞名。",
+      "latlon": [
+        39.361,
+        -9.1568
+      ]
+    },
+    {
+      "zh": "巴塔哈修道院",
+      "en": "Batalha Monastery",
+      "note": "紀念阿爾茹巴洛塔戰役而建的哥德式修道院,列世界遺產。",
+      "latlon": [
+        39.6597,
+        -8.8251
+      ]
+    },
+    {
+      "zh": "皮耶達德角",
+      "en": "Ponta da Piedade",
+      "note": "拉古什海岸的金色海蝕岩柱與洞穴群,可搭船或獨木舟穿越。",
+      "latlon": [
+        37.0847,
+        -8.6694
+      ]
     }
   ],
   "people": [
@@ -166,6 +223,21 @@
       "en": "Amália Rodrigues",
       "note": "「法朵女王」,將葡萄牙傳統歌謠法朵推向世界。",
       "image": "people-amalia.jpg"
+    },
+    {
+      "zh": "尤西比奧",
+      "en": "Eusébio",
+      "note": "足球傳奇,一九六六年世界盃金靴獎得主,人稱「黑豹」。"
+    },
+    {
+      "zh": "費爾南·德·麥哲倫",
+      "en": "Ferdinand Magellan",
+      "note": "葡萄牙航海家,率船隊首次完成環球航行,途中喪生。"
+    },
+    {
+      "zh": "若澤·薩拉馬戈",
+      "en": "José Saramago",
+      "note": "作家,一九九八年獲諾貝爾文學獎,代表作《盲目》。"
     }
   ],
   "recommended": [
@@ -397,5 +469,75 @@
       "source": "https://commons.wikimedia.org/wiki/File:Amalia_Rodrigues_Portugese_fado-zangeres_op_Schiphol,_Bestanddeelnr_916-9841.jpg"
     }
   ],
-  "code": "PT"
+  "code": "PT",
+  "street_food": [
+    {
+      "zh": "炸鱈魚球",
+      "note": "馬鈴薯泥拌碎鱈魚捏成球狀油炸,酒吧與攤販的經典小點。",
+      "where": "里斯本街頭小吃攤"
+    },
+    {
+      "zh": "豬排三明治站著吃",
+      "note": "路邊小亭現做現吃,搭一杯啤酒是在地人的午後日常。",
+      "where": "波爾圖街邊小亭"
+    },
+    {
+      "zh": "酸櫻桃利口酒",
+      "note": "小杯裝、常盛在巧克力杯裡,街頭窗口站著一飲而盡。",
+      "where": "里斯本阿爾法瑪窗口小店"
+    },
+    {
+      "zh": "烤栗子",
+      "note": "冬季街頭鐵桶現烤現剝,香氣是里斯本秋冬的招牌氣味。",
+      "where": "里斯本各廣場街角"
+    },
+    {
+      "zh": "辛特拉起司小塔",
+      "note": "酥皮包甜起司餡烤成的小塔,辛特拉百年老店最出名。",
+      "where": "辛特拉舊城甜點店"
+    }
+  ],
+  "festivals": [
+    {
+      "zh": "聖安東尼節",
+      "month": "6月",
+      "note": "里斯本徹夜街頭派對,烤沙丁魚飄香,是夏天最熱鬧的夜晚。"
+    },
+    {
+      "zh": "聖若昂節",
+      "month": "6月",
+      "note": "波爾圖居民手持塑膠槌互敲慶祝,搭配河上煙火。"
+    },
+    {
+      "zh": "狂歡節",
+      "month": "2-3月",
+      "note": "各地舉行遊行與化妝派對,托里什韋德拉斯規模最大。"
+    },
+    {
+      "zh": "燒緞帶節",
+      "month": "5月",
+      "note": "科英布拉大學畢業生傳統慶典,街頭遊行與法多歌謠通宵演唱。"
+    }
+  ],
+  "practical_info": {
+    "greetings": [
+      {
+        "phrase": "你好",
+        "local": "Olá",
+        "romanized": "oh-lah"
+      },
+      {
+        "phrase": "謝謝",
+        "local": "Obrigado/a",
+        "romanized": "oh-bree-gah-doo"
+      },
+      {
+        "phrase": "早安",
+        "local": "Bom dia",
+        "romanized": "bong dee-ah"
+      }
+    ],
+    "money_note": "信用卡與行動支付(MB WAY)在城市相當普及,傳統小吃攤與鄉間市集仍偏好現金。",
+    "tipping": "沒有強制小費文化,餐廳留 5–10% 已算大方,咖啡與小吃店把找零留下即可。"
+  }
 }
