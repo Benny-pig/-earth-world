@@ -415,6 +415,19 @@
     background: rgba(20, 26, 44, 0.9); color: #dfe8ff; border: 1px solid rgba(120,170,255,.3);
     border-radius: 6px; font: 12px system-ui, "Microsoft JhengHei", sans-serif; padding: 3px 6px; max-width: 150px;
   }
+  /* 手機窄螢幕:tw-clock / clock-weather 原本左右並排會跟置中的搜尋欄互相重疊,
+     改成頂部左右各縮小一欄、搜尋欄整行移到下方。 */
+  @media (max-width: 640px) {
+    #tw-clock, #clock-weather { max-width: 44vw; min-width: 0; padding: 6px 10px; }
+    #tw-clock .tw-label, #clock-weather .cw-country { font-size: 10px; }
+    #tw-clock .tw-date, #clock-weather .cw-date { display: none; }
+    #tw-clock .tw-time { font-size: 15px; }
+    #clock-weather .cw-time { font-size: 15px; }
+    #clock-weather .cw-weather { font-size: 11px; }
+    #clock-weather .cw-weather-note { display: none; }
+    #clock-weather .cw-hint { font-size: 10px; }
+    #country-search { top: 78px; left: 8px; right: 8px; width: auto; transform: none; }
+  }
 </style>
 </head>
 <body>

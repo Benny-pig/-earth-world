@@ -7,7 +7,7 @@ import { SMAAPass } from "three/addons/postprocessing/SMAAPass.js";
 import { createStarfield } from "./scene/starfield.js";
 import { createGlobe } from "./scene/globe.js";
 import { createClouds } from "./scene/clouds.js";
-import { createCameraRig } from "./scene/camera-controls.js";
+import { createCameraRig, fitDistanceForAspect } from "./scene/camera-controls.js";
 import { buildBorders } from "./countries/borders.js";
 import { buildCountryLayer } from "./countries/country-layer.js";
 import { setZhHantNames } from "./countries/country-names.js";
@@ -93,7 +93,7 @@ export function start() {
 
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1500);
-  camera.position.set(0, 0, 3.2);
+  camera.position.set(0, 0, fitDistanceForAspect(window.innerWidth / window.innerHeight));
 
   const starfield = createStarfield();
   scene.add(starfield.object);

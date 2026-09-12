@@ -4,6 +4,21 @@ import { latLonToXYZ } from "../lib/geo.js";
 
 export const easeInOutCubic = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
 
+const MAX_DISTANCE = 6; // 跟下面 controls.maxDistance 對齊,避免直向手機算出超過可縮放範圍的距離
+
+// 相機 fov(45°)是「垂直」視角;aspect < 1(直向手機)時水平視角比垂直窄,
+// 同樣距離下地球左右會被切到畫面外。用垂直/水平視角的三角幾何反推:
+// 先算地球在桌機橫向畫面(aspect >= 1,垂直方向才是限制)佔垂直視角的比例當基準,
+// 直向時改用「被裁的那個水平視角」乘上同一比例反推距離,讓直向的取景觀感跟橫向一致。
+export function fitDistanceForAspect(aspect, { fovDeg = 45, base = 3.2 } = {}) {
+  if (aspect >= 1) return base;
+  const halfV = (fovDeg / 2) * (Math.PI / 180);
+  const marginRatio = Math.asin(1 / base) / halfV;
+  const halfH = Math.atan(Math.tan(halfV) * aspect);
+  const dist = 1 / Math.sin(marginRatio * halfH);
+  return Math.min(dist, MAX_DISTANCE);
+}
+
 export function createCameraRig({ camera, domElement, globeObject }) {
   const controls = new OrbitControls(camera, domElement);
   controls.enablePan = false;
@@ -12,7 +27,7 @@ export function createCameraRig({ camera, domElement, globeObject }) {
   controls.rotateSpeed = 0.45;
   controls.zoomSpeed = 0.7;
   controls.minDistance = 1.35;
-  controls.maxDistance = 6;
+  controls.maxDistance = MAX_DISTANCE;
   controls.target.set(0, 0, 0);
 
   let tween = null; // { from: Vector3, toDir: Vector3, dist, t, ms }
@@ -26,7 +41,8 @@ export function createCameraRig({ camera, domElement, globeObject }) {
   }
 
   function resetView() {
-    tween = { from: camera.position.clone(), toDir: new THREE.Vector3(0, 0, 1), dist: 3.2, t: 0, ms: 900 };
+    const dist = fitDistanceForAspect(camera.aspect);
+    tween = { from: camera.position.clone(), toDir: new THREE.Vector3(0, 0, 1), dist, t: 0, ms: 900 };
   }
 
   function update(dt) {
