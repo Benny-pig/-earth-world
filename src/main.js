@@ -283,6 +283,11 @@ export function start() {
     if (moved > 6) return;                 // 拖曳,不算點擊
     const cl = window.__earth.countryLayer;
     if (!cl) return;
+    // 觸控單純點一下常常不會先觸發 pointermove(手指沒有位移),共用的 pointer
+    // 座標會停在上一次的舊值(甚至是初始的畫面外 -2,-2),點擊判定跟著點錯位置。
+    // 直接用這次 pointerup 事件自己的座標算,不依賴可能沒更新的共用狀態。
+    pointer.x = (e.clientX / window.innerWidth) * 2 - 1;
+    pointer.y = -(e.clientY / window.innerHeight) * 2 + 1;
     raycaster.setFromCamera(pointer, camera);
     const hit = cl.pick(raycaster, globe.mesh);
     if (!hit) return;

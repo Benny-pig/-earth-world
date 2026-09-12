@@ -443,10 +443,12 @@
     #tw-clock .tw-date, #clock-weather .cw-date { display: none; }
     #tw-clock .tw-time { font-size: 15px; }
     #clock-weather .cw-time { font-size: 15px; }
-    #clock-weather .cw-weather { font-size: 11px; }
+    #clock-weather .cw-weather { font-size: 11px; margin-top: 2px; }
     #clock-weather .cw-weather-note { display: none; }
     #clock-weather .cw-hint { font-size: 10px; }
-    #country-search { top: 78px; left: 8px; right: 8px; width: auto; transform: none; }
+    /* 100px 是實測選了國家、天氣列都填滿內容後 clock-weather 的實際高度(~72px)
+       加安全間距,不是原本沒選國家時只有一行提示字的高度。 */
+    #country-search { top: 100px; left: 8px; right: 8px; width: auto; transform: none; }
   }
 </style>
 </head>
