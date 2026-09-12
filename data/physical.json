@@ -1,130 +1,949 @@
 {
   "note": "主要自然地理特徵(山脈 / 山峰 / 河流 / 沙漠 / 高原 / 平原 / 湖泊 / 其他)。座標為代表性標註點,非精確界線。純事實資料,無版權疑慮。",
   "features": [
-    { "k": "mountain", "zh": "喜馬拉雅山脈", "en": "Himalayas", "lat": 28.6, "lon": 84.0 },
-    { "k": "mountain", "zh": "安地斯山脈", "en": "Andes", "lat": -20.0, "lon": -68.0 },
-    { "k": "mountain", "zh": "洛磯山脈", "en": "Rocky Mountains", "lat": 44.0, "lon": -110.0 },
-    { "k": "mountain", "zh": "阿爾卑斯山脈", "en": "Alps", "lat": 46.5, "lon": 9.5 },
-    { "k": "mountain", "zh": "天山山脈", "en": "Tian Shan", "lat": 42.0, "lon": 80.0 },
-    { "k": "mountain", "zh": "崑崙山脈", "en": "Kunlun Mountains", "lat": 36.0, "lon": 84.0 },
-    { "k": "mountain", "zh": "烏拉山脈", "en": "Ural Mountains", "lat": 60.0, "lon": 59.0 },
-    { "k": "mountain", "zh": "阿帕拉契山脈", "en": "Appalachian Mountains", "lat": 37.0, "lon": -81.0 },
-    { "k": "mountain", "zh": "大分水嶺", "en": "Great Dividing Range", "lat": -30.0, "lon": 151.0 },
-    { "k": "mountain", "zh": "阿特拉斯山脈", "en": "Atlas Mountains", "lat": 31.0, "lon": -6.0 },
-    { "k": "mountain", "zh": "高加索山脈", "en": "Caucasus Mountains", "lat": 43.0, "lon": 43.0 },
-    { "k": "mountain", "zh": "興都庫什山脈", "en": "Hindu Kush", "lat": 35.0, "lon": 71.0 },
-    { "k": "mountain", "zh": "喀爾巴阡山脈", "en": "Carpathian Mountains", "lat": 47.5, "lon": 24.5 },
-    { "k": "mountain", "zh": "斯堪地那維亞山脈", "en": "Scandinavian Mountains", "lat": 65.0, "lon": 14.0 },
-    { "k": "mountain", "zh": "德拉肯斯山脈", "en": "Drakensberg", "lat": -29.5, "lon": 29.3 },
-    { "k": "mountain", "zh": "秦嶺", "en": "Qinling", "lat": 34.0, "lon": 108.0 },
-    { "k": "mountain", "zh": "阿爾泰山脈", "en": "Altai Mountains", "lat": 49.0, "lon": 89.0 },
-    { "k": "mountain", "zh": "橫斷山脈", "en": "Hengduan Mountains", "lat": 28.0, "lon": 99.0 },
-    { "k": "mountain", "zh": "內華達山脈", "en": "Sierra Nevada", "lat": 37.5, "lon": -119.0 },
-    { "k": "mountain", "zh": "喀斯開山脈", "en": "Cascade Range", "lat": 44.0, "lon": -121.8 },
-    { "k": "mountain", "zh": "亞平寧山脈", "en": "Apennine Mountains", "lat": 42.5, "lon": 13.5 },
-    { "k": "mountain", "zh": "庇里牛斯山脈", "en": "Pyrenees", "lat": 42.6, "lon": 1.0 },
-    { "k": "mountain", "zh": "扎格羅斯山脈", "en": "Zagros Mountains", "lat": 32.0, "lon": 50.0 },
-    { "k": "mountain", "zh": "厄爾布爾士山脈", "en": "Alborz", "lat": 36.0, "lon": 51.5 },
-    { "k": "mountain", "zh": "西高止山脈", "en": "Western Ghats", "lat": 14.0, "lon": 75.0 },
-    { "k": "mountain", "zh": "大高加索", "en": "Verkhoyansk Range", "lat": 67.0, "lon": 129.0 },
-
-    { "k": "peak", "zh": "聖母峰", "en": "Mount Everest", "lat": 27.988, "lon": 86.925 },
-    { "k": "peak", "zh": "喬戈里峰(K2)", "en": "K2", "lat": 35.881, "lon": 76.513 },
-    { "k": "peak", "zh": "吉力馬札羅山", "en": "Mount Kilimanjaro", "lat": -3.066, "lon": 37.355 },
-    { "k": "peak", "zh": "白朗峰", "en": "Mont Blanc", "lat": 45.833, "lon": 6.865 },
-    { "k": "peak", "zh": "阿空加瓜山", "en": "Aconcagua", "lat": -32.653, "lon": -70.011 },
-    { "k": "peak", "zh": "德納利峰", "en": "Denali", "lat": 63.069, "lon": -151.007 },
-    { "k": "peak", "zh": "厄爾布魯士山", "en": "Mount Elbrus", "lat": 43.353, "lon": 42.439 },
-    { "k": "peak", "zh": "富士山", "en": "Mount Fuji", "lat": 35.361, "lon": 138.728 },
-    { "k": "peak", "zh": "玉山", "en": "Yu Shan", "lat": 23.47, "lon": 120.957 },
-    { "k": "peak", "zh": "馬特洪峰", "en": "Matterhorn", "lat": 45.976, "lon": 7.658 },
-    { "k": "peak", "zh": "科修斯科山", "en": "Mount Kosciuszko", "lat": -36.456, "lon": 148.263 },
-    { "k": "peak", "zh": "文森山", "en": "Vinson Massif", "lat": -78.525, "lon": -85.617 },
-    { "k": "peak", "zh": "麥肯利(玻利瓦爾峰)", "en": "Pico Bolívar", "lat": 8.541, "lon": -71.046 },
-    { "k": "peak", "zh": "南迦帕爾巴特峰", "en": "Nanga Parbat", "lat": 35.238, "lon": 74.589 },
-
-    { "k": "river", "zh": "亞馬遜河", "en": "Amazon River", "lat": -3.5, "lon": -62.0 },
-    { "k": "river", "zh": "尼羅河", "en": "Nile", "lat": 24.0, "lon": 32.9 },
-    { "k": "river", "zh": "長江", "en": "Yangtze", "lat": 30.5, "lon": 112.0 },
-    { "k": "river", "zh": "黃河", "en": "Yellow River", "lat": 37.5, "lon": 110.0 },
-    { "k": "river", "zh": "密西西比河", "en": "Mississippi River", "lat": 37.0, "lon": -90.0 },
-    { "k": "river", "zh": "恆河", "en": "Ganges", "lat": 25.5, "lon": 85.0 },
-    { "k": "river", "zh": "印度河", "en": "Indus River", "lat": 27.0, "lon": 68.5 },
-    { "k": "river", "zh": "窩瓦河", "en": "Volga", "lat": 51.0, "lon": 46.0 },
-    { "k": "river", "zh": "多瑙河", "en": "Danube", "lat": 45.0, "lon": 22.0 },
-    { "k": "river", "zh": "萊茵河", "en": "Rhine", "lat": 50.0, "lon": 7.6 },
-    { "k": "river", "zh": "剛果河", "en": "Congo River", "lat": -1.0, "lon": 18.0 },
-    { "k": "river", "zh": "尼日河", "en": "Niger River", "lat": 12.0, "lon": 2.0 },
-    { "k": "river", "zh": "湄公河", "en": "Mekong", "lat": 15.0, "lon": 105.5 },
-    { "k": "river", "zh": "葉尼塞河", "en": "Yenisei", "lat": 63.0, "lon": 90.0 },
-    { "k": "river", "zh": "鄂畢河", "en": "Ob River", "lat": 62.0, "lon": 71.0 },
-    { "k": "river", "zh": "勒拿河", "en": "Lena River", "lat": 65.0, "lon": 125.0 },
-    { "k": "river", "zh": "黑龍江(阿穆爾河)", "en": "Amur River", "lat": 51.0, "lon": 130.0 },
-    { "k": "river", "zh": "育空河", "en": "Yukon River", "lat": 63.0, "lon": -160.0 },
-    { "k": "river", "zh": "科羅拉多河", "en": "Colorado River", "lat": 36.1, "lon": -112.1 },
-    { "k": "river", "zh": "格蘭德河", "en": "Rio Grande", "lat": 29.0, "lon": -101.0 },
-    { "k": "river", "zh": "巴拉那河", "en": "Paraná River", "lat": -27.0, "lon": -56.0 },
-    { "k": "river", "zh": "贊比西河", "en": "Zambezi", "lat": -16.5, "lon": 26.0 },
-    { "k": "river", "zh": "墨累河", "en": "Murray River", "lat": -34.5, "lon": 142.5 },
-    { "k": "river", "zh": "底格里斯河", "en": "Tigris", "lat": 34.0, "lon": 44.0 },
-    { "k": "river", "zh": "幼發拉底河", "en": "Euphrates", "lat": 34.0, "lon": 41.0 },
-    { "k": "river", "zh": "布拉馬普特拉河", "en": "Brahmaputra", "lat": 26.5, "lon": 92.0 },
-    { "k": "river", "zh": "泰晤士河", "en": "River Thames", "lat": 51.5, "lon": -1.0 },
-    { "k": "river", "zh": "多摩川 / 利根川", "en": "Tone River", "lat": 36.1, "lon": 139.9 },
-
-    { "k": "desert", "zh": "撒哈拉沙漠", "en": "Sahara", "lat": 23.0, "lon": 13.0 },
-    { "k": "desert", "zh": "阿拉伯沙漠", "en": "Arabian Desert", "lat": 22.0, "lon": 47.0 },
-    { "k": "desert", "zh": "魯卜哈利沙漠", "en": "Rub' al Khali", "lat": 20.0, "lon": 51.0 },
-    { "k": "desert", "zh": "戈壁沙漠", "en": "Gobi Desert", "lat": 42.5, "lon": 105.0 },
-    { "k": "desert", "zh": "塔克拉瑪干沙漠", "en": "Taklamakan Desert", "lat": 39.0, "lon": 82.0 },
-    { "k": "desert", "zh": "卡拉哈里沙漠", "en": "Kalahari Desert", "lat": -23.0, "lon": 22.0 },
-    { "k": "desert", "zh": "納米比沙漠", "en": "Namib Desert", "lat": -24.0, "lon": 15.0 },
-    { "k": "desert", "zh": "巴塔哥尼亞沙漠", "en": "Patagonian Desert", "lat": -46.0, "lon": -69.0 },
-    { "k": "desert", "zh": "阿他加馬沙漠", "en": "Atacama Desert", "lat": -24.0, "lon": -69.0 },
-    { "k": "desert", "zh": "大維多利亞沙漠", "en": "Great Victoria Desert", "lat": -28.5, "lon": 128.5 },
-    { "k": "desert", "zh": "辛普森沙漠", "en": "Simpson Desert", "lat": -25.0, "lon": 137.0 },
-    { "k": "desert", "zh": "喀拉庫姆沙漠", "en": "Karakum Desert", "lat": 39.0, "lon": 59.0 },
-    { "k": "desert", "zh": "克孜勒庫姆沙漠", "en": "Kyzylkum Desert", "lat": 42.0, "lon": 64.0 },
-    { "k": "desert", "zh": "索諾拉沙漠", "en": "Sonoran Desert", "lat": 32.0, "lon": -112.5 },
-    { "k": "desert", "zh": "奇瓦瓦沙漠", "en": "Chihuahuan Desert", "lat": 27.0, "lon": -105.0 },
-    { "k": "desert", "zh": "莫哈韋沙漠", "en": "Mojave Desert", "lat": 35.0, "lon": -116.0 },
-    { "k": "desert", "zh": "塔爾沙漠", "en": "Thar Desert", "lat": 27.0, "lon": 71.0 },
-    { "k": "desert", "zh": "內蓋夫沙漠", "en": "Negev", "lat": 30.5, "lon": 34.8 },
-    { "k": "desert", "zh": "努比亞沙漠", "en": "Nubian Desert", "lat": 21.0, "lon": 33.0 },
-
-    { "k": "plateau", "zh": "青藏高原", "en": "Tibetan Plateau", "lat": 33.0, "lon": 88.0 },
-    { "k": "plateau", "zh": "黃土高原", "en": "Loess Plateau", "lat": 37.0, "lon": 108.0 },
-    { "k": "plateau", "zh": "蒙古高原", "en": "Mongolian Plateau", "lat": 46.0, "lon": 105.0 },
-    { "k": "plateau", "zh": "德干高原", "en": "Deccan Plateau", "lat": 17.0, "lon": 77.0 },
-    { "k": "plateau", "zh": "衣索比亞高原", "en": "Ethiopian Highlands", "lat": 9.0, "lon": 39.0 },
-    { "k": "plateau", "zh": "巴西高原", "en": "Brazilian Highlands", "lat": -16.0, "lon": -47.0 },
-    { "k": "plateau", "zh": "科羅拉多高原", "en": "Colorado Plateau", "lat": 37.0, "lon": -110.5 },
-    { "k": "plateau", "zh": "阿爾提普拉諾高原", "en": "Altiplano", "lat": -19.0, "lon": -67.0 },
-
-    { "k": "plain", "zh": "西西伯利亞平原", "en": "West Siberian Plain", "lat": 60.0, "lon": 75.0 },
-    { "k": "plain", "zh": "東歐平原", "en": "East European Plain", "lat": 55.0, "lon": 45.0 },
-    { "k": "plain", "zh": "北美大平原", "en": "Great Plains", "lat": 41.0, "lon": -100.0 },
-    { "k": "plain", "zh": "潘帕斯草原", "en": "Pampas", "lat": -36.0, "lon": -61.0 },
-    { "k": "plain", "zh": "華北平原", "en": "North China Plain", "lat": 35.0, "lon": 116.0 },
-    { "k": "plain", "zh": "印度河—恆河平原", "en": "Indo-Gangetic Plain", "lat": 27.0, "lon": 80.0 },
-    { "k": "plain", "zh": "亞馬遜盆地", "en": "Amazon Basin", "lat": -5.0, "lon": -63.0 },
-    { "k": "plain", "zh": "剛果盆地", "en": "Congo Basin", "lat": -1.0, "lon": 22.0 },
-
-    { "k": "lake", "zh": "裏海", "en": "Caspian Sea", "lat": 42.0, "lon": 51.0 },
-    { "k": "lake", "zh": "貝加爾湖", "en": "Lake Baikal", "lat": 53.5, "lon": 108.0 },
-    { "k": "lake", "zh": "五大湖", "en": "Great Lakes", "lat": 45.0, "lon": -83.0 },
-    { "k": "lake", "zh": "維多利亞湖", "en": "Lake Victoria", "lat": -1.0, "lon": 33.0 },
-    { "k": "lake", "zh": "死海", "en": "Dead Sea", "lat": 31.5, "lon": 35.5 },
-    { "k": "lake", "zh": "的的喀喀湖", "en": "Lake Titicaca", "lat": -15.8, "lon": -69.4 },
-    { "k": "lake", "zh": "鹹海", "en": "Aral Sea", "lat": 45.0, "lon": 59.5 },
-
-    { "k": "other", "zh": "大堡礁", "en": "Great Barrier Reef", "lat": -18.0, "lon": 147.0 },
-    { "k": "other", "zh": "維多利亞瀑布", "en": "Victoria Falls", "lat": -17.925, "lon": 25.858 },
-    { "k": "other", "zh": "尼加拉瀑布", "en": "Niagara Falls", "lat": 43.08, "lon": -79.07 },
-    { "k": "other", "zh": "科羅拉多大峽谷", "en": "Grand Canyon", "lat": 36.1, "lon": -112.11 },
-    { "k": "other", "zh": "東非大裂谷", "en": "East African Rift", "lat": 0.0, "lon": 36.0 },
-    { "k": "other", "zh": "亞馬遜雨林", "en": "Amazon Rainforest", "lat": -4.0, "lon": -60.0 },
-    { "k": "other", "zh": "西伯利亞針葉林", "en": "Siberian Taiga", "lat": 60.0, "lon": 100.0 },
-    { "k": "other", "zh": "潘帕斯", "en": "Gran Chaco", "lat": -23.0, "lon": -61.0 }
+    {
+      "k": "mountain",
+      "zh": "喜馬拉雅山脈",
+      "en": "Himalayas",
+      "lat": 28.6,
+      "lon": 84,
+      "note": "世界最高大的山脈,聖母峰等 14 座 8000 公尺以上高峰皆在此。"
+    },
+    {
+      "k": "mountain",
+      "zh": "安地斯山脈",
+      "en": "Andes",
+      "lat": -20,
+      "lon": -68,
+      "note": "全球最長的山脈,縱貫南美洲西側超過 7000 公里。"
+    },
+    {
+      "k": "mountain",
+      "zh": "洛磯山脈",
+      "en": "Rocky Mountains",
+      "lat": 44,
+      "lon": -110,
+      "note": "北美洲西部的主要山脈,是許多大河的分水嶺。"
+    },
+    {
+      "k": "mountain",
+      "zh": "阿爾卑斯山脈",
+      "en": "Alps",
+      "lat": 46.5,
+      "lon": 9.5,
+      "note": "歐洲最高大的山脈,橫跨法、義、瑞士等多國,滑雪勝地。"
+    },
+    {
+      "k": "mountain",
+      "zh": "天山山脈",
+      "en": "Tian Shan",
+      "lat": 42,
+      "lon": 80,
+      "note": "中亞高山山脈,橫跨中國新疆與哈薩克、吉爾吉斯等國。"
+    },
+    {
+      "k": "mountain",
+      "zh": "崑崙山脈",
+      "en": "Kunlun Mountains",
+      "lat": 36,
+      "lon": 84,
+      "note": "橫貫中國西部的大山脈,是青藏高原北緣的天然屏障。"
+    },
+    {
+      "k": "mountain",
+      "zh": "烏拉山脈",
+      "en": "Ural Mountains",
+      "lat": 60,
+      "lon": 59,
+      "note": "傳統上作為歐洲與亞洲的分界山脈,縱貫俄羅斯。"
+    },
+    {
+      "k": "mountain",
+      "zh": "阿帕拉契山脈",
+      "en": "Appalachian Mountains",
+      "lat": 37,
+      "lon": -81,
+      "note": "北美洲東部歷史悠久的古老山脈,森林茂密。"
+    },
+    {
+      "k": "mountain",
+      "zh": "大分水嶺",
+      "en": "Great Dividing Range",
+      "lat": -30,
+      "lon": 151,
+      "note": "澳洲東岸最長的山脈,分隔沿海與內陸乾燥地區。"
+    },
+    {
+      "k": "mountain",
+      "zh": "阿特拉斯山脈",
+      "en": "Atlas Mountains",
+      "lat": 31,
+      "lon": -6,
+      "note": "北非主要山脈,橫跨摩洛哥、阿爾及利亞與突尼西亞。"
+    },
+    {
+      "k": "mountain",
+      "zh": "高加索山脈",
+      "en": "Caucasus Mountains",
+      "lat": 43,
+      "lon": 43,
+      "note": "介於黑海與裏海之間,常被視為歐亞分界。"
+    },
+    {
+      "k": "mountain",
+      "zh": "興都庫什山脈",
+      "en": "Hindu Kush",
+      "lat": 35,
+      "lon": 71,
+      "note": "中亞高山山脈,主要位於阿富汗與巴基斯坦交界。"
+    },
+    {
+      "k": "mountain",
+      "zh": "喀爾巴阡山脈",
+      "en": "Carpathian Mountains",
+      "lat": 47.5,
+      "lon": 24.5,
+      "note": "中東歐弧形山脈,橫跨捷克、波蘭、羅馬尼亞等國。"
+    },
+    {
+      "k": "mountain",
+      "zh": "斯堪地那維亞山脈",
+      "en": "Scandinavian Mountains",
+      "lat": 65,
+      "lon": 14,
+      "note": "縱貫挪威與瑞典邊界的山脈,峽灣地形發源地。"
+    },
+    {
+      "k": "mountain",
+      "zh": "德拉肯斯山脈",
+      "en": "Drakensberg",
+      "lat": -29.5,
+      "lon": 29.3,
+      "note": "南非東部的高聳山脈,名稱意為「龍之山」。"
+    },
+    {
+      "k": "mountain",
+      "zh": "秦嶺",
+      "en": "Qinling",
+      "lat": 34,
+      "lon": 108,
+      "note": "中國地理上南北氣候的分界山脈。"
+    },
+    {
+      "k": "mountain",
+      "zh": "阿爾泰山脈",
+      "en": "Altai Mountains",
+      "lat": 49,
+      "lon": 89,
+      "note": "中、蒙、俄、哈四國交界的山脈,遊牧文化發源地之一。"
+    },
+    {
+      "k": "mountain",
+      "zh": "橫斷山脈",
+      "en": "Hengduan Mountains",
+      "lat": 28,
+      "lon": 99,
+      "note": "中國西南部南北縱列的高山峽谷區,生物多樣性極高。"
+    },
+    {
+      "k": "mountain",
+      "zh": "內華達山脈",
+      "en": "Sierra Nevada",
+      "lat": 37.5,
+      "lon": -119,
+      "note": "美國加州東側山脈,優勝美地國家公園所在地。"
+    },
+    {
+      "k": "mountain",
+      "zh": "喀斯開山脈",
+      "en": "Cascade Range",
+      "lat": 44,
+      "lon": -121.8,
+      "note": "北美洲太平洋沿岸的火山山脈,聖海倫火山即位於此。"
+    },
+    {
+      "k": "mountain",
+      "zh": "亞平寧山脈",
+      "en": "Apennine Mountains",
+      "lat": 42.5,
+      "lon": 13.5,
+      "note": "貫穿義大利半島的山脈,有「義大利的脊梁」之稱。"
+    },
+    {
+      "k": "mountain",
+      "zh": "庇里牛斯山脈",
+      "en": "Pyrenees",
+      "lat": 42.6,
+      "lon": 1,
+      "note": "分隔法國與西班牙的天然邊界山脈。"
+    },
+    {
+      "k": "mountain",
+      "zh": "扎格羅斯山脈",
+      "en": "Zagros Mountains",
+      "lat": 32,
+      "lon": 50,
+      "note": "伊朗西部與伊拉克交界的長山脈。"
+    },
+    {
+      "k": "mountain",
+      "zh": "厄爾布爾士山脈",
+      "en": "Alborz",
+      "lat": 36,
+      "lon": 51.5,
+      "note": "伊朗北部山脈,德黑蘭即坐落在其南麓。"
+    },
+    {
+      "k": "mountain",
+      "zh": "西高止山脈",
+      "en": "Western Ghats",
+      "lat": 14,
+      "lon": 75,
+      "note": "印度西側的山脈,世界生物多樣性熱點之一。"
+    },
+    {
+      "k": "mountain",
+      "zh": "大高加索",
+      "en": "Verkhoyansk Range",
+      "lat": 67,
+      "lon": 129,
+      "note": "西伯利亞東部山脈,鄰近地球上最冷的常住聚落之一。"
+    },
+    {
+      "k": "peak",
+      "zh": "聖母峰",
+      "en": "Mount Everest",
+      "lat": 27.988,
+      "lon": 86.925,
+      "note": "世界最高峰,海拔 8848.86 公尺,位於中國與尼泊爾邊界。"
+    },
+    {
+      "k": "peak",
+      "zh": "喬戈里峰(K2)",
+      "en": "K2",
+      "lat": 35.881,
+      "lon": 76.513,
+      "note": "世界第二高峰,以攀登難度與危險性聞名,位於喀喇崑崙山脈。"
+    },
+    {
+      "k": "peak",
+      "zh": "吉力馬札羅山",
+      "en": "Mount Kilimanjaro",
+      "lat": -3.066,
+      "lon": 37.355,
+      "note": "非洲最高峰,獨立的火山地形,山頂終年積雪。"
+    },
+    {
+      "k": "peak",
+      "zh": "白朗峰",
+      "en": "Mont Blanc",
+      "lat": 45.833,
+      "lon": 6.865,
+      "note": "阿爾卑斯山脈與西歐最高峰,橫跨法國與義大利邊界。"
+    },
+    {
+      "k": "peak",
+      "zh": "阿空加瓜山",
+      "en": "Aconcagua",
+      "lat": -32.653,
+      "lon": -70.011,
+      "note": "南美洲及南、西半球最高峰,位於阿根廷安地斯山脈。"
+    },
+    {
+      "k": "peak",
+      "zh": "德納利峰",
+      "en": "Denali",
+      "lat": 63.069,
+      "lon": -151.007,
+      "note": "北美洲最高峰,位於美國阿拉斯加。"
+    },
+    {
+      "k": "peak",
+      "zh": "厄爾布魯士山",
+      "en": "Mount Elbrus",
+      "lat": 43.353,
+      "lon": 42.439,
+      "note": "歐洲最高峰(依高加索分界界定),為休眠火山。"
+    },
+    {
+      "k": "peak",
+      "zh": "富士山",
+      "en": "Mount Fuji",
+      "lat": 35.361,
+      "lon": 138.728,
+      "note": "日本最高峰,對稱火山錐是日本的象徵之一。"
+    },
+    {
+      "k": "peak",
+      "zh": "玉山",
+      "en": "Yu Shan",
+      "lat": 23.47,
+      "lon": 120.957,
+      "note": "台灣及東北亞最高峰,海拔近 3952 公尺。"
+    },
+    {
+      "k": "peak",
+      "zh": "馬特洪峰",
+      "en": "Matterhorn",
+      "lat": 45.976,
+      "lon": 7.658,
+      "note": "阿爾卑斯山脈標誌性的金字塔形山峰,橫跨瑞士與義大利。"
+    },
+    {
+      "k": "peak",
+      "zh": "科修斯科山",
+      "en": "Mount Kosciuszko",
+      "lat": -36.456,
+      "lon": 148.263,
+      "note": "澳洲大陸最高峰,海拔僅約 2228 公尺。"
+    },
+    {
+      "k": "peak",
+      "zh": "文森山",
+      "en": "Vinson Massif",
+      "lat": -78.525,
+      "lon": -85.617,
+      "note": "南極洲最高峰,位於埃爾斯沃斯山脈。"
+    },
+    {
+      "k": "peak",
+      "zh": "麥肯利(玻利瓦爾峰)",
+      "en": "Pico Bolívar",
+      "lat": 8.541,
+      "lon": -71.046,
+      "note": "委內瑞拉最高峰,以獨立英雄玻利瓦爾命名。"
+    },
+    {
+      "k": "peak",
+      "zh": "南迦帕爾巴特峰",
+      "en": "Nanga Parbat",
+      "lat": 35.238,
+      "lon": 74.589,
+      "note": "喜馬拉雅山脈西端高峰,以陡峭山壁著稱,人稱「殺人峰」。"
+    },
+    {
+      "k": "river",
+      "zh": "亞馬遜河",
+      "en": "Amazon River",
+      "lat": -3.5,
+      "lon": -62,
+      "note": "世界流量最大的河流,流經南美洲亞馬遜雨林。"
+    },
+    {
+      "k": "river",
+      "zh": "尼羅河",
+      "en": "Nile",
+      "lat": 24,
+      "lon": 32.9,
+      "note": "傳統上被視為世界最長的河流,孕育古埃及文明。"
+    },
+    {
+      "k": "river",
+      "zh": "長江",
+      "en": "Yangtze",
+      "lat": 30.5,
+      "lon": 112,
+      "note": "亞洲最長河流,中國經濟與文化的重要命脈。"
+    },
+    {
+      "k": "river",
+      "zh": "黃河",
+      "en": "Yellow River",
+      "lat": 37.5,
+      "lon": 110,
+      "note": "中華文明的搖籃之一,因含沙量高而得名。"
+    },
+    {
+      "k": "river",
+      "zh": "密西西比河",
+      "en": "Mississippi River",
+      "lat": 37,
+      "lon": -90,
+      "note": "北美洲最長的河流系統,貫穿美國中部。"
+    },
+    {
+      "k": "river",
+      "zh": "恆河",
+      "en": "Ganges",
+      "lat": 25.5,
+      "lon": 85,
+      "note": "南亞重要河流,印度教徒視為聖河。"
+    },
+    {
+      "k": "river",
+      "zh": "印度河",
+      "en": "Indus River",
+      "lat": 27,
+      "lon": 68.5,
+      "note": "南亞主要河流,古印度河流域文明發源地。"
+    },
+    {
+      "k": "river",
+      "zh": "窩瓦河",
+      "en": "Volga",
+      "lat": 51,
+      "lon": 46,
+      "note": "歐洲最長的河流,縱貫俄羅斯西部。"
+    },
+    {
+      "k": "river",
+      "zh": "多瑙河",
+      "en": "Danube",
+      "lat": 45,
+      "lon": 22,
+      "note": "流經最多國家的歐洲河流,從德國流向黑海。"
+    },
+    {
+      "k": "river",
+      "zh": "萊茵河",
+      "en": "Rhine",
+      "lat": 50,
+      "lon": 7.6,
+      "note": "西歐重要河流,貫穿瑞士、德國、荷蘭等國。"
+    },
+    {
+      "k": "river",
+      "zh": "剛果河",
+      "en": "Congo River",
+      "lat": -1,
+      "lon": 18,
+      "note": "非洲流量最大的河流,深度居世界前列。"
+    },
+    {
+      "k": "river",
+      "zh": "尼日河",
+      "en": "Niger River",
+      "lat": 12,
+      "lon": 2,
+      "note": "西非主要河流,孕育多個古代帝國。"
+    },
+    {
+      "k": "river",
+      "zh": "湄公河",
+      "en": "Mekong",
+      "lat": 15,
+      "lon": 105.5,
+      "note": "東南亞重要跨國河流,流經中國、寮國、泰國、越南等地。"
+    },
+    {
+      "k": "river",
+      "zh": "葉尼塞河",
+      "en": "Yenisei",
+      "lat": 63,
+      "lon": 90,
+      "note": "西伯利亞主要河流之一,注入北冰洋。"
+    },
+    {
+      "k": "river",
+      "zh": "鄂畢河",
+      "en": "Ob River",
+      "lat": 62,
+      "lon": 71,
+      "note": "西伯利亞主要河流,世界最長的河口灣之一。"
+    },
+    {
+      "k": "river",
+      "zh": "勒拿河",
+      "en": "Lena River",
+      "lat": 65,
+      "lon": 125,
+      "note": "西伯利亞東部大河,注入北極海域。"
+    },
+    {
+      "k": "river",
+      "zh": "黑龍江(阿穆爾河)",
+      "en": "Amur River",
+      "lat": 51,
+      "lon": 130,
+      "note": "中國與俄羅斯的界河,又稱黑龍江。"
+    },
+    {
+      "k": "river",
+      "zh": "育空河",
+      "en": "Yukon River",
+      "lat": 63,
+      "lon": -160,
+      "note": "流經加拿大與美國阿拉斯加的北方大河。"
+    },
+    {
+      "k": "river",
+      "zh": "科羅拉多河",
+      "en": "Colorado River",
+      "lat": 36.1,
+      "lon": -112.1,
+      "note": "美國西南部重要河流,切鑿出科羅拉多大峽谷。"
+    },
+    {
+      "k": "river",
+      "zh": "格蘭德河",
+      "en": "Rio Grande",
+      "lat": 29,
+      "lon": -101,
+      "note": "美國與墨西哥之間的界河。"
+    },
+    {
+      "k": "river",
+      "zh": "巴拉那河",
+      "en": "Paraná River",
+      "lat": -27,
+      "lon": -56,
+      "note": "南美洲第二長河,流經巴西、巴拉圭與阿根廷。"
+    },
+    {
+      "k": "river",
+      "zh": "贊比西河",
+      "en": "Zambezi",
+      "lat": -16.5,
+      "lon": 26,
+      "note": "非洲南部重要河流,維多利亞瀑布即在其中游。"
+    },
+    {
+      "k": "river",
+      "zh": "墨累河",
+      "en": "Murray River",
+      "lat": -34.5,
+      "lon": 142.5,
+      "note": "澳洲最長的河流,流域是重要農業區。"
+    },
+    {
+      "k": "river",
+      "zh": "底格里斯河",
+      "en": "Tigris",
+      "lat": 34,
+      "lon": 44,
+      "note": "美索不達米亞文明的搖籃之一,流經伊拉克。"
+    },
+    {
+      "k": "river",
+      "zh": "幼發拉底河",
+      "en": "Euphrates",
+      "lat": 34,
+      "lon": 41,
+      "note": "與底格里斯河並列美索不達米亞文明發源地。"
+    },
+    {
+      "k": "river",
+      "zh": "布拉馬普特拉河",
+      "en": "Brahmaputra",
+      "lat": 26.5,
+      "lon": 92,
+      "note": "發源自青藏高原、流經印度與孟加拉的大河。"
+    },
+    {
+      "k": "river",
+      "zh": "泰晤士河",
+      "en": "River Thames",
+      "lat": 51.5,
+      "lon": -1,
+      "note": "流經英國倫敦的著名河流。"
+    },
+    {
+      "k": "river",
+      "zh": "多摩川 / 利根川",
+      "en": "Tone River",
+      "lat": 36.1,
+      "lon": 139.9,
+      "note": "日本關東地區重要河流,流域涵蓋東京周邊。"
+    },
+    {
+      "k": "desert",
+      "zh": "撒哈拉沙漠",
+      "en": "Sahara",
+      "lat": 23,
+      "lon": 13,
+      "note": "世界最大的熱帶沙漠,橫跨北非多國。"
+    },
+    {
+      "k": "desert",
+      "zh": "阿拉伯沙漠",
+      "en": "Arabian Desert",
+      "lat": 22,
+      "lon": 47,
+      "note": "阿拉伯半島大部分地區的廣闊沙漠。"
+    },
+    {
+      "k": "desert",
+      "zh": "魯卜哈利沙漠",
+      "en": "Rub' al Khali",
+      "lat": 20,
+      "lon": 51,
+      "note": "世界最大的連續沙丘沙漠,位於阿拉伯半島南部,又稱「空虛之地」。"
+    },
+    {
+      "k": "desert",
+      "zh": "戈壁沙漠",
+      "en": "Gobi Desert",
+      "lat": 42.5,
+      "lon": 105,
+      "note": "亞洲主要沙漠,橫跨中國與蒙古。"
+    },
+    {
+      "k": "desert",
+      "zh": "塔克拉瑪干沙漠",
+      "en": "Taklamakan Desert",
+      "lat": 39,
+      "lon": 82,
+      "note": "中國最大的沙漠,古絲路商隊必須繞行的險地。"
+    },
+    {
+      "k": "desert",
+      "zh": "卡拉哈里沙漠",
+      "en": "Kalahari Desert",
+      "lat": -23,
+      "lon": 22,
+      "note": "非洲南部半乾旱沙漠,橫跨波札那、納米比亞等國。"
+    },
+    {
+      "k": "desert",
+      "zh": "納米比沙漠",
+      "en": "Namib Desert",
+      "lat": -24,
+      "lon": 15,
+      "note": "號稱世界最古老的沙漠,以壯觀紅色沙丘聞名。"
+    },
+    {
+      "k": "desert",
+      "zh": "巴塔哥尼亞沙漠",
+      "en": "Patagonian Desert",
+      "lat": -46,
+      "lon": -69,
+      "note": "南美洲最大的沙漠,位於阿根廷南部的乾燥高原。"
+    },
+    {
+      "k": "desert",
+      "zh": "阿他加馬沙漠",
+      "en": "Atacama Desert",
+      "lat": -24,
+      "lon": -69,
+      "note": "地球上最乾燥的地區之一,部分區域幾乎從未降雨。"
+    },
+    {
+      "k": "desert",
+      "zh": "大維多利亞沙漠",
+      "en": "Great Victoria Desert",
+      "lat": -28.5,
+      "lon": 128.5,
+      "note": "澳洲最大的沙漠。"
+    },
+    {
+      "k": "desert",
+      "zh": "辛普森沙漠",
+      "en": "Simpson Desert",
+      "lat": -25,
+      "lon": 137,
+      "note": "澳洲中部的沙漠,以紅色沙丘與平行沙脊著稱。"
+    },
+    {
+      "k": "desert",
+      "zh": "喀拉庫姆沙漠",
+      "en": "Karakum Desert",
+      "lat": 39,
+      "lon": 59,
+      "note": "中亞土庫曼境內的沙漠,「黑沙」之意。"
+    },
+    {
+      "k": "desert",
+      "zh": "克孜勒庫姆沙漠",
+      "en": "Kyzylkum Desert",
+      "lat": 42,
+      "lon": 64,
+      "note": "中亞沙漠,橫跨烏茲別克與哈薩克。"
+    },
+    {
+      "k": "desert",
+      "zh": "索諾拉沙漠",
+      "en": "Sonoran Desert",
+      "lat": 32,
+      "lon": -112.5,
+      "note": "北美洲沙漠,橫跨美墨邊境,巨型仙人掌的原生地。"
+    },
+    {
+      "k": "desert",
+      "zh": "奇瓦瓦沙漠",
+      "en": "Chihuahuan Desert",
+      "lat": 27,
+      "lon": -105,
+      "note": "北美洲最大的沙漠,橫跨美國與墨西哥。"
+    },
+    {
+      "k": "desert",
+      "zh": "莫哈韋沙漠",
+      "en": "Mojave Desert",
+      "lat": 35,
+      "lon": -116,
+      "note": "美國西南部沙漠,以死亡谷與極端高溫聞名。"
+    },
+    {
+      "k": "desert",
+      "zh": "塔爾沙漠",
+      "en": "Thar Desert",
+      "lat": 27,
+      "lon": 71,
+      "note": "南亞主要沙漠,橫跨印度與巴基斯坦邊境。"
+    },
+    {
+      "k": "desert",
+      "zh": "內蓋夫沙漠",
+      "en": "Negev",
+      "lat": 30.5,
+      "lon": 34.8,
+      "note": "以色列南部的乾旱地帶,佔該國陸地面積一半以上。"
+    },
+    {
+      "k": "desert",
+      "zh": "努比亞沙漠",
+      "en": "Nubian Desert",
+      "lat": 21,
+      "lon": 33,
+      "note": "非洲東北部沙漠,位於蘇丹尼羅河以東。"
+    },
+    {
+      "k": "plateau",
+      "zh": "青藏高原",
+      "en": "Tibetan Plateau",
+      "lat": 33,
+      "lon": 88,
+      "note": "世界最高、最大的高原,有「世界屋脊」之稱,是多條亞洲大河的發源地。"
+    },
+    {
+      "k": "plateau",
+      "zh": "黃土高原",
+      "en": "Loess Plateau",
+      "lat": 37,
+      "lon": 108,
+      "note": "中國黃土高原,黃河泥沙的主要來源。"
+    },
+    {
+      "k": "plateau",
+      "zh": "蒙古高原",
+      "en": "Mongolian Plateau",
+      "lat": 46,
+      "lon": 105,
+      "note": "東亞內陸高原,橫跨中國內蒙古與蒙古國。"
+    },
+    {
+      "k": "plateau",
+      "zh": "德干高原",
+      "en": "Deccan Plateau",
+      "lat": 17,
+      "lon": 77,
+      "note": "印度半島的大片高原,古老的火山岩地質。"
+    },
+    {
+      "k": "plateau",
+      "zh": "衣索比亞高原",
+      "en": "Ethiopian Highlands",
+      "lat": 9,
+      "lon": 39,
+      "note": "非洲之角的高原地帶,有「非洲屋脊」之稱。"
+    },
+    {
+      "k": "plateau",
+      "zh": "巴西高原",
+      "en": "Brazilian Highlands",
+      "lat": -16,
+      "lon": -47,
+      "note": "南美洲東部的大片高原,佔巴西國土相當比例。"
+    },
+    {
+      "k": "plateau",
+      "zh": "科羅拉多高原",
+      "en": "Colorado Plateau",
+      "lat": 37,
+      "lon": -110.5,
+      "note": "美國西南部高原,眾多峽谷地形(含大峽谷)的所在地。"
+    },
+    {
+      "k": "plateau",
+      "zh": "阿爾提普拉諾高原",
+      "en": "Altiplano",
+      "lat": -19,
+      "lon": -67,
+      "note": "南美洲安地斯山脈中的高原,的的喀喀湖即位於其上。"
+    },
+    {
+      "k": "plain",
+      "zh": "西西伯利亞平原",
+      "en": "West Siberian Plain",
+      "lat": 60,
+      "lon": 75,
+      "note": "世界最大的平原之一,横跨俄羅斯西伯利亞西部。"
+    },
+    {
+      "k": "plain",
+      "zh": "東歐平原",
+      "en": "East European Plain",
+      "lat": 55,
+      "lon": 45,
+      "note": "橫跨俄羅斯西部、烏克蘭等國的廣闊平原。"
+    },
+    {
+      "k": "plain",
+      "zh": "北美大平原",
+      "en": "Great Plains",
+      "lat": 41,
+      "lon": -100,
+      "note": "北美洲中部的大平原,美國重要的農牧產區。"
+    },
+    {
+      "k": "plain",
+      "zh": "潘帕斯草原",
+      "en": "Pampas",
+      "lat": -36,
+      "lon": -61,
+      "note": "南美洲阿根廷、烏拉圭一帶的肥沃草原,畜牧與農業重鎮。"
+    },
+    {
+      "k": "plain",
+      "zh": "華北平原",
+      "en": "North China Plain",
+      "lat": 35,
+      "lon": 116,
+      "note": "中國人口最稠密的平原之一,黃河、海河沖積而成。"
+    },
+    {
+      "k": "plain",
+      "zh": "印度河—恆河平原",
+      "en": "Indo-Gangetic Plain",
+      "lat": 27,
+      "lon": 80,
+      "note": "南亞人口最稠密的區域之一,恆河與印度河沖積平原。"
+    },
+    {
+      "k": "plain",
+      "zh": "亞馬遜盆地",
+      "en": "Amazon Basin",
+      "lat": -5,
+      "lon": -63,
+      "note": "世界最大的河流流域,涵蓋大部分亞馬遜雨林。"
+    },
+    {
+      "k": "plain",
+      "zh": "剛果盆地",
+      "en": "Congo Basin",
+      "lat": -1,
+      "lon": 22,
+      "note": "非洲最大的河流流域,擁有世界第二大熱帶雨林。"
+    },
+    {
+      "k": "lake",
+      "zh": "裏海",
+      "en": "Caspian Sea",
+      "lat": 42,
+      "lon": 51,
+      "note": "世界最大的內陸水體,依面積計為湖泊也常被稱為海。"
+    },
+    {
+      "k": "lake",
+      "zh": "貝加爾湖",
+      "en": "Lake Baikal",
+      "lat": 53.5,
+      "lon": 108,
+      "note": "世界最深、蓄水量最大的淡水湖,位於西伯利亞。"
+    },
+    {
+      "k": "lake",
+      "zh": "五大湖",
+      "en": "Great Lakes",
+      "lat": 45,
+      "lon": -83,
+      "note": "北美洲五座相連的大湖,是世界最大的淡水湖群。"
+    },
+    {
+      "k": "lake",
+      "zh": "維多利亞湖",
+      "en": "Lake Victoria",
+      "lat": -1,
+      "lon": 33,
+      "note": "非洲面積最大的湖泊,尼羅河的主要水源之一。"
+    },
+    {
+      "k": "lake",
+      "zh": "死海",
+      "en": "Dead Sea",
+      "lat": 31.5,
+      "lon": 35.5,
+      "note": "地球陸地最低點,鹽度極高,人可輕易浮於水面。"
+    },
+    {
+      "k": "lake",
+      "zh": "的的喀喀湖",
+      "en": "Lake Titicaca",
+      "lat": -15.8,
+      "lon": -69.4,
+      "note": "南美洲面積最大的高山湖泊,橫跨秘魯與玻利維亞。"
+    },
+    {
+      "k": "lake",
+      "zh": "鹹海",
+      "en": "Aral Sea",
+      "lat": 45,
+      "lon": 59.5,
+      "note": "曾是世界第四大湖,因灌溉引水過度已大幅縮小,是著名的生態警示案例。"
+    },
+    {
+      "k": "other",
+      "zh": "大堡礁",
+      "en": "Great Barrier Reef",
+      "lat": -18,
+      "lon": 147,
+      "note": "世界最大的珊瑚礁系統,位於澳洲東北海域。"
+    },
+    {
+      "k": "other",
+      "zh": "維多利亞瀑布",
+      "en": "Victoria Falls",
+      "lat": -17.925,
+      "lon": 25.858,
+      "note": "世界最大的瀑布之一,位於尚比西河上,橫跨尚比亞與辛巴威。"
+    },
+    {
+      "k": "other",
+      "zh": "尼加拉瀑布",
+      "en": "Niagara Falls",
+      "lat": 43.08,
+      "lon": -79.07,
+      "note": "北美洲著名瀑布,橫跨美國與加拿大邊界。"
+    },
+    {
+      "k": "other",
+      "zh": "科羅拉多大峽谷",
+      "en": "Grand Canyon",
+      "lat": 36.1,
+      "lon": -112.11,
+      "note": "科羅拉多河切鑿數百萬年形成的巨大峽谷,美國代表性地景。"
+    },
+    {
+      "k": "other",
+      "zh": "東非大裂谷",
+      "en": "East African Rift",
+      "lat": 0,
+      "lon": 36,
+      "note": "地殼正在分裂形成的巨大裂谷帶,縱貫非洲東部。"
+    },
+    {
+      "k": "other",
+      "zh": "亞馬遜雨林",
+      "en": "Amazon Rainforest",
+      "lat": -4,
+      "lon": -60,
+      "note": "世界最大的熱帶雨林,生物多樣性極高,有「地球之肺」之稱。"
+    },
+    {
+      "k": "other",
+      "zh": "西伯利亞針葉林",
+      "en": "Siberian Taiga",
+      "lat": 60,
+      "lon": 100,
+      "note": "世界最大的森林帶,橫跨西伯利亞的針葉林。"
+    },
+    {
+      "k": "other",
+      "zh": "潘帕斯",
+      "en": "Gran Chaco",
+      "lat": -23,
+      "lon": -61,
+      "note": "南美洲的半乾燥低地平原,橫跨阿根廷、巴拉圭與玻利維亞。"
+    }
   ]
 }

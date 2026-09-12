@@ -152,14 +152,18 @@ export function createEncyclopedia() {
       `<div class="enc-en">${esc(d.name_en || "")}</div>` +
       `<h2>${esc(d.name_zh || code)}</h2>` +
       (d.summary ? `<p class="enc-lead">${esc(d.summary)}</p>` : "") +
+      `<p class="enc-ext-hint">帶 <span class="enc-ext">↗</span> 的標題與圖片可點擊,連到維基百科查看更完整的介紹(另開新分頁)。</p>` +
       `</div>${flag}</header>`;
 
     const alert = travelAlertData && travelAlertData.countries ? travelAlertData.countries[code] : null;
     if (alert) {
+      const stars = "★".repeat(alert.level) + "☆".repeat(4 - alert.level);
       h += section("旅遊安全提醒",
         `<div class="enc-alert" style="border-color:${esc(alert.color)}">` +
           `<span class="enc-alert-dot" style="background:${esc(alert.color)}"></span>` +
           `<b>${esc(alert.label)}</b>` +
+          `<span class="enc-alert-stars" style="color:${esc(alert.color)}" title="危險程度 ${alert.level}/4">${stars}</span>` +
+          (alert.reason ? `<p class="enc-dim">危險原因:${esc(alert.reason)}</p>` : "") +
           (alert.note ? `<p class="enc-dim">特定地區:${esc(alert.note)}</p>` : "") +
         `</div>` +
         `<p class="enc-dim enc-fx-src">資料來源:中華民國外交部領事事務局(查詢日 ${esc(travelAlertData.as_of || "")}) · ` +

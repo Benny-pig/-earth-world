@@ -103,10 +103,13 @@ export function createSidePanel({ onClose, onMore }) {
 
     if (p.travelAlert) {
       const a = p.travelAlert;
+      const stars = "★".repeat(a.level) + "☆".repeat(4 - a.level);
       html += `<div class="sp-alert" style="border-color:${esc(a.color)}">` +
         `<span class="sp-alert-dot" style="background:${esc(a.color)}"></span>` +
         `<b>${esc(a.label)}</b>` +
+        `<span class="sp-alert-stars" style="color:${esc(a.color)}" title="危險程度 ${a.level}/4">${stars}</span>` +
         (a.note ? `<span class="sp-alert-note">・特定地區:${esc(a.note)}</span>` : "") +
+        (a.reason ? `<span class="sp-alert-reason">${esc(a.reason)}</span>` : "") +
         `</div>`;
     }
 

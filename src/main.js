@@ -15,6 +15,7 @@ import { createTooltip } from "./ui/tooltip.js";
 import { createOceanLabels } from "./scene/ocean-labels.js";
 import { createCountryLabels } from "./scene/country-labels.js";
 import { createPhysicalLabels } from "./scene/physical-labels.js";
+import { createNaturePopup } from "./ui/nature-popup.js";
 import { createSidePanel } from "./ui/side-panel.js";
 import { createClockWeather } from "./ui/clock-weather.js";
 import { createTwClock } from "./ui/tw-clock.js";
@@ -178,9 +179,11 @@ export function start() {
   const rig = createCameraRig({ camera, domElement: renderer.domElement, globeObject: globe.object });
   window.__earth.rig = rig;
 
-  const oceanLabels = createOceanLabels({ globeObject: globe.object, camera, renderer });
+  const naturePopup = createNaturePopup();
+  window.__earth.naturePopup = naturePopup;
+  const oceanLabels = createOceanLabels({ globeObject: globe.object, camera, renderer, naturePopup });
   window.__earth.oceanLabels = oceanLabels;
-  const physicalLabels = createPhysicalLabels({ globeObject: globe.object, camera, renderer });
+  const physicalLabels = createPhysicalLabels({ globeObject: globe.object, camera, renderer, naturePopup });
   window.__earth.physicalLabels = physicalLabels;
 
   // hover 暫停:用 raycaster 判斷游標是否指到地球(Task 7 會擴充成國家偵測,這裡先做地球層級)

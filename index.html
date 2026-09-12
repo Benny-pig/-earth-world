@@ -50,7 +50,10 @@
     font: 500 12.5px/1.15 system-ui, "Microsoft JhengHei", sans-serif;
     transition: opacity 0.3s linear;
   }
-  #country-labels .c-label .zh { display: block; font-size: 13px; letter-spacing: 0.08em; }
+  #country-labels .c-label .zh {
+    display: block; font-size: 13px; letter-spacing: 0.08em;
+    border-bottom: 1px dotted rgba(238,244,255,.55); padding-bottom: 1px;
+  }
   #country-labels .c-label .en { display: block; font-size: 9px; letter-spacing: 0.06em; opacity: 0.7; margin-top: 1px; }
   #ocean-labels { position: fixed; inset: 0; pointer-events: none; z-index: 38; overflow: hidden; }
   #ocean-labels .ocean-label {
@@ -63,6 +66,9 @@
     transition: opacity 0.25s linear;
   }
   #ocean-labels .ocean-label .zh { display: block; font-size: 16px; }
+  #ocean-labels .ocean-label-clickable { pointer-events: auto; cursor: pointer; }
+  #ocean-labels .ocean-label-clickable .zh { border-bottom: 1px dotted rgba(207,227,255,.5); padding-bottom: 1px; }
+  #ocean-labels .ocean-label-clickable:hover { color: #eaf4ff; }
   #ocean-labels .ocean-label .en { display: block; font-size: 10px; letter-spacing: 0.15em; opacity: 0.75; margin-top: 2px; }
   #physical-labels { position: fixed; inset: 0; pointer-events: none; z-index: 37; overflow: hidden; }
   #physical-labels .physical-label {
@@ -73,6 +79,25 @@
   }
   #physical-labels .pl-ico { display: block; font-size: 8px; line-height: 1; margin-bottom: 1px; opacity: .85; font-style: normal; }
   #physical-labels .pl-zh { display: block; font-size: 10px; letter-spacing: .04em; }
+  #physical-labels .pl-clickable { pointer-events: auto; cursor: pointer; }
+  #physical-labels .pl-clickable .pl-zh { border-bottom: 1px dotted rgba(154,171,196,.6); padding-bottom: 1px; }
+  #physical-labels .pl-clickable:hover { opacity: 1 !important; color: #c9d6ea; }
+  #nature-popup {
+    position: fixed; z-index: 43; max-width: 260px; display: none;
+    padding: 12px 14px; border-radius: 10px; background: rgba(10, 14, 26, 0.92);
+    backdrop-filter: blur(10px); border: 1px solid rgba(120, 170, 255, 0.3);
+    color: #e7edfb; font: 13px/1.5 system-ui, "Microsoft JhengHei", sans-serif;
+    box-shadow: 0 8px 28px rgba(0,0,0,.45);
+  }
+  #nature-popup.open { display: block; }
+  #nature-popup .np-close {
+    position: absolute; top: 6px; right: 8px; cursor: pointer;
+    background: none; border: none; color: #9fb2d8; font-size: 18px; line-height: 1;
+  }
+  #nature-popup .np-title { padding-right: 20px; font-size: 15px; }
+  #nature-popup .np-ico { margin-right: 5px; opacity: .85; }
+  #nature-popup .np-en { color: #9fb2d8; font-size: 11.5px; margin-top: 1px; }
+  #nature-popup .np-note { margin: 8px 0 0; color: #dbe4f7; }
   #physical-labels .pl-en { display: block; font-size: 7px; letter-spacing: .03em; opacity: .58; margin-top: 1px; }
   #physical-labels .pl-mountain .pl-ico, #physical-labels .pl-peak .pl-ico { color: #c9a876; }
   #physical-labels .pl-river .pl-ico, #physical-labels .pl-lake .pl-ico { color: #6fa8cf; }
@@ -103,7 +128,9 @@
     background: rgba(255,255,255,.05); font-size: 12.5px; color: #dbe4f7;
   }
   #side-panel .sp-alert-dot { width: 8px; height: 8px; border-radius: 50%; flex: none; }
+  #side-panel .sp-alert-stars { font-size: 12px; letter-spacing: 1px; }
   #side-panel .sp-alert-note { color: #9fb2d8; font-size: 11.5px; }
+  #side-panel .sp-alert-reason { flex-basis: 100%; color: #b9c6e6; font-size: 11.5px; }
   #side-panel .sp-clock {
     margin: 0 0 18px; padding: 10px 12px; border-radius: 8px;
     background: rgba(120, 170, 255, 0.08); border: 1px solid rgba(120, 170, 255, 0.18);
@@ -361,6 +388,9 @@
     background: var(--enc-surface); color: var(--enc-ink); font-size: 14px;
   }
   #encyclopedia .enc-alert-dot { width: 9px; height: 9px; border-radius: 50%; flex: none; }
+  #encyclopedia .enc-alert-stars { font-size: 13px; letter-spacing: 1px; }
+  #encyclopedia .enc-ext-hint { margin: 10px 0 0; font-size: 12px; color: var(--enc-ink-dim); }
+  #encyclopedia .enc-ext-hint .enc-ext { opacity: 1; }
   #encyclopedia .enc-alert p { margin: 4px 0 0; width: 100%; font-size: 12.5px; }
   #encyclopedia a { color: var(--enc-accent); }
   #encyclopedia .enc-credits a { color: var(--enc-accent); }
@@ -480,6 +510,7 @@
   <div id="country-labels"></div>
   <div id="ocean-labels"></div>
   <div id="physical-labels"></div>
+  <div id="nature-popup"></div>
   <div id="side-panel"><button class="close" aria-label="關閉">×</button><div id="side-panel-body"></div></div>
   <div id="clock-weather"><div class="cw-hint">將滑鼠移到國家並點擊,看當地時間與天氣</div></div>
   <div id="audio-ui">

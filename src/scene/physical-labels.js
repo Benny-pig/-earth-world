@@ -26,7 +26,7 @@ const KIND = {
 // 鏡頭距離:>FAR 全隱,<NEAR 全顯,之間線性
 const FAR = 2.5, NEAR = 1.75;
 
-export function createPhysicalLabels({ globeObject, camera, renderer }) {
+export function createPhysicalLabels({ globeObject, camera, renderer, naturePopup }) {
   const host = document.getElementById("physical-labels");
   if (!host) return { update() {} };
 
@@ -42,6 +42,12 @@ export function createPhysicalLabels({ globeObject, camera, renderer }) {
         el.innerHTML = `<span class="pl-ico">${kind.icon}</span><span class="pl-zh"></span><span class="pl-en"></span>`;
         el.querySelector(".pl-zh").textContent = f.zh;
         el.querySelector(".pl-en").textContent = f.en;
+        if (naturePopup && f.note) {
+          el.classList.add("pl-clickable");
+          el.addEventListener("click", (e) => {
+            naturePopup.show({ icon: kind.icon, zh: f.zh, en: f.en, note: f.note }, e.clientX, e.clientY);
+          });
+        }
         host.appendChild(el);
         return { el, dir: latLonToVec3(f.lat, f.lon, 1), anchor: new THREE.Vector3(), ndc: new THREE.Vector3(), shown: false };
       });
