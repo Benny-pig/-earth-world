@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { latLonToXYZ, subsolarPoint } from "/src/lib/geo.js";
+import { latLonToXYZ, subsolarPoint } from "../lib/geo.js";
 
 const SPIN_RATE = (2 * Math.PI) / 120; // 一圈 120 秒 —— 放慢成從容的自轉,看得到晨昏線掃過大陸
 
@@ -36,9 +36,9 @@ export function createGlobe({ onAllTexturesFailed } = {}) {
   // 非同步套貼圖;失敗就保留純色球
   (async () => {
     const [color, normal, night] = await Promise.all([
-      load("/assets/earth-color-8k.jpg", THREE.SRGBColorSpace),
-      load("/assets/earth-normal.jpg"),
-      load("/assets/earth-night-8k.jpg", THREE.SRGBColorSpace),
+      load("assets/earth-color-8k.jpg", THREE.SRGBColorSpace),
+      load("assets/earth-normal.jpg"),
+      load("assets/earth-night-8k.jpg", THREE.SRGBColorSpace),
     ]);
     if (color) { material.map = color; material.color.set(0xffffff); color.anisotropy = 8; }
     if (normal) { material.normalMap = normal; material.normalScale.set(0.8, 0.8); }

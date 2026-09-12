@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { iterCountryPolygons, countryCode, countryNames } from "/src/countries/borders.js";
+import { iterCountryPolygons, countryCode, countryNames } from "../countries/borders.js";
 
 const DEG = Math.PI / 180;
 const MIN_AREA_NEAR = 0.4;   // deg^2 — when zoomed in, even small countries get a label

@@ -1,6 +1,6 @@
-import { esc } from "/src/lib/esc.js";
-import { createAdminMap } from "/src/ui/admin-map.js";
-import { createTransitMap } from "/src/ui/transit-map.js";
+import { esc } from "../lib/esc.js";
+import { createAdminMap } from "./admin-map.js";
+import { createTransitMap } from "./transit-map.js";
 
 // 有捷運路網示意圖的國家 → 城市檔名(data/transit/<city>.json)
 const TRANSIT = { TW: "taipei", JP: "tokyo", KR: "seoul", US: "newyork", SG: "singapore" };
@@ -12,7 +12,7 @@ export function createEncyclopedia() {
 
   // 哪些國家有一級行政區地圖(data/admin1/index.json;載入前先當作沒有)
   let adminSet = null;
-  fetch("/data/admin1/index.json").then((r) => (r.ok ? r.json() : [])).then((a) => { adminSet = new Set(a); }).catch(() => { adminSet = new Set(); });
+  fetch("data/admin1/index.json").then((r) => (r.ok ? r.json() : [])).then((a) => { adminSet = new Set(a); }).catch(() => { adminSet = new Set(); });
   const hasAdminMap = (code) => adminSet && adminSet.has(code);
   const el = document.getElementById("encyclopedia");
   const titleEl = el.querySelector(".enc-title");
@@ -44,7 +44,7 @@ export function createEncyclopedia() {
   const cache = new Map();
   let reqSeq = 0;
 
-  const IMG_BASE = "/assets/deep/";
+  const IMG_BASE = "assets/deep/";
 
   // ---- 即時匯率(以新台幣為基準,免金鑰,約每日更新)----
   let fxData = null, fxAt = 0;
@@ -289,7 +289,7 @@ export function createEncyclopedia() {
     box.innerHTML = `<h4 class="enc-sub">${esc(name)}</h4><p class="enc-dim">載入中…</p>`;
     let data = regionCache.get(code);
     if (!data) {
-      data = fetch(`/data/admin1/${encodeURIComponent(code)}.regions.json`).then((r) => (r.ok ? r.json() : {})).catch(() => ({}));
+      data = fetch(`data/admin1/${encodeURIComponent(code)}.regions.json`).then((r) => (r.ok ? r.json() : {})).catch(() => ({}));
       regionCache.set(code, data);
     }
     const map = await data;
@@ -310,7 +310,7 @@ export function createEncyclopedia() {
 
     if (cache.has(code)) { if (seq === reqSeq) render(code, cache.get(code)); return; }
     try {
-      const r = await fetch(`/data/deep/${encodeURIComponent(codeToFile(code))}.json`);
+      const r = await fetch(`data/deep/${encodeURIComponent(codeToFile(code))}.json`);
       if (seq !== reqSeq) return;            // 已切到別國
       if (!r.ok) throw new Error("not found");
       const d = await r.json();

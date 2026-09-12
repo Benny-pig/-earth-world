@@ -31,7 +31,7 @@ export function createPhysicalLabels({ globeObject, camera, renderer }) {
   if (!host) return { update() {} };
 
   let labels = [];
-  fetch("/data/physical.json")
+  fetch("data/physical.json")
     .then((r) => (r.ok ? r.json() : null))
     .then((d) => {
       if (!d || !Array.isArray(d.features)) return;

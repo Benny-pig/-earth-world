@@ -85,7 +85,7 @@ export function createStarfield() {
   milkyWay.renderOrder = -2;
   group.add(milkyWay);
   new THREE.TextureLoader().load(
-    "/assets/milky-way-8k.jpg",
+    "assets/milky-way-8k.jpg",
     (t) => { t.colorSpace = THREE.SRGBColorSpace; mwMat.map = t; mwMat.needsUpdate = true; },
     undefined,
     () => console.warn("[starfield] 銀河貼圖載入失敗,改用純星點背景"),

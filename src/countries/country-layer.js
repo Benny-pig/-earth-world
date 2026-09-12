@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import earcut from "earcut";
-import { latLonToXYZ, ringCentroid } from "/src/lib/geo.js";
-import { iterCountryPolygons, countryCode, countryNames } from "/src/countries/borders.js";
+import { latLonToXYZ, ringCentroid } from "../lib/geo.js";
+import { iterCountryPolygons, countryCode, countryNames } from "./borders.js";
 
 const HOVER_COLOR = 0x66e0ff;
 const BASE_OPACITY = 0.001;

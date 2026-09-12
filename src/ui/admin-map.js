@@ -8,7 +8,7 @@ export function createAdminMap() {
 
   async function load(code) {
     if (cache.has(code)) return cache.get(code);
-    const p = fetch(`/data/admin1/${encodeURIComponent(code)}.geo.json`).then((r) => (r.ok ? r.json() : null)).catch(() => null);
+    const p = fetch(`data/admin1/${encodeURIComponent(code)}.geo.json`).then((r) => (r.ok ? r.json() : null)).catch(() => null);
     cache.set(code, p);
     return p;
   }

@@ -17,7 +17,7 @@ export function createClouds() {
   mesh.renderOrder = 1;
 
   new THREE.TextureLoader().load(
-    "/assets/earth-clouds-2k.jpg",
+    "assets/earth-clouds-2k.jpg",
     (t) => {
       t.colorSpace = THREE.NoColorSpace;      // alpha data, not colour
       t.anisotropy = 8;

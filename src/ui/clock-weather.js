@@ -1,4 +1,4 @@
-import { formatZonedTime, weatherCodeToIcon } from "/src/lib/geo.js";
+import { formatZonedTime, weatherCodeToIcon } from "../lib/geo.js";
 
 const TEN_MIN = 10 * 60 * 1000;
 const HINT = "將滑鼠移到國家並點擊,看當地時間與天氣";

@@ -1,6 +1,6 @@
 import * as THREE from "three";
-import { latLonToXYZ } from "/src/lib/geo.js";
-import { zhHantName } from "/src/countries/country-names.js";
+import { latLonToXYZ } from "../lib/geo.js";
+import { zhHantName } from "./country-names.js";
 
 export function countryCode(feature) {
   const p = feature.properties || {};

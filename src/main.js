@@ -4,23 +4,23 @@ import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
 import { UnrealBloomPass } from "three/addons/postprocessing/UnrealBloomPass.js";
 import { OutputPass } from "three/addons/postprocessing/OutputPass.js";
 import { SMAAPass } from "three/addons/postprocessing/SMAAPass.js";
-import { createStarfield } from "/src/scene/starfield.js";
-import { createGlobe } from "/src/scene/globe.js";
-import { createClouds } from "/src/scene/clouds.js";
-import { createCameraRig } from "/src/scene/camera-controls.js";
-import { buildBorders } from "/src/countries/borders.js";
-import { buildCountryLayer } from "/src/countries/country-layer.js";
-import { setZhHantNames } from "/src/countries/country-names.js";
-import { createTooltip } from "/src/ui/tooltip.js";
-import { createOceanLabels } from "/src/scene/ocean-labels.js";
-import { createCountryLabels } from "/src/scene/country-labels.js";
-import { createPhysicalLabels } from "/src/scene/physical-labels.js";
-import { createSidePanel } from "/src/ui/side-panel.js";
-import { createClockWeather } from "/src/ui/clock-weather.js";
-import { createTwClock } from "/src/ui/tw-clock.js";
-import { createCountrySearch } from "/src/ui/country-search.js";
-import { createMusic } from "/src/audio/music.js";
-import { createEncyclopedia } from "/src/ui/encyclopedia.js";
+import { createStarfield } from "./scene/starfield.js";
+import { createGlobe } from "./scene/globe.js";
+import { createClouds } from "./scene/clouds.js";
+import { createCameraRig } from "./scene/camera-controls.js";
+import { buildBorders } from "./countries/borders.js";
+import { buildCountryLayer } from "./countries/country-layer.js";
+import { setZhHantNames } from "./countries/country-names.js";
+import { createTooltip } from "./ui/tooltip.js";
+import { createOceanLabels } from "./scene/ocean-labels.js";
+import { createCountryLabels } from "./scene/country-labels.js";
+import { createPhysicalLabels } from "./scene/physical-labels.js";
+import { createSidePanel } from "./ui/side-panel.js";
+import { createClockWeather } from "./ui/clock-weather.js";
+import { createTwClock } from "./ui/tw-clock.js";
+import { createCountrySearch } from "./ui/country-search.js";
+import { createMusic } from "./audio/music.js";
+import { createEncyclopedia } from "./ui/encyclopedia.js";
 
 const container = document.getElementById("app");
 
@@ -105,9 +105,9 @@ export function start() {
   // 非同步載入 Natural Earth 110m 國界,掛在地球 group 上跟著自轉
   const tap = (p) => p.finally(() => loading.bumpData());
   Promise.all([
-    tap(fetch("/data/countries.geo.json").then((r) => { if (!r.ok) throw new Error("國界資料載入失敗 " + r.status); return r.json(); })),
-    tap(fetch("/data/country-names-zh-hant.json").then((r) => (r.ok ? r.json() : {})).catch(() => ({}))),
-    tap(fetch("/data/countries.content.json").then((r) => (r.ok ? r.json() : {})).catch(() => ({}))),
+    tap(fetch("data/countries.geo.json").then((r) => { if (!r.ok) throw new Error("國界資料載入失敗 " + r.status); return r.json(); })),
+    tap(fetch("data/country-names-zh-hant.json").then((r) => (r.ok ? r.json() : {})).catch(() => ({}))),
+    tap(fetch("data/countries.content.json").then((r) => (r.ok ? r.json() : {})).catch(() => ({}))),
   ])
     .then(([geojson, zhHant, content]) => {
       setZhHantNames(zhHant);

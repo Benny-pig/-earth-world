@@ -6,7 +6,7 @@ const cache = new Map();
 export function createTransitMap() {
   async function load(city) {
     if (cache.has(city)) return cache.get(city);
-    const p = fetch(`/data/transit/${encodeURIComponent(city)}.json`)
+    const p = fetch(`data/transit/${encodeURIComponent(city)}.json`)
       .then((r) => (r.ok ? r.json() : null)).catch(() => null);
     cache.set(city, p);
     return p;

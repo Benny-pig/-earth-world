@@ -1,4 +1,4 @@
-import { formatZonedTime } from "/src/lib/geo.js";
+import { formatZonedTime } from "../lib/geo.js";
 
 // 左上角常駐:台灣(中華民國)當地時間,作為對照其他國家時間的基準。
 export function createTwClock() {
