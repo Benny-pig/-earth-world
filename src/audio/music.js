@@ -15,7 +15,7 @@ export const TRACKS = [
 ];
 
 export function createMusic({ defaultVolume = 0.55 } = {}) {
-  let trackId = TRACKS[0].id;
+  let trackId = "km-meditation";
   try { const s = localStorage.getItem(LS_KEY); if (s && TRACKS.some((x) => x.id === s)) trackId = s; } catch {}
 
   const audio = new Audio();
@@ -68,6 +68,17 @@ export function createMusic({ defaultVolume = 0.55 } = {}) {
   window.addEventListener("pointerdown", onGesture);
   window.addEventListener("keydown", onGesture);
 
+  // 切到別的分頁 / App 就暫停,回來再繼續播——不然背景音樂會無限期在背景耗電。
+  let pausedByVisibility = false;
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      if (started && !audio.paused) { audio.pause(); pausedByVisibility = true; }
+    } else if (pausedByVisibility) {
+      pausedByVisibility = false;
+      if (started) audio.play().catch(() => {});
+    }
+  });
+
   return {
     tracks: TRACKS,
     currentTrackId: () => trackId,
@@ -87,6 +98,10 @@ export function createMusic({ defaultVolume = 0.55 } = {}) {
     },
     toggleMute() {
       muted = !muted;
+      // iOS Safari 不理會 JS 動態改 audio.volume(這是 WebKit 長年的已知限制,
+      // 音量交給實體按鍵/靜音開關),只調 volume 在 iPhone 上按了跟沒按一樣。
+      // audio.muted 才是 iOS 真的會生效的開關,兩者都設才能跨平台都有效。
+      audio.muted = muted;
       fadeTo(muted ? 0 : targetVolume, 400);
       return muted;
     },

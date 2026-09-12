@@ -302,12 +302,18 @@ export function start() {
     openCountry(hit);
   });
 
-  window.addEventListener("resize", () => {
+  function syncSize() {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
     composer.setSize(window.innerWidth, window.innerHeight);
-  });
+  }
+  window.addEventListener("resize", syncSize);
+  // 手機瀏覽器的網址列收合/展開、或從別的頁面切回來,有時候 resize 事件觸發時
+  // window.innerWidth/Height 讀到的還是過渡中的中間值,canvas 尺寸因此卡住不對、
+  // 畫面側邊露出背景色看起來像被裁切。晚一點點再補算一次修正這種情況。
+  window.addEventListener("resize", () => setTimeout(syncSize, 300));
+  document.addEventListener("visibilitychange", () => { if (!document.hidden) setTimeout(syncSize, 100); });
 
   // 逐幀對 177 個國家的三角化 mesh 做 raycast 實測平均 ~2.6ms、尖峰可到 30ms+
   // (見 commit 說明),在高更新率螢幕上等於每秒白白燒好幾十次。hover 判定不需要
