@@ -108,11 +108,13 @@ export function start() {
     tap(fetch("data/countries.geo.json").then((r) => { if (!r.ok) throw new Error("國界資料載入失敗 " + r.status); return r.json(); })),
     tap(fetch("data/country-names-zh-hant.json").then((r) => (r.ok ? r.json() : {})).catch(() => ({}))),
     tap(fetch("data/countries.content.json").then((r) => (r.ok ? r.json() : {})).catch(() => ({}))),
+    tap(fetch("data/travel-alert.json").then((r) => (r.ok ? r.json() : null)).catch(() => null)),
   ])
-    .then(([geojson, zhHant, content]) => {
+    .then(([geojson, zhHant, content, travelAlert]) => {
       setZhHantNames(zhHant);
       window.__earth.content = content;
       window.__earth.geojson = geojson;
+      window.__earth.travelAlert = (travelAlert && travelAlert.countries) || {};
       const borders = buildBorders(geojson);
       globe.object.add(borders);
       window.__earth.borders = borders;
@@ -252,6 +254,7 @@ export function start() {
       food: c ? c.food : null,
       travel: c ? c.travel_months : null,
       history: c ? c.history : [],
+      travelAlert: (window.__earth.travelAlert || {})[hit.code] || null,
     });
     clockWeather.setCountry({
       code: hit.code,

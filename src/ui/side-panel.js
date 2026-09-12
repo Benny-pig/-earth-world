@@ -101,6 +101,15 @@ export function createSidePanel({ onClose, onMore }) {
     if (p.latlon) meta.push(`位置:${p.latlon[0].toFixed(1)}, ${p.latlon[1].toFixed(1)}`);
     if (meta.length) html += `<div class="meta">${meta.join("　·　")}</div>`;
 
+    if (p.travelAlert) {
+      const a = p.travelAlert;
+      html += `<div class="sp-alert" style="border-color:${esc(a.color)}">` +
+        `<span class="sp-alert-dot" style="background:${esc(a.color)}"></span>` +
+        `<b>${esc(a.label)}</b>` +
+        (a.note ? `<span class="sp-alert-note">・特定地區:${esc(a.note)}</span>` : "") +
+        `</div>`;
+    }
+
     if (p.timezone) html += `<div id="sp-clock" class="sp-clock"></div>`;
 
     if (p.features && p.features.length)

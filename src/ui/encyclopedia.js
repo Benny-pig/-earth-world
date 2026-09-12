@@ -14,6 +14,11 @@ export function createEncyclopedia() {
   let adminSet = null;
   fetch("data/admin1/index.json").then((r) => (r.ok ? r.json() : [])).then((a) => { adminSet = new Set(a); }).catch(() => { adminSet = new Set(); });
   const hasAdminMap = (code) => adminSet && adminSet.has(code);
+
+  // 外交部領事事務局旅遊警示等級(見 data/travel-alert.json 的產出腳本);載入前
+  // 就當作沒有資料,跟 adminSet 同樣的容錯方式,不擋 render()。
+  let travelAlertData = null;
+  fetch("data/travel-alert.json").then((r) => (r.ok ? r.json() : null)).then((j) => { travelAlertData = j; }).catch(() => { travelAlertData = null; });
   const el = document.getElementById("encyclopedia");
   const titleEl = el.querySelector(".enc-title");
   const bodyEl = document.getElementById("enc-body");
@@ -148,6 +153,20 @@ export function createEncyclopedia() {
       `<h2>${esc(d.name_zh || code)}</h2>` +
       (d.summary ? `<p class="enc-lead">${esc(d.summary)}</p>` : "") +
       `</div>${flag}</header>`;
+
+    const alert = travelAlertData && travelAlertData.countries ? travelAlertData.countries[code] : null;
+    if (alert) {
+      h += section("旅遊安全提醒",
+        `<div class="enc-alert" style="border-color:${esc(alert.color)}">` +
+          `<span class="enc-alert-dot" style="background:${esc(alert.color)}"></span>` +
+          `<b>${esc(alert.label)}</b>` +
+          (alert.note ? `<p class="enc-dim">特定地區:${esc(alert.note)}</p>` : "") +
+        `</div>` +
+        `<p class="enc-dim enc-fx-src">資料來源:中華民國外交部領事事務局(查詢日 ${esc(travelAlertData.as_of || "")}) · ` +
+        `<a href="https://www.boca.gov.tw/sp-trwa-list-1.html" target="_blank" rel="noopener">查看最新公告 ↗</a><br>` +
+        `${esc(travelAlertData.disclaimer || "")}</p>`
+      );
+    }
 
     const qf = d.quick_facts || {};
     const rows = [];

@@ -1,0 +1,1003 @@
+{
+  "as_of": "2026-09-12",
+  "source": "中華民國外交部領事事務局 全球旅遊警示 https://www.boca.gov.tw/sp-trwa-list-1.html",
+  "disclaimer": "警示等級會隨情勢變動,僅供參考,出發前請至外交部官網查詢最新狀態。",
+  "countries": {
+    "AU": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "BN": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "FJ": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "JP": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "KR": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "MY": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "MV": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "NZ": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "PH": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": "民答那峨島"
+    },
+    "SG": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "VN": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "AL": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "AT": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "BA": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "BG": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "HR": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "CY": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "DK": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "EE": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "FI": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "FR": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "DE": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "GR": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "HU": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "IE": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "IT": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "XK": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "LV": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "LT": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "LU": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "ME": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "NL": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "MK": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "PL": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "PT": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "RO": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "RS": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "SI": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "ES": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "CH": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "CZ": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "SK": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "GB": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "CA": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "US": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": "夏威夷州"
+    },
+    "BS": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "PY": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "AR": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "UY": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null
+    },
+    "BD": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null
+    },
+    "BT": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null
+    },
+    "IN": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": "鄰近巴基斯坦地區"
+    },
+    "ID": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": "中巴布亞省及高地巴布亞省"
+    },
+    "MM": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": "克欽邦等地區"
+    },
+    "NC": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null
+    },
+    "TH": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": "烏汶府等7府"
+    },
+    "TL": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null
+    },
+    "VU": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null
+    },
+    "IL": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null
+    },
+    "KZ": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null
+    },
+    "KG": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": "與塔吉克及烏茲別克接壤邊界地區"
+    },
+    "MN": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null
+    },
+    "TJ": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": "與阿富汗、吉爾吉斯及烏茲別克接壤邊界地區"
+    },
+    "TR": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null
+    },
+    "TM": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null
+    },
+    "UZ": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null
+    },
+    "BE": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null
+    },
+    "IS": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null
+    },
+    "NO": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null
+    },
+    "SE": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null
+    },
+    "CI": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": "北部及西部邊境地區"
+    },
+    "SZ": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null
+    },
+    "MZ": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": "Cabo Delgado省"
+    },
+    "NA": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null
+    },
+    "BZ": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null
+    },
+    "CL": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null
+    },
+    "CR": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null
+    },
+    "DO": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null
+    },
+    "SV": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null
+    },
+    "GT": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null
+    },
+    "HN": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null
+    },
+    "JM": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null
+    },
+    "MX": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null
+    },
+    "PA": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null
+    },
+    "SR": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null
+    },
+    "PR": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null
+    },
+    "KH": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": "柏威夏省等6省"
+    },
+    "LA": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null
+    },
+    "NP": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null
+    },
+    "SB": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null
+    },
+    "AM": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null
+    },
+    "AZ": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null
+    },
+    "GE": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null
+    },
+    "JO": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null
+    },
+    "KW": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null
+    },
+    "OM": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null
+    },
+    "SA": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null
+    },
+    "QA": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null
+    },
+    "AE": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null
+    },
+    "DZ": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null
+    },
+    "AO": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null
+    },
+    "BW": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null
+    },
+    "GH": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null
+    },
+    "KE": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null
+    },
+    "LS": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null
+    },
+    "LR": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null
+    },
+    "MG": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null
+    },
+    "MW": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null
+    },
+    "MA": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null
+    },
+    "RW": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null
+    },
+    "SL": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null
+    },
+    "ZA": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": "含開普敦"
+    },
+    "TZ": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": "南部3省區及西部2省區"
+    },
+    "GM": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null
+    },
+    "ZM": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null
+    },
+    "EG": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": "西奈半島、與利比亞及蘇丹邊境"
+    },
+    "BO": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null
+    },
+    "BR": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": "含東南部及南部"
+    },
+    "CO": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null
+    },
+    "CU": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null
+    },
+    "EC": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null
+    },
+    "GY": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null
+    },
+    "NI": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null
+    },
+    "TT": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null
+    },
+    "AF": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null
+    },
+    "BY": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null
+    },
+    "IR": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null
+    },
+    "IQ": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null
+    },
+    "LB": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null
+    },
+    "PK": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null
+    },
+    "PS": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": "約旦河西岸地區、加薩走廊"
+    },
+    "RU": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null
+    },
+    "SY": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null
+    },
+    "YE": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null
+    },
+    "KP": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null
+    },
+    "PG": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null
+    },
+    "BJ": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null
+    },
+    "BF": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null
+    },
+    "BI": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null
+    },
+    "CM": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null
+    },
+    "CF": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null
+    },
+    "TD": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null
+    },
+    "DJ": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null
+    },
+    "GQ": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null
+    },
+    "ER": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null
+    },
+    "ET": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null
+    },
+    "GA": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null
+    },
+    "GN": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null
+    },
+    "LY": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null
+    },
+    "ML": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null
+    },
+    "MR": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null
+    },
+    "NE": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null
+    },
+    "NG": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null
+    },
+    "CG": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": "布拉薩"
+    },
+    "CD": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": "金夏沙"
+    },
+    "SN": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null
+    },
+    "SO": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null
+    },
+    "SOMALILAND": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null
+    },
+    "SS": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null
+    },
+    "SD": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null
+    },
+    "UG": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null
+    },
+    "ZW": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null
+    },
+    "TN": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": "中西部山區及邊界地區"
+    },
+    "UA": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null
+    },
+    "HT": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null
+    },
+    "VE": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null
+    }
+  }
+}
