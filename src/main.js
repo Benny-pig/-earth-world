@@ -137,15 +137,23 @@ export function start() {
   const clouds = createClouds();
   scene.add(clouds.object);
 
-  const renderer = new THREE.WebGLRenderer({ antialias: true });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  // EffectComposer 的 RenderPass 是畫到離屏 render target,不是直接畫到 canvas,
+  // renderer 自己的 antialias:true 在這個管線裡對主要畫面幾乎沒有實際效果、只是
+  // 白白多開一份 MSAA buffer;真正的反鋸齒是下面的 SMAAPass,兩者疊加是做兩次一樣
+  // 的事。DPR 上限從 2 降到 1.5:高解析度螢幕上 2x 是 4 倍像素、1.5x 只要 2.25 倍,
+  // bloom/SMAA 這些全螢幕後製通道成本跟著像素數量等比放大,對內顯卡筆電影響最大
+  // (使用者回報「別人電腦開著整台變超卡、連滑鼠都lag」,GPU 長時間被榨滿是典型
+  // 症狀)。
+  const MAX_PIXEL_RATIO = 1.5;
+  const renderer = new THREE.WebGLRenderer({ antialias: false });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, MAX_PIXEL_RATIO));
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
   renderer.toneMappingExposure = 1.0;
   container.appendChild(renderer.domElement);
 
   const composer = new EffectComposer(renderer);
-  composer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  composer.setPixelRatio(Math.min(window.devicePixelRatio, MAX_PIXEL_RATIO));
   composer.setSize(window.innerWidth, window.innerHeight);
   composer.addPass(new RenderPass(scene, camera));
   const bloomPass = new UnrealBloomPass(
