@@ -86,6 +86,11 @@ export function createGlobe({ onAllTexturesFailed } = {}) {
   aimSun();
   const sunTimer = setInterval(() => aimSun(), 5 * 60 * 1000);
 
+  // 分頁在背景太久,瀏覽器會節流/暫停 setInterval,太陽位置停在舊值;
+  // 切回分頁時立刻補算一次,不用等下一個 5 分鐘或使用者重新整理。
+  function onVisible() { if (document.visibilityState === "visible") aimSun(); }
+  document.addEventListener("visibilitychange", onVisible);
+
   let paused = false;
   return {
     object,
@@ -93,7 +98,7 @@ export function createGlobe({ onAllTexturesFailed } = {}) {
     sun,
     lightRig,
     aimSun,
-    dispose() { clearInterval(sunTimer); },
+    dispose() { clearInterval(sunTimer); document.removeEventListener("visibilitychange", onVisible); },
     setSpinPaused(v) { paused = v; },
     update(dt) { if (!paused) object.rotation.y += SPIN_RATE * dt; },
   };
