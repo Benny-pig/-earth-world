@@ -6,11 +6,16 @@
 
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { dirname } from "node:path";
+import { pathToFileURL } from "node:url";
 
-export function buildTaskBody({ model, prompt, imageDataUri, durationSec }) {
+export function buildTaskBody({ model, prompt, imageDataUri, durationSec, resolution }) {
   const content = [{ type: "text", text: prompt }];
   if (imageDataUri) content.push({ type: "image_url", image_url: { url: imageDataUri } });
-  return { model, content, duration: durationSec };
+  return { model, content, duration: durationSec, resolution };
+}
+
+export function isMainModule(argv1, metaUrl) {
+  return Boolean(argv1) && metaUrl === pathToFileURL(argv1).href;
 }
 
 export function backoffDelayMs(attempt) {
@@ -18,13 +23,14 @@ export function backoffDelayMs(attempt) {
 }
 
 export function parseArgs(argv) {
-  const out = { image: undefined, prompt: undefined, duration: undefined, out: undefined };
+  const out = { image: undefined, prompt: undefined, duration: undefined, out: undefined, resolution: undefined };
   for (let i = 0; i < argv.length; i++) {
     const flag = argv[i];
     if (flag === "--image") out.image = argv[++i];
     else if (flag === "--prompt") out.prompt = argv[++i];
     else if (flag === "--duration") out.duration = Number(argv[++i]);
     else if (flag === "--out") out.out = argv[++i];
+    else if (flag === "--resolution") out.resolution = argv[++i];
   }
   return out;
 }
@@ -34,11 +40,11 @@ export async function imageToDataUri(filePath) {
   return `data:image/jpeg;base64,${buf.toString("base64")}`;
 }
 
-// NOTE: The endpoint path (/contents/generations/tasks) and body structure below
-// are inferred from general Volcengine Ark conventions used by other generative models,
-// NOT verified against official Seedance 2.5 documentation. Once official API docs are
-// available, only these two functions may need adjustment if the wire format differs.
-// Task 6 (manual smoke test with real API) is where such discrepancies are discovered.
+// 附註:下面的端點路徑(/contents/generations/tasks)與 body 結構,
+// 是依火山引擎(Volcengine)Ark 其他生成式模型的一般慣例推斷出來的,
+// 並未對照 Seedance 2.5 官方文件驗證過。等官方文件出來後,若實際格式不同,
+// 大概只需要調整這兩個函式。Task 6(用真實 API 做的手動 smoke test)就是
+// 用來抓出這類落差的地方。
 export async function submitTask(body, { apiKey, baseUrl }) {
   const res = await fetch(`${baseUrl}/contents/generations/tasks`, {
     method: "POST",
@@ -67,7 +73,7 @@ export async function downloadVideo(url, outPath) {
 
 const defaultSleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-export async function generateVideo({ imagePath, prompt, durationSec, outPath, apiKey, baseUrl, model, deps = {} }) {
+export async function generateVideo({ imagePath, prompt, durationSec, outPath, apiKey, baseUrl, model, resolution, deps = {} }) {
   if (!apiKey) throw new Error("缺 apiKey(環境變數 SEEDANCE_API_KEY)");
   if (!baseUrl) throw new Error("缺 baseUrl(環境變數 SEEDANCE_API_BASE)");
   if (!model) throw new Error("缺 model(環境變數 SEEDANCE_MODEL)");
@@ -78,8 +84,10 @@ export async function generateVideo({ imagePath, prompt, durationSec, outPath, a
   const sleep = deps.sleep || defaultSleep;
 
   const imageDataUri = imagePath ? await imageToDataUri(imagePath) : undefined;
-  const body = buildTaskBody({ model, prompt, imageDataUri, durationSec });
-  const { id } = await doSubmit(body, { apiKey, baseUrl });
+  const body = buildTaskBody({ model, prompt, imageDataUri, durationSec, resolution });
+  const submitResult = await doSubmit(body, { apiKey, baseUrl });
+  if (!submitResult || !submitResult.id) throw new Error(`submitTask 回應缺少 id 欄位,API 格式可能跟預期不同:${JSON.stringify(submitResult)}`);
+  const id = submitResult.id;
 
   let attempt = 0;
   let result;
@@ -92,6 +100,7 @@ export async function generateVideo({ imagePath, prompt, durationSec, outPath, a
     await sleep(backoffDelayMs(attempt));
   }
 
+  if (!result.content || !result.content.video_url) throw new Error(`pollTask 回應缺少 content.video_url 欄位,API 格式可能跟預期不同:${JSON.stringify(result)}`);
   await doDownload(result.content.video_url, outPath);
   return { outPath };
 }
@@ -111,9 +120,10 @@ async function main() {
     apiKey: process.env.SEEDANCE_API_KEY,
     baseUrl: process.env.SEEDANCE_API_BASE,
     model: process.env.SEEDANCE_MODEL,
+    resolution: args.resolution || "480p",
   });
   console.log(`✓ 已存到 ${result.outPath}`);
 }
 
-const isMain = process.argv[1] && import.meta.url === `file://${process.argv[1].replace(/\\/g, "/")}`;
+const isMain = isMainModule(process.argv[1], import.meta.url);
 if (isMain) main().catch((err) => { console.error("失敗:", err.message); process.exit(1); });

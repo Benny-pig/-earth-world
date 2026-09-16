@@ -1,6 +1,12 @@
 // node video-merge.mjs TW JP CH GR
 // 掃 data/deep/<CODE>.json,對「已有 image 但沒有 video」的卡片、以及缺 hero_video 的國家,
 // 呼叫 tools/seedance.mjs 的 generateVideo 生成短片,存到 assets/deep/<CODE>/,回寫 JSON + credits。
+import fs from "node:fs";
+import path from "node:path";
+import readline from "node:readline";
+import { fileURLToPath, pathToFileURL } from "node:url";
+import { generateVideo } from "../../../tools/seedance.mjs";
+
 export const SECTIONS = ["animals", "foods", "landmarks", "people"];
 
 function withEn(zh, en) { return en ? `${zh}(${en})` : zh; }
@@ -27,20 +33,20 @@ export function heroPending(data) {
   return !data.hero_video;
 }
 
-import fs from "node:fs";
-import path from "node:path";
-import readline from "node:readline";
-import { fileURLToPath } from "node:url";
-import { generateVideo } from "../../../tools/seedance.mjs";
+export function isMainModule(argv1, metaUrl) {
+  return Boolean(argv1) && metaUrl === pathToFileURL(argv1).href;
+}
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const repo = path.resolve(here, "../../../");
 const codeToFile = (c) => c.replace(/[ .]/g, "_");
 const CLIP_DURATION_SEC = 5;
+const RESOLUTION = "480p";
+const RATE_USD_PER_SEC = { "480p": 0.15, "1080p": 0.79 };
 function sleep(ms) { return new Promise((r) => setTimeout(r, ms)); }
 
 async function generateOne({ apiKey, baseUrl, model, prompt, imagePath, outPath }) {
-  return generateVideo({ imagePath, prompt, durationSec: CLIP_DURATION_SEC, outPath, apiKey, baseUrl, model });
+  return generateVideo({ imagePath, prompt, durationSec: CLIP_DURATION_SEC, outPath, apiKey, baseUrl, model, resolution: RESOLUTION });
 }
 
 function confirm(question) {
@@ -61,6 +67,7 @@ async function run(codes, { skipConfirm = false } = {}) {
   // 不在使用者不知情的狀況下就開始打付費 API。
   const loaded = [];
   let totalClips = 0;
+  let skippedCards = 0;
   for (const code of codes) {
     const jsonPath = path.join(repo, "data", "deep", `${codeToFile(code)}.json`);
     if (!fs.existsSync(jsonPath)) { console.log(`[${code}] data/deep 檔不存在,跳過`); continue; }
@@ -68,18 +75,27 @@ async function run(codes, { skipConfirm = false } = {}) {
     d.credits = Array.isArray(d.credits) ? d.credits : [];
     const pendingCards = pickPendingCardItems(d);
     const needHero = heroPending(d);
+    let totalWithImage = 0;
+    for (const section of SECTIONS) {
+      for (const item of d[section] || []) {
+        if (item.image) totalWithImage++;
+      }
+    }
+    skippedCards += totalWithImage - pendingCards.length;
     totalClips += pendingCards.length + (needHero ? 1 : 0);
     loaded.push({ code, jsonPath, d, pendingCards, needHero });
   }
 
   if (totalClips === 0) { console.log("沒有需要生成的短片(全部已有 video/hero_video,或都沒有 image 可當參考圖)。"); return; }
-  console.log(`即將生成 ${totalClips} 支短片,預估總時長 ${totalClips * CLIP_DURATION_SEC} 秒。`);
+  const totalSec = totalClips * CLIP_DURATION_SEC;
+  const estUsd = (totalSec * RATE_USD_PER_SEC[RESOLUTION]).toFixed(2);
+  console.log(`即將生成 ${totalClips} 支短片,預估總時長 ${totalSec} 秒,以 ${RESOLUTION} 費率估計約 US$${estUsd}(第三方轉售參考價,實際費率以官方帳單為準)。`);
   if (!skipConfirm) {
     const ok = await confirm("確定要開始生成嗎?(y/N) ");
     if (!ok) { console.log("已取消,沒有呼叫任何 API。"); return; }
   }
 
-  let generated = 0, skipped = 0, failed = 0;
+  let generated = 0, skipped = skippedCards, failed = 0;
   const warnings = [];
 
   for (const { code, jsonPath, d, pendingCards, needHero } of loaded) {
@@ -128,11 +144,16 @@ async function run(codes, { skipConfirm = false } = {}) {
   console.log(`\n合計:生成 ${generated} 支、略過 ${skipped}、失敗 ${failed}`);
 }
 
-const isMain = process.argv[1] && import.meta.url === `file://${process.argv[1].replace(/\\/g, "/")}`;
+const isMain = isMainModule(process.argv[1], import.meta.url);
 if (isMain) {
   const rawArgs = process.argv.slice(2);
   const skipConfirm = rawArgs.includes("--yes");
-  const codes = rawArgs.filter((a) => a !== "--yes");
+  const codes = [];
+  for (const a of rawArgs) {
+    if (a === "--yes") continue;
+    if (a.startsWith("--")) { console.error(`忽略不認得的參數:${a}`); continue; }
+    codes.push(a);
+  }
   if (!codes.length) { console.error("用法: node video-merge.mjs TW JP CH GR [--yes]"); process.exit(1); }
   run(codes, { skipConfirm }).catch((err) => { console.error("失敗:", err); process.exit(1); });
 }

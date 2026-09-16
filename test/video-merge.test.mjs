@@ -1,6 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { buildCardPrompt, buildHeroPrompt, pickPendingCardItems, heroPending } from "../.superpowers/sdd/country-encyclopedia/video-merge.mjs";
+import { pathToFileURL } from "node:url";
+import { buildCardPrompt, buildHeroPrompt, pickPendingCardItems, heroPending, isMainModule } from "../.superpowers/sdd/country-encyclopedia/video-merge.mjs";
 
 test("buildCardPrompt 有 en 時帶括號", () => {
   const p = buildCardPrompt("animals", { zh: "日本獼猴", en: "Japanese macaque", note: "冬季會泡溫泉取暖。" });
@@ -29,4 +30,11 @@ test("pickPendingCardItems 只挑有 image 沒 video 的項目", () => {
 test("heroPending:沒有 hero_video 才要生成", () => {
   assert.equal(heroPending({}), true);
   assert.equal(heroPending({ hero_video: "hero.mp4" }), false);
+});
+
+test("isMainModule 用 pathToFileURL 正確比對含磁碟機代號的 Windows 路徑", () => {
+  const argv1 = "C:\\Users\\x\\video-merge.mjs";
+  assert.equal(isMainModule(argv1, pathToFileURL(argv1).href), true);
+  assert.equal(isMainModule(argv1, `file://${argv1.replace(/\\/g, "/")}`), false); // 舊版錯誤格式不該匹配
+  assert.equal(isMainModule(undefined, "file:///whatever"), false);
 });

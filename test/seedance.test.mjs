@@ -1,6 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { buildTaskBody, backoffDelayMs, parseArgs, generateVideo } from "../tools/seedance.mjs";
+import { pathToFileURL } from "node:url";
+import { buildTaskBody, backoffDelayMs, parseArgs, generateVideo, isMainModule } from "../tools/seedance.mjs";
 
 test("buildTaskBody 有參考圖時附 image_url", () => {
   const body = buildTaskBody({ model: "doubao-seedance-2.5", prompt: "測試", imageDataUri: "data:image/jpeg;base64,AAA", durationSec: 5 });
@@ -10,6 +11,18 @@ test("buildTaskBody 有參考圖時附 image_url", () => {
     { type: "text", text: "測試" },
     { type: "image_url", image_url: { url: "data:image/jpeg;base64,AAA" } },
   ]);
+});
+
+test("buildTaskBody 帶 resolution 時輸出包含 resolution 欄位", () => {
+  const body = buildTaskBody({ model: "doubao-seedance-2.5", prompt: "測試", imageDataUri: undefined, durationSec: 5, resolution: "480p" });
+  assert.equal(body.resolution, "480p");
+});
+
+test("isMainModule 用 pathToFileURL 正確比對含磁碟機代號的 Windows 路徑", () => {
+  const argv1 = "C:\\Users\\x\\tools\\seedance.mjs";
+  assert.equal(isMainModule(argv1, pathToFileURL(argv1).href), true);
+  assert.equal(isMainModule(argv1, `file://${argv1.replace(/\\/g, "/")}`), false); // 舊版錯誤格式不該匹配
+  assert.equal(isMainModule(undefined, "file:///whatever"), false);
 });
 
 test("buildTaskBody 無參考圖時只有文字(text-to-video)", () => {
@@ -25,8 +38,8 @@ test("backoffDelayMs 前三次固定 2000ms,之後每次 +1000ms,上限 10000ms"
 });
 
 test("parseArgs 解析 --flag value 配對", () => {
-  const args = parseArgs(["--image", "a.jpg", "--prompt", "hello world", "--duration", "5", "--out", "b.mp4"]);
-  assert.deepEqual(args, { image: "a.jpg", prompt: "hello world", duration: 5, out: "b.mp4" });
+  const args = parseArgs(["--image", "a.jpg", "--prompt", "hello world", "--duration", "5", "--out", "b.mp4", "--resolution", "480p"]);
+  assert.deepEqual(args, { image: "a.jpg", prompt: "hello world", duration: 5, out: "b.mp4", resolution: "480p" });
 });
 
 test("parseArgs 沒給的 flag 是 undefined", () => {
