@@ -5,3 +5,5 @@
 .DS_Store
 # subagent-driven 工作區(ledger、批次產出暫存)
 .superpowers/
+# git worktree(subagent-driven-development 隔離工作區)
+.worktrees/
