@@ -34,6 +34,11 @@ export async function imageToDataUri(filePath) {
   return `data:image/jpeg;base64,${buf.toString("base64")}`;
 }
 
+// NOTE: The endpoint path (/contents/generations/tasks) and body structure below
+// are inferred from general Volcengine Ark conventions used by other generative models,
+// NOT verified against official Seedance 2.5 documentation. Once official API docs are
+// available, only these two functions may need adjustment if the wire format differs.
+// Task 6 (manual smoke test with real API) is where such discrepancies are discovered.
 export async function submitTask(body, { apiKey, baseUrl }) {
   const res = await fetch(`${baseUrl}/contents/generations/tasks`, {
     method: "POST",
