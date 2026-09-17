@@ -114,9 +114,14 @@ export function createAdminMap() {
     }
 
     let lastDragEnd = 0;
-    g.addEventListener("click", (e) => {
+    // click 掛在 svg(不是 g)上:pointerdown 會 setPointerCapture 在 svg,瀏覽器因此把
+    // 之後合成的 click 事件也重新定位到 svg 本身(e.target 變成 svg,不是實際點到的形狀),
+    // 用 e.target.closest() 永遠找不到東西。改用 elementFromPoint 在點擊當下重新做真正的
+    // 命中測試,不受 pointer capture 影響。
+    svg.addEventListener("click", (e) => {
       if (Date.now() - lastDragEnd < 160) return;   // 剛拖曳過 → 不算點選
-      const hit = e.target.closest(".admin-region, .admin-label");
+      const real = document.elementFromPoint(e.clientX, e.clientY);
+      const hit = real && real.closest(".admin-region, .admin-label");
       if (!hit) return;
       // 標籤點到也算數,但「選取中」的藍色高亮永遠套在區域形狀上,不是文字本身
       const r = hit.classList.contains("admin-region") ? hit : g.querySelector(`.admin-region[data-name="${CSS.escape(hit.dataset.name)}"]`);
