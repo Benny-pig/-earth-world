@@ -46,6 +46,7 @@
   每張都在該國 JSON 的 `credits` 標註作者 / 授權 / 來源網址,大百科頁底列出。
 - 加新國家:內容 subagent 依 `.superpowers/sdd/country-encyclopedia/content-brief-template.md` 產 `batch-deep-N.json`
   → `node .superpowers/sdd/country-encyclopedia/deep-merge.mjs batch-deep-N.json`(驗授權 + 抓圖 + Pillow 縮到 1024/q82)。
+- 大百科短片(pilot,TW/JP/CH/GR):`tools/seedance.mjs` 是 Seedance 2.5 image-to-video 的核心模組 + 獨立 CLI(金鑰/base URL/model 從環境變數 `SEEDANCE_API_KEY`/`SEEDANCE_API_BASE`/`SEEDANCE_MODEL` 讀);批次跑 `node .superpowers/sdd/country-encyclopedia/video-merge.mjs TW JP CH GR` 補齊卡片與頁首短片。
 
 ## 開發
 

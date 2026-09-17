@@ -127,10 +127,16 @@ export function createEncyclopedia() {
   }
   function card(code, it) {
     const href = esc(wikiUrl(it));
-    const img = it.image
-      ? `<a href="${href}" target="_blank" rel="noopener" class="enc-card-imglink">` +
-        `<img src="${IMG_BASE}${encodeURIComponent(codeToFile(code))}/${encodeURIComponent(it.image)}" alt="" loading="lazy" onerror="this.parentNode.remove()"></a>`
-      : "";
+    const base = `${IMG_BASE}${encodeURIComponent(codeToFile(code))}/`;
+    let img = "";
+    if (it.video) {
+      const posterAttr = it.image ? ` poster="${base}${encodeURIComponent(it.image)}"` : "";
+      img = `<a href="${href}" target="_blank" rel="noopener" class="enc-card-imglink">` +
+        `<video class="enc-card-video"${posterAttr} src="${base}${encodeURIComponent(it.video)}" autoplay muted loop playsinline onerror="this.parentNode.remove()"></video></a>`;
+    } else if (it.image) {
+      img = `<a href="${href}" target="_blank" rel="noopener" class="enc-card-imglink">` +
+        `<img src="${base}${encodeURIComponent(it.image)}" alt="" loading="lazy" onerror="this.parentNode.remove()"></a>`;
+    }
     const en = it.en ? `<span class="enc-card-en">${esc(it.en)}</span>` : "";
     return `<div class="enc-card">${img}<div class="enc-card-body">` +
       `<a href="${href}" target="_blank" rel="noopener" class="enc-card-title"><b>${esc(it.zh)}</b> ${en} <span class="enc-ext">↗</span></a>` +
@@ -148,12 +154,15 @@ export function createEncyclopedia() {
     const flag = /^[A-Za-z]{2}$/.test(code)
       ? `<img class="enc-flag" src="https://flagcdn.com/w320/${code.toLowerCase()}.png" alt="" onerror="this.remove()">`
       : "";
+    const heroVideo = d.hero_video
+      ? `<video class="enc-hero-video" src="${IMG_BASE}${encodeURIComponent(codeToFile(code))}/${encodeURIComponent(d.hero_video)}" autoplay muted loop playsinline onerror="this.remove()"></video>`
+      : "";
     let h = `<header class="enc-hero enc-reveal"><div class="enc-hero-main">` +
       `<div class="enc-en">${esc(d.name_en || "")}</div>` +
       `<h2>${esc(d.name_zh || code)}</h2>` +
       (d.summary ? `<p class="enc-lead">${esc(d.summary)}</p>` : "") +
       `<p class="enc-ext-hint">帶 <span class="enc-ext">↗</span> 的標題與圖片可點擊,連到維基百科查看更完整的介紹(另開新分頁)。</p>` +
-      `</div>${flag}</header>`;
+      `</div>${heroVideo}${flag}</header>`;
 
     const alert = travelAlertData && travelAlertData.countries ? travelAlertData.countries[code] : null;
     if (alert) {
