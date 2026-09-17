@@ -177,6 +177,14 @@ export function createEncyclopedia() {
       `<p class="enc-ext-hint">帶 <span class="enc-ext">↗</span> 的標題與圖片可點擊,連到維基百科查看更完整的介紹(另開新分頁)。</p>` +
       `</div>${heroVideo}${flag}</header>`;
 
+    if (LIVE_STREAMS[code]) {
+      const ls = LIVE_STREAMS[code];
+      h += section("當地直播",
+        `<p class="enc-dim" style="font-size:12px">來源:${esc(ls.label)}官方 YouTube 頻道。是否正在直播由該頻道自行決定,離峰時段可能顯示離線畫面。</p>` +
+        `<div class="enc-live-wrap"><iframe src="https://www.youtube.com/embed/live_stream?channel=${encodeURIComponent(ls.channelId)}" title="${esc(ls.label)} 直播" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>` +
+        `<p class="enc-dim" style="font-size:11px;margin-top:6px"><a href="${esc(ls.url)}" target="_blank" rel="noopener">在 YouTube 開啟${esc(ls.label)} ↗</a></p>`);
+    }
+
     const alert = travelAlertData && travelAlertData.countries ? travelAlertData.countries[code] : null;
     if (alert) {
       const stars = "★".repeat(alert.level) + "☆".repeat(4 - alert.level);
@@ -297,14 +305,6 @@ export function createEncyclopedia() {
       h += section("捷運路網圖",
         `<p class="enc-dim" style="font-size:12px">白心大圈 = 轉乘站。自由行搭捷運最實用。</p>` +
         `<div id="enc-transit-map"></div>`);
-
-    if (LIVE_STREAMS[code]) {
-      const ls = LIVE_STREAMS[code];
-      h += section("當地直播",
-        `<p class="enc-dim" style="font-size:12px">來源:${esc(ls.label)}官方 YouTube 頻道。是否正在直播由該頻道自行決定,離峰時段可能顯示離線畫面。</p>` +
-        `<div class="enc-live-wrap"><iframe src="https://www.youtube.com/embed/live_stream?channel=${encodeURIComponent(ls.channelId)}" title="${esc(ls.label)} 直播" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>` +
-        `<p class="enc-dim" style="font-size:11px;margin-top:6px"><a href="${esc(ls.url)}" target="_blank" rel="noopener">在 YouTube 開啟${esc(ls.label)} ↗</a></p>`);
-    }
 
     if (Array.isArray(d.credits) && d.credits.length)
       h += section("圖片來源", `<ul class="enc-credits">` + d.credits.map((c) => {
