@@ -164,11 +164,39 @@ export function createAdminMap() {
       apply();
     }, { passive: false });
     let drag = null;
+    // 雙指縮放(手機/觸控):追蹤所有按下的 pointer,兩指同時按下時算距離變化 → 縮放比例
+    const pointers = new Map(); // pointerId -> {x, y}(client 座標)
+    let pinch = null;           // { startDist, startScale, startTx, startTy, mid }
     svg.addEventListener("pointerdown", (e) => {
-      drag = { x: e.clientX, y: e.clientY, tx, ty, moved: false };
-      svg.setPointerCapture(e.pointerId);
+      pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+      try { svg.setPointerCapture(e.pointerId); } catch {}
+      if (pointers.size === 2) {
+        drag = null;
+        const [p1, p2] = [...pointers.values()];
+        pinch = {
+          startDist: Math.hypot(p1.x - p2.x, p1.y - p2.y),
+          startScale: scale, startTx: tx, startTy: ty,
+          mid: svgPt({ clientX: (p1.x + p2.x) / 2, clientY: (p1.y + p2.y) / 2 }),
+        };
+      } else if (pointers.size === 1 && !pinch) {
+        drag = { x: e.clientX, y: e.clientY, tx, ty, moved: false };
+      }
     });
     svg.addEventListener("pointermove", (e) => {
+      if (!pointers.has(e.pointerId)) return;
+      pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+      if (pinch && pointers.size >= 2) {
+        const [p1, p2] = [...pointers.values()];
+        const dist = Math.hypot(p1.x - p2.x, p1.y - p2.y);
+        const ns = Math.min(12, Math.max(1, pinch.startScale * (dist / pinch.startDist)));
+        const p = pinch.mid; // 以捏合起始的中點為縮放中心(手指中點在畫面上的位置)
+        tx = p.x - (p.x - pinch.startTx) * (ns / pinch.startScale);
+        ty = p.y - (p.y - pinch.startTy) * (ns / pinch.startScale);
+        scale = ns;
+        if (scale === 1) { tx = 0; ty = 0; }
+        apply();
+        return;
+      }
       if (!drag) return;
       const rect = svg.getBoundingClientRect();
       const dx = (e.clientX - drag.x) / rect.width * vb.w;
@@ -178,9 +206,19 @@ export function createAdminMap() {
       apply();
     });
     const endDrag = (e) => {
+      pointers.delete(e.pointerId);
+      try { svg.releasePointerCapture(e.pointerId); } catch {}
+      if (pinch) {
+        lastDragEnd = Date.now();
+        if (pointers.size < 2) pinch = null;
+        if (pointers.size === 1) {
+          const [pt] = pointers.values();
+          drag = { x: pt.x, y: pt.y, tx, ty, moved: true };
+        }
+        return;
+      }
       if (drag && drag.moved) lastDragEnd = Date.now();
       drag = null;
-      try { svg.releasePointerCapture(e.pointerId); } catch {}
     };
     svg.addEventListener("pointerup", endDrag);
     svg.addEventListener("pointercancel", endDrag);
