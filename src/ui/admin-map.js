@@ -92,6 +92,7 @@ export function createAdminMap() {
       const t = document.createElementNS(svgNS, "text");
       t.setAttribute("x", x); t.setAttribute("y", y);
       t.setAttribute("class", "admin-label");
+      t.dataset.name = p.name_zht || p.name;   // 讓標籤本身也能點選 —— 小縣市的形狀常小到很難點準,標籤字通常比形狀好點
       t.textContent = p.name_zht || p.name;
       g.appendChild(t);
       labels.push({ el: t, span: geomSpan(f.geometry, toXY) });
@@ -115,11 +116,13 @@ export function createAdminMap() {
     let lastDragEnd = 0;
     g.addEventListener("click", (e) => {
       if (Date.now() - lastDragEnd < 160) return;   // 剛拖曳過 → 不算點選
-      const r = e.target.closest(".admin-region");
-      if (!r) return;
+      const hit = e.target.closest(".admin-region, .admin-label");
+      if (!hit) return;
+      // 標籤點到也算數,但「選取中」的藍色高亮永遠套在區域形狀上,不是文字本身
+      const r = hit.classList.contains("admin-region") ? hit : g.querySelector(`.admin-region[data-name="${CSS.escape(hit.dataset.name)}"]`);
       if (selected) selected.classList.remove("sel");
-      selected = r; r.classList.add("sel");
-      if (onPick) onPick(r.dataset.name);
+      selected = r; if (r) r.classList.add("sel");
+      if (onPick) onPick(hit.dataset.name);
     });
 
     // ── 縮放 / 平移 ─────────────────────────────────────────
