@@ -5,6 +5,12 @@ import { createTransitMap } from "./transit-map.js";
 // 有捷運路網示意圖的國家 → 城市檔名(data/transit/<city>.json)
 const TRANSIT = { TW: "taipei", JP: "tokyo", KR: "seoul", US: "newyork", SG: "singapore" };
 
+// 國家 → 免費 YouTube 當地新聞直播(官方頻道,用 live_stream 內嵌網址,嵌入時
+// 由 YouTube 自己判斷該頻道現在有沒有在開直播;沒有就顯示離線畫面,不會壞掉)
+const LIVE_STREAMS = {
+  TW: { channelId: "UCexpzYDEnfmAvPSfG4xbcjA", label: "公視新聞網 PTS News", url: "https://www.youtube.com/@PNNPTS" },
+};
+
 export function createEncyclopedia() {
   const adminMap = createAdminMap();
   const transitMap = createTransitMap();
@@ -291,6 +297,14 @@ export function createEncyclopedia() {
       h += section("捷運路網圖",
         `<p class="enc-dim" style="font-size:12px">白心大圈 = 轉乘站。自由行搭捷運最實用。</p>` +
         `<div id="enc-transit-map"></div>`);
+
+    if (LIVE_STREAMS[code]) {
+      const ls = LIVE_STREAMS[code];
+      h += section("當地直播",
+        `<p class="enc-dim" style="font-size:12px">來源:${esc(ls.label)}官方 YouTube 頻道。是否正在直播由該頻道自行決定,離峰時段可能顯示離線畫面。</p>` +
+        `<div class="enc-live-wrap"><iframe src="https://www.youtube.com/embed/live_stream?channel=${encodeURIComponent(ls.channelId)}" title="${esc(ls.label)} 直播" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>` +
+        `<p class="enc-dim" style="font-size:11px;margin-top:6px"><a href="${esc(ls.url)}" target="_blank" rel="noopener">在 YouTube 開啟${esc(ls.label)} ↗</a></p>`);
+    }
 
     if (Array.isArray(d.credits) && d.credits.length)
       h += section("圖片來源", `<ul class="enc-credits">` + d.credits.map((c) => {
