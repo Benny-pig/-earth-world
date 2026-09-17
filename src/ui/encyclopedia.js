@@ -135,7 +135,7 @@ export function createEncyclopedia() {
         `<video class="enc-card-video"${posterAttr} src="${base}${encodeURIComponent(it.video)}" autoplay muted loop playsinline onerror="this.parentNode.remove()"></video></a>`;
     } else if (it.image) {
       img = `<a href="${href}" target="_blank" rel="noopener" class="enc-card-imglink">` +
-        `<img src="${base}${encodeURIComponent(it.image)}" alt="" loading="lazy" onerror="this.parentNode.remove()"></a>`;
+        `<img src="${base}${encodeURIComponent(it.image)}" alt="" onerror="this.parentNode.remove()"></a>`;
     }
     const en = it.en ? `<span class="enc-card-en">${esc(it.en)}</span>` : "";
     return `<div class="enc-card">${img}<div class="enc-card-body">` +
