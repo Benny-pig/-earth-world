@@ -24,6 +24,13 @@ export function createEncyclopedia() {
   const bodyEl = document.getElementById("enc-body");
   const scrollEl = el.querySelector(".enc-scroll");
 
+  // 卡片圖片:原本用瀏覽器原生 loading="lazy",但這頁是自訂捲動容器
+  // (.enc-scroll,不是視窗本身),原生機制對非視窗捲動容器的判定在部分
+  // 瀏覽器環境不可靠(實測過捲到看得見的位置圖片仍不觸發)。試過改用
+  // IntersectionObserver 自己控制,結果在這個環境完全不觸發(比原生
+  // lazy 更糟,20 張圖一張都載入不出來)——查不出根因,先退回最單純、
+  // 已經實測會動的做法:直接載入,不做任何懶載入。單一國家的圖片量
+  // 通常一兩 MB,直接載入沒有真的很不合理。
   const codeToFile = (c) => String(c).replace(/[ .]/g, "_");
 
   el.querySelector(".enc-close").addEventListener("click", close);
