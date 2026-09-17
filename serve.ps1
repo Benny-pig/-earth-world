@@ -1,5 +1,6 @@
 $root = Split-Path -Parent $MyInvocation.MyCommand.Path
-$prefix = "http://localhost:8761/"
+$port = if ($env:PORT) { $env:PORT } else { 8761 }
+$prefix = "http://localhost:$port/"
 $listener = New-Object System.Net.HttpListener
 $listener.Prefixes.Add($prefix)
 $listener.Start()

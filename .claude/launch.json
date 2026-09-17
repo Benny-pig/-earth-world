@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "earth-world",
+      "runtimeExecutable": "powershell",
+      "runtimeArgs": ["-ExecutionPolicy", "Bypass", "-File", ".\\serve.ps1"],
+      "port": 8761,
+      "autoPort": true
+    }
+  ]
+}

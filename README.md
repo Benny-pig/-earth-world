@@ -16,7 +16,7 @@
 需求:Windows + PowerShell + Chrome/Edge。
 
 1. `powershell -ExecutionPolicy Bypass -File .\serve.ps1`
-2. 瀏覽器開 `http://localhost:8761/`
+2. 瀏覽器開 `http://localhost:8761/`(這台機器上 Windows 偶爾會動態排除某個埠導致綁定失敗;若啟動失敗,換個埠重跑即可:`$env:PORT=8762; .\serve.ps1`)
 
 不需安裝任何套件(three.js / earcut 由 CDN 載入)。
 
