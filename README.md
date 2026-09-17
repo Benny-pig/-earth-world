@@ -16,7 +16,7 @@
 需求:Windows + PowerShell + Chrome/Edge。
 
 1. `powershell -ExecutionPolicy Bypass -File .\serve.ps1`
-2. 瀏覽器開 `http://localhost:8760/`
+2. 瀏覽器開 `http://localhost:8761/`
 
 不需安裝任何套件(three.js / earcut 由 CDN 載入)。
 
@@ -50,7 +50,7 @@
 ## 開發
 
 - 前端純 ES Modules,無建置工具;`three@0.160.0` 透過 importmap 載入。
-- 本機開發伺服器:`serve.ps1`(預設 http://localhost:8760/)。
+- 本機開發伺服器:`serve.ps1`(預設 http://localhost:8761/;8760 在部分 Windows 機器上被系統保留無法綁定,故改用 8761)。
 - 純函式測試:`F:\Claude\ai-tools\node-v22.14.0-win-x64\node.exe --test`(在 repo 根目錄執行)
 - 設計文件:`docs/superpowers/specs/2026-09-08-earth-world-design.md`、`…/2026-09-09-earth-world-encyclopedia-design.md`
 - 實作計畫:`docs/superpowers/plans/2026-09-08-earth-world.md`、`…/2026-09-09-earth-world-encyclopedia.md`
