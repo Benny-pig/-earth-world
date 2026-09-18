@@ -9,6 +9,7 @@ const TRANSIT = { TW: "taipei", JP: "tokyo", KR: "seoul", US: "newyork", SG: "si
 // 由 YouTube 自己判斷該頻道現在有沒有在開直播;沒有就顯示離線畫面,不會壞掉)
 const LIVE_STREAMS = {
   TW: { channelId: "UCexpzYDEnfmAvPSfG4xbcjA", label: "公視新聞網 PTS News", url: "https://www.youtube.com/@PNNPTS" },
+  US: { channelId: "UCBi2mrWuNuyYy4gbM6fU18Q", label: "ABC News", url: "https://www.youtube.com/@ABCNews" },
 };
 
 export function createEncyclopedia() {
