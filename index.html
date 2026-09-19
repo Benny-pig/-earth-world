@@ -156,9 +156,14 @@
   #radio-labels .radio-active .radio-label { background: rgba(10,22,16,.92); border-color: #6df5b0; }
   #radio-now-playing {
     display: flex; align-items: center; gap: 6px; color: #33e08a; font-size: 11.5px;
-    max-width: 150px; overflow: hidden;
+    max-width: 170px;
   }
-  #radio-now-playing-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  /* 該國其他電台合併在同一個下拉選單裡,不用回地球上找小字卡 */
+  #radio-station-select {
+    flex: 1; min-width: 0; background: rgba(20, 26, 44, 0.9); color: #dfe8ff;
+    border: 1px solid rgba(51,224,138,.4); border-radius: 5px; font: 10.5px system-ui, "Microsoft JhengHei", sans-serif;
+    padding: 2px 4px;
+  }
   #radio-now-playing #radio-stop {
     background: none; border: none; color: inherit; cursor: pointer; font-size: 12px; line-height: 1; flex: none;
   }
@@ -938,7 +943,7 @@
     <input id="audio-vol" type="range" min="0" max="100" value="55" aria-label="音量">
     <select id="audio-track" aria-label="選擇背景音樂"></select>
     <span id="radio-now-playing" hidden>
-      <span id="radio-now-playing-name"></span>
+      📻<select id="radio-station-select" aria-label="切換該國電台"></select>
       <button id="radio-stop" type="button" aria-label="停止電台">✕</button>
     </span>
   </div>

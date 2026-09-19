@@ -86,7 +86,7 @@ function latLonToVec3(latDeg, lonDeg, r = 1) {
 export function createRadioLayer({ globeObject, camera, renderer, music }) {
   const host = document.getElementById("radio-labels");
   const nowPlayingEl = document.getElementById("radio-now-playing");
-  const nowPlayingName = document.getElementById("radio-now-playing-name");
+  const stationSelect = document.getElementById("radio-station-select");
   const stopBtn = document.getElementById("radio-stop");
   const trackSelect = document.getElementById("audio-track");
   if (!host) return { update() {}, dispose() {}, setEnabled() {}, isEnabled: () => false, isPlaying: () => false, setVolume() {}, setMuted() {} };
@@ -95,15 +95,21 @@ export function createRadioLayer({ globeObject, camera, renderer, music }) {
   let enabled = false;
   let loaded = false;
   let activeWrap = null;
+  // code -> [{ s, wrap }, ...],讓同一國其他台可以合併進下拉選單方便切換,
+  // 不用回地球上找小字卡。
+  const byCountry = new Map();
 
   const audio = new Audio();
   audio.preload = "none";
   let musicWasPlaying = false;
 
-  function setNowPlaying(name) {
-    if (!nowPlayingEl) return;
-    if (name) {
-      if (nowPlayingName) nowPlayingName.textContent = "📻 " + name;
+  function setNowPlaying(code, activeUuid) {
+    if (!nowPlayingEl || !stationSelect) return;
+    const list = code && byCountry.get(code);
+    if (list && list.length) {
+      stationSelect.innerHTML = list.map(({ s }) =>
+        `<option value="${esc(s.stationuuid)}"${s.stationuuid === activeUuid ? " selected" : ""}>${esc((s.name || "").trim() || "未知電台")}</option>`
+      ).join("");
       nowPlayingEl.hidden = false;
       if (trackSelect) trackSelect.hidden = true;
     } else {
@@ -121,7 +127,7 @@ export function createRadioLayer({ globeObject, camera, renderer, music }) {
   }
   if (stopBtn) stopBtn.addEventListener("click", stop);
 
-  function play(station, wrap) {
+  function play(station, wrap, code) {
     if (activeWrap === wrap) { stop(); return; } // 再點一次同一台 = 停止
     if (activeWrap) activeWrap.classList.remove("radio-active");
     musicWasPlaying = !!music?.isPlaying?.();
@@ -131,10 +137,15 @@ export function createRadioLayer({ globeObject, camera, renderer, music }) {
     audio.play().catch((e) => console.warn("[radio] 播放失敗(電台可能離線):", e.name));
     activeWrap = wrap;
     wrap.classList.add("radio-active");
-    setNowPlaying(station.name?.trim() || "未知電台");
+    setNowPlaying(code, station.stationuuid);
   }
+  if (stationSelect) stationSelect.addEventListener("change", () => {
+    const code = [...byCountry.keys()].find((c) => byCountry.get(c).some(({ s }) => s.stationuuid === stationSelect.value));
+    const hit = code && byCountry.get(code).find(({ s }) => s.stationuuid === stationSelect.value);
+    if (hit) play(hit.s, hit.wrap, code);
+  });
 
-  function addStation(s, lat, lon) {
+  function addStation(s, lat, lon, code) {
     const wrap = document.createElement("div");
     wrap.className = "radio-wrap";
 
@@ -150,7 +161,7 @@ export function createRadioLayer({ globeObject, camera, renderer, music }) {
       `<div class="radio-label-sub">${esc(s.country || "")}${tag ? " · " + esc(tag) : ""}</div>`;
     wrap.appendChild(label);
 
-    const onClick = () => play(s, wrap);
+    const onClick = () => play(s, wrap, code);
     dot.addEventListener("click", onClick);
     label.addEventListener("click", onClick);
 
@@ -170,6 +181,7 @@ export function createRadioLayer({ globeObject, camera, renderer, music }) {
 
     host.innerHTML = "";
     stations = [];
+    byCountry.clear();
     for (const r of picks) {
       if (r.status !== "fulfilled" || !r.value.length) continue;
       r.value.forEach(({ code, s }, i) => {
@@ -183,7 +195,10 @@ export function createRadioLayer({ globeObject, camera, renderer, music }) {
           [lat, lon] = cap;
           if (i > 0) { lat += 0.25 * i; lon += 0.25 * i; }
         }
-        stations.push(addStation(s, lat, lon));
+        const wrap = addStation(s, lat, lon, code);
+        stations.push(wrap);
+        if (!byCountry.has(code)) byCountry.set(code, []);
+        byCountry.get(code).push({ s, wrap: wrap.wrap });
       });
     }
   }
@@ -191,7 +206,7 @@ export function createRadioLayer({ globeObject, camera, renderer, music }) {
   function setEnabled(v) {
     enabled = !!v;
     if (enabled) refresh().catch((e) => console.error("[radio] refresh failed:", e));
-    else { host.innerHTML = ""; loaded = false; stations = []; stop(); }
+    else { host.innerHTML = ""; loaded = false; stations = []; byCountry.clear(); stop(); }
   }
 
   const camToAnchor = new THREE.Vector3();
@@ -225,6 +240,7 @@ export function createRadioLayer({ globeObject, camera, renderer, music }) {
     stop();
     host.innerHTML = "";
     stations = [];
+    byCountry.clear();
   }
 
   return {
