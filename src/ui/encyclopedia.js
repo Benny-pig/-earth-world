@@ -46,11 +46,11 @@ export function createEncyclopedia() {
     if (e.key === "Escape" && el.classList.contains("open")) { e.stopImmediatePropagation(); close(); }
   });
 
-  // 版面主題:深空(預設)/ 旅誌(暖色編輯風)/ 奇幻史詩(金色紋飾風),依序循環,記住選擇
+  // 版面主題:深空(預設)/ 旅誌(暖色編輯風)/ 奇幻史詩(金色紋飾風)/ 戰術HUD(青色情報機關風),依序循環,記住選擇
   const themeBtn = el.querySelector(".enc-theme-btn");
   const THEME_KEY = "earth-world.enc-theme";
-  const THEMES = ["dark", "journal", "fantasy"];
-  const THEME_LABEL = { dark: "🌙 深空", journal: "☀ 旅誌", fantasy: "⚜ 史詩" };
+  const THEMES = ["dark", "journal", "fantasy", "hud"];
+  const THEME_LABEL = { dark: "🌙 深空", journal: "☀ 旅誌", fantasy: "⚜ 史詩", hud: "◎ 戰術" };
   function ensureFantasyFont() {
     if (document.getElementById("fantasy-font")) return;
     const link = document.createElement("link");
@@ -59,9 +59,18 @@ export function createEncyclopedia() {
     link.href = "https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Noto+Serif+TC:wght@500;700&display=swap";
     document.head.appendChild(link);
   }
+  function ensureHudFont() {
+    if (document.getElementById("hud-font")) return;
+    const link = document.createElement("link");
+    link.id = "hud-font";
+    link.rel = "stylesheet";
+    link.href = "https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap";
+    document.head.appendChild(link);
+  }
   function applyTheme(t) {
     if (!THEMES.includes(t)) t = "dark";
     if (t === "fantasy") ensureFantasyFont();
+    if (t === "hud") ensureHudFont();
     if (t === "dark") el.removeAttribute("data-enc-theme"); else el.setAttribute("data-enc-theme", t);
     document.body.setAttribute("data-theme", t === "dark" ? "" : t);
     if (themeBtn) themeBtn.textContent = THEME_LABEL[t];
