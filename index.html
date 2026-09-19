@@ -749,9 +749,25 @@
     background: rgba(4, 6, 12, 0.88); backdrop-filter: blur(10px);
     border: 1px solid rgba(120, 170, 255, 0.22); border-radius: 10px; padding: 6px;
   }
+  /* 「功能」標題改成可點的按鈕,收合/展開整張卡片——功能一直加下去,清單
+     會越來越長,讓使用者可以收起來。 */
   #layer-controls .lc-title {
+    display: flex; align-items: center; gap: 6px; width: 100%; cursor: pointer;
     font: 10px system-ui, "Microsoft JhengHei", sans-serif; letter-spacing: .14em;
     text-transform: uppercase; color: #7c8db0; padding: 5px 8px 6px;
+    background: none; border: none; text-align: left;
+  }
+  .lc-cute-icon { font-size: 12px; flex: none; }
+  .lc-collapse-arrow { margin-left: auto; font-size: 9px; transition: transform .15s; flex: none; }
+  #lc-collapse-toggle[aria-expanded="false"] .lc-collapse-arrow { transform: rotate(-90deg); }
+  #lc-body { display: flex; flex-direction: column; }
+  /* 主選單列(不含子選項)前面加數字順序,功能一直加也不用手動改編號——
+     用 CSS counter 自動排,不用在 JS/HTML 裡硬寫死第幾項。 */
+  #lc-body { counter-reset: lc-count; }
+  #lc-body > .layer-row::before,
+  #lc-body > .layer-group > .layer-row::before {
+    counter-increment: lc-count; content: counter(lc-count) "."; flex: none;
+    font-size: 10px; opacity: .5; margin-right: -2px;
   }
   #layer-controls .layer-row {
     display: flex; align-items: center; gap: 8px; cursor: pointer; width: 100%;
@@ -1223,27 +1239,31 @@
   <div id="radio-labels"></div>
   <div id="flight-labels"></div>
   <div id="layer-controls">
-    <div class="lc-title">功能</div>
-    <button id="quake-toggle" class="layer-row" type="button" aria-pressed="true">
-      <span class="layer-dot"></span>全球地震顯示<span id="quake-severe-badge" class="layer-badge" hidden title="偵測到規模 6 以上地震">⚠</span>
+    <button id="lc-collapse-toggle" class="lc-title" type="button" aria-expanded="true">
+      <span class="lc-cute-icon">🎛️</span>功能<span class="lc-collapse-arrow">▾</span>
     </button>
-    <button id="radio-toggle" class="layer-row" type="button" aria-pressed="false">
-      <span class="layer-dot"></span>當地廣播電台
-    </button>
-    <button id="satellite-toggle" class="layer-row" type="button" aria-pressed="false">
-      <span class="layer-dot"></span>颱風衛星雲圖
-    </button>
-    <div class="layer-group">
-      <button id="airport-group-toggle" class="layer-row" type="button" aria-expanded="false" aria-pressed="false">
-        <span class="layer-dot" id="airport-group-dot"></span>機場航班資訊<span class="layer-arrow">▸</span>
+    <div id="lc-body">
+      <button id="quake-toggle" class="layer-row" type="button" aria-pressed="true">
+        <span class="layer-dot"></span>全球地震顯示<span id="quake-severe-badge" class="layer-badge" hidden title="偵測到規模 6 以上地震">⚠</span>
       </button>
-      <div id="airport-submenu" class="layer-submenu" hidden>
-        <button id="flight-toggle" class="layer-row layer-sub" type="button" aria-pressed="false">
-          <span class="layer-icon">✈</span>世界機場航班
+      <button id="radio-toggle" class="layer-row" type="button" aria-pressed="false">
+        <span class="layer-dot"></span>當地廣播電台
+      </button>
+      <button id="satellite-toggle" class="layer-row" type="button" aria-pressed="false">
+        <span class="layer-dot"></span>颱風衛星雲圖
+      </button>
+      <div class="layer-group">
+        <button id="airport-group-toggle" class="layer-row" type="button" aria-expanded="false" aria-pressed="false">
+          <span class="layer-dot" id="airport-group-dot"></span>機場航班資訊<span class="layer-arrow">▸</span>
         </button>
-        <button id="airport-toggle" class="layer-row layer-sub" type="button" aria-pressed="false">
-          <span class="layer-icon">🛫</span>台灣機場航班
-        </button>
+        <div id="airport-submenu" class="layer-submenu" hidden>
+          <button id="flight-toggle" class="layer-row layer-sub" type="button" aria-pressed="false">
+            <span class="layer-icon">✈</span>世界機場航班
+          </button>
+          <button id="airport-toggle" class="layer-row layer-sub" type="button" aria-pressed="false">
+            <span class="layer-icon">🛫</span>台灣機場航班
+          </button>
+        </div>
       </div>
     </div>
   </div>

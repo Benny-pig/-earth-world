@@ -295,6 +295,24 @@ export function start() {
     syncAirportGroupState();
   });
 
+  // 「功能」整張卡片可以收合——記住使用者上次收合/展開的狀態,下次開網站
+  // 維持一樣,不用每次都重新收一次。
+  const LC_COLLAPSE_KEY = "earth-world.lc-collapsed";
+  const lcCollapseToggle = document.getElementById("lc-collapse-toggle");
+  const lcBody = document.getElementById("lc-body");
+  if (lcCollapseToggle && lcBody) {
+    let collapsed = false;
+    try { collapsed = localStorage.getItem(LC_COLLAPSE_KEY) === "1"; } catch {}
+    lcCollapseToggle.setAttribute("aria-expanded", String(!collapsed));
+    lcBody.hidden = collapsed;
+    lcCollapseToggle.addEventListener("click", () => {
+      const willExpand = lcCollapseToggle.getAttribute("aria-expanded") !== "true";
+      lcCollapseToggle.setAttribute("aria-expanded", String(willExpand));
+      lcBody.hidden = !willExpand;
+      try { localStorage.setItem(LC_COLLAPSE_KEY, willExpand ? "0" : "1"); } catch {}
+    });
+  }
+
   const audioToggle = document.getElementById("audio-toggle");
   const audioVol = document.getElementById("audio-vol");
   audioToggle.addEventListener("click", () => {

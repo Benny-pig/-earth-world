@@ -107,9 +107,11 @@ export function createRadioLayer({ globeObject, camera, renderer, music }) {
   if (!host) return { update() {}, dispose() {}, setEnabled() {}, isEnabled: () => false, isPlaying: () => false, setVolume() {}, setMuted() {} };
 
   let stations = [];
+  let resolved = []; // [{code, s, lat, lon}],查過一次就快取,不受圖層開關影響
   let enabled = false;
   let loaded = false;
   let activeWrap = null;
+  let activeStationInfo = null; // { code, uuid } —— 圖層關閉又重開時,靠這個把正在撥放的台重新跟新畫出來的 wrap 對上
   // code -> [{ s, wrap }, ...],讓同一國其他台可以合併進下拉選單方便切換,
   // 不用回地球上找小字卡。
   const byCountry = new Map();
@@ -143,6 +145,7 @@ export function createRadioLayer({ globeObject, camera, renderer, music }) {
     audio.pause();
     audio.removeAttribute("src");
     if (activeWrap) { activeWrap.classList.remove("radio-active"); activeWrap = null; }
+    activeStationInfo = null;
     setNowPlaying(null);
     if (musicWasPlaying && music) music.resume?.();
   }
@@ -180,6 +183,7 @@ export function createRadioLayer({ globeObject, camera, renderer, music }) {
     audio.volume = music?.getVolume ? music.getVolume() : 0.55;
     audio.play().catch((e) => console.warn("[radio] 播放失敗(電台可能離線):", e.name));
     activeWrap = wrap;
+    activeStationInfo = { code, uuid: station.stationuuid };
     wrap.classList.add("radio-active");
     setNowPlaying(code, station.stationuuid);
   }
@@ -213,9 +217,11 @@ export function createRadioLayer({ globeObject, camera, renderer, music }) {
     return { wrap, dir: latLonToVec3(lat, lon, 1), anchor: new THREE.Vector3(), ndc: new THREE.Vector3() };
   }
 
-  async function refresh() {
+  // 抓電台清單只做一次,結果快取在 resolved 裡,不受圖層開關影響——這樣
+  // 關掉圖層再打開不用重打一輪 API,正在撥放的電台資訊也不會被清掉。
+  async function fetchStations() {
     if (loaded) return;
-    loaded = true; // 逐國查詢只做一次,避免重複開關圖層時重複打一輪 API
+    loaded = true;
     const content = window.__earth?.content || {};
     const codes = Object.keys(content);
     const picks = await Promise.allSettled(codes.map(async (code) => {
@@ -223,9 +229,7 @@ export function createRadioLayer({ globeObject, camera, renderer, music }) {
       return list.map((s) => ({ code, s }));
     }));
 
-    host.innerHTML = "";
-    stations = [];
-    byCountry.clear();
+    resolved = [];
     for (const r of picks) {
       if (r.status !== "fulfilled" || !r.value.length) continue;
       r.value.forEach(({ code, s }, i) => {
@@ -239,18 +243,42 @@ export function createRadioLayer({ globeObject, camera, renderer, music }) {
           [lat, lon] = cap;
           if (i > 0) { lat += 0.25 * i; lon += 0.25 * i; }
         }
-        const wrap = addStation(s, lat, lon, code);
-        stations.push(wrap);
-        if (!byCountry.has(code)) byCountry.set(code, []);
-        byCountry.get(code).push({ s, wrap: wrap.wrap });
+        resolved.push({ code, s, lat, lon });
       });
     }
   }
 
+  // 用快取好的 resolved 資料重新畫地球上的字卡(不用重打 API)。如果重畫的
+  // 當下剛好有電台在撥放,把正在撥放那台重新對應到新畫出來的 wrap 上,
+  // 不然圖層關了再開,地球上會看不出哪台正在播(播放本身不受影響)。
+  function buildMarkers() {
+    host.innerHTML = "";
+    stations = [];
+    byCountry.clear();
+    for (const { code, s, lat, lon } of resolved) {
+      const wrap = addStation(s, lat, lon, code);
+      stations.push(wrap);
+      if (!byCountry.has(code)) byCountry.set(code, []);
+      byCountry.get(code).push({ s, wrap: wrap.wrap });
+    }
+    if (activeStationInfo) {
+      const hit = byCountry.get(activeStationInfo.code)?.find(({ s }) => s.stationuuid === activeStationInfo.uuid);
+      if (hit) { activeWrap = hit.wrap; activeWrap.classList.add("radio-active"); }
+    }
+  }
+
+  async function refresh() {
+    await fetchStations();
+    buildMarkers();
+  }
+
+  // 開關只控制地球上看不看得到電台字卡,不影響正在撥放的電台——使用者可能
+  // 只是想收起圖層別擋畫面,不代表想停止收聽。真的想停止的話,重新打開
+  // 圖層,用下面的停止鈕或再點一次同一台就好。
   function setEnabled(v) {
     enabled = !!v;
     if (enabled) refresh().catch((e) => console.error("[radio] refresh failed:", e));
-    else { host.innerHTML = ""; loaded = false; stations = []; byCountry.clear(); stop(); }
+    else host.innerHTML = "";
   }
 
   const camToAnchor = new THREE.Vector3();
