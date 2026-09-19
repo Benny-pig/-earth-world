@@ -753,12 +753,12 @@
      會越來越長,讓使用者可以收起來。 */
   #layer-controls .lc-title {
     display: flex; align-items: center; gap: 6px; width: 100%; cursor: pointer;
-    font: 10px system-ui, "Microsoft JhengHei", sans-serif; letter-spacing: .14em;
-    text-transform: uppercase; color: #7c8db0; padding: 5px 8px 6px;
+    font: 14px system-ui, "Microsoft JhengHei", sans-serif; font-weight: 600; letter-spacing: .1em;
+    text-transform: uppercase; color: #b9c6e6; padding: 5px 8px 6px;
     background: none; border: none; text-align: left;
   }
-  .lc-cute-icon { font-size: 12px; flex: none; }
-  .lc-collapse-arrow { margin-left: auto; font-size: 9px; transition: transform .15s; flex: none; }
+  .lc-cute-icon { font-size: 14px; flex: none; }
+  .lc-collapse-arrow { margin-left: auto; font-size: 10px; transition: transform .15s; flex: none; }
   #lc-collapse-toggle[aria-expanded="false"] .lc-collapse-arrow { transform: rotate(-90deg); }
   #lc-body { display: flex; flex-direction: column; }
   /* 主選單列(不含子選項)前面加數字順序,功能一直加也不用手動改編號——
@@ -1140,7 +1140,15 @@
     #audio-ui select { max-width: 55px; }
     #audio-ui input[type=range] { display: none; } /* 窄螢幕放不下,靜音鈕還在,音量用系統音量調 */
     #radio-now-playing { max-width: 80px; gap: 3px; }
+    /* 國家名稱這個新欄位在窄螢幕的 80px 預算裡放不下,會把停止鈕擠出畫面外
+       ——窄螢幕先隱藏國家名稱,保留下拉選單跟停止鈕這兩個必要控制項。 */
+    #radio-country-name { display: none; }
+    /* 桌面版為了可讀性把下拉選單加了 min-width:60px,但窄螢幕本來就沒那麼多
+       空間,min-width 比 max-width:55px 大會讓瀏覽器優先吃 min-width、
+       直接把停止鈕擠出 #audio-ui 容器外面(實測確認過)——這裡蓋回去。 */
+    #radio-station-select { min-width: 0; }
     #layer-controls .layer-row { font-size: 10.5px; padding: 6px 7px; gap: 5px; }
+    #layer-controls .lc-title { font-size: 12px; }
   }
 </style>
 </head>
