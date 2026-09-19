@@ -111,5 +111,8 @@ export function createMusic({ defaultVolume = 0.55 } = {}) {
     },
     isMuted() { return muted; },
     isPlaying() { return started && !audio.paused; },
+    getVolume() { return targetVolume; },
+    pause() { audio.pause(); },
+    resume() { if (started) play(); },
   };
 }

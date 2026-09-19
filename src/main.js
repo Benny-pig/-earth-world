@@ -16,6 +16,7 @@ import { createOceanLabels } from "./scene/ocean-labels.js";
 import { createCountryLabels } from "./scene/country-labels.js";
 import { createPhysicalLabels } from "./scene/physical-labels.js";
 import { createEarthquakesLayer } from "./scene/earthquakes.js";
+import { createRadioLayer } from "./scene/radio.js";
 import { createNaturePopup } from "./ui/nature-popup.js";
 import { createSidePanel } from "./ui/side-panel.js";
 import { createClockWeather } from "./ui/clock-weather.js";
@@ -228,13 +229,28 @@ export function start() {
 
   const music = createMusic();
   window.__earth.music = music;
+
+  const radio = createRadioLayer({ globeObject: globe.object, camera, renderer, music });
+  window.__earth.radio = radio;
+  const radioToggle = document.getElementById("radio-toggle");
+  if (radioToggle) radioToggle.addEventListener("click", () => {
+    const next = radioToggle.getAttribute("aria-pressed") !== "true";
+    radioToggle.setAttribute("aria-pressed", String(next));
+    radio.setEnabled(next);
+  });
+
   const audioToggle = document.getElementById("audio-toggle");
   const audioVol = document.getElementById("audio-vol");
   audioToggle.addEventListener("click", () => {
-    const m = music.toggleMute();
+    // 電台播放中就切電台的靜音,不然切背景音樂會讓人以為按鈕壞了
+    const m = radio.isPlaying() ? radio.toggleMute() : music.toggleMute();
     audioToggle.textContent = m ? "🔇" : "🔊";
   });
-  audioVol.addEventListener("input", () => music.setVolume(audioVol.value / 100));
+  audioVol.addEventListener("input", () => {
+    const v = audioVol.value / 100;
+    music.setVolume(v);
+    if (radio.isPlaying()) radio.setVolume(v);
+  });
 
   const audioTrack = document.getElementById("audio-track");
   if (audioTrack) {
@@ -376,6 +392,7 @@ export function start() {
     oceanLabels.update();
     physicalLabels.update();
     earthquakes.update();
+    radio.update();
     if (window.__earth.countryLabels) window.__earth.countryLabels.update();
 
     composer.render();

@@ -122,6 +122,46 @@
     display: block; max-width: 160px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
     color: #b7c2d6; font-size: 10px;
   }
+  /* 當地廣播電台:沿用地震的常駐字卡結構,顏色改綠色做類別區分,收合/展開規則一樣 */
+  #radio-labels { position: fixed; inset: 0; pointer-events: none; z-index: 38; overflow: hidden; }
+  #radio-labels .radio-wrap {
+    position: absolute; top: 0; left: 0; pointer-events: none;
+    opacity: 0; transition: opacity .35s ease; will-change: transform, opacity;
+  }
+  #radio-labels .radio-marker {
+    position: absolute; top: 0; left: 0; transform: translate(-50%, -50%);
+    width: 9px; height: 9px; border-radius: 50%; box-sizing: border-box;
+    border: 1.5px solid #33e08a; background: rgba(51,224,138,.35);
+    pointer-events: auto; cursor: pointer;
+  }
+  #radio-labels .radio-marker:hover { filter: brightness(1.3); }
+  #radio-labels .radio-active .radio-marker {
+    background: #33e08a; animation: radioPulse 1.6s ease-out infinite;
+  }
+  @keyframes radioPulse {
+    0% { box-shadow: 0 0 0 0 rgba(51,224,138,.55); }
+    100% { box-shadow: 0 0 0 9px rgba(51,224,138,0); }
+  }
+  #radio-labels .radio-label {
+    position: absolute; top: 0; left: 0; transform: translate(9px, -50%); white-space: nowrap;
+    background: rgba(10,22,16,.72); border: 1px solid #33e08a; border-left-width: 3px;
+    border-radius: 3px; padding: 2px 7px; font-size: 10.5px; line-height: 1.5;
+    color: #cdeedb; pointer-events: auto; cursor: pointer; max-width: 150px; overflow: hidden; text-overflow: ellipsis;
+    font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  }
+  #radio-labels .radio-label b { color: #33e08a; font-weight: 600; }
+  #radio-labels .radio-label-sub { display: none; color: #8fc9ab; font-size: 10px; }
+  #radio-labels .radio-marker:hover ~ .radio-label .radio-label-sub,
+  #radio-labels .radio-label:hover .radio-label-sub { display: block; }
+  #radio-labels .radio-active .radio-label { background: rgba(10,22,16,.92); border-color: #6df5b0; }
+  #radio-now-playing {
+    display: flex; align-items: center; gap: 6px; color: #33e08a; font-size: 11.5px;
+    max-width: 150px; overflow: hidden;
+  }
+  #radio-now-playing-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  #radio-now-playing #radio-stop {
+    background: none; border: none; color: inherit; cursor: pointer; font-size: 12px; line-height: 1; flex: none;
+  }
   #nature-popup {
     position: fixed; z-index: 43; max-width: 260px; display: none;
     padding: 12px 14px; border-radius: 10px; background: rgba(10, 14, 26, 0.92);
@@ -579,30 +619,80 @@
   body[data-theme="fantasy"] #tw-clock,
   body[data-theme="fantasy"] #clock-weather,
   body[data-theme="fantasy"] #audio-ui,
-  body[data-theme="fantasy"] #layer-controls .layer-btn { font-family: 'Cinzel', 'Noto Serif TC', serif; letter-spacing: .03em; }
+  body[data-theme="fantasy"] #layer-controls .layer-btn,
+  body[data-theme="fantasy"] #theme-toggle { font-family: 'Cinzel', 'Noto Serif TC', serif; letter-spacing: .03em; }
   /* 圖層控制面板(全球地震顯示開關):預設沿用跟時鐘/音樂列一致的深空玻璃感,
      切到史詩主題時改成金色雕刻感,呼應整體風格。 */
   #layer-controls {
     position: fixed; right: 18px; bottom: 18px; z-index: 42;
-    display: flex; flex-direction: column; align-items: flex-end; gap: 8px;
+    display: flex; flex-direction: column; align-items: flex-end; gap: 6px;
   }
   #layer-controls .layer-btn {
-    display: flex; align-items: center; gap: 8px; cursor: pointer;
-    padding: 9px 15px; border-radius: 10px; background: rgba(10, 14, 26, 0.7); backdrop-filter: blur(10px);
+    display: flex; align-items: center; gap: 6px; cursor: pointer;
+    padding: 6px 11px; border-radius: 8px;
+    background:
+      radial-gradient(circle at 4px 4px, rgba(255,255,255,.5) 0.7px, transparent 1.1px) 0 0/17px 17px,
+      radial-gradient(circle at 11px 9px, rgba(255,255,255,.3) 0.6px, transparent 1px) 0 0/23px 23px,
+      rgba(4, 6, 12, 0.86);
+    backdrop-filter: blur(10px);
     border: 1px solid rgba(120, 170, 255, 0.22); color: #e7edfb;
-    font: 13px system-ui, "Microsoft JhengHei", sans-serif; transition: opacity .15s;
+    font: 11.5px system-ui, "Microsoft JhengHei", sans-serif; transition: opacity .15s;
   }
   #layer-controls .layer-dot {
-    width: 8px; height: 8px; border-radius: 50%; flex: none;
-    background: #f2994a; box-shadow: 0 0 6px #f2994a; transition: background .15s, box-shadow .15s;
+    width: 7px; height: 7px; border-radius: 50%; flex: none;
+    background: #f2994a; box-shadow: 0 0 5px #f2994a; transition: background .15s, box-shadow .15s;
   }
   #layer-controls .layer-btn[aria-pressed="false"] { opacity: .65; }
   #layer-controls .layer-btn[aria-pressed="false"] .layer-dot { background: #5b6786; box-shadow: none; }
-  body[data-theme="fantasy"] #layer-controls .layer-btn {
+  body[data-theme="fantasy"] #layer-controls .layer-btn,
+  body[data-theme="fantasy"] #theme-toggle {
     background: linear-gradient(180deg,#332714,#1c150c); border: 1px solid #c9a227; color: #f0dfab;
   }
   body[data-theme="fantasy"] #layer-controls .layer-dot { background: #c9a227; box-shadow: 0 0 6px #c9a227; }
   body[data-theme="fantasy"] #layer-controls .layer-btn[aria-pressed="false"] .layer-dot { background: #6b5a30; box-shadow: none; }
+  /* ── 側邊欄 + 首頁面板:旅誌主題(暖色編輯風,跟大百科內文同一套配色) ── */
+  body[data-theme="journal"] #side-panel {
+    background: rgba(243,237,224,.94); border-left-color: rgba(120,90,50,.24);
+  }
+  body[data-theme="journal"] #side-panel h2 { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", serif; color: #2c2419; }
+  body[data-theme="journal"] #side-panel .close {
+    background: rgba(166,87,46,.12); color: #5a4b39; border: 1px solid rgba(120,90,50,.35);
+  }
+  body[data-theme="journal"] #side-panel .sp-more {
+    background: #a6572e; border: 1px solid #a6572e; color: #f8f2e6;
+    font-family: "Noto Serif TC", "Songti TC", "PMingLiU", serif; letter-spacing: .04em;
+  }
+  body[data-theme="journal"] #side-panel .sp-more:hover { box-shadow: 0 6px 22px rgba(166,87,46,.35); }
+  body[data-theme="journal"] #tw-clock,
+  body[data-theme="journal"] #clock-weather,
+  body[data-theme="journal"] #audio-ui,
+  body[data-theme="journal"] #theme-toggle,
+  body[data-theme="journal"] #layer-controls .layer-btn,
+  body[data-theme="journal"] #country-search input,
+  body[data-theme="journal"] #country-search ul {
+    background: #f3ede0; border-color: rgba(120,90,50,.28); color: #3b332a;
+  }
+  body[data-theme="journal"] #tw-clock,
+  body[data-theme="journal"] #clock-weather,
+  body[data-theme="journal"] #audio-ui,
+  body[data-theme="journal"] #theme-toggle,
+  body[data-theme="journal"] #layer-controls .layer-btn { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", serif; }
+  body[data-theme="journal"] #tw-clock .tw-label,
+  body[data-theme="journal"] #clock-weather .cw-country { color: #a6572e; }
+  body[data-theme="journal"] #tw-clock .tw-date,
+  body[data-theme="journal"] #clock-weather .cw-date,
+  body[data-theme="journal"] #clock-weather .cw-hint,
+  body[data-theme="journal"] #clock-weather .cw-weather-note { color: #8a7a63; }
+  body[data-theme="journal"] #country-search input::placeholder { color: #8a7a63; }
+  body[data-theme="journal"] #country-search input:focus { border-color: #a6572e; }
+  body[data-theme="journal"] #country-search li.active,
+  body[data-theme="journal"] #country-search li:hover { background: rgba(166,87,46,.14); }
+  body[data-theme="journal"] #country-search .cs-zh { color: #2c2419; }
+  body[data-theme="journal"] #country-search .cs-en { color: #8a7a63; }
+  body[data-theme="journal"] #audio-ui button { color: #5a4b39; }
+  body[data-theme="journal"] #audio-ui select { background: #fbf7ee; color: #3b332a; border-color: rgba(120,90,50,.28); }
+  body[data-theme="journal"] #layer-controls .layer-dot { background: #a6572e; box-shadow: 0 0 6px rgba(166,87,46,.6); }
+  body[data-theme="journal"] #layer-controls .layer-btn[aria-pressed="false"] .layer-dot { background: #b7ab97; box-shadow: none; }
   /* ── 側邊欄 + 首頁面板:戰術HUD主題 ── */
   body[data-theme="hud"] #side-panel {
     background: rgba(3,8,10,.88); border-left-color: rgba(0,229,255,.3);
@@ -642,10 +732,12 @@
   body[data-theme="hud"] #tw-clock,
   body[data-theme="hud"] #clock-weather,
   body[data-theme="hud"] #audio-ui,
-  body[data-theme="hud"] #layer-controls .layer-btn {
+  body[data-theme="hud"] #layer-controls .layer-btn,
+  body[data-theme="hud"] #theme-toggle {
     font-family: 'Share Tech Mono', ui-monospace, monospace; letter-spacing: .02em;
   }
-  body[data-theme="hud"] #layer-controls .layer-btn {
+  body[data-theme="hud"] #layer-controls .layer-btn,
+  body[data-theme="hud"] #theme-toggle {
     background: linear-gradient(180deg,#0e2226,#04121a); border: 1px solid #00e5ff; color: #cdf3ff; border-radius: 3px;
     text-transform: uppercase;
   }
@@ -690,7 +782,11 @@
   #tw-clock {
     position: fixed; top: 18px; left: 18px; z-index: 42;
     padding: 10px 14px; border-radius: 10px; text-align: left;
-    background: rgba(10, 14, 26, 0.7); backdrop-filter: blur(10px);
+    background:
+      radial-gradient(circle at 4px 4px, rgba(255,255,255,.5) 0.7px, transparent 1.1px) 0 0/17px 17px,
+      radial-gradient(circle at 11px 9px, rgba(255,255,255,.3) 0.6px, transparent 1px) 0 0/23px 23px,
+      rgba(4, 6, 12, 0.86);
+    backdrop-filter: blur(10px);
     border: 1px solid rgba(120, 170, 255, 0.22); color: #e7edfb;
     font: 13px/1.5 system-ui, "Microsoft JhengHei", sans-serif; min-width: 160px;
     pointer-events: none;
@@ -721,11 +817,20 @@
   #country-search .cs-zh { color: #eef4ff; }
   #country-search .cs-en { color: #9fb2d8; font-size: 12px; }
   #clock-weather {
-    position: fixed; top: 18px; right: 18px; z-index: 42;
+    position: fixed; top: 56px; right: 18px; z-index: 42;
     padding: 12px 16px; border-radius: 10px; text-align: right;
-    background: rgba(10, 14, 26, 0.7); backdrop-filter: blur(10px);
+    background:
+      radial-gradient(circle at 4px 4px, rgba(255,255,255,.5) 0.7px, transparent 1.1px) 0 0/17px 17px,
+      radial-gradient(circle at 11px 9px, rgba(255,255,255,.3) 0.6px, transparent 1px) 0 0/23px 23px,
+      rgba(4, 6, 12, 0.86);
+    backdrop-filter: blur(10px);
     border: 1px solid rgba(120, 170, 255, 0.22); color: #e7edfb;
     font: 13px/1.5 system-ui, "Microsoft JhengHei", sans-serif; min-width: 180px;
+  }
+  /* 版面風格切換:移到右上角(原本「將滑鼠移到國家」提示的位置),不用點進大百科才能選 */
+  #theme-toggle {
+    position: fixed; top: 18px; right: 18px; z-index: 43;
+    padding: 5px 10px; font-size: 11px;
   }
   #clock-weather .cw-country { font-size: 13px; color: #8fd4ff; }
   #clock-weather .cw-date { font-size: 12px; color: #b9c6e6; }
@@ -735,7 +840,12 @@
   #clock-weather .cw-hint { font-size: 12px; color: #9fb2d8; }
   #audio-ui {
     position: fixed; left: 18px; bottom: 18px; z-index: 42; display: flex; align-items: center; gap: 6px;
-    padding: 5px 9px; border-radius: 8px; background: rgba(10, 14, 26, 0.7); backdrop-filter: blur(10px);
+    padding: 5px 9px; border-radius: 8px;
+    background:
+      radial-gradient(circle at 4px 4px, rgba(255,255,255,.5) 0.7px, transparent 1.1px) 0 0/17px 17px,
+      radial-gradient(circle at 11px 9px, rgba(255,255,255,.3) 0.6px, transparent 1px) 0 0/23px 23px,
+      rgba(4, 6, 12, 0.86);
+    backdrop-filter: blur(10px);
     border: 1px solid rgba(120, 170, 255, 0.22); color: #e7edfb;
     font: 12px system-ui, "Microsoft JhengHei", sans-serif;
   }
@@ -793,17 +903,25 @@
   <div id="earthquake-labels"></div>
   <div id="nature-popup"></div>
   <div id="side-panel"><button class="close" aria-label="關閉">×</button><div id="side-panel-body"></div></div>
+  <button id="theme-toggle" class="layer-btn" type="button" aria-label="切換版面主題">🌙 深空</button>
   <div id="clock-weather"><div class="cw-hint">將滑鼠移到國家並點擊,看當地時間與天氣</div></div>
   <div id="audio-ui">
     <button id="audio-toggle" aria-label="背景音樂開關" title="背景音樂">🔊</button>
     <input id="audio-vol" type="range" min="0" max="100" value="55" aria-label="音量">
     <select id="audio-track" aria-label="選擇背景音樂"></select>
+    <span id="radio-now-playing" hidden>
+      <span id="radio-now-playing-name"></span>
+      <button id="radio-stop" type="button" aria-label="停止電台">✕</button>
+    </span>
   </div>
+  <div id="radio-labels"></div>
   <div id="layer-controls">
     <button id="quake-toggle" class="layer-btn" type="button" aria-pressed="true">
       <span class="layer-dot"></span>全球地震顯示
     </button>
-    <button id="theme-toggle" class="layer-btn" type="button" aria-label="切換版面主題">🌙 深空</button>
+    <button id="radio-toggle" class="layer-btn" type="button" aria-pressed="false">
+      <span class="layer-dot"></span>當地廣播電台
+    </button>
   </div>
 
   <script type="importmap">
