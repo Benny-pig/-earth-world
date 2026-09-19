@@ -35,6 +35,19 @@ function roundedNow() {
   return d;
 }
 
+// 西太平洋(UTC 時間戳記換算)、大西洋(沒有時間戳記,只能顯示現在時刻)兩邊
+// 原本一個顯示 UTC、一個完全不顯示,混在一起容易讓人誤會兩張圖差了 8 小時。
+// 統一都換算成台灣時間顯示。
+function fmtTaipei(d) {
+  const parts = new Intl.DateTimeFormat("zh-TW", {
+    timeZone: "Asia/Taipei",
+    year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit",
+    hour12: false,
+  }).formatToParts(d);
+  const get = (t) => parts.find((p) => p.type === t)?.value;
+  return `${get("year")}/${get("month")}/${get("day")} ${get("hour")}:${get("minute")}`;
+}
+
 // 兩顆衛星都固定在赤道上空的地球同步軌道,只是經度不同——向日葵9號對著
 // 東經140.7度(亞洲/澳洲/西太平洋),GOES-19對著西經75.2度(美洲/大西洋)。
 // 用簡化版正射投影(球體近似,不是衛星實際用的橢球體精算公式)大致算出幾個
@@ -152,7 +165,7 @@ export function createSatellitePanel() {
     const r = REGIONS[region], b = r.bands[band];
     if (b.goes) {
       img.src = `https://cdn.star.nesdis.noaa.gov/GOES19/ABI/FD/${b.goes}/678x678.jpg?t=${Date.now()}`;
-      caption.textContent = `${b.label} · 每 10 分鐘更新 · 資料來源 ${r.source}`;
+      caption.textContent = `${b.label} · 每 10 分鐘更新 · 現在台灣時間 ${fmtTaipei(new Date())} · 資料來源 ${r.source}`;
     } else {
       baseTime = roundedNow();
       tryLoad();
@@ -162,7 +175,7 @@ export function createSatellitePanel() {
     const r = REGIONS[region], b = r.bands[band];
     const d = new Date(baseTime.getTime() - tries * STEP_MIN * 60000);
     img.src = himawariUrl(b.himawari, d);
-    caption.textContent = `${b.label} · ${d.getUTCFullYear()}/${pad(d.getUTCMonth() + 1)}/${pad(d.getUTCDate())} ${pad(d.getUTCHours())}:${pad(d.getUTCMinutes())} UTC · 資料來源 ${r.source}`;
+    caption.textContent = `${b.label} · ${fmtTaipei(d)} 台灣時間 · 資料來源 ${r.source}`;
   }
   img.addEventListener("error", () => {
     if (!enabled) return;
