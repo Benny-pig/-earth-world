@@ -1,8 +1,8 @@
-// 版面主題(深空/旅誌/奇幻史詩/戰術HUD):抽成獨立模組,讓大百科的主題按鈕
+// 版面主題(星空/旅誌/奇幻史詩/戰術HUD):抽成獨立模組,讓大百科的主題按鈕
 // 跟首頁的主題按鈕共用同一份狀態,兩邊點誰都會同步、都記得使用者的選擇。
 const THEME_KEY = "earth-world.enc-theme";
 export const THEMES = ["dark", "journal", "fantasy", "hud"];
-export const THEME_LABEL = { dark: "🌙 深空", journal: "☀ 旅誌", fantasy: "⚜ 史詩", hud: "◎ 戰術" };
+export const THEME_LABEL = { dark: "🌙 星空", journal: "☀ 旅誌", fantasy: "⚜ 史詩", hud: "◎ 戰術" };
 
 const listeners = new Set();
 

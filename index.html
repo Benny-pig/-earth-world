@@ -902,6 +902,15 @@
     #clock-weather .cw-weather-note { display: none; }
     /* 100px 是實測選了國家、天氣列都填滿內容後 clock-weather 的實際高度(~72px)加安全間距 */
     #country-search { top: 100px; left: 8px; right: 8px; width: auto; transform: none; }
+    /* 窄螢幕下,左下音樂列(#audio-ui)跟右下功能卡(#layer-controls)沒收窄的話寬度
+       加起來會超過螢幕,兩個各自貼著左右角變成互相疊在一起——各自限縮寬度、
+       裡面內容(音量條/下拉選單/功能列文字)跟著縮小才不會卡到。 */
+    #audio-ui, #layer-controls { max-width: 44vw; }
+    #audio-ui { gap: 4px; padding: 5px 7px; }
+    #audio-ui select { max-width: 55px; }
+    #audio-ui input[type=range] { display: none; } /* 窄螢幕放不下,靜音鈕還在,音量用系統音量調 */
+    #radio-now-playing { max-width: 80px; gap: 3px; }
+    #layer-controls .layer-row { font-size: 10.5px; padding: 6px 7px; gap: 5px; }
   }
 </style>
 </head>
@@ -921,7 +930,7 @@
     <div class="enc-topbar">
       <button class="enc-back" aria-label="返回地球">‹ 返回</button>
       <span class="enc-title"></span>
-      <button class="enc-theme-btn" aria-label="切換版面主題">🌙 深空</button>
+      <button class="enc-theme-btn" aria-label="切換版面主題">🌙 星空</button>
       <button class="enc-close" aria-label="關閉">×</button>
     </div>
     <div class="enc-scroll"><div id="enc-body"></div></div>
@@ -936,7 +945,7 @@
   <div id="earthquake-labels"></div>
   <div id="nature-popup"></div>
   <div id="side-panel"><button class="close" aria-label="關閉">×</button><div id="side-panel-body"></div></div>
-  <button id="theme-toggle" type="button" aria-label="切換版面主題">🌙 深空</button>
+  <button id="theme-toggle" type="button" aria-label="切換版面主題">🌙 星空</button>
   <div id="clock-weather" hidden></div>
   <div id="audio-ui">
     <button id="audio-toggle" aria-label="背景音樂開關" title="背景音樂">🔊</button>

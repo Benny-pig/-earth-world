@@ -15,10 +15,23 @@ const RADIO_BASE = "https://de1.api.radio-browser.info/json/stations/search";
 const AVOID_TAGS = /spiritual|religio|worldpeace|prayer|meditation|sermon|dharma|buddhis|islamic|quran|gospel/i;
 const NEWS_TAGS = /news|talk|information|public radio/i;
 const POP_TAGS = /pop|top ?40|hits?\b|contemporary|music|chart/i;
-// .m3u8 是 HLS 串流,瀏覽器原生 <audio> 播不出來(Chrome 沒有內建 HLS 解碼,
-// 點了會顯示「正在播放」但完全沒聲音)——radio-browser 裡不少電台(尤其台灣
-// 幾家)剛好是這種格式,選台時直接排除,不然使用者點進去會覺得功能壞掉。
+// .m3u8 是 HLS 串流,瀏覽器原生 <audio> 沒有內建 HLS 解碼(Chrome/Firefox 都
+// 沒有,只有 Safari 例外)——radio-browser 裡不少電台(尤其台灣幾家,包括
+// Hit FM)剛好是這種格式。用 hls.js 補上解碼能力,不用把這些電台整批排除。
 const HLS_URL = /\.m3u8(\?|$)/i;
+let hlsLoadPromise = null;
+function ensureHls() {
+  if (window.Hls) return Promise.resolve(window.Hls);
+  if (hlsLoadPromise) return hlsLoadPromise;
+  hlsLoadPromise = new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = "https://cdn.jsdelivr.net/npm/hls.js@1/dist/hls.min.js";
+    script.onload = () => resolve(window.Hls);
+    script.onerror = () => reject(new Error("hls.js 載入失敗"));
+    document.head.appendChild(script);
+  });
+  return hlsLoadPromise;
+}
 // 熱門國家多給幾台選擇,其他國家維持新聞+流行各一台就好
 const POPULAR_COUNTRIES = new Set(["TW", "KR", "CN", "JP", "US", "GB", "FR", "DE"]);
 // 使用者點名想要的電台,只要 radio-browser 裡有播得出來的版本就一定收進去,不受
@@ -34,7 +47,7 @@ async function findPinnedStation(code, keyword) {
     if (!r.ok) return null;
     const list = await r.json();
     if (!Array.isArray(list)) return null;
-    return list.find((s) => (s.url_resolved || s.url) && !HLS_URL.test(s.url_resolved || s.url || "")) || null;
+    return list.find((s) => s.url_resolved || s.url) || null;
   } catch {
     return null;
   }
@@ -53,7 +66,7 @@ async function pickStationsForCountry(code, count = 2) {
     if (!r.ok) return [];
     const list = await r.json();
     if (!Array.isArray(list) || !list.length) return [];
-    const playable = list.filter((s) => (s.url_resolved || s.url) && !HLS_URL.test(s.url_resolved || s.url || ""));
+    const playable = list.filter((s) => s.url_resolved || s.url);
     const clean = playable.filter((s) => !AVOID_TAGS.test(s.tags || "") && !AVOID_TAGS.test(s.name || ""));
     const pool = clean.length ? clean : playable;
     if (!pool.length && !pinnedResults.some(Boolean)) return [];
@@ -102,6 +115,10 @@ export function createRadioLayer({ globeObject, camera, renderer, music }) {
   const audio = new Audio();
   audio.preload = "none";
   let musicWasPlaying = false;
+  let hls = null;
+  function teardownHls() {
+    if (hls) { hls.destroy(); hls = null; }
+  }
 
   function setNowPlaying(code, activeUuid) {
     if (!nowPlayingEl || !stationSelect) return;
@@ -119,6 +136,7 @@ export function createRadioLayer({ globeObject, camera, renderer, music }) {
   }
 
   function stop() {
+    teardownHls();
     audio.pause();
     audio.removeAttribute("src");
     if (activeWrap) { activeWrap.classList.remove("radio-active"); activeWrap = null; }
@@ -127,12 +145,35 @@ export function createRadioLayer({ globeObject, camera, renderer, music }) {
   }
   if (stopBtn) stopBtn.addEventListener("click", stop);
 
-  function play(station, wrap, code) {
+  async function play(station, wrap, code) {
     if (activeWrap === wrap) { stop(); return; } // 再點一次同一台 = 停止
     if (activeWrap) activeWrap.classList.remove("radio-active");
     musicWasPlaying = !!music?.isPlaying?.();
     if (musicWasPlaying) music.pause?.();
-    audio.src = station.url_resolved || station.url;
+    teardownHls();
+    const url = station.url_resolved || station.url;
+    if (HLS_URL.test(url)) {
+      // 優先用 hls.js(MediaSource Extensions),不要只看 canPlayType——很多瀏覽器
+      // (包括這個 app 自己內嵌的 Chromium)對 HLS 的 canPlayType 會樂觀回報
+      // "maybe" 但其實播不出來,只有 Safari 是真的原生支援,交給 hls.js 處理才穩定。
+      try {
+        const Hls = await ensureHls();
+        if (Hls.isSupported()) {
+          hls = new Hls();
+          hls.loadSource(url);
+          hls.attachMedia(audio);
+        } else if (audio.canPlayType("application/vnd.apple.mpegurl")) {
+          audio.src = url;
+        } else {
+          throw new Error("瀏覽器不支援 HLS 播放");
+        }
+      } catch (e) {
+        console.warn("[radio] HLS 播放失敗:", e.message);
+        return;
+      }
+    } else {
+      audio.src = url;
+    }
     audio.volume = music?.getVolume ? music.getVolume() : 0.55;
     audio.play().catch((e) => console.warn("[radio] 播放失敗(電台可能離線):", e.name));
     activeWrap = wrap;
@@ -238,6 +279,7 @@ export function createRadioLayer({ globeObject, camera, renderer, music }) {
 
   function dispose() {
     stop();
+    teardownHls();
     host.innerHTML = "";
     stations = [];
     byCountry.clear();
