@@ -1,7 +1,6 @@
 import { formatZonedTime, weatherCodeToIcon } from "../lib/geo.js";
 
 const TEN_MIN = 10 * 60 * 1000;
-const HINT = "將滑鼠移到國家並點擊,看當地時間與天氣";
 
 export function createClockWeather({ onForecast } = {}) {
   const el = document.getElementById("clock-weather");
@@ -9,12 +8,15 @@ export function createClockWeather({ onForecast } = {}) {
   let current = null;        // { code, name_zh, timezone, latlon }
   let weatherHtml = "";
 
+  // 沒選國家時不顯示這張卡片,不用一直放一句操作提示佔位子
   function renderHint() {
-    el.innerHTML = `<div class="cw-hint">${HINT}</div>`;
+    el.innerHTML = "";
+    el.hidden = true;
   }
 
   function renderTick() {
     if (!current) return;
+    el.hidden = false;
     let dateLine = "";
     let timeLine = `<div class="cw-time">時間 —</div>`;
     if (current.timezone) {

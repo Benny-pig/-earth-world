@@ -606,7 +606,6 @@
   body[data-theme="fantasy"] #clock-weather .cw-country { color: #c9a227; }
   body[data-theme="fantasy"] #tw-clock .tw-date,
   body[data-theme="fantasy"] #clock-weather .cw-date,
-  body[data-theme="fantasy"] #clock-weather .cw-hint,
   body[data-theme="fantasy"] #clock-weather .cw-weather-note { color: #a08a5c; }
   body[data-theme="fantasy"] #country-search input::placeholder { color: #a08a5c; }
   body[data-theme="fantasy"] #country-search input:focus { border-color: #c9a227; }
@@ -619,37 +618,43 @@
   body[data-theme="fantasy"] #tw-clock,
   body[data-theme="fantasy"] #clock-weather,
   body[data-theme="fantasy"] #audio-ui,
-  body[data-theme="fantasy"] #layer-controls .layer-btn,
+  body[data-theme="fantasy"] #layer-controls,
   body[data-theme="fantasy"] #theme-toggle { font-family: 'Cinzel', 'Noto Serif TC', serif; letter-spacing: .03em; }
-  /* 圖層控制面板(全球地震顯示開關):預設沿用跟時鐘/音樂列一致的深空玻璃感,
-     切到史詩主題時改成金色雕刻感,呼應整體風格。 */
+  /* 圖層控制:整合成一張卡片(參考 God's Eye View 的圖層分類欄),裡面每個開關是
+     一個列,而不是各自散開的獨立按鈕——之後加航班/交通,都在這張卡片裡加一列就好。 */
   #layer-controls {
     position: fixed; right: 18px; bottom: 18px; z-index: 42;
-    display: flex; flex-direction: column; align-items: flex-end; gap: 6px;
+    display: flex; flex-direction: column; min-width: 168px;
+    background: rgba(4, 6, 12, 0.88); backdrop-filter: blur(10px);
+    border: 1px solid rgba(120, 170, 255, 0.22); border-radius: 10px; padding: 6px;
   }
-  #layer-controls .layer-btn {
-    display: flex; align-items: center; gap: 6px; cursor: pointer;
-    padding: 6px 11px; border-radius: 8px;
-    background:
-      radial-gradient(circle at 4px 4px, rgba(255,255,255,.5) 0.7px, transparent 1.1px) 0 0/17px 17px,
-      radial-gradient(circle at 11px 9px, rgba(255,255,255,.3) 0.6px, transparent 1px) 0 0/23px 23px,
-      rgba(4, 6, 12, 0.86);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(120, 170, 255, 0.22); color: #e7edfb;
-    font: 11.5px system-ui, "Microsoft JhengHei", sans-serif; transition: opacity .15s;
+  #layer-controls .lc-title {
+    font: 10px system-ui, "Microsoft JhengHei", sans-serif; letter-spacing: .14em;
+    text-transform: uppercase; color: #7c8db0; padding: 5px 8px 6px;
   }
+  #layer-controls .layer-row {
+    display: flex; align-items: center; gap: 8px; cursor: pointer; width: 100%;
+    padding: 7px 8px; border-radius: 6px; background: none; border: none; text-align: left;
+    color: #e7edfb; font: 11.5px system-ui, "Microsoft JhengHei", sans-serif; transition: background .15s, opacity .15s;
+  }
+  #layer-controls .layer-row:hover { background: rgba(120,170,255,.12); }
   #layer-controls .layer-dot {
     width: 7px; height: 7px; border-radius: 50%; flex: none;
     background: #f2994a; box-shadow: 0 0 5px #f2994a; transition: background .15s, box-shadow .15s;
   }
-  #layer-controls .layer-btn[aria-pressed="false"] { opacity: .65; }
-  #layer-controls .layer-btn[aria-pressed="false"] .layer-dot { background: #5b6786; box-shadow: none; }
-  body[data-theme="fantasy"] #layer-controls .layer-btn,
+  #layer-controls .layer-row[aria-pressed="false"] { opacity: .6; }
+  #layer-controls .layer-row[aria-pressed="false"] .layer-dot { background: #5b6786; box-shadow: none; }
+  body[data-theme="fantasy"] #layer-controls {
+    background: linear-gradient(180deg,#332714,#1c150c); border: 1px solid #c9a227;
+  }
+  body[data-theme="fantasy"] #layer-controls .lc-title { color: #a08a5c; }
+  body[data-theme="fantasy"] #layer-controls .layer-row { color: #f0dfab; }
+  body[data-theme="fantasy"] #layer-controls .layer-row:hover { background: rgba(201,162,39,.14); }
   body[data-theme="fantasy"] #theme-toggle {
     background: linear-gradient(180deg,#332714,#1c150c); border: 1px solid #c9a227; color: #f0dfab;
   }
   body[data-theme="fantasy"] #layer-controls .layer-dot { background: #c9a227; box-shadow: 0 0 6px #c9a227; }
-  body[data-theme="fantasy"] #layer-controls .layer-btn[aria-pressed="false"] .layer-dot { background: #6b5a30; box-shadow: none; }
+  body[data-theme="fantasy"] #layer-controls .layer-row[aria-pressed="false"] .layer-dot { background: #6b5a30; box-shadow: none; }
   /* ── 側邊欄 + 首頁面板:旅誌主題(暖色編輯風,跟大百科內文同一套配色) ── */
   body[data-theme="journal"] #side-panel {
     background: rgba(243,237,224,.94); border-left-color: rgba(120,90,50,.24);
@@ -667,21 +672,22 @@
   body[data-theme="journal"] #clock-weather,
   body[data-theme="journal"] #audio-ui,
   body[data-theme="journal"] #theme-toggle,
-  body[data-theme="journal"] #layer-controls .layer-btn,
+  body[data-theme="journal"] #layer-controls,
   body[data-theme="journal"] #country-search input,
   body[data-theme="journal"] #country-search ul {
     background: #f3ede0; border-color: rgba(120,90,50,.28); color: #3b332a;
   }
+  body[data-theme="journal"] #layer-controls .layer-row:hover { background: rgba(166,87,46,.14); }
+  body[data-theme="journal"] #layer-controls .lc-title { color: #a08a63; }
   body[data-theme="journal"] #tw-clock,
   body[data-theme="journal"] #clock-weather,
   body[data-theme="journal"] #audio-ui,
   body[data-theme="journal"] #theme-toggle,
-  body[data-theme="journal"] #layer-controls .layer-btn { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", serif; }
+  body[data-theme="journal"] #layer-controls { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", serif; }
   body[data-theme="journal"] #tw-clock .tw-label,
   body[data-theme="journal"] #clock-weather .cw-country { color: #a6572e; }
   body[data-theme="journal"] #tw-clock .tw-date,
   body[data-theme="journal"] #clock-weather .cw-date,
-  body[data-theme="journal"] #clock-weather .cw-hint,
   body[data-theme="journal"] #clock-weather .cw-weather-note { color: #8a7a63; }
   body[data-theme="journal"] #country-search input::placeholder { color: #8a7a63; }
   body[data-theme="journal"] #country-search input:focus { border-color: #a6572e; }
@@ -692,7 +698,7 @@
   body[data-theme="journal"] #audio-ui button { color: #5a4b39; }
   body[data-theme="journal"] #audio-ui select { background: #fbf7ee; color: #3b332a; border-color: rgba(120,90,50,.28); }
   body[data-theme="journal"] #layer-controls .layer-dot { background: #a6572e; box-shadow: 0 0 6px rgba(166,87,46,.6); }
-  body[data-theme="journal"] #layer-controls .layer-btn[aria-pressed="false"] .layer-dot { background: #b7ab97; box-shadow: none; }
+  body[data-theme="journal"] #layer-controls .layer-row[aria-pressed="false"] .layer-dot { background: #b7ab97; box-shadow: none; }
   /* ── 側邊欄 + 首頁面板:戰術HUD主題 ── */
   body[data-theme="hud"] #side-panel {
     background: rgba(3,8,10,.88); border-left-color: rgba(0,229,255,.3);
@@ -719,7 +725,6 @@
   body[data-theme="hud"] #clock-weather .cw-country { color: #00e5ff; }
   body[data-theme="hud"] #tw-clock .tw-date,
   body[data-theme="hud"] #clock-weather .cw-date,
-  body[data-theme="hud"] #clock-weather .cw-hint,
   body[data-theme="hud"] #clock-weather .cw-weather-note { color: #5a8f99; }
   body[data-theme="hud"] #country-search input::placeholder { color: #5a8f99; }
   body[data-theme="hud"] #country-search input:focus { border-color: #00e5ff; }
@@ -732,17 +737,20 @@
   body[data-theme="hud"] #tw-clock,
   body[data-theme="hud"] #clock-weather,
   body[data-theme="hud"] #audio-ui,
-  body[data-theme="hud"] #layer-controls .layer-btn,
+  body[data-theme="hud"] #layer-controls,
   body[data-theme="hud"] #theme-toggle {
     font-family: 'Share Tech Mono', ui-monospace, monospace; letter-spacing: .02em;
   }
-  body[data-theme="hud"] #layer-controls .layer-btn,
+  body[data-theme="hud"] #layer-controls,
   body[data-theme="hud"] #theme-toggle {
     background: linear-gradient(180deg,#0e2226,#04121a); border: 1px solid #00e5ff; color: #cdf3ff; border-radius: 3px;
     text-transform: uppercase;
   }
+  body[data-theme="hud"] #layer-controls .lc-title { color: #5a8f99; }
+  body[data-theme="hud"] #layer-controls .layer-row { color: #cdf3ff; }
+  body[data-theme="hud"] #layer-controls .layer-row:hover { background: rgba(0,229,255,.14); }
   body[data-theme="hud"] #layer-controls .layer-dot { background: #00e5ff; box-shadow: 0 0 6px #00e5ff; }
-  body[data-theme="hud"] #layer-controls .layer-btn[aria-pressed="false"] .layer-dot { background: #2a4d52; box-shadow: none; }
+  body[data-theme="hud"] #layer-controls .layer-row[aria-pressed="false"] .layer-dot { background: #2a4d52; box-shadow: none; }
   #encyclopedia .enc-timeline { list-style: none; padding: 0; margin: 0; }
   #encyclopedia .enc-timeline li { display: grid; grid-template-columns: 74px 1fr; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--enc-line); }
   #encyclopedia .enc-timeline li:last-child { border-bottom: 0; }
@@ -782,10 +790,7 @@
   #tw-clock {
     position: fixed; top: 18px; left: 18px; z-index: 42;
     padding: 10px 14px; border-radius: 10px; text-align: left;
-    background:
-      radial-gradient(circle at 4px 4px, rgba(255,255,255,.5) 0.7px, transparent 1.1px) 0 0/17px 17px,
-      radial-gradient(circle at 11px 9px, rgba(255,255,255,.3) 0.6px, transparent 1px) 0 0/23px 23px,
-      rgba(4, 6, 12, 0.86);
+    background: rgba(4, 6, 12, 0.88);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(120, 170, 255, 0.22); color: #e7edfb;
     font: 13px/1.5 system-ui, "Microsoft JhengHei", sans-serif; min-width: 160px;
@@ -819,10 +824,7 @@
   #clock-weather {
     position: fixed; top: 56px; right: 18px; z-index: 42;
     padding: 12px 16px; border-radius: 10px; text-align: right;
-    background:
-      radial-gradient(circle at 4px 4px, rgba(255,255,255,.5) 0.7px, transparent 1.1px) 0 0/17px 17px,
-      radial-gradient(circle at 11px 9px, rgba(255,255,255,.3) 0.6px, transparent 1px) 0 0/23px 23px,
-      rgba(4, 6, 12, 0.86);
+    background: rgba(4, 6, 12, 0.88);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(120, 170, 255, 0.22); color: #e7edfb;
     font: 13px/1.5 system-ui, "Microsoft JhengHei", sans-serif; min-width: 180px;
@@ -837,14 +839,10 @@
   #clock-weather .cw-time { font-size: 22px; font-variant-numeric: tabular-nums; letter-spacing: .02em; }
   #clock-weather .cw-weather { font-size: 13px; margin-top: 4px; }
   #clock-weather .cw-weather-note { display: block; font-size: 9.5px; color: #7c8db0; margin-top: 1px; }
-  #clock-weather .cw-hint { font-size: 12px; color: #9fb2d8; }
   #audio-ui {
     position: fixed; left: 18px; bottom: 18px; z-index: 42; display: flex; align-items: center; gap: 6px;
     padding: 5px 9px; border-radius: 8px;
-    background:
-      radial-gradient(circle at 4px 4px, rgba(255,255,255,.5) 0.7px, transparent 1.1px) 0 0/17px 17px,
-      radial-gradient(circle at 11px 9px, rgba(255,255,255,.3) 0.6px, transparent 1px) 0 0/23px 23px,
-      rgba(4, 6, 12, 0.86);
+    background: rgba(4, 6, 12, 0.88);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(120, 170, 255, 0.22); color: #e7edfb;
     font: 12px system-ui, "Microsoft JhengHei", sans-serif;
@@ -865,9 +863,7 @@
     #clock-weather .cw-time { font-size: 15px; }
     #clock-weather .cw-weather { font-size: 11px; margin-top: 2px; }
     #clock-weather .cw-weather-note { display: none; }
-    #clock-weather .cw-hint { font-size: 10px; }
-    /* 100px 是實測選了國家、天氣列都填滿內容後 clock-weather 的實際高度(~72px)
-       加安全間距,不是原本沒選國家時只有一行提示字的高度。 */
+    /* 100px 是實測選了國家、天氣列都填滿內容後 clock-weather 的實際高度(~72px)加安全間距 */
     #country-search { top: 100px; left: 8px; right: 8px; width: auto; transform: none; }
   }
 </style>
@@ -904,7 +900,7 @@
   <div id="nature-popup"></div>
   <div id="side-panel"><button class="close" aria-label="關閉">×</button><div id="side-panel-body"></div></div>
   <button id="theme-toggle" class="layer-btn" type="button" aria-label="切換版面主題">🌙 深空</button>
-  <div id="clock-weather"><div class="cw-hint">將滑鼠移到國家並點擊,看當地時間與天氣</div></div>
+  <div id="clock-weather" hidden></div>
   <div id="audio-ui">
     <button id="audio-toggle" aria-label="背景音樂開關" title="背景音樂">🔊</button>
     <input id="audio-vol" type="range" min="0" max="100" value="55" aria-label="音量">
@@ -916,10 +912,11 @@
   </div>
   <div id="radio-labels"></div>
   <div id="layer-controls">
-    <button id="quake-toggle" class="layer-btn" type="button" aria-pressed="true">
+    <div class="lc-title">圖層 · LAYERS</div>
+    <button id="quake-toggle" class="layer-row" type="button" aria-pressed="true">
       <span class="layer-dot"></span>全球地震顯示
     </button>
-    <button id="radio-toggle" class="layer-btn" type="button" aria-pressed="false">
+    <button id="radio-toggle" class="layer-row" type="button" aria-pressed="false">
       <span class="layer-dot"></span>當地廣播電台
     </button>
   </div>
