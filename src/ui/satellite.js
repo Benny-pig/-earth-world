@@ -7,9 +7,21 @@
 // (見 himawariUrl);GOES 的 CDN 反而簡單,固定檔名(例如 678x678.jpg)永遠是
 // 最新一張,不用猜、也真的有開 CORS(比向日葵更寬鬆)。兩邊都用 <img> 顯示,
 // 不需要 CORS 就能單純顯示,猜錯時間的 fallback 只有向日葵需要。
-const PUBLISH_DELAY_MIN = 20; // 向日葵觀測到公開圖片的典型延遲,抓最新的話很容易還沒發布
+// 延遲抓太保守(原本 20 分鐘)使用者會覺得畫面一直沒更新,抓太激進(試過
+// 3 分鐘)又常常猜到「還沒發布/剛好缺這一格」的時間戳記——這種情況向日葵
+// 不是回 404,是回一張畫著「No Image」文字的正常 PNG(HTTP 200),onerror
+// 完全偵測不到、也無法用 <img> 讀像素內容去分辨(跨網域畫布會被污染,讀不
+// 出來)。折衷抓 15 分鐘,大幅降低撞到這種情況的機率,但沒辦法保證絕對不會
+// 撞到——真的撞到的話畫面上就是那張「No Image」圖,只能等下一輪 2 分鐘後
+// 的檢查自動換成更新的一張。
+const PUBLISH_DELAY_MIN = 15;
 const STEP_MIN = 10;
 const MAX_TRIES = 6;
+// 圖片本身每 10 分鐘才換一次沒錯,但檢查頻率拉到跟資料週期一樣長,萬一畫面
+// 打開的時間點跟資料發布時間點沒對齊,最差情況要等快 10 分鐘才會看到新的一張
+// ——改成每 2 分鐘就檢查一次「現在能猜到的最新時間戳記」變了沒,新圖一發布
+// 最多 2 分鐘內就會換上來,不用整整等一輪。
+const CHECK_MS = 2 * 60_000;
 
 function pad(n) { return String(n).padStart(2, "0"); }
 function himawariUrl(bandPath, d) {
@@ -45,7 +57,8 @@ const REGIONS = {
       true_color: { label: "真色", himawari: "D531106" },
     },
     source: "NICT 向日葵9號",
-    tip: "怎麼看颱風:找一團白色雲系呈螺旋狀捲起、越捲越紮實密實,強的話中心會有一個清楚的小圓圈(颱風眼);紅外線圖裡顏色越亮白代表雲頂越高、通常越劇烈。",
+    tip: "找螺旋狀的白色雲團,中心有清楚圓圈就是颱風眼。正確位置與強度請看官方發布。",
+    tipEn: "Look for a white spiral cloud mass — a clear circle at the center is the eye. Check official forecasts for exact position and strength.",
     tipLink: { text: "中央氣象署颱風消息 ↗", href: "https://www.cwa.gov.tw/V8/C/P/Typhoon/TY_NEWS.html" },
     labels: [
       { name: "台灣", lat: 23.7, lon: 121.0 },
@@ -66,7 +79,8 @@ const REGIONS = {
       ir: { label: "紅外線", goes: "13" },
     },
     source: "NOAA GOES-19",
-    tip: "怎麼看颶風(大西洋這邊的颱風叫「颶風」,是同一種天氣現象、不同海域的名稱):一樣是找螺旋狀的白色雲團、中心有沒有清楚的圓圈(颶風眼)。",
+    tip: "颶風跟颱風是同一種天氣現象,只是海域不同的叫法。一樣找白色螺旋雲團跟颶風眼,正確位置與強度請看官方發布。",
+    tipEn: "A hurricane is the same phenomenon as a typhoon, just named differently by ocean. Same spiral clouds and eye — check official forecasts for exact position and strength.",
     tipLink: { text: "美國國家颶風中心 NHC ↗", href: "https://www.nhc.noaa.gov/" },
     labels: [
       { name: "美國", lat: 39.0, lon: -98.0 },
@@ -89,6 +103,7 @@ export function createSatellitePanel() {
   const bandsEl = panel?.querySelector(".sat-bands");
   const regionBtns = panel ? [...panel.querySelectorAll("[data-region]")] : [];
   const tipTextEl = document.getElementById("satellite-tip-text");
+  const tipEnEl = document.getElementById("satellite-tip-en");
   const tipLinkEl = document.getElementById("satellite-tip-link");
   if (!panel || !img) return { setEnabled() {}, isEnabled: () => false };
 
@@ -112,6 +127,7 @@ export function createSatellitePanel() {
       load();
     }));
     if (tipTextEl) tipTextEl.textContent = r.tip;
+    if (tipEnEl) tipEnEl.textContent = r.tipEn;
     if (tipLinkEl) { tipLinkEl.textContent = r.tipLink.text; tipLinkEl.href = r.tipLink.href; }
   }
 
@@ -177,7 +193,7 @@ export function createSatellitePanel() {
       setRegionUI();
       renderLabels();
       load();
-      if (!timer) timer = setInterval(load, STEP_MIN * 60000);
+      if (!timer) timer = setInterval(load, CHECK_MS);
     } else {
       clearInterval(timer);
       timer = null;

@@ -223,6 +223,7 @@
     font-size: 11px; line-height: 1.6; color: #c3cee5;
   }
   .sat-tip a { display: inline-block; margin-top: 4px; color: #6db4ff; }
+  .sat-tip-en { margin-top: 3px; color: #8093b5; font-size: 10px; font-style: italic; }
   #physical-labels .pl-en { display: block; font-size: 7px; letter-spacing: .03em; opacity: .58; margin-top: 1px; }
   #physical-labels .pl-mountain .pl-ico, #physical-labels .pl-peak .pl-ico { color: #c9a876; }
   #physical-labels .pl-river .pl-ico, #physical-labels .pl-lake .pl-ico { color: #6fa8cf; }
@@ -1000,7 +1001,8 @@
     <div class="sat-bands"></div>
     <div id="satellite-caption" class="sat-caption"></div>
     <div class="sat-tip">
-      💡 <span id="satellite-tip-text"></span>想確認正確位置、強度與路徑預測,還是要看氣象單位的官方發布,不要只憑肉眼判斷。
+      <div>💡 <span id="satellite-tip-text"></span></div>
+      <div id="satellite-tip-en" class="sat-tip-en"></div>
       <a id="satellite-tip-link" href="#" target="_blank" rel="noopener"></a>
     </div>
   </div>
