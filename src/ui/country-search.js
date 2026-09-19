@@ -10,15 +10,19 @@ export function createCountrySearch({ index, onPick }) {
   let active = -1;
 
   const norm = (s) => String(s || "").toLowerCase().trim();
+  // 「台」「臺」是同一個字的異體(臺灣/台灣都通用),中文比對前先統一成同一個字,
+  // 不然打「台灣」搜不到條目裡登記的「臺灣」。
+  const normZh = (s) => String(s || "").trim().replace(/臺/g, "台");
 
   function search(q) {
     const n = norm(q);
+    const nzh = normZh(q);
     if (!n) return [];
     const starts = [], contains = [];
     for (const it of index) {
-      const zh = it.zh || "", en = norm(it.en), code = norm(it.code);
-      if (zh.startsWith(q.trim()) || en.startsWith(n) || code === n) starts.push(it);
-      else if (zh.includes(q.trim()) || en.includes(n)) contains.push(it);
+      const zh = normZh(it.zh), en = norm(it.en), code = norm(it.code);
+      if (zh.startsWith(nzh) || en.startsWith(n) || code === n) starts.push(it);
+      else if (zh.includes(nzh) || en.includes(n)) contains.push(it);
       if (starts.length >= MAX_RESULTS) break;
     }
     return starts.concat(contains).slice(0, MAX_RESULTS);

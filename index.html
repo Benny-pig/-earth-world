@@ -582,8 +582,10 @@
   }
   /* ── 側邊欄:主題切換同時影響側邊欄的關鍵按鈕,維持一致視覺語言 ── */
   body[data-theme="fantasy"] #side-panel {
-    background: rgba(20,16,10,.86); border-left-color: rgba(201,162,39,.3);
+    background: rgba(20,16,10,.86); border-left-color: rgba(201,162,39,.3); color: #f0dfab;
   }
+  body[data-theme="fantasy"] #side-panel h3,
+  body[data-theme="fantasy"] #side-panel .sp-clock .spc-label { color: #c9a227; }
   body[data-theme="fantasy"] #side-panel h2 { font-family: 'Cinzel', 'Noto Serif TC', serif; color: #f0dfab; }
   body[data-theme="fantasy"] #side-panel .close {
     background: rgba(201,162,39,.12); color: #f0dfab; border: 1px solid rgba(201,162,39,.4);
@@ -656,8 +658,10 @@
   body[data-theme="fantasy"] #layer-controls .layer-dot { background: #c9a227; box-shadow: 0 0 6px #c9a227; }
   body[data-theme="fantasy"] #layer-controls .layer-row[aria-pressed="false"] .layer-dot { background: #6b5a30; box-shadow: none; }
   /* ── 側邊欄 + 首頁面板:旅誌主題(暖色編輯風,跟大百科內文同一套配色) ── */
+  /* 側欄本來所有次要文字都是給深色底配的淺藍/淺灰(.meta/.sp-clock/h3/.dim/
+     .fc-* 一大串),旅誌是米白底,不逐個換成麥芽色系文字幾乎看不見。 */
   body[data-theme="journal"] #side-panel {
-    background: rgba(243,237,224,.94); border-left-color: rgba(120,90,50,.24);
+    background: rgba(243,237,224,.94); border-left-color: rgba(120,90,50,.24); color: #3b332a;
   }
   body[data-theme="journal"] #side-panel h2 { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", serif; color: #2c2419; }
   body[data-theme="journal"] #side-panel .close {
@@ -668,6 +672,28 @@
     font-family: "Noto Serif TC", "Songti TC", "PMingLiU", serif; letter-spacing: .04em;
   }
   body[data-theme="journal"] #side-panel .sp-more:hover { box-shadow: 0 6px 22px rgba(166,87,46,.35); }
+  body[data-theme="journal"] #side-panel .en,
+  body[data-theme="journal"] #side-panel .meta,
+  body[data-theme="journal"] #side-panel .dim,
+  body[data-theme="journal"] #side-panel .dish-en,
+  body[data-theme="journal"] #side-panel .sp-alert-note,
+  body[data-theme="journal"] #side-panel .sp-alert-reason,
+  body[data-theme="journal"] #side-panel .sp-clock .spc-date,
+  body[data-theme="journal"] #side-panel .fc-wd,
+  body[data-theme="journal"] #side-panel .fc-date,
+  body[data-theme="journal"] #side-panel .fc-mm,
+  body[data-theme="journal"] #side-panel .fc-note,
+  body[data-theme="journal"] #side-panel .fc-temp i { color: #8a7a63; }
+  body[data-theme="journal"] #side-panel h3,
+  body[data-theme="journal"] #side-panel .sp-clock .spc-label { color: #a6572e; }
+  body[data-theme="journal"] #side-panel .sp-alert { background: rgba(166,87,46,.06); color: #3b332a; }
+  body[data-theme="journal"] #side-panel .sp-clock { background: rgba(166,87,46,.08); border-color: rgba(120,90,50,.22); }
+  body[data-theme="journal"] #side-panel .months span { background: rgba(166,87,46,.08); color: #8a7a63; }
+  body[data-theme="journal"] #side-panel .months span.best { background: #a6572e; color: #f8f2e6; }
+  body[data-theme="journal"] #side-panel .dishes li { border-left-color: rgba(166,87,46,.35); }
+  body[data-theme="journal"] #side-panel .fc-day { background: rgba(166,87,46,.06); }
+  body[data-theme="journal"] #side-panel .fc-temp { color: #3b332a; }
+  body[data-theme="journal"] #side-panel .fc-day.fc-today { background: rgba(166,87,46,.14); outline-color: rgba(120,90,50,.3); }
   body[data-theme="journal"] #tw-clock,
   body[data-theme="journal"] #clock-weather,
   body[data-theme="journal"] #audio-ui,
@@ -702,8 +728,10 @@
   body[data-theme="journal"] #layer-controls .layer-row[aria-pressed="false"] .layer-dot { background: #b7ab97; box-shadow: none; }
   /* ── 側邊欄 + 首頁面板:戰術HUD主題 ── */
   body[data-theme="hud"] #side-panel {
-    background: rgba(3,8,10,.88); border-left-color: rgba(0,229,255,.3);
+    background: rgba(3,8,10,.88); border-left-color: rgba(0,229,255,.3); color: #cdf3ff;
   }
+  body[data-theme="hud"] #side-panel h3,
+  body[data-theme="hud"] #side-panel .sp-clock .spc-label { color: #00e5ff; }
   body[data-theme="hud"] #side-panel h2 { font-family: 'Share Tech Mono', monospace; color: #cdf3ff; text-transform: uppercase; letter-spacing: .06em; }
   body[data-theme="hud"] #side-panel .close {
     background: rgba(0,229,255,.12); color: #cdf3ff; border: 1px solid rgba(0,229,255,.4); border-radius: 2px;
