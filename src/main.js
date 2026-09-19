@@ -23,6 +23,7 @@ import { createTwClock } from "./ui/tw-clock.js";
 import { createCountrySearch } from "./ui/country-search.js";
 import { createMusic } from "./audio/music.js";
 import { createEncyclopedia } from "./ui/encyclopedia.js";
+import { THEME_LABEL, getTheme, cycleTheme, onThemeChange, initTheme } from "./ui/theme.js";
 
 const container = document.getElementById("app");
 
@@ -194,6 +195,15 @@ export function start() {
     quakeToggle.setAttribute("aria-pressed", String(next));
     earthquakes.setEnabled(next);
   });
+
+  // 版面主題:首頁也放一顆切換鈕,不用點進國家詳細介紹才能選——跟大百科裡那顆
+  // 共用同一份狀態(theme.js),兩邊點誰都會同步。
+  initTheme();
+  const themeToggle = document.getElementById("theme-toggle");
+  function refreshThemeToggle() { if (themeToggle) themeToggle.textContent = THEME_LABEL[getTheme()]; }
+  refreshThemeToggle();
+  onThemeChange(refreshThemeToggle);
+  if (themeToggle) themeToggle.addEventListener("click", cycleTheme);
 
   // hover 暫停:用 raycaster 判斷游標是否指到地球(Task 7 會擴充成國家偵測,這裡先做地球層級)
   const raycaster = new THREE.Raycaster();

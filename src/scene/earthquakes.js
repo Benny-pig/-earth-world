@@ -55,31 +55,39 @@ export function createEarthquakesLayer({ globeObject, camera, renderer, naturePo
           const { mag, place, time } = f.properties;
           const size = Math.round(8 + Math.max(0, mag) * 3);
           const color = magColor(mag);
+
+          const wrap = document.createElement("div");
+          wrap.className = "quake-wrap";
+
           const el = document.createElement("div");
           el.className = "quake-marker";
           el.style.width = el.style.height = `${size}px`;
           el.style.borderColor = color;
           el.style.background = color + "55";
           if (mag >= 6) el.classList.add("quake-marker-strong");
-          el.addEventListener("click", (e) => {
+          const showPopup = (e) => {
             naturePopup.show({
               icon: "◉",
               zh: `規模 ${mag.toFixed(1)}`,
               en: place || "",
               note: `深度 ${Math.round(depth || 0)} 公里 · ${relTime(time)}`,
             }, e.clientX, e.clientY);
-          });
-          host.appendChild(el);
+          };
+          el.addEventListener("click", showPopup);
+          wrap.appendChild(el);
 
-          // 字卡:不用點選就能看到規模、時間、地點(參考網站那種常駐telemetry卡片風格)
+          // 字卡:預設只顯示規模(收合),滑鼠靠近圓點或字卡才展開時間/地點——
+          // 之後航班/電台等圖層一多,畫面才不會被攤開的字卡塞滿。
           const label = document.createElement("div");
           label.className = "quake-label";
           label.style.borderColor = color;
+          label.addEventListener("click", showPopup);
           label.innerHTML = `<b style="color:${color}">M${mag.toFixed(1)}</b><span class="quake-label-time">${esc(relTime(time))}</span>` +
             (place ? `<div class="quake-label-place">${esc(place)}</div>` : "");
-          host.appendChild(label);
+          wrap.appendChild(label);
 
-          return { el, label, dir: latLonToVec3(lat, lon, 1), anchor: new THREE.Vector3(), ndc: new THREE.Vector3() };
+          host.appendChild(wrap);
+          return { wrap, dir: latLonToVec3(lat, lon, 1), anchor: new THREE.Vector3(), ndc: new THREE.Vector3() };
         });
     } catch (e) {
       console.error("[earthquakes] refresh failed:", e); // 離線、USGS 暫時打不通或資料格式異常,保留上一次資料,靜默略過
@@ -118,19 +126,15 @@ export function createEarthquakesLayer({ globeObject, camera, renderer, naturePo
       const behind = Q.ndc.z > 1;
 
       if (behind || facing < 0.05) {
-        Q.el.style.opacity = "0";
-        Q.el.style.transform = "translate(-9999px,-9999px)";
-        Q.label.style.opacity = "0";
-        Q.label.style.transform = "translate(-9999px,-9999px)";
+        Q.wrap.style.opacity = "0";
+        Q.wrap.style.transform = "translate(-9999px,-9999px)";
         continue;
       }
       const x = rect.left + (Q.ndc.x * 0.5 + 0.5) * rect.width;
       const y = rect.top + (-Q.ndc.y * 0.5 + 0.5) * rect.height;
       const op = THREE.MathUtils.clamp((facing - 0.05) / 0.2, 0, 1).toFixed(2);
-      Q.el.style.opacity = op;
-      Q.el.style.transform = `translate(${Math.round(x)}px, ${Math.round(y)}px) translate(-50%, -50%)`;
-      Q.label.style.opacity = op;
-      Q.label.style.transform = `translate(${Math.round(x)}px, ${Math.round(y)}px) translate(10px, -50%)`;
+      Q.wrap.style.opacity = op;
+      Q.wrap.style.transform = `translate(${Math.round(x)}px, ${Math.round(y)}px)`;
     }
   }
 
