@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import { esc } from "../lib/esc.js";
+import { zhHantName } from "../countries/country-names.js";
 
 // 當地廣播電台:radio-browser.info 公開 API,免金鑰、串流網址可直接播放。
 // 跟地震不同,電台清單不太會變,開啟時抓一次就好,不用定時刷新。
@@ -99,6 +100,7 @@ function latLonToVec3(latDeg, lonDeg, r = 1) {
 export function createRadioLayer({ globeObject, camera, renderer, music }) {
   const host = document.getElementById("radio-labels");
   const nowPlayingEl = document.getElementById("radio-now-playing");
+  const countryNameEl = document.getElementById("radio-country-name");
   const stationSelect = document.getElementById("radio-station-select");
   const stopBtn = document.getElementById("radio-stop");
   const trackSelect = document.getElementById("audio-track");
@@ -124,6 +126,7 @@ export function createRadioLayer({ globeObject, camera, renderer, music }) {
     if (!nowPlayingEl || !stationSelect) return;
     const list = code && byCountry.get(code);
     if (list && list.length) {
+      if (countryNameEl) countryNameEl.textContent = zhHantName(code) || code || "";
       stationSelect.innerHTML = list.map(({ s }) =>
         `<option value="${esc(s.stationuuid)}"${s.stationuuid === activeUuid ? " selected" : ""}>${esc((s.name || "").trim() || "未知電台")}</option>`
       ).join("");

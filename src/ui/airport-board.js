@@ -27,6 +27,7 @@ const AIRLINE_NAMES = {
   UA: "美國聯合航空", AA: "美國航空", DL: "達美航空", AS: "阿拉斯加航空", AC: "加拿大航空",
   BA: "英國航空", KL: "荷蘭皇家航空", LH: "漢莎航空", QF: "澳洲航空",
   EK: "阿聯酋航空", QR: "卡達航空",
+  "5Y": "亞特拉斯貨運航空", OD: "馬印航空",
 };
 const AIRPORT_NAMES = {
   NRT: "東京成田", HND: "東京羽田", KIX: "大阪關西", NGO: "名古屋", FUK: "福岡", CTS: "札幌",
@@ -90,7 +91,10 @@ export function createAirportBoard() {
     }
     const dirLabel = dir === "departure" ? "飛往" : "來自";
     listEl.innerHTML = rows.map((f) => {
-      const airline = AIRLINE_NAMES[f.AirlineID] || f.AirlineID || "—";
+      // 對照表查不到航空公司就不要重複顯示同一個代碼(例如「5Y 5Y4608」看起來
+      // 像故障),改顯示「代碼(航空公司代碼)」提示這是查不到中文名的公司,
+      // 而不是假裝那就是公司名稱。
+      const airline = AIRLINE_NAMES[f.AirlineID] || (f.AirlineID ? `${f.AirlineID}(航空公司代碼)` : "—");
       const no = `${f.AirlineID || ""}${f.FlightNumber || ""}`;
       const place = dir === "departure" ? f.ArrivalAirportID : f.DepartureAirportID;
       const scheduled = fmtTime(dir === "departure" ? f.ScheduleDepartureTime : f.ScheduleArrivalTime);

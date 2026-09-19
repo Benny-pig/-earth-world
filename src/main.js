@@ -191,13 +191,22 @@ export function start() {
   window.__earth.oceanLabels = oceanLabels;
   const physicalLabels = createPhysicalLabels({ globeObject: globe.object, camera, renderer, naturePopup });
   window.__earth.physicalLabels = physicalLabels;
-  const earthquakes = createEarthquakesLayer({ globeObject: globe.object, camera, renderer, naturePopup });
+  const quakeSevereBadge = document.getElementById("quake-severe-badge");
+  let quakeSevere = false;
+  function syncQuakeSevereBadge() {
+    if (quakeSevereBadge) quakeSevereBadge.hidden = !(quakeSevere && !earthquakes.isEnabled());
+  }
+  const earthquakes = createEarthquakesLayer({
+    globeObject: globe.object, camera, renderer, naturePopup,
+    onSevereChange: (v) => { quakeSevere = v; syncQuakeSevereBadge(); },
+  });
   window.__earth.earthquakes = earthquakes;
   const quakeToggle = document.getElementById("quake-toggle");
   if (quakeToggle) quakeToggle.addEventListener("click", () => {
     const next = quakeToggle.getAttribute("aria-pressed") !== "true";
     quakeToggle.setAttribute("aria-pressed", String(next));
     earthquakes.setEnabled(next);
+    syncQuakeSevereBadge();
   });
 
   // 版面主題:首頁也放一顆切換鈕,不用點進國家詳細介紹才能選——跟大百科裡那顆

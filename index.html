@@ -179,11 +179,12 @@
   }
   #radio-now-playing {
     display: flex; align-items: center; gap: 6px; color: #33e08a; font-size: 11.5px;
-    max-width: 170px;
+    max-width: 280px;
   }
+  #radio-country-name { flex: none; font-weight: 600; white-space: nowrap; }
   /* 該國其他電台合併在同一個下拉選單裡,不用回地球上找小字卡 */
   #radio-station-select {
-    flex: 1; min-width: 0; background: rgba(20, 26, 44, 0.9); color: #dfe8ff;
+    flex: 1; min-width: 60px; background: rgba(20, 26, 44, 0.9); color: #dfe8ff;
     border: 1px solid rgba(51,224,138,.4); border-radius: 5px; font: 10.5px system-ui, "Microsoft JhengHei", sans-serif;
     padding: 2px 4px;
   }
@@ -767,9 +768,19 @@
   /* 世界機場航班/台灣機場航班原本是兩個獨立列,合併成一個「機場航班資訊」
      群組,點了才展開子選項,減少主選單的雜亂。 */
   .layer-arrow { margin-left: auto; font-size: 9px; opacity: .6; transition: transform .15s; flex: none; }
+  /* 規模 6 以上地震警示:就算「全球地震顯示」沒開,也要在旁邊閃爍提醒使用者
+     可以打開來看是哪裡發生的——用透明度動畫閃爍,比顏色變化更顯眼。 */
+  .layer-badge {
+    margin-left: auto; flex: none; color: #ff5252; font-size: 13px; line-height: 1;
+    animation: quake-badge-blink 1s ease-in-out infinite;
+  }
+  @keyframes quake-badge-blink { 0%, 100% { opacity: 1; } 50% { opacity: .25; } }
   #airport-group-toggle[aria-expanded="true"] .layer-arrow { transform: rotate(90deg); }
   .layer-submenu { display: flex; flex-direction: column; }
   #layer-controls .layer-row.layer-sub { padding-left: 24px; font-size: 10.5px; }
+  /* 子選項用圖示取代圓點,關閉時整個變灰階降低存在感,開啟時恢復原色。 */
+  .layer-icon { flex: none; font-size: 12px; line-height: 1; filter: grayscale(1); opacity: .55; transition: filter .15s, opacity .15s; }
+  .layer-row[aria-pressed="true"] .layer-icon { filter: none; opacity: 1; }
   body[data-theme="fantasy"] #layer-controls {
     background: linear-gradient(180deg,#332714,#1c150c); border: 1px solid #c9a227;
   }
@@ -1088,7 +1099,7 @@
     font: 12px system-ui, "Microsoft JhengHei", sans-serif;
   }
   #audio-ui button { background: none; border: none; color: #dfe8ff; font-size: 14px; cursor: pointer; line-height: 1; }
-  #audio-ui input[type=range] { width: 56px; accent-color: #4da3ff; }
+  #audio-ui input[type=range] { width: 72px; accent-color: #4da3ff; }
   #audio-ui select {
     background: rgba(20, 26, 44, 0.9); color: #dfe8ff; border: 1px solid rgba(120,170,255,.3);
     border-radius: 5px; font: 10.5px system-ui, "Microsoft JhengHei", sans-serif; padding: 2px 4px; max-width: 100px;
@@ -1204,7 +1215,8 @@
     <input id="audio-vol" type="range" min="0" max="100" value="55" aria-label="音量">
     <select id="audio-track" aria-label="選擇背景音樂"></select>
     <span id="radio-now-playing" hidden>
-      📻<select id="radio-station-select" aria-label="切換該國電台"></select>
+      📻<span id="radio-country-name"></span>
+      <select id="radio-station-select" aria-label="切換該國電台"></select>
       <button id="radio-stop" type="button" aria-label="停止電台">✕</button>
     </span>
   </div>
@@ -1213,7 +1225,7 @@
   <div id="layer-controls">
     <div class="lc-title">功能</div>
     <button id="quake-toggle" class="layer-row" type="button" aria-pressed="true">
-      <span class="layer-dot"></span>全球地震顯示
+      <span class="layer-dot"></span>全球地震顯示<span id="quake-severe-badge" class="layer-badge" hidden title="偵測到規模 6 以上地震">⚠</span>
     </button>
     <button id="radio-toggle" class="layer-row" type="button" aria-pressed="false">
       <span class="layer-dot"></span>當地廣播電台
@@ -1227,10 +1239,10 @@
       </button>
       <div id="airport-submenu" class="layer-submenu" hidden>
         <button id="flight-toggle" class="layer-row layer-sub" type="button" aria-pressed="false">
-          <span class="layer-dot"></span>世界機場航班
+          <span class="layer-icon">✈</span>世界機場航班
         </button>
         <button id="airport-toggle" class="layer-row layer-sub" type="button" aria-pressed="false">
-          <span class="layer-dot"></span>台灣機場航班
+          <span class="layer-icon">🛫</span>台灣機場航班
         </button>
       </div>
     </div>

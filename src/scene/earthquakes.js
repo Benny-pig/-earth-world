@@ -53,22 +53,36 @@ function zhOfPlace(place, countryMap) {
   return countryMap.get(tail.toLowerCase()) || null;
 }
 
-export function createEarthquakesLayer({ globeObject, camera, renderer, naturePopup }) {
+// 規模 6 以上警示:就算使用者沒開「全球地震顯示」這個圖層,也要能提醒他
+// 「現在有大地震發生」——所以資料抓取本身不能只在圖層開啟時才跑,兩者要
+// 拆開:抓資料/檢查規模永遠跑(不受開關影響),畫面上的圓點/字卡才受開關控制。
+const SEVERE_MAG = 6;
+
+export function createEarthquakesLayer({ globeObject, camera, renderer, naturePopup, onSevereChange }) {
   const host = document.getElementById("earthquake-labels");
   if (!host) return { update() {}, dispose() {}, setEnabled() {}, isEnabled: () => false };
 
   let quakes = [];
   let enabled = true;
   let timer = null;
+  let severe = false;
+
+  function setSevere(v) {
+    if (severe === v) return;
+    severe = v;
+    onSevereChange?.(severe);
+  }
 
   async function refresh() {
-    if (!enabled) return;
     let data;
     try {
       const r = await fetch(USGS_FEED);
       if (!r.ok) return;
       data = await r.json();
       if (!Array.isArray(data.features)) return;
+
+      setSevere(data.features.some((f) => typeof f.properties?.mag === "number" && f.properties.mag >= SEVERE_MAG));
+      if (!enabled) return;
 
       host.innerHTML = "";
       const countryMap = buildCountryNameMap();
@@ -124,15 +138,16 @@ export function createEarthquakesLayer({ globeObject, camera, renderer, naturePo
     refresh().catch((e) => console.error("[earthquakes] start failed:", e));
     timer = setInterval(() => refresh().catch((e) => console.error("[earthquakes] refresh failed:", e)), REFRESH_MS);
   }
-  function stop() {
-    clearInterval(timer);
-    timer = null;
-    host.innerHTML = "";
-    quakes = [];
-  }
+  // 開關只控制畫面上看不看得到圓點/字卡,不影響背景抓資料/規模檢查——
+  // 這樣關掉圖層之後,規模 6 以上的警示還是能正常偵測、提醒使用者。
   function setEnabled(v) {
     enabled = !!v;
-    if (enabled) start(); else stop();
+    if (enabled) {
+      refresh().catch((e) => console.error("[earthquakes] refresh failed:", e));
+    } else {
+      host.innerHTML = "";
+      quakes = [];
+    }
   }
   start();
 
