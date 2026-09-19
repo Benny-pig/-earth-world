@@ -15,6 +15,7 @@ import { createTooltip } from "./ui/tooltip.js";
 import { createOceanLabels } from "./scene/ocean-labels.js";
 import { createCountryLabels } from "./scene/country-labels.js";
 import { createPhysicalLabels } from "./scene/physical-labels.js";
+import { createEarthquakesLayer } from "./scene/earthquakes.js";
 import { createNaturePopup } from "./ui/nature-popup.js";
 import { createSidePanel } from "./ui/side-panel.js";
 import { createClockWeather } from "./ui/clock-weather.js";
@@ -185,6 +186,8 @@ export function start() {
   window.__earth.oceanLabels = oceanLabels;
   const physicalLabels = createPhysicalLabels({ globeObject: globe.object, camera, renderer, naturePopup });
   window.__earth.physicalLabels = physicalLabels;
+  const earthquakes = createEarthquakesLayer({ globeObject: globe.object, camera, renderer, naturePopup });
+  window.__earth.earthquakes = earthquakes;
 
   // hover 暫停:用 raycaster 判斷游標是否指到地球(Task 7 會擴充成國家偵測,這裡先做地球層級)
   const raycaster = new THREE.Raycaster();
@@ -356,6 +359,7 @@ export function start() {
 
     oceanLabels.update();
     physicalLabels.update();
+    earthquakes.update();
     if (window.__earth.countryLabels) window.__earth.countryLabels.update();
 
     composer.render();
