@@ -140,11 +140,13 @@ function fetchPointApi(base, lat, lon, radiusNm) {
 const TDX_TOKEN_URL = "https://tdx.transportdata.tw/auth/realms/TDXConnect/protocol/openid-connect/token";
 let tdxTokenCache = { token: null, expiresAt: 0 };
 
+// 回傳 {token, reason} 而不是單純 null——診斷「到底是沒設變數、還是金鑰被
+// 拒絕、還是連不到」用,不然出錯只看得到一個 401,猜不出是哪一種情況。
 async function getTdxToken(env) {
   const id = env?.TDX_CLIENT_ID;
   const secret = env?.TDX_CLIENT_SECRET;
-  if (!id || !secret) return null;
-  if (tdxTokenCache.token && Date.now() < tdxTokenCache.expiresAt) return tdxTokenCache.token;
+  if (!id || !secret) return { token: null, reason: "缺少 TDX_CLIENT_ID 或 TDX_CLIENT_SECRET 環境變數" };
+  if (tdxTokenCache.token && Date.now() < tdxTokenCache.expiresAt) return { token: tdxTokenCache.token, reason: null };
 
   try {
     const res = await fetch(TDX_TOKEN_URL, {
@@ -153,22 +155,22 @@ async function getTdxToken(env) {
       body: new URLSearchParams({ grant_type: "client_credentials", client_id: id, client_secret: secret }),
       signal: AbortSignal.timeout(6000),
     });
-    if (!res.ok) return null;
+    if (!res.ok) return { token: null, reason: `TDX 換 token 失敗,狀態碼 ${res.status}(可能是 Client ID/Secret 不正確)` };
     const json = await res.json();
-    if (!json.access_token) return null;
+    if (!json.access_token) return { token: null, reason: "TDX 回應沒有 access_token" };
     // token 有效期通常 86400 秒(1 天),提前 5 分鐘視為過期,避免卡在邊界。
     tdxTokenCache = { token: json.access_token, expiresAt: Date.now() + Math.max(60, (json.expires_in || 86400) - 300) * 1000 };
-    return tdxTokenCache.token;
-  } catch {
-    return null;
+    return { token: tdxTokenCache.token, reason: null };
+  } catch (e) {
+    return { token: null, reason: `連不到 TDX 認證伺服器:${String(e)}` };
   }
 }
 
 // 一次用 $filter 把好幾個機場代碼都查在同一次呼叫裡,不用每個機場各打一次,
 // 大幅省下每月額度(4 個機場一次查完只算 1 次,不是 4 次)。
 async function fetchAirportFids(env, iataList) {
-  const token = await getTdxToken(env);
-  if (!token) return { ok: false, status: 401 };
+  const { token, reason } = await getTdxToken(env);
+  if (!token) return { ok: false, status: 401, detail: reason };
 
   const filter = iataList.map((c) => `AirportID eq '${c}'`).join(" or ");
   const qs = `%24format=JSON&%24filter=${encodeURIComponent(filter)}`;
@@ -205,7 +207,7 @@ export default {
       if (result.ok) {
         return new Response(result.body, { status: 200, headers: { ...CORS_HEADERS, "Content-Type": "application/json" } });
       }
-      return new Response(JSON.stringify({ error: "機場航班資料暫時查不到,稍後會自動重試", status: result.status }), {
+      return new Response(JSON.stringify({ error: "機場航班資料暫時查不到,稍後會自動重試", status: result.status, detail: result.detail }), {
         status: 502,
         headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
       });
