@@ -6,7 +6,7 @@ import { esc } from "../lib/esc.js";
 // 這支自己架的小代理轉發、補上 CORS 標頭——部署方式見那個檔案開頭的說明。
 // 部署好之後把網址填進下面的 PROXY_URL 就能用;沒填之前這個圖層的開關按了
 // 也不會出錯,只是打不到資料、顯示提示訊息。
-const PROXY_URL = ""; // 例如 "https://earth-world-flights.xxx.workers.dev"
+const PROXY_URL = "https://earth-world-flights.a7779782.workers.dev";
 
 const REFRESH_MS = 25_000;
 const DEG = Math.PI / 180;
@@ -45,7 +45,10 @@ export function createFlightsLayer({ globeObject, camera, renderer, naturePopup 
     }
     try {
       const r = await fetch(`${PROXY_URL}/?lat=${REGION.lat}&lon=${REGION.lon}&radius=${REGION.radiusNm}`);
-      if (!r.ok) return;
+      if (!r.ok) {
+        if (!flights.length) host.innerHTML = `<div class="flight-setup-hint">✈️ 航班資料暫時查不到(來源忙線中),稍後會自動重試</div>`;
+        return;
+      }
       const data = await r.json();
       if (!Array.isArray(data.ac)) return;
 
