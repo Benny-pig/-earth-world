@@ -195,7 +195,16 @@
   #satellite-close {
     background: none; border: none; color: #9fb2d8; font-size: 18px; line-height: 1; cursor: pointer;
   }
+  #satellite-img-wrap { position: relative; }
   #satellite-img { display: block; width: 100%; height: auto; border-radius: 6px; background: #060810; aspect-ratio: 1/1; }
+  #satellite-labels { position: absolute; inset: 0; pointer-events: none; }
+  #satellite-labels span {
+    position: absolute; transform: translate(-50%, -50%); white-space: nowrap;
+    font-size: 10px; color: #fff; text-shadow: 0 0 3px #000, 0 0 3px #000, 0 1px 2px #000;
+  }
+  #satellite-labels span.sat-zone {
+    color: #ffd479; font-weight: 600; font-size: 9.5px; text-align: center; white-space: normal; width: 80px;
+  }
   .sat-bands { display: flex; gap: 6px; margin-top: 8px; }
   .sat-bands button {
     flex: 1; padding: 5px 0; border-radius: 6px; border: 1px solid rgba(120,170,255,.3);
@@ -974,7 +983,10 @@
       <span class="sat-title">🌀 西太平洋衛星雲圖</span>
       <button id="satellite-close" type="button" aria-label="關閉">×</button>
     </div>
-    <img id="satellite-img" alt="向日葵9號衛星雲圖">
+    <div id="satellite-img-wrap">
+      <img id="satellite-img" alt="向日葵9號衛星雲圖">
+      <div id="satellite-labels"></div>
+    </div>
     <div class="sat-bands">
       <button type="button" data-band="ir">紅外線</button>
       <button type="button" data-band="true_color">真色</button>
