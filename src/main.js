@@ -241,7 +241,7 @@ export function start() {
     radio.setEnabled(next);
   });
 
-  const satellite = createSatellitePanel();
+  const satellite = createSatellitePanel({ globeObject: globe.object });
   window.__earth.satellite = satellite;
   const satelliteToggle = document.getElementById("satellite-toggle");
   if (satelliteToggle) satelliteToggle.addEventListener("click", () => {

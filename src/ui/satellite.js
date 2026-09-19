@@ -1,3 +1,5 @@
+import * as THREE from "three";
+
 // 即時衛星雲圖:西太平洋用日本 NICT 向日葵9號、大西洋用美國 NOAA GOES-19,
 // 兩個都免金鑰、公開圖片。地球同步衛星固定盯著自己那半球,看不到另一半——
 // 這是物理限制,想看大西洋只能換一顆真的看得到大西洋的衛星,不是切換設定
@@ -107,7 +109,88 @@ const REGIONS = {
   },
 };
 
-export function createSatellitePanel() {
+// 2026/09 新增:把衛星圖也貼到真正的 3D 地球上(不只是平面照片),可以直接
+// 轉動地球本身的視角去看。實測 GOES(大西洋)本來就開放跨網域讀取像素,可以
+// 直接當 WebGL 材質用;向日葵(西太平洋)還是沒開放,材質載入會失敗——這是
+// 預期中的情況,失敗就靜靜略過,2D 那張照片版本不受影響照常顯示。之後如果
+// 幫向日葵也做一個圖片代理(跟航班代理同樣做法,轉發圖片位元組+補 CORS
+// 標頭),這裡不用改,失敗會自動變成成功。
+//
+// 衛星圖是「從外太空看地球」的正射投影圓盤照片,不是攤平的經緯度地圖,沒辦法
+// 直接當一般貼圖包住整顆球(球面 UV 跟這張圖的座標系不是同一套)。這裡用自訂
+// shader,對球面上每一點反推「站在衛星角度看,這裡對應照片上的哪個座標」
+// (跟 projectLabel 算地標位置用的是同一套正射投影公式,方向相反),算出來
+// 落在圓盤外(地球背對衛星那一面)就直接不畫,只有衛星實際看得到的那半球
+// 會疊上真的雲圖,邊緣用 smoothstep 羽化避免出現生硬的圓形邊界。
+const SAT_VERTEX = `
+varying vec3 vPos;
+void main() {
+  vPos = normalize(position);
+  gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+}
+`;
+const SAT_FRAGMENT = `
+uniform sampler2D uTex;
+uniform float uSubLon;
+uniform float uHasTex;
+varying vec3 vPos;
+const float PI = 3.14159265358979;
+void main() {
+  if (uHasTex < 0.5) discard;
+  float lat = asin(clamp(vPos.y, -1.0, 1.0));
+  float lon = atan(-vPos.z, vPos.x);
+  float dLon = mod(lon - uSubLon + PI, 2.0 * PI) - PI;
+  float vis = cos(lat) * cos(dLon);
+  if (vis < 0.0) discard;
+  float u = 0.5 + 0.5 * cos(lat) * sin(dLon);
+  float v = 0.5 - 0.5 * sin(lat);
+  vec4 tex = texture2D(uTex, vec2(u, v));
+  float edge = smoothstep(0.0, 0.12, vis);
+  gl_FragColor = vec4(tex.rgb, tex.a * edge);
+}
+`;
+
+function createGlobeOverlay(globeObject) {
+  if (!globeObject) return { setVisible() {}, applyTexture() {}, clear() {} };
+
+  const material = new THREE.ShaderMaterial({
+    uniforms: { uTex: { value: null }, uSubLon: { value: 0 }, uHasTex: { value: 0 } },
+    vertexShader: SAT_VERTEX,
+    fragmentShader: SAT_FRAGMENT,
+    transparent: true,
+    depthWrite: false,
+  });
+  const mesh = new THREE.Mesh(new THREE.SphereGeometry(1.012, 96, 96), material);
+  mesh.renderOrder = 2;
+  mesh.visible = false;
+  globeObject.add(mesh);
+
+  const loader = new THREE.TextureLoader();
+  loader.crossOrigin = "anonymous";
+  let currentTex = null;
+
+  return {
+    setVisible(v) { mesh.visible = !!v; },
+    clear() { material.uniforms.uHasTex.value = 0; },
+    applyTexture(url, subLonDeg) {
+      loader.load(url, (tex) => {
+        tex.colorSpace = THREE.SRGBColorSpace;
+        tex.generateMipmaps = false;
+        tex.minFilter = THREE.LinearFilter;
+        material.uniforms.uTex.value = tex;
+        material.uniforms.uSubLon.value = (subLonDeg * Math.PI) / 180;
+        material.uniforms.uHasTex.value = 1;
+        if (currentTex && currentTex !== tex) currentTex.dispose();
+        currentTex = tex;
+      }, undefined, () => {
+        // 預期中的失敗(來源沒開 CORS,例如向日葵)——安靜略過,2D 照片版本
+        // 不受影響照常顯示,不用把這個當成錯誤處理。
+      });
+    },
+  };
+}
+
+export function createSatellitePanel({ globeObject } = {}) {
   const panel = document.getElementById("satellite-panel");
   const img = document.getElementById("satellite-img");
   const caption = document.getElementById("satellite-caption");
@@ -119,6 +202,8 @@ export function createSatellitePanel() {
   const tipEnEl = document.getElementById("satellite-tip-en");
   const tipLinkEl = document.getElementById("satellite-tip-link");
   if (!panel || !img) return { setEnabled() {}, isEnabled: () => false };
+
+  const globeOverlay = createGlobeOverlay(globeObject);
 
   let enabled = false;
   let region = "wpac";
@@ -163,8 +248,11 @@ export function createSatellitePanel() {
   function load() {
     tries = 0;
     const r = REGIONS[region], b = r.bands[band];
+    globeOverlay.clear();
     if (b.goes) {
-      img.src = `https://cdn.star.nesdis.noaa.gov/GOES19/ABI/FD/${b.goes}/678x678.jpg?t=${Date.now()}`;
+      const url = `https://cdn.star.nesdis.noaa.gov/GOES19/ABI/FD/${b.goes}/678x678.jpg?t=${Date.now()}`;
+      img.src = url;
+      globeOverlay.applyTexture(url, r.subLon);
       caption.textContent = `${b.label} · 每 10 分鐘更新 · 現在台灣時間 ${fmtTaipei(new Date())} · 資料來源 ${r.source}`;
     } else {
       baseTime = roundedNow();
@@ -174,7 +262,9 @@ export function createSatellitePanel() {
   function tryLoad() {
     const r = REGIONS[region], b = r.bands[band];
     const d = new Date(baseTime.getTime() - tries * STEP_MIN * 60000);
-    img.src = himawariUrl(b.himawari, d);
+    const url = himawariUrl(b.himawari, d);
+    img.src = url;
+    globeOverlay.applyTexture(url, r.subLon);
     caption.textContent = `${b.label} · ${fmtTaipei(d)} 台灣時間 · 資料來源 ${r.source}`;
   }
   img.addEventListener("error", () => {
@@ -202,6 +292,7 @@ export function createSatellitePanel() {
   function setEnabled(v) {
     enabled = !!v;
     panel.hidden = !enabled;
+    globeOverlay.setVisible(enabled);
     if (enabled) {
       setRegionUI();
       renderLabels();
