@@ -21,6 +21,24 @@ const POP_TAGS = /pop|top ?40|hits?\b|contemporary|music|chart/i;
 const HLS_URL = /\.m3u8(\?|$)/i;
 // 熱門國家多給幾台選擇,其他國家維持新聞+流行各一台就好
 const POPULAR_COUNTRIES = new Set(["TW", "KR", "CN", "JP", "US", "GB", "FR", "DE"]);
+// 使用者點名想要的電台,只要 radio-browser 裡有播得出來的版本就一定收進去,不受
+// 新聞/流行的自動判斷限制——用電台自己的名稱關鍵字直接查,不能只在「該國點擊數
+// 前 30 名」裡面找,很多指定電台點擊數低、根本擠不進前 30 名。
+const PINNED_STATIONS = {
+  TW: ["飛碟"],
+};
+
+async function findPinnedStation(code, keyword) {
+  try {
+    const r = await fetch(`${RADIO_BASE}?countrycode=${code}&name=${encodeURIComponent(keyword)}&hidebroken=true&order=clickcount&reverse=true&limit=10`);
+    if (!r.ok) return null;
+    const list = await r.json();
+    if (!Array.isArray(list)) return null;
+    return list.find((s) => (s.url_resolved || s.url) && !HLS_URL.test(s.url_resolved || s.url || "")) || null;
+  } catch {
+    return null;
+  }
+}
 
 // 每個國家挑「一台新聞 + 一台流行音樂」(找得到的話),而不是只挑點擊數最高的
 // 一台——單一榜首常常是這個目錄站自己的點擊怪象(見上面說明),兩種類型都給
@@ -28,21 +46,27 @@ const POPULAR_COUNTRIES = new Set(["TW", "KR", "CN", "JP", "US", "GB", "FR", "DE
 async function pickStationsForCountry(code, count = 2) {
   const url = `${RADIO_BASE}?countrycode=${code}&order=clickcount&reverse=true&limit=30&hidebroken=true`;
   try {
-    const r = await fetch(url);
+    const [r, pinnedResults] = await Promise.all([
+      fetch(url),
+      Promise.all((PINNED_STATIONS[code] || []).map((kw) => findPinnedStation(code, kw))),
+    ]);
     if (!r.ok) return [];
     const list = await r.json();
     if (!Array.isArray(list) || !list.length) return [];
     const playable = list.filter((s) => (s.url_resolved || s.url) && !HLS_URL.test(s.url_resolved || s.url || ""));
     const clean = playable.filter((s) => !AVOID_TAGS.test(s.tags || "") && !AVOID_TAGS.test(s.name || ""));
     const pool = clean.length ? clean : playable;
-    if (!pool.length) return [];
+    if (!pool.length && !pinnedResults.some(Boolean)) return [];
 
     const picks = [];
-    const news = pool.find((s) => NEWS_TAGS.test(s.tags || ""));
+    for (const hit of pinnedResults) {
+      if (hit && !picks.some((p) => p.stationuuid === hit.stationuuid)) picks.push(hit);
+    }
+    const news = pool.find((s) => !picks.includes(s) && NEWS_TAGS.test(s.tags || ""));
     if (news) picks.push(news);
     const pop = pool.find((s) => !picks.includes(s) && POP_TAGS.test(s.tags || ""));
     if (pop) picks.push(pop);
-    // 熱門國家想多看幾台:剩下名額用「還沒選過、點擊數最高」依序補滿
+    // 熱門國家想多看幾台、或有指定電台佔掉名額:剩下的用「還沒選過、點擊數最高」依序補滿
     for (const s of pool) {
       if (picks.length >= count) break;
       if (!picks.includes(s)) picks.push(s);
