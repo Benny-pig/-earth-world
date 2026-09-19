@@ -195,6 +195,12 @@
   #satellite-close {
     background: none; border: none; color: #9fb2d8; font-size: 18px; line-height: 1; cursor: pointer;
   }
+  .sat-regions { display: flex; gap: 6px; margin-bottom: 8px; }
+  .sat-regions button {
+    flex: 1; padding: 5px 0; border-radius: 6px; border: 1px solid rgba(120,170,255,.3);
+    background: rgba(255,255,255,.04); color: #b9c6e6; font-size: 11px; cursor: pointer;
+  }
+  .sat-regions button.active { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.4); color: #fff; }
   #satellite-img-wrap { position: relative; }
   #satellite-img { display: block; width: 100%; height: auto; border-radius: 6px; background: #060810; aspect-ratio: 1/1; }
   #satellite-labels { position: absolute; inset: 0; pointer-events: none; }
@@ -980,21 +986,22 @@
   <div id="nature-popup"></div>
   <div id="satellite-panel" hidden>
     <div class="sat-head">
-      <span class="sat-title">🌀 西太平洋衛星雲圖</span>
+      <span class="sat-title">🌀 即時衛星雲圖</span>
       <button id="satellite-close" type="button" aria-label="關閉">×</button>
     </div>
+    <div class="sat-regions">
+      <button type="button" data-region="wpac">西太平洋(颱風)</button>
+      <button type="button" data-region="atlantic">大西洋(颶風)</button>
+    </div>
     <div id="satellite-img-wrap">
-      <img id="satellite-img" alt="向日葵9號衛星雲圖">
+      <img id="satellite-img" alt="即時衛星雲圖">
       <div id="satellite-labels"></div>
     </div>
-    <div class="sat-bands">
-      <button type="button" data-band="ir">紅外線</button>
-      <button type="button" data-band="true_color">真色</button>
-    </div>
+    <div class="sat-bands"></div>
     <div id="satellite-caption" class="sat-caption"></div>
     <div class="sat-tip">
-      💡 <b>怎麼看颱風:</b>找一團白色雲系呈螺旋狀捲起、越捲越紮實密實,強的話中心會有一個清楚的小圓圈(颱風眼);紅外線圖裡顏色越亮白代表雲頂越高、通常越劇烈。想確認正確位置、強度與路徑預測,還是要看氣象單位的官方發布,不要只憑肉眼判斷。
-      <a href="https://www.cwa.gov.tw/V8/C/P/Typhoon/TY_NEWS.html" target="_blank" rel="noopener">中央氣象署颱風消息 ↗</a>
+      💡 <span id="satellite-tip-text"></span>想確認正確位置、強度與路徑預測,還是要看氣象單位的官方發布,不要只憑肉眼判斷。
+      <a id="satellite-tip-link" href="#" target="_blank" rel="noopener"></a>
     </div>
   </div>
   <div id="side-panel"><button class="close" aria-label="關閉">×</button><div id="side-panel-body"></div></div>
