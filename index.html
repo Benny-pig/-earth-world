@@ -206,6 +206,17 @@
   #nature-popup .np-ico { margin-right: 5px; opacity: .85; }
   #nature-popup .np-en { color: #9fb2d8; font-size: 11.5px; margin-top: 1px; }
   #nature-popup .np-note { margin: 8px 0 0; color: #dbe4f7; }
+  /* 當地即時航班:面板放左邊(跟衛星雲圖右邊的面板分開,兩個都打開時不會疊在一起) */
+  #flight-panel {
+    position: fixed; top: 110px; left: 18px; z-index: 44; width: 260px; max-width: calc(100vw - 36px);
+    padding: 12px; border-radius: 12px; background: rgba(10, 14, 26, 0.92); backdrop-filter: blur(10px);
+    border: 1px solid rgba(120, 170, 255, 0.3); color: #e7edfb; box-shadow: 0 10px 32px rgba(0,0,0,.5);
+    font: 13px system-ui, "Microsoft JhengHei", sans-serif;
+  }
+  #flight-panel .sat-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
+  #flight-panel .sat-title { font-weight: 600; }
+  #flight-panel-close { background: none; border: none; color: #9fb2d8; font-size: 18px; line-height: 1; cursor: pointer; }
+  #flight-panel .sat-tip { margin-top: 0; padding-top: 0; border-top: none; }
   /* 西太平洋衛星雲圖:固定小面板,不用像大百科那樣整頁蓋掉地球 */
   #satellite-panel {
     position: fixed; top: 100px; right: 18px; z-index: 44; width: 320px; max-width: calc(100vw - 36px);
@@ -1008,6 +1019,16 @@
   <div id="physical-labels"></div>
   <div id="earthquake-labels"></div>
   <div id="nature-popup"></div>
+  <div id="flight-panel" hidden>
+    <div class="sat-head">
+      <span class="sat-title">✈️ 當地即時航班</span>
+      <button id="flight-panel-close" type="button" aria-label="關閉">×</button>
+    </div>
+    <div class="sat-tip">
+      範圍限定台灣周邊空域(海峽、國際航線密集區),不是全球飛機,資料偶爾會查不到。
+      <a href="https://map.opensky-network.org/" target="_blank" rel="noopener">在 OpenSky 完整地圖看即時航班 ↗</a>
+    </div>
+  </div>
   <div id="satellite-panel" hidden>
     <div class="sat-head">
       <span class="sat-title">🌀 即時衛星雲圖</span>

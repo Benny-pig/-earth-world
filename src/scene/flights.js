@@ -36,6 +36,18 @@ export function createFlightsLayer({ globeObject, camera, renderer, naturePopup 
   let flights = [];
   let enabled = false;
   let timer = null;
+  let lastSuccessAt = 0;
+  // 上游偶爾會斷斷續續打不到,失敗一兩次就馬上清空畫面反而會一直閃爍。但如果
+  // 已經好一段時間沒成功過,舊資料的飛機位置早就跟現實對不上了,還留著看起來
+  // 像飛機停在原地不動、像功能正常運作但其實資料是假的——所以拖太久沒更新就
+  // 清掉、改顯示忙線提示,比留著不會動的舊飛機圖示誠實。
+  const STALE_MS = 90_000;
+  function showStaleHint() {
+    if (Date.now() - lastSuccessAt > STALE_MS) {
+      host.innerHTML = `<div class="flight-setup-hint">✈️ 航班資料暫時查不到(來源忙線中),稍後會自動重試</div>`;
+      flights = [];
+    }
+  }
 
   async function refresh() {
     if (!enabled) return;
@@ -46,12 +58,13 @@ export function createFlightsLayer({ globeObject, camera, renderer, naturePopup 
     try {
       const r = await fetch(`${PROXY_URL}/?lat=${REGION.lat}&lon=${REGION.lon}&radius=${REGION.radiusNm}`);
       if (!r.ok) {
-        if (!flights.length) host.innerHTML = `<div class="flight-setup-hint">✈️ 航班資料暫時查不到(來源忙線中),稍後會自動重試</div>`;
+        showStaleHint();
         return;
       }
       const data = await r.json();
       if (!Array.isArray(data.ac)) return;
 
+      lastSuccessAt = Date.now();
       host.innerHTML = "";
       flights = data.ac
         .filter((a) => typeof a.lat === "number" && typeof a.lon === "number")
@@ -88,6 +101,7 @@ export function createFlightsLayer({ globeObject, camera, renderer, naturePopup 
           return { wrap, dir: latLonToVec3(a.lat, a.lon, 1), anchor: new THREE.Vector3(), ndc: new THREE.Vector3() };
         });
     } catch (e) {
+      showStaleHint();
       console.error("[flights] refresh failed:", e);
     }
   }
@@ -103,8 +117,17 @@ export function createFlightsLayer({ globeObject, camera, renderer, naturePopup 
     host.innerHTML = "";
     flights = [];
   }
+
+  const panel = document.getElementById("flight-panel");
+  const panelClose = document.getElementById("flight-panel-close");
+  if (panelClose) panelClose.addEventListener("click", () => {
+    setEnabled(false);
+    document.getElementById("flight-toggle")?.setAttribute("aria-pressed", "false");
+  });
+
   function setEnabled(v) {
     enabled = !!v;
+    if (panel) panel.hidden = !enabled;
     if (enabled) start(); else stop();
   }
 
