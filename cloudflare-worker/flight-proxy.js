@@ -39,8 +39,17 @@
 // 已經部署過的話:更新程式碼只要重複第 4 步(進 Edit code、整個蓋掉貼上、
 // Deploy),網址不會變,不用重新建立 Worker,Secrets 設定過就會留著。
 //
-// 用法(部署好之後,網址後面加這些參數):
+// 2026/09 再加:台灣機場即時航班時刻表(桃園/松山/高雄/台中),資料源是
+// 交通部「TDX 運輸資料流通服務」(前身 PTX)——這是政府官方設計給第三方
+// 開發者串接用的平台(很多台灣公車動態 App 都接這個),不是防代理的社群
+// 網站,不會有像 adsb.lol 那系列刁難 Cloudflare 的問題。一樣是 OAuth2
+// 帳號金鑰認證,免費方案每月 4,500 次額度,遠超過我們的用量。
+// 需要再設定兩個 Secret 環境變數:
+//   TDX_CLIENT_ID / TDX_CLIENT_SECRET → TDX 會員中心建立 API client 拿到的值
+//
+// 用法(部署好之後,網址後面加這些參數,兩種模式互斥):
 //   /?lat=23.7&lon=121&radius=250   → 查某個座標半徑內(海浬,最大 250)的所有飛機
+//   /?airports=TPE,TSA,KHH,RMQ      → 查這幾個機場代碼的即時進出港航班
 
 const CORS_HEADERS = {
   "Access-Control-Allow-Origin": "*",
@@ -128,6 +137,59 @@ function fetchPointApi(base, lat, lon, radiusNm) {
   });
 }
 
+const TDX_TOKEN_URL = "https://tdx.transportdata.tw/auth/realms/TDXConnect/protocol/openid-connect/token";
+let tdxTokenCache = { token: null, expiresAt: 0 };
+
+async function getTdxToken(env) {
+  const id = env?.TDX_CLIENT_ID;
+  const secret = env?.TDX_CLIENT_SECRET;
+  if (!id || !secret) return null;
+  if (tdxTokenCache.token && Date.now() < tdxTokenCache.expiresAt) return tdxTokenCache.token;
+
+  try {
+    const res = await fetch(TDX_TOKEN_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({ grant_type: "client_credentials", client_id: id, client_secret: secret }),
+      signal: AbortSignal.timeout(6000),
+    });
+    if (!res.ok) return null;
+    const json = await res.json();
+    if (!json.access_token) return null;
+    // token 有效期通常 86400 秒(1 天),提前 5 分鐘視為過期,避免卡在邊界。
+    tdxTokenCache = { token: json.access_token, expiresAt: Date.now() + Math.max(60, (json.expires_in || 86400) - 300) * 1000 };
+    return tdxTokenCache.token;
+  } catch {
+    return null;
+  }
+}
+
+// 一次用 $filter 把好幾個機場代碼都查在同一次呼叫裡,不用每個機場各打一次,
+// 大幅省下每月額度(4 個機場一次查完只算 1 次,不是 4 次)。
+async function fetchAirportFids(env, iataList) {
+  const token = await getTdxToken(env);
+  if (!token) return { ok: false, status: 401 };
+
+  const filter = iataList.map((c) => `AirportID eq '${c}'`).join(" or ");
+  const qs = `%24format=JSON&%24filter=${encodeURIComponent(filter)}`;
+  try {
+    const res = await fetch(`https://tdx.transportdata.tw/api/basic/v2/Air/FIDS/Airport?${qs}`, {
+      headers: { ...UA, Authorization: `Bearer ${token}` },
+      cf: { cacheTtl: 120, cacheEverything: true },
+      signal: AbortSignal.timeout(9000),
+    });
+    if (!res.ok) return { ok: false, status: res.status };
+    const json = await res.json();
+    const airports = {};
+    for (const a of Array.isArray(json) ? json : []) {
+      airports[a.AirportID] = { departure: a.FIDSDeparture || [], arrival: a.FIDSArrival || [] };
+    }
+    return { ok: true, body: JSON.stringify({ airports }) };
+  } catch (e) {
+    return { ok: false, status: 0, detail: String(e) };
+  }
+}
+
 export default {
   async fetch(request, env) {
     if (request.method === "OPTIONS") {
@@ -135,6 +197,20 @@ export default {
     }
 
     const url = new URL(request.url);
+
+    const airportsParam = url.searchParams.get("airports");
+    if (airportsParam) {
+      const list = airportsParam.split(",").map((s) => s.trim().toUpperCase()).filter(Boolean).slice(0, 10);
+      const result = await fetchAirportFids(env, list);
+      if (result.ok) {
+        return new Response(result.body, { status: 200, headers: { ...CORS_HEADERS, "Content-Type": "application/json" } });
+      }
+      return new Response(JSON.stringify({ error: "機場航班資料暫時查不到,稍後會自動重試", status: result.status }), {
+        status: 502,
+        headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
+      });
+    }
+
     const lat = parseFloat(url.searchParams.get("lat"));
     const lon = parseFloat(url.searchParams.get("lon"));
     const radius = Math.min(250, parseFloat(url.searchParams.get("radius")) || 200);

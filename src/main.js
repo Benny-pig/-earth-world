@@ -19,6 +19,7 @@ import { createEarthquakesLayer } from "./scene/earthquakes.js";
 import { createRadioLayer } from "./scene/radio.js";
 import { createSatellitePanel } from "./ui/satellite.js";
 import { createFlightsLayer } from "./scene/flights.js";
+import { createAirportBoard } from "./ui/airport-board.js";
 import { createNaturePopup } from "./ui/nature-popup.js";
 import { createSidePanel } from "./ui/side-panel.js";
 import { createClockWeather } from "./ui/clock-weather.js";
@@ -257,6 +258,15 @@ export function start() {
     const next = flightToggle.getAttribute("aria-pressed") !== "true";
     flightToggle.setAttribute("aria-pressed", String(next));
     flights.setEnabled(next);
+  });
+
+  const airportBoard = createAirportBoard();
+  window.__earth.airportBoard = airportBoard;
+  const airportToggle = document.getElementById("airport-toggle");
+  if (airportToggle) airportToggle.addEventListener("click", () => {
+    const next = airportToggle.getAttribute("aria-pressed") !== "true";
+    airportToggle.setAttribute("aria-pressed", String(next));
+    airportBoard.setEnabled(next);
   });
 
   const audioToggle = document.getElementById("audio-toggle");
