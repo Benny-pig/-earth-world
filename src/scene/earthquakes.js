@@ -1,4 +1,5 @@
 import * as THREE from "three";
+import { esc } from "../lib/esc.js";
 
 // 全球地震顯示:美國地質調查所(USGS)公開 GeoJSON,免金鑰、每分鐘更新。
 // 只抓規模 4.5 以上(近一天),避免上百筆小地震把地球點滿看不清楚。
@@ -44,42 +45,51 @@ export function createEarthquakesLayer({ globeObject, camera, renderer, naturePo
       const r = await fetch(USGS_FEED);
       if (!r.ok) return;
       data = await r.json();
-    } catch {
-      return; // 離線或 USGS 暫時打不通,保留上一次資料,靜默略過
-    }
-    if (!Array.isArray(data.features)) return;
+      if (!Array.isArray(data.features)) return;
 
-    host.innerHTML = "";
-    quakes = data.features
-      .filter((f) => f.properties && typeof f.properties.mag === "number" && Array.isArray(f.geometry?.coordinates))
-      .map((f) => {
-        const [lon, lat, depth] = f.geometry.coordinates;
-        const { mag, place, time } = f.properties;
-        const size = Math.round(8 + Math.max(0, mag) * 3);
-        const color = magColor(mag);
-        const el = document.createElement("div");
-        el.className = "quake-marker";
-        el.style.width = el.style.height = `${size}px`;
-        el.style.borderColor = color;
-        el.style.background = color + "55";
-        if (mag >= 6) el.classList.add("quake-marker-strong");
-        el.addEventListener("click", (e) => {
-          naturePopup.show({
-            icon: "◉",
-            zh: `規模 ${mag.toFixed(1)}`,
-            en: place || "",
-            note: `深度 ${Math.round(depth || 0)} 公里 · ${relTime(time)}`,
-          }, e.clientX, e.clientY);
+      host.innerHTML = "";
+      quakes = data.features
+        .filter((f) => f.properties && typeof f.properties.mag === "number" && Array.isArray(f.geometry?.coordinates))
+        .map((f) => {
+          const [lon, lat, depth] = f.geometry.coordinates;
+          const { mag, place, time } = f.properties;
+          const size = Math.round(8 + Math.max(0, mag) * 3);
+          const color = magColor(mag);
+          const el = document.createElement("div");
+          el.className = "quake-marker";
+          el.style.width = el.style.height = `${size}px`;
+          el.style.borderColor = color;
+          el.style.background = color + "55";
+          if (mag >= 6) el.classList.add("quake-marker-strong");
+          el.addEventListener("click", (e) => {
+            naturePopup.show({
+              icon: "◉",
+              zh: `規模 ${mag.toFixed(1)}`,
+              en: place || "",
+              note: `深度 ${Math.round(depth || 0)} 公里 · ${relTime(time)}`,
+            }, e.clientX, e.clientY);
+          });
+          host.appendChild(el);
+
+          // 字卡:不用點選就能看到規模、時間、地點(參考網站那種常駐telemetry卡片風格)
+          const label = document.createElement("div");
+          label.className = "quake-label";
+          label.style.borderColor = color;
+          label.innerHTML = `<b style="color:${color}">M${mag.toFixed(1)}</b><span class="quake-label-time">${esc(relTime(time))}</span>` +
+            (place ? `<div class="quake-label-place">${esc(place)}</div>` : "");
+          host.appendChild(label);
+
+          return { el, label, dir: latLonToVec3(lat, lon, 1), anchor: new THREE.Vector3(), ndc: new THREE.Vector3() };
         });
-        host.appendChild(el);
-        return { el, dir: latLonToVec3(lat, lon, 1), anchor: new THREE.Vector3(), ndc: new THREE.Vector3() };
-      });
+    } catch (e) {
+      console.error("[earthquakes] refresh failed:", e); // 離線、USGS 暫時打不通或資料格式異常,保留上一次資料,靜默略過
+    }
   }
 
   function start() {
     if (timer) return;
-    refresh();
-    timer = setInterval(refresh, REFRESH_MS);
+    refresh().catch((e) => console.error("[earthquakes] start failed:", e));
+    timer = setInterval(() => refresh().catch((e) => console.error("[earthquakes] refresh failed:", e)), REFRESH_MS);
   }
   function stop() {
     clearInterval(timer);
@@ -110,12 +120,17 @@ export function createEarthquakesLayer({ globeObject, camera, renderer, naturePo
       if (behind || facing < 0.05) {
         Q.el.style.opacity = "0";
         Q.el.style.transform = "translate(-9999px,-9999px)";
+        Q.label.style.opacity = "0";
+        Q.label.style.transform = "translate(-9999px,-9999px)";
         continue;
       }
       const x = rect.left + (Q.ndc.x * 0.5 + 0.5) * rect.width;
       const y = rect.top + (-Q.ndc.y * 0.5 + 0.5) * rect.height;
-      Q.el.style.opacity = THREE.MathUtils.clamp((facing - 0.05) / 0.2, 0, 1).toFixed(2);
+      const op = THREE.MathUtils.clamp((facing - 0.05) / 0.2, 0, 1).toFixed(2);
+      Q.el.style.opacity = op;
       Q.el.style.transform = `translate(${Math.round(x)}px, ${Math.round(y)}px) translate(-50%, -50%)`;
+      Q.label.style.opacity = op;
+      Q.label.style.transform = `translate(${Math.round(x)}px, ${Math.round(y)}px) translate(10px, -50%)`;
     }
   }
 

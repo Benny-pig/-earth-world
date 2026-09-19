@@ -94,6 +94,18 @@
     0% { box-shadow: 0 0 0 0 rgba(231,76,60,.55); }
     100% { box-shadow: 0 0 0 10px rgba(231,76,60,0); }
   }
+  #earthquake-labels .quake-label {
+    position: absolute; top: 0; left: 0; pointer-events: none; white-space: nowrap;
+    background: rgba(10,14,22,.72); border: 1px solid; border-left-width: 3px;
+    border-radius: 3px; padding: 2px 7px; font-size: 10.5px; line-height: 1.5;
+    color: #d7e0ee; opacity: 0; transition: opacity .35s ease; will-change: transform, opacity;
+    font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  }
+  #earthquake-labels .quake-label-time { margin-left: 6px; color: #9aabc4; }
+  #earthquake-labels .quake-label-place {
+    max-width: 160px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    color: #b7c2d6; font-size: 10px;
+  }
   #nature-popup {
     position: fixed; z-index: 43; max-width: 260px; display: none;
     padding: 12px 14px; border-radius: 10px; background: rgba(10, 14, 26, 0.92);

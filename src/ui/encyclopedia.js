@@ -343,12 +343,20 @@ export function createEncyclopedia() {
       adminMap.render(mapBox, code, {
         capital: cap && cap.capital_latlon,
         onPick: (name) => renderRegionInfo(code, name),
+      }).catch((e) => {
+        console.error("[encyclopedia] admin map render failed:", code, e);
+        if (mapBox) mapBox.innerHTML = `<p class="enc-dim">縣市地圖載入失敗。</p>`;
       });
     }
 
     if (TRANSIT[code]) {
       const tBox = document.getElementById("enc-transit-map");
-      if (tBox) transitMap.render(tBox, TRANSIT[code]);
+      if (tBox) {
+        transitMap.render(tBox, TRANSIT[code]).catch((e) => {
+          console.error("[encyclopedia] transit map render failed:", code, e);
+          tBox.innerHTML = `<p class="enc-dim">捷運路網圖載入失敗。</p>`;
+        });
+      }
     }
   }
 
@@ -377,15 +385,20 @@ export function createEncyclopedia() {
     el.setAttribute("aria-hidden", "false");
     scrollEl.scrollTop = 0;
 
-    if (cache.has(code)) { if (seq === reqSeq) render(code, cache.get(code)); return; }
     try {
-      const r = await fetch(`data/deep/${encodeURIComponent(codeToFile(code))}.json`);
-      if (seq !== reqSeq) return;            // 已切到別國
-      if (!r.ok) throw new Error("not found");
-      const d = await r.json();
-      cache.set(code, d);
+      let d;
+      if (cache.has(code)) {
+        d = cache.get(code);
+      } else {
+        const r = await fetch(`data/deep/${encodeURIComponent(codeToFile(code))}.json`);
+        if (seq !== reqSeq) return;          // 已切到別國
+        if (!r.ok) throw new Error("not found");
+        d = await r.json();
+        cache.set(code, d);
+      }
       if (seq === reqSeq) render(code, d);
-    } catch {
+    } catch (e) {
+      console.error("[encyclopedia] open failed:", code, e);
       if (seq === reqSeq)
         bodyEl.innerHTML = `<p class="enc-dim">這個國家的大百科還在建置中,之後會補上。</p>`;
     }
