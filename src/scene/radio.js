@@ -15,26 +15,38 @@ const RADIO_BASE = "https://de1.api.radio-browser.info/json/stations/search";
 const AVOID_TAGS = /spiritual|religio|worldpeace|prayer|meditation|sermon|dharma|buddhis|islamic|quran|gospel/i;
 const NEWS_TAGS = /news|talk|information|public radio/i;
 const POP_TAGS = /pop|top ?40|hits?\b|contemporary|music|chart/i;
+// .m3u8 是 HLS 串流,瀏覽器原生 <audio> 播不出來(Chrome 沒有內建 HLS 解碼,
+// 點了會顯示「正在播放」但完全沒聲音)——radio-browser 裡不少電台(尤其台灣
+// 幾家)剛好是這種格式,選台時直接排除,不然使用者點進去會覺得功能壞掉。
+const HLS_URL = /\.m3u8(\?|$)/i;
+// 熱門國家多給幾台選擇,其他國家維持新聞+流行各一台就好
+const POPULAR_COUNTRIES = new Set(["TW", "KR", "CN", "JP", "US", "GB", "FR", "DE"]);
 
 // 每個國家挑「一台新聞 + 一台流行音樂」(找得到的話),而不是只挑點擊數最高的
 // 一台——單一榜首常常是這個目錄站自己的點擊怪象(見上面說明),兩種類型都給
 // 比較貼近使用者想看到的「當地主流電台」。
-async function pickStationsForCountry(code) {
-  const url = `${RADIO_BASE}?countrycode=${code}&order=clickcount&reverse=true&limit=20&hidebroken=true`;
+async function pickStationsForCountry(code, count = 2) {
+  const url = `${RADIO_BASE}?countrycode=${code}&order=clickcount&reverse=true&limit=30&hidebroken=true`;
   try {
     const r = await fetch(url);
     if (!r.ok) return [];
     const list = await r.json();
     if (!Array.isArray(list) || !list.length) return [];
-    const usable = list.filter((s) => s.url_resolved || s.url);
-    const clean = usable.filter((s) => !AVOID_TAGS.test(s.tags || "") && !AVOID_TAGS.test(s.name || ""));
-    const pool = clean.length ? clean : usable;
+    const playable = list.filter((s) => (s.url_resolved || s.url) && !HLS_URL.test(s.url_resolved || s.url || ""));
+    const clean = playable.filter((s) => !AVOID_TAGS.test(s.tags || "") && !AVOID_TAGS.test(s.name || ""));
+    const pool = clean.length ? clean : playable;
     if (!pool.length) return [];
 
+    const picks = [];
     const news = pool.find((s) => NEWS_TAGS.test(s.tags || ""));
-    const pop = pool.find((s) => s !== news && POP_TAGS.test(s.tags || ""));
-    const picks = [news, pop].filter(Boolean);
-    if (!picks.length) picks.push(pool[0]); // 兩種標籤都沒中,退回排名最高的那台
+    if (news) picks.push(news);
+    const pop = pool.find((s) => !picks.includes(s) && POP_TAGS.test(s.tags || ""));
+    if (pop) picks.push(pop);
+    // 熱門國家想多看幾台:剩下名額用「還沒選過、點擊數最高」依序補滿
+    for (const s of pool) {
+      if (picks.length >= count) break;
+      if (!picks.includes(s)) picks.push(s);
+    }
     return picks;
   } catch {
     return [];
@@ -128,7 +140,7 @@ export function createRadioLayer({ globeObject, camera, renderer, music }) {
     const content = window.__earth?.content || {};
     const codes = Object.keys(content);
     const picks = await Promise.allSettled(codes.map(async (code) => {
-      const list = await pickStationsForCountry(code);
+      const list = await pickStationsForCountry(code, POPULAR_COUNTRIES.has(code) ? 4 : 2);
       return list.map((s) => ({ code, s }));
     }));
 
@@ -139,13 +151,13 @@ export function createRadioLayer({ globeObject, camera, renderer, music }) {
       r.value.forEach(({ code, s }, i) => {
         // 電台自己的經緯度優先;沒有的話(很多主流電台反而沒填)退回該國首都座標,
         // 至少能標在對的國家上,不會因為缺 geo 資料就把好台排除在外。同一國若有
-        // 兩台都要退回首都座標,加一點點偏移,不然兩張字卡會完全疊在一起。
+        // 好幾台都要退回首都座標,依序加偏移,不然字卡會整疊在同一點上。
         let lat = s.geo_lat, lon = s.geo_long;
         if (typeof lat !== "number" || typeof lon !== "number") {
           const cap = content[code]?.capital_latlon;
           if (!Array.isArray(cap)) return;
           [lat, lon] = cap;
-          if (i > 0) { lat += 0.25; lon += 0.25; }
+          if (i > 0) { lat += 0.25 * i; lon += 0.25 * i; }
         }
         stations.push(addStation(s, lat, lon));
       });
