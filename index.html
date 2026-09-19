@@ -154,6 +154,29 @@
   #radio-labels .radio-marker:hover ~ .radio-label .radio-label-sub,
   #radio-labels .radio-label:hover .radio-label-sub { display: block; }
   #radio-labels .radio-active .radio-label { background: rgba(10,22,16,.92); border-color: #6df5b0; }
+  /* 當地即時航班:沿用地震/廣播的常駐字卡結構,顏色改青色做飛航類別區分 */
+  #flight-labels { position: fixed; inset: 0; pointer-events: none; z-index: 37; overflow: hidden; }
+  #flight-labels .flight-wrap {
+    position: absolute; top: 0; left: 0; pointer-events: auto; cursor: pointer;
+    opacity: 0; transition: opacity .35s ease; will-change: transform, opacity;
+  }
+  #flight-labels .flight-icon {
+    position: absolute; top: 0; left: 0; transform: translate(-50%, -50%);
+    font-size: 14px; color: #33c4e0; text-shadow: 0 0 4px rgba(51,196,224,.6);
+  }
+  #flight-labels .flight-label {
+    position: absolute; top: 0; left: 0; transform: translate(11px, -50%); white-space: nowrap;
+    background: rgba(10,20,22,.72); border: 1px solid #33c4e0; border-left-width: 3px;
+    border-radius: 3px; padding: 2px 7px; font-size: 10px; line-height: 1.5;
+    color: #cdeef5; font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  }
+  #flight-labels .flight-label b { color: #33c4e0; }
+  #flight-labels .flight-label-sub { color: #8fc0c9; font-size: 9.5px; }
+  #flight-labels .flight-setup-hint {
+    position: fixed; top: 100px; left: 50%; transform: translateX(-50%); pointer-events: none;
+    background: rgba(10,14,26,.85); border: 1px solid rgba(120,170,255,.3); border-radius: 8px;
+    padding: 8px 14px; color: #b9c6e6; font-size: 12px;
+  }
   #radio-now-playing {
     display: flex; align-items: center; gap: 6px; color: #33e08a; font-size: 11.5px;
     max-width: 170px;
@@ -1019,6 +1042,7 @@
     </span>
   </div>
   <div id="radio-labels"></div>
+  <div id="flight-labels"></div>
   <div id="layer-controls">
     <div class="lc-title">功能</div>
     <button id="quake-toggle" class="layer-row" type="button" aria-pressed="true">
@@ -1029,6 +1053,9 @@
     </button>
     <button id="satellite-toggle" class="layer-row" type="button" aria-pressed="false">
       <span class="layer-dot"></span>颱風衛星雲圖
+    </button>
+    <button id="flight-toggle" class="layer-row" type="button" aria-pressed="false">
+      <span class="layer-dot"></span>當地即時航班
     </button>
   </div>
 
