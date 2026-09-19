@@ -766,6 +766,34 @@
   }
   body[data-theme="fantasy"] #layer-controls .layer-dot { background: #c9a227; box-shadow: 0 0 6px #c9a227; }
   body[data-theme="fantasy"] #layer-controls .layer-row[aria-pressed="false"] .layer-dot { background: #6b5a30; box-shadow: none; }
+  /* 颱風雲圖/當地航班/機場航班這幾張浮動面板原本沒套用主題,不管切哪個主題
+     背景都還是預設的深藍黑,這裡補上三種主題各自的配色。 */
+  body[data-theme="fantasy"] #satellite-panel,
+  body[data-theme="fantasy"] #flight-panel,
+  body[data-theme="fantasy"] #airport-panel {
+    background: linear-gradient(180deg,#332714,#1c150c); border: 1px solid #c9a227; color: #f0dfab;
+  }
+  body[data-theme="fantasy"] #satellite-close,
+  body[data-theme="fantasy"] #flight-panel-close,
+  body[data-theme="fantasy"] #airport-close { color: #a08a5c; }
+  body[data-theme="fantasy"] .sat-regions button,
+  body[data-theme="fantasy"] .sat-bands button,
+  body[data-theme="fantasy"] .ap-tabs button {
+    background: rgba(255,255,255,.05); border-color: rgba(201,162,39,.35); color: #d8c48a;
+  }
+  body[data-theme="fantasy"] .sat-regions button.active,
+  body[data-theme="fantasy"] .sat-bands button.active,
+  body[data-theme="fantasy"] .ap-tabs button.active { background: #c9a227; border-color: #c9a227; color: #1c150c; }
+  body[data-theme="fantasy"] .sat-tip,
+  body[data-theme="fantasy"] .sat-caption,
+  body[data-theme="fantasy"] .ap-row .ap-remark,
+  body[data-theme="fantasy"] .ap-row .ap-time,
+  body[data-theme="fantasy"] .ap-row .ap-place,
+  body[data-theme="fantasy"] .flight-setup-hint,
+  body[data-theme="fantasy"] .ap-empty { color: #c9b57a; }
+  body[data-theme="fantasy"] .sat-tip-en { color: #a08a5c; }
+  body[data-theme="fantasy"] .ap-row .ap-no { color: #e8cf7a; }
+  body[data-theme="fantasy"] .ap-row { border-bottom-color: rgba(201,162,39,.18); }
   /* ── 側邊欄 + 首頁面板:旅誌主題(暖色編輯風,跟大百科內文同一套配色) ── */
   /* 側欄本來所有次要文字都是給深色底配的淺藍/淺灰(.meta/.sp-clock/h3/.dim/
      .fc-* 一大串),旅誌是米白底,不逐個換成麥芽色系文字幾乎看不見。 */
@@ -835,6 +863,33 @@
   body[data-theme="journal"] #audio-ui select { background: #fbf7ee; color: #3b332a; border-color: rgba(120,90,50,.28); }
   body[data-theme="journal"] #layer-controls .layer-dot { background: #a6572e; box-shadow: 0 0 6px rgba(166,87,46,.6); }
   body[data-theme="journal"] #layer-controls .layer-row[aria-pressed="false"] .layer-dot { background: #b7ab97; box-shadow: none; }
+  body[data-theme="journal"] #satellite-panel,
+  body[data-theme="journal"] #flight-panel,
+  body[data-theme="journal"] #airport-panel {
+    background: #f3ede0; border-color: rgba(120,90,50,.28); color: #3b332a;
+  }
+  body[data-theme="journal"] #satellite-close,
+  body[data-theme="journal"] #flight-panel-close,
+  body[data-theme="journal"] #airport-close { color: #8a7a63; }
+  body[data-theme="journal"] .sat-regions button,
+  body[data-theme="journal"] .sat-bands button,
+  body[data-theme="journal"] .ap-tabs button {
+    background: #fbf7ee; border-color: rgba(120,90,50,.28); color: #5a4b39;
+  }
+  body[data-theme="journal"] .sat-regions button.active,
+  body[data-theme="journal"] .sat-bands button.active,
+  body[data-theme="journal"] .ap-tabs button.active { background: #a6572e; border-color: #a6572e; color: #fff; }
+  body[data-theme="journal"] .sat-tip,
+  body[data-theme="journal"] .sat-caption,
+  body[data-theme="journal"] .ap-row .ap-remark,
+  body[data-theme="journal"] .ap-row .ap-time,
+  body[data-theme="journal"] .ap-row .ap-place,
+  body[data-theme="journal"] .flight-setup-hint,
+  body[data-theme="journal"] .ap-empty { color: #5a4b39; }
+  body[data-theme="journal"] .sat-tip-en { color: #8a7a63; }
+  body[data-theme="journal"] .sat-tip a { color: #a6572e; }
+  body[data-theme="journal"] .ap-row .ap-no { color: #a6572e; }
+  body[data-theme="journal"] .ap-row { border-bottom-color: rgba(120,90,50,.15); }
   /* ── 側邊欄 + 首頁面板:戰術HUD主題 ── */
   body[data-theme="hud"] #side-panel {
     background: rgba(3,8,10,.88); border-left-color: rgba(0,229,255,.3); color: #cdf3ff;
@@ -889,6 +944,32 @@
   body[data-theme="hud"] #layer-controls .layer-row:hover { background: rgba(0,229,255,.14); }
   body[data-theme="hud"] #layer-controls .layer-dot { background: #00e5ff; box-shadow: 0 0 6px #00e5ff; }
   body[data-theme="hud"] #layer-controls .layer-row[aria-pressed="false"] .layer-dot { background: #2a4d52; box-shadow: none; }
+  body[data-theme="hud"] #satellite-panel,
+  body[data-theme="hud"] #flight-panel,
+  body[data-theme="hud"] #airport-panel {
+    background: linear-gradient(180deg,#0e2226,#04121a); border: 1px solid #00e5ff; color: #cdf3ff; border-radius: 3px;
+  }
+  body[data-theme="hud"] #satellite-close,
+  body[data-theme="hud"] #flight-panel-close,
+  body[data-theme="hud"] #airport-close { color: #5a8f99; }
+  body[data-theme="hud"] .sat-regions button,
+  body[data-theme="hud"] .sat-bands button,
+  body[data-theme="hud"] .ap-tabs button {
+    background: rgba(0,229,255,.06); border-color: rgba(0,229,255,.3); color: #7fd8e8;
+  }
+  body[data-theme="hud"] .sat-regions button.active,
+  body[data-theme="hud"] .sat-bands button.active,
+  body[data-theme="hud"] .ap-tabs button.active { background: #00e5ff; border-color: #00e5ff; color: #04121a; }
+  body[data-theme="hud"] .sat-tip,
+  body[data-theme="hud"] .sat-caption,
+  body[data-theme="hud"] .ap-row .ap-remark,
+  body[data-theme="hud"] .ap-row .ap-time,
+  body[data-theme="hud"] .ap-row .ap-place,
+  body[data-theme="hud"] .flight-setup-hint,
+  body[data-theme="hud"] .ap-empty { color: #8fd4e0; }
+  body[data-theme="hud"] .sat-tip-en { color: #5a8f99; }
+  body[data-theme="hud"] .ap-row .ap-no { color: #00e5ff; }
+  body[data-theme="hud"] .ap-row { border-bottom-color: rgba(0,229,255,.15); }
   #encyclopedia .enc-timeline { list-style: none; padding: 0; margin: 0; }
   #encyclopedia .enc-timeline li { display: grid; grid-template-columns: 74px 1fr; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--enc-line); }
   #encyclopedia .enc-timeline li:last-child { border-bottom: 0; }
