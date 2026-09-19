@@ -463,6 +463,52 @@
     font-family: 'Cinzel', 'Noto Serif TC', serif; letter-spacing: .06em;
   }
   body[data-theme="fantasy"] #side-panel .sp-more:hover { box-shadow: 0 6px 22px rgba(201,162,39,.4), inset 0 0 0 1px rgba(201,162,39,.2); }
+  /* ── 首頁面板(時鐘/天氣/搜尋/音樂/圖層控制)跟著同一個主題狀態走 ── */
+  body[data-theme="fantasy"] #tw-clock,
+  body[data-theme="fantasy"] #clock-weather,
+  body[data-theme="fantasy"] #audio-ui,
+  body[data-theme="fantasy"] #country-search input,
+  body[data-theme="fantasy"] #country-search ul {
+    background: rgba(20,16,10,.82); border-color: rgba(201,162,39,.35); color: #f0dfab;
+  }
+  body[data-theme="fantasy"] #tw-clock .tw-label,
+  body[data-theme="fantasy"] #clock-weather .cw-country { color: #c9a227; }
+  body[data-theme="fantasy"] #tw-clock .tw-date,
+  body[data-theme="fantasy"] #clock-weather .cw-date,
+  body[data-theme="fantasy"] #clock-weather .cw-hint,
+  body[data-theme="fantasy"] #clock-weather .cw-weather-note { color: #a08a5c; }
+  body[data-theme="fantasy"] #country-search input::placeholder { color: #a08a5c; }
+  body[data-theme="fantasy"] #country-search input:focus { border-color: #c9a227; }
+  body[data-theme="fantasy"] #country-search li.active,
+  body[data-theme="fantasy"] #country-search li:hover { background: rgba(201,162,39,.2); }
+  body[data-theme="fantasy"] #country-search .cs-zh { color: #f0dfab; }
+  body[data-theme="fantasy"] #country-search .cs-en { color: #a08a5c; }
+  body[data-theme="fantasy"] #audio-ui button { color: #f0dfab; }
+  body[data-theme="fantasy"] #audio-ui select { background: rgba(30,22,12,.9); color: #f0dfab; border-color: rgba(201,162,39,.35); }
+  body[data-theme="fantasy"] #tw-clock,
+  body[data-theme="fantasy"] #clock-weather,
+  body[data-theme="fantasy"] #audio-ui,
+  body[data-theme="fantasy"] #layer-controls .layer-btn { font-family: 'Cinzel', 'Noto Serif TC', serif; letter-spacing: .03em; }
+  /* 圖層控制面板(全球地震顯示開關):預設沿用跟時鐘/音樂列一致的深空玻璃感,
+     切到史詩主題時改成金色雕刻感,呼應整體風格。 */
+  #layer-controls { position: fixed; right: 18px; bottom: 18px; z-index: 42; }
+  #layer-controls .layer-btn {
+    display: flex; align-items: center; gap: 8px; cursor: pointer;
+    padding: 9px 15px; border-radius: 10px; background: rgba(10, 14, 26, 0.7); backdrop-filter: blur(10px);
+    border: 1px solid rgba(120, 170, 255, 0.22); color: #e7edfb;
+    font: 13px system-ui, "Microsoft JhengHei", sans-serif; transition: opacity .15s;
+  }
+  #layer-controls .layer-dot {
+    width: 8px; height: 8px; border-radius: 50%; flex: none;
+    background: #f2994a; box-shadow: 0 0 6px #f2994a; transition: background .15s, box-shadow .15s;
+  }
+  #layer-controls .layer-btn[aria-pressed="false"] { opacity: .65; }
+  #layer-controls .layer-btn[aria-pressed="false"] .layer-dot { background: #5b6786; box-shadow: none; }
+  body[data-theme="fantasy"] #layer-controls .layer-btn {
+    background: linear-gradient(180deg,#332714,#1c150c); border: 1px solid #c9a227; color: #f0dfab;
+  }
+  body[data-theme="fantasy"] #layer-controls .layer-dot { background: #c9a227; box-shadow: 0 0 6px #c9a227; }
+  body[data-theme="fantasy"] #layer-controls .layer-btn[aria-pressed="false"] .layer-dot { background: #6b5a30; box-shadow: none; }
   #encyclopedia .enc-timeline { list-style: none; padding: 0; margin: 0; }
   #encyclopedia .enc-timeline li { display: grid; grid-template-columns: 74px 1fr; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--enc-line); }
   #encyclopedia .enc-timeline li:last-child { border-bottom: 0; }
@@ -610,6 +656,11 @@
     <button id="audio-toggle" aria-label="背景音樂開關" title="背景音樂">🔊</button>
     <input id="audio-vol" type="range" min="0" max="100" value="55" aria-label="音量">
     <select id="audio-track" aria-label="選擇背景音樂"></select>
+  </div>
+  <div id="layer-controls">
+    <button id="quake-toggle" class="layer-btn" type="button" aria-pressed="true">
+      <span class="layer-dot"></span>全球地震顯示
+    </button>
   </div>
 
   <script type="importmap">

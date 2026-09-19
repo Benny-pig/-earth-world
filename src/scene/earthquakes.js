@@ -31,11 +31,14 @@ function relTime(ms) {
 
 export function createEarthquakesLayer({ globeObject, camera, renderer, naturePopup }) {
   const host = document.getElementById("earthquake-labels");
-  if (!host) return { update() {}, dispose() {} };
+  if (!host) return { update() {}, dispose() {}, setEnabled() {}, isEnabled: () => false };
 
   let quakes = [];
+  let enabled = true;
+  let timer = null;
 
   async function refresh() {
+    if (!enabled) return;
     let data;
     try {
       const r = await fetch(USGS_FEED);
@@ -73,14 +76,28 @@ export function createEarthquakesLayer({ globeObject, camera, renderer, naturePo
       });
   }
 
-  refresh();
-  const timer = setInterval(refresh, REFRESH_MS);
+  function start() {
+    if (timer) return;
+    refresh();
+    timer = setInterval(refresh, REFRESH_MS);
+  }
+  function stop() {
+    clearInterval(timer);
+    timer = null;
+    host.innerHTML = "";
+    quakes = [];
+  }
+  function setEnabled(v) {
+    enabled = !!v;
+    if (enabled) start(); else stop();
+  }
+  start();
 
   const camToAnchor = new THREE.Vector3();
   const worldNormal = new THREE.Vector3();
 
   function update() {
-    if (!quakes.length) return;
+    if (!enabled || !quakes.length) return;
     const rect = renderer.domElement.getBoundingClientRect();
     for (const Q of quakes) {
       Q.anchor.copy(Q.dir).multiplyScalar(1.02).applyMatrix4(globeObject.matrixWorld);
@@ -108,5 +125,5 @@ export function createEarthquakesLayer({ globeObject, camera, renderer, naturePo
     quakes = [];
   }
 
-  return { update, dispose };
+  return { update, dispose, setEnabled, isEnabled: () => enabled };
 }

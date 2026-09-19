@@ -188,6 +188,12 @@ export function start() {
   window.__earth.physicalLabels = physicalLabels;
   const earthquakes = createEarthquakesLayer({ globeObject: globe.object, camera, renderer, naturePopup });
   window.__earth.earthquakes = earthquakes;
+  const quakeToggle = document.getElementById("quake-toggle");
+  if (quakeToggle) quakeToggle.addEventListener("click", () => {
+    const next = quakeToggle.getAttribute("aria-pressed") !== "true";
+    quakeToggle.setAttribute("aria-pressed", String(next));
+    earthquakes.setEnabled(next);
+  });
 
   // hover 暫停:用 raycaster 判斷游標是否指到地球(Task 7 會擴充成國家偵測,這裡先做地球層級)
   const raycaster = new THREE.Raycaster();
