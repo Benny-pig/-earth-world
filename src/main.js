@@ -17,6 +17,7 @@ import { createCountryLabels } from "./scene/country-labels.js";
 import { createPhysicalLabels } from "./scene/physical-labels.js";
 import { createEarthquakesLayer } from "./scene/earthquakes.js";
 import { createRadioLayer } from "./scene/radio.js";
+import { createSatellitePanel } from "./ui/satellite.js";
 import { createNaturePopup } from "./ui/nature-popup.js";
 import { createSidePanel } from "./ui/side-panel.js";
 import { createClockWeather } from "./ui/clock-weather.js";
@@ -237,6 +238,15 @@ export function start() {
     const next = radioToggle.getAttribute("aria-pressed") !== "true";
     radioToggle.setAttribute("aria-pressed", String(next));
     radio.setEnabled(next);
+  });
+
+  const satellite = createSatellitePanel();
+  window.__earth.satellite = satellite;
+  const satelliteToggle = document.getElementById("satellite-toggle");
+  if (satelliteToggle) satelliteToggle.addEventListener("click", () => {
+    const next = satelliteToggle.getAttribute("aria-pressed") !== "true";
+    satelliteToggle.setAttribute("aria-pressed", String(next));
+    satellite.setEnabled(next);
   });
 
   const audioToggle = document.getElementById("audio-toggle");
