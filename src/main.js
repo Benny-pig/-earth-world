@@ -253,20 +253,37 @@ export function start() {
 
   const flights = createFlightsLayer({ globeObject: globe.object, camera, renderer, naturePopup });
   window.__earth.flights = flights;
+  const airportBoard = createAirportBoard();
+  window.__earth.airportBoard = airportBoard;
+
+  // 「世界機場航班」(ADS-B 即時追蹤)+「台灣機場航班」(TDX 時刻表)合併成
+  // 一個「機場航班資訊」群組,點群組列展開/收合子選項;群組列自己的圓點
+  // 反映「這兩個子功能有沒有任一個開著」,不是它自己的開關狀態。
+  const airportGroupToggle = document.getElementById("airport-group-toggle");
+  const airportSubmenu = document.getElementById("airport-submenu");
+  function syncAirportGroupState() {
+    if (airportGroupToggle) airportGroupToggle.setAttribute("aria-pressed", String(flights.isEnabled() || airportBoard.isEnabled()));
+  }
+  if (airportGroupToggle) airportGroupToggle.addEventListener("click", () => {
+    const next = airportGroupToggle.getAttribute("aria-expanded") !== "true";
+    airportGroupToggle.setAttribute("aria-expanded", String(next));
+    if (airportSubmenu) airportSubmenu.hidden = !next;
+  });
+
   const flightToggle = document.getElementById("flight-toggle");
   if (flightToggle) flightToggle.addEventListener("click", () => {
     const next = flightToggle.getAttribute("aria-pressed") !== "true";
     flightToggle.setAttribute("aria-pressed", String(next));
     flights.setEnabled(next);
+    syncAirportGroupState();
   });
 
-  const airportBoard = createAirportBoard();
-  window.__earth.airportBoard = airportBoard;
   const airportToggle = document.getElementById("airport-toggle");
   if (airportToggle) airportToggle.addEventListener("click", () => {
     const next = airportToggle.getAttribute("aria-pressed") !== "true";
     airportToggle.setAttribute("aria-pressed", String(next));
     airportBoard.setEnabled(next);
+    syncAirportGroupState();
   });
 
   const audioToggle = document.getElementById("audio-toggle");
