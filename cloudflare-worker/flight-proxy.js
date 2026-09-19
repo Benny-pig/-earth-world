@@ -57,7 +57,7 @@ function fetchOpenSky(lat, lon, radiusNm) {
   return fetch(`https://opensky-network.org/api/states/all?${qs}`, {
     headers: UA,
     cf: { cacheTtl: 15, cacheEverything: true },
-    signal: AbortSignal.timeout(6000),
+    signal: AbortSignal.timeout(9000),
   }).then(async (res) => {
     if (!res.ok) return { ok: false, status: res.status };
     const json = await res.json();
@@ -85,7 +85,7 @@ function fetchPointApi(base, lat, lon, radiusNm) {
   return fetch(`${base}/${lat}/${lon}/${radiusNm}`, {
     headers: UA,
     cf: { cacheTtl: 15, cacheEverything: true },
-    signal: AbortSignal.timeout(6000),
+    signal: AbortSignal.timeout(9000),
   }).then(async (res) => {
     if (!res.ok) return { ok: false, status: res.status };
     return { ok: true, body: await res.text() };
@@ -110,27 +110,27 @@ export default {
       });
     }
 
-    const attempts = [
-      () => fetchOpenSky(lat, lon, radius),
-      () => fetchPointApi("https://api.adsb.lol/v2/point", lat, lon, radius),
-    ];
+    // 兩個來源同時打(不是打完一個再打下一個),取先成功的那個——避免兩邊
+    // 都要等到逾時的話,使用者要等 9+9=18 秒,同時打最久也只要等 9 秒。
+    const settled = await Promise.allSettled([
+      fetchOpenSky(lat, lon, radius),
+      fetchPointApi("https://api.adsb.lol/v2/point", lat, lon, radius),
+    ]);
+
+    for (const s of settled) {
+      if (s.status === "fulfilled" && s.value.ok) {
+        return new Response(s.value.body, {
+          status: 200,
+          headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
+        });
+      }
+    }
 
     let lastStatus = null;
     let lastDetail = null;
-    for (const attempt of attempts) {
-      try {
-        const result = await attempt();
-        if (result.ok) {
-          return new Response(result.body, {
-            status: 200,
-            headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
-          });
-        }
-        lastStatus = result.status;
-      } catch (e) {
-        lastStatus = 0;
-        lastDetail = String(e);
-      }
+    for (const s of settled) {
+      if (s.status === "fulfilled") lastStatus = s.value.status;
+      else lastDetail = String(s.reason);
     }
 
     return new Response(JSON.stringify({
