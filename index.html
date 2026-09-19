@@ -389,6 +389,80 @@
   #encyclopedia[data-enc-theme="journal"] .enc-card:hover { border-color: rgba(120,90,50,.5); }
   #encyclopedia[data-enc-theme="journal"] .enc-scroll::-webkit-scrollbar-thumb { background: rgba(120,90,50,.3); border-color: #f3ede0; }
   #encyclopedia[data-enc-theme="journal"] ::selection { background: #a6572e; color: #f8f2e6; }
+  /* ── 主題:奇幻史詩(金色藤蔓紋飾風)──────────────────────── */
+  #encyclopedia[data-enc-theme="fantasy"] {
+    --enc-bg: #14100a; --enc-ink: #f0dfab; --enc-ink-dim: #a08a5c;
+    --enc-line: rgba(201,162,39,.3); --enc-surface: rgba(201,162,39,.05);
+    --enc-accent: #c9a227; --enc-warm: #d9c27a;
+    background: radial-gradient(circle at 18px 18px, rgba(201,162,39,.05) 1.5px, transparent 1.6px) 0 0/34px 34px, var(--enc-bg);
+  }
+  #encyclopedia[data-enc-theme="fantasy"] .enc-topbar { background: rgba(20,16,10,.85); border-bottom-color: var(--enc-line); }
+  #encyclopedia[data-enc-theme="fantasy"] .enc-topbar button { font-family: 'Cinzel', serif; letter-spacing: .1em; }
+  #encyclopedia[data-enc-theme="fantasy"] .enc-topbar button:hover { background: rgba(201,162,39,.12); border-color: rgba(201,162,39,.5); }
+  #encyclopedia[data-enc-theme="fantasy"] .enc-title,
+  #encyclopedia[data-enc-theme="fantasy"] h2,
+  #encyclopedia[data-enc-theme="fantasy"] h3 { font-family: 'Cinzel', 'Noto Serif TC', serif; }
+  #encyclopedia[data-enc-theme="fantasy"] h2 { text-shadow: 0 0 20px rgba(201,162,39,.22); }
+  #encyclopedia[data-enc-theme="fantasy"] .enc-card p,
+  #encyclopedia[data-enc-theme="fantasy"] .enc-route p,
+  #encyclopedia[data-enc-theme="fantasy"] .enc-facts dd { color: #cbb98a; }
+  #encyclopedia[data-enc-theme="fantasy"] .enc-card { background: var(--enc-surface); border-color: var(--enc-line); }
+  #encyclopedia[data-enc-theme="fantasy"] .enc-card:hover { border-color: rgba(201,162,39,.55); }
+  #encyclopedia[data-enc-theme="fantasy"] .enc-card img,
+  #encyclopedia[data-enc-theme="fantasy"] .enc-card-video { background: rgba(201,162,39,.06); }
+  #encyclopedia[data-enc-theme="fantasy"] .enc-fx-conv input,
+  #encyclopedia[data-enc-theme="fantasy"] .enc-fx-swap,
+  #encyclopedia[data-enc-theme="fantasy"] .enc-agency {
+    background: rgba(201,162,39,.05); border-color: var(--enc-line); color: var(--enc-ink);
+  }
+  #encyclopedia[data-enc-theme="fantasy"] .enc-agency:hover,
+  #encyclopedia[data-enc-theme="fantasy"] .enc-fx-swap:hover { background: rgba(201,162,39,.14); border-color: rgba(201,162,39,.5); }
+  #encyclopedia[data-enc-theme="fantasy"] .enc-route-days { background: var(--enc-accent); color: #1c150c; }
+  #encyclopedia[data-enc-theme="fantasy"] .admin-map-svg { background: rgba(201,162,39,.04); }
+  #encyclopedia[data-enc-theme="fantasy"] .admin-region { fill: rgba(201,162,39,.14); stroke: rgba(201,162,39,.55); }
+  #encyclopedia[data-enc-theme="fantasy"] .admin-region:hover { fill: rgba(201,162,39,.32); }
+  #encyclopedia[data-enc-theme="fantasy"] .admin-region.sel { fill: rgba(201,162,39,.6); stroke: #f0dfab; }
+  #encyclopedia[data-enc-theme="fantasy"] .admin-label { fill: #f0dfab; stroke: rgba(20,16,10,.9); }
+  #encyclopedia[data-enc-theme="fantasy"] .enc-scroll::-webkit-scrollbar-thumb { background: rgba(201,162,39,.35); border-color: var(--enc-bg); }
+  #encyclopedia[data-enc-theme="fantasy"] ::selection { background: var(--enc-accent); color: #1c150c; }
+  /* 四角藤蔓紋飾——只在史詩主題下,用四個角落各一個 SVG 背景圖層做裝飾框。
+     掛在 #encyclopedia 本身(不是捲動區 .enc-scroll 裡面),避免被捲動容器的
+     overflow 裁掉。 */
+  #encyclopedia[data-enc-theme="fantasy"]::after {
+    content: ""; position: absolute; inset: 10px; pointer-events: none; z-index: 61;
+    background-repeat: no-repeat; background-size: 40px 40px;
+    background-position: top left, top right, bottom left, bottom right;
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M4 36 L4 14 Q4 4 14 4 L36 4' stroke='%23c9a227' stroke-width='1.4' fill='none'/%3E%3Cpath d='M4 20 Q11 20 11 12 Q11 6 17 6' stroke='%23c9a227' stroke-width='1.1' fill='none'/%3E%3Ccircle cx='17' cy='6' r='2' fill='%23c9a227'/%3E%3C/svg%3E"),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M36 36 L36 14 Q36 4 26 4 L4 4' stroke='%23c9a227' stroke-width='1.4' fill='none'/%3E%3Cpath d='M36 20 Q29 20 29 12 Q29 6 23 6' stroke='%23c9a227' stroke-width='1.1' fill='none'/%3E%3Ccircle cx='23' cy='6' r='2' fill='%23c9a227'/%3E%3C/svg%3E"),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M4 4 L4 26 Q4 36 14 36 L36 36' stroke='%23c9a227' stroke-width='1.4' fill='none'/%3E%3Cpath d='M4 20 Q11 20 11 28 Q11 34 17 34' stroke='%23c9a227' stroke-width='1.1' fill='none'/%3E%3Ccircle cx='17' cy='34' r='2' fill='%23c9a227'/%3E%3C/svg%3E"),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M36 4 L36 26 Q36 36 26 36 L4 36' stroke='%23c9a227' stroke-width='1.4' fill='none'/%3E%3Cpath d='M36 20 Q29 20 29 28 Q29 34 23 34' stroke='%23c9a227' stroke-width='1.1' fill='none'/%3E%3Ccircle cx='23' cy='34' r='2' fill='%23c9a227'/%3E%3C/svg%3E");
+  }
+  /* 章節分隔線上加一顆小金色菱形寶石,呼應史詩主題的裝飾感 */
+  #encyclopedia[data-enc-theme="fantasy"] .enc-sec > h3 { position: relative; }
+  #encyclopedia[data-enc-theme="fantasy"] .enc-sec > h3::after {
+    content: ""; position: absolute; right: 0; bottom: -4.5px; width: 7px; height: 7px;
+    background: var(--enc-accent); transform: rotate(45deg);
+  }
+  /* 按鈕加金色雙層邊框,做出「雕刻」質感 */
+  #encyclopedia[data-enc-theme="fantasy"] .enc-topbar button,
+  body[data-theme="fantasy"] #side-panel .sp-more {
+    box-shadow: inset 0 0 0 1px rgba(201,162,39,.2);
+  }
+  /* ── 側邊欄:主題切換同時影響側邊欄的關鍵按鈕,維持一致視覺語言 ── */
+  body[data-theme="fantasy"] #side-panel {
+    background: rgba(20,16,10,.86); border-left-color: rgba(201,162,39,.3);
+  }
+  body[data-theme="fantasy"] #side-panel h2 { font-family: 'Cinzel', 'Noto Serif TC', serif; color: #f0dfab; }
+  body[data-theme="fantasy"] #side-panel .close {
+    background: rgba(201,162,39,.12); color: #f0dfab; border: 1px solid rgba(201,162,39,.4);
+  }
+  body[data-theme="fantasy"] #side-panel .sp-more {
+    background: linear-gradient(180deg,#332714,#1c150c);
+    border: 1px solid #c9a227; color: #f0dfab;
+    font-family: 'Cinzel', 'Noto Serif TC', serif; letter-spacing: .06em;
+  }
+  body[data-theme="fantasy"] #side-panel .sp-more:hover { box-shadow: 0 6px 22px rgba(201,162,39,.4), inset 0 0 0 1px rgba(201,162,39,.2); }
   #encyclopedia .enc-timeline { list-style: none; padding: 0; margin: 0; }
   #encyclopedia .enc-timeline li { display: grid; grid-template-columns: 74px 1fr; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--enc-line); }
   #encyclopedia .enc-timeline li:last-child { border-bottom: 0; }
