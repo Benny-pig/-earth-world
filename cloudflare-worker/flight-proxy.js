@@ -2,20 +2,26 @@
 //
 // 為什麼需要這個:大部分免費航班追蹤 API 都不開放瀏覽器直接跨網域 fetch
 // (直接開網址沒問題,但網站前端的 JS 會被 CORS 擋)。這支 Worker 純粹是
-// 「轉發 + 補上 CORS 標頭」,不碰任何金鑰、不做其他事——跟 God's Eye View
-// 用自己的後端代理 OpenSky 是同一個做法。
+// 「轉發 + 補上 CORS 標頭」,不做其他事——跟 God's Eye View 用自己的後端
+// 代理 OpenSky 是同一個做法。
 //
-// 為什麼主要資料源是 OpenSky、不是 adsb.lol(2026/09 改版):實測發現社群
-// ADS-B 資料源(adsb.lol / adsb.one / airplanes.live,同一套 readsb/tar1090
-// 系列開源軟體)全都會擋掉 Cloudflare Workers 的對外 IP(不是我們自己打太
-// 多次——直接從瀏覽器或其他伺服器打都正常,推測是這些社群網站專門防範
-// 雲端/機房代理式的爬取)。OpenSky Network 是有正式 API 文件、設計給第三方
-// 串接用的學術機構服務(免登入每天 400 次額度),實測不會擋雲端 IP,穩定
-// 很多。缺點是免費額度沒有機型/註冊號資料、且每天有次數上限——所以還是
-// 把 adsb.lol 留著當第二順位,OpenSky 打不到時試試看能不能撿到。
+// 為什麼要用 OpenSky 的登入認證、不是匿名存取(2026/09 改版):實測發現
+// 匿名/免登入的社群 ADS-B 資料源(adsb.lol、adsb.one、airplanes.live、
+// 還有 OpenSky 自己的匿名存取)全都會針對 Cloudflare Workers 的對外 IP
+// 特別刁難(擋掉或拖住不回應)——因為 Cloudflare Workers 的對外 IP 是全
+// 世界共用的一小批位址,太容易被拿來爬資料,這些網站會針對「匿名雲端
+// IP」加強防範。但用「已登入帳號 + OAuth2 金鑰認證」查詢是不同的信任
+// 機制(認的是有沒有帶對的金鑰,不是看 IP 名聲),所以改用這個管道。
+// adsb.lol 留著當第二順位備援(萬一哪天真的打得到)。
+//
+// 需要設定的 Cloudflare 環境變數(在 Worker 的 Settings → Variables and
+// Secrets 加,類型選 Secret,不要直接寫在這份程式碼裡):
+//   OPENSKY_CLIENT_ID      → OpenSky 帳號頁面建立 API client 拿到的 client_id
+//   OPENSKY_CLIENT_SECRET  → 同上拿到的 client_secret
+// 兩個都沒設的話,會自動退回匿名查詢(能力有限,但至少不會整個掛掉)。
 //
 // OpenSky 的資料格式(座標範圍框 + 陣列狀態向量)跟 adsb.lol 那系列(座標
-// 圓心+半徑 + 物件陣列)完全不同,所以這支 Worker 會把兩邊都轉換成同一種
+// 圓心+半徑 + 物件陣列)完全不同,這支 Worker 會把兩邊都轉換成同一種
 // 「{ac:[{lat,lon,...}]}」格式回傳給網站,網站前端不用管背後是哪個來源。
 //
 // 部署方式(不需要在本機裝 Node/wrangler,直接在 Cloudflare 網站上做):
@@ -23,14 +29,15 @@
 //   2. 左側選單 Workers & Pages → Create → Create Worker
 //   3. 取個名字(例如 earth-world-flights),按 Deploy 建立一個空白 Worker
 //   4. 進去 Worker 的 Edit code(或 Quick edit),把這個檔案的內容整個貼進去、
-//      蓋掉預設的範例程式碼
-//   5. 按 Deploy / Save and deploy
+//      蓋掉預設的範例程式碼,按 Deploy / Save and deploy
+//   5. 到 Worker 的 Settings → Variables and Secrets,新增兩個 Secret
+//      變數:OPENSKY_CLIENT_ID、OPENSKY_CLIENT_SECRET(值填你從 OpenSky
+//      帳號頁面拿到的那兩組),存檔後可能需要重新 Deploy 一次才會生效
 //   6. 部署完成後會拿到一個網址,長得像:
 //      https://earth-world-flights.<你的帳號>.workers.dev
-//      把這個網址告訴我,我會把它接進網站的航班功能裡。
 //
-// 已經部署過的話:更新程式碼只要重複第 4~5 步(進 Edit code、整個蓋掉貼上、
-// Deploy),網址不會變,不用重新建立 Worker。
+// 已經部署過的話:更新程式碼只要重複第 4 步(進 Edit code、整個蓋掉貼上、
+// Deploy),網址不會變,不用重新建立 Worker,Secrets 設定過就會留著。
 //
 // 用法(部署好之後,網址後面加這些參數):
 //   /?lat=23.7&lon=121&radius=250   → 查某個座標半徑內(海浬,最大 250)的所有飛機
@@ -41,11 +48,39 @@ const CORS_HEADERS = {
   "Access-Control-Allow-Headers": "Content-Type",
 };
 const UA = { "User-Agent": "earth-world (educational globe app)" };
+const TOKEN_URL = "https://auth.opensky-network.org/auth/realms/opensky-network/protocol/openid-connect/token";
+
+// Worker 同一個 isolate 可能會處理好幾個請求,把 token 快取在模組層級變數
+// 裡,沒過期就不用每次都重新換一次(換 token 是 30 分鐘有效)。
+let tokenCache = { token: null, expiresAt: 0 };
+
+async function getOpenSkyToken(env) {
+  const id = env?.OPENSKY_CLIENT_ID;
+  const secret = env?.OPENSKY_CLIENT_SECRET;
+  if (!id || !secret) return null;
+  if (tokenCache.token && Date.now() < tokenCache.expiresAt) return tokenCache.token;
+
+  try {
+    const res = await fetch(TOKEN_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({ grant_type: "client_credentials", client_id: id, client_secret: secret }),
+      signal: AbortSignal.timeout(6000),
+    });
+    if (!res.ok) return null;
+    const json = await res.json();
+    if (!json.access_token) return null;
+    tokenCache = { token: json.access_token, expiresAt: Date.now() + Math.max(60, (json.expires_in || 1800) - 60) * 1000 };
+    return tokenCache.token;
+  } catch {
+    return null;
+  }
+}
 
 // OpenSky 用經緯度範圍框(lamin/lomin/lamax/lomax)查詢,不是圓心+半徑,
 // 用海浬半徑粗略換算成一個涵蓋範圍差不多大的正方形框(1 海浬≈1/60 緯度度數;
 // 經度度數隨緯度變窄,除以 cos(緯度) 修正)。
-function fetchOpenSky(lat, lon, radiusNm) {
+function fetchOpenSky(lat, lon, radiusNm, token) {
   const latDelta = radiusNm / 60;
   const lonDelta = radiusNm / 60 / Math.max(0.1, Math.cos((lat * Math.PI) / 180));
   const qs = new URLSearchParams({
@@ -54,8 +89,9 @@ function fetchOpenSky(lat, lon, radiusNm) {
     lomin: (lon - lonDelta).toFixed(4),
     lomax: (lon + lonDelta).toFixed(4),
   });
+  const headers = token ? { ...UA, Authorization: `Bearer ${token}` } : UA;
   return fetch(`https://opensky-network.org/api/states/all?${qs}`, {
-    headers: UA,
+    headers,
     cf: { cacheTtl: 15, cacheEverything: true },
     signal: AbortSignal.timeout(9000),
   }).then(async (res) => {
@@ -93,7 +129,7 @@ function fetchPointApi(base, lat, lon, radiusNm) {
 }
 
 export default {
-  async fetch(request) {
+  async fetch(request, env) {
     if (request.method === "OPTIONS") {
       return new Response(null, { headers: CORS_HEADERS });
     }
@@ -110,10 +146,12 @@ export default {
       });
     }
 
+    const token = await getOpenSkyToken(env);
+
     // 兩個來源同時打(不是打完一個再打下一個),取先成功的那個——避免兩邊
     // 都要等到逾時的話,使用者要等 9+9=18 秒,同時打最久也只要等 9 秒。
     const settled = await Promise.allSettled([
-      fetchOpenSky(lat, lon, radius),
+      fetchOpenSky(lat, lon, radius, token),
       fetchPointApi("https://api.adsb.lol/v2/point", lat, lon, radius),
     ]);
 
@@ -137,6 +175,7 @@ export default {
       error: "所有航班資料來源目前都連不到或忙線中,稍後會自動重試",
       lastStatus,
       detail: lastDetail,
+      authenticated: !!token,
     }), {
       status: 502,
       headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
