@@ -30,6 +30,29 @@ function relTime(ms) {
   return `${Math.floor(hr / 24)} 天前`;
 }
 
+// USGS 的 place 只有英文(例如「5 km SW of Guánica, Puerto Rico」)。地球本身的
+// 國界資料(window.__earth.geojson)每個國家都已經有英文/中文名對照,直接借來
+// 用,不用另外接翻譯 API——把 place 尾端的國名抓出來比對,找得到就在旁邊補一個
+// 中文名。抓不到(南極海域、O 太平洋島鏈那種沒有國家的地名)就維持只顯示英文。
+function buildCountryNameMap() {
+  const map = new Map();
+  const feats = window.__earth?.geojson?.features;
+  if (Array.isArray(feats)) {
+    for (const f of feats) {
+      const en = f.properties?.NAME_EN;
+      const zh = f.properties?.NAME_ZHT;
+      if (en && zh) map.set(en.toLowerCase(), zh);
+    }
+  }
+  return map;
+}
+function zhOfPlace(place, countryMap) {
+  if (!place) return null;
+  const parts = place.split(",");
+  const tail = parts[parts.length - 1].trim().replace(/\s+region$/i, "");
+  return countryMap.get(tail.toLowerCase()) || null;
+}
+
 export function createEarthquakesLayer({ globeObject, camera, renderer, naturePopup }) {
   const host = document.getElementById("earthquake-labels");
   if (!host) return { update() {}, dispose() {}, setEnabled() {}, isEnabled: () => false };
@@ -48,6 +71,7 @@ export function createEarthquakesLayer({ globeObject, camera, renderer, naturePo
       if (!Array.isArray(data.features)) return;
 
       host.innerHTML = "";
+      const countryMap = buildCountryNameMap();
       quakes = data.features
         .filter((f) => f.properties && typeof f.properties.mag === "number" && Array.isArray(f.geometry?.coordinates))
         .map((f) => {
@@ -55,6 +79,7 @@ export function createEarthquakesLayer({ globeObject, camera, renderer, naturePo
           const { mag, place, time } = f.properties;
           const size = Math.round(8 + Math.max(0, mag) * 3);
           const color = magColor(mag);
+          const zhCountry = zhOfPlace(place, countryMap);
 
           const wrap = document.createElement("div");
           wrap.className = "quake-wrap";
@@ -68,7 +93,7 @@ export function createEarthquakesLayer({ globeObject, camera, renderer, naturePo
           const showPopup = (e) => {
             naturePopup.show({
               icon: "◉",
-              zh: `規模 ${mag.toFixed(1)}`,
+              zh: zhCountry ? `規模 ${mag.toFixed(1)} · ${zhCountry}` : `規模 ${mag.toFixed(1)}`,
               en: place || "",
               note: `深度 ${Math.round(depth || 0)} 公里 · ${relTime(time)}`,
             }, e.clientX, e.clientY);
@@ -83,7 +108,7 @@ export function createEarthquakesLayer({ globeObject, camera, renderer, naturePo
           label.style.borderColor = color;
           label.addEventListener("click", showPopup);
           label.innerHTML = `<b style="color:${color}">M${mag.toFixed(1)}</b><span class="quake-label-time">${esc(relTime(time))}</span>` +
-            (place ? `<div class="quake-label-place">${esc(place)}</div>` : "");
+            (place ? `<div class="quake-label-place">${zhCountry ? esc(zhCountry) + " · " : ""}${esc(place)}</div>` : "");
           wrap.appendChild(label);
 
           host.appendChild(wrap);

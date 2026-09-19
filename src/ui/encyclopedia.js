@@ -388,6 +388,10 @@ export function createEncyclopedia() {
   function close() {
     el.classList.remove("open");
     el.setAttribute("aria-hidden", "true");
+    // 面板滑出畫面不會讓裡面的直播 iframe/影片自動停止,清掉才會真的斷線,
+    // 不然切到別國或回到地球,聲音還在背景繼續播。
+    bodyEl.querySelectorAll("iframe").forEach((f) => { f.src = "about:blank"; });
+    bodyEl.querySelectorAll("video").forEach((v) => { v.pause(); });
   }
   return { open, close, isOpen: () => el.classList.contains("open") };
 }
