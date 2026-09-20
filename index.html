@@ -559,7 +559,16 @@
   #encyclopedia[data-enc-theme="journal"] .enc-route-days,
   #encyclopedia[data-enc-theme="journal"] .enc-agency { background: rgba(166,87,46,.12); border-color: rgba(166,87,46,.35); color: #5a4b39; }
   #encyclopedia[data-enc-theme="journal"] .enc-fx-conv input { background: #fbf7ee; color: #3b332a; border-color: rgba(120,90,50,.35); }
-  #encyclopedia[data-enc-theme="journal"] { --enc-line: rgba(120,90,50,.24); --enc-ink-dim: #8a7a63; --enc-accent: #a6572e; --enc-warm: #a6572e; }
+  /* 旅誌主題一直沒定義 --enc-ink/--enc-bg/--enc-surface 這三個變數(奇幻史詩、
+     戰術兩個主題都有定義),導致直接用 var(--enc-ink) 的元素(例如每個章節
+     標題 .enc-sec>h3、旅遊警示 .enc-alert)吃到深色主題預設的近白色文字,
+     疊在米白色背景上幾乎看不見——這裡補上這三個變數,從根本修正,不用每個
+     用到 var(--enc-ink) 的地方都個別補一次。 */
+  #encyclopedia[data-enc-theme="journal"] {
+    --enc-bg: #f3ede0; --enc-ink: #2c2419; --enc-ink-dim: #8a7a63;
+    --enc-line: rgba(120,90,50,.24); --enc-surface: rgba(90,70,40,.05);
+    --enc-accent: #a6572e; --enc-warm: #a6572e;
+  }
   #encyclopedia[data-enc-theme="journal"] .enc-hero,
   #encyclopedia[data-enc-theme="journal"] .enc-sec > h3,
   #encyclopedia[data-enc-theme="journal"] .enc-facts,
