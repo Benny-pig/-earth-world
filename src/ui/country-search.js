@@ -46,6 +46,17 @@ export function createCountrySearch({ index, onPick }) {
   }
 
   input.addEventListener("input", () => { matches = search(input.value); active = matches.length ? 0 : -1; render(); });
+  // 點進欄位、還沒打字之前,先列出全部國家(依中文名排序)方便使用者用瀏覽的
+  // 而不是一定要知道打什麼關鍵字才找得到。
+  input.addEventListener("focus", () => {
+    if (input.value.trim()) return;
+    // 中文用 localeCompare 排出來是筆畫順序,不是一般人習慣的拼音順序,反而
+    // 更難瀏覽——改用英文國名的字母順序,對中文為主的使用者來說仍然是可預期
+    // 的排序邏輯(跟很多手機聯絡人/國碼選單一樣用 A-Z),不用額外做拼音轉換。
+    matches = [...index].sort((a, b) => String(a.en || "").localeCompare(String(b.en || "")));
+    active = -1;
+    render();
+  });
   input.addEventListener("keydown", (e) => {
     if (e.key === "ArrowDown") { e.preventDefault(); active = Math.min(active + 1, matches.length - 1); render(); }
     else if (e.key === "ArrowUp") { e.preventDefault(); active = Math.max(active - 1, 0); render(); }
