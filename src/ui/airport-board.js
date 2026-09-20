@@ -54,8 +54,40 @@ function statusInfo(remark) {
   if (/已到|ARRIVED|已飛|DEPARTED|降落|LANDED/i.test(s)) return { label: s, cls: "ap-good" };
   return { label: s, cls: "" };
 }
+// 原本直接用時間字串排序、取前 MAX_ROWS 筆,結果桃園這種大機場一天航班
+// 太多,前 40 筆全部落在凌晨,不管幾點打開都只看得到凌晨的班次,看起來
+// 像資料卡住不動——改成「跟現在時刻的時間差」排序,只留現在時刻前後的
+// 航班,才會隨時間往前推進。時間字串沒有時區資訊,直接當台灣本地時刻
+// 比較,不用管 FlightDate(凌晨航班可能歸在前一天,語意不重要,只看
+// 時分)。
+const PAST_WINDOW_MIN = 120; // 已經過去超過 2 小時的班次(早就飛走/降落)就不留了
+
+function taipeiNowMinutes() {
+  const parts = new Intl.DateTimeFormat("en-GB", {
+    timeZone: "Asia/Taipei", hour: "2-digit", minute: "2-digit", hour12: false,
+  }).formatToParts(new Date());
+  const h = Number(parts.find((p) => p.type === "hour")?.value);
+  const m = Number(parts.find((p) => p.type === "minute")?.value);
+  return h * 60 + m;
+}
+function timeStrToMinutes(s) {
+  if (typeof s !== "string" || s.length < 16) return null;
+  return Number(s.slice(11, 13)) * 60 + Number(s.slice(14, 16));
+}
 function sortByTime(list, key) {
-  return [...list].sort((a, b) => String(a[key] || "").localeCompare(String(b[key] || "")));
+  const nowMin = taipeiNowMinutes();
+  return list
+    .map((f) => {
+      const t = timeStrToMinutes(f[key]);
+      if (t == null) return null;
+      let diff = t - nowMin;
+      if (diff < -720) diff += 1440; // 跨午夜:現在 23:50、航班 00:10,實際只差 20 分鐘不是 -1420
+      if (diff > 720) diff -= 1440;
+      return { f, diff };
+    })
+    .filter((x) => x && x.diff >= -PAST_WINDOW_MIN)
+    .sort((a, b) => a.diff - b.diff)
+    .map((x) => x.f);
 }
 function placeLabel(code) {
   const name = AIRPORT_NAMES[code];
@@ -65,6 +97,7 @@ function placeLabel(code) {
 export function createAirportBoard() {
   const panel = document.getElementById("airport-panel");
   const closeBtn = document.getElementById("airport-close");
+  const refreshBtn = document.getElementById("airport-refresh");
   const listEl = document.getElementById("airport-list");
   const captionEl = document.getElementById("airport-caption");
   if (!panel || !listEl) return { setEnabled() {}, isEnabled: () => false };
@@ -154,6 +187,7 @@ export function createAirportBoard() {
     setEnabled(false);
     document.getElementById("airport-toggle")?.setAttribute("aria-pressed", "false");
   });
+  if (refreshBtn) refreshBtn.addEventListener("click", () => { if (enabled) refresh(); });
 
   function setEnabled(v) {
     enabled = !!v;

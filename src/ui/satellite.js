@@ -1,5 +1,14 @@
 import * as THREE from "three";
 
+// 向日葵沒有開放跨網域讀取像素,3D 材質貼圖(不是 <img> 顯示)得透過這支
+// Worker 轉發圖片本身+補 CORS 標頭——跟「當地即時航班」共用同一支 Worker
+// (cloudflare-worker/flight-proxy.js 的 ?proxyImage= 路由)。<img> 顯示那張
+// 平面照片不受影響,不需要 CORS,直接用原始網址。
+const IMAGE_PROXY_URL = "https://earth-world-flights.a7779782.workers.dev";
+function proxiedImageUrl(url) {
+  return `${IMAGE_PROXY_URL}/?proxyImage=${encodeURIComponent(url)}`;
+}
+
 // 即時衛星雲圖:西太平洋用日本 NICT 向日葵9號、大西洋用美國 NOAA GOES-19,
 // 兩個都免金鑰、公開圖片。地球同步衛星固定盯著自己那半球,看不到另一半——
 // 這是物理限制,想看大西洋只能換一顆真的看得到大西洋的衛星,不是切換設定
@@ -110,11 +119,10 @@ const REGIONS = {
 };
 
 // 2026/09 新增:把衛星圖也貼到真正的 3D 地球上(不只是平面照片),可以直接
-// 轉動地球本身的視角去看。實測 GOES(大西洋)本來就開放跨網域讀取像素,可以
-// 直接當 WebGL 材質用;向日葵(西太平洋)還是沒開放,材質載入會失敗——這是
-// 預期中的情況,失敗就靜靜略過,2D 那張照片版本不受影響照常顯示。之後如果
-// 幫向日葵也做一個圖片代理(跟航班代理同樣做法,轉發圖片位元組+補 CORS
-// 標頭),這裡不用改,失敗會自動變成成功。
+// 轉動地球本身的視角去看。GOES(大西洋)本來就開放跨網域讀取像素,直接當
+// WebGL 材質用;向日葵(西太平洋)沒開放,材質透過上面的 IMAGE_PROXY_URL
+// 轉發圖片本身+補 CORS 標頭來解決(2D 那張照片版本不需要 CORS,不受影響,
+// 兩邊各自獨立顯示)。
 //
 // 衛星圖是「從外太空看地球」的正射投影圓盤照片,不是攤平的經緯度地圖,沒辦法
 // 直接當一般貼圖包住整顆球(球面 UV 跟這張圖的座標系不是同一套)。這裡用自訂
@@ -195,6 +203,7 @@ export function createSatellitePanel({ globeObject } = {}) {
   const img = document.getElementById("satellite-img");
   const caption = document.getElementById("satellite-caption");
   const closeBtn = document.getElementById("satellite-close");
+  const refreshBtn = document.getElementById("satellite-refresh");
   const labelsEl = document.getElementById("satellite-labels");
   const bandsEl = panel?.querySelector(".sat-bands");
   const regionBtns = panel ? [...panel.querySelectorAll("[data-region]")] : [];
@@ -264,7 +273,7 @@ export function createSatellitePanel({ globeObject } = {}) {
     const d = new Date(baseTime.getTime() - tries * STEP_MIN * 60000);
     const url = himawariUrl(b.himawari, d);
     img.src = url;
-    globeOverlay.applyTexture(url, r.subLon);
+    globeOverlay.applyTexture(proxiedImageUrl(url), r.subLon);
     caption.textContent = `${b.label} · ${fmtTaipei(d)} 台灣時間 · 資料來源 ${r.source}`;
   }
   img.addEventListener("error", () => {
@@ -280,6 +289,7 @@ export function createSatellitePanel({ globeObject } = {}) {
     setEnabled(false);
     document.getElementById("satellite-toggle")?.setAttribute("aria-pressed", "false");
   });
+  if (refreshBtn) refreshBtn.addEventListener("click", () => { if (enabled) load(); });
   regionBtns.forEach((b) => b.addEventListener("click", () => {
     if (region === b.dataset.region) return;
     region = b.dataset.region;

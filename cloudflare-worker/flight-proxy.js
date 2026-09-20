@@ -47,9 +47,18 @@
 // 需要再設定兩個 Secret 環境變數:
 //   TDX_CLIENT_ID / TDX_CLIENT_SECRET → TDX 會員中心建立 API client 拿到的值
 //
-// 用法(部署好之後,網址後面加這些參數,兩種模式互斥):
+// 2026/09 再加:向日葵衛星圖片代理。西太平洋衛星雲圖要貼到 3D 地球上(跟
+// 大西洋 GOES 一樣)得用 WebGL 材質讀取圖片像素,但向日葵的圖片伺服器沒開
+// 放跨網域讀取像素(CORS),只能顯示不能拿來當材質——用這支 Worker 轉發
+// 圖片本身、補上 CORS 標頭來解決,跟最上面那段 CORS 代理的原理一樣,只是
+// 這次代理的是圖片而不是 JSON。只允許轉發向日葵官方網域的圖片(白名單檢查),
+// 不是任意網址都能轉發,避免被拿去當開放代理濫用。
+const ALLOWED_IMAGE_HOSTS = ["himawari8.nict.go.jp"];
+
+// 用法(部署好之後,網址後面加這些參數,三種模式互斥):
 //   /?lat=23.7&lon=121&radius=250   → 查某個座標半徑內(海浬,最大 250)的所有飛機
 //   /?airports=TPE,TSA,KHH,RMQ      → 查這幾個機場代碼的即時進出港航班
+//   /?proxyImage=<向日葵圖片網址>    → 轉發圖片本身並補上 CORS 標頭
 
 const CORS_HEADERS = {
   "Access-Control-Allow-Origin": "*",
@@ -199,6 +208,36 @@ export default {
     }
 
     const url = new URL(request.url);
+
+    const proxyImage = url.searchParams.get("proxyImage");
+    if (proxyImage) {
+      let target;
+      try {
+        target = new URL(proxyImage);
+      } catch {
+        return new Response("圖片網址格式錯誤", { status: 400, headers: CORS_HEADERS });
+      }
+      if (!ALLOWED_IMAGE_HOSTS.includes(target.hostname)) {
+        return new Response("不允許代理這個網域的圖片", { status: 403, headers: CORS_HEADERS });
+      }
+      try {
+        const upstream = await fetch(target.toString(), {
+          headers: UA,
+          cf: { cacheTtl: 300, cacheEverything: true },
+          signal: AbortSignal.timeout(9000),
+        });
+        const body = await upstream.arrayBuffer();
+        return new Response(body, {
+          status: upstream.status,
+          headers: { ...CORS_HEADERS, "Content-Type": upstream.headers.get("content-type") || "image/png" },
+        });
+      } catch (e) {
+        return new Response(JSON.stringify({ error: "圖片代理失敗", detail: String(e) }), {
+          status: 502,
+          headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
+        });
+      }
+    }
 
     const airportsParam = url.searchParams.get("airports");
     if (airportsParam) {

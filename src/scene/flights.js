@@ -120,10 +120,12 @@ export function createFlightsLayer({ globeObject, camera, renderer, naturePopup 
 
   const panel = document.getElementById("flight-panel");
   const panelClose = document.getElementById("flight-panel-close");
+  const panelRefresh = document.getElementById("flight-refresh");
   if (panelClose) panelClose.addEventListener("click", () => {
     setEnabled(false);
     document.getElementById("flight-toggle")?.setAttribute("aria-pressed", "false");
   });
+  if (panelRefresh) panelRefresh.addEventListener("click", () => { if (enabled) refresh().catch((e) => console.error("[flights] refresh failed:", e)); });
 
   function setEnabled(v) {
     enabled = !!v;

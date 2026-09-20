@@ -209,7 +209,10 @@
   #nature-popup .np-note { margin: 8px 0 0; color: #dbe4f7; }
   /* 當地即時航班:面板放左邊(跟衛星雲圖右邊的面板分開,兩個都打開時不會疊在一起) */
   #flight-panel {
-    position: fixed; top: 110px; left: 18px; z-index: 44; width: 260px; max-width: calc(100vw - 36px);
+    position: fixed; top: 110px; left: 18px; z-index: 44;
+    width: 260px; min-width: 200px; max-width: calc(100vw - 36px);
+    min-height: 90px; max-height: calc(100vh - 40px);
+    resize: both; overflow: auto;
     padding: 12px; border-radius: 12px; background: rgba(10, 14, 26, 0.92); backdrop-filter: blur(10px);
     border: 1px solid rgba(120, 170, 255, 0.3); color: #e7edfb; box-shadow: 0 10px 32px rgba(0,0,0,.5);
     font: 13px system-ui, "Microsoft JhengHei", sans-serif;
@@ -258,7 +261,10 @@
   }
   /* 西太平洋衛星雲圖:固定小面板,不用像大百科那樣整頁蓋掉地球 */
   #satellite-panel {
-    position: fixed; top: 100px; right: 18px; z-index: 44; width: 320px; max-width: calc(100vw - 36px);
+    position: fixed; top: 100px; right: 18px; z-index: 44;
+    width: 320px; min-width: 260px; max-width: calc(100vw - 36px);
+    min-height: 320px; max-height: calc(100vh - 40px);
+    resize: both; overflow: auto;
     padding: 12px; border-radius: 12px; background: rgba(10, 14, 26, 0.92); backdrop-filter: blur(10px);
     border: 1px solid rgba(120, 170, 255, 0.3); color: #e7edfb; box-shadow: 0 10px 32px rgba(0,0,0,.5);
     font: 13px system-ui, "Microsoft JhengHei", sans-serif;
@@ -268,6 +274,12 @@
   #satellite-close {
     background: none; border: none; color: #9fb2d8; font-size: 18px; line-height: 1; cursor: pointer;
   }
+  /* 手動更新鈕:不用等自動更新的計時器,想看最新的隨時可以自己點。 */
+  .sat-refresh-btn {
+    background: none; border: none; color: #9fb2d8; font-size: 15px; line-height: 1; cursor: pointer;
+    margin-left: auto; margin-right: 4px; flex: none; transition: transform .4s;
+  }
+  .sat-refresh-btn:active { transform: rotate(180deg); }
   .sat-regions { display: flex; gap: 6px; margin-bottom: 8px; }
   .sat-regions button {
     flex: 1; padding: 5px 0; border-radius: 6px; border: 1px solid rgba(120,170,255,.3);
@@ -826,7 +838,8 @@
   }
   body[data-theme="fantasy"] #satellite-close,
   body[data-theme="fantasy"] #flight-panel-close,
-  body[data-theme="fantasy"] #airport-close { color: #a08a5c; }
+  body[data-theme="fantasy"] #airport-close,
+  body[data-theme="fantasy"] .sat-refresh-btn { color: #a08a5c; }
   body[data-theme="fantasy"] .sat-regions button,
   body[data-theme="fantasy"] .sat-bands button,
   body[data-theme="fantasy"] .ap-tabs button {
@@ -840,8 +853,13 @@
   body[data-theme="fantasy"] .ap-row-mid,
   body[data-theme="fantasy"] .ap-row-bottom,
   body[data-theme="fantasy"] .ap-flight,
-  body[data-theme="fantasy"] .flight-setup-hint,
   body[data-theme="fantasy"] .ap-empty { color: #c9b57a; }
+  /* .flight-setup-hint 的底色寫在 #flight-labels .flight-setup-hint(有 ID),
+     比單純 body[data-theme=...] .flight-setup-hint 的權重高,之前補的文字
+     顏色其實從來沒真的套用上去——這裡的選擇器一併加上 #flight-labels 蓋過它。 */
+  body[data-theme="fantasy"] #flight-labels .flight-setup-hint {
+    background: linear-gradient(180deg,#332714,#1c150c); border-color: #c9a227; color: #c9b57a;
+  }
   body[data-theme="fantasy"] .sat-tip-en { color: #a08a5c; }
   body[data-theme="fantasy"] .ap-flight b { color: #e8cf7a; }
   body[data-theme="fantasy"] .ap-badge { background: rgba(255,255,255,.06); color: #c9b57a; }
@@ -922,7 +940,8 @@
   }
   body[data-theme="journal"] #satellite-close,
   body[data-theme="journal"] #flight-panel-close,
-  body[data-theme="journal"] #airport-close { color: #8a7a63; }
+  body[data-theme="journal"] #airport-close,
+  body[data-theme="journal"] .sat-refresh-btn { color: #8a7a63; }
   body[data-theme="journal"] .sat-regions button,
   body[data-theme="journal"] .sat-bands button,
   body[data-theme="journal"] .ap-tabs button {
@@ -936,8 +955,10 @@
   body[data-theme="journal"] .ap-row-mid,
   body[data-theme="journal"] .ap-row-bottom,
   body[data-theme="journal"] .ap-flight,
-  body[data-theme="journal"] .flight-setup-hint,
   body[data-theme="journal"] .ap-empty { color: #5a4b39; }
+  body[data-theme="journal"] #flight-labels .flight-setup-hint {
+    background: #f3ede0; border-color: rgba(120,90,50,.28); color: #5a4b39;
+  }
   body[data-theme="journal"] .sat-tip-en { color: #8a7a63; }
   body[data-theme="journal"] .sat-tip a { color: #a6572e; }
   body[data-theme="journal"] .ap-flight b { color: #a6572e; }
@@ -1004,7 +1025,8 @@
   }
   body[data-theme="hud"] #satellite-close,
   body[data-theme="hud"] #flight-panel-close,
-  body[data-theme="hud"] #airport-close { color: #5a8f99; }
+  body[data-theme="hud"] #airport-close,
+  body[data-theme="hud"] .sat-refresh-btn { color: #5a8f99; }
   body[data-theme="hud"] .sat-regions button,
   body[data-theme="hud"] .sat-bands button,
   body[data-theme="hud"] .ap-tabs button {
@@ -1018,8 +1040,10 @@
   body[data-theme="hud"] .ap-row-mid,
   body[data-theme="hud"] .ap-row-bottom,
   body[data-theme="hud"] .ap-flight,
-  body[data-theme="hud"] .flight-setup-hint,
   body[data-theme="hud"] .ap-empty { color: #8fd4e0; }
+  body[data-theme="hud"] #flight-labels .flight-setup-hint {
+    background: linear-gradient(180deg,#0e2226,#04121a); border-color: #00e5ff; color: #8fd4e0;
+  }
   body[data-theme="hud"] .sat-tip-en { color: #5a8f99; }
   body[data-theme="hud"] .ap-flight b { color: #00e5ff; }
   body[data-theme="hud"] .ap-badge { background: rgba(0,229,255,.08); color: #8fd4e0; }
@@ -1194,6 +1218,7 @@
   <div id="airport-panel" hidden>
     <div class="sat-head">
       <span class="sat-title">🛫 台灣機場即時航班</span>
+      <button id="airport-refresh" class="sat-refresh-btn" type="button" title="立即更新最新資訊">⟳</button>
       <button id="airport-close" type="button" aria-label="關閉">×</button>
     </div>
     <div class="ap-tabs">
@@ -1212,6 +1237,7 @@
   <div id="flight-panel" hidden>
     <div class="sat-head">
       <span class="sat-title">✈️ 當地即時航班</span>
+      <button id="flight-refresh" class="sat-refresh-btn" type="button" title="立即更新最新資訊">⟳</button>
       <button id="flight-panel-close" type="button" aria-label="關閉">×</button>
     </div>
     <div class="sat-tip">
@@ -1222,6 +1248,7 @@
   <div id="satellite-panel" hidden>
     <div class="sat-head">
       <span class="sat-title">🌀 即時衛星雲圖</span>
+      <button id="satellite-refresh" class="sat-refresh-btn" type="button" title="立即更新最新資訊">⟳</button>
       <button id="satellite-close" type="button" aria-label="關閉">×</button>
     </div>
     <div class="sat-regions">

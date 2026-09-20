@@ -42,13 +42,26 @@ const PINNED_STATIONS = {
   TW: ["飛碟"],
 };
 
+// 網站本身走 HTTPS 的話(部署後的正式站),瀏覽器會擋 HTTP 的串流連線
+// (mixed content),而且不會有明顯錯誤訊息,只會「看起來在播、其實沒聲音」
+// ——實測 Hit FM台北之音廣播就是這樣(串流網址是 http://,不是 https://)。
+// 與其選進來變成這種假裝正常的電台,不如篩選階段就排除掉,換另一台真的
+// 播得出來的。本機開發(http://localhost)不受 mixed content 限制,一樣可以
+// 正常收錄 HTTP 電台測試,不影響本機測試涵蓋率。
+function isUsableUrl(s) {
+  const u = s.url_resolved || s.url;
+  if (!u) return false;
+  if (typeof window !== "undefined" && window.location?.protocol === "https:" && /^http:\/\//i.test(u)) return false;
+  return true;
+}
+
 async function findPinnedStation(code, keyword) {
   try {
     const r = await fetch(`${RADIO_BASE}?countrycode=${code}&name=${encodeURIComponent(keyword)}&hidebroken=true&order=clickcount&reverse=true&limit=10`);
     if (!r.ok) return null;
     const list = await r.json();
     if (!Array.isArray(list)) return null;
-    return list.find((s) => s.url_resolved || s.url) || null;
+    return list.find(isUsableUrl) || null;
   } catch {
     return null;
   }
@@ -67,7 +80,7 @@ async function pickStationsForCountry(code, count = 2) {
     if (!r.ok) return [];
     const list = await r.json();
     if (!Array.isArray(list) || !list.length) return [];
-    const playable = list.filter((s) => s.url_resolved || s.url);
+    const playable = list.filter(isUsableUrl);
     const clean = playable.filter((s) => !AVOID_TAGS.test(s.tags || "") && !AVOID_TAGS.test(s.name || ""));
     const pool = clean.length ? clean : playable;
     if (!pool.length && !pinnedResults.some(Boolean)) return [];
