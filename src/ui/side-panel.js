@@ -10,6 +10,92 @@ function fmtPop(v) {
   return `約 ${Math.round(v).toLocaleString("en-US")} 人`;
 }
 
+// ── 緊急聯絡:當地報警/消防/救護電話 + 我國駐外館處 + 中國駐當地大使館 ──
+// 資料由 tools/build-emergency.py 整理(外交部領事事務局、中國外交部、維基百科),
+// 一百多 KB,第一次打開國家側欄時才載入,之後共用同一份。
+let emergencyData = null;
+function loadEmergency() {
+  if (!emergencyData) {
+    emergencyData = fetch("data/emergency.json").then((r) => (r.ok ? r.json() : null)).catch(() => null);
+  }
+  return emergencyData;
+}
+// 海外急難時一定打得通的外交部 24 小時專線(領事事務局公告)
+const MOFA_HOTLINE = "+886-800-085-095";
+
+// Windows 沒有國旗 emoji(🇹🇼 會顯示成「TW」兩個字母),改用跟側欄大國旗同一個來源的小圖
+function flagImg(cc) {
+  return `<img class="sp-emg-flag" src="https://flagcdn.com/w40/${cc}.png" alt="" onerror="this.remove()">`;
+}
+
+function telLink(num) {
+  // 「112 / 17」這種有兩個號碼的,各自做成撥號連結,不能把數字黏在一起變成 11217
+  const parts = String(num).split(/\s*\/\s*/);
+  if (parts.length > 1) return parts.map(telLink).join(" / ");
+  const digits = String(num).replace(/[^\d+]/g, "");
+  return /^\+?\d{2,15}$/.test(digits) ? `<a href="tel:${digits}">${esc(num)}</a>` : esc(num);
+}
+function mapHref(o) {
+  const q = o.g ? o.g.join(",") : o.a;
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q || o.n)}`;
+}
+
+function emergencyNumbersHtml(em) {
+  if (!em) return `<p class="dim sp-emg-none">暫無此地區的緊急電話資料。</p>`;
+  const [police, fire, amb] = em;
+  // 三個號碼都一樣(911、112、999 這類整合專線)就合併成一顆
+  if (police && police === fire && fire === amb)
+    return `<div class="sp-emg-nums"><span class="sp-emg-num sp-emg-all">🚓🚒🚑 警察・消防・救護 <b>${telLink(police)}</b></span></div>`;
+  const cell = (ico, label, v) => v ? `<span class="sp-emg-num">${ico} ${label} <b>${telLink(v)}</b></span>` : "";
+  const fireAmb = fire && fire === amb
+    ? cell("🚒🚑", "消防・救護", fire)
+    : cell("🚒", "消防", fire) + cell("🚑", "救護", amb);
+  return `<div class="sp-emg-nums">${cell("🚓", "警察", police)}${fireAmb}</div>`;
+}
+
+function officeCardHtml(o, { host, compact }) {
+  const rows = [];
+  if (!host) rows.push(`<div class="sp-ms-tag">由鄰近國家的館處兼轄</div>`);
+  if (o.a) rows.push(`<div class="sp-ms-row">📍 ${esc(o.a)} <a href="${esc(mapHref(o))}" target="_blank" rel="noopener">地圖 ↗</a></div>`);
+  if (o.t) rows.push(`<div class="sp-ms-row">☎️ ${esc(o.t)}</div>`);
+  if (o.c) rows.push(`<div class="sp-ms-row sp-ms-emg">🆘 領事保護:${esc(o.c)}</div>`);
+  if (o.e) rows.push(`<div class="sp-ms-row sp-ms-emg">🆘 急難救助:${esc(o.e)}</div>`);
+  if (!compact && o.h) rows.push(`<div class="sp-ms-row">🕘 ${esc(o.h)}</div>`);
+  if (o.j) rows.push(`<div class="sp-ms-row dim">轄區:${esc(o.j)}</div>`);
+  if (!compact && o.u) rows.push(`<div class="sp-ms-row"><a href="${esc(o.u)}" target="_blank" rel="noopener">官方網站 ↗</a></div>`);
+  return `<div class="sp-ms"><div class="sp-ms-name">${esc(o.n)}</div>` +
+    (o.en ? `<div class="sp-ms-en">${esc(o.en)}</div>` : "") + rows.join("") + `</div>`;
+}
+
+function missionsHtml(code, data) {
+  let h = "";
+  // 我國駐外館處:駐在當地的排前面(第一個是代表處/大使館),其他辦事處收在「其他」裡;
+  // 沒有駐在當地、由鄰國館處兼轄的另外標示
+  const tw = (data.tw && data.tw[code]) || [];
+  const hostOffices = tw.filter(([, host]) => host).map(([id]) => data.twOffices[id]).filter(Boolean);
+  const remote = tw.filter(([, host]) => !host).map(([id]) => data.twOffices[id]).filter(Boolean);
+  h += `<h4 class="sp-emg-h">${flagImg("tw")}我國駐外館處</h4>`;
+  if (hostOffices.length) {
+    h += officeCardHtml(hostOffices[0], { host: true });
+    if (hostOffices.length > 1)
+      h += `<details class="sp-ms-others"><summary>其他 ${hostOffices.length - 1} 個辦事處(依轄區分工)</summary>` +
+        hostOffices.slice(1).map((o) => officeCardHtml(o, { host: true, compact: true })).join("") + `</details>`;
+  }
+  remote.forEach((o) => { h += officeCardHtml(o, { host: false, compact: true }); });
+  if (code === "CN")
+    h += `<p class="sp-emg-hot">大陸地區急難:海基會 24 小時緊急服務專線 ${telLink("+886-2-2533-9995")}</p>`;
+  else if (!hostOffices.length && !remote.length && code !== "TW")
+    h += `<p class="dim">我國在當地沒有駐外館處,也沒有指定兼轄館處。</p>`;
+  h += `<p class="sp-emg-hot">海外遇到急難(24 小時):外交部緊急聯絡中心 ${telLink(MOFA_HOTLINE)}` +
+    `<br><span class="dim">國內親友可撥免付費 0800-085-095</span></p>`;
+
+  const cn = ((data.cn && data.cn[code]) || []).map((id) => data.cnEmb[id]).filter(Boolean);
+  h += `<h4 class="sp-emg-h">${flagImg("cn")}中國駐當地大使館</h4>`;
+  h += cn.length ? cn.map((o) => officeCardHtml(o, { host: true })).join("")
+    : `<p class="dim">${code === "CN" ? "中國本土,無駐外使館。" : code === "HK" || code === "MO" ? "中國特別行政區,無駐外使館。" : "中國外交部沒有列出駐當地的大使館。"}</p>`;
+  return h;
+}
+
 export function createSidePanel({ onClose, onMore }) {
   const el = document.getElementById("side-panel");
   const body = document.getElementById("side-panel-body");
@@ -116,6 +202,9 @@ export function createSidePanel({ onClose, onMore }) {
 
     if (p.timezone) html += `<div id="sp-clock" class="sp-clock"></div>`;
 
+    // 緊急聯絡放在時鐘下面:報警/消防/救護號碼直接看得到,館處細節收合起來
+    if (p.code) html += section("緊急聯絡", `<div id="sp-emg" class="sp-emg"><p class="dim">載入中…</p></div>`);
+
     if (p.features && p.features.length)
       html += section("特色", p.features.map((t) => `<p>${esc(t)}</p>`).join(""));
 
@@ -149,6 +238,28 @@ export function createSidePanel({ onClose, onMore }) {
     if (mb) mb.addEventListener("click", () => onMore(mb.dataset.code));
     el.classList.add("open");
     startClock(p.timezone);
+    if (p.code) fillEmergency(p.code);
+  }
+
+  async function fillEmergency(code) {
+    const data = await loadEmergency();
+    const box = document.getElementById("sp-emg");
+    if (!box || openCode !== code) return;          // 資料回來前已經換國家或關閉
+    if (!data) { box.innerHTML = `<p class="dim">緊急聯絡資料暫時載入失敗。</p>`; return; }
+    const tw = (data.tw && data.tw[code]) || [];
+    const cnN = ((data.cn && data.cn[code]) || []).length;
+    const summary = code === "TW"
+      ? "海外急難專線"
+      : `我國駐外館處 ${tw.length ? `${tw.length} 處` : "—"} · 中國大使館 ${cnN ? `${cnN} 處` : "—"}`;
+    box.innerHTML = emergencyNumbersHtml(data.em && data.em[code]) +
+      `<details class="sp-emg-more"><summary>🏛️ ${esc(summary)}</summary>` +
+      (code === "TW"
+        ? `<p class="sp-emg-hot">國人在海外遇到急難:外交部緊急聯絡中心 ${telLink(MOFA_HOTLINE)}(24 小時)<br>` +
+          `<span class="dim">國內免付費 0800-085-095;大陸地區急難可撥海基會 24 小時專線 +886-2-2533-9995</span></p>`
+        : missionsHtml(code, data)) +
+      `<p class="sp-emg-src dim">資料來源:外交部領事事務局、中華人民共和國外交部、維基百科(各國緊急電話)` +
+      `${data.asOf ? `· 整理日期 ${esc(data.asOf)}` : ""}。聯絡資訊可能異動,出發前請再上官方網站確認。</p>` +
+      `</details>`;
   }
 
   function close() {

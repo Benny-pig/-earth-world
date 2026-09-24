@@ -167,9 +167,16 @@ export function createEncyclopedia() {
     const heroVideo = d.hero_video
       ? `<video class="enc-hero-video" src="${IMG_BASE}${encodeURIComponent(codeToFile(code))}/${encodeURIComponent(d.hero_video)}" autoplay muted loop playsinline onerror="this.remove()"></video>`
       : "";
+    // 首都放在國名正下方;資料跟首頁側欄同一份(countries.content.json),
+    // 香港/澳門這類地區沒有首都就不顯示
+    const info = (window.__earth?.content || {})[code] || {};
+    const capital = info.capital_zh
+      ? `<div class="enc-capital"><span class="enc-capital-k">首都</span><b>${esc(info.capital_zh)}</b>` +
+        (info.capital_en ? `<span class="enc-capital-en">${esc(info.capital_en)}</span>` : "") + `</div>`
+      : "";
     let h = `<header class="enc-hero enc-reveal"><div class="enc-hero-main">` +
       `<div class="enc-en">${esc(d.name_en || "")}</div>` +
-      `<h2>${esc(d.name_zh || code)}</h2>` +
+      `<h2>${esc(d.name_zh || code)}</h2>` + capital +
       (d.summary ? `<p class="enc-lead">${esc(d.summary)}</p>` : "") +
       `<p class="enc-ext-hint">帶 <span class="enc-ext">↗</span> 的標題與圖片可點擊,連到維基百科查看更完整的介紹(另開新分頁)。</p>` +
       `</div>${heroVideo}${flag}</header>`;

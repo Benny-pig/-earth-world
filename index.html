@@ -449,6 +449,36 @@
   #side-panel .sp-clock .spc-label { font-size: 11px; color: #8fd4ff; letter-spacing: .03em; }
   #side-panel .sp-clock .spc-date { font-size: 12px; color: #b9c6e6; }
   #side-panel .sp-clock .spc-time { font-size: 24px; font-variant-numeric: tabular-nums; letter-spacing: .02em; }
+  /* 緊急聯絡:報警/消防/救護號碼一排膠囊,手機點號碼可以直接撥打 */
+  #side-panel .sp-emg-nums { display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 0 8px; }
+  #side-panel .sp-emg-num {
+    display: inline-flex; align-items: baseline; gap: 5px; padding: 5px 10px; border-radius: 999px;
+    background: rgba(255,77,79,.12); border: 1px solid rgba(255,77,79,.35); font-size: 12.5px;
+  }
+  #side-panel .sp-emg-num b { font-size: 16px; font-variant-numeric: tabular-nums; letter-spacing: .02em; }
+  #side-panel .sp-emg-num a { color: inherit; text-decoration: none; }
+  #side-panel .sp-emg-more { margin-top: 4px; border: 1px solid rgba(120,170,255,.22); border-radius: 10px; padding: 6px 10px; }
+  #side-panel .sp-emg-more > summary { cursor: pointer; font-size: 12.5px; padding: 2px 0; }
+  #side-panel .sp-emg-h { margin: 12px 0 6px; font-size: 13px; display: flex; align-items: center; gap: 6px; }
+  #side-panel .sp-emg-flag { width: 20px; height: auto; border-radius: 2px; box-shadow: 0 0 0 1px rgba(255,255,255,.15); }
+  #side-panel .sp-emg a { color: #8fd4ff; }
+  #side-panel .sp-emg .sp-emg-num a { color: inherit; }
+  #side-panel .sp-ms { padding: 8px 0; border-top: 1px dashed rgba(120,170,255,.2); font-size: 12px; line-height: 1.55; }
+  #side-panel .sp-ms-name { font-weight: 700; font-size: 13px; }
+  #side-panel .sp-ms-en { font-size: 11px; opacity: .7; margin-bottom: 3px; }
+  #side-panel .sp-ms-row { margin-top: 2px; white-space: pre-line; overflow-wrap: anywhere; }
+  #side-panel .sp-ms-emg { color: #ff9a8f; }
+  #side-panel .sp-ms-tag { display: inline-block; margin: 2px 0; padding: 0 6px; border-radius: 6px; font-size: 10.5px; background: rgba(255,210,63,.15); color: #ffd23f; }
+  #side-panel .sp-ms-others { margin: 4px 0; }
+  #side-panel .sp-ms-others > summary { cursor: pointer; font-size: 12px; opacity: .85; }
+  #side-panel .sp-emg-hot { margin: 8px 0 4px; font-size: 12px; }
+  #side-panel .sp-emg-src { margin-top: 10px; font-size: 10.5px; }
+  body[data-theme="journal"] #side-panel .sp-emg-num { background: rgba(192,57,43,.08); border-color: rgba(192,57,43,.35); }
+  body[data-theme="journal"] #side-panel .sp-emg-more { border-color: rgba(120,90,50,.25); }
+  body[data-theme="journal"] #side-panel .sp-ms { border-top-color: rgba(120,90,50,.2); }
+  body[data-theme="journal"] #side-panel .sp-ms-emg { color: #b03a2e; }
+  body[data-theme="journal"] #side-panel .sp-ms-tag { background: rgba(166,87,46,.12); color: #a6572e; }
+  body[data-theme="journal"] #side-panel a { color: #a6572e; }
   #side-panel .sp-more {
     display: flex; align-items: center; justify-content: center; gap: 8px;
     width: 100%; box-sizing: border-box; margin: 10px 0 4px; padding: 11px 16px; cursor: pointer;
@@ -531,6 +561,14 @@
   #encyclopedia h2 { font-size: clamp(34px, 6vw, 62px); font-weight: 800; letter-spacing: -.022em; line-height: 1.02; margin: 6px 0 0; }
   #encyclopedia .enc-en { color: var(--enc-ink-dim); font-size: 12px; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; }
   #encyclopedia .enc-lead { font-size: 17px; line-height: 1.72; color: #d4d9e4; max-width: 42em; margin: 18px 0 0; }
+  /* 國名下方的首都標籤 */
+  #encyclopedia .enc-capital {
+    display: inline-flex; align-items: baseline; gap: 8px; margin-top: 14px; padding: 5px 12px;
+    border: 1px solid var(--enc-line); border-radius: 999px; font-size: 15px;
+  }
+  #encyclopedia .enc-capital-k { color: var(--enc-accent); font-size: 12px; font-weight: 700; letter-spacing: .12em; }
+  #encyclopedia .enc-capital b { font-weight: 700; }
+  #encyclopedia .enc-capital-en { color: var(--enc-ink-dim); font-size: 12px; letter-spacing: .04em; }
   #encyclopedia p { margin: 0 0 12px; }
   /* ── 章節 ─────────────────────────────────────────────── */
   #encyclopedia .enc-sec { margin: 58px 0 0; counter-increment: enc; }
