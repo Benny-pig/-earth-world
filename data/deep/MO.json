@@ -26,85 +26,101 @@
     {
       "zh": "黑臉琵鷺",
       "en": "Black-faced spoonbill",
-      "note": "冬季到路氹城生態保護區的濕地過冬,可從觀鳥屋遠距離觀察。"
+      "note": "冬季到路氹城生態保護區的濕地過冬,可從觀鳥屋遠距離觀察。",
+      "image": "MO-a-blackfacedspoo.jpg"
     },
     {
       "zh": "大熊貓",
       "en": "Giant panda",
-      "note": "飼養在路環石排灣郊野公園的澳門大熊貓館,館內也有小熊貓。"
+      "note": "飼養在路環石排灣郊野公園的澳門大熊貓館,館內也有小熊貓。",
+      "image": "MO-a-giantpanda.jpg"
     },
     {
       "zh": "中華白海豚",
       "en": "Chinese white dolphin",
-      "note": "珠江口水域的珍稀鯨豚,偶爾在澳門周邊海域出沒。"
+      "note": "珠江口水域的珍稀鯨豚,偶爾在澳門周邊海域出沒。",
+      "image": "MO-a-chinesewhitedo.jpg"
     },
     {
       "zh": "小白鷺",
       "en": "Little egret",
-      "note": "紅樹林、水塘邊常見的白色涉禽,在泥灘上優雅覓食。"
+      "note": "紅樹林、水塘邊常見的白色涉禽,在泥灘上優雅覓食。",
+      "image": "MO-a-littleegret.jpg"
     },
     {
       "zh": "彈塗魚",
       "en": "Mudskipper",
-      "note": "能離水在泥灘上跳躍的魚,路氹紅樹林退潮時到處可見。"
+      "note": "能離水在泥灘上跳躍的魚,路氹紅樹林退潮時到處可見。",
+      "image": "MO-a-mudskipper.jpg"
     },
     {
       "zh": "招潮蟹",
       "en": "Fiddler crab",
-      "note": "雄蟹揮舞一隻特大的螯,在泥灘上招展吸引異性。"
+      "note": "雄蟹揮舞一隻特大的螯,在泥灘上招展吸引異性。",
+      "image": "MO-a-fiddlercrab.jpg"
     },
     {
       "zh": "鵲鴝",
       "en": "Oriental magpie-robin",
-      "note": "黑白相間的鳴禽,公園與舊區屋簷常聽到牠婉轉的歌聲。"
+      "note": "黑白相間的鳴禽,公園與舊區屋簷常聽到牠婉轉的歌聲。",
+      "image": "MO-a-orientalmagpie.jpg"
     },
     {
       "zh": "暗綠繡眼鳥",
       "en": "Swinhoe's white-eye",
       "note": "眼睛周圍有一圈白色羽毛的小綠鳥,成群在樹梢穿梭。",
-      "wiki": "暗綠繡眼鳥"
+      "wiki": "暗綠繡眼鳥",
+      "image": "MO-a-swinhoeswhitee.jpg"
     }
   ],
   "foods": [
     {
       "zh": "葡式蛋撻",
       "en": "Portuguese egg tart",
-      "note": "層層酥皮包著表面焦糖化的蛋奶餡,路環老店讓它紅遍亞洲。"
+      "note": "層層酥皮包著表面焦糖化的蛋奶餡,路環老店讓它紅遍亞洲。",
+      "image": "MO-f-pasteldenata.jpg"
     },
     {
       "zh": "豬扒包",
       "en": "Pork chop bun",
-      "note": "外脆內軟的豬仔包夾一大片炸豬扒,氹仔老街的招牌小吃。"
+      "note": "外脆內軟的豬仔包夾一大片炸豬扒,氹仔老街的招牌小吃。",
+      "image": "MO-f-porkchopbun.jpg"
     },
     {
       "zh": "非洲雞",
       "en": "African chicken",
-      "note": "雞肉以辣椒、椰漿、花生醬等醃料烤製,土生葡人菜的代表。"
+      "note": "雞肉以辣椒、椰漿、花生醬等醃料烤製,土生葡人菜的代表。",
+      "image": "MO-f-africanchicken.jpg"
     },
     {
       "zh": "葡國雞",
       "en": "Portuguese chicken",
-      "note": "雞肉配薯仔、橄欖以咖哩椰汁焗成,名為葡國雞卻是澳門原創。"
+      "note": "雞肉配薯仔、橄欖以咖哩椰汁焗成,名為葡國雞卻是澳門原創。",
+      "image": "MO-f-portuguesechic.jpg"
     },
     {
       "zh": "馬介休",
       "en": "Bacalhau",
-      "note": "葡萄牙式鹽醃鱈魚,做成炸球、焗飯或配薯仔燉煮。"
+      "note": "葡萄牙式鹽醃鱈魚,做成炸球、焗飯或配薯仔燉煮。",
+      "image": "MO-f-bacalhau.jpg"
     },
     {
       "zh": "免治",
       "en": "Minchi",
-      "note": "碎肉與薯粒以醬油調味炒香,配白飯與荷包蛋,土生葡人家常菜。"
+      "note": "碎肉與薯粒以醬油調味炒香,配白飯與荷包蛋,土生葡人家常菜。",
+      "image": "MO-f-minchi.jpg"
     },
     {
       "zh": "杏仁餅",
       "en": "Almond cookie",
-      "note": "綠豆粉與杏仁烘成的酥餅,老字號現烤現賣,是最經典的手信。"
+      "note": "綠豆粉與杏仁烘成的酥餅,老字號現烤現賣,是最經典的手信。",
+      "image": "MO-f-almondbiscuit.jpg"
     },
     {
       "zh": "水蟹粥",
       "en": "Crab congee",
-      "note": "以膏少肉鮮的水蟹熬煮綿滑白粥,是澳門人的宵夜名物。"
+      "note": "以膏少肉鮮的水蟹熬煮綿滑白粥,是澳門人的宵夜名物。",
+      "image": "MO-f-crabcongee.jpg"
     }
   ],
   "landmarks": [
@@ -115,7 +131,8 @@
       "latlon": [
         22.1973,
         113.5409
-      ]
+      ],
+      "image": "MO-l-ruinsofstpauls.jpg"
     },
     {
       "zh": "議事亭前地",
@@ -124,7 +141,8 @@
       "latlon": [
         22.1937,
         113.5392
-      ]
+      ],
+      "image": "MO-l-senadosquare.jpg"
     },
     {
       "zh": "媽閣廟",
@@ -133,7 +151,8 @@
       "latlon": [
         22.1862,
         113.531
-      ]
+      ],
+      "image": "MO-l-amatemple.jpg"
     },
     {
       "zh": "東望洋燈塔",
@@ -142,7 +161,8 @@
       "latlon": [
         22.1965,
         113.5494
-      ]
+      ],
+      "image": "MO-l-guiafortress.jpg"
     },
     {
       "zh": "大炮台",
@@ -151,7 +171,8 @@
       "latlon": [
         22.1978,
         113.542
-      ]
+      ],
+      "image": "MO-l-mountfortress.jpg"
     },
     {
       "zh": "澳門塔",
@@ -160,7 +181,8 @@
       "latlon": [
         22.18,
         113.537
-      ]
+      ],
+      "image": "MO-l-macautower.jpg"
     },
     {
       "zh": "路氹金光大道",
@@ -169,7 +191,8 @@
       "latlon": [
         22.148,
         113.56
-      ]
+      ],
+      "image": "MO-l-cotaistrip.jpg"
     },
     {
       "zh": "路環市區",
@@ -178,51 +201,60 @@
       "latlon": [
         22.117,
         113.558
-      ]
+      ],
+      "image": "MO-l-coloane.jpg"
     }
   ],
   "people": [
     {
       "zh": "何鴻燊",
       "en": "Stanley Ho",
-      "note": "企業家,長期經營澳門博彩業,被稱為「賭王」。"
+      "note": "企業家,長期經營澳門博彩業,被稱為「賭王」。",
+      "image": "MO-p-stanleyho.jpg"
     },
     {
       "zh": "冼星海",
       "en": "Xian Xinghai",
-      "note": "生於澳門的作曲家,代表作是《黃河大合唱》。"
+      "note": "生於澳門的作曲家,代表作是《黃河大合唱》。",
+      "image": "MO-p-xianxinghai.jpg"
     },
     {
       "zh": "何厚鏵",
       "en": "Edmund Ho",
-      "note": "澳門特別行政區首任行政長官(一九九九至二〇〇九)。"
+      "note": "澳門特別行政區首任行政長官(一九九九至二〇〇九)。",
+      "image": "MO-p-edmundho.jpg"
     },
     {
       "zh": "利瑪竇",
       "en": "Matteo Ricci",
-      "note": "義大利耶穌會士,一五八二年經澳門進入中國,推動東西方科學與文化交流。"
+      "note": "義大利耶穌會士,一五八二年經澳門進入中國,推動東西方科學與文化交流。",
+      "image": "MO-p-matteoricci.jpg"
     },
     {
       "zh": "馬禮遜",
       "en": "Robert Morrison",
-      "note": "第一位來華的基督新教傳教士,編纂《華英字典》,葬於澳門基督教墳場。"
+      "note": "第一位來華的基督新教傳教士,編纂《華英字典》,葬於澳門基督教墳場。",
+      "image": "MO-p-robertmorrison.jpg"
     },
     {
       "zh": "錢納利",
       "en": "George Chinnery",
-      "note": "英國畫家,晚年定居澳門二十多年,留下大量十九世紀澳門風情畫。"
+      "note": "英國畫家,晚年定居澳門二十多年,留下大量十九世紀澳門風情畫。",
+      "image": "MO-p-georgechinnery.jpg"
     },
     {
       "zh": "賈梅士",
       "en": "Luís de Camões",
       "note": "葡萄牙國民詩人,相傳曾旅居澳門創作史詩《葡國魂》,市區有賈梅士花園紀念。",
-      "wiki": "路易·德·賈梅士"
+      "wiki": "路易·德·賈梅士",
+      "image": "MO-p-lusdecames.jpg"
     },
     {
       "zh": "艾爾頓·冼拿",
       "en": "Ayrton Senna",
       "note": "巴西傳奇賽車手,一九八三年贏得澳門格蘭披治三級方程式賽事,後成為一級方程式三屆世界冠軍。",
-      "wiki": "艾爾頓·冼拿"
+      "wiki": "艾爾頓·冼拿",
+      "image": "MO-p-ayrtonsenna.jpg"
     }
   ],
   "recommended": [
@@ -396,6 +428,231 @@
       }
     ]
   },
-  "credits": [],
+  "credits": [
+    {
+      "file": "MO-a-blackfacedspoo.jpg",
+      "title": "Black-faced spoonbill",
+      "author": "Cp9asngf",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Black_faced_spoonbill_at_Niigata.JPG"
+    },
+    {
+      "file": "MO-a-giantpanda.jpg",
+      "title": "Giant panda",
+      "author": "J. Patrick Fischer",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Grosser_Panda.JPG"
+    },
+    {
+      "file": "MO-a-chinesewhitedo.jpg",
+      "title": "Chinese white dolphin",
+      "author": "takoradee",
+      "license": "CC BY 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:Pink_Dolphin.JPG"
+    },
+    {
+      "file": "MO-a-littleegret.jpg",
+      "title": "Little egret",
+      "author": "Shantanu Kuveskar",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Little_egret_(Egretta_garzetta)_Photograph_by_Shantanu_Kuveskar.jpg"
+    },
+    {
+      "file": "MO-a-mudskipper.jpg",
+      "title": "Mudskipper",
+      "author": "Bjørn Christian Tørrissen",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:GambianMudskippers.jpg"
+    },
+    {
+      "file": "MO-a-fiddlercrab.jpg",
+      "title": "Fiddler crab",
+      "author": "NOAA",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Fiddler_crab.jpg"
+    },
+    {
+      "file": "MO-a-orientalmagpie.jpg",
+      "title": "Oriental magpie-robin",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Oriental_magpie-robin_(Copsychus_saularis_ceylonensis)_male.jpg"
+    },
+    {
+      "file": "MO-a-swinhoeswhitee.jpg",
+      "title": "Swinhoe's white-eye",
+      "author": "Charles Lam",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Resting_Zosterops_japonicus.jpg"
+    },
+    {
+      "file": "MO-f-pasteldenata.jpg",
+      "title": "Portuguese egg tart",
+      "author": "Mon Œil",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pasteis_de_Belem.jpg"
+    },
+    {
+      "file": "MO-f-porkchopbun.jpg",
+      "title": "Pork chop bun",
+      "author": "Chensiyuan",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Porkchopbun.jpg"
+    },
+    {
+      "file": "MO-f-africanchicken.jpg",
+      "title": "African chicken",
+      "author": "Valeva1010",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:African_Piri_Piri_Chicken.jpg"
+    },
+    {
+      "file": "MO-f-portuguesechic.jpg",
+      "title": "Portuguese chicken",
+      "author": "pan vanessa",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Galinha_%C3%A0_Portuguesa.jpg"
+    },
+    {
+      "file": "MO-f-bacalhau.jpg",
+      "title": "Bacalhau",
+      "author": "Karl Ragnar Gjertsen",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Klippfisk.jpg"
+    },
+    {
+      "file": "MO-f-minchi.jpg",
+      "title": "Minchi",
+      "author": "K.Y.K.Z.K.",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Minchi_e_bacalhaus.jpg"
+    },
+    {
+      "file": "MO-f-almondbiscuit.jpg",
+      "title": "Almond cookie",
+      "author": "Kofdbelum Wimgari",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:MC_%E6%BE%B3%E9%96%80_Macau_%E6%B0%B9%E4%BB%94_Taipa_%E5%AE%98%E4%B9%9F%E8%A1%97_Rua_do_Cunha_%E9%89%85%E8%A8%98%E9%A4%85%E5%AE%B6_Koi_Kei_Bakery_food_shop_product_%E6%9D%8F%E4%BB%81%E9%A4%85_Almond_cookies_January_2019_SSG_01.jpg"
+    },
+    {
+      "file": "MO-f-crabcongee.jpg",
+      "title": "Crab congee",
+      "author": "avlxyz",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Blue_swimmer_crab_congee_by_avlxyz.jpg"
+    },
+    {
+      "file": "MO-l-ruinsofstpauls.jpg",
+      "title": "Ruins of St. Paul's",
+      "author": "GG001213",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:%E5%A4%A7%E4%B8%89%E5%B7%B4%E7%89%8C%E5%9D%8A.jpg"
+    },
+    {
+      "file": "MO-l-senadosquare.jpg",
+      "title": "Senado Square",
+      "author": "Andrey Surikov",
+      "license": "CC BY 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:Centre_of_Makau.jpg"
+    },
+    {
+      "file": "MO-l-amatemple.jpg",
+      "title": "A-Ma Temple",
+      "author": "WiNG",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:A_Ma_Temple_200907.jpg"
+    },
+    {
+      "file": "MO-l-guiafortress.jpg",
+      "title": "Guia Lighthouse",
+      "author": "J. Patrick Fischer",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Macau_-_Fortaleza_de_Guia_(cropped).JPG"
+    },
+    {
+      "file": "MO-l-mountfortress.jpg",
+      "title": "Mount Fortress",
+      "author": "lienyuan lee",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mount_Fortress_%E5%A4%A7%E7%A0%B2%E5%8F%B0_-_panoramio_(4).jpg"
+    },
+    {
+      "file": "MO-l-macautower.jpg",
+      "title": "Macau Tower",
+      "author": "Whhalbert",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Macau_Tower_CE_Centre.jpg"
+    },
+    {
+      "file": "MO-l-cotaistrip.jpg",
+      "title": "Cotai Strip",
+      "author": "WiNG",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Cotai_Strip_Buildings_200907.jpg"
+    },
+    {
+      "file": "MO-l-coloane.jpg",
+      "title": "Coloane Village",
+      "author": "LN9267",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Hac_S%C3%A1_Long_Chao_Kok_Coastal_Trail_19-02-2023(36).jpg"
+    },
+    {
+      "file": "MO-p-stanleyho.jpg",
+      "title": "Stanley Ho",
+      "author": "太皮",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Stanleyho2006.jpg"
+    },
+    {
+      "file": "MO-p-xianxinghai.jpg",
+      "title": "Xian Xinghai",
+      "author": "Unknown",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Xian_Xinghai.jpg"
+    },
+    {
+      "file": "MO-p-edmundho.jpg",
+      "title": "Edmund Ho",
+      "author": "Tinho C.",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Edmund_Ho_(cropped).jpg"
+    },
+    {
+      "file": "MO-p-matteoricci.jpg",
+      "title": "Matteo Ricci",
+      "author": "Emmanuel Pereira (游文輝)",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:%E5%88%A9%E7%8E%9B%E7%AA%A6%E5%83%8F%EF%BC%8C%E6%B8%B8%E6%96%87%E8%BE%89%E7%BB%98.jpg"
+    },
+    {
+      "file": "MO-p-robertmorrison.jpg",
+      "title": "Robert Morrison",
+      "author": "John R. Wildman",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Robert_Morrison_by_John_Richard_Wildman.jpg"
+    },
+    {
+      "file": "MO-p-georgechinnery.jpg",
+      "title": "George Chinnery",
+      "author": "George Chinnery",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:George_Chinnery_by_George_Chinnery.jpg"
+    },
+    {
+      "file": "MO-p-lusdecames.jpg",
+      "title": "Luís de Camões",
+      "author": "Fernão Gomes",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Cam%C3%B5es,_por_Fern%C3%A3o_Gomes.jpg"
+    },
+    {
+      "file": "MO-p-ayrtonsenna.jpg",
+      "title": "Ayrton Senna",
+      "author": "Instituto Ayrton Senna (derivative work: F1fans)",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ayrton_Senna_Pesawat_RC_Cropped.jpg"
+    }
+  ],
   "code": "MO"
 }

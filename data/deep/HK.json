@@ -26,87 +26,103 @@
     {
       "zh": "中華白海豚",
       "en": "Chinese white dolphin",
-      "note": "成年後體色轉為粉紅,俗稱「粉紅海豚」,大嶼山西面水域可乘船觀賞,也是一九九七年移交的吉祥物。"
+      "note": "成年後體色轉為粉紅,俗稱「粉紅海豚」,大嶼山西面水域可乘船觀賞,也是一九九七年移交的吉祥物。",
+      "image": "HK-a-chinesewhitedo.jpg"
     },
     {
       "zh": "獼猴",
       "en": "Rhesus macaque",
-      "note": "金山郊野公園一帶群聚,又稱「馬騮山」;香港法例禁止餵飼野生猴子。"
+      "note": "金山郊野公園一帶群聚,又稱「馬騮山」;香港法例禁止餵飼野生猴子。",
+      "image": "HK-a-rhesusmacaque.jpg"
     },
     {
       "zh": "小葵花鳳頭鸚鵡",
       "en": "Yellow-crested cockatoo",
       "note": "原生於印尼的極危物種,香港公園、中環一帶有逸出後繁衍的野生群,叫聲響亮。",
-      "wiki": "小葵花鳳頭鸚鵡"
+      "wiki": "小葵花鳳頭鸚鵡",
+      "image": "HK-a-yellowcrestedc.jpg"
     },
     {
       "zh": "盧氏小樹蛙",
       "en": "Romer's tree frog",
-      "note": "香港特有種,體長只有約兩公分,僅見於大嶼山、南丫島等少數地點。"
+      "note": "香港特有種,體長只有約兩公分,僅見於大嶼山、南丫島等少數地點。",
+      "image": "HK-a-romerstreefrog.jpg"
     },
     {
       "zh": "黑臉琵鷺",
       "en": "Black-faced spoonbill",
-      "note": "每年冬季飛到米埔濕地與后海灣過冬,是全球瀕危的候鳥。"
+      "note": "每年冬季飛到米埔濕地與后海灣過冬,是全球瀕危的候鳥。",
+      "image": "HK-a-blackfacedspoo.jpg"
     },
     {
       "zh": "中華穿山甲",
       "en": "Chinese pangolin",
-      "note": "夜間在郊野公園覓食螞蟻白蟻,極度瀕危,難得一見。"
+      "note": "夜間在郊野公園覓食螞蟻白蟻,極度瀕危,難得一見。",
+      "image": "HK-a-chinesepangoli.jpg"
     },
     {
       "zh": "香港瘰螈",
       "en": "Hong Kong newt",
-      "note": "以香港命名的蠑螈,冬季在山澗溪流繁殖,腹部有橘紅色斑點。"
+      "note": "以香港命名的蠑螈,冬季在山澗溪流繁殖,腹部有橘紅色斑點。",
+      "image": "HK-a-hongkongnewt.jpg"
     },
     {
       "zh": "大嶼山水牛",
       "en": "Lantau water buffalo",
       "note": "昔日農耕用牛的後代,如今在大嶼山濕地與村落間悠閒漫步。",
-      "wiki": "水牛"
+      "wiki": "水牛",
+      "image": "HK-a-waterbuffalo.jpg"
     }
   ],
   "foods": [
     {
       "zh": "點心",
       "en": "Dim sum",
-      "note": "蝦餃、燒賣、叉燒包、腸粉等小籠蒸點,配一壺茶慢慢「飲茶」。"
+      "note": "蝦餃、燒賣、叉燒包、腸粉等小籠蒸點,配一壺茶慢慢「飲茶」。",
+      "image": "HK-f-dimsum.jpg"
     },
     {
       "zh": "燒鵝",
       "en": "Roast goose",
-      "note": "皮脆肉嫩、油香濃郁的燒味代表,常做成燒鵝飯或燒鵝瀨粉。"
+      "note": "皮脆肉嫩、油香濃郁的燒味代表,常做成燒鵝飯或燒鵝瀨粉。",
+      "image": "HK-f-roastgoose.jpg"
     },
     {
       "zh": "雲吞麵",
       "en": "Wonton noodles",
-      "note": "爽口的竹昇麵配鮮蝦雲吞,湯頭以大地魚與豬骨熬煮。"
+      "note": "爽口的竹昇麵配鮮蝦雲吞,湯頭以大地魚與豬骨熬煮。",
+      "image": "HK-f-wontonnoodles.jpg"
     },
     {
       "zh": "港式奶茶",
       "en": "Hong Kong-style milk tea",
-      "note": "濃茶以布袋反覆過濾再加淡奶,口感香滑,又稱絲襪奶茶。"
+      "note": "濃茶以布袋反覆過濾再加淡奶,口感香滑,又稱絲襪奶茶。",
+      "image": "HK-f-hongkongstylem.jpg"
     },
     {
       "zh": "菠蘿油",
       "en": "Pineapple bun with butter",
       "note": "表皮酥脆的菠蘿包趁熱夾一片冷牛油,茶餐廳招牌。",
-      "wiki": "菠蘿包"
+      "wiki": "菠蘿包",
+      "image": "HK-f-pineapplebun.jpg"
     },
     {
       "zh": "蛋撻",
       "en": "Egg tart",
-      "note": "酥皮或牛油皮包著嫩滑蛋漿,茶餐廳與餅店現烤出爐。"
+      "note": "酥皮或牛油皮包著嫩滑蛋漿,茶餐廳與餅店現烤出爐。",
+      "image": "HK-f-eggtart.jpg"
     },
     {
       "zh": "煲仔飯",
       "en": "Claypot rice",
-      "note": "瓦煲直火煮飯,鋪上臘腸、滑雞,底部飯焦最香,冬天特別受歡迎。"
+      "note": "瓦煲直火煮飯,鋪上臘腸、滑雞,底部飯焦最香,冬天特別受歡迎。",
+      "image": "HK-f-claypotrice.jpg"
     },
     {
       "zh": "避風塘炒蟹",
       "en": "Typhoon shelter crab",
-      "note": "源自銅鑼灣避風塘艇家,以大量炸蒜、豆豉與辣椒炒成。"
+      "note": "源自銅鑼灣避風塘艇家,以大量炸蒜、豆豉與辣椒炒成。",
+      "image": "HK-f-typhoonshelter.jpg"
     }
   ],
   "landmarks": [
@@ -117,7 +133,8 @@
       "latlon": [
         22.293,
         114.1694
-      ]
+      ],
+      "image": "HK-l-victoriaharbou.jpg"
     },
     {
       "zh": "太平山頂",
@@ -126,7 +143,8 @@
       "latlon": [
         22.2759,
         114.1455
-      ]
+      ],
+      "image": "HK-l-victoriapeak.jpg"
     },
     {
       "zh": "天壇大佛",
@@ -135,7 +153,8 @@
       "latlon": [
         22.254,
         113.905
-      ]
+      ],
+      "image": "HK-l-tiantanbuddha.jpg"
     },
     {
       "zh": "天星小輪",
@@ -144,7 +163,8 @@
       "latlon": [
         22.2937,
         114.1685
-      ]
+      ],
+      "image": "HK-l-starferry.jpg"
     },
     {
       "zh": "香港迪士尼樂園",
@@ -153,7 +173,8 @@
       "latlon": [
         22.313,
         114.0413
-      ]
+      ],
+      "image": "HK-l-hongkongdisney.jpg"
     },
     {
       "zh": "黃大仙祠",
@@ -162,7 +183,8 @@
       "latlon": [
         22.3424,
         114.1938
-      ]
+      ],
+      "image": "HK-l-wongtaisintemp.jpg"
     },
     {
       "zh": "西九文化區",
@@ -171,7 +193,8 @@
       "latlon": [
         22.3027,
         114.1601
-      ]
+      ],
+      "image": "HK-l-westkowlooncul.jpg"
     },
     {
       "zh": "大澳",
@@ -180,49 +203,58 @@
       "latlon": [
         22.253,
         113.862
-      ]
+      ],
+      "image": "HK-l-taio.jpg"
     }
   ],
   "people": [
     {
       "zh": "李小龍",
       "en": "Bruce Lee",
-      "note": "生於美國舊金山、在香港長大的武打巨星,以功夫電影把中國武術推向世界。"
+      "note": "生於美國舊金山、在香港長大的武打巨星,以功夫電影把中國武術推向世界。",
+      "image": "HK-p-brucelee.jpg"
     },
     {
       "zh": "成龍",
       "en": "Jackie Chan",
-      "note": "動作喜劇演員,親自上陣拍危險特技,二〇一六年獲奧斯卡榮譽獎。"
+      "note": "動作喜劇演員,親自上陣拍危險特技,二〇一六年獲奧斯卡榮譽獎。",
+      "image": "HK-p-jackiechan.jpg"
     },
     {
       "zh": "周星馳",
       "en": "Stephen Chow",
-      "note": "無厘頭喜劇代表人物,自導自演《少林足球》《功夫》。"
+      "note": "無厘頭喜劇代表人物,自導自演《少林足球》《功夫》。",
+      "image": "HK-p-stephenchow.jpg"
     },
     {
       "zh": "張國榮",
       "en": "Leslie Cheung",
-      "note": "歌手與演員,主演《霸王別姬》《春光乍洩》等經典電影。"
+      "note": "歌手與演員,主演《霸王別姬》《春光乍洩》等經典電影。",
+      "image": "HK-p-lesliecheung.jpg"
     },
     {
       "zh": "梅艷芳",
       "en": "Anita Mui",
-      "note": "樂壇天后,被稱為「香港的女兒」,舞台形象多變。"
+      "note": "樂壇天后,被稱為「香港的女兒」,舞台形象多變。",
+      "image": "HK-p-anitamui.jpg"
     },
     {
       "zh": "王家衛",
       "en": "Wong Kar-wai",
-      "note": "導演,以《花樣年華》等作品聞名,一九九七年獲坎城影展最佳導演。"
+      "note": "導演,以《花樣年華》等作品聞名,一九九七年獲坎城影展最佳導演。",
+      "image": "HK-p-wongkarwai.jpg"
     },
     {
       "zh": "金庸",
       "en": "Louis Cha",
-      "note": "在香港創作《射鵰英雄傳》等武俠小說,也是《明報》創辦人。"
+      "note": "在香港創作《射鵰英雄傳》等武俠小說,也是《明報》創辦人。",
+      "image": "HK-p-jinyong.jpg"
     },
     {
       "zh": "李嘉誠",
       "en": "Li Ka-shing",
-      "note": "從塑膠花工廠起家的企業家,長江集團創辦人。"
+      "note": "從塑膠花工廠起家的企業家,長江集團創辦人。",
+      "image": "HK-p-likashing.jpg"
     }
   ],
   "recommended": [
@@ -396,6 +428,231 @@
       }
     ]
   },
-  "credits": [],
+  "credits": [
+    {
+      "file": "HK-a-chinesewhitedo.jpg",
+      "title": "Chinese white dolphin",
+      "author": "takoradee",
+      "license": "CC BY 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:Pink_Dolphin.JPG"
+    },
+    {
+      "file": "HK-a-rhesusmacaque.jpg",
+      "title": "Rhesus macaque",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Rhesus_macaque_(Macaca_mulatta_mulatta),_male,_Gokarna.jpg"
+    },
+    {
+      "file": "HK-a-yellowcrestedc.jpg",
+      "title": "Yellow-crested cockatoo",
+      "author": "Kalvin Chan",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Cacatua_sulphurea_330278728_(centered).jpg"
+    },
+    {
+      "file": "HK-a-romerstreefrog.jpg",
+      "title": "Romer's tree frog",
+      "author": "Thomas Brown",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Chirixalus_romeri.jpg"
+    },
+    {
+      "file": "HK-a-blackfacedspoo.jpg",
+      "title": "Black-faced spoonbill",
+      "author": "Cp9asngf",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Black_faced_spoonbill_at_Niigata.JPG"
+    },
+    {
+      "file": "HK-a-chinesepangoli.jpg",
+      "title": "Chinese pangolin",
+      "author": "U.S. Fish and Wildlife Service Headquarters",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Manis_pentadactyla_(29054818144).jpg"
+    },
+    {
+      "file": "HK-a-hongkongnewt.jpg",
+      "title": "Hong Kong newt",
+      "author": "Fernando Losada Rodríguez",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Paramesotriton_hongkongensis_-_Casa_de_las_Ciencias.JPG"
+    },
+    {
+      "file": "HK-a-waterbuffalo.jpg",
+      "title": "Lantau water buffalo",
+      "author": "Alexander Vasenin",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Water_buffalo_at_Rinca.jpg"
+    },
+    {
+      "file": "HK-f-dimsum.jpg",
+      "title": "Dim sum",
+      "author": "LeonardKong",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Chinese_DimSum_(9023590541).jpg"
+    },
+    {
+      "file": "HK-f-roastgoose.jpg",
+      "title": "Roast goose",
+      "author": "Guangzhou Private Tours by Janvi",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Cantonese_roast_goose_served_in_Guangzhou,_China,_June_2026.jpg"
+    },
+    {
+      "file": "HK-f-wontonnoodles.jpg",
+      "title": "Wonton noodles",
+      "author": "Gadium irggvbobjv",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:HK_SW_%E4%B8%8A%E7%92%B0_Sheung_Wan_%E7%9A%87%E5%90%8E%E5%A4%A7%E9%81%93%E4%B8%AD_303_Queen%27s_Road_Central_%E6%AC%8A%E8%A8%98%E9%9B%B2%E5%90%9E%E9%BA%B5_Wonton_noodle_soup_shop_June_2020_SS2_10.jpg"
+    },
+    {
+      "file": "HK-f-hongkongstylem.jpg",
+      "title": "Hong Kong-style milk tea",
+      "author": "Nikoletic126",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Hong_Kong_Milk_Tea,_Cha_Chaan_Teng-style_with_Black_and_White_cup.jpg"
+    },
+    {
+      "file": "HK-f-pineapplebun.jpg",
+      "title": "Pineapple bun with butter",
+      "author": "Party Lin",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pineapple_buns.jpg"
+    },
+    {
+      "file": "HK-f-eggtart.jpg",
+      "title": "Egg tart",
+      "author": "LNAM Haoi",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:HK_SSP_%E9%95%B7%E6%B2%99%E7%81%A3_Cheung_Sha_Wan_%E6%B7%B1%E7%9B%9B%E8%B7%AF_Sham_Shing_Road_%E6%B3%93%E6%99%AF%E6%BB%99%E5%95%86%E5%A0%B4_Banyan_Mall_shop_%E8%9B%8B%E6%92%BB%E7%8E%8B_King_Bakery_Studio_December_2019_SS2_egg_tarts.jpg"
+    },
+    {
+      "file": "HK-f-claypotrice.jpg",
+      "title": "Claypot rice",
+      "author": "Banej",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Claypot_Chicken_Rice,_Singapore.JPG"
+    },
+    {
+      "file": "HK-f-typhoonshelter.jpg",
+      "title": "Typhoon shelter crab",
+      "author": "Neodymium+Nd",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Typhoon_Shelter_Crab.jpg"
+    },
+    {
+      "file": "HK-l-victoriaharbou.jpg",
+      "title": "Victoria Harbour",
+      "author": "Diego Delso",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Vista_del_Puerto_de_Victoria_desde_Sky100,_Hong_Kong,_2013-08-09,_DD_10.JPG"
+    },
+    {
+      "file": "HK-l-victoriapeak.jpg",
+      "title": "Victoria Peak",
+      "author": "Daniel Case",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:High_West_and_Victoria_Peak_from_Victoria_Gap_(crop1).jpg"
+    },
+    {
+      "file": "HK-l-tiantanbuddha.jpg",
+      "title": "Tian Tan Buddha",
+      "author": "Huangdan2060",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tian_Tan_Buddha_2023081302.jpg"
+    },
+    {
+      "file": "HK-l-starferry.jpg",
+      "title": "Star Ferry",
+      "author": "Baycrest",
+      "license": "CC BY-SA 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:Tsim_Sha_Tsui_Ferry_Pier.jpg"
+    },
+    {
+      "file": "HK-l-hongkongdisney.jpg",
+      "title": "Hong Kong Disneyland",
+      "author": "Ashwin Kumar",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Hong_Kong_Disneyland_Castle.jpg"
+    },
+    {
+      "file": "HK-l-wongtaisintemp.jpg",
+      "title": "Wong Tai Sin Temple",
+      "author": "Chong Fat",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:HK_WongTaiSinTemple.JPG"
+    },
+    {
+      "file": "HK-l-westkowlooncul.jpg",
+      "title": "West Kowloon Cultural District",
+      "author": "Noshoelaces 99",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:M%2B,_West_Kowloon,_Hong_Kong.jpg"
+    },
+    {
+      "file": "HK-l-taio.jpg",
+      "title": "Tai O",
+      "author": "chensiyuan",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:1_tai_o_hong_kong_2013.jpg"
+    },
+    {
+      "file": "HK-p-brucelee.jpg",
+      "title": "Bruce Lee",
+      "author": "National General Pictures",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Bruce_Lee_as_Chen_Zhen_(4x5_cropped).jpg"
+    },
+    {
+      "file": "HK-p-jackiechan.jpg",
+      "title": "Jackie Chan",
+      "author": "Segolene Liger",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Jackie_Chan.jpg"
+    },
+    {
+      "file": "HK-p-stephenchow.jpg",
+      "title": "Stephen Chow",
+      "author": "Kit Liew",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Stephen_Chow,_2008_(cropped).JPG"
+    },
+    {
+      "file": "HK-p-lesliecheung.jpg",
+      "title": "Leslie Cheung",
+      "author": "Rubyran",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Leslie_Cheung.jpg"
+    },
+    {
+      "file": "HK-p-anitamui.jpg",
+      "title": "Anita Mui statue, Avenue of Stars",
+      "author": "Exploringlife",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bronze_statue_of_Anita_Mui.JPG"
+    },
+    {
+      "file": "HK-p-wongkarwai.jpg",
+      "title": "Wong Kar-wai",
+      "author": "Siebbi",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Wong_Kar-wai_Berlin_cropped.jpg"
+    },
+    {
+      "file": "HK-p-jinyong.jpg",
+      "title": "Louis Cha",
+      "author": "S19991002",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Jin_Yong,_July_2007.jpg"
+    },
+    {
+      "file": "HK-p-likashing.jpg",
+      "title": "Li Ka-shing",
+      "author": "EdTech Stanford University School of Medicine",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Li_Ka_Shing.jpg"
+    }
+  ],
   "code": "HK"
 }
