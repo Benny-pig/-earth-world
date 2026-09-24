@@ -47,12 +47,16 @@ const AIRPORT_NAMES = {
 function fmtTime(s) {
   return typeof s === "string" && s.length >= 16 ? s.slice(11, 16) : "—";
 }
+// 狀態燈號:綠=準時、藍=已出發/已抵達、黃=延誤/改時間、紅=取消、灰=表定。
+// TDX 實際回傳的狀態字串有中英並列也有只有中文的(「出發DEPARTED」「出發」「已飛」
+// 「抵達」「預計22:40到站」…)。「預計 xx:xx 出發/到站」是時間有變動,要比
+// 「出發/到站」先判斷,不然會被當成已經飛走。
 function statusInfo(remark) {
   const s = String(remark || "").trim();
   if (!s) return { label: "表定班次", cls: "" };
   if (/取消|CANCEL/i.test(s)) return { label: s, cls: "ap-bad" };
-  if (/延誤|DELAY|時間更改|SCHEDULE ?CHANGE/i.test(s)) return { label: s, cls: "ap-warn" };
-  if (/已到|ARRIVED|已飛|DEPARTED|降落|LANDED/i.test(s)) return { label: s, cls: "ap-good" };
+  if (/延誤|DELAY|時間更改|SCHEDULE ?CHANGE|預計/i.test(s)) return { label: s, cls: "ap-warn" };
+  if (/已到|抵達|到站|ARRIVED|已飛|出發|DEPARTED|降落|LANDED/i.test(s)) return { label: s, cls: "ap-done" };
   if (/準時|ON ?TIME|表定/i.test(s)) return { label: s, cls: "ap-ontime" };
   return { label: s, cls: "" };
 }

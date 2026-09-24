@@ -292,13 +292,35 @@
     flex-shrink: 0; padding: 1px 7px; border-radius: 8px; font-size: 10.5px;
     background: rgba(255,255,255,.08); color: #9fb2d8; white-space: nowrap;
   }
-  /* 每個狀態前面加一顆跟文字同色的小圓點,像燈號一樣一眼看出來是哪種狀態,
-     不用只靠文字顏色的細微差異分辨。 */
-  .ap-badge::before { content: "●"; margin-right: 4px; font-size: 7px; vertical-align: 1px; }
-  .ap-badge.ap-good { background: rgba(70,200,140,.16); color: #6bdba0; }
-  .ap-badge.ap-warn { background: rgba(255,180,84,.16); color: #ffb454; }
-  .ap-badge.ap-bad { background: rgba(255,107,107,.16); color: #ff6b6b; }
-  .ap-badge.ap-ontime { background: rgba(93,169,255,.16); color: #7db8ff; }
+  /* 狀態燈號:每個狀態前面一顆會發光的圓燈,顏色像紅綠燈一樣一眼區分——
+     綠=準時、藍=已出發/已抵達、黃=延誤/改時間、紅=取消、灰=表定。燈的顏色用
+     --ap-light 變數,不跟文字色連動,換成奇幻/旅誌/HUD 主題(會改文字色)燈號
+     也不會全部變成同一個顏色。 */
+  .ap-badge::before, .ap-lg::before {
+    content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+    margin-right: 5px; vertical-align: -0.5px;
+    background: radial-gradient(circle at 35% 35%, rgba(255,255,255,.75) 0 18%, var(--ap-light) 45%);
+    box-shadow: 0 0 5px 1px var(--ap-light);
+  }
+  .ap-badge, .ap-lg { --ap-light: #8a94a6; }
+  .ap-ontime { --ap-light: #2fd073; }
+  .ap-done { --ap-light: #4da3ff; }
+  .ap-warn { --ap-light: #ffc233; }
+  .ap-bad { --ap-light: #ff4d4f; }
+  .ap-badge.ap-ontime { background: rgba(47,208,115,.15); color: #6fe3a0; }
+  .ap-badge.ap-done { background: rgba(77,163,255,.15); color: #8cc3ff; }
+  .ap-badge.ap-warn { background: rgba(255,194,51,.15); color: #ffcf5c; }
+  .ap-badge.ap-bad { background: rgba(255,77,79,.15); color: #ff7a7c; }
+  /* 取消的紅燈慢慢閃,提醒最需要注意的班次 */
+  .ap-badge.ap-bad::before { animation: ap-blink 1.4s ease-in-out infinite; }
+  @keyframes ap-blink { 50% { opacity: .25; box-shadow: none; } }
+  @media (prefers-reduced-motion: reduce) { .ap-badge.ap-bad::before { animation: none; } }
+  /* 燈號說明列 */
+  .ap-legend {
+    display: flex; flex-wrap: wrap; gap: 3px 12px; flex-shrink: 0;
+    margin: 2px 2px 4px; font-size: 10.5px; opacity: .85;
+  }
+  .ap-lg { white-space: nowrap; }
   .ap-row-mid { margin-top: 2px; color: #b9c6e6; font-size: 11.5px; }
   .ap-row-bottom {
     margin-top: 3px; display: flex; flex-wrap: wrap; gap: 4px 10px;
@@ -1279,6 +1301,13 @@
     <div class="ap-tabs ap-dir">
       <button type="button" data-dir="departure" class="active">出境 Departures</button>
       <button type="button" data-dir="arrival">入境 Arrivals</button>
+    </div>
+    <div class="ap-legend" aria-label="燈號說明">
+      <span class="ap-lg ap-ontime">準時</span>
+      <span class="ap-lg ap-done">已出發/已抵達</span>
+      <span class="ap-lg ap-warn">延誤/改時間</span>
+      <span class="ap-lg ap-bad">取消</span>
+      <span class="ap-lg">表定</span>
     </div>
     <div id="airport-list" class="ap-list"></div>
     <div id="airport-caption" class="sat-caption"></div>
