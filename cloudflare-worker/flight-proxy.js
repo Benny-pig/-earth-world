@@ -54,11 +54,24 @@
 // 這次代理的是圖片而不是 JSON。只允許轉發向日葵官方網域的圖片(白名單檢查),
 // 不是任意網址都能轉發,避免被拿去當開放代理濫用。
 const ALLOWED_IMAGE_HOSTS = ["himawari8.nict.go.jp"];
+//
+// 2026/09 再加:台灣國道即時路況(高速公路局資料,一樣經 TDX 提供,沿用上面
+// 那組 TDX 金鑰,不用另外申請)。只轉發白名單裡這三個 TDX 路徑,不是任意
+// TDX API 都能打,避免額度被拿去濫用。路段線形跟名稱幾乎不會變,網站用的是
+// 預先做好的靜態檔,這兩個只在重建靜態檔時才會用到;網站平常只打 live。
+const TDX_PASSTHROUGH = {
+  "freeway-live": { path: "v2/Road/Traffic/Live/Freeway", ttl: 60 },
+  "freeway-shape": { path: "v2/Road/Traffic/SectionShape/Freeway", ttl: 86400 },
+  "freeway-section": { path: "v2/Road/Traffic/Section/Freeway", ttl: 86400 },
+};
 
-// 用法(部署好之後,網址後面加這些參數,三種模式互斥):
+// 用法(部署好之後,網址後面加這些參數,幾種模式互斥):
 //   /?lat=23.7&lon=121&radius=250   → 查某個座標半徑內(海浬,最大 250)的所有飛機
 //   /?airports=TPE,TSA,KHH,RMQ      → 查這幾個機場代碼的即時進出港航班
 //   /?proxyImage=<向日葵圖片網址>    → 轉發圖片本身並補上 CORS 標頭
+//   /?tdx=freeway-live              → 國道各路段即時旅行速度(約每分鐘更新)
+//   /?tdx=freeway-shape             → 國道各路段線形座標
+//   /?tdx=freeway-section           → 國道各路段名稱、方向、起訖交流道
 
 const CORS_HEADERS = {
   "Access-Control-Allow-Origin": "*",
@@ -201,6 +214,33 @@ async function fetchAirportFids(env, iataList) {
   }
 }
 
+// 原封不動轉發 TDX 回應(不解析 JSON——路段線形資料有好幾 MB,在 Worker 裡
+// 解析很吃免費方案每次 10 毫秒的 CPU 上限,轉發純文字幾乎不花 CPU)。同一個
+// isolate 內存一份在記憶體,期限內重複請求不再打 TDX,多人同時看也只算一次。
+const tdxMemCache = new Map();
+
+async function fetchTdxPassthrough(env, key) {
+  const spec = TDX_PASSTHROUGH[key];
+  const hit = tdxMemCache.get(key);
+  if (hit && Date.now() < hit.expiresAt) return { ok: true, body: hit.body, ttl: spec.ttl };
+
+  const { token, reason } = await getTdxToken(env);
+  if (!token) return { ok: false, status: 401, detail: reason };
+  try {
+    const res = await fetch(`https://tdx.transportdata.tw/api/basic/${spec.path}?%24format=JSON`, {
+      headers: { ...UA, Authorization: `Bearer ${token}` },
+      cf: { cacheTtl: spec.ttl, cacheEverything: true },
+      signal: AbortSignal.timeout(20000),
+    });
+    if (!res.ok) return { ok: false, status: res.status, detail: (await res.text()).slice(0, 300) };
+    const body = await res.text();
+    tdxMemCache.set(key, { body, expiresAt: Date.now() + spec.ttl * 1000 });
+    return { ok: true, body, ttl: spec.ttl };
+  } catch (e) {
+    return { ok: false, status: 0, detail: String(e) };
+  }
+}
+
 export default {
   async fetch(request, env) {
     if (request.method === "OPTIONS") {
@@ -208,6 +248,27 @@ export default {
     }
 
     const url = new URL(request.url);
+
+    const tdxKey = url.searchParams.get("tdx");
+    if (tdxKey) {
+      if (!TDX_PASSTHROUGH[tdxKey]) {
+        return new Response(JSON.stringify({ error: "不支援的 tdx 參數" }), {
+          status: 400,
+          headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
+        });
+      }
+      const result = await fetchTdxPassthrough(env, tdxKey);
+      if (result.ok) {
+        return new Response(result.body, {
+          status: 200,
+          headers: { ...CORS_HEADERS, "Content-Type": "application/json", "Cache-Control": `public, max-age=${result.ttl}` },
+        });
+      }
+      return new Response(JSON.stringify({ error: "路況資料暫時查不到,稍後會自動重試", status: result.status, detail: result.detail }), {
+        status: 502,
+        headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
+      });
+    }
 
     const proxyImage = url.searchParams.get("proxyImage");
     if (proxyImage) {
