@@ -20,6 +20,7 @@ import { createRadioLayer } from "./scene/radio.js";
 import { createSatellitePanel } from "./ui/satellite.js";
 import { createFlightsLayer } from "./scene/flights.js";
 import { createAirportBoard } from "./ui/airport-board.js";
+import { createTrafficLayer } from "./scene/traffic.js";
 import { createNaturePopup } from "./ui/nature-popup.js";
 import { createSidePanel } from "./ui/side-panel.js";
 import { createClockWeather } from "./ui/clock-weather.js";
@@ -30,6 +31,8 @@ import { createEncyclopedia } from "./ui/encyclopedia.js";
 import { THEME_LABEL, getTheme, cycleTheme, onThemeChange, initTheme } from "./ui/theme.js";
 
 const container = document.getElementById("app");
+const DEFAULT_MIN_DISTANCE = 1.35;   // 跟 camera-controls.js 的 controls.minDistance 一致
+const TRAFFIC_MIN_DISTANCE = 1.12;   // 路況開著時可以拉到離地約 760 公里,看得清楚各條國道
 
 export function showError(msg) {
   const el = document.getElementById("error-banner");
@@ -298,6 +301,28 @@ export function start() {
     syncAirportGroupState();
   });
 
+  // 台灣即時路況:開啟時飛到台灣、允許拉近到看得清楚一條條國道,並停住地球自轉
+  // (不然看路況看到一半台灣慢慢轉走);關閉時恢復原本的縮放下限與自轉。
+  const trafficToggle = document.getElementById("traffic-toggle");
+  const traffic = createTrafficLayer({
+    globeObject: globe.object, camera, renderer, naturePopup, rig,
+    onClose: () => setTraffic(false),
+  });
+  window.__earth.traffic = traffic;
+  function setTraffic(on) {
+    if (trafficToggle) trafficToggle.setAttribute("aria-pressed", String(on));
+    traffic.setEnabled(on);
+    rig.setMinDistance(on ? TRAFFIC_MIN_DISTANCE : DEFAULT_MIN_DISTANCE);
+    const keepPaused = on || !!window.__earth.sidePanel?.isOpen();
+    window.__earth.globe?.setSpinPaused(keepPaused);
+    window.__earth.clouds?.setSpinPaused(keepPaused);
+    // 手機直向畫面上下被搜尋欄和路況面板佔掉,拉遠一點讓整個台灣放得進中間的空間
+    if (on) rig.flyTo(23.6, 120.95, { distance: window.innerWidth < 640 ? 1.5 : 1.3, ms: 1200 });
+  }
+  if (trafficToggle) trafficToggle.addEventListener("click", () => {
+    setTraffic(trafficToggle.getAttribute("aria-pressed") !== "true");
+  });
+
   // 「功能」整張卡片可以收合——記住使用者上次收合/展開的狀態,下次開網站
   // 維持一樣,不用每次都重新收一次。
   const LC_COLLAPSE_KEY = "earth-world.lc-collapsed";
@@ -349,8 +374,10 @@ export function start() {
       rig.resetView();
       clockWeather.clear();
       if (window.__earth.countryLayer) window.__earth.countryLayer.setSelected(null);
-      if (window.__earth.globe) window.__earth.globe.setSpinPaused(false);
-      if (window.__earth.clouds) window.__earth.clouds.setSpinPaused(false);
+      // 路況開著的話地球要繼續停住,不然台灣會轉走
+      const keepPaused = !!window.__earth.traffic?.isEnabled();
+      if (window.__earth.globe) window.__earth.globe.setSpinPaused(keepPaused);
+      if (window.__earth.clouds) window.__earth.clouds.setSpinPaused(keepPaused);
     },
     onMore: (code) => encyclopedia.open(code),
   });
@@ -411,11 +438,16 @@ export function start() {
     // 觸控單純點一下常常不會先觸發 pointermove(手指沒有位移),共用的 pointer
     // 座標會停在上一次的舊值(甚至是初始的畫面外 -2,-2),點擊判定跟著點錯位置。
     // 直接用這次 pointerup 事件自己的座標算,不依賴可能沒更新的共用狀態。
+    // 路況開著:先看有沒有點到國道路段
+    if (traffic.isEnabled() && traffic.pickAt(e.clientX, e.clientY)) return;
     pointer.x = (e.clientX / window.innerWidth) * 2 - 1;
     pointer.y = -(e.clientY / window.innerHeight) * 2 + 1;
     raycaster.setFromCamera(pointer, camera);
     const hit = cl.pick(raycaster, globe.mesh);
     if (!hit) return;
+    // 看路況時點在台灣陸地上但沒點中國道(差幾個像素很常見),不要跳出台灣側欄、
+    // 把相機拉遠——想看台灣介紹可以點台灣的金色地名
+    if (traffic.isEnabled() && hit.code === "TW") return;
     openCountry(hit);
   });
 
@@ -473,6 +505,7 @@ export function start() {
     earthquakes.update();
     radio.update();
     flights.update();
+    traffic.update();
     if (window.__earth.countryLabels) window.__earth.countryLabels.update();
 
     composer.render();

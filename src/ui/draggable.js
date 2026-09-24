@@ -31,6 +31,9 @@ export function makeDraggable(panel, handle) {
     startY = e.clientY;
     panel.style.left = `${startLeft}px`;
     panel.style.top = `${startTop}px`;
+    // 手機版有的面板是左右貼邊(left+right、width:auto)撐開寬度,改成只用 left 定位
+    // 之後寬度會縮成內容寬,先把目前寬度固定下來
+    panel.style.width = getComputedStyle(panel).width;   // 內容寬(不含 padding),避免每拖一次就變寬
     panel.style.right = "auto";
     panel.style.bottom = "auto";
     document.addEventListener("pointermove", onMove);
