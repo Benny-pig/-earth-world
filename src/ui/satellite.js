@@ -1,4 +1,5 @@
 import * as THREE from "three";
+import { makeDraggable } from "./draggable.js";
 
 // 向日葵沒有開放跨網域讀取像素,3D 材質貼圖(不是 <img> 顯示)得透過這支
 // Worker 轉發圖片本身+補 CORS 標頭——跟「當地即時航班」共用同一支 Worker
@@ -211,6 +212,7 @@ export function createSatellitePanel({ globeObject } = {}) {
   const tipEnEl = document.getElementById("satellite-tip-en");
   const tipLinkEl = document.getElementById("satellite-tip-link");
   if (!panel || !img) return { setEnabled() {}, isEnabled: () => false };
+  makeDraggable(panel, panel.querySelector(".sat-head"));
 
   const globeOverlay = createGlobeOverlay(globeObject);
 

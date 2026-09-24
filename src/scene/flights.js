@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import { esc } from "../lib/esc.js";
+import { makeDraggable } from "../ui/draggable.js";
 
 // 當地即時航班:資料源 adsb.lol(免金鑰、社群 ADS-B 資料),但它(跟大部分航班
 // API 一樣)不開放瀏覽器直接跨網域抓資料,得透過 cloudflare-worker/flight-proxy.js
@@ -121,6 +122,7 @@ export function createFlightsLayer({ globeObject, camera, renderer, naturePopup 
   const panel = document.getElementById("flight-panel");
   const panelClose = document.getElementById("flight-panel-close");
   const panelRefresh = document.getElementById("flight-refresh");
+  if (panel) makeDraggable(panel, panel.querySelector(".sat-head"));
   if (panelClose) panelClose.addEventListener("click", () => {
     setEnabled(false);
     document.getElementById("flight-toggle")?.setAttribute("aria-pressed", "false");

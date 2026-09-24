@@ -1,4 +1,5 @@
 import { esc } from "../lib/esc.js";
+import { makeDraggable } from "./draggable.js";
 
 // 台灣機場即時航班時刻表(桃園/松山/高雄/台中)。資料源是交通部 TDX 運輸
 // 資料流通服務,透過 cloudflare-worker/flight-proxy.js 的 ?airports= 這個
@@ -50,42 +51,34 @@ function statusInfo(remark) {
   const s = String(remark || "").trim();
   if (!s) return { label: "表定班次", cls: "" };
   if (/取消|CANCEL/i.test(s)) return { label: s, cls: "ap-bad" };
-  if (/延誤|DELAY/i.test(s)) return { label: s, cls: "ap-warn" };
+  if (/延誤|DELAY|時間更改|SCHEDULE ?CHANGE/i.test(s)) return { label: s, cls: "ap-warn" };
   if (/已到|ARRIVED|已飛|DEPARTED|降落|LANDED/i.test(s)) return { label: s, cls: "ap-good" };
+  if (/準時|ON ?TIME|表定/i.test(s)) return { label: s, cls: "ap-ontime" };
   return { label: s, cls: "" };
 }
-// 原本直接用時間字串排序、取前 MAX_ROWS 筆,結果桃園這種大機場一天航班
-// 太多,前 40 筆全部落在凌晨,不管幾點打開都只看得到凌晨的班次,看起來
-// 像資料卡住不動——改成「跟現在時刻的時間差」排序,只留現在時刻前後的
-// 航班,才會隨時間往前推進。時間字串沒有時區資訊,直接當台灣本地時刻
-// 比較,不用管 FlightDate(凌晨航班可能歸在前一天,語意不重要,只看
-// 時分)。
-const PAST_WINDOW_MIN = 120; // 已經過去超過 2 小時的班次(早就飛走/降落)就不留了
+// 實測發現 TDX 一次回傳的資料橫跨「今天、明天、後天」三天(不是只有今天),
+// 原本排序只比對時分(不看日期),會把不同天但時分剛好相同的班次混在一起
+// 排——例如今天 08:00 跟明天 08:00 算出來的「跟現在時刻差幾分鐘」一樣,
+// 導致早上快 10 點,畫面卻還卡在顯示 07:55 這種不合理的結果(明明應該早就
+// 往後推進到接近中午的班次)。改成組出完整的日期時間再算真正的時間差,
+// 不只比時分。時間字串本身沒有時區資訊,視為台灣本地時刻,加上 +08:00
+// 再解析,不管開啟網站的人在哪個時區都會算對。
+const PAST_WINDOW_MS = 120 * 60_000; // 已經過去超過 2 小時的班次(早就飛走/降落)就不留了
 
-function taipeiNowMinutes() {
-  const parts = new Intl.DateTimeFormat("en-GB", {
-    timeZone: "Asia/Taipei", hour: "2-digit", minute: "2-digit", hour12: false,
-  }).formatToParts(new Date());
-  const h = Number(parts.find((p) => p.type === "hour")?.value);
-  const m = Number(parts.find((p) => p.type === "minute")?.value);
-  return h * 60 + m;
-}
-function timeStrToMinutes(s) {
+function toTimestamp(s) {
   if (typeof s !== "string" || s.length < 16) return null;
-  return Number(s.slice(11, 13)) * 60 + Number(s.slice(14, 16));
+  const t = new Date(`${s}:00+08:00`).getTime();
+  return Number.isFinite(t) ? t : null;
 }
 function sortByTime(list, key) {
-  const nowMin = taipeiNowMinutes();
+  const now = Date.now();
   return list
     .map((f) => {
-      const t = timeStrToMinutes(f[key]);
+      const t = toTimestamp(f[key]);
       if (t == null) return null;
-      let diff = t - nowMin;
-      if (diff < -720) diff += 1440; // 跨午夜:現在 23:50、航班 00:10,實際只差 20 分鐘不是 -1420
-      if (diff > 720) diff -= 1440;
-      return { f, diff };
+      return { f, diff: t - now };
     })
-    .filter((x) => x && x.diff >= -PAST_WINDOW_MIN)
+    .filter((x) => x && x.diff >= -PAST_WINDOW_MS)
     .sort((a, b) => a.diff - b.diff)
     .map((x) => x.f);
 }
@@ -101,6 +94,7 @@ export function createAirportBoard() {
   const listEl = document.getElementById("airport-list");
   const captionEl = document.getElementById("airport-caption");
   if (!panel || !listEl) return { setEnabled() {}, isEnabled: () => false };
+  makeDraggable(panel, panel.querySelector(".sat-head"));
 
   const airportBtns = [...panel.querySelectorAll("[data-iata]")];
   const dirBtns = [...panel.querySelectorAll("[data-dir]")];
