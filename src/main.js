@@ -109,7 +109,7 @@ export function start() {
   scene.add(globe.object);
   scene.add(globe.lightRig);
 
-  // 非同步載入 Natural Earth 110m 國界,掛在地球 group 上跟著自轉
+  // 非同步載入 Natural Earth 50m 國界(由 tools/build-countries-geo.py 產生),掛在地球 group 上跟著自轉
   const tap = (p) => p.finally(() => loading.bumpData());
   Promise.all([
     tap(fetch("data/countries.geo.json").then((r) => { if (!r.ok) throw new Error("國界資料載入失敗 " + r.status); return r.json(); })),
@@ -128,7 +128,7 @@ export function start() {
       const countryLayer = buildCountryLayer(geojson);
       globe.object.add(countryLayer.group);
       window.__earth.countryLayer = countryLayer;
-      const countryLabels = createCountryLabels({ geojson, globeObject: globe.object, camera, renderer });
+      const countryLabels = createCountryLabels({ geojson, globeObject: globe.object, camera, renderer, onPick: openCountryByCode });
       window.__earth.countryLabels = countryLabels;
 
       const searchIndex = [];
@@ -375,6 +375,8 @@ export function start() {
       travel: c ? c.travel_months : null,
       history: c ? c.history : [],
       travelAlert: (window.__earth.travelAlert || {})[hit.code] || null,
+      hasDeep: !!c,
+      region: !!(c && c.region),
     });
     clockWeather.setCountry({
       code: hit.code,

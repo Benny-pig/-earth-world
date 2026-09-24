@@ -14,7 +14,7 @@ export function countryNames(feature) {
   const p = feature.properties || {};
   const code = countryCode(feature);
   return {
-    zh: zhHantName(code) || p.NAME_ZH || p.NAME || "未知",
+    zh: zhHantName(code) || p.NAME_ZHT || p.NAME || "未知",
     en: p.NAME || "",
   };
 }

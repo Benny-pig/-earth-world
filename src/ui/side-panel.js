@@ -90,9 +90,10 @@ export function createSidePanel({ onClose, onMore }) {
     const flag = p.code
       ? `<img class="flag" src="https://flagcdn.com/w160/${p.code.toLowerCase()}.png" alt="" onerror="this.style.display='none'">`
       : "";
-    const moreBtn = onMore && p.code
+    // 精細地圖新增的小屬地(關島、百慕達…)還沒有大百科內容,不顯示按鈕,免得點進去只看到「建置中」
+    const moreBtn = onMore && p.code && p.hasDeep
       ? `<button type="button" class="sp-more pulse" data-code="${esc(p.code)}">` +
-        `<span class="sp-more-ico">📖</span>國家大百科 · 詳細介紹</button>` : "";
+        `<span class="sp-more-ico">📖</span>${p.region ? "大百科" : "國家大百科"} · 詳細介紹</button>` : "";
     let html = `${flag}<h2>${esc(p.names.zh)}</h2><div class="en">${esc(p.names.en)}</div>${moreBtn}`;
     const meta = [];
     if (p.capital && p.capital.zh) meta.push(`首都:${esc(p.capital.zh)}${p.capital.en ? ` (${esc(p.capital.en)})` : ""}`);
@@ -141,7 +142,7 @@ export function createSidePanel({ onClose, onMore }) {
       html += section("歷史介紹", p.history.map((t) => `<p>${esc(t)}</p>`).join(""));
 
     if (!hasContent)
-      html += `<p class="dim">國家基本資料建置中,之後會補上更多介紹。</p>`;
+      html += `<p class="dim">基本資料建置中,之後會補上更多介紹。</p>`;
 
     body.innerHTML = html;
     const mb = body.querySelector(".sp-more");

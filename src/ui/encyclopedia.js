@@ -199,15 +199,17 @@ export function createEncyclopedia() {
       );
     }
 
+    // 香港、澳門這類不是主權國家的地區(d.region),標題不寫「國名」「國家」
+    const isRegion = d.region === true;
     const qf = d.quick_facts || {};
     const rows = [];
-    if (qf.official_name_zh) rows.push(["正式國名", qf.official_name_zh]);
+    if (qf.official_name_zh) rows.push([isRegion ? "正式名稱" : "正式國名", qf.official_name_zh]);
     const area = fmtArea(qf.area_km2);
     if (area) rows.push(["面積", area]);
     if (Array.isArray(qf.languages) && qf.languages.length) rows.push(["語言", qf.languages.join("、")]);
     if (qf.religion) rows.push(["宗教", qf.religion]);
     if (qf.currency) rows.push(["貨幣", qf.currency]);
-    if (qf.government) rows.push(["政體", qf.government]);
+    if (qf.government) rows.push([isRegion ? "政治制度" : "政體", qf.government]);
     if (rows.length)
       h += `<dl class="enc-facts">` + rows.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join("") + `</dl>`;
 
@@ -215,7 +217,7 @@ export function createEncyclopedia() {
     if (ccy) h += section("匯率換算(對新臺幣)", `<div id="enc-fx"><p class="enc-dim">載入即時匯率…</p></div>`);
 
     if (Array.isArray(d.founding) && d.founding.length)
-      h += section("國家的生成與發展", d.founding.map((p) => `<p>${esc(p)}</p>`).join(""));
+      h += section(isRegion ? "歷史沿革" : "國家的生成與發展", d.founding.map((p) => `<p>${esc(p)}</p>`).join(""));
 
     if (Array.isArray(d.events) && d.events.length)
       h += section("重大歷史事蹟", `<ul class="enc-timeline">` +

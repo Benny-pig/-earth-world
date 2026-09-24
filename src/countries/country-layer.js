@@ -1,4 +1,5 @@
 import * as THREE from "three";
+import { mergeGeometries } from "three/addons/utils/BufferGeometryUtils.js";
 import earcut from "earcut";
 import { latLonToXYZ, ringCentroid } from "../lib/geo.js";
 import { iterCountryPolygons, countryCode, countryNames } from "./borders.js";
@@ -105,16 +106,27 @@ export function buildCountryLayer(geojson, { radius = 1.002 } = {}) {
     }
     if (!geoms.length) continue;
 
+    // 平常(沒被指到、沒被選取)透明度只有 0.001,肉眼看不見,卻實測佔了每幀
+    // 繪製時間的大半——raycaster 不管 material.visible,點選/滑過偵測照常運作,
+    // 所以平常直接不畫,只有滑過/選取時才打開(見 setOpacity)。
     const material = new THREE.MeshBasicMaterial({
-      color: 0xffffff, transparent: true, opacity: BASE_OPACITY,
+      color: 0xffffff, transparent: true, opacity: BASE_OPACITY, visible: false,
       depthWrite: false, depthTest: false, side: THREE.DoubleSide,
     });
-    const meshes = geoms.map((g) => new THREE.Mesh(g, material));
+    // 同一國的所有島嶼合併成一個 mesh:50m 精細地圖有一千六百多塊多邊形,每塊
+    // 一個 mesh 就是一千六百多次繪製呼叫,合併後只剩國家數量(約 240 次)。
+    const merged = geoms.length === 1 ? geoms[0] : mergeGeometries(geoms, false);
+    if (merged !== geoms[0]) geoms.forEach((g) => g.dispose());
     const wrap = new THREE.Group();
-    meshes.forEach((m) => wrap.add(m));
+    wrap.add(new THREE.Mesh(merged, material));
     wrap.userData = { code, names, centroidLatLon: biggestRing ? ringCentroid(biggestRing) : [0, 0], material, feature };
     group.add(wrap);
     meshByCode.set(code, wrap);
+  }
+
+  function setOpacity(m, v) {
+    m.opacity = v;
+    m.visible = v > BASE_OPACITY;
   }
 
   let hoverCode = null;
@@ -122,12 +134,12 @@ export function buildCountryLayer(geojson, { radius = 1.002 } = {}) {
     if (code === hoverCode) return;
     if (hoverCode && hoverCode !== selectedCode && meshByCode.has(hoverCode)) {
       const m = meshByCode.get(hoverCode).userData.material;
-      m.opacity = BASE_OPACITY; m.color.set(0xffffff);
+      setOpacity(m, BASE_OPACITY); m.color.set(0xffffff);
     }
     hoverCode = code;
     if (hoverCode && hoverCode !== selectedCode && meshByCode.has(hoverCode)) {
       const m = meshByCode.get(hoverCode).userData.material;
-      m.opacity = HOVER_OPACITY; m.color.set(HOVER_COLOR);
+      setOpacity(m, HOVER_OPACITY); m.color.set(HOVER_COLOR);
     }
   }
 
@@ -156,7 +168,7 @@ export function buildCountryLayer(geojson, { radius = 1.002 } = {}) {
     w.scale.setScalar(1);
     const isHover = code === hoverCode;
     const m = w.userData.material;
-    m.opacity = isHover ? HOVER_OPACITY : BASE_OPACITY;
+    setOpacity(m, isHover ? HOVER_OPACITY : BASE_OPACITY);
     m.color.set(isHover ? HOVER_COLOR : 0xffffff);
     m.depthTest = false;      // 恢復預設:非選取狀態不參與深度測試
     m.needsUpdate = true;
@@ -202,7 +214,7 @@ export function buildCountryLayer(geojson, { radius = 1.002 } = {}) {
     const w = meshByCode.get(code);
     if (!w) return;
     w.scale.setScalar(1 + (SELECT_SCALE - 1) * k);
-    w.userData.material.opacity = BASE_OPACITY + (SELECT_OPACITY - BASE_OPACITY) * k;
+    setOpacity(w.userData.material, BASE_OPACITY + (SELECT_OPACITY - BASE_OPACITY) * k);
   }
 
   // 由主迴圈每幀呼叫:平滑的抬起 / 緩降,以及選取外框的柔和脈動。

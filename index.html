@@ -55,6 +55,31 @@
     border-bottom: 1px dotted rgba(238,244,255,.55); padding-bottom: 1px;
   }
   #country-labels .c-label .en { display: block; font-size: 9px; letter-spacing: 0.06em; opacity: 0.7; margin-top: 1px; }
+  /* 新加坡/香港/澳門這類太小的地方:圓點+地名,可以直接點(容器本身不擋滑鼠,只有圓點跟地名可點) */
+  #country-labels .c-pin {
+    position: absolute; left: 0; top: 0; width: 0; height: 0; pointer-events: auto; cursor: pointer;
+    will-change: transform, opacity; transform: translate(-9999px, -9999px); transition: opacity 0.3s linear;
+  }
+  #country-labels .c-pin-dot {
+    position: absolute; left: -4px; top: -4px; width: 8px; height: 8px; border-radius: 50%;
+    background: #ffffff; box-shadow: 0 0 0 2px rgba(4,10,24,.85), 0 0 9px 2px rgba(159,233,255,.85);
+  }
+  #country-labels .c-pin-text {
+    position: absolute; white-space: nowrap; color: #eef4ff; text-align: center;
+    text-shadow: 0 0 5px rgba(4,10,24,0.95), 0 1px 3px rgba(0,0,0,0.9);
+    font: 600 12.5px/1.15 system-ui, "Microsoft JhengHei", sans-serif; letter-spacing: 0.06em;
+  }
+  #country-labels .c-pin-text .zh, #country-labels .c-pin-text .en { display: block; }
+  #country-labels .c-pin-text .en { font-size: 8.5px; font-weight: 500; opacity: 0.7; letter-spacing: 0.04em; }
+  /* 地名跟圓點都只有幾個像素大,手指很容易點偏到旁邊的國家(例如香港點偏就變成打開中國),
+     可點範圍用 padding / 透明外圈放大,看起來大小不變 */
+  #country-labels .c-pin-text { padding: 3px 6px; }
+  #country-labels .c-pin-dot::after { content: ""; position: absolute; left: -8px; top: -8px; width: 24px; height: 24px; border-radius: 50%; }
+  #country-labels .c-pin--right .c-pin-text { left: 3px; top: 0; transform: translateY(-50%); text-align: left; }
+  #country-labels .c-pin--up .c-pin-text { left: 0; bottom: 5px; transform: translateX(-50%); }
+  #country-labels .c-pin--down .c-pin-text { left: 0; top: 5px; transform: translateX(-50%); }
+  #country-labels .c-pin:hover .c-pin-dot { background: #9fe9ff; }
+  #country-labels .c-pin:hover .c-pin-text { color: #9fe9ff; }
   #ocean-labels { position: fixed; inset: 0; pointer-events: none; z-index: 38; overflow: hidden; }
   #ocean-labels .ocean-label {
     position: absolute; left: 0; top: 0; will-change: transform, opacity;

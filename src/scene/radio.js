@@ -34,7 +34,7 @@ function ensureHls() {
   return hlsLoadPromise;
 }
 // 熱門國家多給幾台選擇,其他國家維持新聞+流行各一台就好
-const POPULAR_COUNTRIES = new Set(["TW", "KR", "CN", "JP", "US", "GB", "FR", "DE"]);
+const POPULAR_COUNTRIES = new Set(["TW", "KR", "CN", "JP", "US", "GB", "FR", "DE", "HK", "SG"]);
 // 使用者點名想要的電台,只要 radio-browser 裡有播得出來的版本就一定收進去,不受
 // 新聞/流行的自動判斷限制——用電台自己的名稱關鍵字直接查,不能只在「該國點擊數
 // 前 30 名」裡面找,很多指定電台點擊數低、根本擠不進前 30 名。

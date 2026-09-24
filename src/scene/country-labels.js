@@ -9,14 +9,25 @@ const MAX_LABELS_FAR = 40;
 const LABEL_W = 66;          // approx label box for on-screen collision culling
 const LABEL_H = 26;
 
+// 面積太小、在地球上只有幾個像素的重要地點:照上面「面積夠大才顯示」的規則永遠
+// 輪不到它們,國界本身也小到幾乎點不到——改成一直顯示「小圓點+地名」,點圓點或
+// 地名就能打開。香港跟澳門只差約 60 公里,縮小時兩個圓點幾乎重疊,地名往不同
+// 方向錯開(side)才不會疊在一起。要加其他小地方,在這裡加一行就好。
+const PINS = {
+  SG: { side: "right" },
+  HK: { side: "up" },
+  MO: { side: "down" },
+};
+
 function latLonToDir(latDeg, lonDeg) {
   const lat = latDeg * DEG, lon = lonDeg * DEG, cl = Math.cos(lat);
   return new THREE.Vector3(cl * Math.cos(lon), Math.sin(lat), -cl * Math.sin(lon));
 }
 
-export function createCountryLabels({ geojson, globeObject, camera, renderer }) {
+export function createCountryLabels({ geojson, globeObject, camera, renderer, onPick }) {
   const host = document.getElementById("country-labels");
   const labels = [];
+  const pins = [];
 
   for (const feature of geojson.features) {
     let best = null, bestArea = -1;
@@ -34,11 +45,24 @@ export function createCountryLabels({ geojson, globeObject, camera, renderer }) 
     }
     if (!best) continue;
     const names = countryNames(feature);
+    const code = countryCode(feature);
+    const pin = PINS[code];
+    if (pin) {
+      const el = document.createElement("div");
+      el.className = `c-pin c-pin--${pin.side}`;
+      el.dataset.code = code;
+      el.title = `${names.zh}(點一下查看介紹)`;
+      el.innerHTML = `<span class="c-pin-dot"></span><span class="c-pin-text"><span class="zh">${names.zh}</span><span class="en">${names.en}</span></span>`;
+      el.addEventListener("click", (e) => { e.stopPropagation(); onPick && onPick(code); });
+      host.appendChild(el);
+      pins.push({ el, dir: latLonToDir(best.lat, best.lon) });
+      continue;
+    }
     const el = document.createElement("div");
     el.className = "c-label";
     el.innerHTML = `<span class="zh">${names.zh}</span><span class="en">${names.en}</span>`;
     host.appendChild(el);
-    labels.push({ el, dir: latLonToDir(best.lat, best.lon), area: bestArea, code: countryCode(feature) });
+    labels.push({ el, dir: latLonToDir(best.lat, best.lon), area: bestArea, code });
   }
 
   const anchor = new THREE.Vector3();
@@ -61,6 +85,20 @@ export function createCountryLabels({ geojson, globeObject, camera, renderer }) 
       MAX_LABELS_FAR, MAX_LABELS_NEAR,
     ));
     const rect = renderer.domElement.getBoundingClientRect();
+
+    // 小地方的圓點地名不受面積門檻/數量上限/互相遮擋的篩選,只要在地球正面就顯示
+    for (const P of pins) {
+      anchor.copy(P.dir).applyMatrix4(globeObject.matrixWorld);
+      nrm.copy(P.dir).transformDirection(globeObject.matrixWorld);
+      camTo.copy(camera.position).sub(anchor).normalize();
+      const facing = nrm.dot(camTo);
+      ndc.copy(anchor).project(camera);
+      if (ndc.z > 1 || facing < 0.05) { hide(P); continue; }
+      const x = rect.left + (ndc.x * 0.5 + 0.5) * rect.width;
+      const y = rect.top + (-ndc.y * 0.5 + 0.5) * rect.height;
+      P.el.style.transform = `translate(${Math.round(x)}px, ${Math.round(y)}px)`;
+      P.el.style.opacity = THREE.MathUtils.clamp((facing - 0.05) / 0.2, 0, 1).toFixed(2);
+    }
 
     // candidates above the area threshold, largest first (large countries win the label cap and collisions)
     const cands = labels.filter((L) => L.area >= threshold).sort((a, b) => b.area - a.area);
