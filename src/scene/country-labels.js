@@ -13,11 +13,16 @@ const LABEL_H = 26;
 // 輪不到它們,國界本身也小到幾乎點不到——改成一直顯示「小圓點+地名」,點圓點或
 // 地名就能打開。香港跟澳門只差約 60 公里,縮小時兩個圓點幾乎重疊,地名往不同
 // 方向錯開(side)才不會疊在一起。要加其他小地方,在這裡加一行就好。
+// 台灣(home)同樣面積太小、拉遠就沒有地名,改成金色、較大、會呼吸閃爍的標記,
+// 地名放右邊的太平洋上,不會壓到香港/澳門。
 const PINS = {
+  TW: { side: "right", home: true },
   SG: { side: "right" },
   HK: { side: "up" },
   MO: { side: "down" },
 };
+// 圓點地名文字框中心相對於圓點的位移(px),讓一般國名的碰撞檢查也會避開它們
+const PIN_TEXT_OFFSET = { right: [30, 0], up: [0, -16], down: [0, 16] };
 
 function latLonToDir(latDeg, lonDeg) {
   const lat = latDeg * DEG, lon = lonDeg * DEG, cl = Math.cos(lat);
@@ -49,13 +54,13 @@ export function createCountryLabels({ geojson, globeObject, camera, renderer, on
     const pin = PINS[code];
     if (pin) {
       const el = document.createElement("div");
-      el.className = `c-pin c-pin--${pin.side}`;
+      el.className = `c-pin c-pin--${pin.side}${pin.home ? " c-pin--home" : ""}`;
       el.dataset.code = code;
       el.title = `${names.zh}(點一下查看介紹)`;
       el.innerHTML = `<span class="c-pin-dot"></span><span class="c-pin-text"><span class="zh">${names.zh}</span><span class="en">${names.en}</span></span>`;
       el.addEventListener("click", (e) => { e.stopPropagation(); onPick && onPick(code); });
       host.appendChild(el);
-      pins.push({ el, dir: latLonToDir(best.lat, best.lon) });
+      pins.push({ el, dir: latLonToDir(best.lat, best.lon), off: PIN_TEXT_OFFSET[pin.side] });
       continue;
     }
     const el = document.createElement("div");
@@ -86,7 +91,9 @@ export function createCountryLabels({ geojson, globeObject, camera, renderer, on
     ));
     const rect = renderer.domElement.getBoundingClientRect();
 
-    // 小地方的圓點地名不受面積門檻/數量上限/互相遮擋的篩選,只要在地球正面就顯示
+    // 小地方的圓點地名不受面積門檻/數量上限/互相遮擋的篩選,只要在地球正面就顯示;
+    // 先放進 placed,後面的一般國名碰到它們就讓位
+    placed.length = 0;
     for (const P of pins) {
       anchor.copy(P.dir).applyMatrix4(globeObject.matrixWorld);
       nrm.copy(P.dir).transformDirection(globeObject.matrixWorld);
@@ -98,13 +105,13 @@ export function createCountryLabels({ geojson, globeObject, camera, renderer, on
       const y = rect.top + (-ndc.y * 0.5 + 0.5) * rect.height;
       P.el.style.transform = `translate(${Math.round(x)}px, ${Math.round(y)}px)`;
       P.el.style.opacity = THREE.MathUtils.clamp((facing - 0.05) / 0.2, 0, 1).toFixed(2);
+      placed.push({ x: x + P.off[0], y: y + P.off[1] });
     }
 
     // candidates above the area threshold, largest first (large countries win the label cap and collisions)
     const cands = labels.filter((L) => L.area >= threshold).sort((a, b) => b.area - a.area);
     const candSet = new Set(cands);
     for (const L of labels) if (!candSet.has(L)) hide(L);
-    placed.length = 0;
     let count = 0;
 
     for (const L of cands) {

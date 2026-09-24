@@ -8,7 +8,7 @@ import { createStarfield } from "./scene/starfield.js";
 import { createGlobe } from "./scene/globe.js";
 import { createClouds } from "./scene/clouds.js";
 import { createCameraRig, fitDistanceForAspect } from "./scene/camera-controls.js";
-import { buildBorders } from "./countries/borders.js";
+import { buildBorders, buildOutline } from "./countries/borders.js";
 import { buildCountryLayer } from "./countries/country-layer.js";
 import { setZhHantNames } from "./countries/country-names.js";
 import { createTooltip } from "./ui/tooltip.js";
@@ -125,6 +125,9 @@ export function start() {
       const borders = buildBorders(geojson);
       globe.object.add(borders);
       window.__earth.borders = borders;
+      // 台灣海岸線用醒目的金色粗線,一眼就能在地球上找到
+      const twOutline = buildOutline(geojson, "TW");
+      if (twOutline) globe.object.add(twOutline);
       const countryLayer = buildCountryLayer(geojson);
       globe.object.add(countryLayer.group);
       window.__earth.countryLayer = countryLayer;

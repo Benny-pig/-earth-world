@@ -80,6 +80,22 @@
   #country-labels .c-pin--down .c-pin-text { left: 0; top: 5px; transform: translateX(-50%); }
   #country-labels .c-pin:hover .c-pin-dot { background: #9fe9ff; }
   #country-labels .c-pin:hover .c-pin-text { color: #9fe9ff; }
+  /* 台灣:金色、較大的圓點加一圈慢慢擴散的光環,地名也放大,跟其他小地方的白點區隔 */
+  #country-labels .c-pin--home .c-pin-dot {
+    left: -5.5px; top: -5.5px; width: 11px; height: 11px; background: #ffd166;
+    box-shadow: 0 0 0 2px rgba(4,10,24,.85), 0 0 12px 3px rgba(255,196,80,.9);
+  }
+  #country-labels .c-pin--home .c-pin-dot::before {
+    content: ""; position: absolute; inset: -2px; border-radius: 50%;
+    border: 2px solid rgba(255,209,102,.9); animation: home-pulse 2.4s ease-out infinite;
+  }
+  @keyframes home-pulse { from { transform: scale(1); opacity: .9; } to { transform: scale(2.6); opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) { #country-labels .c-pin--home .c-pin-dot::before { animation: none; opacity: 0; } }
+  /* 地名離圓點遠一點,放在台灣東岸外的海面上,不壓住金色海岸線 */
+  #country-labels .c-pin--home .c-pin-text { left: 12px; color: #ffe2a0; font-size: 14px; font-weight: 700; }
+  #country-labels .c-pin--home .c-pin-text .en { font-size: 9px; }
+  #country-labels .c-pin--home:hover .c-pin-dot { background: #fff0c2; }
+  #country-labels .c-pin--home:hover .c-pin-text { color: #fff0c2; }
   #ocean-labels { position: fixed; inset: 0; pointer-events: none; z-index: 38; overflow: hidden; }
   #ocean-labels .ocean-label {
     position: absolute; left: 0; top: 0; will-change: transform, opacity;
