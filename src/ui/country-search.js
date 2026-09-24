@@ -30,8 +30,11 @@ export function createCountrySearch({ index, onPick }) {
 
   function render() {
     if (!matches.length) { list.hidden = true; list.innerHTML = ""; return; }
+    // 國旗圖示用跟大百科/側欄同一個免費 CDN(flagcdn.com),小尺寸(w40)給列表用;
+    // 找不到旗子的代碼(例如非國家的特殊條目)載入失敗就直接隱藏,不留破圖示。
     list.innerHTML = matches.map((m, i) =>
       `<li data-code="${m.code}" class="${i === active ? "active" : ""}">` +
+      `<img class="cs-flag" src="https://flagcdn.com/w40/${String(m.code || "").toLowerCase()}.png" alt="" onerror="this.style.visibility='hidden'">` +
       `<span class="cs-zh">${m.zh}</span><span class="cs-en">${m.en || m.code}</span></li>`
     ).join("");
     list.hidden = false;
