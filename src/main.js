@@ -21,6 +21,7 @@ import { createSatellitePanel } from "./ui/satellite.js";
 import { createFlightsLayer } from "./scene/flights.js";
 import { createAirportBoard } from "./ui/airport-board.js";
 import { createTrafficLayer } from "./scene/traffic.js";
+import { createTrafficCenter } from "./ui/traffic-center.js";
 import { createNaturePopup } from "./ui/nature-popup.js";
 import { createSidePanel } from "./ui/side-panel.js";
 import { createClockWeather } from "./ui/clock-weather.js";
@@ -303,15 +304,19 @@ export function start() {
 
   // 台灣即時路況:開啟時飛到台灣、允許拉近到看得清楚一條條國道,並停住地球自轉
   // (不然看路況看到一半台灣慢慢轉走);關閉時恢復原本的縮放下限與自轉。
+  // 資料與地球上的國道線在 traffic(scene),路況中心視窗(地圖/排行/監視器)在 trafficCenter(ui)
   const trafficToggle = document.getElementById("traffic-toggle");
+  let trafficCenter = null;
   const traffic = createTrafficLayer({
     globeObject: globe.object, camera, renderer, naturePopup, rig,
-    onClose: () => setTraffic(false),
+    onData: (d) => trafficCenter && trafficCenter.onData(d),
   });
+  trafficCenter = createTrafficCenter({ traffic, onClose: () => setTraffic(false) });
   window.__earth.traffic = traffic;
   function setTraffic(on) {
     if (trafficToggle) trafficToggle.setAttribute("aria-pressed", String(on));
     traffic.setEnabled(on);
+    trafficCenter.setOpen(on);
     rig.setMinDistance(on ? TRAFFIC_MIN_DISTANCE : DEFAULT_MIN_DISTANCE);
     const keepPaused = on || !!window.__earth.sidePanel?.isOpen();
     window.__earth.globe?.setSpinPaused(keepPaused);
