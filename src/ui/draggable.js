@@ -7,7 +7,10 @@
 // 移動/放開的監聽器掛在 document 上(不是掛在標題列本身)——拖曳過程中
 // 滑鼠很快就會移出這條窄窄的標題列範圍,掛在 document 上才能一路追蹤到
 // 放開為止,不會拖到一半就斷掉。
-export function makeDraggable(panel, handle) {
+//
+// disableBelow:畫面寬度小於這個值時不拖曳(手機上幾乎全螢幕的面板拖了也沒意義,
+// 手指點到標題列反而會讓面板改變定位方式而跳動)。
+export function makeDraggable(panel, handle, { disableBelow = 0 } = {}) {
   if (!panel || !handle) return;
   let startX = 0, startY = 0, startLeft = 0, startTop = 0;
 
@@ -24,6 +27,7 @@ export function makeDraggable(panel, handle) {
   }
   function onDown(e) {
     if (e.target.closest("button, a, select, input")) return;
+    if (window.innerWidth < disableBelow) return;
     const rect = panel.getBoundingClientRect();
     startLeft = rect.left;
     startTop = rect.top;

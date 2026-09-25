@@ -41,9 +41,11 @@ export function createCameraRig({ camera, domElement, globeObject }) {
     tween = { from: camera.position.clone(), toDir, dist: distance, t: 0, ms };
   }
 
-  function resetView() {
+  // keepDirection:只拉遠回全景距離、不轉回預設方向(例如關掉台灣路況時,地球停在台灣那一面)
+  function resetView({ keepDirection = false } = {}) {
     const dist = fitDistanceForAspect(camera.aspect);
-    tween = { from: camera.position.clone(), toDir: new THREE.Vector3(0, 0, 1), dist, t: 0, ms: 900 };
+    const toDir = keepDirection ? camera.position.clone().normalize() : new THREE.Vector3(0, 0, 1);
+    tween = { from: camera.position.clone(), toDir, dist, t: 0, ms: 900 };
   }
 
   // 最近可以拉多近:平常 1.35,台灣路況開著時放寬到能看清楚一條條國道。

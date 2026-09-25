@@ -415,6 +415,8 @@
   body[data-theme="journal"] .tc-map-info, body[data-theme="journal"] .tc-viewer { background: rgba(243,237,224,.97); border-color: rgba(120,90,50,.3); }
   body[data-theme="journal"] .tc-viewer-msg { color: #fff; }
   @media (max-width: 640px) {
+    /* 台灣機場航班面板:max-width 只算內容寬,加上 padding/邊框後右邊會超出手機螢幕約 8px,改成左右貼邊 */
+    #airport-panel { left: 8px; right: 8px; width: auto; min-width: 0; max-width: none; }
     /* 手機:路況中心幾乎全螢幕(地圖本身就是台灣,不需要再看地球) */
     #traffic-panel { top: 8px; bottom: 8px; right: 8px; left: 8px; width: auto; height: auto; min-width: 0; max-height: none; z-index: 46; resize: none; }
   }

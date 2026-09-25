@@ -60,7 +60,7 @@ export function createTrafficCenter({ traffic, onClose }) {
   const camRoadSel = $("tc-cam-road"), camDirSel = $("tc-cam-dir"), camQ = $("tc-cam-q"), camList = $("tc-cam-list");
   const viewer = $("tc-viewer"), vImg = $("tc-viewer-img"), vMsg = $("tc-viewer-msg");
   const vTitle = $("tc-viewer-title"), vSub = $("tc-viewer-sub"), vPause = $("tc-viewer-pause");
-  makeDraggable(panel, panel.querySelector(".sat-head"));
+  makeDraggable(panel, panel.querySelector(".sat-head"), { disableBelow: 641 });   // 手機上是全螢幕,不拖曳
 
   let open = false;
   let data = null;               // { sections, live, liveTime, ok, levelOf }

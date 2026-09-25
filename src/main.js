@@ -323,6 +323,8 @@ export function start() {
     window.__earth.clouds?.setSpinPaused(keepPaused);
     // 手機直向畫面上下被搜尋欄和路況面板佔掉,拉遠一點讓整個台灣放得進中間的空間
     if (on) rig.flyTo(23.6, 120.95, { distance: window.innerWidth < 640 ? 1.5 : 1.3, ms: 1200 });
+    // 關閉時拉回全景距離(停在台灣這一面),不然會一直卡在放大的地球上
+    else if (!window.__earth.sidePanel?.isOpen()) rig.resetView({ keepDirection: true });
   }
   if (trafficToggle) trafficToggle.addEventListener("click", () => {
     setTraffic(trafficToggle.getAttribute("aria-pressed") !== "true");
