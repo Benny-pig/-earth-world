@@ -65,6 +65,18 @@ const TDX_PASSTHROUGH = {
   "freeway-section": { path: "v2/Road/Traffic/Section/Freeway", ttl: 86400 },
 };
 
+//
+// 2026/09 再加:高鐵、台鐵時刻(一樣是 TDX、同一組金鑰)。查詢參數很多種(起訖站、
+// 日期、車站即時看板…),不一一列白名單,改成「只允許這兩個路徑開頭 + 路徑只能有
+// 英數字、斜線、連字號」,網站之後要多查一種時刻/誤點資料時,不用再重新部署 Worker。
+// 快取時間依資料種類:車站清單 1 天、時刻表/剩餘座位 10 分鐘、即時看板/誤點 1 分鐘。
+const TDX_RAIL_PREFIXES = ["v2/Rail/THSR/", "v3/Rail/TRA/"];
+function railTtl(path) {
+  if (/LiveBoard|Alert/i.test(path)) return 60;
+  if (/Station$|Station\/|Line|Shape|Network/i.test(path) && !/Timetable|Seat/i.test(path)) return 86400;
+  return 600;
+}
+
 // 用法(部署好之後,網址後面加這些參數,幾種模式互斥):
 //   /?lat=23.7&lon=121&radius=250   → 查某個座標半徑內(海浬,最大 250)的所有飛機
 //   /?airports=TPE,TSA,KHH,RMQ      → 查這幾個機場代碼的即時進出港航班
@@ -72,6 +84,8 @@ const TDX_PASSTHROUGH = {
 //   /?tdx=freeway-live              → 國道各路段即時旅行速度(約每分鐘更新)
 //   /?tdx=freeway-shape             → 國道各路段線形座標
 //   /?tdx=freeway-section           → 國道各路段名稱、方向、起訖交流道
+//   /?rail=v2/Rail/THSR/…           → 高鐵資料(例如 v2/Rail/THSR/DailyTimetable/OD/1000/to/1070/2026-09-25)
+//   /?rail=v3/Rail/TRA/…            → 台鐵資料(例如 v3/Rail/TRA/TrainLiveBoard)
 
 const CORS_HEADERS = {
   "Access-Control-Allow-Origin": "*",
@@ -170,18 +184,41 @@ async function getTdxToken(env) {
   if (!id || !secret) return { token: null, reason: "缺少 TDX_CLIENT_ID 或 TDX_CLIENT_SECRET 環境變數" };
   if (tdxTokenCache.token && Date.now() < tdxTokenCache.expiresAt) return { token: tdxTokenCache.token, reason: null };
 
+  // Cloudflare 會同時開好幾個 Worker 執行個體,每個都各自換 token 的話,TDX 會回 429
+  // (換得太頻繁)。換到的 token 另外存一份在 Cloudflare 快取,其他執行個體先從快取拿;
+  // 快取用不了也沒關係,就照原本各自換。
+  const cacheKey = new Request("https://tdx-token.earth-world.internal/token");
   try {
-    const res = await fetch(TDX_TOKEN_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams({ grant_type: "client_credentials", client_id: id, client_secret: secret }),
-      signal: AbortSignal.timeout(6000),
-    });
-    if (!res.ok) return { token: null, reason: `TDX 換 token 失敗,狀態碼 ${res.status}(可能是 Client ID/Secret 不正確)` };
+    const hit = await caches.default.match(cacheKey);
+    if (hit) {
+      const c = await hit.json();
+      if (c.token && Date.now() < c.expiresAt) { tdxTokenCache = c; return { token: c.token, reason: null }; }
+    }
+  } catch { /* 快取不可用就略過 */ }
+
+  try {
+    let res = null;
+    for (let attempt = 0; attempt < 2; attempt++) {
+      if (attempt) await new Promise((r) => setTimeout(r, 900));   // 429 通常等一下就好
+      res = await fetch(TDX_TOKEN_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({ grant_type: "client_credentials", client_id: id, client_secret: secret }),
+        signal: AbortSignal.timeout(6000),
+      });
+      if (res.status !== 429) break;
+    }
+    if (!res.ok) return { token: null, reason: `TDX 換 token 失敗,狀態碼 ${res.status}${res.status === 429 ? "(請求太頻繁,稍後自動恢復)" : "(可能是 Client ID/Secret 不正確)"}` };
     const json = await res.json();
     if (!json.access_token) return { token: null, reason: "TDX 回應沒有 access_token" };
     // token 有效期通常 86400 秒(1 天),提前 5 分鐘視為過期,避免卡在邊界。
-    tdxTokenCache = { token: json.access_token, expiresAt: Date.now() + Math.max(60, (json.expires_in || 86400) - 300) * 1000 };
+    const ttl = Math.max(60, (json.expires_in || 86400) - 300);
+    tdxTokenCache = { token: json.access_token, expiresAt: Date.now() + ttl * 1000 };
+    try {
+      await caches.default.put(cacheKey, new Response(JSON.stringify(tdxTokenCache), {
+        headers: { "Content-Type": "application/json", "Cache-Control": `max-age=${ttl}` },
+      }));
+    } catch { /* 快取不可用就略過 */ }
     return { token: tdxTokenCache.token, reason: null };
   } catch (e) {
     return { token: null, reason: `連不到 TDX 認證伺服器:${String(e)}` };
@@ -218,27 +255,33 @@ async function fetchAirportFids(env, iataList) {
 // 解析很吃免費方案每次 10 毫秒的 CPU 上限,轉發純文字幾乎不花 CPU)。同一個
 // isolate 內存一份在記憶體,期限內重複請求不再打 TDX,多人同時看也只算一次。
 const tdxMemCache = new Map();
+const TDX_MEM_MAX = 300;   // 鐵路查詢組合很多(起訖站 × 日期),記憶體快取設上限,超過就清掉最舊的
 
-async function fetchTdxPassthrough(env, key) {
-  const spec = TDX_PASSTHROUGH[key];
-  const hit = tdxMemCache.get(key);
-  if (hit && Date.now() < hit.expiresAt) return { ok: true, body: hit.body, ttl: spec.ttl };
+async function fetchTdxPath(env, path, ttl) {
+  const hit = tdxMemCache.get(path);
+  if (hit && Date.now() < hit.expiresAt) return { ok: true, body: hit.body, ttl };
 
   const { token, reason } = await getTdxToken(env);
   if (!token) return { ok: false, status: 401, detail: reason };
   try {
-    const res = await fetch(`https://tdx.transportdata.tw/api/basic/${spec.path}?%24format=JSON`, {
+    const res = await fetch(`https://tdx.transportdata.tw/api/basic/${path}?%24format=JSON`, {
       headers: { ...UA, Authorization: `Bearer ${token}` },
-      cf: { cacheTtl: spec.ttl, cacheEverything: true },
+      cf: { cacheTtl: ttl, cacheEverything: true },
       signal: AbortSignal.timeout(20000),
     });
     if (!res.ok) return { ok: false, status: res.status, detail: (await res.text()).slice(0, 300) };
     const body = await res.text();
-    tdxMemCache.set(key, { body, expiresAt: Date.now() + spec.ttl * 1000 });
-    return { ok: true, body, ttl: spec.ttl };
+    if (tdxMemCache.size >= TDX_MEM_MAX) tdxMemCache.delete(tdxMemCache.keys().next().value);
+    tdxMemCache.set(path, { body, expiresAt: Date.now() + ttl * 1000 });
+    return { ok: true, body, ttl };
   } catch (e) {
     return { ok: false, status: 0, detail: String(e) };
   }
+}
+
+function fetchTdxPassthrough(env, key) {
+  const spec = TDX_PASSTHROUGH[key];
+  return fetchTdxPath(env, spec.path, spec.ttl);
 }
 
 export default {
@@ -248,6 +291,31 @@ export default {
     }
 
     const url = new URL(request.url);
+
+    const railPath = url.searchParams.get("rail");
+    if (railPath) {
+      // 只允許高鐵/台鐵這兩個路徑開頭,而且只能有英數字、斜線、連字號(擋掉 ..、? 之類)
+      const okPath = railPath.length <= 200 && /^[A-Za-z0-9/\-]+$/.test(railPath) &&
+        TDX_RAIL_PREFIXES.some((p) => railPath.startsWith(p));
+      if (!okPath) {
+        return new Response(JSON.stringify({ error: "不支援的鐵路查詢路徑" }), {
+          status: 400,
+          headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
+        });
+      }
+      const ttl = railTtl(railPath);
+      const result = await fetchTdxPath(env, railPath, ttl);
+      if (result.ok) {
+        return new Response(result.body, {
+          status: 200,
+          headers: { ...CORS_HEADERS, "Content-Type": "application/json", "Cache-Control": `public, max-age=${Math.min(ttl, 600)}` },
+        });
+      }
+      return new Response(JSON.stringify({ error: "鐵路資料暫時查不到,稍後再試", status: result.status, detail: result.detail }), {
+        status: 502,
+        headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
+      });
+    }
 
     const tdxKey = url.searchParams.get("tdx");
     if (tdxKey) {
