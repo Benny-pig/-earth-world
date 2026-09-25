@@ -156,8 +156,15 @@ export function createTrafficLayer({ globeObject, camera, renderer, naturePopup,
       return;
     }
     try {
-      const r = await fetch(`${PROXY_URL}/?tdx=freeway-live`);
-      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      // TDX 偶爾對 Worker 換 token 回 429(太頻繁),通常隔幾秒就好——自動重試兩次,
+      // 讀者才不會一打開就看到「查不到」
+      let r = null;
+      for (let attempt = 0; attempt < 3; attempt++) {
+        if (attempt) await new Promise((res) => setTimeout(res, 3000 * attempt));
+        r = await fetch(`${PROXY_URL}/?tdx=freeway-live`).catch(() => null);
+        if (r && r.ok) break;
+      }
+      if (!r || !r.ok) throw new Error(`HTTP ${r ? r.status : "network"}`);
       const doc = await r.json();
       const next = new Map();
       for (const x of doc.LiveTraffics || []) {

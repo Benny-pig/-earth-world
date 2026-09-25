@@ -67,9 +67,12 @@ export function createTrafficCenter({ traffic, onClose }) {
   let cams = null;               // { roads, cams:[[lon,lat,roadIdx,dir,mile,from,to,url]] }
   let camsLoading = null;
   let tab = "map";
+  let region = "";               // ""=全台、N=北部、C=中部、S=南部(路段/監視器的分區由 build-freeway.py 依縣市算好)
 
   const levelOf = (id) => (data ? data.levelOf(id) : 0);
   const liveOf = (id) => (data && data.live.get(id)) || null;
+  const inRegion = (id) => !region || (data && data.sections[id] && data.sections[id].g === region);
+  const REGION_NAME = { "": "全台", N: "北部", C: "中部", S: "南部" };
 
   function loadCams() {
     if (!camsLoading) {
@@ -94,18 +97,32 @@ export function createTrafficCenter({ traffic, onClose }) {
   }
   tabBtns.forEach((b) => b.addEventListener("click", () => showTab(b.dataset.tab)));
 
+  // ───────────── 北中南切換 ─────────────
+  const regionBtns = [...panel.querySelectorAll(".tc-regions [data-region]")];
+  function setRegion(r) {
+    region = r;
+    regionBtns.forEach((b) => b.classList.toggle("active", b.dataset.region === r));
+    infoEl.hidden = true;
+    renderSummary();
+    renderRank();
+    renderCamList();
+    if (svg) { recolorMap(); zoomToRegion(); }
+  }
+  regionBtns.forEach((b) => b.addEventListener("click", () => setRegion(b.dataset.region)));
+
   // ───────────── 摘要 / 資料來源 ─────────────
   function renderSummary() {
     if (!data || !data.sections) { summaryEl.textContent = ""; return; }
     const counts = [0, 0, 0, 0, 0, 0];
-    for (const id of Object.keys(data.sections)) counts[levelOf(id)]++;
+    for (const id of Object.keys(data.sections)) if (inRegion(id)) counts[levelOf(id)]++;
     const busy = counts[2] + counts[3] + counts[4] + counts[5];
     const jam = counts[3] + counts[4] + counts[5];
+    const where = REGION_NAME[region];
     summaryEl.innerHTML = !data.live.size
       ? ""
       : busy
-        ? `車多以上 <b>${busy}</b> 段(壅塞以上 <b>${jam}</b> 段),其餘 <b>${counts[1]}</b> 段順暢`
-        : `目前國道全線順暢(<b>${counts[1]}</b> 段)`;
+        ? `${where}:車多以上 <b>${busy}</b> 段(壅塞以上 <b>${jam}</b> 段),其餘 <b>${counts[1]}</b> 段順暢`
+        : `${where}國道目前全線順暢(<b>${counts[1]}</b> 段)`;
     captionEl.textContent = data.ok
       ? `資料來源:交通部高速公路局(TDX)· 資料時間 ${fmtClock(data.liveTime)} · 每 2 分鐘更新 · 監視器影像:高速公路局`
       : data.live.size
@@ -117,9 +134,9 @@ export function createTrafficCenter({ traffic, onClose }) {
   function renderRank() {
     if (!data || !data.sections) { listEl.innerHTML = `<div class="ap-empty">載入國道路段中…</div>`; return; }
     if (!data.live.size) { listEl.innerHTML = `<div class="ap-empty">路況資料暫時查不到,稍後會自動重試</div>`; return; }
-    const busy = Object.keys(data.sections).filter((id) => levelOf(id) >= 2 && data.sections[id].r);
+    const busy = Object.keys(data.sections).filter((id) => levelOf(id) >= 2 && data.sections[id].r && inRegion(id));
     busy.sort((a, b) => levelOf(b) - levelOf(a) || liveOf(a).speed - liveOf(b).speed);
-    if (!busy.length) { listEl.innerHTML = `<div class="ap-empty">沒有車多或壅塞的路段,一路順風 🚗</div>`; return; }
+    if (!busy.length) { listEl.innerHTML = `<div class="ap-empty">${REGION_NAME[region]}沒有車多或壅塞的路段,一路順風 🚗</div>`; return; }
     listEl.innerHTML = busy.slice(0, MAX_ROWS).map((id) => {
       const s = data.sections[id], v = liveOf(id), lv = v.level;
       const travel = fmtTravel(v.travel);
@@ -259,10 +276,12 @@ export function createTrafficCenter({ traffic, onClose }) {
   function recolorMap() {
     if (!gRoads || !data) return;
     // 順暢的先畫、塞的後畫(蓋在上面);點擊用的透明粗線全部放在最上層
-    const ids = [...roadEls.keys()].sort((a, b) => levelOf(a) - levelOf(b));
+    // 選了北/中/南時,其他地區的國道淡化,不在選定地區的也排到底下
+    const ids = [...roadEls.keys()].sort((a, b) => (inRegion(a) - inRegion(b)) || levelOf(a) - levelOf(b));
     for (const id of ids) {
       const { line } = roadEls.get(id);
       line.setAttribute("stroke", cssHex(LEVEL_COLOR[levelOf(id)] ?? LEVEL_COLOR[0]));
+      line.classList.toggle("dim", !inRegion(id));
       gRoads.appendChild(line);
     }
     for (const id of ids) gRoads.appendChild(roadEls.get(id).hit);
@@ -281,6 +300,28 @@ export function createTrafficCenter({ traffic, onClose }) {
       frag.appendChild(dot);
     });
     gCams.appendChild(frag);
+    applyTransform();
+  }
+
+  // 放大到選定地區所有國道的範圍;全台就還原
+  function zoomToRegion() {
+    if (!region) { scale = 1; tx = 0; ty = 0; applyTransform(); return; }
+    let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
+    for (const [id, s] of Object.entries(data.sections)) {
+      if (!inRegion(id)) continue;
+      for (let i = 0; i + 1 < s.c.length; i += 2) {
+        const [x, y] = toXY(s.c[i], s.c[i + 1]);
+        if (x < x0) x0 = x; if (x > x1) x1 = x; if (y < y0) y0 = y; if (y > y1) y1 = y;
+      }
+    }
+    if (!isFinite(x0)) return;
+    // 地圖框實際看得到的範圍(投影單位):台灣是直長的,地圖框常常比較寬,兩側會留白,
+    // 要用實際可見的寬高來算放大倍率,北部這種橫向較寬的區域才會填滿
+    const r = svg.getBoundingClientRect(), k = unitPx();
+    const visW = r.width / k, visH = r.height / k;
+    scale = Math.min(MAX_SCALE, Math.max(1, Math.min(visW / ((x1 - x0) * 1.15), visH / ((y1 - y0) * 1.15))));
+    tx = VB.w / 2 - ((x0 + x1) / 2) * scale;
+    ty = VB.h / 2 - ((y0 + y1) / 2) * scale;
     applyTransform();
   }
 
@@ -409,9 +450,10 @@ export function createTrafficCenter({ traffic, onClose }) {
   function camLabel(c) {
     return `${cams.roads[c[2]]} ${DIR_LABEL[c[3]] || ""} ${c[4]}`;
   }
-  function filteredCams(roadIdx, dir, q) {
+  function filteredCams(roadIdx, dir, q, byRegion = true) {
     const out = [];
     cams.cams.forEach((c, i) => {
+      if (byRegion && region && c[8] !== region) return;
       if (roadIdx != null && c[2] !== roadIdx) return;
       if (dir && c[3] !== dir) return;
       if (q && !(`${c[5]}${c[6]}${c[4]}`.includes(q))) return;
@@ -468,7 +510,7 @@ export function createTrafficCenter({ traffic, onClose }) {
 
   function neighbors(i) {
     const c = cams.cams[i];
-    const same = filteredCams(c[2], c[3], "");
+    const same = filteredCams(c[2], c[3], "", false);   // 上一支/下一支沿著整條國道走,不受北中南限制
     const k = same.indexOf(i);
     return { prev: k > 0 ? same[k - 1] : -1, next: k >= 0 && k < same.length - 1 ? same[k + 1] : -1 };
   }

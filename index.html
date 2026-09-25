@@ -352,6 +352,11 @@
   .ap-badge.tf-l4 { background: rgba(255,59,48,.15); color: #ff7a72; }
   .ap-badge.tf-l5 { background: rgba(181,23,158,.18); color: #f07ada; }
   .tc-tabs { margin-bottom: 6px; }
+  /* 北中南切換:比分頁小一號,選中的用暖色,跟分頁的藍色區分 */
+  .tc-regions button { padding: 3px 0; font-size: 12px; }
+  .tc-regions button.active { background: rgba(255,196,80,.22); border-color: rgba(255,196,80,.7); color: #ffe2a0; }
+  .tc-road.dim { opacity: .22; }
+  body[data-theme="journal"] .tc-regions button.active { background: rgba(166,87,46,.18); border-color: #a6572e; color: #7a3f1f; }
   .tc-body { position: relative; flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
   .tc-pane { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; position: relative; }
   .tc-pane[hidden] { display: none; }
@@ -1473,6 +1478,12 @@
       <button type="button" data-tab="map" class="active">🗺️ 路況地圖</button>
       <button type="button" data-tab="rank">📋 壅塞排行</button>
       <button type="button" data-tab="cam">📹 監視器</button>
+    </div>
+    <div class="ap-tabs tc-regions" role="group" aria-label="地區">
+      <button type="button" data-region="" class="active">🏝️ 全台</button>
+      <button type="button" data-region="N">🏙️ 北部</button>
+      <button type="button" data-region="C">⛰️ 中部</button>
+      <button type="button" data-region="S">🌴 南部</button>
     </div>
     <div class="ap-legend" aria-label="路況顏色說明">
       <span class="ap-lg tf-l1">順暢</span>

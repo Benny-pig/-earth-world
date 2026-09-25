@@ -26,6 +26,48 @@ CCTV_HOSTS = ("cctvn.freeway.gov.tw", "cctvn5.freeway.gov.tw", "cctvc.freeway.go
 TOL = 0.00012   # 簡化容許誤差(度,約 13 公尺);拉到最近時一個像素也遠大於這個距離
 
 
+COUNTIES = os.path.join(os.path.dirname(__file__), "..", "data", "admin1", "TW.geo.json")
+# 北中南東分區(路況中心的「全台/北部/中部/南部」切換用)
+REGION_OF_COUNTY = {
+    "基隆市": "N", "臺北市": "N", "台北市": "N", "新北市": "N", "桃園市": "N", "新竹縣": "N", "新竹市": "N", "宜蘭縣": "N",
+    "苗栗縣": "C", "台中市": "C", "臺中市": "C", "彰化縣": "C", "南投縣": "C", "雲林縣": "C",
+    "嘉義縣": "S", "嘉義市": "S", "臺南市": "S", "台南市": "S", "高雄市": "S", "屏東縣": "S", "澎湖縣": "S",
+    "花蓮縣": "E", "臺東縣": "E", "台東縣": "E",
+}
+
+
+def _inside(ring, x, y):
+    res, j = False, len(ring) - 1
+    for i in range(len(ring)):
+        xi, yi = ring[i]; xj, yj = ring[j]
+        if (yi > y) != (yj > y) and x < (xj - xi) * (y - yi) / (yj - yi + 1e-15) + xi: res = not res
+        j = i
+    return res
+
+
+def region_finder():
+    """回傳 f(lon, lat) -> 'N'/'C'/'S'/'E':先看點落在哪個縣市;國道常貼著簡化過的
+    海岸線或縣界,落在縫隙裡的就找最近的縣市邊界點。"""
+    polys = []
+    for f in json.load(open(COUNTIES, encoding="utf-8"))["features"]:
+        r = REGION_OF_COUNTY.get(f["properties"].get("name_zht"))
+        if not r: continue
+        g = f["geometry"]
+        for poly in ([g["coordinates"]] if g["type"] == "Polygon" else g["coordinates"]):
+            polys.append((r, poly))
+
+    def find(lon, lat):
+        for r, poly in polys:
+            if _inside(poly[0], lon, lat): return r
+        best, bd = None, 1e9
+        for r, poly in polys:
+            for x, y in poly[0]:
+                d = (x - lon) ** 2 + (y - lat) ** 2
+                if d < bd: bd, best = d, r
+        return best
+    return find
+
+
 def load(arg, key):
     if arg:
         return json.load(open(arg, encoding="utf-8"))
@@ -73,6 +115,7 @@ def main():
     args = sys.argv[1:] + [None, None, None]
     sections = {s["SectionID"]: s for s in load(args[0], "freeway-section")["Sections"]}
     shapes = load(args[1], "freeway-shape")
+    region = region_finder()
     out, n_in, n_out = {}, 0, 0
     for sh in shapes["SectionShapes"]:
         pts = parse_linestring(sh.get("Geometry", ""))
@@ -83,9 +126,11 @@ def main():
         n_out += len(simp)
         s = sections.get(sh["SectionID"], {})
         rs = s.get("RoadSection") or {}
+        mid = simp[len(simp) // 2]
         entry = {
             "r": s.get("RoadName"), "d": s.get("RoadDirection"),
             "f": rs.get("Start"), "t": rs.get("End"), "l": s.get("SpeedLimit"),
+            "g": region(*mid),
             "c": [round(v, 4) for p in simp for v in p],
         }
         out[sh["SectionID"]] = {k: v for k, v in entry.items() if v is not None}
@@ -110,6 +155,7 @@ def build_cctv(path=None):
         with urllib.request.urlopen(req, timeout=90) as r:
             xml = r.read().decode("utf-8")
     tag = lambda b, t: (re.search(rf"<{t}>(.*?)</{t}>", b, re.S) or [None, ""])[1].strip()
+    region = region_finder()
     roads, cams = [], []
     for b in re.findall(r"<CCTV>(.*?)</CCTV>", xml, re.S):
         url = tag(b, "VideoStreamURL")
@@ -117,14 +163,14 @@ def build_cctv(path=None):
             continue
         road = tag(b, "RoadName")
         if road not in roads: roads.append(road)
-        cams.append([round(float(tag(b, "PositionLon")), 5), round(float(tag(b, "PositionLat")), 5),
-                     roads.index(road), tag(b, "RoadDirection"), tag(b, "LocationMile"),
-                     tag(b, "Start"), tag(b, "End"), url])
+        lon, lat = round(float(tag(b, "PositionLon")), 5), round(float(tag(b, "PositionLat")), 5)
+        cams.append([lon, lat, roads.index(road), tag(b, "RoadDirection"), tag(b, "LocationMile"),
+                     tag(b, "Start"), tag(b, "End"), url, region(lon, lat)])
     doc = {
         "source": "交通部高速公路局 CCTV 公開資料(tisvcloud)",
         "updated": tag(xml, "UpdateTime"),
         "built": date.today().isoformat(),
-        "fields": ["lon", "lat", "road", "dir", "mile", "from", "to", "url"],
+        "fields": ["lon", "lat", "road", "dir", "mile", "from", "to", "url", "region"],
         "roads": roads, "cams": cams,
     }
     with open(OUT_CCTV, "w", encoding="utf-8", newline="\n") as f:
