@@ -529,6 +529,18 @@
     #traffic-panel { top: 8px; bottom: 8px; right: 8px; left: 8px; width: auto; height: auto; min-width: 0; max-height: none; z-index: 46; resize: none; }
   }
   .ap-row-mid { margin-top: 2px; color: #b9c6e6; font-size: 11.5px; }
+  /* 台灣機場航班:「現在」分隔線、已飛走/已降落的班次變淡、共掛班號 */
+  .ap-now { margin: 6px 0 2px; text-align: center; font-size: 11.5px; font-weight: 700; color: #6fe3a0; letter-spacing: .05em; }
+  .ap-past { opacity: .5; }
+  /* 最近航班:綠色外框 + 標籤;一小時內的班次顯示倒數 */
+  .ap-row.ap-nearest { border: 1.5px solid rgba(47,208,115,.75); border-radius: 10px; background: rgba(47,208,115,.10); padding: 8px 8px; margin: 4px 0; }
+  .ap-nearest-tag { font-size: 11.5px; font-weight: 700; color: #7ff0b0; margin-bottom: 3px; }
+  .ap-eta { display: inline-block; margin-left: 4px; padding: 0 6px; border-radius: 6px; font-size: 10.5px; font-weight: 600;
+    background: rgba(255,194,51,.16); color: #ffd36a; white-space: nowrap; }
+  body[data-theme="journal"] .ap-nearest-tag { color: #2f7d4f; }
+  body[data-theme="journal"] .ap-eta { background: rgba(166,87,46,.14); color: #8a4a22; }
+  .ap-codeshare { opacity: .8; }
+  body[data-theme="journal"] .ap-now { color: #2f7d4f; }
   .ap-row-bottom {
     margin-top: 3px; display: flex; flex-wrap: wrap; gap: 4px 10px;
     color: #8093b5; font-size: 10.5px; font-variant-numeric: tabular-nums;

@@ -12,7 +12,7 @@ const AIRPORTS = [
   { iata: "RMQ", name: "台中" },
 ];
 const REFRESH_MS = 3 * 60_000; // TDX 免費額度每月 4,500 次,一次查 4 個機場只算 1 次,3 分鐘一次很夠用
-const MAX_ROWS = 40;
+const MAX_ROWS = 400;   // 前後 4 小時,桃園合併共掛後約 200 列以內;只是防呆上限
 
 // 只收錄常見、確定譯名的航空公司/機場代碼,查不到就顯示原始代碼——不瞎猜
 // 沒把握的譯名,寧可讓使用者看到代碼自己查,也不要顯示錯的中文名稱。
@@ -67,7 +67,13 @@ function statusInfo(remark) {
 // 往後推進到接近中午的班次)。改成組出完整的日期時間再算真正的時間差,
 // 不只比時分。時間字串本身沒有時區資訊,視為台灣本地時刻,加上 +08:00
 // 再解析,不管開啟網站的人在哪個時區都會算對。
-const PAST_WINDOW_MS = 120 * 60_000; // 已經過去超過 2 小時的班次(早就飛走/降落)就不留了
+// 原本留 2 小時前的班次、最多 40 列——桃園機場 2 小時內就有 75 班(含共掛),清單
+// 前 40 列全是已經飛走的,下午 1:40 看到的最晚只到 12:45。改成列出前後 4 小時
+// (往上捲看剛飛走/降落的、往下是接下來的),共掛班號合併成一列,清單打開自動捲到
+// 「現在」。深夜班次少,接下來 4 小時不滿 20 班的話,至少列到接下來的 20 班。
+const PAST_WINDOW_MS = 4 * 3600_000;
+const FUTURE_WINDOW_MS = 4 * 3600_000;
+const MIN_UPCOMING = 20;
 
 function toTimestamp(s) {
   if (typeof s !== "string" || s.length < 16) return null;
@@ -84,7 +90,32 @@ function sortByTime(list, key) {
     })
     .filter((x) => x && x.diff >= -PAST_WINDOW_MS)
     .sort((a, b) => a.diff - b.diff)
-    .map((x) => x.f);
+    .filter((x, i, arr) => {
+      if (x.diff <= FUTURE_WINDOW_MS) return true;
+      const firstUp = arr.findIndex((y) => y.diff >= 0);
+      return firstUp >= 0 && i < firstUp + MIN_UPCOMING;
+    });
+}
+
+// 共掛班號:同一架飛機常掛好幾家航空公司的班號(例如 BR178 同時是 TG6354、NH5834),
+// TDX 每個班號各一筆,桃園出境 2,107 筆裡其實只有 1,166 班。表定時間、對方機場、航廈、
+// 登機門/行李轉盤都一樣的視為同一班,以班號數字最小的當主班號(實際執飛的航空公司
+// 班號通常比較短),其他列在「共掛」。貨機不列。
+function mergeCodeshares(list, dir) {
+  const other = dir === "departure" ? "ArrivalAirportID" : "DepartureAirportID";
+  const timeKey = dir === "departure" ? "ScheduleDepartureTime" : "ScheduleArrivalTime";
+  const groups = new Map();
+  for (const f of list) {
+    if (f.IsCargo) continue;
+    const k = [f[timeKey], f[other], f.Terminal, f.Gate, f.BaggageClaim].join("|");
+    if (!groups.has(k)) groups.set(k, []);
+    groups.get(k).push(f);
+  }
+  const num = (f) => parseInt(f.FlightNumber, 10) || 99999;
+  return [...groups.values()].map((g) => {
+    g.sort((a, b) => num(a) - num(b));
+    return { ...g[0], codeshares: g.slice(1).map((f) => `${f.AirlineID || ""}${f.FlightNumber || ""}`) };
+  });
 }
 function placeLabel(code) {
   const name = AIRPORT_NAMES[code];
@@ -108,20 +139,30 @@ export function createAirportBoard() {
   let dir = "departure";
   let timer = null;
   let data = null;
+  let scrollToNow = true;
+  let tick = null;
 
   function render() {
     if (!data || !data.airports || !data.airports[iata]) {
       listEl.innerHTML = `<div class="ap-empty">暫時查不到航班資料,稍後會自動重試</div>`;
       return;
     }
-    const list = data.airports[iata][dir] || [];
-    const rows = sortByTime(list, dir === "departure" ? "ScheduleDepartureTime" : "ScheduleArrivalTime").slice(0, MAX_ROWS);
-    if (!rows.length) {
+    const list = mergeCodeshares(data.airports[iata][dir] || [], dir);
+    const sorted = sortByTime(list, dir === "departure" ? "ScheduleDepartureTime" : "ScheduleArrivalTime").slice(0, MAX_ROWS);
+    if (!sorted.length) {
       listEl.innerHTML = `<div class="ap-empty">目前沒有航班資料</div>`;
       return;
     }
+    const rows = sorted.map((x) => x.f);
+    const firstUpcoming = sorted.findIndex((x) => x.diff >= 0);
+    // 「最近航班」:離現在最近的下一班(同一分鐘表定的幾班一起標);一小時內的班次顯示倒數
+    const nearestTime = firstUpcoming >= 0 ? rows[firstUpcoming][dir === "departure" ? "ScheduleDepartureTime" : "ScheduleArrivalTime"] : null;
+    // 重畫前記下「目前捲動位置距離『現在』分隔線多遠」,重畫後維持同樣的相對位置
+    const oldNow = listEl.querySelector(".ap-now");
+    const anchor = oldNow ? listEl.scrollTop - (oldNow.offsetTop - listEl.offsetTop) : null;
+    const nowLabel = new Intl.DateTimeFormat("zh-TW", { timeZone: "Asia/Taipei", hour: "2-digit", minute: "2-digit", hour12: false }).format(new Date());
     const dirLabel = dir === "departure" ? "飛往" : "來自";
-    listEl.innerHTML = rows.map((f) => {
+    listEl.innerHTML = rows.map((f, i) => {
       // 對照表查不到航空公司就不要重複顯示同一個代碼(例如「5Y 5Y4608」看起來
       // 像故障),改顯示「代碼(航空公司代碼)」提示這是查不到中文名的公司,
       // 而不是假裝那就是公司名稱。
@@ -137,9 +178,16 @@ export function createAirportBoard() {
       const gateInfo = dir === "departure"
         ? [f.Terminal && `第${f.Terminal}航廈`, f.Gate && `${f.Gate}登機門`].filter(Boolean).join(" · ")
         : [f.Terminal && `第${f.Terminal}航廈`, f.BaggageClaim && `${f.BaggageClaim}號行李轉盤`].filter(Boolean).join(" · ");
-      return `<div class="ap-row">
+      const divider = i === firstUpcoming ? `<div class="ap-now">── 現在 ${esc(nowLabel)} ──</div>` : "";
+      const past = firstUpcoming < 0 || i < firstUpcoming;
+      const nearest = !past && (dir === "departure" ? f.ScheduleDepartureTime : f.ScheduleArrivalTime) === nearestTime;
+      const mins = Math.round(sorted[i].diff / 60_000);
+      const eta = !past && mins <= 60
+        ? `<span class="ap-eta">${mins <= 0 ? "就是現在" : `還有 ${mins} 分鐘`}</span>` : "";
+      return `${divider}<div class="ap-row${past ? " ap-past" : ""}${nearest ? " ap-nearest" : ""}">
+        ${nearest ? `<div class="ap-nearest-tag">⏰ 最近航班${dir === "departure" ? "(下一班出發)" : "(下一班抵達)"}</div>` : ""}
         <div class="ap-row-top">
-          <span class="ap-flight">${esc(airline)} <b>${esc(no || "—")}</b></span>
+          <span class="ap-flight">${esc(airline)} <b>${esc(no || "—")}</b> ${eta}</span>
           <span class="ap-badge ${status.cls}">${esc(status.label)}</span>
         </div>
         <div class="ap-row-mid">${esc(dirLabel)} ${esc(placeLabel(place))}</div>
@@ -147,9 +195,18 @@ export function createAirportBoard() {
           <span>表定 ${scheduled}</span>
           ${otherTime && otherTime.value !== scheduled ? `<span>${esc(otherTime.label)} ${otherTime.value}</span>` : ""}
           ${gateInfo ? `<span>${esc(gateInfo)}</span>` : ""}
+          ${f.codeshares && f.codeshares.length ? `<span class="ap-codeshare">共掛 ${esc(f.codeshares.join("、"))}</span>` : ""}
         </div>
       </div>`;
     }).join("");
+    // 切換機場/方向或第一次載入時捲到「現在」;自動更新時以「現在」分隔線為基準維持讀者
+    // 原本的相對位置(直接沿用 scrollTop 的話,列表內容變了位置會跑掉,之前實測會跳到最底)
+    const nowEl = listEl.querySelector(".ap-now");
+    if (nowEl) {
+      const nowPos = nowEl.offsetTop - listEl.offsetTop;
+      listEl.scrollTop = scrollToNow || anchor == null ? nowPos : nowPos + anchor;
+    }
+    scrollToNow = false;
   }
 
   async function refresh() {
@@ -162,7 +219,7 @@ export function createAirportBoard() {
         return;
       }
       data = await r.json();
-      if (captionEl) captionEl.textContent = `資料來源:交通部 TDX 運輸資料流通服務 · 每 3 分鐘更新`;
+      if (captionEl) captionEl.textContent = `資料來源:交通部 TDX 運輸資料流通服務 · 每 3 分鐘更新 · 共掛班號已合併、不列貨機`;
       render();
     } catch (e) {
       console.error("[airport-board] refresh failed:", e);
@@ -173,12 +230,14 @@ export function createAirportBoard() {
     if (b.dataset.iata === iata) return;
     iata = b.dataset.iata;
     airportBtns.forEach((x) => x.classList.toggle("active", x === b));
+    scrollToNow = true;
     render();
   }));
   dirBtns.forEach((b) => b.addEventListener("click", () => {
     if (b.dataset.dir === dir) return;
     dir = b.dataset.dir;
     dirBtns.forEach((x) => x.classList.toggle("active", x === b));
+    scrollToNow = true;
     render();
   }));
   if (closeBtn) closeBtn.addEventListener("click", () => {
@@ -191,11 +250,14 @@ export function createAirportBoard() {
     enabled = !!v;
     panel.hidden = !enabled;
     if (enabled) {
+      scrollToNow = true;
       refresh();
       if (!timer) timer = setInterval(refresh, REFRESH_MS);
+      if (!tick) tick = setInterval(() => { if (data) render(); }, 60_000);
     } else {
       clearInterval(timer);
-      timer = null;
+      clearInterval(tick);
+      timer = tick = null;
     }
   }
 
