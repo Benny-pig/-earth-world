@@ -351,6 +351,56 @@
   .ap-badge.tf-l3 { background: rgba(255,140,26,.15); color: #ffaa55; }
   .ap-badge.tf-l4 { background: rgba(255,59,48,.15); color: #ff7a72; }
   .ap-badge.tf-l5 { background: rgba(181,23,158,.18); color: #f07ada; }
+  /* 🚆 鐵路時刻面板:高鐵/台鐵分頁、起訖站、日期,下面是班次清單 */
+  #rail-panel {
+    position: fixed; top: 110px; left: 18px; z-index: 44;
+    width: 380px; min-width: 300px; max-width: calc(100vw - 36px);
+    height: 580px; min-height: 300px; max-height: calc(100vh - 140px);
+    display: flex; flex-direction: column; resize: both; overflow: hidden;
+    padding: 12px; border-radius: 12px; background: rgba(10, 14, 26, 0.92); backdrop-filter: blur(10px);
+    border: 1px solid rgba(120, 170, 255, 0.3); color: #e7edfb; box-shadow: 0 10px 32px rgba(0,0,0,.5);
+    font: 13px system-ui, "Microsoft JhengHei", sans-serif;
+  }
+  #rail-panel .sat-head { display: flex; align-items: center; gap: 6px; margin-bottom: 6px; }
+  #rail-panel .sat-title { font-weight: 700; font-size: 14px; margin-right: auto; }
+  .rl-tabs button { font-size: 13px; padding: 6px 0; }
+  .rl-form { display: flex; align-items: flex-end; gap: 6px; flex-shrink: 0; margin: 4px 0 6px; }
+  .rl-field { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px; font-size: 11px; opacity: .95; }
+  .rl-field select, .rl-dates input {
+    width: 100%; min-width: 0; padding: 6px 6px; border-radius: 8px; font-size: 14px;
+    border: 1px solid rgba(120,170,255,.3); background: rgba(255,255,255,.05); color: inherit;
+  }
+  .rl-field select option, .rl-field select optgroup { color: #111; }
+  #rl-swap { flex: none; padding: 6px 9px; font-size: 15px; }
+  .rl-dates { display: flex; gap: 6px; flex-shrink: 0; margin-bottom: 6px; }
+  .rl-dates button {
+    padding: 5px 10px; border-radius: 8px; border: 1px solid rgba(120,170,255,.3);
+    background: rgba(255,255,255,.04); color: #b9c6e6; font-size: 12.5px; cursor: pointer;
+  }
+  .rl-dates button.active { background: #2f6df6; border-color: #2f6df6; color: #fff; }
+  .rl-dates input { flex: 1; font-size: 12.5px; padding: 4px 6px; }
+  .rl-times { margin-top: 4px; font-size: 13px; }
+  .rl-times b { font-size: 16px; font-variant-numeric: tabular-nums; }
+  .rl-arrow { opacity: .6; margin: 0 4px; }
+  .rl-type { display: inline-block; padding: 1px 6px; border-radius: 6px; font-size: 11px; font-weight: 700; margin-right: 2px; }
+  .rl-t-hsr { background: rgba(255,140,26,.2); color: #ffb066; }
+  .rl-t-tc { background: rgba(255,77,79,.18); color: #ff8a8c; }
+  .rl-t-cg { background: rgba(255,170,60,.18); color: #ffc57a; }
+  .rl-t-fx { background: rgba(120,200,255,.18); color: #9fdcff; }
+  .rl-t-local { background: rgba(77,163,255,.18); color: #8cc3ff; }
+  .rl-past { opacity: .42; }
+  .rl-next { background: rgba(47,208,115,.08); border-radius: 8px; }
+  .rl-next-tag { font-size: 10.5px; padding: 1px 6px; border-radius: 6px; background: rgba(47,208,115,.25); color: #7ff0b0; }
+  .ap-badge.rl-seat-ok { --ap-light: #2fd073; background: rgba(47,208,115,.15); color: #6fe3a0; }
+  .ap-badge.rl-seat-warn { --ap-light: #ffc233; background: rgba(255,194,51,.15); color: #ffcf5c; }
+  .ap-badge.rl-seat-bad { --ap-light: #ff4d4f; background: rgba(255,77,79,.15); color: #ff7a7c; }
+  #rl-caption a { color: #8fd4ff; }
+  body[data-theme="journal"] .rl-dates button.active { background: #a6572e; border-color: #a6572e; }
+  body[data-theme="journal"] #rl-caption a { color: #a6572e; }
+  @media (max-width: 640px) {
+    /* 手機:鐵路時刻幾乎全螢幕,班次清單才看得多 */
+    #rail-panel { top: 8px; bottom: 8px; left: 8px; right: 8px; width: auto; height: auto; min-width: 0; max-width: none; max-height: none; resize: none; z-index: 46; }
+  }
   /* 📻 電台選台面板:放左邊(機場航班面板同一側),可拖曳/縮放,可收合成只剩標題列 */
   #radio-panel {
     position: fixed; top: 110px; left: 18px; z-index: 44;
@@ -1102,7 +1152,8 @@
   body[data-theme="fantasy"] #flight-panel,
   body[data-theme="fantasy"] #airport-panel,
   body[data-theme="fantasy"] #traffic-panel,
-  body[data-theme="fantasy"] #radio-panel {
+  body[data-theme="fantasy"] #radio-panel,
+  body[data-theme="fantasy"] #rail-panel {
     background: linear-gradient(180deg,#332714,#1c150c); border: 1px solid #c9a227; color: #f0dfab;
   }
   body[data-theme="fantasy"] #satellite-close,
@@ -1207,7 +1258,8 @@
   body[data-theme="journal"] #flight-panel,
   body[data-theme="journal"] #airport-panel,
   body[data-theme="journal"] #traffic-panel,
-  body[data-theme="journal"] #radio-panel {
+  body[data-theme="journal"] #radio-panel,
+  body[data-theme="journal"] #rail-panel {
     background: #f3ede0; border-color: rgba(120,90,50,.28); color: #3b332a;
   }
   body[data-theme="journal"] #satellite-close,
@@ -1295,7 +1347,8 @@
   body[data-theme="hud"] #flight-panel,
   body[data-theme="hud"] #airport-panel,
   body[data-theme="hud"] #traffic-panel,
-  body[data-theme="hud"] #radio-panel {
+  body[data-theme="hud"] #radio-panel,
+  body[data-theme="hud"] #rail-panel {
     background: linear-gradient(180deg,#0e2226,#04121a); border: 1px solid #00e5ff; color: #cdf3ff; border-radius: 3px;
   }
   body[data-theme="hud"] #satellite-close,
@@ -1522,6 +1575,31 @@
     <div id="airport-list" class="ap-list"></div>
     <div id="airport-caption" class="sat-caption"></div>
   </div>
+  <div id="rail-panel" hidden>
+    <div class="sat-head">
+      <span class="sat-title">🚆 鐵路時刻</span>
+      <button id="rail-refresh" class="sat-refresh-btn" type="button" title="重新查詢">⟳</button>
+      <button id="rail-close" class="rp-head-btn" type="button" aria-label="關閉">×</button>
+    </div>
+    <div class="ap-tabs rl-tabs" role="tablist">
+      <button type="button" data-mode="thsr" class="active">🚄 高鐵</button>
+      <button type="button" data-mode="tra">🚆 台鐵</button>
+    </div>
+    <div class="rl-form">
+      <label class="rl-field"><span>出發</span><select id="rl-from" aria-label="出發站"></select></label>
+      <button id="rl-swap" class="tc-btn" type="button" title="交換出發/抵達">⇄</button>
+      <label class="rl-field"><span>抵達</span><select id="rl-to" aria-label="抵達站"></select></label>
+    </div>
+    <div class="rl-dates">
+      <button type="button" data-day="0" class="active">今天</button>
+      <button type="button" data-day="1">明天</button>
+      <button type="button" data-day="2">後天</button>
+      <input id="rl-date" type="date" aria-label="其他日期">
+    </div>
+    <div id="rl-summary" class="tf-summary"></div>
+    <div id="rl-list" class="ap-list"></div>
+    <div id="rl-caption" class="sat-caption"></div>
+  </div>
   <div id="radio-panel" hidden>
     <div class="sat-head">
       <span class="sat-title">📻 電台選台</span>
@@ -1656,6 +1734,12 @@
         </button>
         <button id="traffic-toggle" class="layer-row" type="button" aria-pressed="false">
           <span class="layer-icon">🚗</span>即時路況
+        </button>
+        <button id="thsr-toggle" class="layer-row" type="button" aria-pressed="false">
+          <span class="layer-icon">🚄</span>高鐵時刻
+        </button>
+        <button id="tra-toggle" class="layer-row" type="button" aria-pressed="false">
+          <span class="layer-icon">🚆</span>台鐵時刻
         </button>
       </div>
     </div>

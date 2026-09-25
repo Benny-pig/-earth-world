@@ -23,6 +23,7 @@ import { createFlightsLayer } from "./scene/flights.js";
 import { createAirportBoard } from "./ui/airport-board.js";
 import { createTrafficLayer } from "./scene/traffic.js";
 import { createTrafficCenter } from "./ui/traffic-center.js";
+import { createRailPanel } from "./ui/rail-panel.js";
 import { createNaturePopup } from "./ui/nature-popup.js";
 import { createSidePanel } from "./ui/side-panel.js";
 import { createClockWeather } from "./ui/clock-weather.js";
@@ -327,6 +328,24 @@ export function start() {
   if (trafficToggle) trafficToggle.addEventListener("click", () => {
     setTraffic(trafficToggle.getAttribute("aria-pressed") !== "true");
   });
+
+  // 🚄 高鐵時刻 / 🚆 台鐵時刻:同一個「鐵路時刻」面板的兩個分頁。點其中一列打開面板並切到
+  // 那一頁;在開著的那一頁再點一次就關閉。選單兩列的亮燈狀態跟著面板目前的分頁走。
+  const thsrToggle = document.getElementById("thsr-toggle");
+  const traToggle = document.getElementById("tra-toggle");
+  const railPanel = createRailPanel({
+    onClose: () => railPanel.close(),
+    onModeChange: (m) => {
+      thsrToggle?.setAttribute("aria-pressed", String(m === "thsr"));
+      traToggle?.setAttribute("aria-pressed", String(m === "tra"));
+    },
+  });
+  for (const [btn, m] of [[thsrToggle, "thsr"], [traToggle, "tra"]]) {
+    if (btn) btn.addEventListener("click", () => {
+      if (railPanel.isOpen() && railPanel.mode() === m) railPanel.close();
+      else railPanel.open(m);
+    });
+  }
 
   // 右下角「台灣交通」「功能」兩張卡片各自可以收合——記住使用者上次收合/展開的
   // 狀態,下次開網站維持一樣,不用每次都重新收一次。
