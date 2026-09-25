@@ -17,6 +17,7 @@ import { createCountryLabels } from "./scene/country-labels.js";
 import { createPhysicalLabels } from "./scene/physical-labels.js";
 import { createEarthquakesLayer } from "./scene/earthquakes.js";
 import { createRadioLayer } from "./scene/radio.js";
+import { createRadioPanel } from "./ui/radio-panel.js";
 import { createSatellitePanel } from "./ui/satellite.js";
 import { createFlightsLayer } from "./scene/flights.js";
 import { createAirportBoard } from "./ui/airport-board.js";
@@ -249,13 +250,23 @@ export function start() {
   const music = createMusic();
   window.__earth.music = music;
 
-  const radio = createRadioLayer({ globeObject: globe.object, camera, renderer, music });
+  // 當地廣播:地球上的電台字卡(radio)+ 依洲別挑台的「📻 電台選台」面板(radioPanel)。
+  // 從哪邊播放,另一邊都會同步標示正在播的台。關掉面板 = 關掉廣播圖層(正在播的台照樣繼續)。
+  let radioPanel = null;
+  const radio = createRadioLayer({
+    globeObject: globe.object, camera, renderer, music,
+    onChange: () => radioPanel && radioPanel.refresh(),
+  });
   window.__earth.radio = radio;
   const radioToggle = document.getElementById("radio-toggle");
+  function setRadio(on) {
+    if (radioToggle) radioToggle.setAttribute("aria-pressed", String(on));
+    radio.setEnabled(on);
+    radioPanel.setOpen(on);
+  }
+  radioPanel = createRadioPanel({ radio, rig, onClose: () => setRadio(false) });
   if (radioToggle) radioToggle.addEventListener("click", () => {
-    const next = radioToggle.getAttribute("aria-pressed") !== "true";
-    radioToggle.setAttribute("aria-pressed", String(next));
-    radio.setEnabled(next);
+    setRadio(radioToggle.getAttribute("aria-pressed") !== "true");
   });
 
   const satellite = createSatellitePanel({ globeObject: globe.object });

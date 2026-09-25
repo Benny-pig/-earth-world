@@ -110,7 +110,7 @@ function latLonToVec3(latDeg, lonDeg, r = 1) {
   return new THREE.Vector3(r * cl * Math.cos(lon), r * Math.sin(lat), -r * cl * Math.sin(lon));
 }
 
-export function createRadioLayer({ globeObject, camera, renderer, music }) {
+export function createRadioLayer({ globeObject, camera, renderer, music, onChange }) {
   const host = document.getElementById("radio-labels");
   const nowPlayingEl = document.getElementById("radio-now-playing");
   const countryNameEl = document.getElementById("radio-country-name");
@@ -122,7 +122,7 @@ export function createRadioLayer({ globeObject, camera, renderer, music }) {
   let stations = [];
   let resolved = []; // [{code, s, lat, lon}],查過一次就快取,不受圖層開關影響
   let enabled = false;
-  let loaded = false;
+  let loadPromise = null;
   let activeWrap = null;
   let activeStationInfo = null; // { code, uuid } —— 圖層關閉又重開時,靠這個把正在撥放的台重新跟新畫出來的 wrap 對上
   // code -> [{ s, wrap }, ...],讓同一國其他台可以合併進下拉選單方便切換,
@@ -161,11 +161,13 @@ export function createRadioLayer({ globeObject, camera, renderer, music }) {
     activeStationInfo = null;
     setNowPlaying(null);
     if (musicWasPlaying && music) music.resume?.();
+    onChange && onChange(null);
   }
   if (stopBtn) stopBtn.addEventListener("click", stop);
 
+  // wrap 可以是 null(從選台面板播放、地球上還沒有這台的字卡時)
   async function play(station, wrap, code) {
-    if (activeWrap === wrap) { stop(); return; } // 再點一次同一台 = 停止
+    if (activeStationInfo && activeStationInfo.uuid === station.stationuuid) { stop(); return; } // 再點一次同一台 = 停止
     if (activeWrap) activeWrap.classList.remove("radio-active");
     musicWasPlaying = !!music?.isPlaying?.();
     if (musicWasPlaying) music.pause?.();
@@ -195,10 +197,11 @@ export function createRadioLayer({ globeObject, camera, renderer, music }) {
     }
     audio.volume = music?.getVolume ? music.getVolume() : 0.55;
     audio.play().catch((e) => console.warn("[radio] 播放失敗(電台可能離線):", e.name));
-    activeWrap = wrap;
+    activeWrap = wrap || null;
     activeStationInfo = { code, uuid: station.stationuuid };
-    wrap.classList.add("radio-active");
+    if (wrap) wrap.classList.add("radio-active");
     setNowPlaying(code, station.stationuuid);
+    onChange && onChange(activeStationInfo);
   }
   if (stationSelect) stationSelect.addEventListener("change", () => {
     const code = [...byCountry.keys()].find((c) => byCountry.get(c).some(({ s }) => s.stationuuid === stationSelect.value));
@@ -232,33 +235,80 @@ export function createRadioLayer({ globeObject, camera, renderer, music }) {
 
   // 抓電台清單只做一次,結果快取在 resolved 裡,不受圖層開關影響——這樣
   // 關掉圖層再打開不用重打一輪 API,正在撥放的電台資訊也不會被清掉。
-  async function fetchStations() {
-    if (loaded) return;
-    loaded = true;
-    const content = window.__earth?.content || {};
-    const codes = Object.keys(content);
-    const picks = await Promise.allSettled(codes.map(async (code) => {
-      const list = await pickStationsForCountry(code, POPULAR_COUNTRIES.has(code) ? 4 : 2);
-      return list.map((s) => ({ code, s }));
-    }));
-
-    resolved = [];
-    for (const r of picks) {
-      if (r.status !== "fulfilled" || !r.value.length) continue;
-      r.value.forEach(({ code, s }, i) => {
-        // 電台自己的經緯度優先;沒有的話(很多主流電台反而沒填)退回該國首都座標,
-        // 至少能標在對的國家上,不會因為缺 geo 資料就把好台排除在外。同一國若有
-        // 好幾台都要退回首都座標,依序加偏移,不然字卡會整疊在同一點上。
-        let lat = s.geo_lat, lon = s.geo_long;
-        if (typeof lat !== "number" || typeof lon !== "number") {
-          const cap = content[code]?.capital_latlon;
-          if (!Array.isArray(cap)) return;
-          [lat, lon] = cap;
-          if (i > 0) { lat += 0.25 * i; lon += 0.25 * i; }
-        }
-        resolved.push({ code, s, lat, lon });
-      });
+  // 電台自己的經緯度優先;沒有的話(很多主流電台反而沒填)退回該國首都座標,
+  // 至少能標在對的國家上,不會因為缺 geo 資料就把好台排除在外。同一國若有
+  // 好幾台都要退回首都座標,依序加偏移,不然字卡會整疊在同一點上。
+  function place(code, s, i) {
+    let lat = s.geo_lat, lon = s.geo_long;
+    if (typeof lat !== "number" || typeof lon !== "number") {
+      const cap = (window.__earth?.content || {})[code]?.capital_latlon;
+      if (!Array.isArray(cap)) return null;
+      [lat, lon] = cap;
+      if (i > 0) { lat += 0.25 * (i % 6); lon += 0.25 * Math.ceil(i / 2); }
     }
+    return { code, s, lat, lon };
+  }
+
+  function fetchStations() {
+    if (!loadPromise) loadPromise = (async () => {
+      const content = window.__earth?.content || {};
+      const codes = Object.keys(content);
+      const picks = await Promise.allSettled(codes.map(async (code) => {
+        const list = await pickStationsForCountry(code, POPULAR_COUNTRIES.has(code) ? 4 : 2);
+        return list.map((s) => ({ code, s }));
+      }));
+      resolved = [];
+      for (const r of picks) {
+        if (r.status !== "fulfilled" || !r.value.length) continue;
+        r.value.forEach(({ code, s }, i) => {
+          const hit = place(code, s, i);
+          if (hit) resolved.push(hit);
+        });
+      }
+    })();
+    return loadPromise;
+  }
+
+  // 選台面板「載入更多電台」:同一國再多抓幾台(播得出來的、避開靈修類),
+  // 也加到地球上變成字卡,點地球字卡一樣能收聽
+  async function loadMore(code, max = 12) {
+    await fetchStations();
+    const have = new Set(resolved.filter((r) => r.code === code).map((r) => r.s.stationuuid));
+    let list = [];
+    try {
+      const r = await fetch(`${RADIO_BASE}?countrycode=${code}&order=clickcount&reverse=true&limit=60&hidebroken=true`);
+      list = r.ok ? await r.json() : [];
+    } catch { list = []; }
+    const playable = (Array.isArray(list) ? list : []).filter(isUsableUrl);
+    const clean = playable.filter((s) => !AVOID_TAGS.test(s.tags || "") && !AVOID_TAGS.test(s.name || ""));
+    const seenNames = new Set(resolved.filter((r) => r.code === code).map((r) => (r.s.name || "").trim().toLowerCase()));
+    let i = have.size, added = 0;
+    for (const s of (clean.length ? clean : playable)) {
+      if (added >= max) break;
+      const nm = (s.name || "").trim().toLowerCase();
+      if (have.has(s.stationuuid) || seenNames.has(nm)) continue;   // 同名不同串流的重複台只留一個
+      const hit = place(code, s, i);
+      if (!hit) continue;
+      resolved.push(hit); have.add(s.stationuuid); seenNames.add(nm);
+      i++; added++;
+    }
+    if (enabled && added) buildMarkers();
+    return added;
+  }
+
+  function stationsOf(code) {
+    return resolved.filter((r) => r.code === code).map((r) => r.s);
+  }
+  function countryCounts() {
+    const m = new Map();
+    for (const r of resolved) m.set(r.code, (m.get(r.code) || 0) + 1);
+    return m;
+  }
+  function playStation(code, uuid) {
+    const hit = byCountry.get(code)?.find(({ s }) => s.stationuuid === uuid);
+    if (hit) { play(hit.s, hit.wrap, code); return; }
+    const r = resolved.find((x) => x.code === code && x.s.stationuuid === uuid);
+    if (r) play(r.s, null, code);
   }
 
   // 用快取好的 resolved 資料重新畫地球上的字卡(不用重打 API)。如果重畫的
@@ -331,6 +381,8 @@ export function createRadioLayer({ globeObject, camera, renderer, music }) {
 
   return {
     update, dispose, setEnabled, isEnabled: () => enabled,
+    ready: fetchStations, loadMore, stationsOf, countryCounts, playStation,
+    current: () => activeStationInfo,
     isPlaying: () => !audio.paused && !!audio.src,
     setVolume: (v) => { audio.volume = v; },
     toggleMute: () => { audio.muted = !audio.muted; return audio.muted; },

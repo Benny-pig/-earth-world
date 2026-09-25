@@ -93,6 +93,30 @@ def main():
     print(f"寫出 {len(features)} 個國家/地區 → {dest}({dest.stat().st_size:,} bytes)", file=sys.stderr)
     if missing_zh:
         print("缺中文譯名:", missing_zh, file=sys.stderr)
+    build_regions(groups)
+
+
+# 洲別分區(電台選台面板的分頁用):依 Natural Earth 的 REGION_UN / SUBREGION,
+# 再照一般讀者的習慣微調——西亞 + 伊朗歸「中東」,北美只算美加,
+# 中美洲、加勒比海併入「中南美」。
+def region_of(p):
+    reg, sub = p.get("REGION_UN"), p.get("SUBREGION")
+    if reg == "Asia":
+        return "ME" if sub == "Western Asia" or p.get("ISO_A2") == "IR" else "AS"
+    if reg == "Americas":
+        return "NA" if sub == "Northern America" else "LA"
+    return {"Europe": "EU", "Africa": "AF", "Oceania": "OC"}.get(reg)
+
+
+def build_regions(groups):
+    regions = {}
+    for code, fs in sorted(groups.items()):
+        r = region_of(fs[0]["properties"])
+        if r:
+            regions[code] = r
+    dest = ROOT / "data/country-regions.json"
+    dest.write_text(json.dumps(regions, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    print(f"寫出 {len(regions)} 個國家的洲別 → {dest}", file=sys.stderr)
 
 
 if __name__ == "__main__":
