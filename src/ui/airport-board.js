@@ -74,6 +74,7 @@ function statusInfo(remark) {
 const PAST_WINDOW_MS = 4 * 3600_000;
 const FUTURE_WINDOW_MS = 4 * 3600_000;
 const MIN_UPCOMING = 20;
+const REMIND_MS = 30 * 60_000;   // 半小時提醒
 
 function toTimestamp(s) {
   if (typeof s !== "string" || s.length < 16) return null;
@@ -155,7 +156,10 @@ export function createAirportBoard() {
     }
     const rows = sorted.map((x) => x.f);
     const firstUpcoming = sorted.findIndex((x) => x.diff >= 0);
-    // 「最近航班」:離現在最近的下一班(同一分鐘表定的幾班一起標);一小時內的班次顯示倒數
+    // 半小時提醒:30 分鐘內出發/抵達的班次全部醒目標示(只標最近一班的話常常只剩 5~10 分鐘,
+    // 讀者根本趕不上);30 分鐘內一班都沒有時,改標離現在最近的下一班(同一分鐘的幾班一起標)。
+    // 一小時內的班次另外顯示「還有 X 分鐘」倒數。
+    const soon = sorted.some((x) => x.diff >= 0 && x.diff <= REMIND_MS);
     const nearestTime = firstUpcoming >= 0 ? rows[firstUpcoming][dir === "departure" ? "ScheduleDepartureTime" : "ScheduleArrivalTime"] : null;
     // 重畫前記下「目前捲動位置距離『現在』分隔線多遠」,重畫後維持同樣的相對位置
     const oldNow = listEl.querySelector(".ap-now");
@@ -180,12 +184,14 @@ export function createAirportBoard() {
         : [f.Terminal && `第${f.Terminal}航廈`, f.BaggageClaim && `${f.BaggageClaim}號行李轉盤`].filter(Boolean).join(" · ");
       const divider = i === firstUpcoming ? `<div class="ap-now">── 現在 ${esc(nowLabel)} ──</div>` : "";
       const past = firstUpcoming < 0 || i < firstUpcoming;
-      const nearest = !past && (dir === "departure" ? f.ScheduleDepartureTime : f.ScheduleArrivalTime) === nearestTime;
+      const nearest = !past && (soon
+        ? sorted[i].diff <= REMIND_MS
+        : (dir === "departure" ? f.ScheduleDepartureTime : f.ScheduleArrivalTime) === nearestTime);
       const mins = Math.round(sorted[i].diff / 60_000);
       const eta = !past && mins <= 60
         ? `<span class="ap-eta">${mins <= 0 ? "就是現在" : `還有 ${mins} 分鐘`}</span>` : "";
       return `${divider}<div class="ap-row${past ? " ap-past" : ""}${nearest ? " ap-nearest" : ""}">
-        ${nearest ? `<div class="ap-nearest-tag">⏰ 最近航班${dir === "departure" ? "(下一班出發)" : "(下一班抵達)"}</div>` : ""}
+        ${nearest ? `<div class="ap-nearest-tag">⏰ ${soon ? `30 分鐘內${dir === "departure" ? "出發" : "抵達"}` : `最近航班(下一班${dir === "departure" ? "出發" : "抵達"})`}</div>` : ""}
         <div class="ap-row-top">
           <span class="ap-flight">${esc(airline)} <b>${esc(no || "—")}</b> ${eta}</span>
           <span class="ap-badge ${status.cls}">${esc(status.label)}</span>
@@ -212,8 +218,14 @@ export function createAirportBoard() {
   async function refresh() {
     if (!enabled) return;
     try {
-      const r = await fetch(`${PROXY_URL}/?airports=${AIRPORTS.map((a) => a.iata).join(",")}`);
-      if (!r.ok) {
+      // TDX 偶爾對 Worker 換 token 回 429(太頻繁),通常隔幾秒就好——自動重試兩次
+      let r = null;
+      for (let attempt = 0; attempt < 3; attempt++) {
+        if (attempt) await new Promise((res) => setTimeout(res, 3000 * attempt));
+        r = await fetch(`${PROXY_URL}/?airports=${AIRPORTS.map((a) => a.iata).join(",")}`).catch(() => null);
+        if (r && r.ok) break;
+      }
+      if (!r || !r.ok) {
         if (!data) render();
         if (captionEl) captionEl.textContent = "資料來源暫時忙線中,稍後會自動重試";
         return;
