@@ -275,23 +275,11 @@ export function start() {
   // 「世界機場航班」(ADS-B 即時追蹤)+「台灣機場航班」(TDX 時刻表)合併成
   // 一個「機場航班資訊」群組,點群組列展開/收合子選項;群組列自己的圓點
   // 反映「這兩個子功能有沒有任一個開著」,不是它自己的開關狀態。
-  const airportGroupToggle = document.getElementById("airport-group-toggle");
-  const airportSubmenu = document.getElementById("airport-submenu");
-  function syncAirportGroupState() {
-    if (airportGroupToggle) airportGroupToggle.setAttribute("aria-pressed", String(flights.isEnabled() || airportBoard.isEnabled()));
-  }
-  if (airportGroupToggle) airportGroupToggle.addEventListener("click", () => {
-    const next = airportGroupToggle.getAttribute("aria-expanded") !== "true";
-    airportGroupToggle.setAttribute("aria-expanded", String(next));
-    if (airportSubmenu) airportSubmenu.hidden = !next;
-  });
-
   const flightToggle = document.getElementById("flight-toggle");
   if (flightToggle) flightToggle.addEventListener("click", () => {
     const next = flightToggle.getAttribute("aria-pressed") !== "true";
     flightToggle.setAttribute("aria-pressed", String(next));
     flights.setEnabled(next);
-    syncAirportGroupState();
   });
 
   const airportToggle = document.getElementById("airport-toggle");
@@ -299,7 +287,6 @@ export function start() {
     const next = airportToggle.getAttribute("aria-pressed") !== "true";
     airportToggle.setAttribute("aria-pressed", String(next));
     airportBoard.setEnabled(next);
-    syncAirportGroupState();
   });
 
   // 台灣即時路況:開啟時飛到台灣、允許拉近到看得清楚一條條國道,並停住地球自轉
@@ -330,23 +317,25 @@ export function start() {
     setTraffic(trafficToggle.getAttribute("aria-pressed") !== "true");
   });
 
-  // 「功能」整張卡片可以收合——記住使用者上次收合/展開的狀態,下次開網站
-  // 維持一樣,不用每次都重新收一次。
-  const LC_COLLAPSE_KEY = "earth-world.lc-collapsed";
-  const lcCollapseToggle = document.getElementById("lc-collapse-toggle");
-  const lcBody = document.getElementById("lc-body");
-  if (lcCollapseToggle && lcBody) {
+  // 右下角「台灣交通」「功能」兩張卡片各自可以收合——記住使用者上次收合/展開的
+  // 狀態,下次開網站維持一樣,不用每次都重新收一次。
+  function setupCollapsible(toggleId, bodyId, storageKey) {
+    const toggle = document.getElementById(toggleId);
+    const body = document.getElementById(bodyId);
+    if (!toggle || !body) return;
     let collapsed = false;
-    try { collapsed = localStorage.getItem(LC_COLLAPSE_KEY) === "1"; } catch {}
-    lcCollapseToggle.setAttribute("aria-expanded", String(!collapsed));
-    lcBody.hidden = collapsed;
-    lcCollapseToggle.addEventListener("click", () => {
-      const willExpand = lcCollapseToggle.getAttribute("aria-expanded") !== "true";
-      lcCollapseToggle.setAttribute("aria-expanded", String(willExpand));
-      lcBody.hidden = !willExpand;
-      try { localStorage.setItem(LC_COLLAPSE_KEY, willExpand ? "0" : "1"); } catch {}
+    try { collapsed = localStorage.getItem(storageKey) === "1"; } catch {}
+    toggle.setAttribute("aria-expanded", String(!collapsed));
+    body.hidden = collapsed;
+    toggle.addEventListener("click", () => {
+      const willExpand = toggle.getAttribute("aria-expanded") !== "true";
+      toggle.setAttribute("aria-expanded", String(willExpand));
+      body.hidden = !willExpand;
+      try { localStorage.setItem(storageKey, willExpand ? "0" : "1"); } catch {}
     });
   }
+  setupCollapsible("lc-collapse-toggle", "lc-body", "earth-world.lc-collapsed");
+  setupCollapsible("twc-collapse-toggle", "twc-body", "earth-world.twc-collapsed");
 
   const audioToggle = document.getElementById("audio-toggle");
   const audioVol = document.getElementById("audio-vol");

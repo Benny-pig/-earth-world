@@ -964,75 +964,80 @@
   body[data-theme="fantasy"] #tw-clock,
   body[data-theme="fantasy"] #clock-weather,
   body[data-theme="fantasy"] #audio-ui,
-  body[data-theme="fantasy"] #layer-controls,
+  body[data-theme="fantasy"] .ctrl-card,
   body[data-theme="fantasy"] #theme-toggle { font-family: 'Cinzel', 'Noto Serif TC', serif; letter-spacing: .03em; }
-  /* 圖層控制:整合成一張卡片(參考 God's Eye View 的圖層分類欄),裡面每個開關是
-     一個列,而不是各自散開的獨立按鈕——之後加航班/交通,都在這張卡片裡加一列就好。 */
-  #layer-controls {
+  /* 右下角控制區:上面「台灣交通」(機場航班、即時路況…)、下面「功能」(全球性的圖層),
+     兩張卡片疊在同一個容器裡,各自可以收合,不會互相重疊。卡片樣式共用 .ctrl-card。 */
+  #ctrl-dock {
     position: fixed; right: 18px; bottom: 18px; z-index: 42;
-    display: flex; flex-direction: column; min-width: 168px;
-    background: rgba(4, 6, 12, 0.88); backdrop-filter: blur(10px);
-    border: 1px solid rgba(120, 170, 255, 0.22); border-radius: 10px; padding: 6px;
+    display: flex; flex-direction: column; gap: 8px; align-items: stretch;
+    max-height: calc(100vh - 150px); overflow-y: auto;
   }
-  /* 「功能」標題改成可點的按鈕,收合/展開整張卡片——功能一直加下去,清單
-     會越來越長,讓使用者可以收起來。 */
-  #layer-controls .lc-title {
-    display: flex; align-items: center; gap: 6px; width: 100%; cursor: pointer;
-    font: 14px system-ui, "Microsoft JhengHei", sans-serif; font-weight: 600; letter-spacing: .1em;
-    text-transform: uppercase; color: #b9c6e6; padding: 5px 8px 6px;
+  .ctrl-card {
+    display: flex; flex-direction: column; min-width: 200px;
+    background: rgba(4, 6, 12, 0.88); backdrop-filter: blur(10px);
+    border: 1px solid rgba(120, 170, 255, 0.22); border-radius: 12px; padding: 6px;
+  }
+  /* 標題是可點的按鈕,收合/展開整張卡片(記住上次的狀態) */
+  .ctrl-card .lc-title {
+    display: flex; align-items: center; gap: 8px; width: 100%; cursor: pointer;
+    font: 16px system-ui, "Microsoft JhengHei", sans-serif; font-weight: 700; letter-spacing: .1em;
+    text-transform: uppercase; color: #b9c6e6; padding: 6px 10px 8px;
     background: none; border: none; text-align: left;
   }
-  .lc-cute-icon { font-size: 14px; flex: none; }
-  .lc-collapse-arrow { margin-left: auto; font-size: 10px; transition: transform .15s; flex: none; }
-  #lc-collapse-toggle[aria-expanded="false"] .lc-collapse-arrow { transform: rotate(-90deg); }
-  #lc-body { display: flex; flex-direction: column; }
-  /* 主選單列(不含子選項)前面加數字順序,功能一直加也不用手動改編號——
-     用 CSS counter 自動排,不用在 JS/HTML 裡硬寫死第幾項。 */
-  #lc-body { counter-reset: lc-count; }
-  #lc-body > .layer-row::before,
-  #lc-body > .layer-group > .layer-row::before {
+  .lc-cute-icon { font-size: 18px; flex: none; }
+  .lc-collapse-arrow { margin-left: auto; font-size: 12px; transition: transform .15s; flex: none; }
+  .lc-title[aria-expanded="false"] .lc-collapse-arrow { transform: rotate(-90deg); }
+  .lc-body { display: flex; flex-direction: column; gap: 2px; }
+  /* 每張卡片的列前面自動編號(CSS counter),加功能不用手動改編號 */
+  .lc-body { counter-reset: lc-count; }
+  .lc-body > .layer-row::before {
     counter-increment: lc-count; content: counter(lc-count) "."; flex: none;
-    font-size: 10px; opacity: .5; margin-right: -2px;
+    font-size: 12px; opacity: .5; margin-right: -3px;
   }
-  #layer-controls .layer-row {
-    display: flex; align-items: center; gap: 8px; cursor: pointer; width: 100%;
-    padding: 7px 8px; border-radius: 6px; background: none; border: none; text-align: left;
-    color: #e7edfb; font: 11.5px system-ui, "Microsoft JhengHei", sans-serif; transition: background .15s, opacity .15s;
+  /* 字和按鈕放大(列高約 38px),手指比較好點 */
+  .ctrl-card .layer-row {
+    display: flex; align-items: center; gap: 9px; cursor: pointer; width: 100%;
+    padding: 9px 10px; min-height: 38px; border-radius: 8px; background: none; border: none; text-align: left;
+    color: #e7edfb; font: 14px system-ui, "Microsoft JhengHei", sans-serif; transition: background .15s, opacity .15s;
   }
-  #layer-controls .layer-row:hover { background: rgba(120,170,255,.12); }
-  #layer-controls .layer-dot {
-    width: 7px; height: 7px; border-radius: 50%; flex: none;
+  .ctrl-card .layer-row:hover { background: rgba(120,170,255,.12); }
+  .ctrl-card .layer-dot {
+    width: 9px; height: 9px; border-radius: 50%; flex: none;
     background: #f2994a; box-shadow: 0 0 5px #f2994a; transition: background .15s, box-shadow .15s;
   }
-  #layer-controls .layer-row[aria-pressed="false"] { opacity: .6; }
-  #layer-controls .layer-row[aria-pressed="false"] .layer-dot { background: #5b6786; box-shadow: none; }
-  /* 世界機場航班/台灣機場航班原本是兩個獨立列,合併成一個「機場航班資訊」
-     群組,點了才展開子選項,減少主選單的雜亂。 */
-  .layer-arrow { margin-left: auto; font-size: 9px; opacity: .6; transition: transform .15s; flex: none; }
+  .ctrl-card .layer-row[aria-pressed="false"] { opacity: .6; }
+  .ctrl-card .layer-row[aria-pressed="false"] .layer-dot { background: #5b6786; box-shadow: none; }
   /* 規模 6 以上地震警示:就算「全球地震顯示」沒開,也要在旁邊閃爍提醒使用者
      可以打開來看是哪裡發生的——用透明度動畫閃爍,比顏色變化更顯眼。 */
   .layer-badge {
-    margin-left: auto; flex: none; color: #ff5252; font-size: 13px; line-height: 1;
+    margin-left: auto; flex: none; color: #ff5252; font-size: 15px; line-height: 1;
     animation: quake-badge-blink 1s ease-in-out infinite;
   }
   @keyframes quake-badge-blink { 0%, 100% { opacity: 1; } 50% { opacity: .25; } }
-  #airport-group-toggle[aria-expanded="true"] .layer-arrow { transform: rotate(90deg); }
-  .layer-submenu { display: flex; flex-direction: column; }
-  #layer-controls .layer-row.layer-sub { padding-left: 24px; font-size: 10.5px; }
-  /* 子選項用圖示取代圓點,關閉時整個變灰階降低存在感,開啟時恢復原色。 */
-  .layer-icon { flex: none; font-size: 12px; line-height: 1; filter: grayscale(1); opacity: .55; transition: filter .15s, opacity .15s; }
-  .layer-row[aria-pressed="true"] .layer-icon { filter: none; opacity: 1; }
-  body[data-theme="fantasy"] #layer-controls {
+  /* 可愛圖示取代圓點:關閉時灰階、開啟時恢復彩色並輕輕跳一下 */
+  .layer-icon { flex: none; font-size: 18px; line-height: 1; filter: grayscale(1); opacity: .55; transition: filter .15s, opacity .15s; }
+  .layer-row[aria-pressed="true"] .layer-icon { filter: none; opacity: 1; animation: layer-icon-hop .5s ease-out; }
+  @keyframes layer-icon-hop { 0% { transform: translateY(0); } 40% { transform: translateY(-4px) scale(1.12); } 100% { transform: none; } }
+  @media (prefers-reduced-motion: reduce) { .layer-row[aria-pressed="true"] .layer-icon { animation: none; } }
+  /* 台灣交通卡:標題列加一點暖色,跟「功能」卡區分 */
+  #tw-controls { border-color: rgba(255,196,80,.35); }
+  #tw-controls .lc-title { color: #ffd58a; }
+  /* 台灣交通的可愛圖示平常就保持彩色;開啟中的那列加暖色底 */
+  #tw-controls .layer-icon { filter: none; opacity: .9; }
+  #tw-controls .layer-row[aria-pressed="false"] { opacity: .8; }
+  #tw-controls .layer-row[aria-pressed="true"] { background: rgba(255,196,80,.16); }
+  body[data-theme="fantasy"] .ctrl-card {
     background: linear-gradient(180deg,#332714,#1c150c); border: 1px solid #c9a227;
   }
-  body[data-theme="fantasy"] #layer-controls .lc-title { color: #a08a5c; }
-  body[data-theme="fantasy"] #layer-controls .layer-row { color: #f0dfab; }
-  body[data-theme="fantasy"] #layer-controls .layer-row:hover { background: rgba(201,162,39,.14); }
+  body[data-theme="fantasy"] .ctrl-card .lc-title { color: #a08a5c; }
+  body[data-theme="fantasy"] .ctrl-card .layer-row { color: #f0dfab; }
+  body[data-theme="fantasy"] .ctrl-card .layer-row:hover { background: rgba(201,162,39,.14); }
   body[data-theme="fantasy"] #theme-toggle {
     background: linear-gradient(180deg,#332714,#1c150c); border: 1px solid #c9a227; color: #f0dfab;
   }
-  body[data-theme="fantasy"] #layer-controls .layer-dot { background: #c9a227; box-shadow: 0 0 6px #c9a227; }
-  body[data-theme="fantasy"] #layer-controls .layer-row[aria-pressed="false"] .layer-dot { background: #6b5a30; box-shadow: none; }
+  body[data-theme="fantasy"] .ctrl-card .layer-dot { background: #c9a227; box-shadow: 0 0 6px #c9a227; }
+  body[data-theme="fantasy"] .ctrl-card .layer-row[aria-pressed="false"] .layer-dot { background: #6b5a30; box-shadow: none; }
   /* 颱風雲圖/當地航班/機場航班這幾張浮動面板原本沒套用主題,不管切哪個主題
      背景都還是預設的深藍黑,這裡補上三種主題各自的配色。 */
   body[data-theme="fantasy"] #satellite-panel,
@@ -1111,19 +1116,19 @@
   body[data-theme="journal"] #clock-weather,
   body[data-theme="journal"] #audio-ui,
   body[data-theme="journal"] #theme-toggle,
-  body[data-theme="journal"] #layer-controls,
+  body[data-theme="journal"] .ctrl-card,
   body[data-theme="journal"] #country-search input,
   body[data-theme="journal"] #country-search ul {
     background: #f3ede0; border-color: rgba(120,90,50,.28); color: #3b332a;
   }
-  body[data-theme="journal"] #layer-controls .layer-row { color: #3b332a; }
-  body[data-theme="journal"] #layer-controls .layer-row:hover { background: rgba(166,87,46,.14); }
-  body[data-theme="journal"] #layer-controls .lc-title { color: #a08a63; }
+  body[data-theme="journal"] .ctrl-card .layer-row { color: #3b332a; }
+  body[data-theme="journal"] .ctrl-card .layer-row:hover { background: rgba(166,87,46,.14); }
+  body[data-theme="journal"] .ctrl-card .lc-title { color: #a08a63; }
   body[data-theme="journal"] #tw-clock,
   body[data-theme="journal"] #clock-weather,
   body[data-theme="journal"] #audio-ui,
   body[data-theme="journal"] #theme-toggle,
-  body[data-theme="journal"] #layer-controls { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", serif; }
+  body[data-theme="journal"] .ctrl-card { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", serif; }
   body[data-theme="journal"] #tw-clock .tw-label,
   body[data-theme="journal"] #clock-weather .cw-country { color: #a6572e; }
   body[data-theme="journal"] #tw-clock .tw-date,
@@ -1137,8 +1142,8 @@
   body[data-theme="journal"] #country-search .cs-en { color: #8a7a63; }
   body[data-theme="journal"] #audio-ui button { color: #5a4b39; }
   body[data-theme="journal"] #audio-ui select { background: #fbf7ee; color: #3b332a; border-color: rgba(120,90,50,.28); }
-  body[data-theme="journal"] #layer-controls .layer-dot { background: #a6572e; box-shadow: 0 0 6px rgba(166,87,46,.6); }
-  body[data-theme="journal"] #layer-controls .layer-row[aria-pressed="false"] .layer-dot { background: #b7ab97; box-shadow: none; }
+  body[data-theme="journal"] .ctrl-card .layer-dot { background: #a6572e; box-shadow: 0 0 6px rgba(166,87,46,.6); }
+  body[data-theme="journal"] .ctrl-card .layer-row[aria-pressed="false"] .layer-dot { background: #b7ab97; box-shadow: none; }
   body[data-theme="journal"] #satellite-panel,
   body[data-theme="journal"] #flight-panel,
   body[data-theme="journal"] #airport-panel,
@@ -1212,20 +1217,20 @@
   body[data-theme="hud"] #tw-clock,
   body[data-theme="hud"] #clock-weather,
   body[data-theme="hud"] #audio-ui,
-  body[data-theme="hud"] #layer-controls,
+  body[data-theme="hud"] .ctrl-card,
   body[data-theme="hud"] #theme-toggle {
     font-family: 'Share Tech Mono', ui-monospace, monospace; letter-spacing: .02em;
   }
-  body[data-theme="hud"] #layer-controls,
+  body[data-theme="hud"] .ctrl-card,
   body[data-theme="hud"] #theme-toggle {
     background: linear-gradient(180deg,#0e2226,#04121a); border: 1px solid #00e5ff; color: #cdf3ff; border-radius: 3px;
     text-transform: uppercase;
   }
-  body[data-theme="hud"] #layer-controls .lc-title { color: #5a8f99; }
-  body[data-theme="hud"] #layer-controls .layer-row { color: #cdf3ff; }
-  body[data-theme="hud"] #layer-controls .layer-row:hover { background: rgba(0,229,255,.14); }
-  body[data-theme="hud"] #layer-controls .layer-dot { background: #00e5ff; box-shadow: 0 0 6px #00e5ff; }
-  body[data-theme="hud"] #layer-controls .layer-row[aria-pressed="false"] .layer-dot { background: #2a4d52; box-shadow: none; }
+  body[data-theme="hud"] .ctrl-card .lc-title { color: #5a8f99; }
+  body[data-theme="hud"] .ctrl-card .layer-row { color: #cdf3ff; }
+  body[data-theme="hud"] .ctrl-card .layer-row:hover { background: rgba(0,229,255,.14); }
+  body[data-theme="hud"] .ctrl-card .layer-dot { background: #00e5ff; box-shadow: 0 0 6px #00e5ff; }
+  body[data-theme="hud"] .ctrl-card .layer-row[aria-pressed="false"] .layer-dot { background: #2a4d52; box-shadow: none; }
   body[data-theme="hud"] #satellite-panel,
   body[data-theme="hud"] #flight-panel,
   body[data-theme="hud"] #airport-panel,
@@ -1379,10 +1384,12 @@
     #clock-weather .cw-weather-note { display: none; }
     /* 100px 是實測選了國家、天氣列都填滿內容後 clock-weather 的實際高度(~72px)加安全間距 */
     #country-search { top: 100px; left: 8px; right: 8px; width: auto; transform: none; }
-    /* 窄螢幕下,左下音樂列(#audio-ui)跟右下功能卡(#layer-controls)沒收窄的話寬度
+    /* 窄螢幕下,左下音樂列(#audio-ui)跟右下功能卡(.ctrl-card)沒收窄的話寬度
        加起來會超過螢幕,兩個各自貼著左右角變成互相疊在一起——各自限縮寬度、
        裡面內容(音量條/下拉選單/功能列文字)跟著縮小才不會卡到。 */
-    #audio-ui, #layer-controls { max-width: 44vw; }
+    #audio-ui, #ctrl-dock { max-width: 44vw; }
+    #ctrl-dock { right: 8px; bottom: 8px; gap: 6px; max-height: calc(100vh - 170px); }
+    .ctrl-card { min-width: 0; }
     #audio-ui { gap: 4px; padding: 5px 7px; }
     #audio-ui select { max-width: 55px; }
     #audio-ui input[type=range] { display: none; } /* 窄螢幕放不下,靜音鈕還在,音量用系統音量調 */
@@ -1394,8 +1401,9 @@
        空間,min-width 比 max-width:55px 大會讓瀏覽器優先吃 min-width、
        直接把停止鈕擠出 #audio-ui 容器外面(實測確認過)——這裡蓋回去。 */
     #radio-station-select { min-width: 0; }
-    #layer-controls .layer-row { font-size: 10.5px; padding: 6px 7px; gap: 5px; }
-    #layer-controls .lc-title { font-size: 12px; }
+    .ctrl-card .layer-row { font-size: 13px; padding: 8px 8px; min-height: 36px; gap: 6px; }
+    .ctrl-card .lc-title { font-size: 14px; padding: 5px 8px 6px; }
+    .layer-icon { font-size: 16px; }
   }
 </style>
 </head>
@@ -1559,36 +1567,38 @@
   </div>
   <div id="radio-labels"></div>
   <div id="flight-labels"></div>
-  <div id="layer-controls">
-    <button id="lc-collapse-toggle" class="lc-title" type="button" aria-expanded="true">
-      <span class="lc-cute-icon">🎛️</span>功能<span class="lc-collapse-arrow">▾</span>
-    </button>
-    <div id="lc-body">
-      <button id="quake-toggle" class="layer-row" type="button" aria-pressed="true">
-        <span class="layer-dot"></span>全球地震顯示<span id="quake-severe-badge" class="layer-badge" hidden title="偵測到規模 6 以上地震">⚠</span>
+  <div id="ctrl-dock">
+    <div id="tw-controls" class="ctrl-card">
+      <button id="twc-collapse-toggle" class="lc-title" type="button" aria-expanded="true">
+        <span class="lc-cute-icon">🚦</span>台灣交通<span class="lc-collapse-arrow">▾</span>
       </button>
-      <button id="radio-toggle" class="layer-row" type="button" aria-pressed="false">
-        <span class="layer-dot"></span>當地廣播電台
-      </button>
-      <button id="satellite-toggle" class="layer-row" type="button" aria-pressed="false">
-        <span class="layer-dot"></span>颱風衛星雲圖
-      </button>
-      <div class="layer-group">
-        <button id="airport-group-toggle" class="layer-row" type="button" aria-expanded="false" aria-pressed="false">
-          <span class="layer-dot" id="airport-group-dot"></span>機場航班資訊<span class="layer-arrow">▸</span>
+      <div id="twc-body" class="lc-body">
+        <button id="airport-toggle" class="layer-row" type="button" aria-pressed="false">
+          <span class="layer-icon">🛫</span>機場航班
         </button>
-        <div id="airport-submenu" class="layer-submenu" hidden>
-          <button id="flight-toggle" class="layer-row layer-sub" type="button" aria-pressed="false">
-            <span class="layer-icon">✈</span>世界機場航班
-          </button>
-          <button id="airport-toggle" class="layer-row layer-sub" type="button" aria-pressed="false">
-            <span class="layer-icon">🛫</span>台灣機場航班
-          </button>
-        </div>
+        <button id="traffic-toggle" class="layer-row" type="button" aria-pressed="false">
+          <span class="layer-icon">🚗</span>即時路況
+        </button>
       </div>
-      <button id="traffic-toggle" class="layer-row" type="button" aria-pressed="false">
-        <span class="layer-dot"></span>台灣即時路況
+    </div>
+    <div id="layer-controls" class="ctrl-card">
+      <button id="lc-collapse-toggle" class="lc-title" type="button" aria-expanded="true">
+        <span class="lc-cute-icon">🎛️</span>功能<span class="lc-collapse-arrow">▾</span>
       </button>
+      <div id="lc-body" class="lc-body">
+        <button id="quake-toggle" class="layer-row" type="button" aria-pressed="true">
+          <span class="layer-dot"></span>全球地震顯示<span id="quake-severe-badge" class="layer-badge" hidden title="偵測到規模 6 以上地震">⚠</span>
+        </button>
+        <button id="radio-toggle" class="layer-row" type="button" aria-pressed="false">
+          <span class="layer-dot"></span>當地廣播電台
+        </button>
+        <button id="satellite-toggle" class="layer-row" type="button" aria-pressed="false">
+          <span class="layer-dot"></span>颱風衛星雲圖
+        </button>
+        <button id="flight-toggle" class="layer-row" type="button" aria-pressed="false">
+          <span class="layer-dot"></span>世界機場航班
+        </button>
+      </div>
     </div>
   </div>
 
