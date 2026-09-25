@@ -402,7 +402,7 @@
   body[data-theme="journal"] .rp-head-btn { color: #8a7a63; }
   @media (max-width: 640px) {
     /* 手機:搜尋欄下方、約 4 成高,不蓋到右下角的台灣交通/功能卡片;可收合 */
-    #radio-panel { top: 150px; left: 8px; right: 8px; width: auto; min-width: 0; max-width: none; height: 34vh; resize: none; z-index: 45; }
+    #radio-panel { top: 150px; left: 8px; right: 8px; width: auto; min-width: 0; max-width: none; height: 30vh; resize: none; z-index: 45; }
   }
   .tc-tabs { margin-bottom: 6px; }
   /* 北中南切換:比分頁小一號,選中的用暖色,跟分頁的藍色區分 */
@@ -1448,20 +1448,18 @@
     /* 窄螢幕下,左下音樂列(#audio-ui)跟右下功能卡(.ctrl-card)沒收窄的話寬度
        加起來會超過螢幕,兩個各自貼著左右角變成互相疊在一起——各自限縮寬度、
        裡面內容(音量條/下拉選單/功能列文字)跟著縮小才不會卡到。 */
-    #audio-ui, #ctrl-dock { max-width: 44vw; }
-    #ctrl-dock { right: 8px; bottom: 8px; gap: 6px; max-height: calc(100vh - 170px); }
+    /* 手機:音樂列改成底部整條(原本只有 44% 寬,看不到正在播哪一台、哪個國家),
+       右下角的台灣交通/功能卡片往上移,讓出音樂列的位置 */
+    #ctrl-dock { max-width: 44vw; right: 8px; bottom: 60px; gap: 6px; max-height: calc(100vh - 230px); }
     .ctrl-card { min-width: 0; }
-    #audio-ui { gap: 4px; padding: 5px 7px; }
-    #audio-ui select { max-width: 55px; }
-    #audio-ui input[type=range] { display: none; } /* 窄螢幕放不下,靜音鈕還在,音量用系統音量調 */
-    #radio-now-playing { max-width: 80px; gap: 3px; }
-    /* 國家名稱這個新欄位在窄螢幕的 80px 預算裡放不下,會把停止鈕擠出畫面外
-       ——窄螢幕先隱藏國家名稱,保留下拉選單跟停止鈕這兩個必要控制項。 */
-    #radio-country-name { display: none; }
-    /* 桌面版為了可讀性把下拉選單加了 min-width:60px,但窄螢幕本來就沒那麼多
-       空間,min-width 比 max-width:55px 大會讓瀏覽器優先吃 min-width、
-       直接把停止鈕擠出 #audio-ui 容器外面(實測確認過)——這裡蓋回去。 */
-    #radio-station-select { min-width: 0; }
+    #audio-ui { left: 8px; right: 8px; bottom: 8px; gap: 6px; padding: 7px 10px; min-height: 42px; box-sizing: border-box; }
+    #audio-ui input[type=range] { display: none; } /* 靜音鈕還在,音量用手機的音量鍵調 */
+    #audio-ui #audio-track { flex: 1; min-width: 0; max-width: none; font-size: 12.5px; padding: 4px 6px; }
+    #audio-ui #radio-now-playing { flex: 1; min-width: 0; max-width: none; gap: 6px; font-size: 13px; }
+    #radio-country-name { display: inline; flex: none; max-width: 30vw; overflow: hidden; text-overflow: ellipsis; }
+    /* 下拉選單吃掉剩下的寬度(min-width:0 才縮得下來,停止鈕不會被擠出去) */
+    #audio-ui #radio-station-select { flex: 1; min-width: 0; max-width: none; font-size: 12.5px; padding: 4px 6px; }
+    #radio-now-playing #radio-stop { font-size: 16px; padding: 0 2px; }
     .ctrl-card .layer-row { font-size: 13px; padding: 8px 8px; min-height: 36px; gap: 6px; }
     .ctrl-card .lc-title { font-size: 14px; padding: 5px 8px 6px; }
     .layer-icon { font-size: 16px; }
