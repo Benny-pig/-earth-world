@@ -25,8 +25,8 @@ export function createEncyclopedia() {
 
   // 外交部領事事務局旅遊警示等級(見 data/travel-alert.json 的產出腳本);載入前
   // 就當作沒有資料,跟 adminSet 同樣的容錯方式,不擋 render()。
-  let travelAlertData = null;
-  fetch("data/travel-alert.json").then((r) => (r.ok ? r.json() : null)).then((j) => { travelAlertData = j; }).catch(() => { travelAlertData = null; });
+  // 跟主程式共用同一份(main.js 開頭就載入了),不用再下載一次
+  const travelAlertDoc = () => window.__earth?.travelAlertDoc || null;
   const el = document.getElementById("encyclopedia");
   const titleEl = el.querySelector(".enc-title");
   const bodyEl = document.getElementById("enc-body");
@@ -189,6 +189,7 @@ export function createEncyclopedia() {
         `<p class="enc-dim" style="font-size:11px;margin-top:6px"><a href="${esc(ls.url)}" target="_blank" rel="noopener">在 YouTube 開啟${esc(ls.label)} ↗</a></p>`);
     }
 
+    const travelAlertData = travelAlertDoc();
     const alert = travelAlertData && travelAlertData.countries ? travelAlertData.countries[code] : null;
     if (alert) {
       const stars = "★".repeat(alert.level) + "☆".repeat(4 - alert.level);

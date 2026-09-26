@@ -1,4 +1,5 @@
 import * as THREE from "three";
+import { texUrl } from "../lib/device.js";
 
 const SPIN_RATE = (2 * Math.PI) / 42; // one revolution ~42s — a bit faster than the 60s globe so clouds drift
 
@@ -17,7 +18,7 @@ export function createClouds() {
   mesh.renderOrder = 1;
 
   new THREE.TextureLoader().load(
-    "assets/earth-clouds-2k.jpg",
+    texUrl("earth-clouds-2k.jpg", "earth-clouds-1k.jpg"),
     (t) => {
       t.colorSpace = THREE.NoColorSpace;      // alpha data, not colour
       t.anisotropy = 8;

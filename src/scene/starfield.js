@@ -1,4 +1,5 @@
 import * as THREE from "three";
+import { texUrl } from "../lib/device.js";
 
 const vertexShader = `
   attribute float aSize;
@@ -84,12 +85,21 @@ export function createStarfield() {
   const milkyWay = new THREE.Mesh(mwGeo, mwMat);
   milkyWay.renderOrder = -2;
   group.add(milkyWay);
-  new THREE.TextureLoader().load(
-    "assets/milky-way-4k.jpg",
-    (t) => { t.colorSpace = THREE.SRGBColorSpace; mwMat.map = t; mwMat.needsUpdate = true; },
-    undefined,
-    () => console.warn("[starfield] 銀河貼圖載入失敗,改用純星點背景"),
-  );
+  // 銀河背景是最大的一張圖,但第一眼不需要:等地球出現(載入畫面結束)後才下載,
+  // 用自己的 LoadingManager,不讓載入畫面等它;還沒載到之前照樣有星點
+  let bgLoading = false;
+  function loadBackground() {
+    if (bgLoading) return;
+    bgLoading = true;
+    mwMat.opacity = 0;
+    new THREE.TextureLoader(new THREE.LoadingManager()).load(
+      texUrl("milky-way-4k.jpg", "milky-way-2k.jpg"),
+      (t) => { t.colorSpace = THREE.SRGBColorSpace; mwMat.map = t; mwMat.needsUpdate = true; fadeIn = true; },
+      undefined,
+      () => console.warn("[starfield] 銀河貼圖載入失敗,改用純星點背景"),
+    );
+  }
+  let fadeIn = false;
 
   // 2. far dense faint layer + 3. near sparse bright layer (parallax when the camera orbits)
   const far = makeStarLayer({ count: 16000, rMin: 130, rMax: 260, sizeMin: 0.35, sizeMax: 1.1, warmChance: 0.08 });
@@ -100,7 +110,9 @@ export function createStarfield() {
 
   return {
     object: group,
+    loadBackground,
     update(elapsed) {
+      if (fadeIn) { mwMat.opacity = Math.min(0.85, mwMat.opacity + 0.012); if (mwMat.opacity >= 0.85) fadeIn = false; }
       far.material.uniforms.uTime.value = elapsed;
       near.material.uniforms.uTime.value = elapsed;
       // subtle life: whole sky drifts very slowly (~1 rev / 12 min); near layer a touch faster => parallax shimmer

@@ -123,6 +123,7 @@ export function start() {
   camera.position.set(0, 0, fitDistanceForAspect(window.innerWidth / window.innerHeight));
 
   const starfield = createStarfield();
+  loading.done.then(() => starfield.loadBackground());   // 地球出現後才下載銀河背景
   scene.add(starfield.object);
 
   const globe = createGlobe({ onAllTexturesFailed: () => showError("地球貼圖載入失敗,已改用純色地球。") });
@@ -142,6 +143,7 @@ export function start() {
       window.__earth.content = content;
       window.__earth.geojson = geojson;
       window.__earth.travelAlert = (travelAlert && travelAlert.countries) || {};
+      window.__earth.travelAlertDoc = travelAlert;
       const borders = buildBorders(geojson);
       globe.object.add(borders);
       window.__earth.borders = borders;
