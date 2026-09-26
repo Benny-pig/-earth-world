@@ -32,6 +32,18 @@ export function createGlobe({ onAllTexturesFailed } = {}) {
   const material = new THREE.MeshStandardMaterial({ color: 0x2b3a55, metalness: 0.0, roughness: 1.0 });
   const mesh = new THREE.Mesh(geometry, material);
   object.add(mesh);
+  // 城市燈光只在夜晚那一側亮:MeshStandardMaterial 的自發光本來不受光照影響,白天那面
+  // 也會有燈光;依「表面法線跟太陽方向的夾角」把自發光乘上夜晚係數,晨昏線附近漸層淡出
+  material.onBeforeCompile = (shader) => {
+    shader.fragmentShader = shader.fragmentShader.replace(
+      "#include <emissivemap_fragment>",
+      `#include <emissivemap_fragment>
+      #if NUM_DIR_LIGHTS > 0
+        float sunDot = dot( normal, directionalLights[ 0 ].direction );
+        totalEmissiveRadiance *= smoothstep( 0.12, -0.18, sunDot );
+      #endif`,
+    );
+  };
 
   // 非同步套貼圖;失敗就保留純色球
   (async () => {
@@ -92,6 +104,9 @@ export function createGlobe({ onAllTexturesFailed } = {}) {
   document.addEventListener("visibilitychange", onVisible);
 
   let paused = false;
+  // 🌗 真實晨昏線:停止裝飾性的自轉,把地球轉回「跟太陽的真實相對位置」(太陽光本來就放在
+  // 當下的直射點,地球轉角 0 時晝夜就是真的)。開著的時候其他地方叫恢復自轉也不理。
+  let realSun = false;
   return {
     object,
     mesh,
@@ -100,6 +115,17 @@ export function createGlobe({ onAllTexturesFailed } = {}) {
     aimSun,
     dispose() { clearInterval(sunTimer); document.removeEventListener("visibilitychange", onVisible); },
     setSpinPaused(v) { paused = v; },
-    update(dt) { if (!paused) object.rotation.y += SPIN_RATE * dt; },
+    setRealSun(v) { realSun = !!v; if (realSun) aimSun(); },
+    isRealSun: () => realSun,
+    update(dt) {
+      if (realSun) {
+        // 平滑轉回最近的整圈位置(轉角 = 2π 的整數倍),不要一下子跳過去
+        const target = Math.round(object.rotation.y / (2 * Math.PI)) * 2 * Math.PI;
+        const d = target - object.rotation.y;
+        object.rotation.y += Math.abs(d) < 1e-4 ? d : d * Math.min(1, dt * 2.5);
+        return;
+      }
+      if (!paused) object.rotation.y += SPIN_RATE * dt;
+    },
   };
 }

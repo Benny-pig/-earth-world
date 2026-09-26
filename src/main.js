@@ -309,6 +309,14 @@ export function start() {
     launches.setEnabled(on);
   }
   if (launchToggle) launchToggle.addEventListener("click", () => setLaunches(launchToggle.getAttribute("aria-pressed") !== "true"));
+
+  // 🌗 真實晨昏線:地球停止裝飾性自轉、轉回跟太陽的真實相對位置,哪裡是白天/黑夜照現在的真實時間
+  const sunToggle = document.getElementById("sun-toggle");
+  if (sunToggle) sunToggle.addEventListener("click", () => {
+    const on = sunToggle.getAttribute("aria-pressed") !== "true";
+    sunToggle.setAttribute("aria-pressed", String(on));
+    globe.setRealSun(on);
+  });
   window.__earth.flights = flights;
   const airportBoard = createAirportBoard();
   window.__earth.airportBoard = airportBoard;

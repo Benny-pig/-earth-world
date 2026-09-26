@@ -315,6 +315,38 @@ export function createSatelliteLayer({ globeObject, camera, renderer, rig, natur
     }
     return passes;
   }
+  // 「今晚抬頭看」:把肉眼可見的過境加到行事曆(提前 10 分鐘提醒)。Google 日曆用網址帶參數,
+  // iPhone/Outlook 用 .ics 檔(瀏覽器產生、直接下載,不經過任何伺服器)
+  const icsTime = (d) => d.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
+  function passText(p) {
+    return {
+      title: "🛰️ 國際太空站飛過台灣上空(肉眼可見)",
+      details: `從${compass(p.azStart)}方升起、往${compass(p.azEnd)}方落下,最高仰角約 ${Math.round(p.maxEl)}°。` +
+        `看起來像一顆很亮、不會閃爍、快速移動的星星。(地球世界 · 以台北為觀測點計算)`,
+    };
+  }
+  function calButtons(p) {
+    const { title, details } = passText(p);
+    const start = new Date(p.start.getTime() - 60000), end = new Date(p.end.getTime() + 60000);
+    const g = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}` +
+      `&dates=${icsTime(start)}/${icsTime(end)}&details=${encodeURIComponent(details)}&location=${encodeURIComponent("台灣")}`;
+    return `<div class="orbit-cal"><a class="tc-btn" href="${esc(g)}" target="_blank" rel="noopener">📅 加到 Google 日曆</a>` +
+      `<button type="button" class="tc-btn" data-ics="${start.getTime()}|${end.getTime()}|${Math.round(p.maxEl)}|${p.azStart}|${p.azEnd}">⬇️ 行事曆檔(iPhone/Outlook)</button></div>`;
+  }
+  function downloadIcs(btn) {
+    const [s0, e0, maxEl, a0, a1] = btn.dataset.ics.split("|").map(Number);
+    const { title, details } = passText({ maxEl, azStart: a0, azEnd: a1 });
+    const ics = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//earth-world//ISS pass//ZH", "BEGIN:VEVENT",
+      `UID:iss-${s0}@earth-world`, `DTSTAMP:${icsTime(new Date())}`, `DTSTART:${icsTime(new Date(s0))}`, `DTEND:${icsTime(new Date(e0))}`,
+      `SUMMARY:${title}`, `DESCRIPTION:${details}`, "LOCATION:台灣",
+      "BEGIN:VALARM", "TRIGGER:-PT10M", "ACTION:DISPLAY", "DESCRIPTION:國際太空站 10 分鐘後飛過,準備抬頭看!", "END:VALARM",
+      "END:VEVENT", "END:VCALENDAR"].join("\r\n");
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob([ics], { type: "text/calendar;charset=utf-8" }));
+    a.download = `ISS-${new Date(s0).toISOString().slice(0, 10)}.ics`;
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 5000);
+  }
   const compass = (az) => ["北", "東北", "東", "東南", "南", "西南", "西", "西北"][Math.round(((az % 360) + 360) % 360 / 45) % 8];
   const fmt = (d) => new Intl.DateTimeFormat("zh-TW", { timeZone: "Asia/Taipei", month: "numeric", day: "numeric", weekday: "short", hour: "2-digit", minute: "2-digit", hour12: false }).format(d);
 
@@ -332,7 +364,8 @@ export function createSatelliteLayer({ globeObject, camera, renderer, rig, natur
       const row = (p) => `<div class="orbit-pass${p.visible ? " vis" : ""}">` +
         `<b>${esc(fmt(p.start))}</b> 起 約 ${Math.max(1, Math.round((p.end - p.start) / 60000))} 分鐘` +
         `<span class="orbit-pass-sub">從${compass(p.azStart)}方升起 → ${compass(p.azEnd)}方落下 · 最高仰角 ${Math.round(p.maxEl)}°</span>` +
-        `<span class="orbit-pass-tag">${p.visible ? "✨ 肉眼可見(天黑後、太空站被陽光照亮)" : "看不到(白天或在地球陰影中)"}</span></div>`;
+        `<span class="orbit-pass-tag">${p.visible ? "✨ 肉眼可見(天黑後、太空站被陽光照亮)" : "看不到(白天或在地球陰影中)"}</span>` +
+        (p.visible ? calButtons(p) : "") + `</div>`;
       const vis = passes.filter((p) => p.visible).slice(0, 4);
       const next = passes.slice(0, 4);
       $("orbit-passes").innerHTML = !passes.length
@@ -371,6 +404,10 @@ export function createSatelliteLayer({ globeObject, camera, renderer, rig, natur
       if (followId) { followId = null; renderPanelLive(); }
     });
     $("orbit-close").addEventListener("click", () => onClose && onClose());
+    $("orbit-passes").addEventListener("click", (e) => {
+      const b = e.target.closest("[data-ics]");
+      if (b) downloadIcs(b);
+    });
   }
 
   async function setEnabled(v) {
