@@ -266,6 +266,7 @@ export function start() {
   const radio = createRadioLayer({
     globeObject: globe.object, camera, renderer, music,
     onChange: () => radioPanel && radioPanel.refresh(),
+    contentReady: dataReady,
   });
   window.__earth.radio = radio;
   const radioToggle = document.getElementById("radio-toggle");

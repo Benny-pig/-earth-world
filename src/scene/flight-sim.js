@@ -40,6 +40,12 @@ function fmtLocal(tz, date) {
 function oceanName(lat, lon) {
   if (lat > 66) return "北冰洋";
   if (lat < -58) return "南冰洋";
+  // 台灣附近常飛的海域叫出正確名字
+  if (lon >= 118.5 && lon <= 120.6 && lat >= 22.3 && lat <= 25.6) return "台灣海峽";
+  if (lon >= 119 && lon <= 127 && lat > 33.5 && lat <= 41) return "黃海";
+  if (lon >= 120 && lon <= 131 && lat > 24 && lat <= 33.5) return "東海";
+  // 日本海在本州「背面」:以本州中線(約從 131°E,33.7°N 斜到 140.5°E,39°N)分,中線以北才算
+  if (lon > 127 && lon <= 142 && lat > 33.5 && lat <= 52 && lat > 33.7 + 0.56 * (lon - 131)) return "日本海";
   if (lon >= 20 && lon <= 120 && lat < 24) return (lon > 100 && lat > -8) ? "南海與東南亞海域" : "印度洋";
   if (lon > 120 && lon < 147 && lat < -30) return "印度洋";
   const atlWest = lat > 10 ? -98 : -70;
@@ -161,6 +167,9 @@ export function createFlightSim({ globeObject, camera, renderer, rig, openCountr
     wp.copy(pLocal); globeObject.localToWorld(wp);
     const dir = wp.clone().normalize();
     ray.set(dir.clone().multiplyScalar(1.6), dir.clone().negate());
+    // 只看到地面為止(從 1.6 倍半徑往下 0.6 就是地表):不設限的話,在海上沒打到國家時
+    // 射線會穿過地球打到「地球另一面」的國家(台灣、日本的正對面剛好是阿根廷、巴拉圭)
+    ray.far = 0.65;
     if (layer) {
       const hits = ray.intersectObjects(layer.group.children, true);
       for (const h of hits) {

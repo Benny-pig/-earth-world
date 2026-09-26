@@ -110,7 +110,7 @@ function latLonToVec3(latDeg, lonDeg, r = 1) {
   return new THREE.Vector3(r * cl * Math.cos(lon), r * Math.sin(lat), -r * cl * Math.sin(lon));
 }
 
-export function createRadioLayer({ globeObject, camera, renderer, music, onChange }) {
+export function createRadioLayer({ globeObject, camera, renderer, music, onChange, contentReady }) {
   const host = document.getElementById("radio-labels");
   const nowPlayingEl = document.getElementById("radio-now-playing");
   const countryNameEl = document.getElementById("radio-country-name");
@@ -251,6 +251,9 @@ export function createRadioLayer({ globeObject, camera, renderer, music, onChang
 
   function fetchStations() {
     if (!loadPromise) loadPromise = (async () => {
+      // 國家資料還沒載完就先等:手機網路慢時,讀者常在資料到之前就按下電台,以前這時
+      // 會拿到「空的國家清單」→ 一台都沒抓到,而且這個空結果被快取住,之後怎麼開都沒有電台
+      if (contentReady) await contentReady.catch(() => {});
       const content = window.__earth?.content || {};
       const codes = Object.keys(content);
       const picks = await Promise.allSettled(codes.map(async (code) => {
@@ -265,6 +268,8 @@ export function createRadioLayer({ globeObject, camera, renderer, music, onChang
           if (hit) resolved.push(hit);
         });
       }
+      // 一台都沒抓到(網路斷線、目錄站暫時掛掉):不要快取這個空結果,下次打開再重抓
+      if (!resolved.length) loadPromise = null;
     })();
     return loadPromise;
   }
