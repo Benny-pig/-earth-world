@@ -368,7 +368,9 @@ export function createEncyclopedia() {
          : `<p class="enc-dim">這個縣市的介紹之後補上。</p>`);
   }
 
+  let currentCode = null;
   async function open(code) {
+    currentCode = code;
     const seq = ++reqSeq;
     titleEl.textContent = "";
     bodyEl.innerHTML = `<p class="enc-dim">載入中…</p>`;
@@ -402,5 +404,5 @@ export function createEncyclopedia() {
     bodyEl.querySelectorAll("iframe").forEach((f) => { f.src = "about:blank"; });
     bodyEl.querySelectorAll("video").forEach((v) => { v.pause(); });
   }
-  return { open, close, isOpen: () => el.classList.contains("open") };
+  return { open, close, isOpen: () => el.classList.contains("open"), code: () => (el.classList.contains("open") ? currentCode : null) };
 }

@@ -170,5 +170,19 @@ export function createRadioPanel({ radio, rig, onClose }) {
     render();
   }
 
-  return { setOpen, refresh: render };
+  // 分享連結:直接跳到某國(切到該國所在的洲、展開電台清單)
+  async function showCountry(code) {
+    if (!regions) regions = await fetch("data/country-regions.json").then((r) => (r.ok ? r.json() : {})).catch(() => ({}));
+    if (regions[code]) {
+      region = regions[code];
+      regionBox.querySelectorAll("button").forEach((x) => x.classList.toggle("active", x.dataset.region === region));
+    }
+    expanded = code;
+    render();
+    await radio.ready();
+    render();
+    listEl.querySelector(`[data-country="${CSS.escape(code)}"]`)?.scrollIntoView({ block: "start" });
+  }
+
+  return { setOpen, refresh: render, showCountry, expandedCountry: () => expanded };
 }

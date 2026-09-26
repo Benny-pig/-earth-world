@@ -299,5 +299,12 @@ export function createRailPanel({ onClose, onModeChange }) {
     onModeChange && onModeChange(null);
   }
 
-  return { open, close, isOpen: () => isOpen, mode: () => mode };
+  // 分享連結:目前查的起訖站;以及用指定的起訖站打開
+  function state() { return isOpen && fromSel.value && toSel.value ? { mode, from: fromSel.value, to: toSel.value } : null; }
+  async function openWith({ mode: m, from, to }) {
+    if (from && to) saved[m] = [from, to];
+    await open(m);
+  }
+
+  return { open, close, isOpen: () => isOpen, mode: () => mode, state, openWith };
 }

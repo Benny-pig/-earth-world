@@ -712,6 +712,12 @@
     transition: transform .12s ease, box-shadow .2s ease;
   }
   #side-panel .sp-more:hover { transform: translateY(-1px); box-shadow: 0 6px 22px rgba(47,109,246,.5); }
+  /* 側欄裡的分享鈕(右上角的分享鈕會被側欄蓋住) */
+  #side-panel .sp-share {
+    display: inline-flex; align-items: center; gap: 6px; margin: 2px 0 6px; padding: 6px 12px; border-radius: 8px; cursor: pointer;
+    background: rgba(255,255,255,.06); border: 1px solid rgba(120,170,255,.35); color: inherit; font: 600 12.5px system-ui, "Microsoft JhengHei", sans-serif;
+  }
+  #side-panel .sp-share:hover { background: rgba(120,170,255,.16); }
   #side-panel .sp-more .sp-more-ico { font-size: 16px; }
   #side-panel .sp-more.pulse { animation: spMorePulse 1.4s ease-out 2; }
   @keyframes spMorePulse {
@@ -865,7 +871,7 @@
     transition: background .15s, border-color .15s;
   }
   #encyclopedia .enc-agency:hover { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.34); }
-  #encyclopedia .enc-theme-btn { font-size: 12px; }
+  #encyclopedia .enc-theme-btn, #encyclopedia .enc-share-btn { font-size: 12px; }
   @media (max-width: 720px) {
     #encyclopedia #enc-body { padding: 32px 20px 120px; }
     #encyclopedia .enc-hero { flex-direction: column-reverse; align-items: flex-start; gap: 18px; }
@@ -1123,7 +1129,7 @@
   body[data-theme="fantasy"] #clock-weather,
   body[data-theme="fantasy"] #audio-ui,
   body[data-theme="fantasy"] .ctrl-card,
-  body[data-theme="fantasy"] #theme-toggle { font-family: 'Cinzel', 'Noto Serif TC', serif; letter-spacing: .03em; }
+  body[data-theme="fantasy"] #theme-toggle, body[data-theme="fantasy"] #share-btn { font-family: 'Cinzel', 'Noto Serif TC', serif; letter-spacing: .03em; }
   /* 右下角控制區:上面「台灣交通」(機場航班、即時路況…)、下面「功能」(全球性的圖層),
      兩張卡片疊在同一個容器裡,各自可以收合,不會互相重疊。卡片樣式共用 .ctrl-card。 */
   #ctrl-dock {
@@ -1191,7 +1197,7 @@
   body[data-theme="fantasy"] .ctrl-card .lc-title { color: #a08a5c; }
   body[data-theme="fantasy"] .ctrl-card .layer-row { color: #f0dfab; }
   body[data-theme="fantasy"] .ctrl-card .layer-row:hover { background: rgba(201,162,39,.14); }
-  body[data-theme="fantasy"] #theme-toggle {
+  body[data-theme="fantasy"] #theme-toggle, body[data-theme="fantasy"] #share-btn {
     background: linear-gradient(180deg,#332714,#1c150c); border: 1px solid #c9a227; color: #f0dfab;
   }
   body[data-theme="fantasy"] .ctrl-card .layer-dot { background: #c9a227; box-shadow: 0 0 6px #c9a227; }
@@ -1276,7 +1282,7 @@
   body[data-theme="journal"] #tw-clock,
   body[data-theme="journal"] #clock-weather,
   body[data-theme="journal"] #audio-ui,
-  body[data-theme="journal"] #theme-toggle,
+  body[data-theme="journal"] #theme-toggle, body[data-theme="journal"] #share-btn,
   body[data-theme="journal"] .ctrl-card,
   body[data-theme="journal"] #country-search input,
   body[data-theme="journal"] #country-search ul {
@@ -1288,7 +1294,7 @@
   body[data-theme="journal"] #tw-clock,
   body[data-theme="journal"] #clock-weather,
   body[data-theme="journal"] #audio-ui,
-  body[data-theme="journal"] #theme-toggle,
+  body[data-theme="journal"] #theme-toggle, body[data-theme="journal"] #share-btn,
   body[data-theme="journal"] .ctrl-card { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", serif; }
   body[data-theme="journal"] #tw-clock .tw-label,
   body[data-theme="journal"] #clock-weather .cw-country { color: #a6572e; }
@@ -1382,11 +1388,11 @@
   body[data-theme="hud"] #clock-weather,
   body[data-theme="hud"] #audio-ui,
   body[data-theme="hud"] .ctrl-card,
-  body[data-theme="hud"] #theme-toggle {
+  body[data-theme="hud"] #theme-toggle, body[data-theme="hud"] #share-btn {
     font-family: 'Share Tech Mono', ui-monospace, monospace; letter-spacing: .02em;
   }
   body[data-theme="hud"] .ctrl-card,
-  body[data-theme="hud"] #theme-toggle {
+  body[data-theme="hud"] #theme-toggle, body[data-theme="hud"] #share-btn {
     background: linear-gradient(180deg,#0e2226,#04121a); border: 1px solid #00e5ff; color: #cdf3ff; border-radius: 3px;
     text-transform: uppercase;
   }
@@ -1513,8 +1519,15 @@
     font: 13px/1.5 system-ui, "Microsoft JhengHei", sans-serif; min-width: 180px;
   }
   /* 版面風格切換:移到右上角(原本「將滑鼠移到國家」提示的位置),不用點進大百科才能選 */
-  #theme-toggle {
-    position: fixed; top: 18px; right: 18px; z-index: 43; cursor: pointer;
+  #top-tools { position: fixed; top: 18px; right: 18px; z-index: 43; display: flex; gap: 6px; }
+  #share-toast {
+    position: fixed; left: 50%; bottom: 90px; transform: translateX(-50%) translateY(10px); z-index: 60;
+    padding: 9px 16px; border-radius: 10px; background: rgba(10,14,26,.94); color: #e7edfb; font: 13px system-ui, "Microsoft JhengHei", sans-serif;
+    border: 1px solid rgba(120,170,255,.4); box-shadow: 0 8px 24px rgba(0,0,0,.5); opacity: 0; pointer-events: none; transition: opacity .2s, transform .2s;
+  }
+  #share-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+  #theme-toggle, #share-btn {
+    cursor: pointer;
     padding: 5px 10px; font-size: 11px; border-radius: 8px;
     background: rgba(4, 6, 12, 0.88); backdrop-filter: blur(10px);
     border: 1px solid rgba(120, 170, 255, 0.22); color: #e7edfb;
@@ -1588,6 +1601,7 @@
     <div class="enc-topbar">
       <button class="enc-back" aria-label="返回地球">‹ 返回</button>
       <span class="enc-title"></span>
+      <button class="enc-share-btn" type="button" data-share aria-label="分享這一頁">🔗 分享</button>
       <button class="enc-theme-btn" aria-label="切換版面主題">🌙 星空</button>
       <button class="enc-close" aria-label="關閉">×</button>
     </div>
@@ -1776,7 +1790,10 @@
     </div>
   </div>
   <div id="side-panel"><button class="close" aria-label="關閉">×</button><div id="side-panel-body"></div></div>
-  <button id="theme-toggle" type="button" aria-label="切換版面主題">🌙 星空</button>
+  <div id="top-tools">
+    <button id="share-btn" type="button" aria-label="分享目前畫面" title="分享目前畫面(複製連結)">🔗 分享</button>
+    <button id="theme-toggle" type="button" aria-label="切換版面主題">🌙 星空</button>
+  </div>
   <div id="clock-weather" hidden></div>
   <div id="audio-ui">
     <button id="audio-toggle" aria-label="背景音樂開關" title="背景音樂">🔊</button>

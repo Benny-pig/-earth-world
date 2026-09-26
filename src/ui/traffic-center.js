@@ -269,6 +269,7 @@ export function createTrafficCenter({ traffic, onClose }) {
       attachPanZoom();
       new ResizeObserver(() => applyTransform()).observe(mapBox);
       applyTransform();
+      if (region) requestAnimationFrame(zoomToRegion);   // 分享連結帶了地區:地圖建好後放大到那一區
     })();
     return mapBuilding;
   }
@@ -603,5 +604,5 @@ export function createTrafficCenter({ traffic, onClose }) {
     if (selectedId && !infoEl.hidden) showInfo(selectedId);
   }
 
-  return { setOpen, onData };
+  return { setOpen, onData, region: () => region, setRegion };
 }

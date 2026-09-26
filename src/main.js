@@ -25,6 +25,7 @@ import { createTrafficLayer } from "./scene/traffic.js";
 import { createTrafficCenter } from "./ui/traffic-center.js";
 import { createRailPanel } from "./ui/rail-panel.js";
 import { createSatelliteLayer } from "./scene/satellites.js";
+import { createShare } from "./ui/share.js";
 import { createNaturePopup } from "./ui/nature-popup.js";
 import { createSidePanel } from "./ui/side-panel.js";
 import { createClockWeather } from "./ui/clock-weather.js";
@@ -118,7 +119,7 @@ export function start() {
 
   // 非同步載入 Natural Earth 50m 國界(由 tools/build-countries-geo.py 產生),掛在地球 group 上跟著自轉
   const tap = (p) => p.finally(() => loading.bumpData());
-  Promise.all([
+  const dataReady = Promise.all([
     tap(fetch("data/countries.geo.json").then((r) => { if (!r.ok) throw new Error("國界資料載入失敗 " + r.status); return r.json(); })),
     tap(fetch("data/country-names-zh-hant.json").then((r) => (r.ok ? r.json() : {})).catch(() => ({}))),
     tap(fetch("data/countries.content.json").then((r) => (r.ok ? r.json() : {})).catch(() => ({}))),
@@ -555,4 +556,11 @@ export function start() {
     requestAnimationFrame(loop);
   }
   loop();
+
+  // 🔗 分享連結:右上角分享鈕;開網站時照網址參數還原畫面(國家資料載入完才能打開國家)
+  const share = createShare({
+    camera, globeObject: globe.object, rig, sidePanel, encyclopedia, trafficCenter, radioPanel, railPanel, openCountryByCode,
+  });
+  window.__earth.share = share;
+  dataReady.then(() => share.applyFromUrl()).catch((e) => console.warn("[share] 還原分享畫面失敗:", e));
 }

@@ -180,7 +180,8 @@ export function createSidePanel({ onClose, onMore }) {
     const moreBtn = onMore && p.code && p.hasDeep
       ? `<button type="button" class="sp-more pulse" data-code="${esc(p.code)}">` +
         `<span class="sp-more-ico">📖</span>${p.region ? "大百科" : "國家大百科"} · 詳細介紹</button>` : "";
-    let html = `${flag}<h2>${esc(p.names.zh)}</h2><div class="en">${esc(p.names.en)}</div>${moreBtn}`;
+    let html = `${flag}<h2>${esc(p.names.zh)}</h2><div class="en">${esc(p.names.en)}</div>${moreBtn}` +
+      `<button type="button" class="sp-share" data-share>🔗 分享這個國家</button>`;
     const meta = [];
     if (p.capital && p.capital.zh) meta.push(`首都:${esc(p.capital.zh)}${p.capital.en ? ` (${esc(p.capital.en)})` : ""}`);
     if (p.population != null && p.population !== "") meta.push(`人口:${fmtPop(p.population)}`);
@@ -273,6 +274,7 @@ export function createSidePanel({ onClose, onMore }) {
   return {
     open,
     close,
+    code: () => (el.classList.contains("open") ? openCode : null),
     isOpen: () => el.classList.contains("open"),
     // 非同步預報回來時呼叫;面板已換國或關閉就忽略
     setForecast(code, days) {
