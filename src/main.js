@@ -24,6 +24,7 @@ import { createAirportBoard } from "./ui/airport-board.js";
 import { createTrafficLayer } from "./scene/traffic.js";
 import { createTrafficCenter } from "./ui/traffic-center.js";
 import { createRailPanel } from "./ui/rail-panel.js";
+import { createSatelliteLayer } from "./scene/satellites.js";
 import { createNaturePopup } from "./ui/nature-popup.js";
 import { createSidePanel } from "./ui/side-panel.js";
 import { createClockWeather } from "./ui/clock-weather.js";
@@ -280,6 +281,19 @@ export function start() {
   });
 
   const flights = createFlightsLayer({ globeObject: globe.object, camera, renderer, naturePopup });
+
+  // 🛰️ 衛星與太空站(功能卡片的一列):地球外圈的衛星 + 太空站標籤/軌跡 + 飛過台灣時間面板
+  const orbitToggle = document.getElementById("orbit-toggle");
+  const orbits = createSatelliteLayer({
+    globeObject: globe.object, camera, renderer, rig, naturePopup,
+    onClose: () => setOrbits(false),
+  });
+  window.__earth.orbits = orbits;
+  function setOrbits(on) {
+    if (orbitToggle) orbitToggle.setAttribute("aria-pressed", String(on));
+    orbits.setEnabled(on);
+  }
+  if (orbitToggle) orbitToggle.addEventListener("click", () => setOrbits(orbitToggle.getAttribute("aria-pressed") !== "true"));
   window.__earth.flights = flights;
   const airportBoard = createAirportBoard();
   window.__earth.airportBoard = airportBoard;
@@ -466,6 +480,8 @@ export function start() {
     // 直接用這次 pointerup 事件自己的座標算,不依賴可能沒更新的共用狀態。
     // 路況開著:先看有沒有點到國道路段
     if (traffic.isEnabled() && traffic.pickAt(e.clientX, e.clientY)) return;
+    // 衛星開著:先看有沒有點到衛星(點地球表面的國家不受影響,只有剛好點在衛星圓點上才算)
+    if (orbits.isEnabled() && orbits.pickAt(e.clientX, e.clientY)) return;
     pointer.x = (e.clientX / window.innerWidth) * 2 - 1;
     pointer.y = -(e.clientY / window.innerHeight) * 2 + 1;
     raycaster.setFromCamera(pointer, camera);
@@ -531,6 +547,7 @@ export function start() {
     earthquakes.update();
     radio.update();
     flights.update();
+    orbits.update();
     traffic.update();
     if (window.__earth.countryLabels) window.__earth.countryLabels.update();
 

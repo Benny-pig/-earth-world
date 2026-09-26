@@ -57,6 +57,13 @@ export function createCameraRig({ camera, domElement, globeObject }) {
   }
 
   function update(dt) {
+    // 保險:鏡頭座標萬一變成無效值(NaN),整個地球會變黑、再也轉不回來——直接回到全景
+    const p = camera.position;
+    if (!Number.isFinite(p.x + p.y + p.z) || p.lengthSq() < 1e-6) {
+      p.set(0, 0, fitDistanceForAspect(camera.aspect));
+      camera.lookAt(0, 0, 0);
+      tween = null;
+    }
     if (tween) {
       tween.t = Math.min(1, tween.t + (dt * 1000) / tween.ms);
       const k = easeInOutCubic(tween.t);
