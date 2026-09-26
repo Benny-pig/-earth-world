@@ -25,6 +25,7 @@ import { createTrafficLayer } from "./scene/traffic.js";
 import { createTrafficCenter } from "./ui/traffic-center.js";
 import { createRailPanel } from "./ui/rail-panel.js";
 import { createSatelliteLayer } from "./scene/satellites.js";
+import { createLaunchLayer } from "./scene/launches.js";
 import { createShare } from "./ui/share.js";
 import { createNaturePopup } from "./ui/nature-popup.js";
 import { createSidePanel } from "./ui/side-panel.js";
@@ -295,6 +296,19 @@ export function start() {
     orbits.setEnabled(on);
   }
   if (orbitToggle) orbitToggle.addEventListener("click", () => setOrbits(orbitToggle.getAttribute("aria-pressed") !== "true"));
+
+  // 🚀 太空發射日曆(功能卡片的一列):地球上的發射場 🚀 + 未來 30 天發射清單與倒數
+  const launchToggle = document.getElementById("launch-toggle");
+  const launches = createLaunchLayer({
+    globeObject: globe.object, camera, renderer, rig, naturePopup,
+    onClose: () => setLaunches(false),
+  });
+  window.__earth.launches = launches;
+  function setLaunches(on) {
+    if (launchToggle) launchToggle.setAttribute("aria-pressed", String(on));
+    launches.setEnabled(on);
+  }
+  if (launchToggle) launchToggle.addEventListener("click", () => setLaunches(launchToggle.getAttribute("aria-pressed") !== "true"));
   window.__earth.flights = flights;
   const airportBoard = createAirportBoard();
   window.__earth.airportBoard = airportBoard;
@@ -549,6 +563,7 @@ export function start() {
     radio.update();
     flights.update();
     orbits.update();
+    launches.update();
     traffic.update();
     if (window.__earth.countryLabels) window.__earth.countryLabels.update();
 
