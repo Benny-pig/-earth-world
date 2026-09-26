@@ -351,6 +351,42 @@
   .ap-badge.tf-l3 { background: rgba(255,140,26,.15); color: #ffaa55; }
   .ap-badge.tf-l4 { background: rgba(255,59,48,.15); color: #ff7a72; }
   .ap-badge.tf-l5 { background: rgba(181,23,158,.18); color: #f07ada; }
+  /* 📅 歷史上的今天:面板 + 自動導覽時的字幕卡 */
+  #otd-panel {
+    position: fixed; top: 110px; left: 18px; z-index: 44;
+    width: 360px; min-width: 280px; max-width: calc(100vw - 36px);
+    height: 540px; min-height: 240px; max-height: calc(100vh - 140px);
+    display: flex; flex-direction: column; resize: both; overflow: hidden;
+    padding: 12px; border-radius: 12px; background: rgba(10, 14, 26, 0.92); backdrop-filter: blur(10px);
+    border: 1px solid rgba(120, 170, 255, 0.3); color: #e7edfb; box-shadow: 0 10px 32px rgba(0,0,0,.5);
+    font: 13px system-ui, "Microsoft JhengHei", sans-serif;
+  }
+  #otd-panel .sat-head { display: flex; align-items: center; gap: 6px; margin-bottom: 6px; }
+  #otd-panel .sat-title { font-weight: 700; font-size: 14px; margin-right: auto; }
+  .otd-tour { align-self: flex-start; margin-bottom: 6px; flex-shrink: 0; font-size: 12.5px; padding: 5px 12px; }
+  .otd-row { cursor: default; }
+  .otd-row.otd-geo { cursor: pointer; }
+  .otd-row.otd-geo:hover { background: rgba(120,170,255,.08); }
+  .otd-row.on { background: rgba(255,209,102,.12); border-radius: 8px; }
+  .otd-year { font-weight: 800; font-size: 15px; color: #ffd08a; font-variant-numeric: tabular-nums; }
+  .otd-text { margin-top: 2px; line-height: 1.55; }
+  .otd-countries { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+  .otd-c { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 1px 6px; border-radius: 6px; background: rgba(120,170,255,.14); }
+  .otd-flag { width: 14px; height: auto; border-radius: 2px; }
+  #otd-caption {
+    position: fixed; left: 50%; bottom: 84px; transform: translateX(-50%); z-index: 46; width: min(560px, calc(100vw - 24px));
+    padding: 12px 16px; border-radius: 14px; background: rgba(6,10,20,.9); backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,209,102,.5); color: #f2f5ff; box-shadow: 0 10px 30px rgba(0,0,0,.5);
+    font: 14px/1.6 system-ui, "Microsoft JhengHei", sans-serif; animation: otd-in .5s ease-out;
+  }
+  @keyframes otd-in { from { opacity: 0; transform: translateX(-50%) translateY(12px); } }
+  .otd-cap-k { font-size: 12px; font-weight: 700; color: #ffd166; margin-bottom: 3px; }
+  .otd-cap-stop { margin-top: 6px; padding: 3px 10px; border-radius: 6px; border: 1px solid rgba(255,255,255,.3); background: none; color: inherit; font-size: 12px; cursor: pointer; }
+  body[data-theme="journal"] .otd-year { color: #a6572e; }
+  @media (max-width: 640px) {
+    #otd-panel { top: 150px; left: 8px; right: 8px; width: auto; min-width: 0; max-width: none; height: 30vh; resize: none; z-index: 45; }
+    #otd-caption { bottom: 64px; font-size: 13px; }
+  }
   /* 🚀 太空發射日曆面板 + 地球上發射場標記 */
   #launch-panel {
     position: fixed; top: 110px; left: 18px; z-index: 44;
@@ -1254,7 +1290,8 @@
   body[data-theme="fantasy"] #radio-panel,
   body[data-theme="fantasy"] #rail-panel,
   body[data-theme="fantasy"] #orbit-panel,
-  body[data-theme="fantasy"] #launch-panel {
+  body[data-theme="fantasy"] #launch-panel,
+  body[data-theme="fantasy"] #otd-panel {
     background: linear-gradient(180deg,#332714,#1c150c); border: 1px solid #c9a227; color: #f0dfab;
   }
   body[data-theme="fantasy"] #satellite-close,
@@ -1362,7 +1399,8 @@
   body[data-theme="journal"] #radio-panel,
   body[data-theme="journal"] #rail-panel,
   body[data-theme="journal"] #orbit-panel,
-  body[data-theme="journal"] #launch-panel {
+  body[data-theme="journal"] #launch-panel,
+  body[data-theme="journal"] #otd-panel {
     background: #f3ede0; border-color: rgba(120,90,50,.28); color: #3b332a;
   }
   body[data-theme="journal"] #satellite-close,
@@ -1453,7 +1491,8 @@
   body[data-theme="hud"] #radio-panel,
   body[data-theme="hud"] #rail-panel,
   body[data-theme="hud"] #orbit-panel,
-  body[data-theme="hud"] #launch-panel {
+  body[data-theme="hud"] #launch-panel,
+  body[data-theme="hud"] #otd-panel {
     background: linear-gradient(180deg,#0e2226,#04121a); border: 1px solid #00e5ff; color: #cdf3ff; border-radius: 3px;
   }
   body[data-theme="hud"] #satellite-close,
@@ -1688,6 +1727,16 @@
     <div id="airport-list" class="ap-list"></div>
     <div id="airport-caption" class="sat-caption"></div>
   </div>
+  <div id="otd-panel" hidden>
+    <div class="sat-head">
+      <span class="sat-title">📅 歷史上的今天 · <span id="otd-date"></span></span>
+      <button id="otd-close" class="rp-head-btn" type="button" aria-label="關閉">×</button>
+    </div>
+    <button id="otd-tour" class="tc-btn otd-tour" type="button">▶ 自動導覽</button>
+    <div id="otd-list" class="ap-list"></div>
+    <div class="sat-caption">資料來源:維基百科「歷史上的今天」(CC BY-SA 4.0)· 點一則事件,地球飛到事發地點</div>
+  </div>
+  <div id="otd-caption" hidden></div>
   <div id="launch-panel" hidden>
     <div class="sat-head">
       <span class="sat-title">🚀 太空發射日曆</span>
@@ -1908,6 +1957,9 @@
         </button>
         <button id="sun-toggle" class="layer-row" type="button" aria-pressed="false" title="地球停止自轉,白天黑夜照現在的真實時間顯示">
           <span class="layer-dot"></span>真實晨昏線
+        </button>
+        <button id="otd-toggle" class="layer-row" type="button" aria-pressed="false">
+          <span class="layer-dot"></span>歷史上的今天
         </button>
       </div>
     </div>

@@ -26,6 +26,7 @@ import { createTrafficCenter } from "./ui/traffic-center.js";
 import { createRailPanel } from "./ui/rail-panel.js";
 import { createSatelliteLayer } from "./scene/satellites.js";
 import { createLaunchLayer } from "./scene/launches.js";
+import { createOnThisDay } from "./ui/on-this-day.js";
 import { createShare } from "./ui/share.js";
 import { createNaturePopup } from "./ui/nature-popup.js";
 import { createSidePanel } from "./ui/side-panel.js";
@@ -309,6 +310,15 @@ export function start() {
     launches.setEnabled(on);
   }
   if (launchToggle) launchToggle.addEventListener("click", () => setLaunches(launchToggle.getAttribute("aria-pressed") !== "true"));
+
+  // 📅 歷史上的今天(功能卡片的一列):今天這個日期歷年發生的大事,點一則飛到事發地點,也能自動導覽
+  const otdToggle = document.getElementById("otd-toggle");
+  const otd = createOnThisDay({ rig, onClose: () => setOtd(false) });
+  function setOtd(on) {
+    if (otdToggle) otdToggle.setAttribute("aria-pressed", String(on));
+    otd.setEnabled(on);
+  }
+  if (otdToggle) otdToggle.addEventListener("click", () => setOtd(otdToggle.getAttribute("aria-pressed") !== "true"));
 
   // 🌗 真實晨昏線:地球停止裝飾性自轉、轉回跟太陽的真實相對位置,哪裡是白天/黑夜照現在的真實時間
   const sunToggle = document.getElementById("sun-toggle");
