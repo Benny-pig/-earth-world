@@ -90,38 +90,88 @@ export function buildCountryLayer(geojson, { radius = 1.002 } = {}) {
   const group = new THREE.Group();
   const meshByCode = new Map();
 
+  // 點國家/滑過的判斷用的索引:每塊多邊形的經緯度外框 + 原始座標。以前是拿射線去打
+  // 每一國的三角網格(大國幾萬個三角形,一次 5 毫秒以上,每秒 20 次),手機上操作會卡;
+  // 改成先算射線打到地球表面的經緯度,再查它落在哪一國的多邊形裡,快幾十倍。
+  const polyIndex = [];   // { code, bbox: [minLon, minLat, maxLon, maxLat], rings }
+  const pending = [];     // 還沒建好三角網格的國家(載入後分批建,不要一次卡住畫面)
+
   for (const feature of geojson.features) {
     const code = countryCode(feature);
     const names = countryNames(feature);
-    const geoms = [];
-    let biggestRing = null, biggestLen = -1;
-
+    let biggestRing = null, biggestLen = -1, any = false;
     for (const rings of iterCountryPolygons(feature)) {
-      try {
-        geoms.push(ringsToMeshGeometry(rings, radius));
-        if (rings[0].length > biggestLen) { biggestLen = rings[0].length; biggestRing = rings[0]; }
-      } catch (e) {
-        console.warn("[country-layer] 三角化失敗,略過一塊多邊形:", code, e.message);
+      if (!rings.length || !rings[0].length) continue;
+      any = true;
+      let minLon = 180, minLat = 90, maxLon = -180, maxLat = -90;
+      for (const [lon, lat] of rings[0]) {
+        if (lon < minLon) minLon = lon;
+        if (lon > maxLon) maxLon = lon;
+        if (lat < minLat) minLat = lat;
+        if (lat > maxLat) maxLat = lat;
       }
+      polyIndex.push({ code, bbox: [minLon, minLat, maxLon, maxLat], rings });
+      if (rings[0].length > biggestLen) { biggestLen = rings[0].length; biggestRing = rings[0]; }
     }
-    if (!geoms.length) continue;
+    if (!any || meshByCode.has(code)) continue;
 
     // 平常(沒被指到、沒被選取)透明度只有 0.001,肉眼看不見,卻實測佔了每幀
-    // 繪製時間的大半——raycaster 不管 material.visible,點選/滑過偵測照常運作,
-    // 所以平常直接不畫,只有滑過/選取時才打開(見 setOpacity)。
+    // 繪製時間的大半——所以平常直接不畫,只有滑過/選取時才打開(見 setOpacity)。
     const material = new THREE.MeshBasicMaterial({
       color: 0xffffff, transparent: true, opacity: BASE_OPACITY, visible: false,
       depthWrite: false, depthTest: false, side: THREE.DoubleSide,
     });
-    // 同一國的所有島嶼合併成一個 mesh:50m 精細地圖有一千六百多塊多邊形,每塊
-    // 一個 mesh 就是一千六百多次繪製呼叫,合併後只剩國家數量(約 240 次)。
-    const merged = geoms.length === 1 ? geoms[0] : mergeGeometries(geoms, false);
-    if (merged !== geoms[0]) geoms.forEach((g) => g.dispose());
     const wrap = new THREE.Group();
-    wrap.add(new THREE.Mesh(merged, material));
     wrap.userData = { code, names, centroidLatLon: biggestRing ? ringCentroid(biggestRing) : [0, 0], material, feature };
     group.add(wrap);
     meshByCode.set(code, wrap);
+    pending.push(code);
+  }
+
+  // 建一國的三角網格(同一國的所有島嶼合併成一個 mesh:50m 精細地圖有一千六百多塊多邊形,
+  // 每塊一個 mesh 就是一千六百多次繪製呼叫,合併後只剩國家數量)
+  const built = new Set();
+  function ensureMesh(code) {
+    if (built.has(code)) return;
+    built.add(code);
+    const wrap = meshByCode.get(code);
+    if (!wrap) return;
+    const geoms = [];
+    for (const rings of iterCountryPolygons(wrap.userData.feature)) {
+      try { geoms.push(ringsToMeshGeometry(rings, radius)); }
+      catch (e) { console.warn("[country-layer] 三角化失敗,略過一塊多邊形:", code, e.message); }
+    }
+    if (!geoms.length) return;
+    const merged = geoms.length === 1 ? geoms[0] : mergeGeometries(geoms, false);
+    if (merged !== geoms[0]) geoms.forEach((g) => g.dispose());
+    wrap.add(new THREE.Mesh(merged, wrap.userData.material));
+  }
+  // 分批建:每次最多用 8 毫秒就讓出主執行緒,畫面(包括開場運鏡)不會卡一下
+  (function pump() {
+    const t0 = performance.now();
+    while (pending.length && performance.now() - t0 < 8) ensureMesh(pending.shift());
+    if (pending.length) setTimeout(pump, 16);
+  })();
+
+  function inRing(ring, lon, lat) {
+    let inside = false;
+    for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+      const xi = ring[i][0], yi = ring[i][1], xj = ring[j][0], yj = ring[j][1];
+      if ((yi > lat) !== (yj > lat) && lon < ((xj - xi) * (lat - yi)) / (yj - yi) + xi) inside = !inside;
+    }
+    return inside;
+  }
+  // 經緯度 → 國家代碼(沒有落在任何國家 = 海上,回傳 null)
+  function codeAt(lat, lon) {
+    for (const p of polyIndex) {
+      const b = p.bbox;
+      if (lon < b[0] || lon > b[2] || lat < b[1] || lat > b[3]) continue;
+      if (!inRing(p.rings[0], lon, lat)) continue;
+      let hole = false;
+      for (let h = 1; h < p.rings.length; h++) if (inRing(p.rings[h], lon, lat)) { hole = true; break; }
+      if (!hole && meshByCode.has(p.code)) return p.code;
+    }
+    return null;
   }
 
   function setOpacity(m, v) {
@@ -138,6 +188,7 @@ export function buildCountryLayer(geojson, { radius = 1.002 } = {}) {
     }
     hoverCode = code;
     if (hoverCode && hoverCode !== selectedCode && meshByCode.has(hoverCode)) {
+      ensureMesh(hoverCode);
       const m = meshByCode.get(hoverCode).userData.material;
       setOpacity(m, HOVER_OPACITY); m.color.set(HOVER_COLOR);
     }
@@ -186,6 +237,7 @@ export function buildCountryLayer(geojson, { radius = 1.002 } = {}) {
     if (selOutline) selOutline.visible = false;
 
     if (!code || !meshByCode.has(code)) return;
+    ensureMesh(code);
     selectedCode = code;
     selT = 0;
     const w = meshByCode.get(code);
@@ -236,22 +288,24 @@ export function buildCountryLayer(geojson, { radius = 1.002 } = {}) {
     }
   }
 
-  function pick(raycaster, occluder) {
-    const hits = raycaster.intersectObjects(group.children, true);
-    if (!hits.length) return null;
-    if (occluder) {
-      const occ = raycaster.intersectObject(occluder, false)[0];
-      // country layer sits at radius 1.002 vs globe 1.0, so a legit near-side
-      // country hit is only ~0.002-0.02 in front of the globe surface hit
-      if (occ && hits[0].distance > occ.distance + 0.02) return null;
-    }
-    let node = hits[0].object;
-    while (node && !node.userData.code) node = node.parent;
-    if (!node) return null;
-    const { code, names, centroidLatLon, feature } = node.userData;
+  // 射線 → 打到地球表面哪個國家。先把射線換到地球自己的座標(地球會自轉),用球面公式
+  // 算交點(第一個交點就是面向我們的那一面,不會穿到背面),換成經緯度後查國家。
+  const invMat = new THREE.Matrix4(), localRay = new THREE.Ray(), hitPt = new THREE.Vector3();
+  const pickSphere = new THREE.Sphere(new THREE.Vector3(), radius);
+  function pick(raycaster) {
+    group.updateWorldMatrix(true, false);
+    invMat.copy(group.matrixWorld).invert();
+    localRay.copy(raycaster.ray).applyMatrix4(invMat);
+    if (!localRay.intersectSphere(pickSphere, hitPt)) return null;
+    const r = hitPt.length() || 1;
+    const lat = Math.asin(THREE.MathUtils.clamp(hitPt.y / r, -1, 1)) * 180 / Math.PI;
+    const lon = Math.atan2(-hitPt.z, hitPt.x) * 180 / Math.PI;
+    const code = codeAt(lat, lon);
+    if (!code) return null;
+    const { names, centroidLatLon, feature } = meshByCode.get(code).userData;
     const pop = feature && feature.properties ? feature.properties.POP_EST : null;
     return { code, names, centroidLatLon, pop: Number.isFinite(pop) ? pop : null };
   }
 
-  return { group, pick, setHover, setSelected, update, hasSelection: () => selectedCode != null, meshByCode };
+  return { group, pick, codeAt, ensureMesh, setHover, setSelected, update, hasSelection: () => selectedCode != null, meshByCode };
 }

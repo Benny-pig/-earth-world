@@ -32,6 +32,7 @@ import { createPassport } from "./ui/passport.js";
 import { createFlightSim } from "./scene/flight-sim.js";
 import { createLiveCams } from "./scene/livecams.js";
 import { shouldPlayIntro, createIntro } from "./ui/intro.js";
+import { LITE } from "./lib/device.js";
 import { createShare } from "./ui/share.js";
 import { setupPwa } from "./ui/pwa.js";
 import { createNaturePopup } from "./ui/nature-popup.js";
@@ -179,6 +180,7 @@ export function start() {
   const MAX_PIXEL_RATIO = 1.5;
   const renderer = new THREE.WebGLRenderer({ antialias: false });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, MAX_PIXEL_RATIO));
+  starfield.setPixelRatio(renderer.getPixelRatio());   // 星點大小跟實際畫面解析度一致
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
   renderer.toneMappingExposure = 1.0;
@@ -195,11 +197,14 @@ export function start() {
     0.92    // threshold — high: only the brightest pixels (city lights, star cores) bloom, NOT the lit earth face
   );
   composer.addPass(bloomPass);
-  const smaaPass = new SMAAPass(
-    window.innerWidth * renderer.getPixelRatio(),
-    window.innerHeight * renderer.getPixelRatio()
-  );
-  composer.addPass(smaaPass);
+  // 手機/平板:螢幕像素密度高,鋸齒本來就不明顯,省下 SMAA 三道全畫面處理,操作更順
+  if (!LITE) {
+    const smaaPass = new SMAAPass(
+      window.innerWidth * renderer.getPixelRatio(),
+      window.innerHeight * renderer.getPixelRatio()
+    );
+    composer.addPass(smaaPass);
+  }
   composer.addPass(new OutputPass());
 
   window.__earth = { scene, camera, renderer };
@@ -224,7 +229,7 @@ export function start() {
         document.body.classList.remove("intro-playing");
         setTimeout(() => document.body.classList.remove("intro-fade"), 1000);
       };
-      const timer = setTimeout(showUi, 3900);
+      const timer = setTimeout(showUi, 3300);
       document.addEventListener("pointerdown", () => { clearTimeout(timer); showUi(); }, { once: true });
       window.addEventListener("keydown", () => { clearTimeout(timer); showUi(); }, { once: true });
     });
@@ -635,6 +640,7 @@ export function start() {
   let hovered = null;
   let hitGlobe = false;
   let lastPickAt = 0;
+  const globeSphere = new THREE.Sphere(new THREE.Vector3(0, 0, 0), 1);
 
   const clock = new THREE.Clock();
   function loop() {
@@ -648,7 +654,7 @@ export function start() {
       lastPickAt = now;
       raycaster.setFromCamera(pointer, camera);
       hovered = window.__earth.countryLayer ? window.__earth.countryLayer.pick(raycaster, globe.mesh) : null;
-      hitGlobe = !!hovered || raycaster.intersectObject(globe.mesh, false).length > 0;
+      hitGlobe = !!hovered || raycaster.ray.intersectsSphere(globeSphere);
       if (window.__earth.countryLayer) window.__earth.countryLayer.setHover(hovered ? hovered.code : null);
       if (hovered) tooltip.show(pointerPx.x, pointerPx.y, hovered.names);
       else tooltip.hide();

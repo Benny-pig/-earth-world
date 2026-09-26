@@ -160,27 +160,12 @@ export function createFlightSim({ globeObject, camera, renderer, rig, openCountr
   }
 
   // ---------- 正在飛越哪裡 ----------
-  const ray = new THREE.Raycaster();
-  const wp = new THREE.Vector3();
   function overWhat(pLocal) {
-    const layer = cl();
-    wp.copy(pLocal); globeObject.localToWorld(wp);
-    const dir = wp.clone().normalize();
-    ray.set(dir.clone().multiplyScalar(1.6), dir.clone().negate());
-    // 只看到地面為止(從 1.6 倍半徑往下 0.6 就是地表):不設限的話,在海上沒打到國家時
-    // 射線會穿過地球打到「地球另一面」的國家(台灣、日本的正對面剛好是阿根廷、巴拉圭)
-    ray.far = 0.65;
-    if (layer) {
-      const hits = ray.intersectObjects(layer.group.children, true);
-      for (const h of hits) {
-        let n = h.object;
-        while (n && !n.userData?.code) n = n.parent;
-        if (n) return { code: n.userData.code };
-      }
-    }
+    // 飛機正下方的經緯度 → 查它落在哪一國(只看正下方那一點,不會算到地球另一面的國家)
     const lat = Math.asin(Math.max(-1, Math.min(1, pLocal.y))) * 180 / Math.PI;
     const lon = Math.atan2(-pLocal.z, pLocal.x) * 180 / Math.PI;
-    return { ocean: oceanName(lat, lon) };
+    const code = cl()?.codeAt?.(lat, lon);
+    return code ? { code } : { ocean: oceanName(lat, lon) };
   }
 
   // ---------- 機上廣播 ----------

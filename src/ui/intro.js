@@ -2,23 +2,19 @@ import * as THREE from "three";
 import { latLonToXYZ } from "../lib/geo.js";
 import { easeInOutCubic, fitDistanceForAspect } from "../scene/camera-controls.js";
 
-// 🎬 開場運鏡:第一次打開(每天一次)時,鏡頭從深太空穿過星空飛向地球,「地球世界」標題浮現,
+// 🎬 開場運鏡:每次打開網站時,鏡頭從深太空穿過星空飛向地球,「地球世界」標題浮現,
 // 最後停在台灣、台灣泛起金色漣漪。點一下、拖曳、滾輪或按「跳過」都能直接結束。
-// 用分享連結打開(要直接看分享的畫面)、系統設定「減少動態效果」時不播。
-// 網址加 ?intro 可以強制重看,加 ?nointro 不播。
-const KEY = "earth-world.intro";
-const DUR = 5.6;             // 秒
+// 用分享連結打開(要直接看分享的畫面)、系統設定「減少動態效果」時不播;網址加 ?nointro 也不播。
+const DUR = 4.8;             // 秒
 const START_DIST = 17;
 const TW = latLonToXYZ(23.7, 121, 1);
-const today = () => new Date().toLocaleDateString("en-CA");
 
 export function shouldPlayIntro() {
   try {
     const q = new URLSearchParams(location.search);
     if (q.has("intro")) return true;
     if (q.has("nointro") || [...q.keys()].length) return false;   // 分享連結:直接到分享的畫面
-    if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) return false;
-    return localStorage.getItem(KEY) !== today();
+    return !window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
   } catch { return false; }
 }
 
@@ -59,7 +55,6 @@ export function createIntro({ camera, rig, globeObject, renderer }) {
     if (state !== "ready") return;
     state = "playing"; t = 0;
     endDist = fitDistanceForAspect(camera.aspect);
-    try { localStorage.setItem(KEY, today()); } catch { /* 存不了就每次都播,也沒關係 */ }
     buildOverlay();
     renderer.domElement.addEventListener("pointerdown", skipOnInput, { once: true });
     renderer.domElement.addEventListener("wheel", skipOnInput, { once: true, passive: true });

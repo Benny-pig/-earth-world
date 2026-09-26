@@ -1,4 +1,5 @@
 """產生手機用的小尺寸貼圖 assets/lite/(網站在手機、平板、省流量模式時改用這一套)。
+銀河背景不縮:它會放大鋪滿整個天空,2K 會糊,而且它是地球出現後才下載,不影響等待時間。
 
 手機螢幕本來就小,4K 貼圖跟 2K 看起來幾乎一樣,但下載量差好幾倍;第一次打開網站時
 要等全部貼圖下載完才能看到地球,用小一號的能明顯縮短等待。原圖更新後重跑這支就好。
@@ -19,7 +20,6 @@ JOBS = [
     ("earth-night-4k.jpg", "earth-night-2k.jpg", 2048, 85),
     ("earth-normal.jpg", "earth-normal-1k.jpg", 1024, 88),
     ("earth-clouds-2k.jpg", "earth-clouds-1k.jpg", 1024, 85),
-    ("milky-way-4k.jpg", "milky-way-2k.jpg", 2048, 80),
 ]
 
 

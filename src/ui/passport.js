@@ -83,7 +83,8 @@ export function createPassport({ globeObject, openCountryByCode, onClose }) {
     if (!layer) return;
     for (const code of Object.keys(stamps)) {
       if (footMeshes.has(code)) continue;
-      const src = layer.meshByCode.get(code)?.children[0];
+      layer.ensureMesh?.(code);
+      const src = layer.meshByCode.get(code)?.children.find((c) => c.isMesh);
       if (!src) continue;
       const m = new THREE.Mesh(src.geometry, footMat);   // 共用國家的幾何,不另外佔記憶體
       m.raycast = () => {};                              // 不影響點選
