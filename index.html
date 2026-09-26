@@ -360,6 +360,67 @@
   .ap-badge.tf-l3 { background: rgba(255,140,26,.15); color: #ffaa55; }
   .ap-badge.tf-l4 { background: rgba(255,59,48,.15); color: #ff7a72; }
   .ap-badge.tf-l5 { background: rgba(181,23,158,.18); color: #f07ada; }
+  /* 🛂 旅行護照:護照封面色(深藍綠 + 金邊),印章用各區顏色、蓋得歪歪的 */
+  #passport-panel {
+    position: fixed; top: 110px; left: 18px; z-index: 44;
+    width: 380px; min-width: 290px; max-width: calc(100vw - 36px);
+    max-height: calc(100vh - 140px); display: flex; flex-direction: column; overflow: hidden;
+    padding: 12px; border-radius: 14px; background: linear-gradient(180deg, rgba(14,38,48,.96), rgba(8,20,30,.96)); backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,201,77,.55); color: #e7edfb; box-shadow: 0 10px 32px rgba(0,0,0,.5);
+    font: 13px system-ui, "Microsoft JhengHei", sans-serif;
+  }
+  #passport-panel[hidden] { display: none; }
+  #passport-panel .sat-head { display: flex; align-items: center; gap: 6px; margin-bottom: 6px; cursor: move; }
+  #passport-panel .sat-title { font-weight: 800; font-size: 15px; margin-right: auto; color: #ffc94d; letter-spacing: .05em; }
+  .pp-body { overflow-y: auto; padding-right: 2px; }
+  .pp-cover { text-align: center; padding: 8px 6px 10px; border-radius: 10px; background: rgba(255,201,77,.08); border: 1px dashed rgba(255,201,77,.4); }
+  .pp-count b { font-size: 34px; font-weight: 900; color: #ffc94d; }
+  .pp-count small { font-size: 13px; opacity: .8; }
+  .pp-bar { height: 8px; border-radius: 99px; background: rgba(255,255,255,.1); overflow: hidden; margin: 6px 0 4px; }
+  .pp-bar i { display: block; height: 100%; border-radius: 99px; background: linear-gradient(90deg, #ffc94d, #ff9f43); transition: width .4s; }
+  .pp-bar.sm { height: 6px; margin: 0; flex: 1; }
+  .pp-sub { font-size: 12px; opacity: .8; }
+  .pp-h { margin: 12px 0 6px; font-weight: 800; font-size: 13.5px; }
+  .pp-h small { font-weight: 500; opacity: .6; margin-left: 4px; font-size: 11.5px; }
+  .pp-regions { display: flex; flex-direction: column; gap: 5px; }
+  .pp-region { display: flex; align-items: center; gap: 8px; font-size: 12.5px; }
+  .pp-region > span:first-child { width: 68px; flex-shrink: 0; }
+  .pp-num { width: 58px; text-align: right; flex-shrink: 0; opacity: .85; font-variant-numeric: tabular-nums; }
+  .pp-badges { display: flex; flex-wrap: wrap; gap: 5px; }
+  .pp-badge { display: inline-flex; flex-direction: column; align-items: center; padding: 4px 8px; border-radius: 9px; font-size: 12px; font-weight: 700;
+    background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.12); opacity: .45; filter: grayscale(1); }
+  .pp-badge small { font-weight: 500; font-size: 10.5px; opacity: .85; }
+  .pp-badge.on { opacity: 1; filter: none; background: rgba(255,201,77,.14); border-color: rgba(255,201,77,.6); }
+  .pp-stamps { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 10px 8px; padding: 4px 2px; }
+  .pp-stamp { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 8px 4px 6px; cursor: pointer;
+    color: var(--pp-c); background: color-mix(in srgb, var(--pp-c) 8%, transparent); border: 2px solid var(--pp-c); border-radius: 10px;
+    box-shadow: inset 0 0 0 2px rgba(8,20,30,.9), inset 0 0 0 3px var(--pp-c); transform: rotate(var(--pp-r)); transition: transform .15s;
+    font: 800 12.5px system-ui, "Microsoft JhengHei", sans-serif; }
+  .pp-stamp:hover { transform: rotate(0) scale(1.06); }
+  .pp-stamp small { font-weight: 600; font-size: 10.5px; letter-spacing: .04em; opacity: .85; }
+  .pp-flag { width: 34px; height: auto; border-radius: 3px; box-shadow: 0 0 0 1px rgba(255,255,255,.2); margin-bottom: 2px; }
+  .pp-empty { text-align: center; padding: 18px 6px; opacity: .8; line-height: 1.8; }
+  .pp-actions { justify-content: center; }
+  /* 蓋章動畫:印章從上方「砰」一聲蓋下來 */
+  #passport-toast { position: fixed; left: 50%; top: 36%; z-index: 62; transform: translate(-50%, -50%); pointer-events: none;
+    display: flex; flex-direction: column; align-items: center; gap: 8px; opacity: 0; }
+  #passport-toast.show { animation: pp-fade 2.6s ease forwards; }
+  #passport-toast.show .ppt-stamp { animation: pp-slam .45s cubic-bezier(.2,1.6,.4,1) both; }
+  .ppt-stamp { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 12px 18px 8px; border-radius: 14px;
+    color: var(--pp-c); border: 3px solid var(--pp-c); background: rgba(8,20,30,.92);
+    box-shadow: inset 0 0 0 3px rgba(8,20,30,.92), inset 0 0 0 5px var(--pp-c), 0 10px 30px rgba(0,0,0,.5);
+    font: 900 18px system-ui, "Microsoft JhengHei", sans-serif; transform: rotate(-6deg); }
+  .ppt-stamp small { font-size: 12px; font-weight: 700; letter-spacing: .06em; }
+  .ppt-flag { width: 54px; border-radius: 4px; margin-bottom: 2px; }
+  .ppt-text { padding: 5px 12px; border-radius: 99px; background: rgba(8,20,30,.9); color: #ffe7a8; font: 700 13px system-ui, "Microsoft JhengHei", sans-serif; }
+  @keyframes pp-slam { 0% { transform: scale(2.4) rotate(-22deg); opacity: 0; } 100% { transform: scale(1) rotate(-6deg); opacity: 1; } }
+  @keyframes pp-fade { 0% { opacity: 1; } 80% { opacity: 1; } 100% { opacity: 0; } }
+  body[data-theme="journal"] #passport-panel .sat-title, body[data-theme="journal"] .pp-count b { color: #a6572e; }
+  body[data-theme="journal"] .pp-stamp { box-shadow: inset 0 0 0 2px #f3ede0, inset 0 0 0 3px var(--pp-c); }
+  @media (max-width: 640px) {
+    #passport-panel { top: auto; bottom: 60px; left: 8px; right: 8px; width: auto; min-width: 0; max-width: none; max-height: 60vh; z-index: 45; }
+    .pp-stamps { grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); }
+  }
   /* 🎯 地理猜謎:遊戲面板;遊戲進行中藏起地球上的國名與滑鼠提示(不然答案就寫在地圖上) */
   body.quiz-mode #country-labels, body.quiz-mode #tooltip { display: none !important; }
   #quiz-panel {
@@ -1354,7 +1415,8 @@
   body[data-theme="fantasy"] #orbit-panel,
   body[data-theme="fantasy"] #launch-panel,
   body[data-theme="fantasy"] #otd-panel,
-  body[data-theme="fantasy"] #quiz-panel {
+  body[data-theme="fantasy"] #quiz-panel,
+  body[data-theme="fantasy"] #passport-panel {
     background: linear-gradient(180deg,#332714,#1c150c); border: 1px solid #c9a227; color: #f0dfab;
   }
   body[data-theme="fantasy"] #satellite-close,
@@ -1464,7 +1526,8 @@
   body[data-theme="journal"] #orbit-panel,
   body[data-theme="journal"] #launch-panel,
   body[data-theme="journal"] #otd-panel,
-  body[data-theme="journal"] #quiz-panel {
+  body[data-theme="journal"] #quiz-panel,
+  body[data-theme="journal"] #passport-panel {
     background: #f3ede0; border-color: rgba(120,90,50,.28); color: #3b332a;
   }
   body[data-theme="journal"] #satellite-close,
@@ -1557,7 +1620,8 @@
   body[data-theme="hud"] #orbit-panel,
   body[data-theme="hud"] #launch-panel,
   body[data-theme="hud"] #otd-panel,
-  body[data-theme="hud"] #quiz-panel {
+  body[data-theme="hud"] #quiz-panel,
+  body[data-theme="hud"] #passport-panel {
     background: linear-gradient(180deg,#0e2226,#04121a); border: 1px solid #00e5ff; color: #cdf3ff; border-radius: 3px;
   }
   body[data-theme="hud"] #satellite-close,
@@ -1800,6 +1864,13 @@
     </div>
     <div id="airport-list" class="ap-list"></div>
     <div id="airport-caption" class="sat-caption"></div>
+  </div>
+  <div id="passport-panel" hidden>
+    <div class="sat-head">
+      <span class="sat-title">🛂 我的旅行護照</span>
+      <button id="passport-close" class="rp-head-btn" type="button" aria-label="關閉">×</button>
+    </div>
+    <div id="passport-body" class="pp-body"></div>
   </div>
   <div id="quiz-panel" hidden>
     <div class="sat-head">
@@ -2045,6 +2116,9 @@
         </button>
         <button id="quiz-toggle" class="layer-row" type="button" aria-pressed="false">
           <span class="layer-dot"></span>地理猜謎遊戲
+        </button>
+        <button id="passport-toggle" class="layer-row" type="button" aria-pressed="false">
+          <span class="layer-dot"></span>旅行護照集章
         </button>
       </div>
     </div>

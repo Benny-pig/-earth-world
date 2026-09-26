@@ -28,6 +28,7 @@ import { createSatelliteLayer } from "./scene/satellites.js";
 import { createLaunchLayer } from "./scene/launches.js";
 import { createOnThisDay } from "./ui/on-this-day.js";
 import { createQuiz } from "./ui/quiz.js";
+import { createPassport } from "./ui/passport.js";
 import { createShare } from "./ui/share.js";
 import { setupPwa } from "./ui/pwa.js";
 import { createNaturePopup } from "./ui/nature-popup.js";
@@ -490,6 +491,7 @@ export function start() {
       latlon: noSettlement ? null : (cll || [lat, lon]),
     });
     window.__earth.countryLayer.setSelected(hit.code);
+    passport.stamp(hit.code);
   }
   window.__earth.openCountry = openCountry;
 
@@ -501,6 +503,17 @@ export function start() {
     quiz.setEnabled(on);
   }
   if (quizToggle) quizToggle.addEventListener("click", () => setQuiz(quizToggle.getAttribute("aria-pressed") !== "true"));
+
+  // 🛂 旅行護照集章:打開國家(openCountry)或大百科時蓋章
+  const passportToggle = document.getElementById("passport-toggle");
+  const passport = createPassport({ globeObject: globe.object, openCountryByCode, onClose: () => setPassport(false) });
+  function setPassport(on) {
+    if (passportToggle) passportToggle.setAttribute("aria-pressed", String(on));
+    passport.setEnabled(on);
+  }
+  if (passportToggle) passportToggle.addEventListener("click", () => setPassport(passportToggle.getAttribute("aria-pressed") !== "true"));
+  const encOpen = encyclopedia.open;
+  encyclopedia.open = (code, ...rest) => { passport.stamp(code); return encOpen(code, ...rest); };
 
   function openCountryByCode(code) {
     const cl = window.__earth.countryLayer;
