@@ -29,6 +29,7 @@ import { createLaunchLayer } from "./scene/launches.js";
 import { createOnThisDay } from "./ui/on-this-day.js";
 import { createQuiz } from "./ui/quiz.js";
 import { createPassport } from "./ui/passport.js";
+import { createFlightSim } from "./scene/flight-sim.js";
 import { createShare } from "./ui/share.js";
 import { setupPwa } from "./ui/pwa.js";
 import { createNaturePopup } from "./ui/nature-popup.js";
@@ -512,6 +513,16 @@ export function start() {
     passport.setEnabled(on);
   }
   if (passportToggle) passportToggle.addEventListener("click", () => setPassport(passportToggle.getAttribute("aria-pressed") !== "true"));
+  // ✈️ 飛行旅程模擬
+  const flightSimToggle = document.getElementById("flightsim-toggle");
+  const flightSim = createFlightSim({ globeObject: globe.object, camera, renderer, rig, openCountryByCode, onClose: () => setFlightSim(false) });
+  window.__earth.flightSim = flightSim;
+  function setFlightSim(on) {
+    if (flightSimToggle) flightSimToggle.setAttribute("aria-pressed", String(on));
+    flightSim.setEnabled(on);
+  }
+  if (flightSimToggle) flightSimToggle.addEventListener("click", () => setFlightSim(flightSimToggle.getAttribute("aria-pressed") !== "true"));
+
   const encOpen = encyclopedia.open;
   encyclopedia.open = (code, ...rest) => { passport.stamp(code); return encOpen(code, ...rest); };
 
@@ -546,6 +557,9 @@ export function start() {
     if (!hit) return;
     // 🎯 地理猜謎進行中:點地球 = 作答,不開國家側欄(遊戲開著時一律不開,免得直接看到答案)
     if (quiz.isEnabled()) { if (quiz.isAwaiting()) quiz.answer(hit.code); return; }
+    // ✈️ 飛行模擬:飛行中點地球不開側欄(鏡頭正跟著飛機);還在選目的地時,點國家 = 選它當目的地
+    if (flightSim.isFlying()) return;
+    if (flightSim.isPicking()) { flightSim.pick(hit.code); return; }
     // 看路況時點在台灣陸地上但沒點中國道(差幾個像素很常見),不要跳出台灣側欄、
     // 把相機拉遠——想看台灣介紹可以點台灣的金色地名
     if (traffic.isEnabled() && hit.code === "TW") return;
@@ -600,6 +614,7 @@ export function start() {
       resumeTimer = setTimeout(() => { globe.setSpinPaused(false); clouds.setSpinPaused(false); resumeTimer = null; }, 1500);
     }
     rig.update(dt);
+    flightSim.update(dt);
 
     oceanLabels.update();
     physicalLabels.update();

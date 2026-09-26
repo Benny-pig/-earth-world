@@ -8,7 +8,7 @@ import * as THREE from "three";
 //   v=23.6,121,2.2  地球視角(緯度,經度,距離;沒有打開國家時才帶)
 // 不需要帳號、不存任何個人資料,資訊都在網址本身。
 const LAYERS = {
-  radio: "radio-toggle", typhoon: "satellite-toggle", flights: "flight-toggle", orbit: "orbit-toggle", launch: "launch-toggle", sun: "sun-toggle", otd: "otd-toggle", quiz: "quiz-toggle", passport: "passport-toggle",
+  radio: "radio-toggle", typhoon: "satellite-toggle", flights: "flight-toggle", orbit: "orbit-toggle", launch: "launch-toggle", sun: "sun-toggle", otd: "otd-toggle", quiz: "quiz-toggle", passport: "passport-toggle", fly: "flightsim-toggle",
   airport: "airport-toggle", traffic: "traffic-toggle",
 };
 const DEFAULT_ON = new Set(["quake"]);
