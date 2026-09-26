@@ -31,6 +31,7 @@ import { createQuiz } from "./ui/quiz.js";
 import { createPassport } from "./ui/passport.js";
 import { createFlightSim } from "./scene/flight-sim.js";
 import { createLiveCams } from "./scene/livecams.js";
+import { shouldPlayIntro, createIntro } from "./ui/intro.js";
 import { createShare } from "./ui/share.js";
 import { setupPwa } from "./ui/pwa.js";
 import { createNaturePopup } from "./ui/nature-popup.js";
@@ -67,6 +68,8 @@ function setupLoadingScreen() {
   const pctEl = document.getElementById("ld-pct");
   const DATA_TOTAL = 3;
   let texLoaded = 0, texTotal = 6, texDone = false, dataLoaded = 0, finished = false;
+  let resolveDone;
+  const done = new Promise((r) => { resolveDone = r; });
 
   function paint() {
     const loaded = texLoaded + dataLoaded;
@@ -82,6 +85,7 @@ function setupLoadingScreen() {
     if (fill) fill.style.width = "100%";
     if (pctEl) pctEl.textContent = "載入完成";
     if (el) { el.classList.add("done"); setTimeout(() => el.remove(), 700); }
+    resolveDone();
   }
   function maybeFinish() { if (texDone && dataLoaded >= DATA_TOTAL) finish(); }
 
@@ -93,6 +97,7 @@ function setupLoadingScreen() {
 
   return {
     bumpData() { dataLoaded++; paint(); maybeFinish(); },
+    done,
   };
 }
 
@@ -202,6 +207,26 @@ export function start() {
 
   const rig = createCameraRig({ camera, domElement: renderer.domElement, globeObject: globe.object });
   window.__earth.rig = rig;
+
+  // 🎬 開場運鏡(每天第一次打開):鏡頭先擺到遠方,載入畫面結束後飛向台灣;播放時其他介面先藏起來
+  const intro = shouldPlayIntro() ? createIntro({ camera, rig, globeObject: globe.object, renderer }) : null;
+  window.__earth.intro = intro;
+  if (intro) {
+    intro.prepare();
+    document.body.classList.add("intro-playing");
+    loading.done.then(() => {
+      intro.play();
+      // 標題淡出時介面跟著淡入
+      const showUi = () => {
+        document.body.classList.add("intro-fade");
+        document.body.classList.remove("intro-playing");
+        setTimeout(() => document.body.classList.remove("intro-fade"), 1000);
+      };
+      const timer = setTimeout(showUi, 3900);
+      document.addEventListener("pointerdown", () => { clearTimeout(timer); showUi(); }, { once: true });
+      window.addEventListener("keydown", () => { clearTimeout(timer); showUi(); }, { once: true });
+    });
+  }
 
   const naturePopup = createNaturePopup();
   window.__earth.naturePopup = naturePopup;
@@ -637,6 +662,7 @@ export function start() {
     }
     rig.update(dt);
     flightSim.update(dt);
+    if (intro) intro.update(dt);
 
     oceanLabels.update();
     physicalLabels.update();

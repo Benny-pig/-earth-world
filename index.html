@@ -374,6 +374,29 @@
   .ap-badge.tf-l3 { background: rgba(255,140,26,.15); color: #ffaa55; }
   .ap-badge.tf-l4 { background: rgba(255,59,48,.15); color: #ff7a72; }
   .ap-badge.tf-l5 { background: rgba(181,23,158,.18); color: #f07ada; }
+  /* 🎬 開場運鏡:標題逐字浮現、跳過鈕、抵達台灣的金色漣漪;播放時先把其他介面藏起來 */
+  body.intro-playing > :not(#app):not(#intro):not(#loading) { opacity: 0 !important; pointer-events: none !important; }
+  body.intro-fade > :not(#app):not(#intro):not(#loading) { transition: opacity .9s ease; }
+  #intro { position: fixed; inset: 0; z-index: 70; pointer-events: none; display: grid; place-items: center; transition: opacity .8s ease; }
+  #intro.out { opacity: 0; }
+  #intro.out .intro-skip { pointer-events: none; }
+  .intro-text { text-align: center; transform: translateY(-20vh); }
+  .intro-title { font: 800 clamp(40px, 9vw, 84px)/1.15 system-ui, "Microsoft JhengHei", sans-serif; letter-spacing: .3em; text-indent: .3em; color: #fff;
+    text-shadow: 0 0 24px rgba(120,180,255,.85), 0 0 60px rgba(80,140,255,.5); }
+  .intro-title span { display: inline-block; opacity: 0; animation: intro-in .9s cubic-bezier(.2,.9,.3,1) forwards; }
+  @keyframes intro-in { from { opacity: 0; transform: translateY(18px) scale(.9); filter: blur(8px); } to { opacity: 1; transform: none; filter: none; } }
+  .intro-sub { margin-top: 14px; font: 500 clamp(14px, 3.6vw, 20px) system-ui, "Microsoft JhengHei", sans-serif; letter-spacing: .4em; text-indent: .4em;
+    color: #cfe0ff; opacity: 0; animation: intro-sub 1.2s 1.2s forwards; }
+  @keyframes intro-sub { to { opacity: .92; } }
+  .intro-skip { position: fixed; right: 20px; bottom: 24px; pointer-events: auto; padding: 8px 18px; border-radius: 99px; cursor: pointer;
+    border: 1px solid rgba(255,255,255,.35); background: rgba(10,14,26,.6); color: #e7edfb; font: 600 13px system-ui, "Microsoft JhengHei", sans-serif; backdrop-filter: blur(6px); }
+  .intro-skip:hover { background: rgba(120,170,255,.25); }
+  .intro-ripple { position: fixed; z-index: 39; width: 0; height: 0; pointer-events: none; }
+  .intro-ripple i { position: absolute; left: -10px; top: -10px; width: 20px; height: 20px; border-radius: 50%; opacity: 0;
+    border: 2px solid rgba(255,201,77,.95); box-shadow: 0 0 12px rgba(255,201,77,.8); animation: intro-ripple 2.2s ease-out forwards; }
+  .intro-ripple i:nth-child(2) { animation-delay: .45s; }
+  .intro-ripple i:nth-child(3) { animation-delay: .9s; }
+  @keyframes intro-ripple { 0% { transform: scale(.4); opacity: 1; } 100% { transform: scale(5.5); opacity: 0; } }
   /* 📺 世界即時景點直播:地球上的直播標記 + 播放面板 */
   #livecam-labels { position: fixed; inset: 0; pointer-events: none; z-index: 38; overflow: hidden; }
   #livecam-labels[hidden] { display: none; }
