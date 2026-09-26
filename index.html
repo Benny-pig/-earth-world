@@ -360,6 +360,59 @@
   .ap-badge.tf-l3 { background: rgba(255,140,26,.15); color: #ffaa55; }
   .ap-badge.tf-l4 { background: rgba(255,59,48,.15); color: #ff7a72; }
   .ap-badge.tf-l5 { background: rgba(181,23,158,.18); color: #f07ada; }
+  /* 🎯 地理猜謎:遊戲面板;遊戲進行中藏起地球上的國名與滑鼠提示(不然答案就寫在地圖上) */
+  body.quiz-mode #country-labels, body.quiz-mode #tooltip { display: none !important; }
+  #quiz-panel {
+    position: fixed; top: 110px; left: 18px; z-index: 44;
+    width: 360px; min-width: 280px; max-width: calc(100vw - 36px);
+    max-height: calc(100vh - 140px); display: flex; flex-direction: column; overflow: hidden;
+    padding: 12px; border-radius: 12px; background: rgba(10, 14, 26, 0.94); backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,196,80,.45); color: #e7edfb; box-shadow: 0 10px 32px rgba(0,0,0,.5);
+    font: 13px system-ui, "Microsoft JhengHei", sans-serif;
+  }
+  #quiz-panel[hidden] { display: none; }
+  #quiz-panel .sat-head { display: flex; align-items: center; gap: 6px; margin-bottom: 6px; cursor: move; }
+  #quiz-panel .sat-title { font-weight: 800; font-size: 15px; margin-right: auto; color: #ffd58a; }
+  .quiz-body { overflow-y: auto; }
+  .quiz-intro { margin: 2px 0 10px; line-height: 1.7; }
+  .quiz-modes { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .quiz-mode { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 10px 6px; border-radius: 10px; cursor: pointer;
+    border: 1px solid rgba(120,170,255,.3); background: rgba(255,255,255,.05); color: inherit; font: 700 14px system-ui, "Microsoft JhengHei", sans-serif; }
+  .quiz-mode small { font-weight: 500; font-size: 11px; opacity: .7; }
+  .quiz-mode:hover { background: rgba(120,170,255,.14); }
+  .quiz-daily { grid-column: 1 / -1; border-color: rgba(255,196,80,.6); background: rgba(255,196,80,.12); }
+  .quiz-best { margin: 10px 0 2px; text-align: center; }
+  .quiz-top { display: flex; justify-content: space-between; font-size: 12px; opacity: .85; margin-bottom: 6px; }
+  .quiz-ask { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+  .quiz-img { display: block; width: 100%; max-height: 200px; object-fit: cover; border-radius: 10px; background: #000; }
+  .quiz-img.flag { object-fit: contain; max-height: 150px; background: rgba(255,255,255,.04); padding: 10px 0; }
+  .quiz-cap { font-size: 30px; font-weight: 800; text-align: center; padding: 18px 0; border-radius: 10px; background: rgba(255,255,255,.05); letter-spacing: .1em; }
+  .quiz-detail { margin-top: 4px; font-size: 12.5px; opacity: .85; text-align: center; }
+  .quiz-hint { margin-top: 8px; font-size: 12.5px; color: #8fd4ff; }
+  .quiz-feedback { margin-top: 8px; font-size: 14px; }
+  .quiz-feedback.ok { color: #6fe3a0; } .quiz-feedback.bad { color: #ff8a8c; } .quiz-feedback.warn { color: #ffcf5c; }
+  .quiz-plus { display: inline-block; margin-left: 4px; font-weight: 800; color: #ffd166; animation: quiz-pop .6s ease-out; }
+  @keyframes quiz-pop { 0% { transform: scale(.5); opacity: 0; } 60% { transform: scale(1.4); } 100% { transform: none; } }
+  .quiz-actions { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+  .quiz-next { background: rgba(47,208,115,.2) !important; border-color: rgba(47,208,115,.6) !important; }
+  .quiz-choices { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 10px; }
+  .quiz-choices button { padding: 9px 6px; border-radius: 10px; border: 1px solid rgba(120,170,255,.35); background: rgba(255,255,255,.05);
+    color: inherit; font: 700 13.5px system-ui, "Microsoft JhengHei", sans-serif; cursor: pointer; }
+  .quiz-choices button:hover { background: rgba(120,170,255,.16); }
+  .quiz-end { text-align: center; line-height: 1.7; }
+  .quiz-medal { font-size: 22px; font-weight: 800; }
+  .quiz-final { font-size: 40px; font-weight: 900; color: #ffd166; }
+  .quiz-final small { font-size: 15px; opacity: .7; }
+  .quiz-review { display: flex; flex-wrap: wrap; gap: 4px; justify-content: center; margin: 8px 0; font-size: 12px; }
+  .quiz-review span { padding: 1px 6px; border-radius: 6px; background: rgba(255,255,255,.06); }
+  .quiz-end .quiz-actions { justify-content: center; }
+  body[data-theme="journal"] #quiz-panel .sat-title, body[data-theme="journal"] .quiz-final { color: #a6572e; }
+  body[data-theme="journal"] .quiz-hint { color: #2f6db0; }
+  body[data-theme="journal"] .quiz-mode, body[data-theme="journal"] .quiz-choices button, body[data-theme="journal"] .quiz-cap { background: rgba(120,90,50,.06); border-color: rgba(120,90,50,.3); }
+  @media (max-width: 640px) {
+    #quiz-panel { top: auto; bottom: 60px; left: 8px; right: 8px; width: auto; min-width: 0; max-width: none; max-height: 52vh; z-index: 45; }
+    .quiz-img { max-height: 120px; } .quiz-img.flag { max-height: 90px; } .quiz-cap { font-size: 24px; padding: 10px 0; }
+  }
   /* 📅 歷史上的今天:面板 + 自動導覽時的字幕卡 */
   #otd-panel {
     position: fixed; top: 110px; left: 18px; z-index: 44;
@@ -1300,7 +1353,8 @@
   body[data-theme="fantasy"] #rail-panel,
   body[data-theme="fantasy"] #orbit-panel,
   body[data-theme="fantasy"] #launch-panel,
-  body[data-theme="fantasy"] #otd-panel {
+  body[data-theme="fantasy"] #otd-panel,
+  body[data-theme="fantasy"] #quiz-panel {
     background: linear-gradient(180deg,#332714,#1c150c); border: 1px solid #c9a227; color: #f0dfab;
   }
   body[data-theme="fantasy"] #satellite-close,
@@ -1409,7 +1463,8 @@
   body[data-theme="journal"] #rail-panel,
   body[data-theme="journal"] #orbit-panel,
   body[data-theme="journal"] #launch-panel,
-  body[data-theme="journal"] #otd-panel {
+  body[data-theme="journal"] #otd-panel,
+  body[data-theme="journal"] #quiz-panel {
     background: #f3ede0; border-color: rgba(120,90,50,.28); color: #3b332a;
   }
   body[data-theme="journal"] #satellite-close,
@@ -1501,7 +1556,8 @@
   body[data-theme="hud"] #rail-panel,
   body[data-theme="hud"] #orbit-panel,
   body[data-theme="hud"] #launch-panel,
-  body[data-theme="hud"] #otd-panel {
+  body[data-theme="hud"] #otd-panel,
+  body[data-theme="hud"] #quiz-panel {
     background: linear-gradient(180deg,#0e2226,#04121a); border: 1px solid #00e5ff; color: #cdf3ff; border-radius: 3px;
   }
   body[data-theme="hud"] #satellite-close,
@@ -1745,6 +1801,13 @@
     <div id="airport-list" class="ap-list"></div>
     <div id="airport-caption" class="sat-caption"></div>
   </div>
+  <div id="quiz-panel" hidden>
+    <div class="sat-head">
+      <span class="sat-title">🎯 地理猜謎</span>
+      <button id="quiz-close" class="rp-head-btn" type="button" aria-label="關閉">×</button>
+    </div>
+    <div id="quiz-body" class="quiz-body"></div>
+  </div>
   <div id="otd-panel" hidden>
     <div class="sat-head">
       <span class="sat-title">📅 歷史上的今天 · <span id="otd-date"></span></span>
@@ -1979,6 +2042,9 @@
         </button>
         <button id="otd-toggle" class="layer-row" type="button" aria-pressed="false">
           <span class="layer-dot"></span>歷史上的今天
+        </button>
+        <button id="quiz-toggle" class="layer-row" type="button" aria-pressed="false">
+          <span class="layer-dot"></span>地理猜謎遊戲
         </button>
       </div>
     </div>

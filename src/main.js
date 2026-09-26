@@ -27,6 +27,7 @@ import { createRailPanel } from "./ui/rail-panel.js";
 import { createSatelliteLayer } from "./scene/satellites.js";
 import { createLaunchLayer } from "./scene/launches.js";
 import { createOnThisDay } from "./ui/on-this-day.js";
+import { createQuiz } from "./ui/quiz.js";
 import { createShare } from "./ui/share.js";
 import { setupPwa } from "./ui/pwa.js";
 import { createNaturePopup } from "./ui/nature-popup.js";
@@ -492,6 +493,15 @@ export function start() {
   }
   window.__earth.openCountry = openCountry;
 
+  // 🎯 地理猜謎遊戲(功能卡片的一列);要用到 sidePanel,所以放在它建立之後
+  const quizToggle = document.getElementById("quiz-toggle");
+  const quiz = createQuiz({ rig, sidePanel, onClose: () => setQuiz(false) });
+  function setQuiz(on) {
+    if (quizToggle) quizToggle.setAttribute("aria-pressed", String(on));
+    quiz.setEnabled(on);
+  }
+  if (quizToggle) quizToggle.addEventListener("click", () => setQuiz(quizToggle.getAttribute("aria-pressed") !== "true"));
+
   function openCountryByCode(code) {
     const cl = window.__earth.countryLayer;
     const wrap = cl && cl.meshByCode.get(code);
@@ -521,6 +531,8 @@ export function start() {
     raycaster.setFromCamera(pointer, camera);
     const hit = cl.pick(raycaster, globe.mesh);
     if (!hit) return;
+    // 🎯 地理猜謎進行中:點地球 = 作答,不開國家側欄(遊戲開著時一律不開,免得直接看到答案)
+    if (quiz.isEnabled()) { if (quiz.isAwaiting()) quiz.answer(hit.code); return; }
     // 看路況時點在台灣陸地上但沒點中國道(差幾個像素很常見),不要跳出台灣側欄、
     // 把相機拉遠——想看台灣介紹可以點台灣的金色地名
     if (traffic.isEnabled() && hit.code === "TW") return;
