@@ -1,4 +1,4 @@
-# 🤖 每週自動更新網站資料:旅遊警示、國道路段與監視器、台鐵車站、緊急聯絡與駐外館處。
+# 🤖 每週自動更新網站資料:旅遊警示、國道路段與監視器、台鐵車站、緊急聯絡與駐外館處、景點直播清單。
 # 各個建置工具都有防呆(抓到的數量異常就不覆蓋),某一項失敗不影響其他項;有變動才存檔,
 # 存檔後請 GitHub Pages 重新發佈。也可以在 GitHub 網站的 Actions 頁手動執行。
 name: 每週自動更新資料
@@ -33,6 +33,9 @@ jobs:
         continue-on-error: true
       - name: 緊急電話、駐外館處、中國使館
         run: python tools/build-emergency.py
+        continue-on-error: true
+      - name: 世界即時景點直播(YouTube 正在直播的景點攝影機)
+        run: python tools/build-livecams.py
         continue-on-error: true
       - name: 有變動就存檔並重新發佈網站
         env:

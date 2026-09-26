@@ -30,6 +30,7 @@ import { createOnThisDay } from "./ui/on-this-day.js";
 import { createQuiz } from "./ui/quiz.js";
 import { createPassport } from "./ui/passport.js";
 import { createFlightSim } from "./scene/flight-sim.js";
+import { createLiveCams } from "./scene/livecams.js";
 import { createShare } from "./ui/share.js";
 import { setupPwa } from "./ui/pwa.js";
 import { createNaturePopup } from "./ui/nature-popup.js";
@@ -523,6 +524,15 @@ export function start() {
   }
   if (flightSimToggle) flightSimToggle.addEventListener("click", () => setFlightSim(flightSimToggle.getAttribute("aria-pressed") !== "true"));
 
+  // 📺 世界即時景點直播
+  const liveCamToggle = document.getElementById("livecam-toggle");
+  const liveCams = createLiveCams({ globeObject: globe.object, camera, renderer, rig, onClose: () => setLiveCams(false) });
+  function setLiveCams(on) {
+    if (liveCamToggle) liveCamToggle.setAttribute("aria-pressed", String(on));
+    liveCams.setEnabled(on);
+  }
+  if (liveCamToggle) liveCamToggle.addEventListener("click", () => setLiveCams(liveCamToggle.getAttribute("aria-pressed") !== "true"));
+
   const encOpen = encyclopedia.open;
   encyclopedia.open = (code, ...rest) => { passport.stamp(code); return encOpen(code, ...rest); };
 
@@ -623,6 +633,7 @@ export function start() {
     flights.update();
     orbits.update();
     launches.update();
+    liveCams.update();
     traffic.update();
     if (window.__earth.countryLabels) window.__earth.countryLabels.update();
 
