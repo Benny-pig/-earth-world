@@ -28,6 +28,7 @@ import { createSatelliteLayer } from "./scene/satellites.js";
 import { createLaunchLayer } from "./scene/launches.js";
 import { createOnThisDay } from "./ui/on-this-day.js";
 import { createShare } from "./ui/share.js";
+import { setupPwa } from "./ui/pwa.js";
 import { createNaturePopup } from "./ui/nature-popup.js";
 import { createSidePanel } from "./ui/side-panel.js";
 import { createClockWeather } from "./ui/clock-weather.js";
@@ -596,4 +597,7 @@ export function start() {
   });
   window.__earth.share = share;
   dataReady.then(() => share.applyFromUrl()).catch((e) => console.warn("[share] 還原分享畫面失敗:", e));
+
+  // 📱 可安裝成 App + 離線快取
+  setupPwa();
 }

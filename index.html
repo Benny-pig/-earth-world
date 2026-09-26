@@ -2,8 +2,17 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>地球世界</title>
+<meta name="description" content="3D 互動地球:各國大百科、即時地震、颱風雲圖、衛星與太空站、台灣交通與機場航班、全球廣播電台。">
+<!-- 📱 可安裝成 App(PWA):manifest + 圖示;Service Worker 在 src/ui/pwa.js 註冊 -->
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#070b18">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="地球世界">
 <style>
   html, body { margin: 0; height: 100%; overflow: hidden; background: #05060d; }
   [hidden] { display: none !important; }
@@ -1208,7 +1217,7 @@
   body[data-theme="fantasy"] #clock-weather,
   body[data-theme="fantasy"] #audio-ui,
   body[data-theme="fantasy"] .ctrl-card,
-  body[data-theme="fantasy"] #theme-toggle, body[data-theme="fantasy"] #share-btn { font-family: 'Cinzel', 'Noto Serif TC', serif; letter-spacing: .03em; }
+  body[data-theme="fantasy"] #theme-toggle, body[data-theme="fantasy"] #share-btn, body[data-theme="fantasy"] #install-btn { font-family: 'Cinzel', 'Noto Serif TC', serif; letter-spacing: .03em; }
   /* 右下角控制區:上面「台灣交通」(機場航班、即時路況…)、下面「功能」(全球性的圖層),
      兩張卡片疊在同一個容器裡,各自可以收合,不會互相重疊。卡片樣式共用 .ctrl-card。 */
   #ctrl-dock {
@@ -1276,7 +1285,7 @@
   body[data-theme="fantasy"] .ctrl-card .lc-title { color: #a08a5c; }
   body[data-theme="fantasy"] .ctrl-card .layer-row { color: #f0dfab; }
   body[data-theme="fantasy"] .ctrl-card .layer-row:hover { background: rgba(201,162,39,.14); }
-  body[data-theme="fantasy"] #theme-toggle, body[data-theme="fantasy"] #share-btn {
+  body[data-theme="fantasy"] #theme-toggle, body[data-theme="fantasy"] #share-btn, body[data-theme="fantasy"] #install-btn {
     background: linear-gradient(180deg,#332714,#1c150c); border: 1px solid #c9a227; color: #f0dfab;
   }
   body[data-theme="fantasy"] .ctrl-card .layer-dot { background: #c9a227; box-shadow: 0 0 6px #c9a227; }
@@ -1363,7 +1372,7 @@
   body[data-theme="journal"] #tw-clock,
   body[data-theme="journal"] #clock-weather,
   body[data-theme="journal"] #audio-ui,
-  body[data-theme="journal"] #theme-toggle, body[data-theme="journal"] #share-btn,
+  body[data-theme="journal"] #theme-toggle, body[data-theme="journal"] #share-btn, body[data-theme="journal"] #install-btn,
   body[data-theme="journal"] .ctrl-card,
   body[data-theme="journal"] #country-search input,
   body[data-theme="journal"] #country-search ul {
@@ -1375,7 +1384,7 @@
   body[data-theme="journal"] #tw-clock,
   body[data-theme="journal"] #clock-weather,
   body[data-theme="journal"] #audio-ui,
-  body[data-theme="journal"] #theme-toggle, body[data-theme="journal"] #share-btn,
+  body[data-theme="journal"] #theme-toggle, body[data-theme="journal"] #share-btn, body[data-theme="journal"] #install-btn,
   body[data-theme="journal"] .ctrl-card { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", serif; }
   body[data-theme="journal"] #tw-clock .tw-label,
   body[data-theme="journal"] #clock-weather .cw-country { color: #a6572e; }
@@ -1471,11 +1480,11 @@
   body[data-theme="hud"] #clock-weather,
   body[data-theme="hud"] #audio-ui,
   body[data-theme="hud"] .ctrl-card,
-  body[data-theme="hud"] #theme-toggle, body[data-theme="hud"] #share-btn {
+  body[data-theme="hud"] #theme-toggle, body[data-theme="hud"] #share-btn, body[data-theme="hud"] #install-btn {
     font-family: 'Share Tech Mono', ui-monospace, monospace; letter-spacing: .02em;
   }
   body[data-theme="hud"] .ctrl-card,
-  body[data-theme="hud"] #theme-toggle, body[data-theme="hud"] #share-btn {
+  body[data-theme="hud"] #theme-toggle, body[data-theme="hud"] #share-btn, body[data-theme="hud"] #install-btn {
     background: linear-gradient(180deg,#0e2226,#04121a); border: 1px solid #00e5ff; color: #cdf3ff; border-radius: 3px;
     text-transform: uppercase;
   }
@@ -1611,7 +1620,16 @@
     border: 1px solid rgba(120,170,255,.4); box-shadow: 0 8px 24px rgba(0,0,0,.5); opacity: 0; pointer-events: none; transition: opacity .2s, transform .2s;
   }
   #share-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
-  #theme-toggle, #share-btn {
+  #install-btn { border-color: rgba(47,208,115,.6) !important; }
+  /* iPhone 沒有一鍵安裝,改教讀者從 Safari 分享選單「加入主畫面」 */
+  #install-ios {
+    position: fixed; left: 50%; bottom: 80px; transform: translateX(-50%); z-index: 61; width: min(340px, calc(100vw - 24px));
+    padding: 14px 16px; border-radius: 14px; background: rgba(10,14,26,.96); color: #e7edfb; border: 1px solid rgba(120,170,255,.4);
+    box-shadow: 0 10px 30px rgba(0,0,0,.55); font: 13.5px/1.7 system-ui, "Microsoft JhengHei", sans-serif;
+  }
+  #install-ios b { color: #8fd4ff; }
+  #install-ios button { margin-top: 6px; padding: 4px 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,.3); background: none; color: inherit; cursor: pointer; }
+  #theme-toggle, #share-btn, #install-btn {
     cursor: pointer;
     padding: 5px 10px; font-size: 11px; border-radius: 8px;
     background: rgba(4, 6, 12, 0.88); backdrop-filter: blur(10px);
@@ -1896,6 +1914,7 @@
   </div>
   <div id="side-panel"><button class="close" aria-label="關閉">×</button><div id="side-panel-body"></div></div>
   <div id="top-tools">
+    <button id="install-btn" type="button" hidden aria-label="把地球世界安裝成 App" title="安裝到手機/電腦,像 App 一樣全螢幕開啟">📲 安裝 App</button>
     <button id="share-btn" type="button" aria-label="分享目前畫面" title="分享目前畫面(複製連結)">🔗 分享</button>
     <button id="theme-toggle" type="button" aria-label="切換版面主題">🌙 星空</button>
   </div>
