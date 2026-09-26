@@ -134,6 +134,8 @@ def main():
             "c": [round(v, 4) for p in simp for v in p],
         }
         out[sh["SectionID"]] = {k: v for k, v in entry.items() if v is not None}
+    if len(out) < 300:   # 防呆:資料異常時不覆蓋
+        sys.exit(f"路段只有 {len(out)} 段,資料可能異常,不更新")
     doc = {
         "source": "交通部 TDX 運輸資料流通服務(交通部高速公路局)",
         "linkVersion": shapes.get("LinkVersion"),
@@ -166,6 +168,8 @@ def build_cctv(path=None):
         lon, lat = round(float(tag(b, "PositionLon")), 5), round(float(tag(b, "PositionLat")), 5)
         cams.append([lon, lat, roads.index(road), tag(b, "RoadDirection"), tag(b, "LocationMile"),
                      tag(b, "Start"), tag(b, "End"), url, region(lon, lat)])
+    if len(cams) < 1000:   # 防呆:資料異常時不覆蓋
+        sys.exit(f"監視器只有 {len(cams)} 支,資料可能異常,不更新")
     doc = {
         "source": "交通部高速公路局 CCTV 公開資料(tisvcloud)",
         "updated": tag(xml, "UpdateTime"),

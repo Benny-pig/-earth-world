@@ -1,86 +1,65 @@
 {
-  "as_of": "2026-09-12",
+  "as_of": "2026-09-26",
   "source": "中華民國外交部領事事務局 全球旅遊警示 https://www.boca.gov.tw/sp-trwa-list-1.html",
   "disclaimer": "警示等級會隨情勢變動,僅供參考,出發前請至外交部官網查詢最新狀態。",
   "countries": {
-    "AU": {
+    "AD": {
       "level": 1,
       "label": "灰色：提醒注意",
       "color": "#9aa5b1",
-      "note": null,
+      "note": "安道爾",
       "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
     },
-    "BN": {
-      "level": 1,
-      "label": "灰色：提醒注意",
-      "color": "#9aa5b1",
-      "note": null,
-      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
-    },
-    "FJ": {
-      "level": 1,
-      "label": "灰色：提醒注意",
-      "color": "#9aa5b1",
-      "note": null,
-      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
-    },
-    "JP": {
-      "level": 1,
-      "label": "灰色：提醒注意",
-      "color": "#9aa5b1",
-      "note": null,
-      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
-    },
-    "KR": {
-      "level": 1,
-      "label": "灰色：提醒注意",
-      "color": "#9aa5b1",
-      "note": null,
-      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
-    },
-    "MY": {
-      "level": 1,
-      "label": "灰色：提醒注意",
-      "color": "#9aa5b1",
-      "note": null,
-      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
-    },
-    "MV": {
-      "level": 1,
-      "label": "灰色：提醒注意",
-      "color": "#9aa5b1",
-      "note": null,
-      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
-    },
-    "NZ": {
-      "level": 1,
-      "label": "灰色：提醒注意",
-      "color": "#9aa5b1",
-      "note": null,
-      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
-    },
-    "PH": {
+    "AE": {
       "level": 3,
       "label": "橙色：避免非必要旅行",
       "color": "#f5a524",
-      "note": "民答那峨島",
-      "reason": "特定島嶼區域伊斯蘭極端組織活動。"
-    },
-    "SG": {
-      "level": 1,
-      "label": "灰色：提醒注意",
-      "color": "#9aa5b1",
       "note": null,
-      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+      "reason": "區域地緣政治緊張外溢風險。"
     },
-    "VN": {
-      "level": 1,
-      "label": "灰色：提醒注意",
-      "color": "#9aa5b1",
+    "AF": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
       "note": null,
-      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+      "reason": "塔利班政權下政局不穩,恐怖攻擊與治安風險高。"
+    },
+    "AG": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null,
+      "reason": "局部治安或情勢需留意,建議提高警覺。"
+    },
+    "AI": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": "英屬安吉拉",
+      "reason": "局部治安或情勢需留意,建議提高警覺。"
     },
     "AL": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "AM": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null,
+      "reason": "與鄰國邊境領土爭議未解。"
+    },
+    "AO": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null,
+      "reason": "治安與犯罪率偏高。"
+    },
+    "AR": {
       "level": 1,
       "label": "灰色：提醒注意",
       "color": "#9aa5b1",
@@ -94,12 +73,61 @@
       "note": null,
       "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
     },
+    "AU": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "AW": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": "荷屬阿魯巴",
+      "reason": "局部治安或情勢需留意,建議提高警覺。"
+    },
+    "AZ": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null,
+      "reason": "與鄰國邊境領土爭議未解。"
+    },
     "BA": {
       "level": 1,
       "label": "灰色：提醒注意",
       "color": "#9aa5b1",
       "note": null,
       "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "BB": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "BD": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null,
+      "reason": "局部治安或情勢需留意,建議提高警覺。"
+    },
+    "BE": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null,
+      "reason": "局部治安或情勢需留意,建議提高警覺。"
+    },
+    "BF": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null,
+      "reason": "伊斯蘭極端組織活動頻繁,政局動盪。"
     },
     "BG": {
       "level": 1,
@@ -108,12 +136,187 @@
       "note": null,
       "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
     },
-    "HR": {
+    "BH": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null,
+      "reason": "安全風險升高,避免非必要旅行。"
+    },
+    "BI": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null,
+      "reason": "政局不穩,治安與人身安全風險偏高。"
+    },
+    "BJ": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null,
+      "reason": "薩赫爾恐怖組織向南擴散,北部邊境風險。"
+    },
+    "BL": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": "法屬聖巴瑟米",
+      "reason": "局部治安或情勢需留意,建議提高警覺。"
+    },
+    "BM": {
       "level": 1,
       "label": "灰色：提醒注意",
       "color": "#9aa5b1",
       "note": null,
       "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "BN": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "BO": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null,
+      "reason": "政局動盪,示威衝突頻傳。"
+    },
+    "BR": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null,
+      "reason": "都會區治安與犯罪率偏高。"
+    },
+    "BS": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "BT": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null,
+      "reason": "局部治安或情勢需留意,建議提高警覺。"
+    },
+    "BW": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null,
+      "reason": "一般治安風險。"
+    },
+    "BY": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null,
+      "reason": "政治情勢高壓,且與烏克蘭戰事牽動邊境風險。"
+    },
+    "BZ": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null,
+      "reason": "局部治安或情勢需留意,建議提高警覺。"
+    },
+    "CA": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "CF": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null,
+      "reason": "內戰與武裝派系割據,國家管制力薄弱。"
+    },
+    "CG": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null,
+      "reason": "政治情勢高壓,當地治安資訊不透明。"
+    },
+    "CH": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "CI": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null,
+      "reason": "北部邊境薩赫爾恐怖組織滲透風險。"
+    },
+    "CK": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "CL": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null,
+      "reason": "局部治安或情勢需留意,建議提高警覺。"
+    },
+    "CM": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null,
+      "reason": "英語區分離主義衝突與武裝組織活動。"
+    },
+    "CO": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null,
+      "reason": "毒品販運集團與游擊隊殘餘活動風險。"
+    },
+    "CR": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null,
+      "reason": "局部治安或情勢需留意,建議提高警覺。"
+    },
+    "CU": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": "古巴",
+      "reason": "經濟危機下治安與物資短缺風險。"
+    },
+    "CV": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": "維德角",
+      "reason": "局部治安或情勢需留意,建議提高警覺。"
+    },
+    "CW": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": "荷屬古拉索",
+      "reason": "局部治安或情勢需留意,建議提高警覺。"
     },
     "CY": {
       "level": 1,
@@ -122,28 +325,7 @@
       "note": null,
       "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
     },
-    "DK": {
-      "level": 1,
-      "label": "灰色：提醒注意",
-      "color": "#9aa5b1",
-      "note": null,
-      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
-    },
-    "EE": {
-      "level": 1,
-      "label": "灰色：提醒注意",
-      "color": "#9aa5b1",
-      "note": null,
-      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
-    },
-    "FI": {
-      "level": 1,
-      "label": "灰色：提醒注意",
-      "color": "#9aa5b1",
-      "note": null,
-      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
-    },
-    "FR": {
+    "CZ": {
       "level": 1,
       "label": "灰色：提醒注意",
       "color": "#9aa5b1",
@@ -157,12 +339,215 @@
       "note": null,
       "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
     },
+    "DJ": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null,
+      "reason": "鄰近索馬利亞、葉門局勢動盪,區域風險。"
+    },
+    "DK": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "DM": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "DO": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null,
+      "reason": "局部治安或情勢需留意,建議提高警覺。"
+    },
+    "DZ": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null,
+      "reason": "南部邊境恐怖組織活動風險。"
+    },
+    "EC": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null,
+      "reason": "幫派暴力與毒品犯罪激增。"
+    },
+    "EE": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "EG": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null,
+      "reason": "特定邊境/半島區域恐怖組織活動風險。"
+    },
+    "ER": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null,
+      "reason": "極權統治、出入境管制嚴格,資訊不透明。"
+    },
+    "ES": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "ET": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null,
+      "reason": "部分地區族群武裝衝突未歇。"
+    },
+    "FI": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "FJ": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "FM": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "FR": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "GA": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null,
+      "reason": "政變後政局尚未穩定。"
+    },
+    "GB": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "GD": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "GE": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null,
+      "reason": "境內分離地區局勢緊張。"
+    },
+    "GH": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null,
+      "reason": "北部邊境薩赫爾恐怖組織滲透風險。"
+    },
+    "GM": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null,
+      "reason": "政局轉型中,治安不穩。"
+    },
+    "GN": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null,
+      "reason": "軍事政變後政局不穩,示威衝突頻傳。"
+    },
+    "GQ": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null,
+      "reason": "政治情勢高壓,當地治安資訊不透明。"
+    },
     "GR": {
       "level": 1,
       "label": "灰色：提醒注意",
       "color": "#9aa5b1",
       "note": null,
       "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "GT": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": "瓜地馬拉",
+      "reason": "局部治安或情勢需留意,建議提高警覺。"
+    },
+    "GW": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null,
+      "reason": "安全風險升高,避免非必要旅行。"
+    },
+    "GY": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null,
+      "reason": "與鄰國邊境領土爭議未解。"
+    },
+    "HN": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": "宏都拉斯",
+      "reason": "局部治安或情勢需留意,建議提高警覺。"
+    },
+    "HR": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "HT": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": "海地",
+      "reason": "幫派勢力控制大部分首都,治安全面崩潰。"
     },
     "HU": {
       "level": 1,
@@ -171,12 +556,54 @@
       "note": null,
       "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
     },
+    "ID": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": "中巴布亞省及高地巴布亞省",
+      "reason": "特定省份獨立運動武裝衝突。"
+    },
     "IE": {
       "level": 1,
       "label": "灰色：提醒注意",
       "color": "#9aa5b1",
       "note": null,
       "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "IL": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null,
+      "reason": "與黎巴嫩邊境地區存在武裝衝突風險。"
+    },
+    "IN": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null,
+      "reason": "特定邊境地區武裝衝突風險。"
+    },
+    "IQ": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null,
+      "reason": "境內恐怖組織殘餘活動與武裝衝突風險。"
+    },
+    "IR": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null,
+      "reason": "區域地緣政治緊張,外國人有被拘留風險。"
+    },
+    "IS": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null,
+      "reason": "局部治安或情勢需留意,建議提高警覺。"
     },
     "IT": {
       "level": 1,
@@ -185,19 +612,152 @@
       "note": null,
       "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
     },
-    "XK": {
+    "JM": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null,
+      "reason": "局部治安或情勢需留意,建議提高警覺。"
+    },
+    "JO": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": "與敘利亞及伊拉克邊境",
+      "reason": "鄰近敘利亞、伊拉克邊境,衝突外溢風險。"
+    },
+    "JP": {
       "level": 1,
       "label": "灰色：提醒注意",
       "color": "#9aa5b1",
       "note": null,
       "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
     },
-    "LV": {
+    "KE": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null,
+      "reason": "邊境恐攻風險,部分地區治安不佳。"
+    },
+    "KG": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null,
+      "reason": "與鄰國邊境領土爭議衝突。"
+    },
+    "KH": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": "柏威夏省、奧多棉芷省、班達棉芷省、馬德望省、菩薩省、國公省",
+      "reason": "邊境省份地雷未清除區域與軍事緊張。"
+    },
+    "KI": {
       "level": 1,
       "label": "灰色：提醒注意",
       "color": "#9aa5b1",
       "note": null,
       "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "KM": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null,
+      "reason": "安全風險升高,避免非必要旅行。"
+    },
+    "KN": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "KP": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null,
+      "reason": "極權封閉政權,外國人易遭無預警拘留。"
+    },
+    "KR": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "KW": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null,
+      "reason": "區域地緣政治緊張外溢風險。"
+    },
+    "KY": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": "英屬開曼群島",
+      "reason": "局部治安或情勢需留意,建議提高警覺。"
+    },
+    "KZ": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null,
+      "reason": "局部治安或情勢需留意,建議提高警覺。"
+    },
+    "LA": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null,
+      "reason": "部分偏遠地區治安資訊不透明。"
+    },
+    "LB": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null,
+      "reason": "真主黨與以色列衝突,國內政經情勢不穩。"
+    },
+    "LC": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "LI": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "LK": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null,
+      "reason": "局部治安或情勢需留意,建議提高警覺。"
+    },
+    "LR": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null,
+      "reason": "政經情勢脆弱,治安風險。"
+    },
+    "LS": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null,
+      "reason": "治安與犯罪率偏高。"
     },
     "LT": {
       "level": 1,
@@ -213,6 +773,41 @@
       "note": null,
       "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
     },
+    "LV": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "LY": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null,
+      "reason": "內戰後兩派政權對峙,武裝派系林立。"
+    },
+    "MA": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": "摩洛哥",
+      "reason": "特定爭議地區局勢緊張,一般恐攻風險。"
+    },
+    "MC": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "MD": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null,
+      "reason": "安全風險升高,避免非必要旅行。"
+    },
     "ME": {
       "level": 1,
       "label": "灰色：提醒注意",
@@ -220,7 +815,21 @@
       "note": null,
       "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
     },
-    "NL": {
+    "MF": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null,
+      "reason": "局部治安或情勢需留意,建議提高警覺。"
+    },
+    "MG": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null,
+      "reason": "政治動盪與治安惡化。"
+    },
+    "MH": {
       "level": 1,
       "label": "灰色：提醒注意",
       "color": "#9aa5b1",
@@ -234,201 +843,19 @@
       "note": null,
       "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
     },
-    "PL": {
-      "level": 1,
-      "label": "灰色：提醒注意",
-      "color": "#9aa5b1",
+    "ML": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
       "note": null,
-      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
-    },
-    "PT": {
-      "level": 1,
-      "label": "灰色：提醒注意",
-      "color": "#9aa5b1",
-      "note": null,
-      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
-    },
-    "RO": {
-      "level": 1,
-      "label": "灰色：提醒注意",
-      "color": "#9aa5b1",
-      "note": null,
-      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
-    },
-    "RS": {
-      "level": 1,
-      "label": "灰色：提醒注意",
-      "color": "#9aa5b1",
-      "note": null,
-      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
-    },
-    "SI": {
-      "level": 1,
-      "label": "灰色：提醒注意",
-      "color": "#9aa5b1",
-      "note": null,
-      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
-    },
-    "ES": {
-      "level": 1,
-      "label": "灰色：提醒注意",
-      "color": "#9aa5b1",
-      "note": null,
-      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
-    },
-    "CH": {
-      "level": 1,
-      "label": "灰色：提醒注意",
-      "color": "#9aa5b1",
-      "note": null,
-      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
-    },
-    "CZ": {
-      "level": 1,
-      "label": "灰色：提醒注意",
-      "color": "#9aa5b1",
-      "note": null,
-      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
-    },
-    "SK": {
-      "level": 1,
-      "label": "灰色：提醒注意",
-      "color": "#9aa5b1",
-      "note": null,
-      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
-    },
-    "GB": {
-      "level": 1,
-      "label": "灰色：提醒注意",
-      "color": "#9aa5b1",
-      "note": null,
-      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
-    },
-    "CA": {
-      "level": 1,
-      "label": "灰色：提醒注意",
-      "color": "#9aa5b1",
-      "note": null,
-      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
-    },
-    "US": {
-      "level": 2,
-      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
-      "color": "#f5d90a",
-      "note": "夏威夷州",
-      "reason": "局部治安或情勢需留意,建議提高警覺。"
-    },
-    "BS": {
-      "level": 1,
-      "label": "灰色：提醒注意",
-      "color": "#9aa5b1",
-      "note": null,
-      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
-    },
-    "PY": {
-      "level": 1,
-      "label": "灰色：提醒注意",
-      "color": "#9aa5b1",
-      "note": null,
-      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
-    },
-    "AR": {
-      "level": 1,
-      "label": "灰色：提醒注意",
-      "color": "#9aa5b1",
-      "note": null,
-      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
-    },
-    "UY": {
-      "level": 1,
-      "label": "灰色：提醒注意",
-      "color": "#9aa5b1",
-      "note": null,
-      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
-    },
-    "BD": {
-      "level": 2,
-      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
-      "color": "#f5d90a",
-      "note": null,
-      "reason": "局部治安或情勢需留意,建議提高警覺。"
-    },
-    "BT": {
-      "level": 2,
-      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
-      "color": "#f5d90a",
-      "note": null,
-      "reason": "局部治安或情勢需留意,建議提高警覺。"
-    },
-    "IN": {
-      "level": 3,
-      "label": "橙色：避免非必要旅行",
-      "color": "#f5a524",
-      "note": "鄰近巴基斯坦地區",
-      "reason": "特定邊境地區武裝衝突風險。"
-    },
-    "ID": {
-      "level": 3,
-      "label": "橙色：避免非必要旅行",
-      "color": "#f5a524",
-      "note": "中巴布亞省及高地巴布亞省",
-      "reason": "特定省份獨立運動武裝衝突。"
+      "reason": "伊斯蘭極端組織與軍政府衝突,恐攻頻傳。"
     },
     "MM": {
       "level": 4,
       "label": "紅色：儘速離境",
       "color": "#e5484d",
-      "note": "克欽邦等地區",
+      "note": "克欽邦（",
       "reason": "軍政府與少數民族武裝團體衝突不斷。"
-    },
-    "NC": {
-      "level": 2,
-      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
-      "color": "#f5d90a",
-      "note": null,
-      "reason": "局部治安或情勢需留意,建議提高警覺。"
-    },
-    "TH": {
-      "level": 3,
-      "label": "橙色：避免非必要旅行",
-      "color": "#f5a524",
-      "note": "烏汶府等7府",
-      "reason": "南部/邊境府份零星衝突與治安風險。"
-    },
-    "TL": {
-      "level": 2,
-      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
-      "color": "#f5d90a",
-      "note": null,
-      "reason": "局部治安或情勢需留意,建議提高警覺。"
-    },
-    "VU": {
-      "level": 2,
-      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
-      "color": "#f5d90a",
-      "note": null,
-      "reason": "局部治安或情勢需留意,建議提高警覺。"
-    },
-    "IL": {
-      "level": 4,
-      "label": "紅色：儘速離境",
-      "color": "#e5484d",
-      "note": null,
-      "reason": "與黎巴嫩邊境地區存在武裝衝突風險。"
-    },
-    "KZ": {
-      "level": 2,
-      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
-      "color": "#f5d90a",
-      "note": null,
-      "reason": "局部治安或情勢需留意,建議提高警覺。"
-    },
-    "KG": {
-      "level": 3,
-      "label": "橙色：避免非必要旅行",
-      "color": "#f5a524",
-      "note": "與塔吉克及烏茲別克接壤邊界地區",
-      "reason": "與鄰國邊境領土爭議衝突。"
     },
     "MN": {
       "level": 2,
@@ -437,81 +864,67 @@
       "note": null,
       "reason": "局部治安或情勢需留意,建議提高警覺。"
     },
-    "TJ": {
-      "level": 3,
-      "label": "橙色：避免非必要旅行",
-      "color": "#f5a524",
-      "note": "與阿富汗、吉爾吉斯及烏茲別克接壤邊界地區",
-      "reason": "邊境地區情勢不穩。"
-    },
-    "TR": {
+    "MR": {
       "level": 4,
       "label": "紅色：儘速離境",
       "color": "#e5484d",
       "note": null,
-      "reason": "東南部鄰敘利亞邊境地區恐怖組織活動風險。"
+      "reason": "鄰近薩赫爾衝突區域,恐怖主義風險。"
     },
-    "TM": {
+    "MS": {
       "level": 2,
       "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
       "color": "#f5d90a",
       "note": null,
       "reason": "局部治安或情勢需留意,建議提高警覺。"
     },
-    "UZ": {
+    "MT": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "MU": {
       "level": 2,
       "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
       "color": "#f5d90a",
       "note": null,
       "reason": "局部治安或情勢需留意,建議提高警覺。"
     },
-    "BE": {
-      "level": 2,
-      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
-      "color": "#f5d90a",
+    "MV": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
       "note": null,
-      "reason": "局部治安或情勢需留意,建議提高警覺。"
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
     },
-    "IS": {
-      "level": 2,
-      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
-      "color": "#f5d90a",
-      "note": null,
-      "reason": "局部治安或情勢需留意,建議提高警覺。"
-    },
-    "NO": {
-      "level": 2,
-      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
-      "color": "#f5d90a",
-      "note": null,
-      "reason": "局部治安或情勢需留意,建議提高警覺。"
-    },
-    "SE": {
-      "level": 2,
-      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
-      "color": "#f5d90a",
-      "note": null,
-      "reason": "局部治安或情勢需留意,建議提高警覺。"
-    },
-    "CI": {
+    "MW": {
       "level": 3,
       "label": "橙色：避免非必要旅行",
       "color": "#f5a524",
-      "note": "北部及西部邊境地區",
-      "reason": "北部邊境薩赫爾恐怖組織滲透風險。"
+      "note": null,
+      "reason": "一般治安風險。"
     },
-    "SZ": {
+    "MX": {
       "level": 2,
       "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
       "color": "#f5d90a",
       "note": null,
+      "reason": "局部治安或情勢需留意,建議提高警覺。"
+    },
+    "MY": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": "沙巴東部沿海地區",
       "reason": "局部治安或情勢需留意,建議提高警覺。"
     },
     "MZ": {
       "level": 4,
       "label": "紅色：儘速離境",
       "color": "#e5484d",
-      "note": "Cabo Delgado省",
+      "note": "Cabo Delgado省 Cabo Delgado province",
       "reason": "北部特定省份伊斯蘭極端組織武裝衝突。"
     },
     "NA": {
@@ -521,544 +934,12 @@
       "note": null,
       "reason": "局部治安或情勢需留意,建議提高警覺。"
     },
-    "BZ": {
+    "NC": {
       "level": 2,
       "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
       "color": "#f5d90a",
       "note": null,
       "reason": "局部治安或情勢需留意,建議提高警覺。"
-    },
-    "CL": {
-      "level": 2,
-      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
-      "color": "#f5d90a",
-      "note": null,
-      "reason": "局部治安或情勢需留意,建議提高警覺。"
-    },
-    "CR": {
-      "level": 2,
-      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
-      "color": "#f5d90a",
-      "note": null,
-      "reason": "局部治安或情勢需留意,建議提高警覺。"
-    },
-    "DO": {
-      "level": 2,
-      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
-      "color": "#f5d90a",
-      "note": null,
-      "reason": "局部治安或情勢需留意,建議提高警覺。"
-    },
-    "SV": {
-      "level": 2,
-      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
-      "color": "#f5d90a",
-      "note": null,
-      "reason": "局部治安或情勢需留意,建議提高警覺。"
-    },
-    "GT": {
-      "level": 2,
-      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
-      "color": "#f5d90a",
-      "note": null,
-      "reason": "局部治安或情勢需留意,建議提高警覺。"
-    },
-    "HN": {
-      "level": 2,
-      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
-      "color": "#f5d90a",
-      "note": null,
-      "reason": "局部治安或情勢需留意,建議提高警覺。"
-    },
-    "JM": {
-      "level": 2,
-      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
-      "color": "#f5d90a",
-      "note": null,
-      "reason": "局部治安或情勢需留意,建議提高警覺。"
-    },
-    "MX": {
-      "level": 2,
-      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
-      "color": "#f5d90a",
-      "note": null,
-      "reason": "局部治安或情勢需留意,建議提高警覺。"
-    },
-    "PA": {
-      "level": 2,
-      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
-      "color": "#f5d90a",
-      "note": null,
-      "reason": "局部治安或情勢需留意,建議提高警覺。"
-    },
-    "SR": {
-      "level": 2,
-      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
-      "color": "#f5d90a",
-      "note": null,
-      "reason": "局部治安或情勢需留意,建議提高警覺。"
-    },
-    "PR": {
-      "level": 2,
-      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
-      "color": "#f5d90a",
-      "note": null,
-      "reason": "局部治安或情勢需留意,建議提高警覺。"
-    },
-    "KH": {
-      "level": 4,
-      "label": "紅色：儘速離境",
-      "color": "#e5484d",
-      "note": "柏威夏省等6省",
-      "reason": "邊境省份地雷未清除區域與軍事緊張。"
-    },
-    "LA": {
-      "level": 3,
-      "label": "橙色：避免非必要旅行",
-      "color": "#f5a524",
-      "note": null,
-      "reason": "部分偏遠地區治安資訊不透明。"
-    },
-    "NP": {
-      "level": 3,
-      "label": "橙色：避免非必要旅行",
-      "color": "#f5a524",
-      "note": null,
-      "reason": "政局變動頻繁,部分地區示威衝突。"
-    },
-    "SB": {
-      "level": 3,
-      "label": "橙色：避免非必要旅行",
-      "color": "#f5a524",
-      "note": null,
-      "reason": "政局動盪,族群與治安衝突。"
-    },
-    "AM": {
-      "level": 3,
-      "label": "橙色：避免非必要旅行",
-      "color": "#f5a524",
-      "note": null,
-      "reason": "與鄰國邊境領土爭議未解。"
-    },
-    "AZ": {
-      "level": 3,
-      "label": "橙色：避免非必要旅行",
-      "color": "#f5a524",
-      "note": null,
-      "reason": "與鄰國邊境領土爭議未解。"
-    },
-    "GE": {
-      "level": 3,
-      "label": "橙色：避免非必要旅行",
-      "color": "#f5a524",
-      "note": null,
-      "reason": "境內分離地區局勢緊張。"
-    },
-    "JO": {
-      "level": 4,
-      "label": "紅色：儘速離境",
-      "color": "#e5484d",
-      "note": null,
-      "reason": "鄰近敘利亞、伊拉克邊境,衝突外溢風險。"
-    },
-    "KW": {
-      "level": 3,
-      "label": "橙色：避免非必要旅行",
-      "color": "#f5a524",
-      "note": null,
-      "reason": "區域地緣政治緊張外溢風險。"
-    },
-    "OM": {
-      "level": 3,
-      "label": "橙色：避免非必要旅行",
-      "color": "#f5a524",
-      "note": null,
-      "reason": "區域地緣政治緊張外溢風險。"
-    },
-    "SA": {
-      "level": 3,
-      "label": "橙色：避免非必要旅行",
-      "color": "#f5a524",
-      "note": null,
-      "reason": "邊境地區無人機/飛彈攻擊風險。"
-    },
-    "QA": {
-      "level": 3,
-      "label": "橙色：避免非必要旅行",
-      "color": "#f5a524",
-      "note": null,
-      "reason": "區域地緣政治緊張外溢風險。"
-    },
-    "AE": {
-      "level": 3,
-      "label": "橙色：避免非必要旅行",
-      "color": "#f5a524",
-      "note": null,
-      "reason": "區域地緣政治緊張外溢風險。"
-    },
-    "DZ": {
-      "level": 3,
-      "label": "橙色：避免非必要旅行",
-      "color": "#f5a524",
-      "note": null,
-      "reason": "南部邊境恐怖組織活動風險。"
-    },
-    "AO": {
-      "level": 3,
-      "label": "橙色：避免非必要旅行",
-      "color": "#f5a524",
-      "note": null,
-      "reason": "治安與犯罪率偏高。"
-    },
-    "BW": {
-      "level": 3,
-      "label": "橙色：避免非必要旅行",
-      "color": "#f5a524",
-      "note": null,
-      "reason": "一般治安風險。"
-    },
-    "GH": {
-      "level": 3,
-      "label": "橙色：避免非必要旅行",
-      "color": "#f5a524",
-      "note": null,
-      "reason": "北部邊境薩赫爾恐怖組織滲透風險。"
-    },
-    "KE": {
-      "level": 3,
-      "label": "橙色：避免非必要旅行",
-      "color": "#f5a524",
-      "note": null,
-      "reason": "邊境恐攻風險,部分地區治安不佳。"
-    },
-    "LS": {
-      "level": 3,
-      "label": "橙色：避免非必要旅行",
-      "color": "#f5a524",
-      "note": null,
-      "reason": "治安與犯罪率偏高。"
-    },
-    "LR": {
-      "level": 3,
-      "label": "橙色：避免非必要旅行",
-      "color": "#f5a524",
-      "note": null,
-      "reason": "政經情勢脆弱,治安風險。"
-    },
-    "MG": {
-      "level": 3,
-      "label": "橙色：避免非必要旅行",
-      "color": "#f5a524",
-      "note": null,
-      "reason": "政治動盪與治安惡化。"
-    },
-    "MW": {
-      "level": 3,
-      "label": "橙色：避免非必要旅行",
-      "color": "#f5a524",
-      "note": null,
-      "reason": "一般治安風險。"
-    },
-    "MA": {
-      "level": 3,
-      "label": "橙色：避免非必要旅行",
-      "color": "#f5a524",
-      "note": null,
-      "reason": "特定爭議地區局勢緊張,一般恐攻風險。"
-    },
-    "RW": {
-      "level": 3,
-      "label": "橙色：避免非必要旅行",
-      "color": "#f5a524",
-      "note": null,
-      "reason": "與鄰國邊境地區局勢緊張。"
-    },
-    "SL": {
-      "level": 3,
-      "label": "橙色：避免非必要旅行",
-      "color": "#f5a524",
-      "note": null,
-      "reason": "政經情勢脆弱,治安風險。"
-    },
-    "ZA": {
-      "level": 3,
-      "label": "橙色：避免非必要旅行",
-      "color": "#f5a524",
-      "note": "含開普敦",
-      "reason": "犯罪率高,搶劫與暴力事件頻傳。"
-    },
-    "TZ": {
-      "level": 4,
-      "label": "紅色：儘速離境",
-      "color": "#e5484d",
-      "note": "南部3省區及西部2省區",
-      "reason": "特定邊境省區武裝衝突外溢風險。"
-    },
-    "GM": {
-      "level": 3,
-      "label": "橙色：避免非必要旅行",
-      "color": "#f5a524",
-      "note": null,
-      "reason": "政局轉型中,治安不穩。"
-    },
-    "ZM": {
-      "level": 3,
-      "label": "橙色：避免非必要旅行",
-      "color": "#f5a524",
-      "note": null,
-      "reason": "一般治安風險。"
-    },
-    "EG": {
-      "level": 4,
-      "label": "紅色：儘速離境",
-      "color": "#e5484d",
-      "note": "西奈半島、與利比亞及蘇丹邊境",
-      "reason": "特定邊境/半島區域恐怖組織活動風險。"
-    },
-    "BO": {
-      "level": 3,
-      "label": "橙色：避免非必要旅行",
-      "color": "#f5a524",
-      "note": null,
-      "reason": "政局動盪,示威衝突頻傳。"
-    },
-    "BR": {
-      "level": 3,
-      "label": "橙色：避免非必要旅行",
-      "color": "#f5a524",
-      "note": "含東南部及南部",
-      "reason": "都會區治安與犯罪率偏高。"
-    },
-    "CO": {
-      "level": 3,
-      "label": "橙色：避免非必要旅行",
-      "color": "#f5a524",
-      "note": null,
-      "reason": "毒品販運集團與游擊隊殘餘活動風險。"
-    },
-    "CU": {
-      "level": 3,
-      "label": "橙色：避免非必要旅行",
-      "color": "#f5a524",
-      "note": null,
-      "reason": "經濟危機下治安與物資短缺風險。"
-    },
-    "EC": {
-      "level": 3,
-      "label": "橙色：避免非必要旅行",
-      "color": "#f5a524",
-      "note": null,
-      "reason": "幫派暴力與毒品犯罪激增。"
-    },
-    "GY": {
-      "level": 3,
-      "label": "橙色：避免非必要旅行",
-      "color": "#f5a524",
-      "note": null,
-      "reason": "與鄰國邊境領土爭議未解。"
-    },
-    "NI": {
-      "level": 3,
-      "label": "橙色：避免非必要旅行",
-      "color": "#f5a524",
-      "note": null,
-      "reason": "政治情勢高壓,示威與治安風險。"
-    },
-    "TT": {
-      "level": 3,
-      "label": "橙色：避免非必要旅行",
-      "color": "#f5a524",
-      "note": null,
-      "reason": "幫派暴力與槍枝犯罪率高。"
-    },
-    "AF": {
-      "level": 4,
-      "label": "紅色：儘速離境",
-      "color": "#e5484d",
-      "note": null,
-      "reason": "塔利班政權下政局不穩,恐怖攻擊與治安風險高。"
-    },
-    "BY": {
-      "level": 4,
-      "label": "紅色：儘速離境",
-      "color": "#e5484d",
-      "note": null,
-      "reason": "政治情勢高壓,且與烏克蘭戰事牽動邊境風險。"
-    },
-    "IR": {
-      "level": 4,
-      "label": "紅色：儘速離境",
-      "color": "#e5484d",
-      "note": null,
-      "reason": "區域地緣政治緊張,外國人有被拘留風險。"
-    },
-    "IQ": {
-      "level": 4,
-      "label": "紅色：儘速離境",
-      "color": "#e5484d",
-      "note": null,
-      "reason": "境內恐怖組織殘餘活動與武裝衝突風險。"
-    },
-    "LB": {
-      "level": 4,
-      "label": "紅色：儘速離境",
-      "color": "#e5484d",
-      "note": null,
-      "reason": "真主黨與以色列衝突,國內政經情勢不穩。"
-    },
-    "PK": {
-      "level": 4,
-      "label": "紅色：儘速離境",
-      "color": "#e5484d",
-      "note": null,
-      "reason": "恐怖攻擊與武裝團體活動頻繁。"
-    },
-    "PS": {
-      "level": 4,
-      "label": "紅色：儘速離境",
-      "color": "#e5484d",
-      "note": "約旦河西岸地區、加薩走廊",
-      "reason": "以巴衝突持續,武裝衝突與人身安全風險極高。"
-    },
-    "RU": {
-      "level": 4,
-      "label": "紅色：儘速離境",
-      "color": "#e5484d",
-      "note": null,
-      "reason": "與烏克蘭處於戰爭狀態,徵兵與治安風險。"
-    },
-    "SY": {
-      "level": 4,
-      "label": "紅色：儘速離境",
-      "color": "#e5484d",
-      "note": null,
-      "reason": "內戰與武裝衝突持續,國家管制力薄弱。"
-    },
-    "YE": {
-      "level": 4,
-      "label": "紅色：儘速離境",
-      "color": "#e5484d",
-      "note": null,
-      "reason": "內戰持續,武裝衝突與恐怖組織活動。"
-    },
-    "KP": {
-      "level": 4,
-      "label": "紅色：儘速離境",
-      "color": "#e5484d",
-      "note": null,
-      "reason": "極權封閉政權,外國人易遭無預警拘留。"
-    },
-    "PG": {
-      "level": 4,
-      "label": "紅色：儘速離境",
-      "color": "#e5484d",
-      "note": null,
-      "reason": "部落衝突與治安惡化,搶劫暴力犯罪頻傳。"
-    },
-    "BJ": {
-      "level": 4,
-      "label": "紅色：儘速離境",
-      "color": "#e5484d",
-      "note": null,
-      "reason": "薩赫爾恐怖組織向南擴散,北部邊境風險。"
-    },
-    "BF": {
-      "level": 4,
-      "label": "紅色：儘速離境",
-      "color": "#e5484d",
-      "note": null,
-      "reason": "伊斯蘭極端組織活動頻繁,政局動盪。"
-    },
-    "BI": {
-      "level": 4,
-      "label": "紅色：儘速離境",
-      "color": "#e5484d",
-      "note": null,
-      "reason": "政局不穩,治安與人身安全風險偏高。"
-    },
-    "CM": {
-      "level": 4,
-      "label": "紅色：儘速離境",
-      "color": "#e5484d",
-      "note": null,
-      "reason": "英語區分離主義衝突與武裝組織活動。"
-    },
-    "CF": {
-      "level": 4,
-      "label": "紅色：儘速離境",
-      "color": "#e5484d",
-      "note": null,
-      "reason": "內戰與武裝派系割據,國家管制力薄弱。"
-    },
-    "TD": {
-      "level": 4,
-      "label": "紅色：儘速離境",
-      "color": "#e5484d",
-      "note": null,
-      "reason": "政局動盪,鄰近衝突區域外溢風險。"
-    },
-    "DJ": {
-      "level": 4,
-      "label": "紅色：儘速離境",
-      "color": "#e5484d",
-      "note": null,
-      "reason": "鄰近索馬利亞、葉門局勢動盪,區域風險。"
-    },
-    "GQ": {
-      "level": 4,
-      "label": "紅色：儘速離境",
-      "color": "#e5484d",
-      "note": null,
-      "reason": "政治情勢高壓,當地治安資訊不透明。"
-    },
-    "ER": {
-      "level": 4,
-      "label": "紅色：儘速離境",
-      "color": "#e5484d",
-      "note": null,
-      "reason": "極權統治、出入境管制嚴格,資訊不透明。"
-    },
-    "ET": {
-      "level": 4,
-      "label": "紅色：儘速離境",
-      "color": "#e5484d",
-      "note": null,
-      "reason": "部分地區族群武裝衝突未歇。"
-    },
-    "GA": {
-      "level": 4,
-      "label": "紅色：儘速離境",
-      "color": "#e5484d",
-      "note": null,
-      "reason": "政變後政局尚未穩定。"
-    },
-    "GN": {
-      "level": 4,
-      "label": "紅色：儘速離境",
-      "color": "#e5484d",
-      "note": null,
-      "reason": "軍事政變後政局不穩,示威衝突頻傳。"
-    },
-    "LY": {
-      "level": 4,
-      "label": "紅色：儘速離境",
-      "color": "#e5484d",
-      "note": null,
-      "reason": "內戰後兩派政權對峙,武裝派系林立。"
-    },
-    "ML": {
-      "level": 4,
-      "label": "紅色：儘速離境",
-      "color": "#e5484d",
-      "note": null,
-      "reason": "伊斯蘭極端組織與軍政府衝突,恐攻頻傳。"
-    },
-    "MR": {
-      "level": 4,
-      "label": "紅色：儘速離境",
-      "color": "#e5484d",
-      "note": null,
-      "reason": "鄰近薩赫爾衝突區域,恐怖主義風險。"
     },
     "NE": {
       "level": 4,
@@ -1074,19 +955,250 @@
       "note": null,
       "reason": "武裝組織活動,綁架與治安風險高。"
     },
-    "CG": {
-      "level": 4,
-      "label": "紅色：儘速離境",
-      "color": "#e5484d",
-      "note": "布拉薩",
-      "reason": "政治情勢高壓,當地治安資訊不透明。"
+    "NI": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": "尼加拉瓜",
+      "reason": "政治情勢高壓,示威與治安風險。"
     },
-    "CD": {
+    "NL": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "NO": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null,
+      "reason": "局部治安或情勢需留意,建議提高警覺。"
+    },
+    "NP": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null,
+      "reason": "政局變動頻繁,部分地區示威衝突。"
+    },
+    "NR": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null,
+      "reason": "局部治安或情勢需留意,建議提高警覺。"
+    },
+    "NU": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "NZ": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "OM": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null,
+      "reason": "區域地緣政治緊張外溢風險。"
+    },
+    "PA": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null,
+      "reason": "局部治安或情勢需留意,建議提高警覺。"
+    },
+    "PE": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null,
+      "reason": "局部治安或情勢需留意,建議提高警覺。"
+    },
+    "PF": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "PG": {
       "level": 4,
       "label": "紅色：儘速離境",
       "color": "#e5484d",
-      "note": "金夏沙",
-      "reason": "東部武裝民兵衝突持續,治安惡化。"
+      "note": null,
+      "reason": "部落衝突與治安惡化,搶劫暴力犯罪頻傳。"
+    },
+    "PH": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": "民答那峨島",
+      "reason": "特定島嶼區域伊斯蘭極端組織活動。"
+    },
+    "PK": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null,
+      "reason": "恐怖攻擊與武裝團體活動頻繁。"
+    },
+    "PL": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "PR": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null,
+      "reason": "局部治安或情勢需留意,建議提高警覺。"
+    },
+    "PS": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": "約旦河西岸地區、加薩走廊",
+      "reason": "以巴衝突持續,武裝衝突與人身安全風險極高。"
+    },
+    "PT": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "PW": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "PY": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": "巴拉圭",
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "QA": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null,
+      "reason": "區域地緣政治緊張外溢風險。"
+    },
+    "RO": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "RS": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "RU": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null,
+      "reason": "與烏克蘭處於戰爭狀態,徵兵與治安風險。"
+    },
+    "RW": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null,
+      "reason": "與鄰國邊境地區局勢緊張。"
+    },
+    "SA": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null,
+      "reason": "邊境地區無人機/飛彈攻擊風險。"
+    },
+    "SB": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null,
+      "reason": "政局動盪,族群與治安衝突。"
+    },
+    "SC": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null,
+      "reason": "安全風險升高,避免非必要旅行。"
+    },
+    "SD": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null,
+      "reason": "軍方派系內戰,人道危機持續。"
+    },
+    "SE": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null,
+      "reason": "局部治安或情勢需留意,建議提高警覺。"
+    },
+    "SG": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "SI": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "SK": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "SL": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null,
+      "reason": "政經情勢脆弱,治安風險。"
+    },
+    "SM": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
     },
     "SN": {
       "level": 4,
@@ -1109,6 +1221,13 @@
       "note": null,
       "reason": "鄰近索馬利亞情勢動盪,治安風險。"
     },
+    "SR": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null,
+      "reason": "局部治安或情勢需留意,建議提高警覺。"
+    },
     "SS": {
       "level": 4,
       "label": "紅色：儘速離境",
@@ -1116,33 +1235,124 @@
       "note": null,
       "reason": "內戰後族群衝突未歇,治安極差。"
     },
-    "SD": {
-      "level": 4,
-      "label": "紅色：儘速離境",
-      "color": "#e5484d",
+    "ST": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
       "note": null,
-      "reason": "軍方派系內戰,人道危機持續。"
+      "reason": "安全風險升高,避免非必要旅行。"
     },
-    "UG": {
-      "level": 4,
-      "label": "紅色：儘速離境",
-      "color": "#e5484d",
-      "note": null,
-      "reason": "鄰近區域衝突外溢風險。"
+    "SV": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": "薩爾瓦多",
+      "reason": "局部治安或情勢需留意,建議提高警覺。"
     },
-    "ZW": {
+    "SY": {
       "level": 4,
       "label": "紅色：儘速離境",
       "color": "#e5484d",
       "note": null,
-      "reason": "政經情勢不穩,治安與經濟風險。"
+      "reason": "內戰與武裝衝突持續,國家管制力薄弱。"
+    },
+    "SZ": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null,
+      "reason": "局部治安或情勢需留意,建議提高警覺。"
+    },
+    "TC": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": "土克凱可群島",
+      "reason": "局部治安或情勢需留意,建議提高警覺。"
+    },
+    "TD": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null,
+      "reason": "政局動盪,鄰近衝突區域外溢風險。"
+    },
+    "TG": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null,
+      "reason": "安全情勢嚴峻,不宜前往,已在當地者宜儘速離境。"
+    },
+    "TH": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null,
+      "reason": "南部/邊境府份零星衝突與治安風險。"
+    },
+    "TJ": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null,
+      "reason": "邊境地區情勢不穩。"
+    },
+    "TL": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null,
+      "reason": "局部治安或情勢需留意,建議提高警覺。"
+    },
+    "TM": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null,
+      "reason": "局部治安或情勢需留意,建議提高警覺。"
     },
     "TN": {
       "level": 4,
       "label": "紅色：儘速離境",
       "color": "#e5484d",
-      "note": "中西部山區及邊界地區",
+      "note": null,
       "reason": "特定邊境山區恐怖組織殘餘活動。"
+    },
+    "TO": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "TR": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null,
+      "reason": "東南部鄰敘利亞邊境地區恐怖組織活動風險。"
+    },
+    "TT": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null,
+      "reason": "幫派暴力與槍枝犯罪率高。"
+    },
+    "TV": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": "吐瓦魯",
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "TZ": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null,
+      "reason": "特定邊境省區武裝衝突外溢風險。"
     },
     "UA": {
       "level": 4,
@@ -1151,12 +1361,47 @@
       "note": null,
       "reason": "與俄羅斯處於全面戰爭狀態,飛彈攻擊風險。"
     },
-    "HT": {
+    "UG": {
       "level": 4,
       "label": "紅色：儘速離境",
       "color": "#e5484d",
       "note": null,
-      "reason": "幫派勢力控制大部分首都,治安全面崩潰。"
+      "reason": "鄰近區域衝突外溢風險。"
+    },
+    "US": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null,
+      "reason": "局部治安或情勢需留意,建議提高警覺。"
+    },
+    "UY": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "UZ": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": "烏茲別克",
+      "reason": "局部治安或情勢需留意,建議提高警覺。"
+    },
+    "VA": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "VC": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": "聖文森及格瑞那丁",
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
     },
     "VE": {
       "level": 4,
@@ -1164,6 +1409,83 @@
       "color": "#e5484d",
       "note": null,
       "reason": "政經危機,治安惡化與犯罪率高。"
+    },
+    "VG": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": "維京群島",
+      "reason": "局部治安或情勢需留意,建議提高警覺。"
+    },
+    "VI": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": null,
+      "reason": "局部治安或情勢需留意,建議提高警覺。"
+    },
+    "VN": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "VU": {
+      "level": 2,
+      "label": "黃色：特別注意旅遊安全並檢討是否有必要前往",
+      "color": "#f5d90a",
+      "note": "萬那杜",
+      "reason": "局部治安或情勢需留意,建議提高警覺。"
+    },
+    "WF": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "WS": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "XK": {
+      "level": 1,
+      "label": "灰色：提醒注意",
+      "color": "#9aa5b1",
+      "note": null,
+      "reason": "整體情勢平穩,維持一般旅外安全警覺即可。"
+    },
+    "YE": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": "葉門",
+      "reason": "內戰持續,武裝衝突與恐怖組織活動。"
+    },
+    "ZA": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null,
+      "reason": "犯罪率高,搶劫與暴力事件頻傳。"
+    },
+    "ZM": {
+      "level": 3,
+      "label": "橙色：避免非必要旅行",
+      "color": "#f5a524",
+      "note": null,
+      "reason": "一般治安風險。"
+    },
+    "ZW": {
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
+      "note": null,
+      "reason": "政經情勢不穩,治安與經濟風險。"
     }
   }
 }

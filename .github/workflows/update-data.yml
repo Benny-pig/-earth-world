@@ -1,0 +1,47 @@
+# 🤖 每週自動更新網站資料:旅遊警示、國道路段與監視器、台鐵車站、緊急聯絡與駐外館處。
+# 各個建置工具都有防呆(抓到的數量異常就不覆蓋),某一項失敗不影響其他項;有變動才存檔,
+# 存檔後請 GitHub Pages 重新發佈。也可以在 GitHub 網站的 Actions 頁手動執行。
+name: 每週自動更新資料
+on:
+  schedule:
+    - cron: "0 19 * * 0"   # 每週一凌晨 3 點(台灣時間)= 週日 19:00 UTC
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      TZ: Asia/Taipei
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 安裝套件
+        run: pip install opencc-python-reimplemented
+      - name: 旅遊警示(外交部領事事務局)
+        run: python tools/build-travel-alert.py
+        continue-on-error: true
+      - name: 國道路段與監視器(高速公路局)
+        run: python tools/build-freeway.py
+        continue-on-error: true
+      - name: 台鐵車站
+        run: python tools/build-rail-stations.py
+        continue-on-error: true
+      - name: 緊急電話、駐外館處、中國使館
+        run: python tools/build-emergency.py
+        continue-on-error: true
+      - name: 有變動就存檔並重新發佈網站
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "earth-world-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then echo "資料沒有變動"; exit 0; fi
+          git commit -m "chore(資料): 每週自動更新 $(date +%Y-%m-%d)"
+          git push
+          gh api -X POST "repos/${{ github.repository }}/pages/builds" || echo "請求 Pages 重新發佈失敗(之後的推送也會觸發)"

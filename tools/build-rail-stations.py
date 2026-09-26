@@ -44,6 +44,8 @@ def main():
             except ValueError: pass
         tra.append({"id": s["stationCode"], "zh": s["stationName"], "en": s.get("stationEName") or "",
                     "county": county, "g": [lat, lon] if lat else None})
+    if len(tra) < 200:   # 防呆:資料異常時不覆蓋
+        sys.exit(f"台鐵車站只有 {len(tra)} 站,資料可能異常,不更新")
     tra.sort(key=lambda x: (COUNTY_ORDER.index(x["county"]) if x["county"] in COUNTY_ORDER else 99, x["id"]))
     doc = {
         "source": "臺鐵車站基本資料集(國營臺灣鐵路公司開放資料);高鐵車站依 TDX 代碼",

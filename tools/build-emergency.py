@@ -419,6 +419,9 @@ def main():
 
     tw_off, tw = build_tw(offices)
     cn_emb, cn = build_cn(cn_pages)
+    # 防呆:來源網頁改版時抓到的數量會突然變很少,這時不要覆蓋掉原本的資料
+    if len(em) < 200 or len(tw_off) < 80 or len(cn_emb) < 120:
+        sys.exit(f"數量異常(緊急電話 {len(em)}、我國館處 {len(tw_off)}、中國使館 {len(cn_emb)}),不更新")
     doc = {
         "asOf": date.today().isoformat(),
         "sources": {
