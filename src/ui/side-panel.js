@@ -96,7 +96,7 @@ function missionsHtml(code, data) {
   return h;
 }
 
-export function createSidePanel({ onClose, onMore }) {
+export function createSidePanel({ onClose, onMore, visited }) {
   const el = document.getElementById("side-panel");
   const body = document.getElementById("side-panel-body");
   let openCode = null;
@@ -181,7 +181,8 @@ export function createSidePanel({ onClose, onMore }) {
       ? `<button type="button" class="sp-more pulse" data-code="${esc(p.code)}">` +
         `<span class="sp-more-ico">📖</span>${p.region ? "大百科" : "國家大百科"} · 詳細介紹</button>` : "";
     let html = `${flag}<h2>${esc(p.names.zh)}</h2><div class="en">${esc(p.names.en)}</div>${moreBtn}` +
-      `<button type="button" class="sp-share" data-share>🔗 分享這個國家</button>`;
+      `<button type="button" class="sp-share" data-share>🔗 分享這個國家</button>` +
+      `<span id="sp-visit-slot"></span>`;
     const meta = [];
     if (p.capital && p.capital.zh) meta.push(`首都:${esc(p.capital.zh)}${p.capital.en ? ` (${esc(p.capital.en)})` : ""}`);
     if (p.population != null && p.population !== "") meta.push(`人口:${fmtPop(p.population)}`);
@@ -237,6 +238,7 @@ export function createSidePanel({ onClose, onMore }) {
     body.innerHTML = html;
     const mb = body.querySelector(".sp-more");
     if (mb) mb.addEventListener("click", () => onMore(mb.dataset.code));
+    renderVisit();
     el.classList.add("open");
     startClock(p.timezone);
     if (p.code) fillEmergency(p.code);
@@ -263,6 +265,17 @@ export function createSidePanel({ onClose, onMore }) {
       `</details>`;
   }
 
+  // 🛂「我去過這裡」:讀者自己按才蓋章(只是點開看介紹不算去過),再按一次取消
+  function renderVisit() {
+    const slot = document.getElementById("sp-visit-slot");
+    if (!slot) return;
+    if (!visited || !openCode || !visited.canStamp(openCode)) { slot.innerHTML = ""; return; }
+    const on = visited.has(openCode);
+    slot.innerHTML = `<button type="button" class="sp-share sp-visit${on ? " on" : ""}" title="${on ? "再按一下可以取消" : "記在旅行護照裡"}">` +
+      `${on ? "✅ 去過了・已蓋章" : "🛂 我去過這裡"}</button>`;
+    slot.firstChild.addEventListener("click", () => visited.toggle(openCode));
+  }
+
   function close() {
     if (!el.classList.contains("open")) return;
     openCode = null;
@@ -275,6 +288,7 @@ export function createSidePanel({ onClose, onMore }) {
     open,
     close,
     code: () => (el.classList.contains("open") ? openCode : null),
+    refreshVisit: renderVisit,
     isOpen: () => el.classList.contains("open"),
     // 非同步預報回來時呼叫;面板已換國或關閉就忽略
     setForecast(code, days) {

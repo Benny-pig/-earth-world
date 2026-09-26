@@ -418,6 +418,15 @@ export function start() {
   }
   setupCollapsible("lc-collapse-toggle", "lc-body", "earth-world.lc-collapsed");
   setupCollapsible("twc-collapse-toggle", "twc-body", "earth-world.twc-collapsed");
+  // 手機畫面小:從選單開/關功能後,自動收起「台灣交通」「功能」兩張卡片,不要擋住地球
+  // (功能列自己的點擊先處理,這裡是冒泡上來才收;想再選就點卡片標題展開)
+  document.getElementById("ctrl-dock")?.addEventListener("click", (e) => {
+    if (window.innerWidth > 640 || !e.target.closest(".layer-row")) return;
+    for (const id of ["twc-collapse-toggle", "lc-collapse-toggle"]) {
+      const t = document.getElementById(id);
+      if (t && t.getAttribute("aria-expanded") === "true") t.click();
+    }
+  });
 
   const audioToggle = document.getElementById("audio-toggle");
   const audioVol = document.getElementById("audio-vol");
@@ -458,6 +467,8 @@ export function start() {
       if (window.__earth.clouds) window.__earth.clouds.setSpinPaused(keepPaused);
     },
     onMore: (code) => encyclopedia.open(code),
+    // 旅行護照在後面才建立,這裡用延遲取用
+    visited: { has: (c) => passport.has(c), canStamp: (c) => passport.canStamp(c), toggle: (c) => passport.toggle(c) },
   });
   window.__earth.sidePanel = sidePanel;
 
@@ -493,7 +504,6 @@ export function start() {
       latlon: noSettlement ? null : (cll || [lat, lon]),
     });
     window.__earth.countryLayer.setSelected(hit.code);
-    passport.stamp(hit.code);
   }
   window.__earth.openCountry = openCountry;
 
@@ -506,7 +516,7 @@ export function start() {
   }
   if (quizToggle) quizToggle.addEventListener("click", () => setQuiz(quizToggle.getAttribute("aria-pressed") !== "true"));
 
-  // 🛂 旅行護照集章:打開國家(openCountry)或大百科時蓋章
+  // 🛂 旅行護照集章:讀者自己標記去過的國家(側欄「我去過這裡」、護照清單、點地球蓋章模式)
   const passportToggle = document.getElementById("passport-toggle");
   const passport = createPassport({ globeObject: globe.object, openCountryByCode, onClose: () => setPassport(false) });
   function setPassport(on) {
@@ -514,6 +524,7 @@ export function start() {
     passport.setEnabled(on);
   }
   if (passportToggle) passportToggle.addEventListener("click", () => setPassport(passportToggle.getAttribute("aria-pressed") !== "true"));
+  passport.onChange(() => sidePanel.refreshVisit());
   // ✈️ 飛行旅程模擬
   const flightSimToggle = document.getElementById("flightsim-toggle");
   const flightSim = createFlightSim({ globeObject: globe.object, camera, renderer, rig, openCountryByCode, onClose: () => setFlightSim(false) });
@@ -533,8 +544,6 @@ export function start() {
   }
   if (liveCamToggle) liveCamToggle.addEventListener("click", () => setLiveCams(liveCamToggle.getAttribute("aria-pressed") !== "true"));
 
-  const encOpen = encyclopedia.open;
-  encyclopedia.open = (code, ...rest) => { passport.stamp(code); return encOpen(code, ...rest); };
 
   function openCountryByCode(code) {
     const cl = window.__earth.countryLayer;
@@ -570,6 +579,8 @@ export function start() {
     // ✈️ 飛行模擬:飛行中點地球不開側欄(鏡頭正跟著飛機);還在選目的地時,點國家 = 選它當目的地
     if (flightSim.isFlying()) return;
     if (flightSim.isPicking()) { flightSim.pick(hit.code); return; }
+    // 🛂 護照「點地球蓋章」模式:點國家 = 蓋章/取消,不開側欄
+    if (passport.isMarking()) { passport.toggle(hit.code); return; }
     // 看路況時點在台灣陸地上但沒點中國道(差幾個像素很常見),不要跳出台灣側欄、
     // 把相機拉遠——想看台灣介紹可以點台灣的金色地名
     if (traffic.isEnabled() && hit.code === "TW") return;

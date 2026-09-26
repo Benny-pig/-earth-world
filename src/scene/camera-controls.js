@@ -11,13 +11,13 @@ const BASE_ROTATE_SPEED = 0.45;
 // 同樣距離下地球左右會被切到畫面外。用垂直/水平視角的三角幾何反推:
 // 先算地球在桌機橫向畫面(aspect >= 1,垂直方向才是限制)佔垂直視角的比例當基準,
 // 直向時改用「被裁的那個水平視角」乘上同一比例反推距離,讓直向的取景觀感跟橫向一致。
-export function fitDistanceForAspect(aspect, { fovDeg = 45, base = 3.2 } = {}) {
+export function fitDistanceForAspect(aspect, { fovDeg = 45, base = 3.2, max = MAX_DISTANCE } = {}) {
   if (aspect >= 1) return base;
   const halfV = (fovDeg / 2) * (Math.PI / 180);
   const marginRatio = Math.asin(1 / base) / halfV;
   const halfH = Math.atan(Math.tan(halfV) * aspect);
   const dist = 1 / Math.sin(marginRatio * halfH);
-  return Math.min(dist, MAX_DISTANCE);
+  return Math.min(dist, max);
 }
 
 export function createCameraRig({ camera, domElement, globeObject }) {
@@ -56,6 +56,20 @@ export function createCameraRig({ camera, domElement, globeObject }) {
     if (cur < d) tween = { from: camera.position.clone(), toDir: camera.position.clone().normalize(), dist: d, t: 0, ms: 600 };
   }
 
+  // 最遠可以拉多遠:平常 6;衛星開著時放寬,才看得到外圈的導航/氣象衛星。
+  // 收回來時如果相機比新的上限還遠,平滑拉回上限。
+  function setMaxDistance(d) {
+    controls.maxDistance = d;
+    const cur = camera.position.length();
+    if (cur > d) tween = { from: camera.position.clone(), toDir: camera.position.clone().normalize(), dist: d, t: 0, ms: 700 };
+  }
+
+  // 保持目前方向,拉遠到剛好看得到半徑 r 的球(r=1 就是整顆地球;手機直向會自動拉得更遠)
+  function fitRadius(r, { ms = 1000 } = {}) {
+    const dist = Math.min(controls.maxDistance, r * fitDistanceForAspect(camera.aspect, { max: Infinity }));
+    tween = { from: camera.position.clone(), toDir: camera.position.clone().normalize(), dist, t: 0, ms };
+  }
+
   function update(dt) {
     // 保險:鏡頭座標萬一變成無效值(NaN),整個地球會變黑、再也轉不回來——直接回到全景
     const p = camera.position;
@@ -80,5 +94,5 @@ export function createCameraRig({ camera, domElement, globeObject }) {
     controls.update();
   }
 
-  return { controls, flyTo, resetView, setMinDistance, update };
+  return { controls, flyTo, resetView, setMinDistance, setMaxDistance, fitRadius, update, MAX_DISTANCE };
 }

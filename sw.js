@@ -5,7 +5,7 @@
 //   - 大張貼圖、圖片、音樂、圖示(assets/):先用快取、背景順便更新(這些很少變,又很大)
 //   - 外部函式庫(jsDelivr 上的 three.js 等,網址本身帶版本號):快取優先
 //   - 即時資料(Worker、TDX、維基、衛星、地震…其他網域):完全不快取,永遠抓最新
-const VERSION = "v1";
+const VERSION = "v2";
 const CACHE = `earth-world-${VERSION}`;
 const SHELL = ["./", "./index.html", "./manifest.webmanifest", "./assets/icons/icon-192.png"];
 
@@ -24,7 +24,13 @@ self.addEventListener("activate", (e) => {
 async function networkFirst(req) {
   const cache = await caches.open(CACHE);
   try {
-    const res = await fetch(req);
+    // cache: "no-cache" = 每次都跟伺服器確認有沒有新版(沒變只回 304,很快),
+    // 不然瀏覽器自己的 HTTP 快取(GitHub Pages 給 10 分鐘)會拿到舊檔、甚至新舊檔混在一起。
+    // 換頁請求(navigate)不能帶參數重建,改用網址重新發一個
+    const net = req.mode === "navigate"
+      ? new Request(req.url, { cache: "no-cache", credentials: "same-origin" })
+      : new Request(req, { cache: "no-cache" });
+    const res = await fetch(net);
     if (res.ok) cache.put(req, res.clone());
     return res;
   } catch {

@@ -30,7 +30,9 @@ const FEATURED = {
 
 const DEG = Math.PI / 180;
 function displayRadius(altKm) {
-  return altKm <= 2000 ? 1 + altKm / EARTH_KM : 1 + 2000 / EARTH_KM + 0.3 * Math.log2(altKm / 2000);
+  // 低軌照真實比例;更遠的(導航衛星約 2 萬公里、同步衛星 3.6 萬公里)用對數大幅壓縮,
+  // 讓整圈衛星都擠得進畫面(同步軌道約在 1.85 倍地球半徑處)
+  return altKm <= 2000 ? 1 + altKm / EARTH_KM : 1 + 2000 / EARTH_KM + 0.13 * Math.log2(altKm / 2000);
 }
 function toVec3(latDeg, lonDeg, r) {
   const la = latDeg * DEG, lo = lonDeg * DEG, cl = Math.cos(la);
@@ -404,19 +406,38 @@ export function createSatelliteLayer({ globeObject, camera, renderer, rig, natur
       if (followId) { followId = null; renderPanelLive(); }
     });
     $("orbit-close").addEventListener("click", () => onClose && onClose());
+    // 收合面板:只留標題和衛星分類,把地球讓出來看衛星分布
+    $("orbit-min")?.addEventListener("click", () => setMin(!panel.classList.contains("min")));
     $("orbit-passes").addEventListener("click", (e) => {
       const b = e.target.closest("[data-ics]");
       if (b) downloadIcs(b);
     });
   }
 
+  function setMin(on) {
+    if (!panel) return;
+    panel.classList.toggle("min", on);
+    const b = $("orbit-min");
+    if (b) { b.textContent = on ? "▴" : "▾"; b.title = on ? "展開面板" : "收合面板"; }
+  }
+
+  const SAT_VIEW_RADIUS = 1.9;   // 拉遠到看得到同步軌道那一圈
   async function setEnabled(v) {
     enabled = !!v;
     group.visible = enabled;
     labelHost.hidden = !enabled;
     if (panel) panel.hidden = !enabled;
     clearInterval(timer); timer = null;
-    if (!enabled) { followId = null; naturePopup.hide(); return; }
+    if (!enabled) {
+      followId = null; naturePopup.hide();
+      rig.setMaxDistance?.(rig.MAX_DISTANCE || 6);
+      rig.resetView({ keepDirection: true });   // 回到平常看地球的距離
+      return;
+    }
+    // 打開時拉遠看全部衛星;手機畫面小,面板先收合成一條
+    rig.setMaxDistance?.(14);
+    rig.fitRadius?.(SAT_VIEW_RADIUS, { ms: 1200 });
+    setMin(window.innerWidth <= 640);
     try {
       if (panel) $("orbit-iss").innerHTML = `<div class="ap-empty">載入軌道資料中…</div>`;
       await load();

@@ -9,7 +9,7 @@ import { makeDraggable } from "../ui/draggable.js";
 // ✈️ 飛行旅程模擬:選出發地與目的地(各國首都),一架小飛機沿「大圓航線」(地球上兩點
 // 最短的路線,所以台北飛美國會往北繞過阿拉斯加)飛過去,鏡頭跟著飛機走。
 // 旅程壓縮成幾十秒,途中顯示已飛時間、距離、高度、地速、正在飛越哪一國,
-// 還有機上廣播(起飛、供餐吃目的地的名菜、準備降落)。抵達後打開目的地介紹、護照自動蓋章。
+// 還有機上廣播(起飛、供餐吃目的地的名菜、準備降落)。抵達後打開目的地介紹。
 const EARTH_KM = 6371;
 const CRUISE_KMH = 870;
 const LOG_KEY = "earth-world.flight-log";
@@ -221,7 +221,7 @@ export function createFlightSim({ globeObject, camera, renderer, rig, openCountr
     arrived = { from: f.from, to: f.to, km: f.km, hours: f.hours, local: fmtLocal(f.tzT, new Date(f.depart.getTime() + f.hours * 3600000)) };
     announce(`<div class="otd-cap-k">🎉 歡迎抵達</div>歡迎來到 <b>${esc(nameOf(f.to))}・${esc(capOf(f.to))}</b>!當地時間 ${esc(arrived.local)}。感謝搭乘地球世界航空,祝您旅途愉快!`, 6500);
     setTimeout(() => { group.visible = false; }, 400);
-    openCountryByCode(f.to);   // 飛到首都、打開介紹(護照也會自動蓋章)
+    openCountryByCode(f.to);   // 飛到首都、打開介紹
     renderArrived();
   }
 
@@ -292,7 +292,7 @@ export function createFlightSim({ globeObject, camera, renderer, rig, openCountr
     const l = log();
     body.innerHTML = `<div class="fs-arrived"><div class="fs-big">🎉 抵達 ${esc(capOf(a.to))}!</div>` +
       `<div class="fs-route">${flagImg(a.from)}${esc(capOf(a.from))}<span class="fs-arrow">✈</span>${flagImg(a.to)}${esc(capOf(a.to))}</div>` +
-      `<div>飛了 <b>${fmtKm(a.km)}</b> 公里 · 約 ${fmtDur(a.hours)}<br>當地時間 ${esc(a.local)} · 🛂 護照已蓋章</div>` +
+      `<div>飛了 <b>${fmtKm(a.km)}</b> 公里 · 約 ${fmtDur(a.hours)}<br>當地時間 ${esc(a.local)}</div>` +
       `<div class="fs-log">🧾 累計 ${l.n || 0} 趟 · ${fmtKm(l.km || 0)} 公里(繞地球 ${((l.km || 0) / 40075).toFixed(2)} 圈)</div>` +
       `<div class="quiz-actions fs-btns"><button type="button" class="tc-btn" data-act="more">📖 認識${esc(nameOf(a.to))}</button>` +
       `<button type="button" class="tc-btn" data-act="back">↩️ 飛回程</button><button type="button" class="tc-btn quiz-next" data-act="new">🗺️ 再飛一趟</button></div></div>`;
