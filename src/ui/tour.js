@@ -1,6 +1,8 @@
 // 👋 新手導覽:第一次來的讀者,開場運鏡結束後依序介紹畫面上的重點(其他地方變暗、只亮出那一塊),
 // 可以略過、上一步、下一步;右上角「❓」隨時重看。
 // 另外每個功能第一次打開時,跳出一句說明它在做什麼(每個功能只提示一次)。
+import { isEn } from "../lib/i18n.js";
+
 const KEY = "earth-world.tour";
 const SEEN_KEY = "earth-world.hints";
 
@@ -14,8 +16,39 @@ const STEPS = [
   { sel: "#top-tools", title: "🔗 分享與主題", text: "把現在的畫面分享給朋友、換版面風格,或把網站安裝成 App。看不懂的時候按「❓」再看一次導覽。" },
 ];
 
+const STEPS_EN = [
+  { sel: null, title: "👋 Welcome to Earth World!", text: "<b>Drag</b> to spin the globe; use the <b>scroll wheel or two fingers</b> to zoom." },
+  { sel: null, title: "🌏 Tap any country", text: "See its local time, weather, emergency numbers and today's news, plus a detailed encyclopedia." },
+  { sel: "#country-search", title: "🔎 Search", text: "Type a country name in English or Chinese and fly straight there." },
+  { sel: "#layer-controls", title: "🎛️ Features", text: "Earthquakes, weather, flights, satellites, live cams, games… <b>tap to turn on, tap again to turn off</b>." },
+  { sel: "#tw-controls", title: "🚦 Taiwan transport", text: "Live flights at Taiwan's airports, freeway traffic and cameras, and train timetables." },
+  { sel: "#audio-ui", title: "🎵 Music", text: "Pick the background music, or tap “🎵 RO” for the Ragnarok Online soundtrack." },
+  { sel: "#top-tools", title: "🔗 Share & settings", text: "Share this view, change the theme, switch language (EN / 中) or install the site as an app. Tap “❓” to see this tour again." },
+];
+
 // 功能第一次打開時的一句話說明
-const HINTS = {
+const HINTS_EN = {
+  "quake-toggle": "Dots are recent earthquakes — tap one for magnitude, depth and time.",
+  "weather-toggle": "Colours show the temperature right now (switch to rain in the panel). On a computer, point anywhere to read the temperature and rainfall.",
+  "satellite-toggle": "The latest weather-satellite images — typhoons and large cloud systems.",
+  "flight-toggle": "Small planes are flights in the air right now — tap one for details.",
+  "livecam-toggle": "Tap a red 📺 circle, or pick a place from the list, to watch it live.",
+  "orbit-toggle": "White dots are satellites, yellow ones are space stations. The panel shows when the ISS next passes over Taiwan.",
+  "launch-toggle": "🚀 marks rocket launches in the next 30 days — tap one for the time and mission.",
+  "sun-toggle": "The globe turns to its real position facing the Sun: the bright half is in daytime now, the dark half at night, and the line between is where the sun is rising or setting.",
+  "quiz-toggle": "Look at a flag, dish, landmark or capital, then tap the right country on the globe!",
+  "passport-toggle": "Keep track of countries you've really visited: tap “🛂 I've been here” in a country's panel, or stamp several on the globe.",
+  "flightsim-toggle": "Pick a destination (or tap a country) and watch the plane fly the shortest route.",
+  "compare-toggle": "Tap a country on the globe to compare it side by side with Taiwan.",
+  "otd-toggle": "Big events that happened on this date — tap one and the globe flies there.",
+  "radio-toggle": "Cards on the globe are local radio stations — tap to listen.",
+  "airport-toggle": "Live departures and arrivals at Taiwan's airports.",
+  "traffic-toggle": "Live freeway traffic — the redder, the busier. Switch regions and watch cameras.",
+  "thsr-toggle": "Pick two stations for high-speed rail times and seats.",
+  "tra-toggle": "Pick two stations for Taiwan Railway times.",
+};
+
+const HINTS_ZH = {
   "quake-toggle": "地球上的圓點是最近發生的地震,點一下看規模、深度和時間。",
   "weather-toggle": "色塊是全球現在的氣溫(可以切換成降雨);電腦上滑鼠指到哪裡,就會顯示那裡的溫度和雨量。",
   "satellite-toggle": "顯示最新的氣象衛星雲圖,看得到颱風和大範圍的雲系。",
@@ -35,6 +68,9 @@ const HINTS = {
   "thsr-toggle": "選出發站和抵達站,查高鐵時刻與剩餘座位。",
   "tra-toggle": "選出發站和抵達站,查台鐵時刻。",
 };
+
+const STEPS_USE = () => (isEn ? STEPS_EN : STEPS);
+const HINTS = () => (isEn ? HINTS_EN : HINTS_ZH);
 
 export function createTour() {
   let i = 0, active = false, overlay = null, spot = null, card = null;
@@ -65,17 +101,18 @@ export function createTour() {
 
   function go(n) {
     if (n < 0) return;
-    if (n >= STEPS.length) { end(); return; }
+    const steps = STEPS_USE();
+    if (n >= steps.length) { end(); return; }
     // 目標不在畫面上(例如某些區塊被收起來)就跳過這一步
-    const s = STEPS[n];
+    const s = steps[n];
     const el = s.sel ? document.querySelector(s.sel) : null;
     if (s.sel && !visible(el)) { go(n > i ? n + 1 : n - 1); return; }
     i = n;
-    const last = i === STEPS.length - 1;
-    card.innerHTML = `<div class="tour-step">${i + 1} / ${STEPS.length}</div><div class="tour-title">${s.title}</div><div class="tour-text">${s.text}</div>` +
-      `<div class="tour-btns"><button type="button" data-act="skip" class="tour-skip">略過</button>` +
-      (i > 0 ? `<button type="button" data-act="prev">上一步</button>` : "") +
-      `<button type="button" data-act="next" class="tour-next">${last ? "開始探索 🌏" : "下一步"}</button></div>`;
+    const last = i === steps.length - 1;
+    card.innerHTML = `<div class="tour-step">${i + 1} / ${steps.length}</div><div class="tour-title">${s.title}</div><div class="tour-text">${s.text}</div>` +
+      `<div class="tour-btns"><button type="button" data-act="skip" class="tour-skip">${isEn ? "Skip" : "略過"}</button>` +
+      (i > 0 ? `<button type="button" data-act="prev">${isEn ? "Back" : "上一步"}</button>` : "") +
+      `<button type="button" data-act="next" class="tour-next">${last ? (isEn ? "Start exploring 🌏" : "開始探索 🌏") : (isEn ? "Next" : "下一步")}</button></div>`;
     if (el) {
       const vw = window.innerWidth, vh = window.innerHeight, pad = 6, gap = 12, m = 12;
       const r0 = el.getBoundingClientRect();
@@ -128,7 +165,7 @@ export function createTour() {
   try { seen = new Set(JSON.parse(localStorage.getItem(SEEN_KEY) || "[]")); } catch { /* 沒有紀錄 */ }
   let hintEl = null, hintTimer = null;
   function showHint(id) {
-    const text = HINTS[id];
+    const text = HINTS()[id];
     if (!text || seen.has(id) || active) return;
     seen.add(id);
     try { localStorage.setItem(SEEN_KEY, JSON.stringify([...seen])); } catch { /* 存不了就算了 */ }
@@ -139,7 +176,7 @@ export function createTour() {
       document.body.appendChild(hintEl);
     }
     const label = document.getElementById(id)?.textContent.replace(/\s+/g, " ").trim() || "";
-    hintEl.innerHTML = `<b>💡 ${label}</b><span>${text}</span><small>點一下關閉</small>`;
+    hintEl.innerHTML = `<b>💡 ${label}</b><span>${text}</span><small>${isEn ? "Tap to close" : "點一下關閉"}</small>`;
     hintEl.classList.remove("show"); void hintEl.offsetWidth; hintEl.classList.add("show");
     clearTimeout(hintTimer);
     hintTimer = setTimeout(() => hintEl.classList.remove("show"), 9000);

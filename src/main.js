@@ -37,6 +37,7 @@ import { createRoPlayer } from "./ui/ro-player.js";
 import { createWeatherLayer } from "./scene/weather.js";
 import { createCompare } from "./ui/compare.js";
 import { createTour } from "./ui/tour.js";
+import { setupI18n } from "./lib/i18n.js";
 import { createShare } from "./ui/share.js";
 import { setupPwa } from "./ui/pwa.js";
 import { createNaturePopup } from "./ui/nature-popup.js";
@@ -481,6 +482,7 @@ export function start() {
   });
 
   // 👋 新手導覽:第一次來的讀者,等載入畫面與開場運鏡結束後自動開始;右上角「❓」可重看
+  setupI18n();   // 🌐 EN / 中 切換;英文模式時把介面文字換成英文
   const tour = createTour();
   window.__earth.tour = tour;
   if (!openedWithParams) {

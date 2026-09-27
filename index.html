@@ -397,6 +397,20 @@
   .intro-ripple i:nth-child(2) { animation-delay: .45s; }
   .intro-ripple i:nth-child(3) { animation-delay: .9s; }
   @keyframes intro-ripple { 0% { transform: scale(.4); opacity: 1; } 100% { transform: scale(5.5); opacity: 0; } }
+  /* 🌐 英文介面:國名只顯示英文;內文只有中文時的提醒 */
+  html.lang-en #country-labels .zh, html.lang-en #ocean-labels .zh, html.lang-en #tooltip .zh,
+  html.lang-en #physical-labels .pl-zh, html.lang-en #side-panel h2 { display: none !important; }
+  html.lang-en #country-labels .c-label .en { font-size: 11.5px; opacity: 1; letter-spacing: .02em; margin-top: 0; }
+  html.lang-en #country-labels .c-pin-text .en { font-size: 11px; font-weight: 700; opacity: 1; }
+  html.lang-en #ocean-labels .ocean-label .en { font-size: 13px; opacity: .9; }
+  html.lang-en #physical-labels .pl-en { opacity: 1; }
+  html.lang-en #tooltip .en { font-size: 13px; opacity: 1; margin-left: 0; }
+  html.lang-en #side-panel h2 + .en { font-size: 26px; font-weight: 700; opacity: 1; color: inherit; }
+  #lang-btn { font-weight: 800; letter-spacing: .04em; }
+  #en-note { position: fixed; left: 50%; top: 64px; transform: translateX(-50%); z-index: 62; width: min(520px, calc(100vw - 24px)); box-sizing: border-box;
+    padding: 10px 40px 10px 14px; border-radius: 12px; background: rgba(12,18,34,.96); border: 1px solid rgba(120,200,255,.5); color: #eef3ff;
+    font: 13px/1.55 system-ui, sans-serif; box-shadow: 0 10px 30px rgba(0,0,0,.5); }
+  #en-note button { position: absolute; right: 8px; top: 8px; border: 0; background: none; color: inherit; font-size: 14px; cursor: pointer; opacity: .7; }
   /* 👋 新手導覽:其他地方變暗、只亮出介紹的那一塊;功能第一次打開的一句話說明 */
   #tour { position: fixed; inset: 0; z-index: 80; }
   #tour[hidden] { display: none; }
@@ -1638,7 +1652,7 @@
   body[data-theme="fantasy"] #clock-weather,
   body[data-theme="fantasy"] #audio-ui,
   body[data-theme="fantasy"] .ctrl-card,
-  body[data-theme="fantasy"] #theme-toggle, body[data-theme="fantasy"] #share-btn, body[data-theme="fantasy"] #install-btn { font-family: 'Cinzel', 'Noto Serif TC', serif; letter-spacing: .03em; }
+  body[data-theme="fantasy"] #theme-toggle, body[data-theme="fantasy"] #share-btn, body[data-theme="fantasy"] #install-btn, body[data-theme="fantasy"] #tour-btn, body[data-theme="fantasy"] #lang-btn { font-family: 'Cinzel', 'Noto Serif TC', serif; letter-spacing: .03em; }
   /* 右下角控制區:上面「台灣交通」(機場航班、即時路況…)、下面「功能」(全球性的圖層),
      兩張卡片疊在同一個容器裡,各自可以收合,不會互相重疊。卡片樣式共用 .ctrl-card。 */
   #ctrl-dock {
@@ -1709,7 +1723,7 @@
   body[data-theme="fantasy"] .ctrl-card .lc-title { color: #a08a5c; }
   body[data-theme="fantasy"] .ctrl-card .layer-row { color: #f0dfab; }
   body[data-theme="fantasy"] .ctrl-card .layer-row:hover { background: rgba(201,162,39,.14); }
-  body[data-theme="fantasy"] #theme-toggle, body[data-theme="fantasy"] #share-btn, body[data-theme="fantasy"] #install-btn {
+  body[data-theme="fantasy"] #theme-toggle, body[data-theme="fantasy"] #share-btn, body[data-theme="fantasy"] #install-btn, body[data-theme="fantasy"] #tour-btn, body[data-theme="fantasy"] #lang-btn {
     background: linear-gradient(180deg,#332714,#1c150c); border: 1px solid #c9a227; color: #f0dfab;
   }
   body[data-theme="fantasy"] .ctrl-card .layer-dot { background: #c9a227; box-shadow: 0 0 6px #c9a227; }
@@ -1803,7 +1817,7 @@
   body[data-theme="journal"] #tw-clock,
   body[data-theme="journal"] #clock-weather,
   body[data-theme="journal"] #audio-ui,
-  body[data-theme="journal"] #theme-toggle, body[data-theme="journal"] #share-btn, body[data-theme="journal"] #install-btn,
+  body[data-theme="journal"] #theme-toggle, body[data-theme="journal"] #share-btn, body[data-theme="journal"] #install-btn, body[data-theme="journal"] #tour-btn, body[data-theme="journal"] #lang-btn,
   body[data-theme="journal"] .ctrl-card,
   body[data-theme="journal"] #country-search input,
   body[data-theme="journal"] #country-search ul {
@@ -1815,7 +1829,7 @@
   body[data-theme="journal"] #tw-clock,
   body[data-theme="journal"] #clock-weather,
   body[data-theme="journal"] #audio-ui,
-  body[data-theme="journal"] #theme-toggle, body[data-theme="journal"] #share-btn, body[data-theme="journal"] #install-btn,
+  body[data-theme="journal"] #theme-toggle, body[data-theme="journal"] #share-btn, body[data-theme="journal"] #install-btn, body[data-theme="journal"] #tour-btn, body[data-theme="journal"] #lang-btn,
   body[data-theme="journal"] .ctrl-card { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", serif; }
   body[data-theme="journal"] #tw-clock .tw-label,
   body[data-theme="journal"] #clock-weather .cw-country { color: #a6572e; }
@@ -1918,11 +1932,11 @@
   body[data-theme="hud"] #clock-weather,
   body[data-theme="hud"] #audio-ui,
   body[data-theme="hud"] .ctrl-card,
-  body[data-theme="hud"] #theme-toggle, body[data-theme="hud"] #share-btn, body[data-theme="hud"] #install-btn {
+  body[data-theme="hud"] #theme-toggle, body[data-theme="hud"] #share-btn, body[data-theme="hud"] #install-btn, body[data-theme="hud"] #tour-btn, body[data-theme="hud"] #lang-btn {
     font-family: 'Share Tech Mono', ui-monospace, monospace; letter-spacing: .02em;
   }
   body[data-theme="hud"] .ctrl-card,
-  body[data-theme="hud"] #theme-toggle, body[data-theme="hud"] #share-btn, body[data-theme="hud"] #install-btn {
+  body[data-theme="hud"] #theme-toggle, body[data-theme="hud"] #share-btn, body[data-theme="hud"] #install-btn, body[data-theme="hud"] #tour-btn, body[data-theme="hud"] #lang-btn {
     background: linear-gradient(180deg,#0e2226,#04121a); border: 1px solid #00e5ff; color: #cdf3ff; border-radius: 3px;
     text-transform: uppercase;
   }
@@ -2074,7 +2088,7 @@
   }
   #install-ios b { color: #8fd4ff; }
   #install-ios button { margin-top: 6px; padding: 4px 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,.3); background: none; color: inherit; cursor: pointer; }
-  #theme-toggle, #share-btn, #install-btn {
+  #theme-toggle, #share-btn, #install-btn, #tour-btn, #lang-btn {
     cursor: pointer;
     padding: 5px 10px; font-size: 11px; border-radius: 8px;
     background: rgba(4, 6, 12, 0.88); backdrop-filter: blur(10px);
@@ -2421,6 +2435,7 @@
     <button id="install-btn" type="button" hidden aria-label="把地球世界安裝成 App" title="安裝到手機/電腦,像 App 一樣全螢幕開啟">📲 安裝 App</button>
     <button id="share-btn" type="button" aria-label="分享目前畫面" title="分享目前畫面(複製連結)">🔗 分享</button>
     <button id="theme-toggle" type="button" aria-label="切換版面主題">🌙 星空</button>
+    <button id="lang-btn" type="button" aria-label="English / 中文">EN</button>
     <button id="tour-btn" type="button" aria-label="重看新手導覽" title="新手導覽">❓</button>
   </div>
   <div id="clock-weather" hidden></div>
