@@ -43,6 +43,9 @@ import { createAurora } from "./scene/aurora.js";
 import { createMeteors } from "./scene/meteors.js";
 import { createCinema } from "./scene/cinema.js";
 import { createFavorites } from "./ui/favorites.js";
+import { createHomeCompass } from "./ui/home-compass.js";
+import { setupFontSize } from "./ui/font-size.js";
+import { createRecent } from "./ui/recent.js";
 import { createTour } from "./ui/tour.js";
 import { setupI18n, isEn } from "./lib/i18n.js";
 import { createVoice } from "./audio/voice.js";
@@ -180,7 +183,7 @@ export function start() {
       }
       searchIndex.sort((a, b) => a.zh.localeCompare(b.zh, "zh-Hant"));
       window.__earth.countrySearch = createCountrySearch({
-        index: searchIndex, onPick: openCountryByCode, content, favorites,
+        index: searchIndex, onPick: openCountryByCode, content, favorites, recent,
         onFav: (it) => goFavorite(it),
         onCam: (id) => openCamById(id),
         onGeo: (f) => {
@@ -331,6 +334,27 @@ export function start() {
   window.__earth.twClock = createTwClock();
 
   const music = createMusic();
+
+  // 🕘 最近看過的國家(搜尋框打開時列在最上面)
+  const recent = createRecent();
+  // 🔤 字體大小(右上角 Aa)
+  setupFontSize({
+    toast: (msg) => {
+      let el = document.getElementById("share-toast");
+      if (!el) { el = document.createElement("div"); el.id = "share-toast"; document.body.appendChild(el); }
+      el.textContent = msg; el.classList.add("show");
+      clearTimeout(el._t); el._t = setTimeout(() => el.classList.remove("show"), 1600);
+    },
+  });
+  // 手機右上角:主題鈕只留前面的圖示(🌙/☀/⚜/◎),文字換主題時跟著更新
+  const themeBtn = document.getElementById("theme-toggle");
+  if (themeBtn) {
+    const syncShort = () => { themeBtn.dataset.short = themeBtn.textContent.trim().split(/\s+/)[0] || "🌙"; };
+    syncShort();
+    new MutationObserver(syncShort).observe(themeBtn, { childList: true, characterData: true, subtree: true });
+  }
+  // 🧭 指北針 + 🏠 回到台灣
+  const homeCompass = createHomeCompass({ camera, rig });
 
   // 🗣️ 人聲播報(功能 → 聲音)
   const voiceToggle = document.getElementById("voice-toggle");
@@ -655,6 +679,7 @@ export function start() {
     const noSettlement = !!c && !cll;
     const anchor = cll || [lat, lon];
     rig.flyTo(anchor[0], anchor[1], { distance: 1.7, ms: 1000 });
+    recent.add(hit.code);
     countrySpeech = countryNarration(hit, c, c && c.population != null ? c.population : hit.pop);
     voice.speak(countrySpeech, { kind: "country" });
     sidePanel.open({
@@ -980,6 +1005,7 @@ export function start() {
     }
     cinema.update(dt);
     rig.update(dt);
+    homeCompass.update();
     flightSim.update(dt);
     aurora.update(clock.elapsedTime, dt);
     meteors.update(dt);

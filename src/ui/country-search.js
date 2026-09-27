@@ -4,10 +4,10 @@ import { isEn } from "../lib/i18n.js";
 // 🔍 萬用搜尋:國家、首都城市、功能(打「地震」「充電站」「高鐵」直接打開)、景點直播、
 // 山脈河流等地理、我的收藏,全部在同一個框搜尋。方向鍵 + Enter 或點選;Ctrl+K 或 / 快速叫出。
 const MAX_RESULTS = 14;
-const KIND_ORDER = { fav: 0, feature: 1, country: 2, capital: 3, cam: 4, geo: 5 };
+const KIND_ORDER = { recent: -1, fav: 0, feature: 1, country: 2, capital: 3, cam: 4, geo: 5 };
 // 結果分組的標題(組跟組之間有分隔線)
 const GROUP = {
-  fav: ["⭐ 我的收藏", "⭐ Saved"], feature: ["🎛️ 功能", "🎛️ Features"], country: ["🌍 國家", "🌍 Countries"],
+  recent: ["🕘 最近看過", "🕘 Recent"], fav: ["⭐ 我的收藏", "⭐ Saved"], feature: ["🎛️ 功能", "🎛️ Features"], country: ["🌍 國家", "🌍 Countries"],
   capital: ["🏙️ 首都城市", "🏙️ Capitals"], cam: ["📺 景點直播", "📺 Live cams"], geo: ["⛰️ 山川地理", "⛰️ Nature"],
 };
 const PER_GROUP = 6;
@@ -52,7 +52,7 @@ const ICONS = {
 const GEO_ICONS = { mountain: "⛰️", peak: "🏔️", river: "🌊", desert: "🏜️", plateau: "🗻", plain: "🌾", lake: "💧", other: "📍" };
 const HOT = ["quake-toggle", "weather-toggle", "livecam-toggle", "aurora-toggle", "meteor-toggle", "traffic-toggle", "cinema-toggle"];
 
-export function createCountrySearch({ index, onPick, content = {}, favorites = null, onFav, onCam, onGeo }) {
+export function createCountrySearch({ index, onPick, content = {}, favorites = null, recent = null, onFav, onCam, onGeo }) {
   const box = document.getElementById("country-search");
   if (!box || !Array.isArray(index) || !index.length) return { destroy() {} };
   const input = box.querySelector("input");
@@ -137,19 +137,22 @@ export function createCountrySearch({ index, onPick, content = {}, favorites = n
       .slice(0, MAX_RESULTS);
   }
 
-  // 還沒打字:收藏 + 熱門功能 + 全部國家(A–Z)
+  // 還沒打字:最近看過 + 收藏 + 熱門功能 + 全部國家(A–Z)
   function browse() {
     const f = features();
     const hot = HOT.map((id) => f.find((x) => x.id === id)).filter(Boolean);
     const all = [...countries].sort((a, b) => String(a.en || "").localeCompare(String(b.en || "")));
-    return [...favItems().slice(0, 6), ...hot, ...all];
+    const rec = (recent ? recent.list() : []).map((code) => countries.find((c) => c.code === code)).filter(Boolean)
+      .slice(0, 5).map((c) => ({ ...c, kind: "recent" }));
+    return [...rec, ...favItems().slice(0, 6), ...hot, ...all];
   }
 
   let browsing = false;
   const header = (k) => {
     const label = browsing && k === "country" ? (isEn ? "🌍 All countries (A–Z)" : "🌍 全部國家(A–Z)")
       : browsing && k === "feature" ? (isEn ? "🎛️ Popular features" : "🎛️ 常用功能") : GROUP[k][isEn ? 1 : 0];
-    return `<li class="cs-sep" aria-hidden="true">${label}</li>`;
+    const clear = k === "recent" ? `<button type="button" class="cs-clear">${isEn ? "Clear" : "全部清除"}</button>` : "";
+    return `<li class="cs-sep">${label}${clear}</li>`;
   };
   function render() {
     if (!matches.length) {
@@ -162,11 +165,12 @@ export function createCountrySearch({ index, onPick, content = {}, favorites = n
     list.innerHTML = matches.map((m, i) => {
       const sep = m.kind !== prevKind ? header(m.kind) : "";
       prevKind = m.kind;
-      const lead = m.kind === "country" || m.kind === "capital"
+      const lead = m.kind === "country" || m.kind === "capital" || m.kind === "recent"
         ? `<img class="cs-flag" src="https://flagcdn.com/w40/${String(m.code || "").toLowerCase()}.png" alt="" onerror="this.style.visibility='hidden'">`
         : `<span class="cs-ico">${esc(m.icon || (m.kind === "geo" ? "⛰️" : "🎛️"))}</span>`;
       const sub = m.sub ? `<span class="cs-sub">${esc(m.sub)}</span>` : m.en ? `<span class="cs-en">${esc(m.en)}</span>` : "";
-      return `${sep}<li data-i="${i}" class="${i === active ? "active" : ""}">${lead}<span class="cs-txt"><span class="cs-zh">${esc(m.zh)}</span>${sub}</span></li>`;
+      const del = m.kind === "recent" ? `<button type="button" class="cs-del" data-del="${esc(m.code)}" title="${isEn ? "Remove" : "從最近看過移除"}" aria-label="${isEn ? "Remove" : "移除"}">✕</button>` : "";
+      return `${sep}<li data-i="${i}" class="${i === active ? "active" : ""}">${lead}<span class="cs-txt"><span class="cs-zh">${esc(m.zh)}</span>${sub}</span>${del}</li>`;
     }).join("");
     list.hidden = false;
     list.querySelector("li.active")?.scrollIntoView({ block: "nearest" });
@@ -197,6 +201,14 @@ export function createCountrySearch({ index, onPick, content = {}, favorites = n
     else if (e.key === "Escape") { input.value = ""; matches = []; render(); input.blur(); }
   });
   list.addEventListener("mousedown", (e) => {
+    // 最近看過:✕ 刪一筆、「全部清除」;畫面維持在瀏覽清單,輸入框不失去焦點
+    const del = e.target.closest(".cs-del"), clr = e.target.closest(".cs-clear");
+    if (del || clr) {
+      e.preventDefault();
+      if (del) recent?.remove(del.dataset.del); else recent?.clear();
+      browsing = true; matches = browse(); active = -1; render();
+      return;
+    }
     const li = e.target.closest("li[data-i]");
     if (li) { e.preventDefault(); choose(matches[Number(li.dataset.i)]); }
   });

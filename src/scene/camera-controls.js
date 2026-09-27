@@ -180,5 +180,15 @@ export function createCameraRig({ camera, domElement, globeObject }) {
   // 取消進行中的飛行(電影巡航接手鏡頭時用)
   const cancelTween = () => { tween = null; };
 
-  return { controls, flyTo, resetView, setMinDistance, setMaxDistance, fitRadius, cancelTween, update, MAX_DISTANCE };
+  // 🧭 北方朝上:停在原地(極點附近退到緯度 ±60°),飛行途中 settle() 會把畫面轉正
+  function northUp() {
+    velX = velY = 0;
+    const d = camera.position.clone().normalize();
+    if (globeObject) d.applyQuaternion(globeObject.quaternion.clone().invert());
+    const lat = Math.asin(THREE.MathUtils.clamp(d.y, -1, 1)) * 180 / Math.PI;
+    const lon = Math.atan2(-d.z, d.x) * 180 / Math.PI;
+    flyTo(THREE.MathUtils.clamp(lat, -60, 60), lon, { distance: camera.position.length(), ms: 900 });
+  }
+
+  return { controls, flyTo, resetView, setMinDistance, setMaxDistance, fitRadius, cancelTween, northUp, update, MAX_DISTANCE };
 }

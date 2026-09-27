@@ -579,6 +579,22 @@
   .vo-rate input { flex: 1; accent-color: #b197fc; }
   .vo-test { margin-top: 8px; width: 100%; padding: 6px; font-size: 12.5px; }
   body[data-theme="journal"] .vo-voice option { background: #f3ede0; color: #3b332a; }
+  /* 🧭 指北針 + 🏠 回到台灣 */
+  #home-dock { position: fixed; left: 18px; bottom: 64px; z-index: 42; display: flex; flex-direction: column; gap: 6px; }
+  .hd-btn { width: 38px; height: 38px; border-radius: 50%; padding: 0; display: grid; place-items: center; cursor: pointer; font-size: 17px;
+    border: 1px solid rgba(120,170,255,.3); background: rgba(4,6,12,.85); backdrop-filter: blur(8px); color: #e7edfb; box-shadow: 0 4px 14px rgba(0,0,0,.4); }
+  .hd-btn:hover { border-color: rgba(120,170,255,.75); }
+  .hd-compass svg { width: 26px; height: 26px; transition: transform .12s linear; }
+  .hd-n { fill: #ff5d5d; } .hd-s { fill: #cfd8ea; }
+  .hd-compass text { font: 700 5px system-ui, sans-serif; fill: #fff; }
+  #home-dock.tilted .hd-compass { border-color: rgba(255,93,93,.75); box-shadow: 0 0 12px rgba(255,93,93,.4); }
+  body[data-theme="journal"] .hd-btn { background: #f3ede0; border-color: rgba(120,90,50,.3); color: #3b332a; }
+  body[data-theme="journal"] .hd-s { fill: #8a7a63; }
+  @media (max-width: 640px) { #home-dock { left: auto; right: 8px; bottom: 122px; } .hd-btn { width: 36px; height: 36px; } }
+  /* 搜尋:最近看過 */
+  #country-search .cs-clear { float: right; border: 0; background: none; color: #8fb2e8; font-size: 11px; cursor: pointer; padding: 0 2px; text-decoration: underline; }
+  #country-search .cs-del { margin-left: auto; flex: none; border: 0; background: none; color: #8093b5; font-size: 12px; cursor: pointer; padding: 2px 6px; border-radius: 6px; }
+  #country-search .cs-del:hover { color: #ff8a8a; background: rgba(255,90,90,.12); }
   /* 萬用搜尋的結果列 */
   #country-search li { align-items: center; }
   #country-search .cs-ico { width: 20px; text-align: center; flex: none; }
@@ -1901,7 +1917,7 @@
   body[data-theme="fantasy"] #clock-weather,
   body[data-theme="fantasy"] #audio-ui,
   body[data-theme="fantasy"] .ctrl-card,
-  body[data-theme="fantasy"] #theme-toggle, body[data-theme="fantasy"] #share-btn, body[data-theme="fantasy"] #fav-btn, body[data-theme="fantasy"] #install-btn, body[data-theme="fantasy"] #tour-btn, body[data-theme="fantasy"] #lang-btn { font-family: 'Cinzel', 'Noto Serif TC', serif; letter-spacing: .03em; }
+  body[data-theme="fantasy"] #theme-toggle, body[data-theme="fantasy"] #share-btn, body[data-theme="fantasy"] #fav-btn, body[data-theme="fantasy"] #font-btn, body[data-theme="fantasy"] #install-btn, body[data-theme="fantasy"] #tour-btn, body[data-theme="fantasy"] #lang-btn { font-family: 'Cinzel', 'Noto Serif TC', serif; letter-spacing: .03em; }
   /* 右下角控制區:上面「台灣交通」(機場航班、即時路況…)、下面「功能」(全球性的圖層),
      兩張卡片疊在同一個容器裡,各自可以收合,不會互相重疊。卡片樣式共用 .ctrl-card。 */
   #ctrl-dock {
@@ -1979,7 +1995,7 @@
   body[data-theme="fantasy"] .ctrl-card .lc-title { color: #a08a5c; }
   body[data-theme="fantasy"] .ctrl-card .layer-row { color: #f0dfab; }
   body[data-theme="fantasy"] .ctrl-card .layer-row:hover { background: rgba(201,162,39,.14); }
-  body[data-theme="fantasy"] #theme-toggle, body[data-theme="fantasy"] #share-btn, body[data-theme="fantasy"] #fav-btn, body[data-theme="fantasy"] #install-btn, body[data-theme="fantasy"] #tour-btn, body[data-theme="fantasy"] #lang-btn {
+  body[data-theme="fantasy"] #theme-toggle, body[data-theme="fantasy"] #share-btn, body[data-theme="fantasy"] #fav-btn, body[data-theme="fantasy"] #font-btn, body[data-theme="fantasy"] #install-btn, body[data-theme="fantasy"] #tour-btn, body[data-theme="fantasy"] #lang-btn {
     background: linear-gradient(180deg,#332714,#1c150c); border: 1px solid #c9a227; color: #f0dfab;
   }
   body[data-theme="fantasy"] .ctrl-card .layer-dot { background: #c9a227; box-shadow: 0 0 6px #c9a227; }
@@ -2076,7 +2092,7 @@
   body[data-theme="journal"] #tw-clock,
   body[data-theme="journal"] #clock-weather,
   body[data-theme="journal"] #audio-ui,
-  body[data-theme="journal"] #theme-toggle, body[data-theme="journal"] #share-btn, body[data-theme="journal"] #fav-btn, body[data-theme="journal"] #install-btn, body[data-theme="journal"] #tour-btn, body[data-theme="journal"] #lang-btn,
+  body[data-theme="journal"] #theme-toggle, body[data-theme="journal"] #share-btn, body[data-theme="journal"] #fav-btn, body[data-theme="journal"] #font-btn, body[data-theme="journal"] #install-btn, body[data-theme="journal"] #tour-btn, body[data-theme="journal"] #lang-btn,
   body[data-theme="journal"] .ctrl-card,
   body[data-theme="journal"] #country-search input,
   body[data-theme="journal"] #country-search ul {
@@ -2088,7 +2104,7 @@
   body[data-theme="journal"] #tw-clock,
   body[data-theme="journal"] #clock-weather,
   body[data-theme="journal"] #audio-ui,
-  body[data-theme="journal"] #theme-toggle, body[data-theme="journal"] #share-btn, body[data-theme="journal"] #fav-btn, body[data-theme="journal"] #install-btn, body[data-theme="journal"] #tour-btn, body[data-theme="journal"] #lang-btn,
+  body[data-theme="journal"] #theme-toggle, body[data-theme="journal"] #share-btn, body[data-theme="journal"] #fav-btn, body[data-theme="journal"] #font-btn, body[data-theme="journal"] #install-btn, body[data-theme="journal"] #tour-btn, body[data-theme="journal"] #lang-btn,
   body[data-theme="journal"] .ctrl-card { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", serif; }
   body[data-theme="journal"] #tw-clock .tw-label,
   body[data-theme="journal"] #clock-weather .cw-country { color: #a6572e; }
@@ -2194,11 +2210,11 @@
   body[data-theme="hud"] #clock-weather,
   body[data-theme="hud"] #audio-ui,
   body[data-theme="hud"] .ctrl-card,
-  body[data-theme="hud"] #theme-toggle, body[data-theme="hud"] #share-btn, body[data-theme="hud"] #fav-btn, body[data-theme="hud"] #install-btn, body[data-theme="hud"] #tour-btn, body[data-theme="hud"] #lang-btn {
+  body[data-theme="hud"] #theme-toggle, body[data-theme="hud"] #share-btn, body[data-theme="hud"] #fav-btn, body[data-theme="hud"] #font-btn, body[data-theme="hud"] #install-btn, body[data-theme="hud"] #tour-btn, body[data-theme="hud"] #lang-btn {
     font-family: 'Share Tech Mono', ui-monospace, monospace; letter-spacing: .02em;
   }
   body[data-theme="hud"] .ctrl-card,
-  body[data-theme="hud"] #theme-toggle, body[data-theme="hud"] #share-btn, body[data-theme="hud"] #fav-btn, body[data-theme="hud"] #install-btn, body[data-theme="hud"] #tour-btn, body[data-theme="hud"] #lang-btn {
+  body[data-theme="hud"] #theme-toggle, body[data-theme="hud"] #share-btn, body[data-theme="hud"] #fav-btn, body[data-theme="hud"] #font-btn, body[data-theme="hud"] #install-btn, body[data-theme="hud"] #tour-btn, body[data-theme="hud"] #lang-btn {
     background: linear-gradient(180deg,#0e2226,#04121a); border: 1px solid #00e5ff; color: #cdf3ff; border-radius: 3px;
     text-transform: uppercase;
   }
@@ -2342,6 +2358,7 @@
     #top-tools { gap: 4px; }
     #top-tools button[data-short] { font-size: 0 !important; padding-left: 8px; padding-right: 8px; }
     #top-tools button[data-short]::before { content: attr(data-short); font-size: 13px; }
+    #top-tools button { padding-left: 7px !important; padding-right: 7px !important; }
   }
   #share-toast {
     position: fixed; left: 50%; bottom: 90px; transform: translateX(-50%) translateY(10px); z-index: 60;
@@ -2358,7 +2375,7 @@
   }
   #install-ios b { color: #8fd4ff; }
   #install-ios button { margin-top: 6px; padding: 4px 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,.3); background: none; color: inherit; cursor: pointer; }
-  #theme-toggle, #share-btn, #fav-btn, #install-btn, #tour-btn, #lang-btn {
+  #theme-toggle, #share-btn, #fav-btn, #font-btn, #install-btn, #tour-btn, #lang-btn {
     cursor: pointer;
     padding: 5px 10px; font-size: 11px; border-radius: 8px;
     background: rgba(4, 6, 12, 0.88); backdrop-filter: blur(10px);
@@ -2756,6 +2773,7 @@
     <button id="install-btn" type="button" hidden aria-label="把地球世界安裝成 App" title="安裝到手機/電腦,像 App 一樣全螢幕開啟">📲 安裝 App</button>
     <button id="share-btn" type="button" data-short="🔗" aria-label="分享目前畫面" title="分享目前畫面(複製連結)">🔗 分享</button>
     <button id="fav-btn" type="button" data-short="⭐" aria-pressed="false" aria-label="我的收藏" title="我的收藏">⭐ 收藏</button>
+    <button id="font-btn" type="button" data-short="Aa" aria-label="字體大小">Aa 標準</button>
     <button id="theme-toggle" type="button" aria-label="切換版面主題">🌙 星空</button>
     <button id="lang-btn" type="button" aria-label="English / 中文">EN</button>
     <button id="tour-btn" type="button" aria-label="重看新手導覽" title="新手導覽">❓</button>
