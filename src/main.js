@@ -34,6 +34,7 @@ import { createLiveCams } from "./scene/livecams.js";
 import { shouldPlayIntro, createIntro } from "./ui/intro.js";
 import { LITE } from "./lib/device.js";
 import { createRoPlayer } from "./ui/ro-player.js";
+import { createWeatherLayer } from "./scene/weather.js";
 import { createShare } from "./ui/share.js";
 import { setupPwa } from "./ui/pwa.js";
 import { createNaturePopup } from "./ui/nature-popup.js";
@@ -475,6 +476,16 @@ export function start() {
     if (radio.isPlaying()) radio.setVolume(v);
   });
 
+  // 🌡️ 全球即時氣溫與降雨
+  const weatherToggle = document.getElementById("weather-toggle");
+  const weather = createWeatherLayer({ globeObject: globe.object, clouds, onClose: () => setWeather(false) });
+  window.__earth.weather = weather;
+  function setWeather(on) {
+    if (weatherToggle) weatherToggle.setAttribute("aria-pressed", String(on));
+    weather.setEnabled(on);
+  }
+  if (weatherToggle) weatherToggle.addEventListener("click", () => setWeather(weatherToggle.getAttribute("aria-pressed") !== "true"));
+
   // 🎵 RO 懷舊原聲(下方音樂列的「🎵 RO」按鈕)
   window.__earth.roPlayer = createRoPlayer({ music });
 
@@ -698,7 +709,8 @@ export function start() {
       hovered = window.__earth.countryLayer ? window.__earth.countryLayer.pick(raycaster, globe.mesh) : null;
       hitGlobe = !!hovered || raycaster.ray.intersectsSphere(globeSphere);
       if (window.__earth.countryLayer) window.__earth.countryLayer.setHover(hovered ? hovered.code : null);
-      if (hovered) tooltip.show(pointerPx.x, pointerPx.y, hovered.names);
+      const wx = weather.readout(raycaster);
+      if (hovered || wx) tooltip.show(pointerPx.x, pointerPx.y, hovered ? hovered.names : null, wx);
       else tooltip.hide();
     }
     if (window.__earth.countryLayer) window.__earth.countryLayer.update(dt);

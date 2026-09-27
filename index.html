@@ -397,6 +397,30 @@
   .intro-ripple i:nth-child(2) { animation-delay: .45s; }
   .intro-ripple i:nth-child(3) { animation-delay: .9s; }
   @keyframes intro-ripple { 0% { transform: scale(.4); opacity: 1; } 100% { transform: scale(5.5); opacity: 0; } }
+  /* 🌡️ 全球即時天氣:小圖例面板 */
+  #weather-panel {
+    position: fixed; left: 18px; bottom: 70px; z-index: 44; width: 320px; max-width: calc(100vw - 36px);
+    padding: 10px 12px; border-radius: 14px; background: rgba(10, 14, 26, 0.94); backdrop-filter: blur(10px);
+    border: 1px solid rgba(120,200,255,.45); color: #e7edfb; box-shadow: 0 10px 32px rgba(0,0,0,.5);
+    font: 13px system-ui, "Microsoft JhengHei", sans-serif;
+  }
+  #weather-panel[hidden] { display: none; }
+  #weather-panel .sat-head { display: flex; align-items: center; gap: 6px; margin-bottom: 6px; cursor: move; }
+  #weather-panel .sat-title { font-weight: 800; font-size: 14.5px; margin-right: auto; color: #9fdcff; }
+  .wx-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 8px; }
+  .wx-tabs button { padding: 6px; border-radius: 9px; cursor: pointer; border: 1px solid rgba(120,170,255,.3); background: rgba(255,255,255,.05);
+    color: inherit; font: 700 13px system-ui, "Microsoft JhengHei", sans-serif; }
+  .wx-tabs button.on { background: rgba(120,200,255,.22); border-color: rgba(120,200,255,.8); }
+  .wx-bar { height: 10px; border-radius: 99px; }
+  .wx-temp { background: linear-gradient(90deg, #4650dc 0%, #78c8ff 33%, #5ad296 50%, #f5e150 67%, #fa9632 80%, #e63c28 90%, #8c0a1e 100%); }
+  .wx-rain { background: linear-gradient(90deg, rgba(120,190,255,.15) 0%, #78beff 20%, #3278ff 45%, #783ce6 70%, #e628c8 100%); }
+  .wx-ticks { display: flex; justify-content: space-between; font-size: 11px; opacity: .8; margin-top: 3px; }
+  .wx-note { margin-top: 6px; font-size: 11px; opacity: .6; line-height: 1.5; }
+  #tooltip .wx { display: block; margin-top: 2px; font-size: 12px; color: #bfe6ff; }
+  body[data-theme="journal"] #weather-panel .sat-title { color: #2f6db0; }
+  @media (max-width: 640px) {
+    #weather-panel { left: 8px; right: 8px; bottom: 116px; width: auto; max-width: none; z-index: 45; }
+  }
   /* 🎵 RO 懷舊原聲:看得到畫面的小播放器(YouTube 規定不能藏起播放器只拿聲音) */
   #ro-toggle { padding: 3px 8px; border-radius: 6px; cursor: pointer; white-space: nowrap; flex-shrink: 0;
     border: 1px solid rgba(255,201,77,.5); background: rgba(255,201,77,.1); color: #ffd98a; font: 700 12px system-ui, "Microsoft JhengHei", sans-serif; }
@@ -1575,6 +1599,9 @@
   .lc-body { display: flex; flex-direction: column; gap: 2px; }
   /* 每張卡片的列前面自動編號(CSS counter),加功能不用手動改編號 */
   .lc-body { counter-reset: lc-count; }
+  /* 功能卡片分類的小標題;每一類重新編號 */
+  .lc-group { counter-reset: lc-count; margin: 10px 4px 3px; font-size: 12px; font-weight: 700; letter-spacing: .06em; opacity: .62; }
+  .lc-group:first-child { margin-top: 2px; }
   .lc-body > .layer-row::before {
     counter-increment: lc-count; content: counter(lc-count) "."; flex: none;
     font-size: 12px; opacity: .5; margin-right: -3px;
@@ -1637,7 +1664,8 @@
   body[data-theme="fantasy"] #passport-panel,
   body[data-theme="fantasy"] #flightsim-panel,
   body[data-theme="fantasy"] #livecam-panel,
-  body[data-theme="fantasy"] #ro-panel {
+  body[data-theme="fantasy"] #ro-panel,
+  body[data-theme="fantasy"] #weather-panel {
     background: linear-gradient(180deg,#332714,#1c150c); border: 1px solid #c9a227; color: #f0dfab;
   }
   body[data-theme="fantasy"] #satellite-close,
@@ -1751,7 +1779,8 @@
   body[data-theme="journal"] #passport-panel,
   body[data-theme="journal"] #flightsim-panel,
   body[data-theme="journal"] #livecam-panel,
-  body[data-theme="journal"] #ro-panel {
+  body[data-theme="journal"] #ro-panel,
+  body[data-theme="journal"] #weather-panel {
     background: #f3ede0; border-color: rgba(120,90,50,.28); color: #3b332a;
   }
   body[data-theme="journal"] #satellite-close,
@@ -1848,7 +1877,8 @@
   body[data-theme="hud"] #passport-panel,
   body[data-theme="hud"] #flightsim-panel,
   body[data-theme="hud"] #livecam-panel,
-  body[data-theme="hud"] #ro-panel {
+  body[data-theme="hud"] #ro-panel,
+  body[data-theme="hud"] #weather-panel {
     background: linear-gradient(180deg,#0e2226,#04121a); border: 1px solid #00e5ff; color: #cdf3ff; border-radius: 3px;
   }
   body[data-theme="hud"] #satellite-close,
@@ -2095,6 +2125,13 @@
     </div>
     <div id="airport-list" class="ap-list"></div>
     <div id="airport-caption" class="sat-caption"></div>
+  </div>
+  <div id="weather-panel" hidden>
+    <div class="sat-head">
+      <span class="sat-title">🌡️ 全球即時天氣</span>
+      <button id="weather-close" class="rp-head-btn" type="button" aria-label="關閉">×</button>
+    </div>
+    <div id="weather-body"></div>
   </div>
   <div id="ro-panel" hidden>
     <div class="sat-head">
@@ -2349,11 +2386,12 @@
         <span class="lc-cute-icon">🎛️</span>功能<span class="lc-collapse-arrow">▾</span>
       </button>
       <div id="lc-body" class="lc-body">
+        <div class="lc-group">🌍 即時世界</div>
+        <button id="weather-toggle" class="layer-row" type="button" aria-pressed="false">
+          <span class="layer-dot"></span>全球氣溫與降雨
+        </button>
         <button id="quake-toggle" class="layer-row" type="button" aria-pressed="true">
           <span class="layer-dot"></span>全球地震顯示<span id="quake-severe-badge" class="layer-badge" hidden title="偵測到規模 6 以上地震">⚠</span>
-        </button>
-        <button id="radio-toggle" class="layer-row" type="button" aria-pressed="false">
-          <span class="layer-dot"></span>當地廣播電台
         </button>
         <button id="satellite-toggle" class="layer-row" type="button" aria-pressed="false">
           <span class="layer-dot"></span>颱風衛星雲圖
@@ -2361,6 +2399,10 @@
         <button id="flight-toggle" class="layer-row" type="button" aria-pressed="false">
           <span class="layer-dot"></span>世界機場航班
         </button>
+        <button id="livecam-toggle" class="layer-row" type="button" aria-pressed="false">
+          <span class="layer-dot"></span>世界即時景點直播
+        </button>
+        <div class="lc-group">🚀 太空與天象</div>
         <button id="orbit-toggle" class="layer-row" type="button" aria-pressed="false">
           <span class="layer-dot"></span>衛星與太空站
         </button>
@@ -2370,9 +2412,7 @@
         <button id="sun-toggle" class="layer-row" type="button" aria-pressed="false" title="地球停止自轉,白天黑夜照現在的真實時間顯示">
           <span class="layer-dot"></span>真實晨昏線
         </button>
-        <button id="otd-toggle" class="layer-row" type="button" aria-pressed="false">
-          <span class="layer-dot"></span>歷史上的今天
-        </button>
+        <div class="lc-group">🧭 探索與遊戲</div>
         <button id="quiz-toggle" class="layer-row" type="button" aria-pressed="false">
           <span class="layer-dot"></span>地理猜謎遊戲
         </button>
@@ -2382,8 +2422,12 @@
         <button id="flightsim-toggle" class="layer-row" type="button" aria-pressed="false">
           <span class="layer-dot"></span>飛行旅程模擬
         </button>
-        <button id="livecam-toggle" class="layer-row" type="button" aria-pressed="false">
-          <span class="layer-dot"></span>世界即時景點直播
+        <button id="otd-toggle" class="layer-row" type="button" aria-pressed="false">
+          <span class="layer-dot"></span>歷史上的今天
+        </button>
+        <div class="lc-group">🎵 聲音</div>
+        <button id="radio-toggle" class="layer-row" type="button" aria-pressed="false">
+          <span class="layer-dot"></span>當地廣播電台
         </button>
       </div>
     </div>
