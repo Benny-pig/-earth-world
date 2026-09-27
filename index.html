@@ -1121,6 +1121,20 @@
     background: rgba(255,255,255,.06); border: 1px solid rgba(120,170,255,.35); color: inherit; font: 600 12.5px system-ui, "Microsoft JhengHei", sans-serif;
   }
   #side-panel .sp-share:hover { background: rgba(120,170,255,.16); }
+  /* 📰 今日新聞 */
+  #side-panel .sp-news-list, #side-panel .sp-news-wiki { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 9px; }
+  #side-panel .sp-news-list li { display: flex; flex-direction: column; gap: 2px; font-size: 13.5px; line-height: 1.45; }
+  #side-panel .sp-news-list a { color: inherit; text-decoration: none; font-weight: 600; }
+  #side-panel .sp-news-list a:hover { text-decoration: underline; }
+  #side-panel .sp-news-list .dim { font-size: 11.5px; }
+  #side-panel .sp-news-h { margin: 14px 0 6px; font-weight: 700; font-size: 13px; }
+  #side-panel .sp-news-h .dim { font-weight: 400; font-size: 11.5px; }
+  #side-panel .sp-news-wiki li { font-size: 12.5px; line-height: 1.55; cursor: pointer;
+    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  #side-panel .sp-news-wiki li.open { -webkit-line-clamp: unset; display: block; }
+  #side-panel .sp-news-wiki b { color: #8fd0ff; margin-right: 6px; }
+  #side-panel .sp-news-more { display: inline-block; margin-top: 10px; font-size: 12.5px; color: #8fd0ff; }
+  body[data-theme="journal"] #side-panel .sp-news-wiki b, body[data-theme="journal"] #side-panel .sp-news-more { color: #2f6db0; }
   #side-panel .sp-visit { margin-left: 4px; border-color: rgba(255,201,77,.55); }
   #side-panel .sp-visit.on { background: rgba(255,201,77,.16); border-color: rgba(255,201,77,.9); color: #ffd98a; }
   body[data-theme="journal"] #side-panel .sp-visit.on { color: #a6572e; }

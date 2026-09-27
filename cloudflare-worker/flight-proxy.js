@@ -292,6 +292,48 @@ export default {
 
     const url = new URL(request.url);
 
+    // 📰 各國今日新聞:Google 新聞(台灣繁體中文版)搜尋「國名」最近一天的頭條,轉成 JSON。
+    // 只接受短的關鍵字;結果快取 20 分鐘,同一國不會每個讀者都去打一次 Google。
+    const newsQ = url.searchParams.get("news");
+    if (newsQ !== null) {
+      const q = newsQ.trim();
+      if (!q || q.length > 30 || /[<>"'`\\/?&#=%;]/.test(q)) {
+        return new Response(JSON.stringify({ error: "新聞關鍵字格式錯誤" }), {
+          status: 400, headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
+        });
+      }
+      const cacheKey = new Request(`https://news-cache.earth-world.invalid/${encodeURIComponent(q)}`);
+      const hit = await caches.default.match(cacheKey);
+      if (hit) return new Response(hit.body, { headers: { ...CORS_HEADERS, "Content-Type": "application/json", "Cache-Control": "public, max-age=600" } });
+      try {
+        const rss = await fetch(`https://news.google.com/rss/search?q=${encodeURIComponent(q + " when:1d")}&hl=zh-TW&gl=TW&ceid=TW:zh-Hant`, { headers: UA });
+        if (!rss.ok) throw new Error(`Google 新聞回應 ${rss.status}`);
+        const xml = await rss.text();
+        const decode = (s) => s.replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1").replace(/&lt;/g, "<").replace(/&gt;/g, ">")
+          .replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&amp;/g, "&").trim();
+        const tag = (block, t) => { const m = block.match(new RegExp(`<${t}[^>]*>([\\s\\S]*?)</${t}>`)); return m ? decode(m[1]) : ""; };
+        const items = [];
+        for (const m of xml.matchAll(/<item>([\s\S]*?)<\/item>/g)) {
+          const b = m[1];
+          const source = tag(b, "source");
+          let title = tag(b, "title");
+          if (source && title.endsWith(` - ${source}`)) title = title.slice(0, -(source.length + 3));   // 標題後面帶的「 - 來源」拿掉
+          const link = tag(b, "link");
+          if (!title || !/^https:\/\//.test(link)) continue;
+          if (/facebook|instagram|threads|tiktok|youtube|x\.com|twitter|ptt|dcard/i.test(source)) continue;   // 只留新聞媒體,不收社群貼文
+          items.push({ t: title, src: source, url: link, time: tag(b, "pubDate") });
+          if (items.length >= 10) break;
+        }
+        const body = JSON.stringify({ q, items, fetched: new Date().toISOString() });
+        await caches.default.put(cacheKey, new Response(body, { headers: { "Content-Type": "application/json", "Cache-Control": "public, max-age=1200" } }));
+        return new Response(body, { headers: { ...CORS_HEADERS, "Content-Type": "application/json", "Cache-Control": "public, max-age=600" } });
+      } catch (e) {
+        return new Response(JSON.stringify({ error: "新聞暫時抓不到,稍後再試", detail: String(e.message || e) }), {
+          status: 502, headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
+        });
+      }
+    }
+
     const railPath = url.searchParams.get("rail");
     if (railPath) {
       // 只允許高鐵/台鐵這兩個路徑開頭,而且只能有英數字、斜線、連字號(擋掉 ..、? 之類)

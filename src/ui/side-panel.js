@@ -1,5 +1,6 @@
 import { weatherCodeToIcon, weekdayFromISODate, tzOffsetHours, formatZonedTime } from "../lib/geo.js";
 import { esc } from "../lib/esc.js";
+import { wikiNewsFor, googleNewsFor, googleNewsLink, timeAgo } from "./news.js";
 
 export const MONTH_LABELS = ["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"];
 
@@ -207,6 +208,9 @@ export function createSidePanel({ onClose, onMore, visited }) {
     // 緊急聯絡放在時鐘下面:報警/消防/救護號碼直接看得到,館處細節收合起來
     if (p.code) html += section("緊急聯絡", `<div id="sp-emg" class="sp-emg"><p class="dim">載入中…</p></div>`);
 
+    // 📰 今日新聞:Google 新聞當日頭條(Worker)+ 維基百科近兩週國際大事
+    if (p.code && p.names?.zh) html += section("📰 今日新聞", `<div id="sp-news" class="sp-news"><p class="dim">載入中…</p></div>`);
+
     if (p.features && p.features.length)
       html += section("特色", p.features.map((t) => `<p>${esc(t)}</p>`).join(""));
 
@@ -242,6 +246,7 @@ export function createSidePanel({ onClose, onMore, visited }) {
     el.classList.add("open");
     startClock(p.timezone);
     if (p.code) fillEmergency(p.code);
+    if (p.code && p.names?.zh) fillNews(p.code, p.names.zh);
   }
 
   async function fillEmergency(code) {
@@ -274,6 +279,26 @@ export function createSidePanel({ onClose, onMore, visited }) {
     slot.innerHTML = `<button type="button" class="sp-share sp-visit${on ? " on" : ""}" title="${on ? "再按一下可以取消" : "記在旅行護照裡"}">` +
       `${on ? "✅ 去過了・已蓋章" : "🛂 我去過這裡"}</button>`;
     slot.firstChild.addEventListener("click", () => visited.toggle(openCode));
+  }
+
+  async function fillNews(code, zh) {
+    const [g, w] = await Promise.all([googleNewsFor(zh), wikiNewsFor(code, zh).catch(() => [])]);
+    const box = document.getElementById("sp-news");
+    if (!box || openCode !== code) return;          // 資料回來前已經換國家或關閉
+    let h = "";
+    if (g && g.items.length) {
+      h += `<ul class="sp-news-list">${g.items.slice(0, 6).map((it) =>
+        `<li><a href="${esc(it.url)}" target="_blank" rel="noopener">${esc(it.t)}</a>` +
+        `<span class="dim">${esc(it.src || "")}${it.time ? ` · ${esc(timeAgo(it.time))}` : ""}</span></li>`).join("")}</ul>`;
+    }
+    if (w.length) {
+      h += `<div class="sp-news-h">🌍 近兩週國際大事 <span class="dim">(維基百科 · 點一下看全文)</span></div>` +
+        `<ul class="sp-news-wiki">${w.map((it) => `<li><b>${esc(it.date)}</b>${esc(it.text)}</li>`).join("")}</ul>`;
+    }
+    if (!h) h = `<p class="dim">最近兩週的國際大事裡沒有提到${esc(zh)}。</p>`;
+    h += `<a class="sp-news-more" href="${googleNewsLink(zh)}" target="_blank" rel="noopener">🔎 在 Google 新聞看「${esc(zh)}」今天的新聞 ↗</a>`;
+    box.innerHTML = h;
+    box.querySelector(".sp-news-wiki")?.addEventListener("click", (e) => e.target.closest("li")?.classList.toggle("open"));
   }
 
   function close() {
