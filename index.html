@@ -1082,6 +1082,21 @@
   .tc-btn:hover { background: rgba(120,170,255,.16); }
   .tc-map-info .tc-btn { margin-top: 6px; margin-right: 6px; }
   .tf-row .tc-btn { margin-left: auto; }
+  /* 路況中心的搜尋:地圖上方的搜尋框 + 建議清單 */
+  .tc-map-search { position: relative; margin-bottom: 6px; }
+  .tc-map-search input { width: 100%; box-sizing: border-box; padding: 7px 10px; border-radius: 9px; border: 1px solid rgba(120,170,255,.4);
+    background: rgba(255,255,255,.06); color: inherit; font: 13px system-ui, "Microsoft JhengHei", sans-serif; }
+  .tc-sug { position: absolute; left: 0; right: 0; top: calc(100% + 4px); z-index: 5; max-height: 260px; overflow-y: auto; padding: 4px;
+    border-radius: 10px; background: rgba(10,14,26,.97); border: 1px solid rgba(120,170,255,.35); box-shadow: 0 10px 26px rgba(0,0,0,.5); }
+  .tc-sug[hidden] { display: none; }
+  .tc-sug button { display: flex; align-items: center; gap: 8px; width: 100%; padding: 7px 8px; border: 0; border-radius: 8px; cursor: pointer;
+    background: none; color: inherit; text-align: left; font: 13px system-ui, "Microsoft JhengHei", sans-serif; }
+  .tc-sug button:hover, .tc-sug button:focus { background: rgba(120,170,255,.15); outline: none; }
+  .tc-sug .tc-sug-road { font-weight: 700; white-space: nowrap; }
+  .tc-sug .tc-sug-range { flex: 1; min-width: 0; opacity: .85; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .tc-sug-empty { padding: 8px; font-size: 12.5px; opacity: .7; }
+  .tf-found { font-size: 12px; opacity: .75; margin: 2px 2px 6px; }
+  body[data-theme="journal"] .tc-sug { background: #f3ede0; border-color: rgba(120,90,50,.3); }
   .tc-cam-filters { display: flex; gap: 6px; flex-shrink: 0; margin-bottom: 4px; }
   .tc-cam-filters select, .tc-cam-filters input {
     min-width: 0; padding: 4px 6px; border-radius: 6px; border: 1px solid rgba(120,170,255,.3);
@@ -2429,11 +2444,19 @@
     <div id="traffic-summary" class="tf-summary"></div>
     <div class="tc-body">
       <div class="tc-pane" data-pane="map">
+        <div class="tc-map-search">
+          <input id="tc-map-q" type="search" placeholder="🔎 搜尋交流道/地名,例:林口、五股、國1 汐止" aria-label="搜尋路段" autocomplete="off">
+          <div id="tc-map-sug" class="tc-sug" hidden></div>
+        </div>
         <div id="tc-map" class="tc-map"></div>
         <div class="tc-map-hint">滾輪/雙指縮放 · 拖曳平移 · 雙擊還原 · 放大到街道等級會出現 📹 監視器(白點)</div>
         <div id="tc-map-info" class="tc-map-info" hidden></div>
       </div>
       <div class="tc-pane" data-pane="rank" hidden>
+        <div class="tc-cam-filters">
+          <select id="tc-rank-road" aria-label="國道"><option value="">全部國道</option></select>
+          <input id="tc-rank-q" type="search" placeholder="🔎 交流道/地名" aria-label="搜尋路段" autocomplete="off">
+        </div>
         <div id="traffic-list" class="ap-list"></div>
       </div>
       <div class="tc-pane" data-pane="cam" hidden>
@@ -2443,7 +2466,7 @@
             <option value="">全部方向</option><option value="N">北向</option><option value="S">南向</option>
             <option value="E">東向</option><option value="W">西向</option>
           </select>
-          <input id="tc-cam-q" type="search" placeholder="交流道/地名" aria-label="搜尋交流道或地名">
+          <input id="tc-cam-q" type="search" placeholder="🔎 交流道/地名" aria-label="搜尋交流道或地名">
         </div>
         <div id="tc-cam-list" class="ap-list"></div>
       </div>

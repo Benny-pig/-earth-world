@@ -60,6 +60,7 @@ export function createTrafficCenter({ traffic, onClose }) {
   const camRoadSel = $("tc-cam-road"), camDirSel = $("tc-cam-dir"), camQ = $("tc-cam-q"), camList = $("tc-cam-list");
   const viewer = $("tc-viewer"), vImg = $("tc-viewer-img"), vMsg = $("tc-viewer-msg");
   const vTitle = $("tc-viewer-title"), vSub = $("tc-viewer-sub"), vPause = $("tc-viewer-pause");
+  const rankRoadSel = $("tc-rank-road"), rankQ = $("tc-rank-q"), mapQ = $("tc-map-q"), mapSug = $("tc-map-sug");
   makeDraggable(panel, panel.querySelector(".sat-head"), { disableBelow: 641 });   // 手機上是全螢幕,不拖曳
 
   let open = false;
@@ -131,14 +132,55 @@ export function createTrafficCenter({ traffic, onClose }) {
   }
 
   // ───────────── 壅塞排行 ─────────────
+  // ───────────── 搜尋(路段名稱、交流道、國道) ─────────────
+  // 「國1」「國道1號」都找得到;台/臺視為同一個字;空白分開的每個詞都要符合
+  const norm = (t) => String(t || "").replace(/臺/g, "台").toLowerCase();
+  const searchText = new Map();
+  function textOf(id) {
+    let t = searchText.get(id);
+    if (t == null) {
+      const s = data.sections[id];
+      t = norm(`${s.r || ""} ${shortRoad(s.r)} ${DIR_LABEL[s.d] || ""} ${s.f || ""} ${s.t || ""}`);
+      searchText.set(id, t);
+    }
+    return t;
+  }
+  function matchSections(q, road) {
+    const words = norm(q).trim().split(/\s+/).filter(Boolean);
+    return Object.keys(data.sections).filter((id) => {
+      const s = data.sections[id];
+      if (!s.r || !inRegion(id) || (road && s.r !== road)) return false;
+      const t = textOf(id);
+      return words.every((w) => t.includes(w));
+    });
+  }
+  function fillRankRoads() {
+    if (!data || !data.sections || rankRoadSel.options.length > 1) return;
+    const roads = [...new Set(Object.values(data.sections).map((s) => s.r).filter(Boolean))]
+      .sort((a, b) => (parseInt(a.replace(/\D/g, "")) || 99) - (parseInt(b.replace(/\D/g, "")) || 99) || a.localeCompare(b, "zh-Hant"));
+    rankRoadSel.insertAdjacentHTML("beforeend", roads.map((r) => `<option value="${esc(r)}">${esc(r)}</option>`).join(""));
+  }
+
   function renderRank() {
     if (!data || !data.sections) { listEl.innerHTML = `<div class="ap-empty">載入國道路段中…</div>`; return; }
     if (!data.live.size) { listEl.innerHTML = `<div class="ap-empty">路況資料暫時查不到,稍後會自動重試</div>`; return; }
-    const busy = Object.keys(data.sections).filter((id) => levelOf(id) >= 2 && data.sections[id].r && inRegion(id));
-    busy.sort((a, b) => levelOf(b) - levelOf(a) || liveOf(a).speed - liveOf(b).speed);
-    if (!busy.length) { listEl.innerHTML = `<div class="ap-empty">${REGION_NAME[region]}沒有車多或壅塞的路段,一路順風 🚗</div>`; return; }
-    listEl.innerHTML = busy.slice(0, MAX_ROWS).map((id) => {
-      const s = data.sections[id], v = liveOf(id), lv = v.level;
+    fillRankRoads();
+    const q = rankQ.value.trim(), road = rankRoadSel.value;
+    const searching = !!(q || road);
+    // 沒有搜尋:只列車多以上;有搜尋:該路段不管塞不塞都列出來(讀者想知道那裡現在怎樣)
+    const busy = searching
+      ? matchSections(q, road)
+      : Object.keys(data.sections).filter((id) => levelOf(id) >= 2 && data.sections[id].r && inRegion(id));
+    busy.sort((a, b) => levelOf(b) - levelOf(a) || (liveOf(a)?.speed ?? 999) - (liveOf(b)?.speed ?? 999));
+    if (!busy.length) {
+      listEl.innerHTML = searching
+        ? `<div class="ap-empty">${REGION_NAME[region]}找不到${q ? `「${esc(q)}」` : ""}${road ? ` ${esc(road)}` : ""}的路段</div>`
+        : `<div class="ap-empty">${REGION_NAME[region]}沒有車多或壅塞的路段,一路順風 🚗</div>`;
+      return;
+    }
+    listEl.innerHTML = (searching ? `<div class="tf-found">找到 ${busy.length} 段${busy.length > MAX_ROWS ? `(顯示前 ${MAX_ROWS} 段,越塞的排越前面)` : ""}</div>` : "") +
+      busy.slice(0, MAX_ROWS).map((id) => {
+      const s = data.sections[id], v = liveOf(id) || { level: 0, speed: 0, travel: 0 }, lv = v.level;
       const travel = fmtTravel(v.travel);
       return `<div class="ap-row tf-row" data-id="${esc(id)}" title="點一下在地圖上找到這一段">
         <div class="ap-row-top">
@@ -147,7 +189,7 @@ export function createTrafficCenter({ traffic, onClose }) {
         </div>
         <div class="ap-row-mid">${esc(sectionRange(s))}</div>
         <div class="ap-row-bottom">
-          <span class="tf-speed">時速 ${Math.round(v.speed)} km/h</span>
+          <span class="tf-speed">${lv ? `時速 ${Math.round(v.speed)} km/h` : "暫無即時資料"}</span>
           ${s.l ? `<span>速限 ${s.l}</span>` : ""}
           ${travel ? `<span>通過約 ${travel}</span>` : ""}
           <button type="button" class="tc-btn" data-cam-for="${esc(id)}">📹 附近監視器</button>
@@ -155,6 +197,41 @@ export function createTrafficCenter({ traffic, onClose }) {
       </div>`;
     }).join("");
   }
+  rankRoadSel.addEventListener("change", renderRank);
+  rankQ.addEventListener("input", renderRank);
+
+  // 路況地圖的搜尋:打字出現建議,點一下就放大到那一段、顯示車速
+  function renderMapSug() {
+    const q = mapQ.value.trim();
+    if (!q || !data || !data.sections) { mapSug.hidden = true; return; }
+    const ids = matchSections(q, "").sort((a, b) => textOf(a).localeCompare(textOf(b), "zh-Hant")).slice(0, 12);
+    mapSug.hidden = false;
+    mapSug.innerHTML = ids.length
+      ? ids.map((id) => {
+        const s = data.sections[id], lv = levelOf(id);
+        return `<button type="button" data-sec="${esc(id)}"><span class="ap-lg tf-l${lv}"></span><span class="tc-sug-road">${esc(shortRoad(s.r))} ${esc(DIR_LABEL[s.d] || "")}</span>` +
+          `<span class="tc-sug-range">${esc(sectionRange(s))}</span></button>`;
+      }).join("")
+      : `<div class="tc-sug-empty">${REGION_NAME[region]}找不到「${esc(q)}」,可以試試交流道名稱,例如「林口」「中壢」</div>`;
+  }
+  function goSection(id) {
+    mapSug.hidden = true;
+    showTab("map");
+    const ready = svg ? Promise.resolve() : buildMap();
+    Promise.resolve(ready).then(() => { zoomToSection(id); showInfo(id); traffic.focusSection(id); });
+  }
+  mapQ.addEventListener("input", renderMapSug);
+  mapQ.addEventListener("focus", renderMapSug);
+  mapQ.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") mapSug.querySelector("[data-sec]")?.click();
+    if (e.key === "Escape") mapSug.hidden = true;
+  });
+  mapSug.addEventListener("click", (e) => {
+    const b = e.target.closest("[data-sec]");
+    if (b) goSection(b.dataset.sec);
+  });
+  document.addEventListener("pointerdown", (e) => { if (!e.target.closest(".tc-map-search")) mapSug.hidden = true; });
+
   listEl.addEventListener("click", (e) => {
     const camBtn = e.target.closest("[data-cam-for]");
     if (camBtn) { openNearestCam(camBtn.dataset.camFor); return; }
