@@ -1,10 +1,16 @@
 // 背景音樂:可切換曲目、記住選擇、首次互動後淡入。
 const LS_KEY = "earth-world.track";
 
-// 只留兩首鋼琴(Kevin MacLeod,CC BY 4.0,可商用、需標示作者)
+// 兩首鋼琴(Kevin MacLeod,CC BY 4.0,需標示作者)+ 奇幻城鎮 lofi(Pixabay 授權:免費、可用在網站裡,
+// 不能把音樂檔單獨拿去賣或散布)。只有讀者選到的那一首會下載,而且邊下載邊播。
 export const TRACKS = [
   { id: "km-meditation", name: "冥想即興 · 靜心鋼琴",        src: "assets/music/km-meditation.mp3", credit: "Kevin MacLeod (incompetech.com) · CC BY 4.0" },
   { id: "km-gymnopedie", name: "吉諾佩第 No.1 · 古典鋼琴",   src: "assets/music/km-gymnopedie.mp3", credit: "Kevin MacLeod (incompetech.com) · CC BY 4.0" },
+  { id: "px-rainy-town",   name: "雨天小鎮 · 奇幻 lofi",       src: "assets/music/px-rainy-town.mp3",   credit: "Rainy Town · AloneInTheUniverse(Pixabay)" },
+  { id: "px-castle",       name: "城堡 · lofi 奇幻鋼琴",       src: "assets/music/px-castle.mp3",       credit: "Lofi piano fantasy BGM \"Castle\" · Akiko_Shina(Pixabay)" },
+  { id: "px-whisper-eden", name: "伊甸細語 · lofi 奇幻鋼琴",   src: "assets/music/px-whisper-eden.mp3", credit: "Lofi Fantasy Piano \"Whisper Eden\" · Akiko_Shina(Pixabay)" },
+  { id: "px-castle-loops", name: "古堡迴圈 · 中世紀 lofi",     src: "assets/music/px-castle-loops.mp3", credit: "Degraded Castle Loops · Turning_Pages(Pixabay)" },
+  { id: "px-medieval-inn", name: "中世紀旅店",                 src: "assets/music/px-medieval-inn.mp3", credit: "medieval inn · LazyChillZone(Pixabay)" },
 ];
 
 export function createMusic({ defaultVolume = 0.55 } = {}) {
