@@ -1679,10 +1679,17 @@
   /* 每張卡片的列前面自動編號(CSS counter),加功能不用手動改編號 */
   .lc-body { counter-reset: lc-count; }
   /* 功能卡片分類的小標題;每一類重新編號 */
-  .lc-group { counter-reset: lc-count; margin: 10px 4px 3px; font-size: 12px; font-weight: 700; letter-spacing: .06em; opacity: .62; }
+  .lc-group { counter-set: lc-count 0; margin: 10px 4px 4px; padding-bottom: 3px; font-size: 12.5px; font-weight: 800; letter-spacing: .06em;
+    color: #9fd0ff; border-bottom: 1px solid rgba(120,190,255,.28); }
   .lc-group:first-child { margin-top: 2px; }
+  /* 各主題都要清楚看得到分類標題(原本半透明,在史詩、星空主題太暗) */
+  body[data-theme="fantasy"] .lc-group { color: #f2cf6b; border-bottom-color: rgba(242,207,107,.35); }
+  body[data-theme="journal"] .lc-group { color: #7a4f22; border-bottom-color: rgba(122,79,34,.3); }
+  body[data-theme="hud"] .lc-group { color: #5ff0ff; border-bottom-color: rgba(95,240,255,.35); text-shadow: 0 0 6px rgba(95,240,255,.5); }
+  /* 加一寫在列本身(寫在 ::before 上時,分類標題的歸零不會生效,編號會一路往下數) */
+  .lc-body > .layer-row { counter-increment: lc-count; }
   .lc-body > .layer-row::before {
-    counter-increment: lc-count; content: counter(lc-count) "."; flex: none;
+    content: counter(lc-count) "."; flex: none;
     font-size: 12px; opacity: .5; margin-right: -3px;
   }
   /* 字和按鈕放大(列高約 38px),手指比較好點 */
