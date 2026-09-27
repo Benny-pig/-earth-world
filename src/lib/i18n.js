@@ -24,7 +24,7 @@ const DICT = {
   "全球氣溫與降雨": "Global temperature & rain", "全球地震顯示": "Earthquakes", "颱風衛星雲圖": "Typhoon satellite images", "世界機場航班": "World flights",
   "世界即時景點直播": "Live cams around the world", "衛星與太空站": "Satellites & space stations", "太空發射日曆": "Rocket launch calendar",
   "真實晨昏線": "Real day & night", "地理猜謎遊戲": "Geography quiz", "旅行護照集章": "Travel passport", "飛行旅程模擬": "Flight simulator",
-  "國家比較": "Compare countries", "月亮與月相": "Moon & phases", "🌙 月亮與月相": "🌙 Moon & phases", "歷史上的今天": "On this day", "當地廣播電台": "Local radio",
+  "國家比較": "Compare countries", "電動車充電站": "EV charging", "⚡ 電動車充電站 · 全台": "⚡ EV charging · Taiwan", "月亮與月相": "Moon & phases", "🌙 月亮與月相": "🌙 Moon & phases", "歷史上的今天": "On this day", "當地廣播電台": "Local radio",
   "偵測到規模 6 以上地震": "Magnitude 6+ earthquake detected", "地球停止自轉,白天黑夜照現在的真實時間顯示": "Stop spinning and show real day and night right now",
   // 音樂列
   "背景音樂開關": "Music on/off", "背景音樂": "Background music", "音量": "Volume", "選擇背景音樂": "Choose music",

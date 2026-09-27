@@ -334,6 +334,27 @@ export default {
       }
     }
 
+    // ⚡ 電動車充電站(TDX EV):只允許 v1/EV/ 開頭、英數字/斜線/連字號的路徑。
+    // 充電站、業者等基本資料快取 4 小時;充電槍即時狀態 1 分鐘
+    const evPath = url.searchParams.get("ev");
+    if (evPath) {
+      if (!(evPath.length <= 120 && /^v1\/EV\/[A-Za-z0-9/\-]+$/.test(evPath))) {
+        return new Response(JSON.stringify({ error: "不支援的充電站查詢路徑" }), {
+          status: 400, headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
+        });
+      }
+      const ttl = /LiveStatus/.test(evPath) ? 60 : 14400;
+      const result = await fetchTdxPath(env, evPath, ttl);
+      if (result.ok) {
+        return new Response(result.body, {
+          status: 200, headers: { ...CORS_HEADERS, "Content-Type": "application/json", "Cache-Control": `public, max-age=${Math.min(ttl, 600)}` },
+        });
+      }
+      return new Response(JSON.stringify({ error: "充電站資料暫時查不到,稍後再試", status: result.status }), {
+        status: 502, headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
+      });
+    }
+
     const railPath = url.searchParams.get("rail");
     if (railPath) {
       // 只允許高鐵/台鐵這兩個路徑開頭,而且只能有英數字、斜線、連字號(擋掉 ..、? 之類)

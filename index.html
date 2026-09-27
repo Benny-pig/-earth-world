@@ -439,6 +439,53 @@
   @media (max-width: 640px) {
     #feature-hint { bottom: auto; top: 150px; }
   }
+  /* ⚡ 電動車充電站 */
+  #ev-panel {
+    position: fixed; top: 110px; left: 18px; z-index: 44; width: 400px; max-width: calc(100vw - 36px);
+    max-height: calc(100vh - 140px); display: flex; flex-direction: column; overflow: hidden;
+    padding: 12px; border-radius: 14px; background: rgba(8, 16, 22, 0.95); backdrop-filter: blur(10px);
+    border: 1px solid rgba(61,220,132,.5); color: #e7edfb; box-shadow: 0 10px 32px rgba(0,0,0,.5);
+    font: 13px system-ui, "Microsoft JhengHei", sans-serif;
+  }
+  #ev-panel[hidden] { display: none; }
+  #ev-panel .sat-head { display: flex; align-items: center; gap: 6px; margin-bottom: 8px; cursor: move; }
+  #ev-panel .sat-title { font-weight: 800; font-size: 15px; margin-right: auto; color: #7ff0b0; }
+  .ev-body { display: flex; flex-direction: column; min-height: 0; flex: 1; }
+  .ev-q { width: 100%; box-sizing: border-box; padding: 8px 10px; border-radius: 9px; border: 1px solid rgba(61,220,132,.45);
+    background: rgba(255,255,255,.06); color: inherit; font: 13px system-ui, "Microsoft JhengHei", sans-serif; }
+  .ev-row { display: flex; gap: 6px; margin-top: 6px; }
+  .ev-county { flex: 1; min-width: 0; padding: 6px 8px; border-radius: 8px; border: 1px solid rgba(120,170,255,.3); background: rgba(255,255,255,.06);
+    color: inherit; font: 13px system-ui, "Microsoft JhengHei", sans-serif; }
+  .ev-county option { background: #101a20; color: #e7edfb; }
+  .ev-near.on { border-color: rgba(61,220,132,.9) !important; background: rgba(61,220,132,.18) !important; }
+  .ev-chips { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 6px; }
+  .ev-chips button { padding: 4px 9px; border-radius: 99px; cursor: pointer; border: 1px solid rgba(255,255,255,.18); background: rgba(255,255,255,.04);
+    color: inherit; font: 12px system-ui, "Microsoft JhengHei", sans-serif; }
+  .ev-chips button.on { background: rgba(61,220,132,.22); border-color: rgba(61,220,132,.9); }
+  .ev-sum { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin: 8px 0 4px; font-size: 12.5px; }
+  .ev-legend { margin-left: auto; font-size: 11.5px; opacity: .8; display: flex; align-items: center; gap: 4px; }
+  .ev-legend i, .ev-top i { display: inline-block; width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+  i.dc { background: #ffa62b; box-shadow: 0 0 6px #ffa62b; } i.ac { background: #3ddc84; box-shadow: 0 0 6px #3ddc84; }
+  .ev-list { overflow-y: auto; min-height: 0; flex: 1; }
+  .ev-item { padding: 8px 6px; border-bottom: 1px solid rgba(255,255,255,.07); cursor: pointer; border-radius: 8px; }
+  .ev-item:hover { background: rgba(61,220,132,.07); }
+  .ev-item.open { background: rgba(61,220,132,.1); }
+  .ev-top { display: flex; align-items: center; gap: 7px; font-size: 13.5px; }
+  .ev-top b { flex: 1; min-width: 0; }
+  .ev-km { font-size: 12px; color: #7ff0b0; white-space: nowrap; }
+  .ev-sub { font-size: 12px; opacity: .72; margin: 2px 0 3px 16px; }
+  .ev-conn { display: flex; flex-wrap: wrap; gap: 4px 10px; margin-left: 16px; font-size: 12px; }
+  .ev-dc { color: #ffc46b; } .ev-ac { color: #8ff0bb; }
+  .ev-detail { margin: 8px 0 2px 16px; display: flex; flex-direction: column; gap: 4px; font-size: 12.5px; line-height: 1.5; cursor: default; }
+  .ev-detail span { display: inline-block; min-width: 76px; opacity: .7; }
+  .ev-detail a { color: #8fd0ff; }
+  .ev-actions { display: flex; gap: 6px; margin-top: 4px; flex-wrap: wrap; }
+  .ev-actions a.tc-btn { text-decoration: none; color: inherit; }
+  body[data-theme="journal"] #ev-panel .sat-title { color: #2f7a4f; }
+  body[data-theme="journal"] .ev-county option { background: #f3ede0; color: #3b332a; }
+  @media (max-width: 640px) {
+    #ev-panel { top: auto; bottom: 116px; left: 8px; right: 8px; width: auto; max-width: none; max-height: 56vh; z-index: 45; }
+  }
   /* 🌙 月亮:地球旁的月亮標籤 + 月相面板 */
   .moon-label { position: fixed; left: 0; top: 0; z-index: 38; padding: 2px 9px; border-radius: 99px; cursor: pointer; white-space: nowrap;
     border: 1px solid rgba(240,230,200,.45); background: rgba(10,14,26,.7); color: #f1ead2; font: 700 12px system-ui, "Microsoft JhengHei", sans-serif;
@@ -1817,7 +1864,8 @@
   body[data-theme="fantasy"] #ro-panel,
   body[data-theme="fantasy"] #weather-panel,
   body[data-theme="fantasy"] #compare-panel,
-  body[data-theme="fantasy"] #moon-panel {
+  body[data-theme="fantasy"] #moon-panel,
+  body[data-theme="fantasy"] #ev-panel {
     background: linear-gradient(180deg,#332714,#1c150c); border: 1px solid #c9a227; color: #f0dfab;
   }
   body[data-theme="fantasy"] #satellite-close,
@@ -1934,7 +1982,8 @@
   body[data-theme="journal"] #ro-panel,
   body[data-theme="journal"] #weather-panel,
   body[data-theme="journal"] #compare-panel,
-  body[data-theme="journal"] #moon-panel {
+  body[data-theme="journal"] #moon-panel,
+  body[data-theme="journal"] #ev-panel {
     background: #f3ede0; border-color: rgba(120,90,50,.28); color: #3b332a;
   }
   body[data-theme="journal"] #satellite-close,
@@ -2034,7 +2083,8 @@
   body[data-theme="hud"] #ro-panel,
   body[data-theme="hud"] #weather-panel,
   body[data-theme="hud"] #compare-panel,
-  body[data-theme="hud"] #moon-panel {
+  body[data-theme="hud"] #moon-panel,
+  body[data-theme="hud"] #ev-panel {
     background: linear-gradient(180deg,#0e2226,#04121a); border: 1px solid #00e5ff; color: #cdf3ff; border-radius: 3px;
   }
   body[data-theme="hud"] #satellite-close,
@@ -2281,6 +2331,13 @@
     </div>
     <div id="airport-list" class="ap-list"></div>
     <div id="airport-caption" class="sat-caption"></div>
+  </div>
+  <div id="ev-panel" hidden>
+    <div class="sat-head">
+      <span class="sat-title">⚡ 電動車充電站 · 全台</span>
+      <button id="ev-close" class="rp-head-btn" type="button" aria-label="關閉">×</button>
+    </div>
+    <div id="ev-body" class="ev-body"></div>
   </div>
   <div id="moon-panel" hidden>
     <div class="sat-head">
@@ -2558,6 +2615,9 @@
         </button>
         <button id="tra-toggle" class="layer-row" type="button" aria-pressed="false">
           <span class="layer-icon">🚆</span>台鐵時刻
+        </button>
+        <button id="ev-toggle" class="layer-row" type="button" aria-pressed="false">
+          <span class="layer-icon">⚡</span>電動車充電站
         </button>
       </div>
     </div>

@@ -47,6 +47,7 @@ const HINTS_EN = {
   "traffic-toggle": "Live freeway traffic — the redder, the busier. Switch regions and watch cameras.",
   "thsr-toggle": "Pick two stations for high-speed rail times and seats.",
   "tra-toggle": "Pick two stations for Taiwan Railway times.",
+  "ev-toggle": "Every EV charging station in Taiwan — search by place, filter by connector (Tesla, CCS2…), find the nearest ones and get directions.",
 };
 
 const HINTS_ZH = {
@@ -69,6 +70,7 @@ const HINTS_ZH = {
   "traffic-toggle": "國道即時路況,越紅越塞;可以切換北中南、看監視器畫面。",
   "thsr-toggle": "選出發站和抵達站,查高鐵時刻與剩餘座位。",
   "tra-toggle": "選出發站和抵達站,查台鐵時刻。",
+  "ev-toggle": "全台電動車充電站:可以搜尋地名、依充電規格(特斯拉、CCS2…)篩選、找離你最近的,還能直接用 Google 地圖導航。",
 };
 
 const STEPS_USE = () => (isEn ? STEPS_EN : STEPS);

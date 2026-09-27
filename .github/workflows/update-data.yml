@@ -34,6 +34,9 @@ jobs:
       - name: 緊急電話、駐外館處、中國使館
         run: python tools/build-emergency.py
         continue-on-error: true
+      - name: 全台電動車充電站(交通部 TDX)
+        run: python tools/build-ev-chargers.py
+        continue-on-error: true
       - name: 世界即時景點直播(YouTube 正在直播的景點攝影機)
         run: python tools/build-livecams.py
         continue-on-error: true

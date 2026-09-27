@@ -78,6 +78,17 @@ def _():
     return "ok", f"{len(cams)} 個直播都能播"
 
 
+@check("電動車充電站資料")
+def _():
+    s, b = get(SITE + "data/ev/stations.json")
+    if s == 404: return "warn", "還沒有資料(等 Worker 部署新版或每週自動更新)"
+    d = json.loads(b)
+    n = len(d.get("stations", []))
+    age = (date.today() - date.fromisoformat(d.get("built", "2000-01-01"))).days
+    if n < 1500: return "fail", f"只有 {n} 站"
+    return ("ok", f"{n} 站 · {age} 天前更新") if age <= 21 else ("warn", f"{n} 站,但已 {age} 天沒更新")
+
+
 @check("廣播電台目錄(radio-browser)")
 def _():
     s, b = get("https://de1.api.radio-browser.info/json/stations/search?countrycode=TW&order=clickcount&reverse=true&limit=30&hidebroken=true")

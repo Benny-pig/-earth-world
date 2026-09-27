@@ -37,6 +37,7 @@ import { createRoPlayer } from "./ui/ro-player.js";
 import { createWeatherLayer } from "./scene/weather.js";
 import { createCompare } from "./ui/compare.js";
 import { createMoon } from "./scene/moon.js";
+import { createEvLayer } from "./scene/ev.js";
 import { createTour } from "./ui/tour.js";
 import { setupI18n } from "./lib/i18n.js";
 import { createShare } from "./ui/share.js";
@@ -53,6 +54,7 @@ import { THEME_LABEL, getTheme, cycleTheme, onThemeChange, initTheme } from "./u
 const container = document.getElementById("app");
 const DEFAULT_MIN_DISTANCE = 1.35;   // 跟 camera-controls.js 的 controls.minDistance 一致
 const TRAFFIC_MIN_DISTANCE = 1.12;   // 路況開著時可以拉到離地約 760 公里,看得清楚各條國道
+const EV_MIN_DISTANCE = 1.05;        // 充電站開著時可以再近一點(離地約 320 公里),看得出一站站的位置
 
 export function showError(msg) {
   const el = document.getElementById("error-banner");
@@ -409,8 +411,8 @@ export function start() {
     if (trafficToggle) trafficToggle.setAttribute("aria-pressed", String(on));
     traffic.setEnabled(on);
     trafficCenter.setOpen(on);
-    rig.setMinDistance(on ? TRAFFIC_MIN_DISTANCE : DEFAULT_MIN_DISTANCE);
-    const keepPaused = on || !!window.__earth.sidePanel?.isOpen();
+    rig.setMinDistance(window.__earth.ev?.isEnabled() ? EV_MIN_DISTANCE : on ? TRAFFIC_MIN_DISTANCE : DEFAULT_MIN_DISTANCE);
+    const keepPaused = on || !!window.__earth.sidePanel?.isOpen() || !!window.__earth.ev?.isEnabled();
     window.__earth.globe?.setSpinPaused(keepPaused);
     window.__earth.clouds?.setSpinPaused(keepPaused);
     // 手機直向畫面上下被搜尋欄和路況面板佔掉,拉遠一點讓整個台灣放得進中間的空間
@@ -492,6 +494,22 @@ export function start() {
       wait();
     });
   }
+
+  // ⚡ 全台電動車充電站(台灣交通卡片):跟路況一樣,打開時飛到台灣、允許拉近、停住自轉
+  const evToggle = document.getElementById("ev-toggle");
+  const ev = createEvLayer({ globeObject: globe.object, rig, onClose: () => setEv(false) });
+  window.__earth.ev = ev;
+  function setEv(on) {
+    if (evToggle) evToggle.setAttribute("aria-pressed", String(on));
+    ev.setEnabled(on);
+    rig.setMinDistance(on ? EV_MIN_DISTANCE : traffic.isEnabled() ? TRAFFIC_MIN_DISTANCE : DEFAULT_MIN_DISTANCE);
+    const keepPaused = on || traffic.isEnabled() || !!window.__earth.sidePanel?.isOpen();
+    globe.setSpinPaused(keepPaused);
+    clouds.setSpinPaused(keepPaused);
+    if (on) rig.flyTo(23.6, 120.95, { distance: window.innerWidth < 640 ? 1.5 : 1.3, ms: 1200 });
+    else if (!traffic.isEnabled() && !window.__earth.sidePanel?.isOpen()) rig.resetView({ keepDirection: true });
+  }
+  if (evToggle) evToggle.addEventListener("click", () => setEv(evToggle.getAttribute("aria-pressed") !== "true"));
 
   // 🌙 月亮(一直都在地球旁邊;選單「月亮與月相」或點月亮打開月相面板)
   const moonToggle = document.getElementById("moon-toggle");
@@ -761,7 +779,8 @@ export function start() {
       globe.setSpinPaused(true);
       clouds.setSpinPaused(true);
       if (resumeTimer) { clearTimeout(resumeTimer); resumeTimer = null; }
-    } else if (!resumeTimer && !(window.__earth.countryLayer && window.__earth.countryLayer.hasSelection && window.__earth.countryLayer.hasSelection())) {
+    } else if (!resumeTimer && !(window.__earth.countryLayer && window.__earth.countryLayer.hasSelection && window.__earth.countryLayer.hasSelection()) &&
+      !window.__earth.traffic?.isEnabled() && !window.__earth.ev?.isEnabled()) {
       resumeTimer = setTimeout(() => { globe.setSpinPaused(false); clouds.setSpinPaused(false); resumeTimer = null; }, 1500);
     }
     rig.update(dt);

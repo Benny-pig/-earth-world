@@ -9,3 +9,4 @@
 .worktrees/
 health-report.md
 tools/__pycache__/
+tools/.cache/
