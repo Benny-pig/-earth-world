@@ -4,7 +4,9 @@ import { latLonToXYZ } from "../lib/geo.js";
 
 export const easeInOutCubic = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
 
-const MAX_DISTANCE = 6; // 跟下面 controls.maxDistance 對齊,避免直向手機算出超過可縮放範圍的距離
+// 最遠可以縮到多遠(跟下面 controls.maxDistance 對齊)。原本 6,直向手機要 6.5 左右才裝得下整顆地球、
+// 也沒辦法再縮遠看整片星空;放寬到 10
+const MAX_DISTANCE = 10;
 const BASE_ROTATE_SPEED = 0.45;
 
 // 相機 fov(45°)是「垂直」視角;aspect < 1(直向手機)時水平視角比垂直窄,

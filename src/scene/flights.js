@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import { esc } from "../lib/esc.js";
 import { makeDraggable } from "../ui/draggable.js";
+import { canvasRect } from "../lib/view-rect.js";
 
 // 當地即時航班:資料源 adsb.lol(免金鑰、社群 ADS-B 資料),但它(跟大部分航班
 // API 一樣)不開放瀏覽器直接跨網域抓資料,得透過 cloudflare-worker/flight-proxy.js
@@ -140,7 +141,7 @@ export function createFlightsLayer({ globeObject, camera, renderer, naturePopup 
 
   function update() {
     if (!enabled || !flights.length) return;
-    const rect = renderer.domElement.getBoundingClientRect();
+    const rect = canvasRect(renderer.domElement);
     for (const F of flights) {
       F.anchor.copy(F.dir).multiplyScalar(1.02).applyMatrix4(globeObject.matrixWorld);
       worldNormal.copy(F.dir).transformDirection(globeObject.matrixWorld);

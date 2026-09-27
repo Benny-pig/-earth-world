@@ -1,4 +1,5 @@
 import * as THREE from "three";
+import { canvasRect } from "../lib/view-rect.js";
 
 // 主要自然地理特徵標籤(山脈 / 河流 / 沙漠 / 高原…)。
 // 只有在鏡頭「拉近」時才淡入,遠看時完全隱藏,避免與國家標籤打架。
@@ -68,7 +69,7 @@ export function createPhysicalLabels({ globeObject, camera, renderer, naturePopu
     const gate = THREE.MathUtils.clamp((FAR - camDist) / (FAR - NEAR), 0, 1);
     if (gate <= 0.001) { for (const L of labels) hide(L); return; }
 
-    const rect = renderer.domElement.getBoundingClientRect();
+    const rect = canvasRect(renderer.domElement);
     placed.length = 0;
 
     for (const L of labels) {

@@ -2,6 +2,7 @@ import * as THREE from "three";
 import { LineSegments2 } from "three/addons/lines/LineSegments2.js";
 import { LineSegmentsGeometry } from "three/addons/lines/LineSegmentsGeometry.js";
 import { LineMaterial } from "three/addons/lines/LineMaterial.js";
+import { canvasRect } from "../lib/view-rect.js";
 
 // 台灣即時路況(國道):交通部高速公路局的路段車速,經 TDX → 我們的 Cloudflare
 // Worker 轉發(金鑰放在 Worker 的 Secrets)。路段線形與名稱幾乎不會變,已預先做成
@@ -205,7 +206,7 @@ export function createTrafficLayer({ globeObject, camera, renderer, naturePopup,
   const wp = new THREE.Vector3(), nrm = new THREE.Vector3(), camTo = new THREE.Vector3();
   function pickAt(x, y) {
     if (!enabled || !sections) return false;
-    const rect = renderer.domElement.getBoundingClientRect();
+    const rect = canvasRect(renderer.domElement);
     const mw = globeObject.matrixWorld;
     const hits = [];
     for (const [id, s] of Object.entries(sections)) {

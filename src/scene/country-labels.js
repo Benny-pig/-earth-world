@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import { iterCountryPolygons, countryCode, countryNames } from "../countries/borders.js";
+import { canvasRect } from "../lib/view-rect.js";
 
 const DEG = Math.PI / 180;
 const MIN_AREA_NEAR = 0.4;   // deg^2 — when zoomed in, even small countries get a label
@@ -77,7 +78,12 @@ export function createCountryLabels({ geojson, globeObject, camera, renderer, on
 
   const placed = [];   // {x,y} screen centres of labels already shown this frame, for collision culling
 
-  function hide(L) { L.el.style.opacity = "0"; L.el.style.transform = "translate(-9999px,-9999px)"; }
+  // 位置/透明度有變才寫進 DOM:兩百多個標籤每一格都重寫,瀏覽器每格都要重算樣式(手機轉地球會卡)
+  function put(L, t, o) {
+    if (L._t !== t) { L.el.style.transform = t; L._t = t; }
+    if (L._o !== o) { L.el.style.opacity = o; L._o = o; }
+  }
+  function hide(L) { put(L, "translate(-9999px,-9999px)", "0"); }
 
   function update() {
     const dist = camera.position.length();
@@ -89,7 +95,7 @@ export function createCountryLabels({ geojson, globeObject, camera, renderer, on
       THREE.MathUtils.mapLinear(dist, 1.6, 6, MAX_LABELS_NEAR, MAX_LABELS_FAR),
       MAX_LABELS_FAR, MAX_LABELS_NEAR,
     ));
-    const rect = renderer.domElement.getBoundingClientRect();
+    const rect = canvasRect(renderer.domElement);
 
     // 小地方的圓點地名不受面積門檻/數量上限/互相遮擋的篩選,只要在地球正面就顯示;
     // 先放進 placed,後面的一般國名碰到它們就讓位
@@ -103,8 +109,7 @@ export function createCountryLabels({ geojson, globeObject, camera, renderer, on
       if (ndc.z > 1 || facing < 0.05) { hide(P); continue; }
       const x = rect.left + (ndc.x * 0.5 + 0.5) * rect.width;
       const y = rect.top + (-ndc.y * 0.5 + 0.5) * rect.height;
-      P.el.style.transform = `translate(${Math.round(x)}px, ${Math.round(y)}px)`;
-      P.el.style.opacity = THREE.MathUtils.clamp((facing - 0.05) / 0.2, 0, 1).toFixed(2);
+      put(P, `translate(${Math.round(x)}px, ${Math.round(y)}px)`, THREE.MathUtils.clamp((facing - 0.05) / 0.2, 0, 1).toFixed(2));
       placed.push({ x: x + P.off[0], y: y + P.off[1] });
     }
 
@@ -133,8 +138,7 @@ export function createCountryLabels({ geojson, globeObject, camera, renderer, on
       const fadeEdge = 0.7 + 0.3 * THREE.MathUtils.clamp((L.area / threshold - 1.0) / 0.6, 0, 1);
       const opacity = THREE.MathUtils.clamp((facing + 0.05) / 0.25, 0, 1) * fadeEdge;
       if (opacity <= 0.02) { hide(L); continue; }
-      L.el.style.transform = `translate(${Math.round(x)}px, ${Math.round(y)}px) translate(-50%, -50%)`;
-      L.el.style.opacity = opacity.toFixed(2);
+      put(L, `translate(${Math.round(x)}px, ${Math.round(y)}px) translate(-50%, -50%)`, opacity.toFixed(2));
       placed.push({ x, y });
       count++;
     }

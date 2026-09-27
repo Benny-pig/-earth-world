@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import { esc } from "../lib/esc.js";
 import { zhHantName } from "../countries/country-names.js";
+import { canvasRect } from "../lib/view-rect.js";
 
 // 當地廣播電台:radio-browser.info 公開 API,免金鑰、串流網址可直接播放。
 // 跟地震不同,電台清單不太會變,開啟時抓一次就好,不用定時刷新。
@@ -354,7 +355,7 @@ export function createRadioLayer({ globeObject, camera, renderer, music, onChang
 
   function update() {
     if (!enabled || !stations.length) return;
-    const rect = renderer.domElement.getBoundingClientRect();
+    const rect = canvasRect(renderer.domElement);
     for (const S of stations) {
       S.anchor.copy(S.dir).multiplyScalar(1.02).applyMatrix4(globeObject.matrixWorld);
       worldNormal.copy(S.dir).transformDirection(globeObject.matrixWorld);

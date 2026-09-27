@@ -2,6 +2,7 @@ import * as THREE from "three";
 import { esc } from "../lib/esc.js";
 import { latLonToXYZ } from "../lib/geo.js";
 import { makeDraggable } from "../ui/draggable.js";
+import { canvasRect } from "../lib/view-rect.js";
 
 // 📺 世界即時景點直播地圖:地球上標出世界各地 24 小時直播的景點攝影機(澀谷十字路口、
 // 威尼斯大運河、納米比亞沙漠水坑、夏威夷火山…),點一下就在面板裡播放 YouTube 直播,
@@ -115,7 +116,7 @@ export function createLiveCams({ globeObject, camera, renderer, rig, onClose }) 
   const wp = new THREE.Vector3(), nrm = new THREE.Vector3(), camTo = new THREE.Vector3(), ndc = new THREE.Vector3();
   function update() {
     if (!enabled || !pins.length) return;
-    const rect = renderer.domElement.getBoundingClientRect();
+    const rect = canvasRect(renderer.domElement);
     for (const p of pins) {
       wp.copy(p.dir).applyMatrix4(globeObject.matrixWorld);
       nrm.copy(p.dir).transformDirection(globeObject.matrixWorld);

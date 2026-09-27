@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import { esc } from "../lib/esc.js";
 import { makeDraggable } from "../ui/draggable.js";
+import { canvasRect } from "../lib/view-rect.js";
 
 // 🛰️ 衛星與太空站:CelesTrak 公開的軌道參數(TLE,免金鑰、允許網頁直接讀取)+
 // satellite.js(SGP4 軌道模型)算出每顆衛星現在的位置,畫在地球外圈、每秒更新。
@@ -217,7 +218,7 @@ export function createSatelliteLayer({ globeObject, camera, renderer, rig, natur
   const wp = new THREE.Vector3(), nrm = new THREE.Vector3(), camTo = new THREE.Vector3(), ndc = new THREE.Vector3();
   function update() {
     if (!enabled || !labels.size) return;
-    const rect = renderer.domElement.getBoundingClientRect();
+    const rect = canvasRect(renderer.domElement);
     for (const { el, s } of labels.values()) {
       if (!s.ok) { el.style.opacity = "0"; continue; }
       wp.copy(s.pos).applyMatrix4(globeObject.matrixWorld);
@@ -236,7 +237,7 @@ export function createSatelliteLayer({ globeObject, camera, renderer, rig, natur
   // ───── 點衛星:螢幕上離點擊位置最近的一顆 ─────
   function pickAt(x, y) {
     if (!enabled || !sats.length) return false;
-    const rect = renderer.domElement.getBoundingClientRect();
+    const rect = canvasRect(renderer.domElement);
     let best = null, bd = 12;
     for (const s of sats) {
       if (!s.ok) continue;

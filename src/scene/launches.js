@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import { esc } from "../lib/esc.js";
 import { makeDraggable } from "../ui/draggable.js";
+import { canvasRect } from "../lib/view-rect.js";
 
 // 🚀 太空發射日曆:Launch Library 2(The Space Devs,免金鑰、允許網頁直接讀取)的
 // 未來發射清單。免費額度每小時 15 次,所以抓到的資料在瀏覽器存 30 分鐘。
@@ -166,7 +167,7 @@ export function createLaunchLayer({ globeObject, camera, renderer, rig, naturePo
   const wp = new THREE.Vector3(), nrm = new THREE.Vector3(), camTo = new THREE.Vector3(), ndc = new THREE.Vector3();
   function update() {
     if (!enabled || !pads.length) return;
-    const rect = renderer.domElement.getBoundingClientRect();
+    const rect = canvasRect(renderer.domElement);
     for (const p of pads) {
       wp.copy(p.dir).applyMatrix4(globeObject.matrixWorld);
       nrm.copy(p.dir).transformDirection(globeObject.matrixWorld);

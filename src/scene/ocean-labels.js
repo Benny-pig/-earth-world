@@ -1,4 +1,5 @@
 import * as THREE from "three";
+import { canvasRect } from "../lib/view-rect.js";
 
 const OCEANS = [
   { zh: "太平洋", en: "Pacific Ocean",  lat: 0,   lon: -160, note: "世界最大最深的大洋,面積超過所有陸地總和。" },
@@ -35,7 +36,7 @@ export function createOceanLabels({ globeObject, camera, renderer, naturePopup }
   const worldNormal = new THREE.Vector3();
 
   function update() {
-    const rect = renderer.domElement.getBoundingClientRect();
+    const rect = canvasRect(renderer.domElement);
     for (const L of labels) {
       // anchor sits slightly above the surface so it isn't z-fought by the globe
       L.anchor.copy(L.localDir).multiplyScalar(1.02).applyMatrix4(globeObject.matrixWorld);

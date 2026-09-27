@@ -631,6 +631,43 @@ export function start() {
     composer.setSize(window.innerWidth, window.innerHeight);
   }
   window.addEventListener("resize", syncSize);
+
+  // ⚙️ 自動調整畫質:連續幾秒每秒不到 40 格(通常是顯示卡跟不上泛光特效 + 高解析度),
+  // 就把解析度降一級(1.5 → 1.25 → 1.0 → 0.85)。降了之後如果沒有變順(例如 iPhone 省電模式
+  // 本來就鎖在每秒 30 格,跟顯示卡無關),就改回原本的畫質、不再調整,免得畫面白白變糊。
+  let quality = renderer.getPixelRatio();
+  const MIN_QUALITY = 0.85;
+  let winStart = 0, winFrames = 0, lastFrameAt = 0, slowWindows = 0, trial = null, qualityLocked = false;
+  function setQuality(q) {
+    quality = q;
+    renderer.setPixelRatio(q);
+    composer.setPixelRatio(q);
+    starfield.setPixelRatio(q);
+    syncSize();
+  }
+  function watchFps(now) {
+    if (!winStart || now - lastFrameAt > 500) { winStart = now; winFrames = 0; }   // 剛開始、切到背景回來:這段不算
+    lastFrameAt = now;
+    winFrames++;
+    if (now - winStart < 2000) return;
+    const fps = (winFrames * 1000) / (now - winStart);
+    winStart = now; winFrames = 0;
+    if (trial) {
+      if (++trial.windows < 2) return;
+      if (fps < trial.fpsBefore * 1.12) { setQuality(trial.prev); qualityLocked = true; }   // 沒變順:不是顯示卡的問題
+      trial = null;
+      return;
+    }
+    if (qualityLocked) return;
+    slowWindows = fps < 40 ? slowWindows + 1 : 0;
+    if (slowWindows >= 2 && quality > MIN_QUALITY) {
+      trial = { prev: quality, fpsBefore: fps, windows: 0 };
+      setQuality(Math.max(MIN_QUALITY, +(quality - 0.25).toFixed(2)));
+      slowWindows = 0;
+    }
+  }
+  window.__earth.quality = () => ({ quality, locked: qualityLocked });
+
   // 手機瀏覽器的網址列收合/展開、或從別的頁面切回來,有時候 resize 事件觸發時
   // window.innerWidth/Height 讀到的還是過渡中的中間值,canvas 尺寸因此卡住不對、
   // 畫面側邊露出背景色看起來像被裁切。晚一點點再補算一次修正這種情況。
@@ -649,6 +686,7 @@ export function start() {
   const clock = new THREE.Clock();
   function loop() {
     const dt = Math.min(clock.getDelta(), 0.1);
+    watchFps(performance.now());
     starfield.update(clock.getElapsedTime());
     globe.update(dt);
     clouds.update(dt);

@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import { esc } from "../lib/esc.js";
+import { canvasRect } from "../lib/view-rect.js";
 
 // 全球地震顯示:美國地質調查所(USGS)公開 GeoJSON,免金鑰、每分鐘更新。
 // 只抓規模 4.5 以上(近一天),避免上百筆小地震把地球點滿看不清楚。
@@ -156,7 +157,7 @@ export function createEarthquakesLayer({ globeObject, camera, renderer, naturePo
 
   function update() {
     if (!enabled || !quakes.length) return;
-    const rect = renderer.domElement.getBoundingClientRect();
+    const rect = canvasRect(renderer.domElement);
     for (const Q of quakes) {
       Q.anchor.copy(Q.dir).multiplyScalar(1.02).applyMatrix4(globeObject.matrixWorld);
       worldNormal.copy(Q.dir).transformDirection(globeObject.matrixWorld);
