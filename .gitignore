@@ -7,3 +7,5 @@
 .superpowers/
 # git worktree(subagent-driven-development 隔離工作區)
 .worktrees/
+health-report.md
+tools/__pycache__/

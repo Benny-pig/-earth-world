@@ -1,0 +1,42 @@
+# 🩺 每日網站健康檢查:每天早上 8:30(台灣時間)逐項檢查網站與各個外部資料來源
+# (電台目錄、直播、新聞、天氣、太空資料、Worker…)。有功能故障就開一個 Issue 提醒
+# (之後每天在同一個 Issue 補上最新結果),全部恢復正常時自動關掉。也可以在 Actions 頁手動執行。
+name: 每日網站健康檢查
+on:
+  schedule:
+    - cron: "30 0 * * *"   # 00:30 UTC = 台灣 08:30
+  workflow_dispatch:
+permissions:
+  contents: read
+  issues: write
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 健康檢查
+        run: python tools/health-check.py
+      - name: 有故障就開 Issue 提醒(同一個 Issue 持續更新)
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          [ -f health-report.md ] || echo "健康檢查程式本身執行失敗,請到 Actions 頁看詳細記錄。" > health-report.md
+          num=$(gh issue list --state open --label health-check --json number --jq '.[0].number')
+          if [ -n "$num" ]; then
+            gh issue comment "$num" --body-file health-report.md
+          else
+            gh label create health-check --color D93F0B --description "每日網站健康檢查" 2>/dev/null || true
+            gh issue create --title "🩺 網站健康檢查發現問題" --label health-check --body-file health-report.md
+          fi
+      - name: 恢復正常就關掉提醒 Issue
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          num=$(gh issue list --state open --label health-check --json number --jq '.[0].number')
+          if [ -n "$num" ]; then gh issue close "$num" --comment "✅ $(TZ=Asia/Taipei date +%F) 檢查全部恢復正常,自動關閉。"; fi
