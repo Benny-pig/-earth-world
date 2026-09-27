@@ -9,7 +9,7 @@ const SEEN_KEY = "earth-world.hints";
 const STEPS = [
   { sel: null, title: "👋 歡迎來到地球世界!", text: "用手指或滑鼠<b>拖曳</b>就能轉動地球,<b>滾輪或兩指</b>可以放大縮小。" },
   { sel: null, title: "🌏 點任何一個國家", text: "會打開這個國家的介紹:當地時間、天氣、緊急電話、今日新聞,還有更詳細的國家大百科。" },
-  { sel: "#country-search", title: "🔎 搜尋國家", text: "打中文或英文都可以,選了就直接飛過去。" },
+  { sel: "#country-search", title: "🔎 萬用搜尋", text: "國家、城市、功能(例如「地震」「充電站」)、景點直播都搜得到;電腦按 Ctrl+K 就能叫出來。" },
   { sel: "#layer-controls", title: "🎛️ 功能選單", text: "地震、天氣、航班、衛星、直播、猜謎遊戲…都在這裡,<b>按一下打開、再按一下關掉</b>。" },
   { sel: "#tw-controls", title: "🚦 台灣交通", text: "台灣機場即時航班、國道路況與監視器、高鐵台鐵時刻。" },
   { sel: "#audio-ui", title: "🎵 音樂", text: "背景音樂可以換曲子;按「🎵 RO」可以聽仙境傳說的懷舊原聲。" },
@@ -19,7 +19,7 @@ const STEPS = [
 const STEPS_EN = [
   { sel: null, title: "👋 Welcome to Earth World!", text: "<b>Drag</b> to spin the globe; use the <b>scroll wheel or two fingers</b> to zoom." },
   { sel: null, title: "🌏 Tap any country", text: "See its local time, weather, emergency numbers and today's news, plus a detailed encyclopedia." },
-  { sel: "#country-search", title: "🔎 Search", text: "Type a country name in English or Chinese and fly straight there." },
+  { sel: "#country-search", title: "🔎 Search everything", text: "Countries, cities, features (try “earthquake” or “aurora”) and live cams. On a computer, press Ctrl+K." },
   { sel: "#layer-controls", title: "🎛️ Features", text: "Earthquakes, weather, flights, satellites, live cams, games… <b>tap to turn on, tap again to turn off</b>." },
   { sel: "#tw-controls", title: "🚦 Taiwan transport", text: "Live flights at Taiwan's airports, freeway traffic and cameras, and train timetables." },
   { sel: "#audio-ui", title: "🎵 Music", text: "Pick the background music, or tap “🎵 RO” for the Ragnarok Online soundtrack." },
@@ -48,6 +48,8 @@ const HINTS_EN = {
   "thsr-toggle": "Pick two stations for high-speed rail times and seats.",
   "tra-toggle": "Pick two stations for Taiwan Railway times.",
   "ev-toggle": "Every EV charging station in Taiwan — search by place, filter by connector (Tesla, CCS2…), find the nearest ones and get directions.",
+  "aurora-toggle": "Green curtains around the poles are NOAA's live aurora forecast — brighter means a better chance. Only places in darkness can see it.",
+  "meteor-toggle": "The year's major meteor showers: peak dates, the best hours to watch from Taiwan and how much moonlight there is. Tap “Watch the shower” to see one beside the globe.",
 };
 
 const HINTS_ZH = {
@@ -71,6 +73,8 @@ const HINTS_ZH = {
   "thsr-toggle": "選出發站和抵達站,查高鐵時刻與剩餘座位。",
   "tra-toggle": "選出發站和抵達站,查台鐵時刻。",
   "ev-toggle": "全台電動車充電站:可以搜尋地名、依充電規格(特斯拉、CCS2…)篩選、找離你最近的,還能直接用 Google 地圖導航。",
+  "aurora-toggle": "南北極上空的綠色光簾是 NOAA 的即時極光預報,越亮機率越高;只有天黑的地方看得到。面板裡看世界各大極光景點現在的機會。",
+  "meteor-toggle": "一年主要的流星雨:極大期是哪天、台灣幾點最好看、月光干不干擾。按「在地球旁看流星雨」,流星會從輻射點噴出來。",
 };
 
 const STEPS_USE = () => (isEn ? STEPS_EN : STEPS);

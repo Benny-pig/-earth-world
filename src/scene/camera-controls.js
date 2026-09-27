@@ -96,5 +96,8 @@ export function createCameraRig({ camera, domElement, globeObject }) {
     controls.update();
   }
 
-  return { controls, flyTo, resetView, setMinDistance, setMaxDistance, fitRadius, update, MAX_DISTANCE };
+  // 取消進行中的飛行(電影巡航接手鏡頭時用)
+  const cancelTween = () => { tween = null; };
+
+  return { controls, flyTo, resetView, setMinDistance, setMaxDistance, fitRadius, cancelTween, update, MAX_DISTANCE };
 }

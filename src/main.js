@@ -39,6 +39,10 @@ import { createWeatherLayer } from "./scene/weather.js";
 import { createCompare } from "./ui/compare.js";
 import { createMoon } from "./scene/moon.js";
 import { createEvLayer } from "./scene/ev.js";
+import { createAurora } from "./scene/aurora.js";
+import { createMeteors } from "./scene/meteors.js";
+import { createCinema } from "./scene/cinema.js";
+import { createFavorites } from "./ui/favorites.js";
 import { createTour } from "./ui/tour.js";
 import { setupI18n } from "./lib/i18n.js";
 import { createShare } from "./ui/share.js";
@@ -174,7 +178,15 @@ export function start() {
         searchIndex.push({ code, zh: n.zh || code, en: n.en || "" });
       }
       searchIndex.sort((a, b) => a.zh.localeCompare(b.zh, "zh-Hant"));
-      window.__earth.countrySearch = createCountrySearch({ index: searchIndex, onPick: openCountryByCode });
+      window.__earth.countrySearch = createCountrySearch({
+        index: searchIndex, onPick: openCountryByCode, content, favorites,
+        onFav: (it) => goFavorite(it),
+        onCam: (id) => openCamById(id),
+        onGeo: (f) => {
+          rig.flyTo(f.lat, f.lon, { distance: 1.8, ms: 1200 });
+          setTimeout(() => naturePopup.show({ icon: "⛰️", zh: f.zh, en: f.en, note: f.note }, window.innerWidth / 2, window.innerHeight / 2 - 60), 1250);
+        },
+      });
     })
     .catch((err) => showError(err.message));
 
@@ -324,7 +336,7 @@ export function start() {
   let radioPanel = null;
   const radio = createRadioLayer({
     globeObject: globe.object, camera, renderer, music,
-    onChange: () => radioPanel && radioPanel.refresh(),
+    onChange: () => { if (radioPanel) radioPanel.refresh(); paintRadioFav(); },
     contentReady: dataReady,
   });
   window.__earth.radio = radio;
@@ -590,6 +602,7 @@ export function start() {
     onMore: (code) => encyclopedia.open(code),
     // 旅行護照在後面才建立,這裡用延遲取用
     visited: { has: (c) => passport.has(c), canStamp: (c) => passport.canStamp(c), toggle: (c) => passport.toggle(c) },
+    favStar: (code) => favorites.starButton("country", code, "sp-share"),
   });
   window.__earth.sidePanel = sidePanel;
 
@@ -656,14 +669,109 @@ export function start() {
   }
   if (flightSimToggle) flightSimToggle.addEventListener("click", () => setFlightSim(flightSimToggle.getAttribute("aria-pressed") !== "true"));
 
+  // ⭐ 我的收藏
+  const layerLabel = (b) => {
+    const c = b.cloneNode(true);
+    c.querySelectorAll(".layer-badge, .layer-icon, .layer-dot").forEach((x) => x.remove());
+    return c.textContent.replace(/\s+/g, " ").trim();
+  };
+  function describeView() {
+    const url = new URL(share.buildUrl());
+    const code = encyclopedia.code() || sidePanel.code();
+    const nameOf = (c) => window.__earth.countryLayer?.meshByCode.get(c)?.userData?.names?.zh || c;
+    let place;
+    if (code) place = nameOf(code);
+    else {
+      const d = camera.position.clone().normalize().applyQuaternion(globe.object.quaternion.clone().invert());
+      const lat = Math.asin(THREE.MathUtils.clamp(d.y, -1, 1)) * 180 / Math.PI, lon = Math.atan2(-d.z, d.x) * 180 / Math.PI;
+      const c = window.__earth.countryLayer?.codeAt(lat, lon);
+      place = c ? `${nameOf(c)}上空` : "海洋上空";
+    }
+    const on = [...document.querySelectorAll('#ctrl-dock .layer-row[aria-pressed="true"]')].filter((b) => b.id !== "quake-toggle").map(layerLabel).slice(0, 3);
+    return { qs: url.search.slice(1), name: place + (on.length ? ` · ${on.join("、")}` : "") };
+  }
+  function goFavorite(it) {
+    favorites.setOpen(false);
+    if (it.type === "country") openCountryByCode(it.key);
+    else if (it.type === "view") share.applyParams(new URLSearchParams(it.data || it.key));
+    else if (it.type === "cam") openCamById(it.key);
+    else if (it.type === "radio") radio.playFav(it.data);
+  }
+  const favorites = createFavorites({ onGo: goFavorite, describeView });
+  window.__earth.favorites = favorites;
+  favorites.provide("country", (code) => {
+    const n = window.__earth.countryLayer?.meshByCode.get(code)?.userData?.names;
+    return n ? { name: n.zh, icon: "🌍" } : null;
+  });
+  // 電台:底下「正在播放」旁邊的 ☆
+  function paintRadioFav() {
+    const radioFavBtn = document.getElementById("radio-fav");
+    const cur = radio?.current?.();
+    if (!radioFavBtn || !window.__earth.favorites) return;
+    const on = !!(cur && window.__earth.favorites.has("radio", cur.uuid));
+    radioFavBtn.textContent = on ? "★" : "☆";
+    radioFavBtn.title = on ? "已收藏這個電台,再按一下取消" : "把這個電台加入我的收藏";
+  }
+  document.getElementById("radio-fav")?.addEventListener("click", () => {
+    const cur = radio.current();
+    if (!cur) return;
+    favorites.toggle("radio", cur.uuid, { name: cur.name || "電台", icon: "📻", data: { code: cur.code, uuid: cur.uuid, name: cur.name, url: cur.url } });
+    paintRadioFav();
+  });
+  favorites.onChange(paintRadioFav);
+
   // 📺 世界即時景點直播
   const liveCamToggle = document.getElementById("livecam-toggle");
-  const liveCams = createLiveCams({ globeObject: globe.object, camera, renderer, rig, onClose: () => setLiveCams(false) });
+  const liveCams = createLiveCams({ globeObject: globe.object, camera, renderer, rig, favorites, onClose: () => setLiveCams(false) });
   function setLiveCams(on) {
     if (liveCamToggle) liveCamToggle.setAttribute("aria-pressed", String(on));
     liveCams.setEnabled(on);
   }
   if (liveCamToggle) liveCamToggle.addEventListener("click", () => setLiveCams(liveCamToggle.getAttribute("aria-pressed") !== "true"));
+  function openCamById(id) {
+    if (!liveCams.isEnabled()) setLiveCams(true);
+    liveCams.playId(id);
+  }
+
+  // 🌌 極光即時預報(NOAA)
+  const auroraToggle = document.getElementById("aurora-toggle");
+  const aurora = createAurora({ globe, rig, onClose: () => setAurora(false) });
+  window.__earth.aurora = aurora;
+  function setAurora(on) {
+    if (auroraToggle) auroraToggle.setAttribute("aria-pressed", String(on));
+    aurora.setEnabled(on);
+  }
+  if (auroraToggle) auroraToggle.addEventListener("click", () => setAurora(auroraToggle.getAttribute("aria-pressed") !== "true"));
+
+  // 🌠 流星(平常偶爾一顆)+ 流星雨面板
+  const meteorToggle = document.getElementById("meteor-toggle");
+  const meteors = createMeteors({ scene, camera, renderer, globeObject: globe.object, rig, onClose: () => setMeteors(false) });
+  window.__earth.meteors = meteors;
+  function setMeteors(on) {
+    if (meteorToggle) meteorToggle.setAttribute("aria-pressed", String(on));
+    meteors.setEnabled(on);
+  }
+  if (meteorToggle) meteorToggle.addEventListener("click", () => setMeteors(meteorToggle.getAttribute("aria-pressed") !== "true"));
+
+  // 🎬 電影巡航:選單按下立刻開始;放著不動 90 秒、而且沒有開著其他功能時自動開始
+  const AMBIENT = new Set(["quake-toggle", "sun-toggle", "aurora-toggle"]);
+  const cinema = createCinema({
+    camera, rig, globeObject: globe.object,
+    canAutoStart: () => !document.body.classList.contains("intro-playing") && !(intro && intro.isActive()) && !tour.isActive() &&
+      !sidePanel.isOpen() && !encyclopedia.isOpen() && !favorites.isOpen() && !flightSim.isEnabled?.() &&
+      !/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName || "") &&
+      ![...document.querySelectorAll('#ctrl-dock .layer-row[aria-pressed="true"]')].some((b) => !AMBIENT.has(b.id)),
+    // 巡航時國界線也先藏起來,畫面像紀錄片一樣乾淨
+    onStart: () => { tooltip.hide(); globe.setSpinPaused(true); clouds.setSpinPaused(false); if (window.__earth.borders) window.__earth.borders.visible = false; },
+    onStop: () => {
+      if (window.__earth.borders) window.__earth.borders.visible = true;
+      const keep = traffic.isEnabled() || ev.isEnabled() || sidePanel.isOpen();
+      globe.setSpinPaused(keep);
+      clouds.setSpinPaused(keep);
+    },
+  });
+  window.__earth.cinema = cinema;
+  document.getElementById("cinema-toggle")?.addEventListener("click", () => cinema.start());
 
 
   function openCountryByCode(code) {
@@ -800,6 +908,7 @@ export function start() {
     watchFps(performance.now());
     fpsMeter(performance.now());
     starfield.update(clock.getElapsedTime());
+    if (cinema.isActive()) globe.setSpinPaused(true);   // 巡航時地球停住,鏡頭照地名飛
     globe.update(dt);
     clouds.update(dt);
 
@@ -821,11 +930,14 @@ export function start() {
       clouds.setSpinPaused(true);
       if (resumeTimer) { clearTimeout(resumeTimer); resumeTimer = null; }
     } else if (!resumeTimer && !(window.__earth.countryLayer && window.__earth.countryLayer.hasSelection && window.__earth.countryLayer.hasSelection()) &&
-      !window.__earth.traffic?.isEnabled() && !window.__earth.ev?.isEnabled()) {
+      !window.__earth.traffic?.isEnabled() && !window.__earth.ev?.isEnabled() && !cinema.isActive()) {
       resumeTimer = setTimeout(() => { globe.setSpinPaused(false); clouds.setSpinPaused(false); resumeTimer = null; }, 1500);
     }
+    cinema.update(dt);
     rig.update(dt);
     flightSim.update(dt);
+    aurora.update(clock.elapsedTime, dt);
+    meteors.update(dt);
     if (intro) intro.update(dt);
 
     oceanLabels.update();

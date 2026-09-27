@@ -3,6 +3,7 @@ import { esc } from "../lib/esc.js";
 import { latLonToXYZ } from "../lib/geo.js";
 import { makeDraggable } from "../ui/draggable.js";
 import { canvasRect } from "../lib/view-rect.js";
+import { placeLabel, hideLabel } from "../lib/label-style.js";
 
 // 📺 世界即時景點直播地圖:地球上標出世界各地 24 小時直播的景點攝影機(澀谷十字路口、
 // 威尼斯大運河、納米比亞沙漠水坑、夏威夷火山…),點一下就在面板裡播放 YouTube 直播,
@@ -21,7 +22,7 @@ function localTime(tz) {
 const dayIcon = (t) => (t.dusk ? "🌅" : t.day ? "☀️" : "🌙");
 const flagImg = (cc) => (/^[A-Z]{2}$/.test(cc) && cc !== "AQ" ? `<img class="lc-flag" src="https://flagcdn.com/w20/${cc.toLowerCase()}.png" alt="">` : "");
 
-export function createLiveCams({ globeObject, camera, renderer, rig, onClose }) {
+export function createLiveCams({ globeObject, camera, renderer, rig, favorites, onClose }) {
   const panel = document.getElementById("livecam-panel");
   const host = document.getElementById("livecam-labels");
   const player = document.getElementById("livecam-player");
@@ -33,8 +34,9 @@ export function createLiveCams({ globeObject, camera, renderer, rig, onClose }) 
   let enabled = false, cams = [], regions = {}, current = null, tourTimer = null, clockTimer = null, built = null;
   const $ = (id) => document.getElementById(id);
 
-  async function load() {
-    if (cams.length) return;
+  let loading = null;
+  function load() { return (loading ||= loadOnce().catch((e) => { loading = null; throw e; })); }
+  async function loadOnce() {
     const [d, r] = await Promise.all([
       fetch("data/livecams.json").then((x) => x.json()),
       fetch("data/country-regions.json").then((x) => (x.ok ? x.json() : {})).catch(() => ({})),
@@ -65,7 +67,7 @@ export function createLiveCams({ globeObject, camera, renderer, rig, onClose }) 
     current = c;
     const t = localTime(c.tz);
     player.innerHTML =
-      `<div class="lc-now"><span class="lc-live-dot"></span><b>${esc(c.ico)} ${esc(c.zh)}</b><span class="lc-time">${dayIcon(t)} 當地 ${t.text}</span></div>` +
+      `<div class="lc-now"><span class="lc-live-dot"></span><b>${esc(c.ico)} ${esc(c.zh)}</b><span class="lc-time">${dayIcon(t)} 當地 ${t.text}</span>${favorites ? favorites.starButton("cam", c.id, "lc-fav") : ""}</div>` +
       `<div class="lc-frame"><iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(c.v)}?autoplay=1&mute=1&playsinline=1&rel=0" title="${esc(c.zh)} 即時直播" ` +
       `allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>` +
       `<div class="lc-meta">${esc(c.t)}<br><span>頻道:${esc(c.ch)}</span> · <a href="https://www.youtube.com/watch?v=${encodeURIComponent(c.v)}" target="_blank" rel="noopener">在 YouTube 開啟 ↗</a></div>`;
@@ -123,10 +125,9 @@ export function createLiveCams({ globeObject, camera, renderer, rig, onClose }) 
       camTo.copy(camera.position).sub(wp).normalize();
       const facing = nrm.dot(camTo);
       ndc.copy(wp).project(camera);
-      if (facing < 0.05 || ndc.z > 1) { p.el.style.opacity = "0"; p.el.style.transform = "translate(-9999px,-9999px)"; continue; }
+      if (facing < 0.05 || ndc.z > 1) { hideLabel(p.el); continue; }
       const x = rect.left + (ndc.x * 0.5 + 0.5) * rect.width, y = rect.top + (-ndc.y * 0.5 + 0.5) * rect.height;
-      p.el.style.opacity = THREE.MathUtils.clamp((facing - 0.05) / 0.2, 0, 1).toFixed(2);
-      p.el.style.transform = `translate(${Math.round(x)}px, ${Math.round(y)}px)`;
+      placeLabel(p.el, x, y, THREE.MathUtils.clamp((facing - 0.05) / 0.2, 0, 1).toFixed(2));
     }
   }
 
@@ -149,5 +150,13 @@ export function createLiveCams({ globeObject, camera, renderer, rig, onClose }) 
     clockTimer = setInterval(() => { if (enabled) { renderList(); const el = player.querySelector(".lc-time"); if (el && current) { const t = localTime(current.tz); el.textContent = `${dayIcon(t)} 當地 ${t.text}`; } } }, 30000);
   }
 
-  return { setEnabled, isEnabled: () => enabled, update };
+  // 從收藏或搜尋直接看某一個直播(面板要先打開)
+  async function playId(id) {
+    try { await load(); } catch { return; }
+    const c = cams.find((x) => x.id === id);
+    if (c && enabled) { stopTour(); play(c); }
+  }
+  favorites?.provide("cam", (id) => { const c = cams.find((x) => x.id === id); return c ? { name: c.zh, icon: c.ico || "📺" } : null; });
+
+  return { setEnabled, isEnabled: () => enabled, update, playId };
 }

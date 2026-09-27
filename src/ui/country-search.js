@@ -1,7 +1,55 @@
-// 國家搜尋欄:中英名 / ISO 代碼皆可,方向鍵 + Enter 或點選即跳到該國。
-const MAX_RESULTS = 8;
+import { esc } from "../lib/esc.js";
+import { isEn } from "../lib/i18n.js";
 
-export function createCountrySearch({ index, onPick }) {
+// 🔍 萬用搜尋:國家、首都城市、功能(打「地震」「充電站」「高鐵」直接打開)、景點直播、
+// 山脈河流等地理、我的收藏,全部在同一個框搜尋。方向鍵 + Enter 或點選;Ctrl+K 或 / 快速叫出。
+const MAX_RESULTS = 14;
+const KIND = {
+  fav: ["收藏", "Saved"], feature: ["功能", "Feature"], country: ["國家", "Country"], capital: ["首都", "Capital"],
+  cam: ["直播", "Live cam"], geo: ["地理", "Nature"],
+};
+const KIND_ORDER = { fav: 0, feature: 1, country: 2, capital: 3, cam: 4, geo: 5 };
+
+// 功能的別名:讀者不一定知道選單上的名稱
+const SYNONYMS = {
+  "weather-toggle": "天氣 氣溫 溫度 下雨 降雨 冷 熱 weather rain temperature",
+  "quake-toggle": "地震 震度 earthquake quake",
+  "satellite-toggle": "颱風 雲圖 颶風 衛星雲圖 typhoon hurricane cloud",
+  "flight-toggle": "飛機 航班 飛航 班機 flight plane",
+  "livecam-toggle": "直播 攝影機 鏡頭 即時影像 webcam live cam",
+  "moon-toggle": "月亮 月相 滿月 月球 moon",
+  "orbit-toggle": "衛星 太空站 ISS 星鏈 satellite station",
+  "launch-toggle": "火箭 發射 SpaceX 太空 rocket launch",
+  "sun-toggle": "晨昏 白天 黑夜 日夜 太陽 day night sun",
+  "quiz-toggle": "猜謎 遊戲 測驗 考試 quiz game",
+  "passport-toggle": "護照 集章 蓋章 去過 passport",
+  "flightsim-toggle": "模擬 飛行 旅程 flight simulator",
+  "compare-toggle": "比較 對比 compare",
+  "otd-toggle": "歷史 今天 history",
+  "radio-toggle": "電台 廣播 收音機 radio",
+  "airport-toggle": "機場 航班 桃園 松山 小港 airport",
+  "traffic-toggle": "路況 塞車 國道 高速公路 監視器 CCTV 交通 traffic",
+  "thsr-toggle": "高鐵 時刻表 THSR high speed rail",
+  "tra-toggle": "台鐵 臺鐵 火車 時刻表 train railway",
+  "ev-toggle": "充電 充電站 充電樁 電動車 特斯拉 EV charger",
+  "aurora-toggle": "極光 北極光 南極光 aurora",
+  "meteor-toggle": "流星 流星雨 英仙座 雙子座 獅子座 meteor",
+  "cinema-toggle": "電影 巡航 螢幕保護 自動播放 cinema",
+  "fav-btn": "收藏 最愛 書籤 我的 favorite bookmark",
+  "tour-btn": "導覽 教學 說明 怎麼用 help tour",
+  "theme-toggle": "主題 版面 風格 theme",
+  "share-btn": "分享 連結 share link",
+};
+const ICONS = {
+  "weather-toggle": "🌡️", "quake-toggle": "📳", "satellite-toggle": "🌀", "flight-toggle": "✈️", "livecam-toggle": "📺", "moon-toggle": "🌙",
+  "orbit-toggle": "🛰️", "launch-toggle": "🚀", "sun-toggle": "🌗", "quiz-toggle": "🎯", "passport-toggle": "🛂", "flightsim-toggle": "🛫",
+  "compare-toggle": "⚖️", "otd-toggle": "📜", "radio-toggle": "📻", "aurora-toggle": "🌌", "meteor-toggle": "🌠", "cinema-toggle": "🎬",
+  "fav-btn": "⭐", "tour-btn": "❓", "theme-toggle": "🎨", "share-btn": "🔗",
+};
+const GEO_ICONS = { mountain: "⛰️", peak: "🏔️", river: "🌊", desert: "🏜️", plateau: "🗻", plain: "🌾", lake: "💧", other: "📍" };
+const HOT = ["quake-toggle", "weather-toggle", "livecam-toggle", "aurora-toggle", "meteor-toggle", "traffic-toggle", "cinema-toggle"];
+
+export function createCountrySearch({ index, onPick, content = {}, favorites = null, onFav, onCam, onGeo }) {
   const box = document.getElementById("country-search");
   if (!box || !Array.isArray(index) || !index.length) return { destroy() {} };
   const input = box.querySelector("input");
@@ -12,65 +60,135 @@ export function createCountrySearch({ index, onPick }) {
   const norm = (s) => String(s || "").toLowerCase().trim();
   // 「台」「臺」是同一個字的異體(臺灣/台灣都通用),中文比對前先統一成同一個字,
   // 不然打「台灣」搜不到條目裡登記的「臺灣」。
-  const normZh = (s) => String(s || "").trim().replace(/臺/g, "台");
+  const normZh = (s) => String(s || "").trim().replace(/臺/g, "台").toLowerCase();
+  const nameOf = (code) => index.find((x) => x.code === code)?.zh || code;
+
+  // ---------- 搜尋來源 ----------
+  const countries = index.map((it) => ({ kind: "country", zh: it.zh, en: it.en, code: it.code, go: () => onPick(it.code) }));
+  const capitals = [];
+  for (const [code, c] of Object.entries(content || {})) {
+    if (c && c.capital_zh && Array.isArray(c.capital_latlon)) {
+      capitals.push({ kind: "capital", zh: c.capital_zh, en: c.capital_en || "", sub: `${nameOf(code)}的首都`, code, go: () => onPick(code) });
+    }
+  }
+  function features() {
+    const out = [];
+    const ids = [...document.querySelectorAll("#ctrl-dock .layer-row[id], #top-tools button[id]")].filter((b) => !b.hidden);
+    for (const b of ids) {
+      if (!SYNONYMS[b.id]) continue;
+      const clone = b.cloneNode(true);
+      clone.querySelectorAll(".layer-badge, .layer-icon, .layer-dot").forEach((x) => x.remove());
+      const label = clone.textContent.replace(/\s+/g, " ").trim();
+      const icon = b.querySelector(".layer-icon")?.textContent.trim() || ICONS[b.id] || "";
+      out.push({
+        kind: "feature", zh: label, en: "", keys: SYNONYMS[b.id], icon, id: b.id,
+        go: () => {
+          // 功能選單收合著也照樣打開;已經開著的不要再按(會變成關掉)
+          if (b.getAttribute("aria-pressed") !== "true") b.click();
+          else b.animate?.([{ background: "rgba(120,170,255,.35)" }, { background: "transparent" }], { duration: 900 });
+        },
+      });
+    }
+    return out;
+  }
+  let cams = [], geo = [], extrasLoaded = false;
+  function loadExtras() {
+    if (extrasLoaded) return;
+    extrasLoaded = true;
+    fetch("data/livecams.json").then((r) => (r.ok ? r.json() : null)).then((d) => {
+      cams = (d?.cams || []).map((c) => ({ kind: "cam", zh: c.zh, en: "", keys: c.t, icon: c.ico || "📺", go: () => onCam && onCam(c.id) }));
+      if (document.activeElement === input && input.value.trim()) refresh();
+    }).catch(() => {});
+    fetch("data/physical.json").then((r) => (r.ok ? r.json() : null)).then((d) => {
+      geo = (d?.features || []).map((f) => ({ kind: "geo", zh: f.zh, en: f.en, sub: f.note, icon: GEO_ICONS[f.k] || "📍", go: () => onGeo && onGeo(f) }));
+      if (document.activeElement === input && input.value.trim()) refresh();
+    }).catch(() => {});
+  }
+  const favItems = () => (favorites ? favorites.list().map((x) => ({ kind: "fav", zh: x.name, en: "", icon: x.icon || "⭐", go: () => onFav && onFav(x) })) : []);
 
   function search(q) {
-    const n = norm(q);
-    const nzh = normZh(q);
+    const n = normZh(q);
     if (!n) return [];
-    const starts = [], contains = [];
-    for (const it of index) {
-      const zh = normZh(it.zh), en = norm(it.en), code = norm(it.code);
-      if (zh.startsWith(nzh) || en.startsWith(n) || code === n) starts.push(it);
-      else if (zh.includes(nzh) || en.includes(n)) contains.push(it);
-      if (starts.length >= MAX_RESULTS) break;
+    const scored = [];
+    for (const it of [...favItems(), ...features(), ...countries, ...capitals, ...cams, ...geo]) {
+      const zh = normZh(it.zh), en = norm(it.en), keys = normZh(it.keys);
+      let s = -1;
+      if (zh === n || en === n || norm(it.code) === n) s = 0;
+      else if (zh.startsWith(n) || en.startsWith(n)) s = 1;
+      else if (zh.includes(n) || en.includes(n)) s = 2;
+      else if (keys && keys.split(/\s+/).some((k) => k && (k.startsWith(n) || (n.length >= 2 && k.includes(n))))) s = 2;
+      else if (n.length >= 2 && keys && keys.includes(n)) s = 3;
+      if (s >= 0) scored.push([s, KIND_ORDER[it.kind], it]);
     }
-    return starts.concat(contains).slice(0, MAX_RESULTS);
+    scored.sort((a, b) => a[0] - b[0] || a[1] - b[1]);
+    return scored.slice(0, MAX_RESULTS).map((x) => x[2]);
   }
 
+  // 還沒打字:收藏 + 熱門功能 + 全部國家(A–Z)
+  function browse() {
+    const f = features();
+    const hot = HOT.map((id) => f.find((x) => x.id === id)).filter(Boolean);
+    const all = [...countries].sort((a, b) => String(a.en || "").localeCompare(String(b.en || "")));
+    return [...favItems().slice(0, 6), ...hot, ...all];
+  }
+
+  const tag = (k) => `<span class="cs-kind cs-k-${k}">${KIND[k][isEn ? 1 : 0]}</span>`;
   function render() {
-    if (!matches.length) { list.hidden = true; list.innerHTML = ""; return; }
-    // 國旗圖示用跟大百科/側欄同一個免費 CDN(flagcdn.com),小尺寸(w40)給列表用;
-    // 找不到旗子的代碼(例如非國家的特殊條目)載入失敗就直接隱藏,不留破圖示。
-    list.innerHTML = matches.map((m, i) =>
-      `<li data-code="${m.code}" class="${i === active ? "active" : ""}">` +
-      `<img class="cs-flag" src="https://flagcdn.com/w40/${String(m.code || "").toLowerCase()}.png" alt="" onerror="this.style.visibility='hidden'">` +
-      `<span class="cs-zh">${m.zh}</span><span class="cs-en">${m.en || m.code}</span></li>`
-    ).join("");
+    if (!matches.length) {
+      if (input.value.trim()) { list.innerHTML = `<li class="cs-none">找不到「${esc(input.value.trim())}」,換個關鍵字試試(國家、城市、功能、景點)</li>`; list.hidden = false; }
+      else { list.hidden = true; list.innerHTML = ""; }
+      return;
+    }
+    // 國旗用跟大百科/側欄同一個免費 CDN(flagcdn.com);找不到旗子的代碼就把圖藏起來,不留破圖示
+    list.innerHTML = matches.map((m, i) => {
+      const lead = m.kind === "country" || m.kind === "capital"
+        ? `<img class="cs-flag" src="https://flagcdn.com/w40/${String(m.code || "").toLowerCase()}.png" alt="" onerror="this.style.visibility='hidden'">`
+        : `<span class="cs-ico">${esc(m.icon || (m.kind === "geo" ? "⛰️" : "🎛️"))}</span>`;
+      const sub = m.sub ? `<span class="cs-sub">${esc(m.sub)}</span>` : m.en ? `<span class="cs-en">${esc(m.en)}</span>` : "";
+      return `<li data-i="${i}" class="${i === active ? "active" : ""}">${lead}<span class="cs-txt"><span class="cs-zh">${esc(m.zh)}</span>${sub}</span>${tag(m.kind)}</li>`;
+    }).join("");
     list.hidden = false;
+    list.querySelector("li.active")?.scrollIntoView({ block: "nearest" });
   }
+  function refresh() { matches = search(input.value); active = matches.length ? 0 : -1; render(); }
 
-  function choose(code) {
-    if (!code) return;
+  function choose(m) {
+    if (!m) return;
     input.value = "";
     matches = []; active = -1; render();
     input.blur();
-    onPick(code);
+    m.go();
   }
 
-  input.addEventListener("input", () => { matches = search(input.value); active = matches.length ? 0 : -1; render(); });
-  // 點進欄位、還沒打字之前,先列出全部國家(依中文名排序)方便使用者用瀏覽的
-  // 而不是一定要知道打什麼關鍵字才找得到。
+  input.addEventListener("input", refresh);
   input.addEventListener("focus", () => {
+    loadExtras();
     if (input.value.trim()) return;
-    // 中文用 localeCompare 排出來是筆畫順序,不是一般人習慣的拼音順序,反而
-    // 更難瀏覽——改用英文國名的字母順序,對中文為主的使用者來說仍然是可預期
-    // 的排序邏輯(跟很多手機聯絡人/國碼選單一樣用 A-Z),不用額外做拼音轉換。
-    matches = [...index].sort((a, b) => String(a.en || "").localeCompare(String(b.en || "")));
+    matches = browse();
     active = -1;
     render();
   });
   input.addEventListener("keydown", (e) => {
     if (e.key === "ArrowDown") { e.preventDefault(); active = Math.min(active + 1, matches.length - 1); render(); }
     else if (e.key === "ArrowUp") { e.preventDefault(); active = Math.max(active - 1, 0); render(); }
-    else if (e.key === "Enter") { e.preventDefault(); if (matches[active]) choose(matches[active].code); }
+    else if (e.key === "Enter") { e.preventDefault(); choose(matches[Math.max(0, active)]); }
     else if (e.key === "Escape") { input.value = ""; matches = []; render(); input.blur(); }
   });
   list.addEventListener("mousedown", (e) => {
-    const li = e.target.closest("li[data-code]");
-    if (li) { e.preventDefault(); choose(li.dataset.code); }
+    const li = e.target.closest("li[data-i]");
+    if (li) { e.preventDefault(); choose(matches[Number(li.dataset.i)]); }
   });
   input.addEventListener("blur", () => { setTimeout(() => { matches = []; render(); }, 120); });
 
-  return { destroy() { box.remove(); } };
+  // Ctrl+K / ⌘K / 「/」:從任何地方叫出搜尋(正在打字的欄位裡不攔截「/」)
+  window.addEventListener("keydown", (e) => {
+    const typing = /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName || "") || document.activeElement?.isContentEditable;
+    if (((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") || (e.key === "/" && !typing)) {
+      e.preventDefault();
+      input.focus();
+      input.select();
+    }
+  });
+
+  return { destroy() { box.remove(); }, focus: () => input.focus() };
 }

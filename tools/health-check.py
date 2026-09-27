@@ -114,6 +114,13 @@ def _():
     return ("ok", "正常") if isinstance(arr, list) and len(arr) == 2 else ("fail", f"HTTP {s}")
 
 
+@check("極光預報(NOAA SWPC)")
+def _():
+    s, b = get("https://services.swpc.noaa.gov/json/ovation_aurora_latest.json", timeout=45)
+    n = len(json.loads(b).get("coordinates", [])) if s == 200 else 0
+    return ("ok", f"{n} 個格點") if n > 60000 else ("fail", f"HTTP {s},格點 {n}")
+
+
 @check("太空發射(Launch Library 2)")
 def _():
     s, b = get("https://ll.thespacedevs.com/2.3.0/launches/upcoming/?limit=3&mode=list")

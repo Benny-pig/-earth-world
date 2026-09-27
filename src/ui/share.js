@@ -9,7 +9,7 @@ import * as THREE from "three";
 // 不需要帳號、不存任何個人資料,資訊都在網址本身。
 const LAYERS = {
   radio: "radio-toggle", typhoon: "satellite-toggle", flights: "flight-toggle", orbit: "orbit-toggle", launch: "launch-toggle", sun: "sun-toggle", otd: "otd-toggle", quiz: "quiz-toggle", passport: "passport-toggle", fly: "flightsim-toggle", cams: "livecam-toggle", weather: "weather-toggle", compare: "compare-toggle", moon: "moon-toggle", ev: "ev-toggle",
-  airport: "airport-toggle", traffic: "traffic-toggle",
+  airport: "airport-toggle", traffic: "traffic-toggle", aurora: "aurora-toggle", meteor: "meteor-toggle",
 };
 const DEFAULT_ON = new Set(["quake"]);
 const pressed = (id) => document.getElementById(id)?.getAttribute("aria-pressed") === "true";
@@ -83,9 +83,15 @@ export function createShare({ camera, globeObject, rig, sidePanel, encyclopedia,
 
   // 開網站時:照網址參數還原畫面,還原完把參數從網址列拿掉(之後讀者自己操作,
   // 網址列才不會一直停在舊的狀態;要分享新的畫面再按一次分享鈕)
-  async function applyFromUrl() {
+  function applyFromUrl() {
     const p = new URLSearchParams(location.search);
     if (![...p.keys()].length) return;
+    applyParams(p);
+    history.replaceState(null, "", location.pathname);
+  }
+
+  // 照參數還原畫面(開分享連結、點「我的收藏」裡的畫面共用)
+  function applyParams(p) {
     const click = (id, want) => { const b = document.getElementById(id); if (b && pressed(id) !== want) b.click(); };
     if ((p.get("off") || "").split(",").includes("quake")) click("quake-toggle", false);
     for (const k of (p.get("on") || "").split(",")) if (LAYERS[k]) click(LAYERS[k], true);
@@ -103,8 +109,7 @@ export function createShare({ camera, globeObject, rig, sidePanel, encyclopedia,
       const v = (p.get("v") || "").split(",").map(Number);
       if (v.length === 3 && v.every(Number.isFinite)) rig.flyTo(v[0], v[1], { distance: Math.min(6, Math.max(1.35, v[2])), ms: 1200 });
     }
-    history.replaceState(null, "", location.pathname);
   }
 
-  return { buildUrl, share, applyFromUrl };
+  return { buildUrl, share, applyFromUrl, applyParams };
 }

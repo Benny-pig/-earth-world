@@ -18,6 +18,18 @@ const DICT = {
   "重看新手導覽": "Replay the tour", "新手導覽": "Tour",
   // 搜尋
   "搜尋國家(中 / English)": "Search countries (English / 中文)", "搜尋國家": "Search countries",
+  "🔍 搜尋國家、城市、功能、景點…": "🔍 Search countries, cities, features, places…", "搜尋國家、城市、功能、景點": "Search countries, cities, features, places",
+  "快速鍵:Ctrl+K 或 /": "Shortcut: Ctrl+K or /",
+  // 收藏、極光、流星雨、電影巡航
+  "⭐ 收藏": "⭐ Saved", "我的收藏": "Saved", "⭐ 我的收藏": "⭐ Saved", "＋ 收藏目前畫面": "＋ Save this view", "☆ 收藏": "☆ Save", "★ 已收藏": "★ Saved",
+  "加入我的收藏": "Save", "收藏這個電台": "Save this station", "把這個電台加入我的收藏": "Save this station",
+  "國家介紹、景點直播、廣播電台旁邊按「☆ 收藏」也會記在這裡": "Tap “☆ Save” on a country, live cam or radio station to keep it here",
+  "📌 畫面": "📌 Views", "🌍 國家": "🌍 Countries", "📺 景點直播": "📺 Live cams", "📻 廣播電台": "📻 Radio",
+  "收藏只存在這台裝置的瀏覽器裡,不會上傳;清除瀏覽器資料會一起清掉。": "Saved items stay in this browser only — nothing is uploaded. Clearing browser data removes them.",
+  "極光即時預報": "Aurora forecast", "🌌 極光即時預報": "🌌 Aurora forecast", "📍 熱門極光地點 · 現在": "📍 Aurora spots · now",
+  "流星雨": "Meteor showers", "🌠 流星雨": "🌠 Meteor showers", "▶ 在地球旁看流星雨": "▶ Watch the shower", "⏹ 停止流星雨": "⏹ Stop the shower", "📅 接下來一年": "📅 Next 12 months",
+  "電影巡航": "Cinematic tour", "點任何地方結束": "Tap anywhere to exit", "不要在閒置時自動播放": "Don't auto-play when idle", "閒置時自動播放:已關閉": "Auto-play when idle: off",
+  "介面淡出,鏡頭像紀錄片一樣飛過世界各地(點任何地方結束)": "The interface fades away and the camera glides around the world like a documentary (tap anywhere to exit)",
   // 右下選單
   "台灣交通": "Taiwan transport", "機場航班": "Airport flights", "即時路況": "Live traffic", "高鐵時刻": "High-speed rail", "台鐵時刻": "TRA trains",
   "功能": "Features", "🌍 即時世界": "🌍 Live world", "🚀 太空與天象": "🚀 Space & sky", "🧭 探索與遊戲": "🧭 Explore & play", "🎵 聲音": "🎵 Sound",

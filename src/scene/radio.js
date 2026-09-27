@@ -139,10 +139,16 @@ export function createRadioLayer({ globeObject, camera, renderer, music, onChang
     if (hls) { hls.destroy(); hls = null; }
   }
 
-  function setNowPlaying(code, activeUuid) {
+  function setNowPlaying(code, activeUuid, activeName) {
     if (!nowPlayingEl || !stationSelect) return;
     const list = code && byCountry.get(code);
-    if (list && list.length) {
+    // 從收藏直接播的台:地球上的電台圖層可能沒開,選單裡只放這一台,讓讀者看得到、關得掉
+    if ((!list || !list.some(({ s }) => s.stationuuid === activeUuid)) && activeUuid && activeName) {
+      if (countryNameEl) countryNameEl.textContent = zhHantName(code) || code || "";
+      stationSelect.innerHTML = `<option value="${esc(activeUuid)}" selected>${esc(activeName)}</option>`;
+      nowPlayingEl.hidden = false;
+      if (trackSelect) trackSelect.hidden = true;
+    } else if (list && list.length) {
       if (countryNameEl) countryNameEl.textContent = zhHantName(code) || code || "";
       stationSelect.innerHTML = list.map(({ s }) =>
         `<option value="${esc(s.stationuuid)}"${s.stationuuid === activeUuid ? " selected" : ""}>${esc((s.name || "").trim() || "未知電台")}</option>`
@@ -200,9 +206,9 @@ export function createRadioLayer({ globeObject, camera, renderer, music, onChang
     audio.volume = music?.getVolume ? music.getVolume() : 0.55;
     audio.play().catch((e) => console.warn("[radio] 播放失敗(電台可能離線):", e.name));
     activeWrap = wrap || null;
-    activeStationInfo = { code, uuid: station.stationuuid };
+    activeStationInfo = { code, uuid: station.stationuuid, name: (station.name || "").trim() || "未知電台", url };
     if (wrap) wrap.classList.add("radio-active");
-    setNowPlaying(code, station.stationuuid);
+    setNowPlaying(code, station.stationuuid, activeStationInfo.name);
     onChange && onChange(activeStationInfo);
   }
   if (stationSelect) stationSelect.addEventListener("change", () => {
@@ -383,6 +389,12 @@ export function createRadioLayer({ globeObject, camera, renderer, music, onChang
   return {
     update, dispose, setEnabled, isEnabled: () => enabled,
     ready: fetchStations, loadMore, stationsOf, countryCounts, playStation,
+    // 從收藏播放:{ code, uuid, name, url }(已經在播就不要再按一次變成停止)
+    playFav(f) {
+      if (!f || !f.url || activeStationInfo?.uuid === f.uuid) return;
+      const hit = byCountry.get(f.code)?.find(({ s }) => s.stationuuid === f.uuid);
+      if (hit) play(hit.s, hit.wrap, f.code); else play({ stationuuid: f.uuid, name: f.name, url_resolved: f.url }, null, f.code);
+    },
     current: () => activeStationInfo,
     isPlaying: () => !audio.paused && !!audio.src,
     setVolume: (v) => { audio.volume = v; },
