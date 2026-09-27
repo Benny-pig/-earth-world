@@ -397,6 +397,34 @@
   .intro-ripple i:nth-child(2) { animation-delay: .45s; }
   .intro-ripple i:nth-child(3) { animation-delay: .9s; }
   @keyframes intro-ripple { 0% { transform: scale(.4); opacity: 1; } 100% { transform: scale(5.5); opacity: 0; } }
+  /* 👋 新手導覽:其他地方變暗、只亮出介紹的那一塊;功能第一次打開的一句話說明 */
+  #tour { position: fixed; inset: 0; z-index: 80; }
+  #tour[hidden] { display: none; }
+  #tour.center { background: rgba(3,6,14,.72); }
+  .tour-spot { position: fixed; border-radius: 12px; pointer-events: none; transition: all .3s ease;
+    box-shadow: 0 0 0 9999px rgba(3,6,14,.72), 0 0 0 2px rgba(255,201,77,.95), 0 0 24px rgba(255,201,77,.5); }
+  .tour-card { position: fixed; z-index: 1; padding: 14px 16px 12px; border-radius: 14px; background: rgba(12,18,34,.97);
+    border: 1px solid rgba(255,201,77,.6); color: #eef3ff; box-shadow: 0 12px 36px rgba(0,0,0,.55);
+    font: 14px/1.65 system-ui, "Microsoft JhengHei", sans-serif; box-sizing: border-box; transition: left .3s ease, top .3s ease; }
+  .tour-step { font-size: 11.5px; opacity: .6; }
+  .tour-title { font-size: 16px; font-weight: 800; color: #ffd98a; margin: 2px 0 4px; }
+  .tour-text b { color: #fff; }
+  .tour-btns { display: flex; justify-content: flex-end; gap: 6px; margin-top: 10px; }
+  .tour-btns button { padding: 6px 12px; border-radius: 8px; cursor: pointer; border: 1px solid rgba(255,255,255,.25); background: rgba(255,255,255,.06);
+    color: inherit; font: 600 13px system-ui, "Microsoft JhengHei", sans-serif; }
+  .tour-btns .tour-skip { margin-right: auto; opacity: .7; }
+  .tour-btns .tour-next { background: rgba(255,201,77,.22); border-color: rgba(255,201,77,.8); color: #fff4d6; }
+  #feature-hint { position: fixed; left: 50%; bottom: 96px; z-index: 61; width: min(420px, calc(100vw - 24px)); box-sizing: border-box;
+    transform: translateX(-50%) translateY(12px); opacity: 0; pointer-events: none; transition: opacity .25s, transform .25s;
+    display: flex; flex-direction: column; gap: 3px; padding: 11px 14px; border-radius: 13px; cursor: pointer;
+    background: rgba(12,18,34,.96); border: 1px solid rgba(255,201,77,.55); color: #eef3ff; box-shadow: 0 10px 30px rgba(0,0,0,.5);
+    font: 13.5px/1.6 system-ui, "Microsoft JhengHei", sans-serif; }
+  #feature-hint.show { opacity: 1; transform: translateX(-50%); pointer-events: auto; }
+  #feature-hint b { color: #ffd98a; }
+  #feature-hint small { opacity: .5; font-size: 11px; }
+  @media (max-width: 640px) {
+    #feature-hint { bottom: auto; top: 150px; }
+  }
   /* ⚖️ 國家比較 */
   #compare-panel {
     position: fixed; top: 110px; left: 18px; z-index: 44; width: 460px; max-width: calc(100vw - 36px);
@@ -2393,6 +2421,7 @@
     <button id="install-btn" type="button" hidden aria-label="把地球世界安裝成 App" title="安裝到手機/電腦,像 App 一樣全螢幕開啟">📲 安裝 App</button>
     <button id="share-btn" type="button" aria-label="分享目前畫面" title="分享目前畫面(複製連結)">🔗 分享</button>
     <button id="theme-toggle" type="button" aria-label="切換版面主題">🌙 星空</button>
+    <button id="tour-btn" type="button" aria-label="重看新手導覽" title="新手導覽">❓</button>
   </div>
   <div id="clock-weather" hidden></div>
   <div id="audio-ui">

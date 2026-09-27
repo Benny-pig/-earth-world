@@ -36,6 +36,7 @@ import { LITE } from "./lib/device.js";
 import { createRoPlayer } from "./ui/ro-player.js";
 import { createWeatherLayer } from "./scene/weather.js";
 import { createCompare } from "./ui/compare.js";
+import { createTour } from "./ui/tour.js";
 import { createShare } from "./ui/share.js";
 import { setupPwa } from "./ui/pwa.js";
 import { createNaturePopup } from "./ui/nature-popup.js";
@@ -121,6 +122,8 @@ export function start() {
   window.addEventListener("unhandledrejection", reportGlobalError);
 
   const loading = setupLoadingScreen();
+  // 用分享連結打開(網址帶參數)的讀者是來看分享的畫面,不自動跳新手導覽(參數等一下會被清掉,先記下來)
+  const openedWithParams = [...new URLSearchParams(location.search).keys()].some((k) => k !== "intro" && k !== "nointro");
 
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1500);
@@ -476,6 +479,16 @@ export function start() {
     music.setVolume(v);
     if (radio.isPlaying()) radio.setVolume(v);
   });
+
+  // 👋 新手導覽:第一次來的讀者,等載入畫面與開場運鏡結束後自動開始;右上角「❓」可重看
+  const tour = createTour();
+  window.__earth.tour = tour;
+  if (!openedWithParams) {
+    loading.done.then(() => {
+      const wait = () => (intro && intro.isActive() ? setTimeout(wait, 400) : setTimeout(() => tour.maybeStart(), 800));
+      wait();
+    });
+  }
 
   // ⚖️ 國家比較
   const compareToggle = document.getElementById("compare-toggle");
