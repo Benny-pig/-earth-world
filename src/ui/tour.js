@@ -48,6 +48,7 @@ const HINTS_EN = {
   "thsr-toggle": "Pick two stations for high-speed rail times and seats.",
   "tra-toggle": "Pick two stations for Taiwan Railway times.",
   "ev-toggle": "Every EV charging station in Taiwan — search by place, filter by connector (Tesla, CCS2…), find the nearest ones and get directions.",
+  "voice-toggle": "Turns on voice narration: country intros, cinematic-tour places, flight announcements and big earthquakes are read aloud. Pick the voice and speed in the panel.",
   "aurora-toggle": "Green curtains around the poles are NOAA's live aurora forecast — brighter means a better chance. Only places in darkness can see it.",
   "meteor-toggle": "The year's major meteor showers: peak dates, the best hours to watch from Taiwan and how much moonlight there is. Tap “Watch the shower” to see one beside the globe.",
 };
@@ -73,6 +74,7 @@ const HINTS_ZH = {
   "thsr-toggle": "選出發站和抵達站,查高鐵時刻與剩餘座位。",
   "tra-toggle": "選出發站和抵達站,查台鐵時刻。",
   "ev-toggle": "全台電動車充電站:可以搜尋地名、依充電規格(特斯拉、CCS2…)篩選、找離你最近的,還能直接用 Google 地圖導航。",
+  "voice-toggle": "開啟後會用語音唸出國家介紹、電影巡航的地名、飛行模擬的機長廣播和大地震快報;面板裡可以選聲音、調語速。",
   "aurora-toggle": "南北極上空的綠色光簾是 NOAA 的即時極光預報,越亮機率越高;只有天黑的地方看得到。面板裡看世界各大極光景點現在的機會。",
   "meteor-toggle": "一年主要的流星雨:極大期是哪天、台灣幾點最好看、月光干不干擾。按「在地球旁看流星雨」,流星會從輻射點噴出來。",
 };

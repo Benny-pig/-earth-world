@@ -44,7 +44,8 @@ import { createMeteors } from "./scene/meteors.js";
 import { createCinema } from "./scene/cinema.js";
 import { createFavorites } from "./ui/favorites.js";
 import { createTour } from "./ui/tour.js";
-import { setupI18n } from "./lib/i18n.js";
+import { setupI18n, isEn } from "./lib/i18n.js";
+import { createVoice } from "./audio/voice.js";
 import { createShare } from "./ui/share.js";
 import { setupPwa } from "./ui/pwa.js";
 import { createNaturePopup } from "./ui/nature-popup.js";
@@ -272,6 +273,7 @@ export function start() {
   const earthquakes = createEarthquakesLayer({
     globeObject: globe.object, camera, renderer, naturePopup,
     onSevereChange: (v) => { quakeSevere = v; syncQuakeSevereBadge(); },
+    onStrong: (list) => announceQuakes(list),
   });
   window.__earth.earthquakes = earthquakes;
   const quakeToggle = document.getElementById("quake-toggle");
@@ -329,6 +331,44 @@ export function start() {
   window.__earth.twClock = createTwClock();
 
   const music = createMusic();
+
+  // 🗣️ 人聲播報(功能 → 聲音)
+  const voiceToggle = document.getElementById("voice-toggle");
+  const voice = createVoice({ music, onClose: () => voice.setPanel(false) });
+  window.__earth.voice = voice;
+  const paintVoice = () => voiceToggle?.setAttribute("aria-pressed", String(voice.isOn()));
+  voice.onChange(paintVoice);
+  paintVoice();
+  // 第一次按:開啟播報並打開設定;播報開著時按:打開設定;設定開著時再按:關閉播報
+  voiceToggle?.addEventListener("click", () => {
+    if (!voice.isOn()) { voice.setOn(true); voice.setPanel(true); }
+    else if (!voice.isPanelOpen()) voice.setPanel(true);
+    else { voice.setOn(false); voice.setPanel(false); }
+  });
+  // 地震快報:網站開著時新出現的規模 6 以上地震(剛打開網站時只報最近 1 小時內的)
+  const quakeAnnounced = new Set();
+  const openedAt = Date.now();
+  function announceQuakes(list) {
+    for (const q of list) {
+      if (quakeAnnounced.has(q.id)) continue;
+      quakeAnnounced.add(q.id);
+      if (q.time < openedAt - 60 * 60 * 1000) continue;
+      voice.speak(isEn ? `Earthquake alert. Magnitude ${q.mag.toFixed(1)}, ${q.place}.`
+        : `地震快報。${q.zh || "國外"}發生規模 ${q.mag.toFixed(1)} 的地震。`, { kind: "quake", interrupt: false });
+    }
+  }
+  // 國家介紹的播報文字
+  const popSpeech = (n) => (n >= 1e8 ? `${(n / 1e8).toFixed(1)}億` : n >= 1e4 ? `${Math.round(n / 1e4)}萬` : `${n}`);
+  let countrySpeech = "";
+  function countryNarration(hit, c, pop) {
+    if (isEn) return `${hit.names.en}.${c?.capital_en ? ` Capital: ${c.capital_en}.` : ""}`;
+    const parts = [hit.names.zh];
+    if (c?.capital_zh) parts.push(`首都是${c.capital_zh}`);
+    if (Number(pop) > 0) parts.push(`人口大約${popSpeech(Number(pop))}`);
+    if (Array.isArray(c?.features) && c.features[0]) parts.push(String(c.features[0]));
+    return parts.join("。");
+  }
+  document.addEventListener("click", (e) => { if (e.target.closest("[data-read-country]") && countrySpeech) voice.speak(countrySpeech, { force: true }); });
   window.__earth.music = music;
 
   // 當地廣播:地球上的電台字卡(radio)+ 依洲別挑台的「📻 電台選台」面板(radioPanel)。
@@ -615,6 +655,8 @@ export function start() {
     const noSettlement = !!c && !cll;
     const anchor = cll || [lat, lon];
     rig.flyTo(anchor[0], anchor[1], { distance: 1.7, ms: 1000 });
+    countrySpeech = countryNarration(hit, c, c && c.population != null ? c.population : hit.pop);
+    voice.speak(countrySpeech, { kind: "country" });
     sidePanel.open({
       code: hit.code,
       names: hit.names,
@@ -661,7 +703,8 @@ export function start() {
   passport.onChange(() => sidePanel.refreshVisit());
   // ✈️ 飛行旅程模擬
   const flightSimToggle = document.getElementById("flightsim-toggle");
-  const flightSim = createFlightSim({ globeObject: globe.object, camera, renderer, rig, openCountryByCode, onClose: () => setFlightSim(false) });
+  const flightSim = createFlightSim({ globeObject: globe.object, camera, renderer, rig, openCountryByCode, onClose: () => setFlightSim(false),
+    onAnnounce: (text) => voice.speak(text, { kind: "flight" }) });
   window.__earth.flightSim = flightSim;
   function setFlightSim(on) {
     if (flightSimToggle) flightSimToggle.setAttribute("aria-pressed", String(on));
@@ -756,7 +799,8 @@ export function start() {
   // 🎬 電影巡航:選單按下立刻開始;放著不動 90 秒、而且沒有開著其他功能時自動開始
   const AMBIENT = new Set(["quake-toggle", "sun-toggle", "aurora-toggle"]);
   const cinema = createCinema({
-    camera, rig, globeObject: globe.object,
+    camera, rig, globeObject: globe.object, renderer,
+    onShot: ({ title, sub }) => voice.speak(sub ? `${title}。${sub}` : title, { kind: "cinema" }),
     canAutoStart: () => !document.body.classList.contains("intro-playing") && !(intro && intro.isActive()) && !tour.isActive() &&
       !sidePanel.isOpen() && !encyclopedia.isOpen() && !favorites.isOpen() && !flightSim.isEnabled?.() &&
       !/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName || "") &&
@@ -764,6 +808,7 @@ export function start() {
     // 巡航時國界線也先藏起來,畫面像紀錄片一樣乾淨
     onStart: () => { tooltip.hide(); globe.setSpinPaused(true); clouds.setSpinPaused(false); if (window.__earth.borders) window.__earth.borders.visible = false; },
     onStop: () => {
+      voice.stop();
       if (window.__earth.borders) window.__earth.borders.visible = true;
       const keep = traffic.isEnabled() || ev.isEnabled() || sidePanel.isOpen();
       globe.setSpinPaused(keep);

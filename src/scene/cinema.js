@@ -12,34 +12,44 @@ const HOLD_S = 6;       // 在這個地點停留、慢慢漂移(原本 11 秒,�
 const DRIFT = HOLD_S / 11;
 const AUTO_KEY = "earth-world.cinema-auto";
 
-// [緯度, 經度, 開始距離, 結束距離, 經度漂移, 緯度漂移, 中文, 中文副標, English]
+// [緯度, 經度, 開始距離, 結束距離, 經度漂移, 緯度漂移, 中文, 中文副標, English, 地球上標示的名稱(省略 = 同中文)]
+// 緯度經度是地球上標示 📍 的那一點:山脈、河流、海洋這種大範圍的地方,取最有代表性的位置
 const SHOTS = [
   [23.7, 121, 1.95, 1.6, 14, 2, "台灣", "福爾摩沙 · 北回歸線穿過的美麗島嶼", "Taiwan"],
   [36.5, 138, 1.9, 1.65, 16, 3, "日本列島", "由一萬四千多座島嶼組成", "Japan"],
   [53.5, 108, 1.9, 1.7, 14, 2, "貝加爾湖", "世界最深的湖 · 約 1,642 公尺", "Lake Baikal"],
-  [28.6, 86, 1.75, 1.5, 16, -2, "喜馬拉雅山脈", "世界屋脊 · 聖母峰 8,848.86 公尺", "The Himalayas"],
+  [27.99, 86.93, 1.75, 1.5, 16, -2, "喜馬拉雅山脈", "世界屋脊 · 聖母峰 8,848.86 公尺", "The Himalayas", "聖母峰"],
   [23, 12, 2.3, 1.95, 22, 3, "撒哈拉沙漠", "世界最大的熱沙漠", "Sahara Desert"],
-  [22, 31.5, 1.9, 1.65, 8, 8, "尼羅河", "世界最長的河流之一 · 約 6,650 公里", "The Nile"],
-  [38, 17, 2.0, 1.75, 18, 1, "地中海", "被歐洲、亞洲、非洲環抱的內海", "Mediterranean Sea"],
+  [22, 31.5, 1.9, 1.65, 8, 8, "尼羅河", "世界最長的河流之一 · 約 6,650 公里", "The Nile", "尼羅河(納瑟湖一帶)"],
+  [35.5, 18, 2.0, 1.75, 18, 1, "地中海", "被歐洲、亞洲、非洲環抱的內海", "Mediterranean Sea"],
   [64.9, -18.5, 1.8, 1.6, 12, 2, "冰島", "冰與火之島 · 坐落在大西洋中洋脊上", "Iceland"],
   [72, -42, 2.2, 1.9, 20, -3, "格陵蘭", "世界最大的島 · 約八成被冰層覆蓋", "Greenland"],
   [-4, -62, 2.1, 1.8, 18, 3, "亞馬遜雨林", "地球之肺 · 世界最大的熱帶雨林", "Amazon Rainforest"],
   [-22, -68, 1.9, 1.65, 6, -12, "安地斯山脈", "世界最長的山脈 · 約 7,000 公里", "The Andes"],
   [-78, 20, 2.4, 2.1, 40, 2, "南極洲", "地球最冷的大陸 · 蘊藏全球約七成淡水", "Antarctica"],
-  [-18, 147.5, 1.8, 1.6, 10, -6, "大堡礁", "世界最大的珊瑚礁系統 · 綿延約 2,300 公里", "Great Barrier Reef"],
+  [-18.3, 147.7, 1.8, 1.6, 10, -6, "大堡礁", "世界最大的珊瑚礁系統 · 綿延約 2,300 公里", "Great Barrier Reef"],
   [5, -160, 3.2, 2.8, 30, 4, "太平洋", "地球最大的海洋 · 比全部陸地加起來還大", "Pacific Ocean"],
 ];
 
 const ease = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
 const readAuto = () => { try { return localStorage.getItem(AUTO_KEY) !== "off"; } catch { return true; } };
 
-export function createCinema({ camera, rig, globeObject, canAutoStart, onStart, onStop }) {
+const fmtCoord = (lat, lon) => isEn
+  ? `${Math.abs(lat).toFixed(1)}°${lat >= 0 ? "N" : "S"} · ${Math.abs(lon).toFixed(1)}°${lon >= 0 ? "E" : "W"}`
+  : `${lat >= 0 ? "北緯" : "南緯"} ${Math.abs(lat).toFixed(1)}° · ${lon >= 0 ? "東經" : "西經"} ${Math.abs(lon).toFixed(1)}°`;
+
+export function createCinema({ camera, rig, globeObject, renderer, canAutoStart, onStart, onStop, onShot }) {
   const cap = document.createElement("div");
   cap.id = "cinema-caption";
-  cap.innerHTML = `<div class="cm-title"></div><div class="cm-sub"></div><div class="cm-en"></div>` +
+  // 字幕 + 地球上的 📍 標示 + 一條把兩者連起來的細線:讀者一眼就知道字幕講的是地球上哪裡
+  cap.innerHTML = `<svg class="cm-link" aria-hidden="true"><line/><circle r="2.5"/></svg>` +
+    `<div class="cm-pin"><i></i><span></span></div>` +
+    `<div class="cm-text"><div class="cm-title"></div><div class="cm-sub"></div><div class="cm-en"></div><div class="cm-coord"></div></div>` +
     `<div class="cm-hint">點任何地方結束 · <button type="button" class="cm-auto"></button></div>`;
   document.body.appendChild(cap);
-  const $t = cap.querySelector(".cm-title"), $s = cap.querySelector(".cm-sub"), $e = cap.querySelector(".cm-en");
+  const $t = cap.querySelector(".cm-title"), $s = cap.querySelector(".cm-sub"), $e = cap.querySelector(".cm-en"), $c = cap.querySelector(".cm-coord");
+  const $text = cap.querySelector(".cm-text"), $pin = cap.querySelector(".cm-pin"), $pinName = $pin.querySelector("span");
+  const $line = cap.querySelector(".cm-link line"), $dot = cap.querySelector(".cm-link circle");
   const autoBtn = cap.querySelector(".cm-auto");
   let autoOn = readAuto();
   const paintAuto = () => { autoBtn.textContent = autoOn ? "不要在閒置時自動播放" : "閒置時自動播放:已關閉"; };
@@ -66,11 +76,35 @@ export function createCinema({ camera, rig, globeObject, canAutoStart, onStart, 
     cap.classList.remove("show");
   }
 
+  let textAnchor = null;   // 字幕左上角(連線的起點),每個地點量一次
   function showCaption(s) {
     $t.textContent = isEn ? s[8] : s[6];
     $s.textContent = isEn ? "" : s[7];
     $e.textContent = isEn ? "" : s[8];
+    $c.textContent = `📍 ${fmtCoord(s[0], s[1])}`;
+    $pinName.textContent = isEn ? s[8] : (s[9] || s[6]);
+    const r = $text.getBoundingClientRect();
+    textAnchor = { x: r.left + 2, y: r.top - 8 };
     cap.classList.add("show");
+    onShot && onShot({ title: isEn ? s[8] : s[6], sub: isEn ? "" : s[7] });
+  }
+
+  // 地球上的 📍:每幀把地點投影到畫面上,連線從字幕左上角拉過去
+  const pinW = new THREE.Vector3(), pinN = new THREE.Vector3(), ndc = new THREE.Vector3();
+  function placePin(s) {
+    worldDir(s[0], s[1], pinN);
+    pinW.copy(pinN);
+    camera.updateMatrixWorld();
+    ndc.copy(pinW).project(camera);
+    const facing = pinN.dot(pinW.clone().sub(camera.position).negate().normalize());
+    const w = renderer ? renderer.domElement.clientWidth : window.innerWidth, h = renderer ? renderer.domElement.clientHeight : window.innerHeight;
+    if (facing < 0.1 || ndc.z > 1 || !textAnchor) { cap.classList.add("no-pin"); return; }
+    cap.classList.remove("no-pin");
+    const x = (ndc.x * 0.5 + 0.5) * w, y = (-ndc.y * 0.5 + 0.5) * h;
+    $pin.style.transform = `translate(${Math.round(x)}px, ${Math.round(y)}px)`;
+    $line.setAttribute("x1", textAnchor.x); $line.setAttribute("y1", textAnchor.y);
+    $line.setAttribute("x2", x); $line.setAttribute("y2", y);
+    $dot.setAttribute("cx", textAnchor.x); $dot.setAttribute("cy", textAnchor.y);
   }
 
   const dir = new THREE.Vector3(), a = new THREE.Vector3(), b = new THREE.Vector3();
@@ -94,6 +128,7 @@ export function createCinema({ camera, rig, globeObject, canAutoStart, onStart, 
     worldDir(s[0] + s[5] * DRIFT * e, s[1] + s[4] * DRIFT * (e - 0.5), a);
     camera.position.copy(a).multiplyScalar(THREE.MathUtils.lerp(s[2], s[2] + (s[3] - s[2]) * DRIFT, e));
     camera.lookAt(0, 0, 0);
+    placePin(s);
     if (t >= HOLD_S - 1) cap.classList.remove("show");
     if (t >= HOLD_S) { shot = (shot + 1) % SHOTS.length; beginFly(); }
   }

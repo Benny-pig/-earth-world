@@ -28,7 +28,11 @@ const DICT = {
   "收藏只存在這台裝置的瀏覽器裡,不會上傳;清除瀏覽器資料會一起清掉。": "Saved items stay in this browser only — nothing is uploaded. Clearing browser data removes them.",
   "極光即時預報": "Aurora forecast", "🌌 極光即時預報": "🌌 Aurora forecast", "📍 熱門極光地點 · 現在": "📍 Aurora spots · now",
   "流星雨": "Meteor showers", "🌠 流星雨": "🌠 Meteor showers", "▶ 在地球旁看流星雨": "▶ Watch the shower", "⏹ 停止流星雨": "⏹ Stop the shower", "📅 接下來一年": "📅 Next 12 months",
-  "電影巡航": "Cinematic tour", "點任何地方結束": "Tap anywhere to exit", "不要在閒置時自動播放": "Don't auto-play when idle", "閒置時自動播放:已關閉": "Auto-play when idle: off",
+  "電影巡航": "Cinematic tour", "人聲播報": "Voice narration", "🗣️ 人聲播報": "🗣️ Voice narration", "🔊 朗讀": "🔊 Read aloud",
+  "用語音唸出這個國家的介紹": "Read this country's intro aloud", "要播報哪些內容": "What to announce", "聲音": "Voice", "▶ 試聽": "▶ Preview",
+  "🌍 打開國家時的介紹": "🌍 Country intros", "🎬 電影巡航的地名": "🎬 Cinematic tour places", "✈️ 飛行模擬的機長廣播": "✈️ Flight announcements", "📳 規模 6 以上的地震快報": "📳 Earthquakes M6+",
+  "開啟播報": "Turn on", "關閉播報": "Turn off", "🔊 播報中": "🔊 On", "🔇 已關閉": "🔇 Off",
+  "用語音播報國家介紹、電影巡航地名、機長廣播、地震快報": "Read out country intros, tour places, flight announcements and earthquake alerts", "點任何地方結束": "Tap anywhere to exit", "不要在閒置時自動播放": "Don't auto-play when idle", "閒置時自動播放:已關閉": "Auto-play when idle: off",
   "介面淡出,鏡頭像紀錄片一樣飛過世界各地(點任何地方結束)": "The interface fades away and the camera glides around the world like a documentary (tap anywhere to exit)",
   // 右下選單
   "台灣交通": "Taiwan transport", "機場航班": "Airport flights", "即時路況": "Live traffic", "高鐵時刻": "High-speed rail", "台鐵時刻": "TRA trains",

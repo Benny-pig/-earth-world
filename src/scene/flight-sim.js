@@ -61,7 +61,7 @@ function planeGeometry() {
   return new THREE.ShapeGeometry(shape);
 }
 
-export function createFlightSim({ globeObject, camera, renderer, rig, openCountryByCode, onClose }) {
+export function createFlightSim({ globeObject, camera, renderer, rig, openCountryByCode, onClose, onAnnounce }) {
   const panel = document.getElementById("flightsim-panel");
   const body = document.getElementById("flightsim-body");
   const caption = document.getElementById("fs-caption");
@@ -173,6 +173,7 @@ export function createFlightSim({ globeObject, camera, renderer, rig, openCountr
   function announce(html, ms = 5200) {
     if (!caption) return;
     caption.innerHTML = html;
+    onAnnounce && onAnnounce(caption.textContent);
     caption.hidden = false;
     caption.style.animation = "none"; void caption.offsetWidth; caption.style.animation = "";
     clearTimeout(capTimer);

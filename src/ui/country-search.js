@@ -4,11 +4,13 @@ import { isEn } from "../lib/i18n.js";
 // 🔍 萬用搜尋:國家、首都城市、功能(打「地震」「充電站」「高鐵」直接打開)、景點直播、
 // 山脈河流等地理、我的收藏,全部在同一個框搜尋。方向鍵 + Enter 或點選;Ctrl+K 或 / 快速叫出。
 const MAX_RESULTS = 14;
-const KIND = {
-  fav: ["收藏", "Saved"], feature: ["功能", "Feature"], country: ["國家", "Country"], capital: ["首都", "Capital"],
-  cam: ["直播", "Live cam"], geo: ["地理", "Nature"],
-};
 const KIND_ORDER = { fav: 0, feature: 1, country: 2, capital: 3, cam: 4, geo: 5 };
+// 結果分組的標題(組跟組之間有分隔線)
+const GROUP = {
+  fav: ["⭐ 我的收藏", "⭐ Saved"], feature: ["🎛️ 功能", "🎛️ Features"], country: ["🌍 國家", "🌍 Countries"],
+  capital: ["🏙️ 首都城市", "🏙️ Capitals"], cam: ["📺 景點直播", "📺 Live cams"], geo: ["⛰️ 山川地理", "⛰️ Nature"],
+};
+const PER_GROUP = 6;
 
 // 功能的別名:讀者不一定知道選單上的名稱
 const SYNONYMS = {
@@ -35,6 +37,7 @@ const SYNONYMS = {
   "aurora-toggle": "極光 北極光 南極光 aurora",
   "meteor-toggle": "流星 流星雨 英仙座 雙子座 獅子座 meteor",
   "cinema-toggle": "電影 巡航 螢幕保護 自動播放 cinema",
+  "voice-toggle": "人聲 播報 語音 朗讀 念 說話 voice speech narration",
   "fav-btn": "收藏 最愛 書籤 我的 favorite bookmark",
   "tour-btn": "導覽 教學 說明 怎麼用 help tour",
   "theme-toggle": "主題 版面 風格 theme",
@@ -43,7 +46,7 @@ const SYNONYMS = {
 const ICONS = {
   "weather-toggle": "🌡️", "quake-toggle": "📳", "satellite-toggle": "🌀", "flight-toggle": "✈️", "livecam-toggle": "📺", "moon-toggle": "🌙",
   "orbit-toggle": "🛰️", "launch-toggle": "🚀", "sun-toggle": "🌗", "quiz-toggle": "🎯", "passport-toggle": "🛂", "flightsim-toggle": "🛫",
-  "compare-toggle": "⚖️", "otd-toggle": "📜", "radio-toggle": "📻", "aurora-toggle": "🌌", "meteor-toggle": "🌠", "cinema-toggle": "🎬",
+  "compare-toggle": "⚖️", "otd-toggle": "📜", "radio-toggle": "📻", "aurora-toggle": "🌌", "meteor-toggle": "🌠", "cinema-toggle": "🎬", "voice-toggle": "🗣️",
   "fav-btn": "⭐", "tour-btn": "❓", "theme-toggle": "🎨", "share-btn": "🔗",
 };
 const GEO_ICONS = { mountain: "⛰️", peak: "🏔️", river: "🌊", desert: "🏜️", plateau: "🗻", plain: "🌾", lake: "💧", other: "📍" };
@@ -121,7 +124,17 @@ export function createCountrySearch({ index, onPick, content = {}, favorites = n
       if (s >= 0) scored.push([s, KIND_ORDER[it.kind], it]);
     }
     scored.sort((a, b) => a[0] - b[0] || a[1] - b[1]);
-    return scored.slice(0, MAX_RESULTS).map((x) => x[2]);
+    // 同一類放在一起(國家一組、功能一組…),最符合的那一組排最前面;每組最多 6 筆
+    const groups = new Map();
+    for (const [sc, , it] of scored) {
+      if (!groups.has(it.kind)) groups.set(it.kind, { best: sc, items: [] });
+      const g = groups.get(it.kind);
+      if (g.items.length < PER_GROUP) g.items.push(it);
+    }
+    return [...groups.entries()]
+      .sort((a, b) => a[1].best - b[1].best || KIND_ORDER[a[0]] - KIND_ORDER[b[0]])
+      .flatMap(([, g]) => g.items)
+      .slice(0, MAX_RESULTS);
   }
 
   // 還沒打字:收藏 + 熱門功能 + 全部國家(A–Z)
@@ -132,7 +145,12 @@ export function createCountrySearch({ index, onPick, content = {}, favorites = n
     return [...favItems().slice(0, 6), ...hot, ...all];
   }
 
-  const tag = (k) => `<span class="cs-kind cs-k-${k}">${KIND[k][isEn ? 1 : 0]}</span>`;
+  let browsing = false;
+  const header = (k) => {
+    const label = browsing && k === "country" ? (isEn ? "🌍 All countries (A–Z)" : "🌍 全部國家(A–Z)")
+      : browsing && k === "feature" ? (isEn ? "🎛️ Popular features" : "🎛️ 常用功能") : GROUP[k][isEn ? 1 : 0];
+    return `<li class="cs-sep" aria-hidden="true">${label}</li>`;
+  };
   function render() {
     if (!matches.length) {
       if (input.value.trim()) { list.innerHTML = `<li class="cs-none">找不到「${esc(input.value.trim())}」,換個關鍵字試試(國家、城市、功能、景點)</li>`; list.hidden = false; }
@@ -140,17 +158,20 @@ export function createCountrySearch({ index, onPick, content = {}, favorites = n
       return;
     }
     // 國旗用跟大百科/側欄同一個免費 CDN(flagcdn.com);找不到旗子的代碼就把圖藏起來,不留破圖示
+    let prevKind = null;
     list.innerHTML = matches.map((m, i) => {
+      const sep = m.kind !== prevKind ? header(m.kind) : "";
+      prevKind = m.kind;
       const lead = m.kind === "country" || m.kind === "capital"
         ? `<img class="cs-flag" src="https://flagcdn.com/w40/${String(m.code || "").toLowerCase()}.png" alt="" onerror="this.style.visibility='hidden'">`
         : `<span class="cs-ico">${esc(m.icon || (m.kind === "geo" ? "⛰️" : "🎛️"))}</span>`;
       const sub = m.sub ? `<span class="cs-sub">${esc(m.sub)}</span>` : m.en ? `<span class="cs-en">${esc(m.en)}</span>` : "";
-      return `<li data-i="${i}" class="${i === active ? "active" : ""}">${lead}<span class="cs-txt"><span class="cs-zh">${esc(m.zh)}</span>${sub}</span>${tag(m.kind)}</li>`;
+      return `${sep}<li data-i="${i}" class="${i === active ? "active" : ""}">${lead}<span class="cs-txt"><span class="cs-zh">${esc(m.zh)}</span>${sub}</span></li>`;
     }).join("");
     list.hidden = false;
     list.querySelector("li.active")?.scrollIntoView({ block: "nearest" });
   }
-  function refresh() { matches = search(input.value); active = matches.length ? 0 : -1; render(); }
+  function refresh() { browsing = false; matches = search(input.value); active = matches.length ? 0 : -1; render(); }
 
   function choose(m) {
     if (!m) return;
@@ -164,6 +185,7 @@ export function createCountrySearch({ index, onPick, content = {}, favorites = n
   input.addEventListener("focus", () => {
     loadExtras();
     if (input.value.trim()) return;
+    browsing = true;
     matches = browse();
     active = -1;
     render();

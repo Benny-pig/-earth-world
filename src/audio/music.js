@@ -26,6 +26,8 @@ export function createMusic({ defaultVolume = 0.55 } = {}) {
 
   let targetVolume = defaultVolume;
   let muted = false;
+  let ducked = false;   // 人聲播報時暫時調小聲
+  const level = () => (ducked ? targetVolume * 0.3 : targetVolume);
   let started = false;
   let fadeTimer = null;
   let ok = true;
@@ -54,7 +56,7 @@ export function createMusic({ defaultVolume = 0.55 } = {}) {
   function play() {
     if (!ok || held) return;
     audio.play().then(() => {
-      if (!muted) fadeTo(targetVolume);
+      if (!muted) fadeTo(level());
     }).catch((e) => {
       started = false;   // 仍被瀏覽器擋:等下一次手勢
       console.warn("[music] play() 被拒,等待使用者互動:", e.name);
@@ -105,12 +107,12 @@ export function createMusic({ defaultVolume = 0.55 } = {}) {
       // 音量交給實體按鍵/靜音開關),只調 volume 在 iPhone 上按了跟沒按一樣。
       // audio.muted 才是 iOS 真的會生效的開關,兩者都設才能跨平台都有效。
       audio.muted = muted;
-      fadeTo(muted ? 0 : targetVolume, 400);
+      fadeTo(muted ? 0 : level(), 400);
       return muted;
     },
     setVolume(v) {
       targetVolume = Math.max(0, Math.min(1, v));
-      if (!muted && started) fadeTo(targetVolume, 200);
+      if (!muted && started) fadeTo(level(), 200);
     },
     isMuted() { return muted; },
     isPlaying() { return started && !audio.paused; },
@@ -118,5 +120,6 @@ export function createMusic({ defaultVolume = 0.55 } = {}) {
     pause() { audio.pause(); },
     resume() { if (started) play(); },
     hold(v) { held = !!v; if (held) audio.pause(); },
+    duck(v) { ducked = !!v; if (!muted && started && !audio.paused) fadeTo(level(), 350); },
   };
 }

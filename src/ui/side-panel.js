@@ -183,7 +183,8 @@ export function createSidePanel({ onClose, onMore, visited, favStar }) {
         `<span class="sp-more-ico">📖</span>${p.region ? "大百科" : "國家大百科"} · 詳細介紹</button>` : "";
     let html = `${flag}<h2>${esc(p.names.zh)}</h2><div class="en">${esc(p.names.en)}</div>${moreBtn}` +
       `<button type="button" class="sp-share" data-share>🔗 分享這個國家</button>` +
-      `<span id="sp-visit-slot"></span>${favStar && p.code ? favStar(p.code) : ""}`;
+      `<span id="sp-visit-slot"></span>${favStar && p.code ? favStar(p.code) : ""}` +
+      `<button type="button" class="sp-share" data-read-country title="用語音唸出這個國家的介紹">🔊 朗讀</button>`;
     const meta = [];
     if (p.capital && p.capital.zh) meta.push(`首都:${esc(p.capital.zh)}${p.capital.en ? ` (${esc(p.capital.en)})` : ""}`);
     if (p.population != null && p.population !== "") meta.push(`人口:${fmtPop(p.population)}`);
