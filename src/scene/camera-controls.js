@@ -35,6 +35,86 @@ export function createCameraRig({ camera, domElement, globeObject }) {
 
   let tween = null; // { from: Vector3, toDir: Vector3, dist, t, ms }
 
+  // 🌐 拖曳旋轉自己做,OrbitControls 只留縮放:OrbitControls 的鏡頭轉到南北極就卡住,
+  // 再往上拖完全沒反應。改成左右拖 = 繞地軸轉(北方維持朝上)、上下拖 = 繞畫面的水平軸轉,
+  // 可以一路越過極點轉到另一邊。越過極點後畫面會是「南方朝上」,放開、離開極區後慢慢轉正。
+  controls.enableRotate = false;
+  const Y = new THREE.Vector3(0, 1, 0);
+  const qa = new THREE.Quaternion(), qb = new THREE.Quaternion();
+  const fwd = new THREE.Vector3(), right = new THREE.Vector3(), want = new THREE.Vector3(), cross = new THREE.Vector3();
+  const pointers = new Set();
+  let dragging = false, lastX = 0, lastY = 0, lastMoveAt = 0;
+  let velX = 0, velY = 0;     // 放開後的慣性(弧度/秒)
+  let flipped = false;        // 鏡頭是不是越過極點、南方朝上
+
+  function rotate(ax, ay) {
+    const p = camera.position;
+    const upY = camera.up.dot(Y);
+    if (Math.abs(upY) > 0.3) flipped = upY < 0;   // 極點附近不判斷,免得方向忽正忽反
+    qa.setFromAxisAngle(Y, flipped ? ax : -ax);
+    p.applyQuaternion(qa);
+    camera.up.applyQuaternion(qa);
+    fwd.copy(p).negate().normalize();
+    right.crossVectors(fwd, camera.up).normalize();
+    qb.setFromAxisAngle(right, -ay);
+    p.applyQuaternion(qb);
+    camera.up.applyQuaternion(qb).normalize();
+    camera.lookAt(controls.target);
+  }
+  const pxToAngle = (px) => (2 * Math.PI * px / (domElement.clientHeight || window.innerHeight)) * controls.rotateSpeed;
+
+  domElement.addEventListener("pointerdown", (e) => {
+    pointers.add(e.pointerId);
+    if (!controls.enabled || pointers.size > 1) { dragging = false; velX = velY = 0; return; }   // 兩指 = 縮放
+    dragging = true;
+    tween = null;                       // 飛行途中讀者自己拖:讓給讀者
+    velX = velY = 0;
+    lastX = e.clientX; lastY = e.clientY; lastMoveAt = performance.now();
+    controls.dispatchEvent({ type: "start" });
+  });
+  domElement.addEventListener("pointermove", (e) => {
+    if (!dragging || pointers.size !== 1 || !controls.enabled) return;
+    const dx = e.clientX - lastX, dy = e.clientY - lastY;
+    lastX = e.clientX; lastY = e.clientY;
+    const now = performance.now(), dt = Math.max(0.008, (now - lastMoveAt) / 1000);
+    lastMoveAt = now;
+    const ax = pxToAngle(dx), ay = pxToAngle(dy);
+    rotate(ax, ay);
+    const MAXV = 4;   // 慣性上限(弧度/秒),用力一甩也不會轉太多圈
+    velX = THREE.MathUtils.clamp(velX * 0.5 + (ax / dt) * 0.5, -MAXV, MAXV);
+    velY = THREE.MathUtils.clamp(velY * 0.5 + (ay / dt) * 0.5, -MAXV, MAXV);
+    controls.dispatchEvent({ type: "change" });
+  });
+  const release = (e) => {
+    pointers.delete(e.pointerId);
+    if (!dragging) return;
+    dragging = false;
+    if (performance.now() - lastMoveAt > 80) velX = velY = 0;   // 停住才放開:不要慣性
+    controls.dispatchEvent({ type: "end" });
+  };
+  domElement.addEventListener("pointerup", release);
+  domElement.addEventListener("pointercancel", release);
+
+  // 放開後:慣性慢慢停下;鏡頭離開極區時,把畫面轉回北方朝上
+  function settle(dt) {
+    if (!dragging && (Math.abs(velX) + Math.abs(velY) > 1e-3)) {
+      rotate(velX * dt, velY * dt);
+      const k = Math.exp(-dt * 9);
+      velX *= k; velY *= k;
+    }
+    if (dragging || Math.abs(velX) + Math.abs(velY) > 0.05) return;
+    const p = camera.position;
+    const lat = Math.asin(THREE.MathUtils.clamp(p.y / p.length(), -1, 1));
+    if (Math.abs(lat) > 65 * Math.PI / 180) return;
+    fwd.copy(p).negate().normalize();
+    want.copy(Y).addScaledVector(fwd, -Y.dot(fwd)).normalize();   // 北方朝上時的 up
+    const ang = Math.atan2(cross.crossVectors(camera.up, want).dot(fwd), camera.up.dot(want));
+    if (Math.abs(ang) < 1e-4) return;
+    const step = Math.abs(ang) < 0.002 ? ang : ang * Math.min(1, dt * 4);
+    camera.up.applyAxisAngle(fwd, step).normalize();
+    camera.lookAt(controls.target);
+  }
+
   function flyTo(latDeg, lonDeg, { distance = 1.8, ms = 1000 } = {}) {
     const p = latLonToXYZ(latDeg, lonDeg, 1);
     const toDir = new THREE.Vector3(p.x, p.y, p.z);
@@ -93,6 +173,7 @@ export function createCameraRig({ camera, domElement, globeObject }) {
     // 等比例放慢旋轉(平常的縮放範圍內完全不影響)。
     const alt = camera.position.length() - 1;
     controls.rotateSpeed = alt < 0.35 ? BASE_ROTATE_SPEED * Math.max(0.12, alt / 0.35) : BASE_ROTATE_SPEED;
+    settle(dt);
     controls.update();
   }
 

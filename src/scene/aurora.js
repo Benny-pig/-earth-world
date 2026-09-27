@@ -132,7 +132,7 @@ export function createAurora({ globe, rig, onClose }) {
   });
   const curtains = [];
 
-  let grid = null, meta = null, kp = null, enabled = false, timer = null, fade = 0;
+  let grid = null, meta = null, kp = null, enabled = false, timer = null, fade = 0, moreOpen = false;
 
   // 光簾:每 2° 經度找出極光帶的中心緯度(依機率加權)與最強機率,平滑後立成一圈簾幕
   function buildCurtain(north) {
@@ -219,6 +219,13 @@ export function createAurora({ globe, rig, onClose }) {
   const body = document.getElementById("aurora-body");
   if (panel) makeDraggable(panel, panel.querySelector(".sat-head"), { disableBelow: 641 });
   document.getElementById("aurora-close")?.addEventListener("click", () => onClose && onClose());
+  // 收合:只留標題列,整個地球讓出來看極光
+  const minBtn = document.getElementById("aurora-min");
+  function setMin(on) {
+    panel?.classList.toggle("min", on);
+    if (minBtn) { minBtn.textContent = on ? "▴" : "▾"; minBtn.title = on ? "展開面板" : "收合面板"; }
+  }
+  minBtn?.addEventListener("click", () => setMin(!panel.classList.contains("min")));
 
   const fmtTime = (iso) => {
     if (!iso) return "—";
@@ -256,16 +263,22 @@ export function createAurora({ globe, rig, onClose }) {
       return { zh, where, lat, lon, p: spotChance(lat, lon), sky };
     }).sort((a, b) => b.sky[2] - a.sky[2] || b.p - a.p);
     const [lvText, lvColor] = kp ? kpLevel(kp.v) : ["—", "#9fb2d8"];
+    const row = (s) => `<button type="button" class="au-spot" data-lat="${s.lat}" data-lon="${s.lon}">` +
+      `<span class="au-sky" title="${s.sky[1]}">${s.sky[0]}</span><span class="au-name">${esc(s.zh)}<small>${esc(s.where)}</small></span>` +
+      `<span class="au-bar"><i style="width:${s.sky[2] ? Math.min(100, s.p) : 0}%"></i></span><b class="au-p">${s.sky[2] ? `${Math.round(s.p)}%` : "—"}</b></button>`;
+    const dark = spots.filter((x) => x.sky[2]);
+    // 面板精簡:只放 Kp、現在天黑而且最有機會的 3 個地方;其他收在「全部景點」裡,把地球讓出來看極光
     body.innerHTML =
       `<div class="au-kp"><div class="au-kp-num" style="color:${lvColor}">Kp ${kp ? kp.v.toFixed(1) : "—"}</div>` +
-      `<div><b style="color:${lvColor}">${lvText}</b><div class="au-dim">地磁活動指數 0–9,越大極光越亮、越往南擴</div></div></div>` +
-      `<div class="au-hemi"><span>北半球最高 <b>${Math.round(hemiMax(true))}%</b></span><span>南半球最高 <b>${Math.round(hemiMax(false))}%</b></span></div>` +
-      `<div class="au-h">📍 熱門極光地點 · 現在</div>` +
-      spots.map((s) => `<button type="button" class="au-spot" data-lat="${s.lat}" data-lon="${s.lon}">` +
-        `<span class="au-sky" title="${s.sky[1]}">${s.sky[0]}</span><span class="au-name">${esc(s.zh)}<small>${esc(s.where)}</small></span>` +
-        `<span class="au-bar"><i style="width:${s.sky[2] ? Math.min(100, s.p) : 0}%"></i></span><b class="au-p">${s.sky[2] ? `${Math.round(s.p)}%` : "—"}</b></button>`).join("") +
+      `<div><b style="color:${lvColor}">${lvText}</b> <span class="au-dim">北半球最高 ${Math.round(hemiMax(true))}% · 南半球 ${Math.round(hemiMax(false))}%</span></div></div>` +
+      `<div class="au-h">🌙 現在天黑、最有機會的地方</div>` +
+      (dark.length ? dark.slice(0, 3).map(row).join("") : `<div class="au-dim">熱門景點現在都是白天</div>`) +
+      `<details class="au-more"${moreOpen ? " open" : ""}><summary>全部 ${spots.length} 個極光景點 · 說明</summary>` +
+      spots.slice(dark.length ? 3 : 0).map(row).join("") +
       `<div class="sat-caption">綠色光環是 NOAA 太空天氣預報中心的極光預測(OVATION 模型),越亮代表頭頂看到極光的機率越高,只有天黑的地方看得到。` +
-      `預報時間 ${fmtTime(meta.fc)}(台灣時間),每 10 分鐘自動更新。台灣緯度太低,只有極罕見的超強磁暴才有機會看到。</div>`;
+      `Kp 是地磁活動指數(0–9),越大極光越亮、越往南擴。台灣緯度太低,只有極罕見的超強磁暴才有機會看到。</div></details>` +
+      `<div class="au-src">NOAA 預報 ${fmtTime(meta.fc)}(台灣時間)· 每 10 分鐘更新</div>`;
+    body.querySelector(".au-more")?.addEventListener("toggle", (e) => { moreOpen = e.target.open; });
   }
   body?.addEventListener("click", (e) => {
     const b = e.target.closest(".au-spot");
@@ -279,7 +292,9 @@ export function createAurora({ globe, rig, onClose }) {
     const w = new THREE.Vector3(anti.x, anti.y, anti.z);            // 世界座標(太陽固定在直射點方向)
     w.applyQuaternion(globe.object.quaternion.clone().invert());       // 換成地球上的經緯度
     const { lon } = xyzToLatLon(w);
-    rig.flyTo(s.lat > 10 ? -60 : 60, lon, { distance: 2.5, ms: 1600 });
+    // 手機的面板在下半部:鏡頭拉遠一點、極區放在畫面上半部
+    const phone = window.innerWidth < 641;
+    rig.flyTo(s.lat > 10 ? -52 : 52, lon, { distance: phone ? 3.6 : 2.7, ms: 1600 });
   }
 
   async function refresh() {
@@ -296,6 +311,7 @@ export function createAurora({ globe, rig, onClose }) {
     if (panel) panel.hidden = !enabled;
     clearInterval(timer);
     if (!enabled) return;
+    setMin(false);
     group.visible = true;
     render();
     flyToNight();

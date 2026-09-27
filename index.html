@@ -497,7 +497,7 @@
   .fx-panel .sat-head { display: flex; align-items: center; gap: 6px; margin-bottom: 8px; cursor: move; }
   .fx-panel .sat-title { font-weight: 800; font-size: 15px; margin-right: auto; color: var(--acc); }
   .fx-body { overflow-y: auto; min-height: 0; flex: 1; }
-  #aurora-panel { --acc: #7dffb0; --acc-b: rgba(90,255,160,.45); }
+  #aurora-panel { --acc: #7dffb0; --acc-b: rgba(90,255,160,.45); width: 320px; }
   #meteor-panel { --acc: #ffd98a; --acc-b: rgba(255,210,120,.45); width: 380px; }
   #fav-panel { --acc: #ffd43b; --acc-b: rgba(255,212,59,.45); left: auto; right: 18px; top: 60px; width: 330px; }
   body[data-theme="journal"] #aurora-panel { --acc: #1f7a4d; }
@@ -507,8 +507,13 @@
     #aurora-panel, #meteor-panel, #fav-panel { top: auto; bottom: 116px; left: 8px; right: 8px; width: auto; max-width: none; max-height: 56vh; z-index: 45; }
   }
   /* 極光 */
-  .au-kp { display: flex; align-items: center; gap: 12px; padding: 8px 10px; border-radius: 10px; background: rgba(90,255,160,.07); }
-  .au-kp-num { font: 800 24px system-ui, sans-serif; white-space: nowrap; }
+  #aurora-panel.min .fx-body { display: none; }
+  #aurora-panel.min .sat-head { margin-bottom: 0; }
+  .au-kp { display: flex; align-items: center; gap: 10px; padding: 6px 10px; border-radius: 10px; background: rgba(90,255,160,.07); }
+  .au-kp-num { font: 800 20px system-ui, sans-serif; white-space: nowrap; }
+  .au-more { margin-top: 6px; }
+  .au-more summary { cursor: pointer; font-size: 12px; opacity: .75; padding: 4px 2px; }
+  .au-src { font-size: 11px; opacity: .55; margin-top: 6px; }
   .au-dim { font-size: 11.5px; opacity: .7; margin-top: 2px; }
   .au-hemi { display: flex; gap: 14px; margin: 8px 2px; font-size: 12.5px; opacity: .9; }
   .au-h, .mt-h { margin: 10px 2px 4px; font-weight: 700; font-size: 12.5px; opacity: .85; }
@@ -2447,6 +2452,7 @@
   <div id="aurora-panel" class="fx-panel" hidden>
     <div class="sat-head">
       <span class="sat-title">🌌 極光即時預報</span>
+      <button id="aurora-min" class="rp-head-btn" type="button" aria-label="收合面板" title="收合面板">▾</button>
       <button id="aurora-close" class="rp-head-btn" type="button" aria-label="關閉">×</button>
     </div>
     <div id="aurora-body" class="fx-body"></div>
