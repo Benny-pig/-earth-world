@@ -35,6 +35,7 @@ import { shouldPlayIntro, createIntro } from "./ui/intro.js";
 import { LITE } from "./lib/device.js";
 import { createRoPlayer } from "./ui/ro-player.js";
 import { createWeatherLayer } from "./scene/weather.js";
+import { createCompare } from "./ui/compare.js";
 import { createShare } from "./ui/share.js";
 import { setupPwa } from "./ui/pwa.js";
 import { createNaturePopup } from "./ui/nature-popup.js";
@@ -476,6 +477,16 @@ export function start() {
     if (radio.isPlaying()) radio.setVolume(v);
   });
 
+  // ⚖️ 國家比較
+  const compareToggle = document.getElementById("compare-toggle");
+  const compare = createCompare({ openCountryByCode, onClose: () => setCompare(false) });
+  window.__earth.compare = compare;
+  function setCompare(on) {
+    if (compareToggle) compareToggle.setAttribute("aria-pressed", String(on));
+    compare.setEnabled(on);
+  }
+  if (compareToggle) compareToggle.addEventListener("click", () => setCompare(compareToggle.getAttribute("aria-pressed") !== "true"));
+
   // 🌡️ 全球即時氣溫與降雨
   const weatherToggle = document.getElementById("weather-toggle");
   const weather = createWeatherLayer({ globeObject: globe.object, clouds, onClose: () => setWeather(false) });
@@ -629,6 +640,8 @@ export function start() {
     if (flightSim.isPicking()) { flightSim.pick(hit.code); return; }
     // 🛂 護照「點地球蓋章」模式:點國家 = 蓋章/取消,不開側欄
     if (passport.isMarking()) { passport.toggle(hit.code); return; }
+    // ⚖️ 國家比較開著:點國家 = 填進比較的欄位
+    if (compare.isPicking()) { compare.pick(hit.code); return; }
     // 看路況時點在台灣陸地上但沒點中國道(差幾個像素很常見),不要跳出台灣側欄、
     // 把相機拉遠——想看台灣介紹可以點台灣的金色地名
     if (traffic.isEnabled() && hit.code === "TW") return;
