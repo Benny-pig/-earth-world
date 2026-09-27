@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import { canvasRect } from "../lib/view-rect.js";
+import { placeLabel, hideLabel, drag } from "../lib/label-style.js";
 
 const OCEANS = [
   { zh: "太平洋", en: "Pacific Ocean",  lat: 0,   lon: -160, note: "世界最大最深的大洋,面積超過所有陸地總和。" },
@@ -50,15 +51,10 @@ export function createOceanLabels({ globeObject, camera, renderer, naturePopup }
       if (!behind && facing > -0.05) {
         opacity = THREE.MathUtils.clamp((facing + 0.05) / 0.2, 0, 1);
       }
-      if (opacity <= 0.001) {
-        L.el.style.opacity = "0";
-        L.el.style.transform = "translate(-9999px,-9999px)";
-        continue;
-      }
+      if (opacity <= 0.001) { hideLabel(L.el); continue; }
       const x = rect.left + (L.ndc.x * 0.5 + 0.5) * rect.width;
       const y = rect.top + (-L.ndc.y * 0.5 + 0.5) * rect.height;
-      L.el.style.transform = `translate(${Math.round(x)}px, ${Math.round(y)}px) translate(-50%, -50%)`;
-      L.el.style.opacity = opacity.toFixed(2);
+      placeLabel(L.el, x, y, opacity.toFixed(2), " translate(-50%, -50%)");
     }
   }
 

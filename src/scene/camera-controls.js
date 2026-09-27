@@ -26,7 +26,7 @@ export function createCameraRig({ camera, domElement, globeObject }) {
   const controls = new OrbitControls(camera, domElement);
   controls.enablePan = false;
   controls.enableDamping = true;
-  controls.dampingFactor = 0.08;
+  controls.dampingFactor = 0.15;   // 原本 0.08:地球會拖在手指後面慢慢跟上,感覺像 lag
   controls.rotateSpeed = BASE_ROTATE_SPEED;
   controls.zoomSpeed = 0.7;
   controls.minDistance = 1.35;

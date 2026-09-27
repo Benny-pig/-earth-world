@@ -2,6 +2,7 @@ import * as THREE from "three";
 import { esc } from "../lib/esc.js";
 import { zhHantName } from "../countries/country-names.js";
 import { canvasRect } from "../lib/view-rect.js";
+import { placeLabel, hideLabel, drag } from "../lib/label-style.js";
 
 // 當地廣播電台:radio-browser.info 公開 API,免金鑰、串流網址可直接播放。
 // 跟地震不同,電台清單不太會變,開啟時抓一次就好,不用定時刷新。
@@ -364,16 +365,10 @@ export function createRadioLayer({ globeObject, camera, renderer, music, onChang
       S.ndc.copy(S.anchor).project(camera);
       const behind = S.ndc.z > 1;
 
-      if (behind || facing < 0.05) {
-        S.wrap.style.opacity = "0";
-        S.wrap.style.transform = "translate(-9999px,-9999px)";
-        continue;
-      }
+      if (behind || facing < 0.05) { hideLabel(S.wrap); continue; }
       const x = rect.left + (S.ndc.x * 0.5 + 0.5) * rect.width;
       const y = rect.top + (-S.ndc.y * 0.5 + 0.5) * rect.height;
-      const op = THREE.MathUtils.clamp((facing - 0.05) / 0.2, 0, 1).toFixed(2);
-      S.wrap.style.opacity = op;
-      S.wrap.style.transform = `translate(${Math.round(x)}px, ${Math.round(y)}px)`;
+      placeLabel(S.wrap, x, y, THREE.MathUtils.clamp((facing - 0.05) / 0.2, 0, 1).toFixed(2));
     }
   }
 

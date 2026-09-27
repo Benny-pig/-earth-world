@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import { esc } from "../lib/esc.js";
 import { canvasRect } from "../lib/view-rect.js";
+import { placeLabel, hideLabel, drag } from "../lib/label-style.js";
 
 // 全球地震顯示:美國地質調查所(USGS)公開 GeoJSON,免金鑰、每分鐘更新。
 // 只抓規模 4.5 以上(近一天),避免上百筆小地震把地球點滿看不清楚。
@@ -166,16 +167,10 @@ export function createEarthquakesLayer({ globeObject, camera, renderer, naturePo
       Q.ndc.copy(Q.anchor).project(camera);
       const behind = Q.ndc.z > 1;
 
-      if (behind || facing < 0.05) {
-        Q.wrap.style.opacity = "0";
-        Q.wrap.style.transform = "translate(-9999px,-9999px)";
-        continue;
-      }
+      if (behind || facing < 0.05) { hideLabel(Q.wrap); continue; }
       const x = rect.left + (Q.ndc.x * 0.5 + 0.5) * rect.width;
       const y = rect.top + (-Q.ndc.y * 0.5 + 0.5) * rect.height;
-      const op = THREE.MathUtils.clamp((facing - 0.05) / 0.2, 0, 1).toFixed(2);
-      Q.wrap.style.opacity = op;
-      Q.wrap.style.transform = `translate(${Math.round(x)}px, ${Math.round(y)}px)`;
+      placeLabel(Q.wrap, x, y, THREE.MathUtils.clamp((facing - 0.05) / 0.2, 0, 1).toFixed(2));
     }
   }
 

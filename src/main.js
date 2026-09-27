@@ -33,6 +33,7 @@ import { createFlightSim } from "./scene/flight-sim.js";
 import { createLiveCams } from "./scene/livecams.js";
 import { shouldPlayIntro, createIntro } from "./ui/intro.js";
 import { LITE } from "./lib/device.js";
+import { drag } from "./lib/label-style.js";
 import { createRoPlayer } from "./ui/ro-player.js";
 import { createWeatherLayer } from "./scene/weather.js";
 import { createCompare } from "./ui/compare.js";
@@ -292,6 +293,22 @@ export function start() {
   const tooltip = createTooltip();
   let pointerPx = { x: -100, y: -100 };
   renderer.domElement.addEventListener("pointermove", (e) => { pointerPx = { x: e.clientX, y: e.clientY }; });
+
+  // 拖曳模式:按住地球移動超過 6px 就算在轉地球——國名只畫最大的 40 國、地形小字先藏、
+  // 滑過偵測(哪一國、天氣)先停;放開 0.3 秒後恢復。轉動時每格要處理的東西少很多,手感比較跟手
+  let dragDown = null, dragEndTimer = null;
+  renderer.domElement.addEventListener("pointerdown", (e) => { dragDown = { x: e.clientX, y: e.clientY }; clearTimeout(dragEndTimer); });
+  renderer.domElement.addEventListener("pointermove", (e) => {
+    if (!dragDown || drag.active || Math.hypot(e.clientX - dragDown.x, e.clientY - dragDown.y) <= 6) return;
+    drag.active = true;
+    tooltip.hide();
+  });
+  const endDrag = () => {
+    dragDown = null;
+    if (drag.active) dragEndTimer = setTimeout(() => { drag.active = false; }, 300);
+  };
+  window.addEventListener("pointerup", endDrag);
+  window.addEventListener("pointercancel", endDrag);
 
   const clockWeather = createClockWeather({
     onForecast: (code, days) => window.__earth.sidePanel?.setForecast(code, days),
@@ -739,6 +756,29 @@ export function start() {
   }
   window.__earth.quality = () => ({ quality, locked: qualityLocked });
 
+  // 網址後面加 ?fps:畫面上方(搜尋框下面)顯示每秒幾格、最慢一格幾毫秒、目前畫質、畫面上的標籤數(回報「很卡」時截圖用)
+  const fpsBox = new URLSearchParams(location.search).has("fps") ? document.createElement("div") : null;
+  if (fpsBox) {
+    fpsBox.style.cssText = "position:fixed;left:50%;top:62px;transform:translateX(-50%);z-index:99999;font:12px/1.35 ui-monospace,monospace;color:#9f9;" +
+      "background:rgba(0,0,0,.65);padding:4px 7px;border-radius:5px;pointer-events:none;white-space:pre";
+    document.body.appendChild(fpsBox);
+  }
+  const LABEL_HOSTS = "#country-labels,#ocean-labels,#physical-labels,#earthquake-labels,#radio-labels,#launch-labels,#livecam-labels,#sat-labels,#flight-labels";
+  let fmStart = 0, fmFrames = 0, fmWorst = 0, fmLast = 0;
+  function fpsMeter(now) {
+    if (!fpsBox) return;
+    if (fmLast) fmWorst = Math.max(fmWorst, now - fmLast);
+    fmLast = now;
+    fmFrames++;
+    if (!fmStart) fmStart = now;
+    if (now - fmStart < 500) return;
+    let shown = 0;
+    for (const host of document.querySelectorAll(LABEL_HOSTS)) for (const el of host.children) if (el._hidden === false) shown++;
+    fpsBox.textContent = `${Math.round((fmFrames * 1000) / (now - fmStart))} fps · 最慢 ${fmWorst.toFixed(0)}ms\n` +
+      `畫質 ${quality}${qualityLocked ? "(鎖定)" : ""} · 標籤 ${shown}${drag.active ? " · 拖曳中" : ""}`;
+    fmStart = now; fmFrames = 0; fmWorst = 0;
+  }
+
   // 手機瀏覽器的網址列收合/展開、或從別的頁面切回來,有時候 resize 事件觸發時
   // window.innerWidth/Height 讀到的還是過渡中的中間值,canvas 尺寸因此卡住不對、
   // 畫面側邊露出背景色看起來像被裁切。晚一點點再補算一次修正這種情況。
@@ -758,12 +798,13 @@ export function start() {
   function loop() {
     const dt = Math.min(clock.getDelta(), 0.1);
     watchFps(performance.now());
+    fpsMeter(performance.now());
     starfield.update(clock.getElapsedTime());
     globe.update(dt);
     clouds.update(dt);
 
     const now = performance.now();
-    if (now - lastPickAt >= PICK_INTERVAL_MS) {
+    if (!drag.active && now - lastPickAt >= PICK_INTERVAL_MS) {   // 拖曳中不做滑過偵測
       lastPickAt = now;
       raycaster.setFromCamera(pointer, camera);
       hovered = window.__earth.countryLayer ? window.__earth.countryLayer.pick(raycaster, globe.mesh) : null;

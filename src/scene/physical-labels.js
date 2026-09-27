@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import { canvasRect } from "../lib/view-rect.js";
+import { placeLabel, hideLabel, drag } from "../lib/label-style.js";
 
 // 主要自然地理特徵標籤(山脈 / 河流 / 沙漠 / 高原…)。
 // 只有在鏡頭「拉近」時才淡入,遠看時完全隱藏,避免與國家標籤打架。
@@ -59,15 +60,14 @@ export function createPhysicalLabels({ globeObject, camera, renderer, naturePopu
   const worldNormal = new THREE.Vector3();
   const placed = []; // 本幀已放置的 {x,y},供去重
 
-  function hide(L) {
-    if (L.shown) { L.el.style.opacity = "0"; L.el.style.transform = "translate(-9999px,-9999px)"; L.shown = false; }
-  }
+  function hide(L) { hideLabel(L.el); L.shown = false; }
 
   function update() {
     if (!labels.length) return;
     const camDist = camera.position.length();
     const gate = THREE.MathUtils.clamp((FAR - camDist) / (FAR - NEAR), 0, 1);
-    if (gate <= 0.001) { for (const L of labels) hide(L); return; }
+    // 太遠、或正在拖曳地球:地形小字先不畫(一百多個,拖曳時省下來手感比較順)
+    if (gate <= 0.001 || drag.active) { for (const L of labels) hide(L); return; }
 
     const rect = canvasRect(renderer.domElement);
     placed.length = 0;
@@ -94,8 +94,7 @@ export function createPhysicalLabels({ globeObject, camera, renderer, naturePopu
       placed.push({ x, y });
 
       const edgeFade = THREE.MathUtils.clamp((facing - 0.12) / 0.25, 0, 1);
-      L.el.style.opacity = (gate * edgeFade).toFixed(2);
-      L.el.style.transform = `translate(${Math.round(x)}px, ${Math.round(y)}px) translate(-50%, -50%)`;
+      placeLabel(L.el, x, y, (gate * edgeFade).toFixed(2), " translate(-50%, -50%)");
       L.shown = true;
     }
   }
