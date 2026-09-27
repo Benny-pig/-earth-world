@@ -3,8 +3,7 @@ import { makeDraggable } from "./draggable.js";
 
 // ⚖️ 國家比較:挑兩個國家(預設左邊是台灣)並排比較首都、人口、面積、密度、語言、貨幣、
 // 時差、旅遊警示、最佳旅遊月份、緊急電話、小費習慣,以及兩國首都距離與飛行時間。
-// 可以從清單挑,也可以直接點地球上的國家(預設填進右欄;點一下左欄就改填左欄)。
-const REGIONS = [["AS", "🐼 亞洲"], ["ME", "🐪 中東"], ["EU", "🏰 歐洲"], ["NA", "🗽 北美"], ["LA", "🌮 中南美"], ["AF", "🦁 非洲"], ["OC", "🦘 大洋洲"]];
+// 選國家:搜尋框(中英文)、熱門快選、或「從地球點選」(面板縮成一條把地球讓出來);預設填進右欄。
 const EARTH_KM = 6371, CRUISE_KMH = 870;
 
 const flag = (c) => (/^[A-Z]{2}$/.test(c) ? `<img class="cmp-flag" src="https://flagcdn.com/w80/${c.toLowerCase()}.png" alt="" onerror="this.remove()">` : "");
@@ -51,14 +50,6 @@ export function createCompare({ openCountryByCode, onClose }) {
     return d;
   }
 
-  function options(sel) {
-    const coll = (() => { try { return new Intl.Collator("zh-TW-u-co-zhuyin"); } catch { return new Intl.Collator("zh-TW"); } })();
-    const codes = [...(cl()?.meshByCode.keys() || [])].filter((c) => regions?.[c]);
-    return `<option value="">— 選一個國家 —</option>` + REGIONS.map(([rk, rl]) => {
-      const cs = codes.filter((c) => regions[c] === rk).sort((x, y) => coll.compare(nameOf(x), nameOf(y)));
-      return cs.length ? `<optgroup label="${rl}">${cs.map((c) => `<option value="${c}"${c === sel ? " selected" : ""}>${esc(nameOf(c))}</option>`).join("")}</optgroup>` : "";
-    }).join("");
-  }
 
   function distanceKm(c1, c2) {
     const p1 = content()[c1]?.capital_latlon, p2 = content()[c2]?.capital_latlon;
@@ -92,9 +83,41 @@ export function createCompare({ openCountryByCode, onClose }) {
     };
   }
 
+  let showMore = false, picking = false, query = "";
+  const QUICK = ["JP", "KR", "US", "TH", "SG", "GB", "FR", "AU"];   // 台灣讀者最常比的
+
+  function slotHtml(which, code) {
+    const on = nextSlot === which;
+    return `<button type="button" class="cmp-slot${on ? " next" : ""}" data-slot="${which}" title="${on ? "搜尋或點選的國家會填進這一格" : "點一下,改填這一格"}">` +
+      (code ? `${flag(code)}<b>${esc(nameOf(code))}</b><span class="cmp-x" data-clear="${which}" title="清除">✕</span>` : `<span class="cmp-empty-slot">${on ? "👈 選一個國家" : "(空)"}</span>`) +
+      `</button>`;
+  }
+
+  function suggestions() {
+    const q = query.trim().toLowerCase();
+    if (!q) return "";
+    const list = [];
+    for (const [code, w] of cl()?.meshByCode || []) {
+      if (!regions?.[code]) continue;
+      const n = w.userData?.names || {};
+      if ((n.zh || "").includes(query.trim()) || (n.en || "").toLowerCase().includes(q)) list.push(code);
+      if (list.length >= 6) break;
+    }
+    return list.length
+      ? `<div class="cmp-sug">${list.map((c) => `<button type="button" data-pick="${c}">${flag(c)}${esc(nameOf(c))}</button>`).join("")}</div>`
+      : `<div class="cmp-sug cmp-sug-empty">找不到「${esc(query.trim())}」</div>`;
+  }
+
   async function render() {
+    if (picking) {
+      // 從地球點選:面板縮成一條,把地球讓出來
+      body.innerHTML = `<div class="cmp-picking">👉 點地球上的國家,填進${nextSlot === "a" ? "左" : "右"}邊 <button type="button" class="tc-btn" data-act="cancel-pick">取消</button></div>`;
+      panel.classList.add("picking");
+      return;
+    }
+    panel.classList.remove("picking");
     const [da, db] = await Promise.all([loadDeep(a), loadDeep(b)]);
-    if (!enabled) return;
+    if (!enabled || picking) return;
     const A = column(a, da), B = column(b, db);
     const km = a && b ? distanceKm(a, b) : null;
     const cell = (x, key, fmt, better) => {
@@ -106,37 +129,65 @@ export function createCompare({ openCountryByCode, onClose }) {
     const row = (label, key, fmt, better) => `<tr><th>${label}</th>${cell(A, key, fmt, better)}${cell(B, key, fmt, better)}</tr>`;
     const txt = (label, key) => `<tr><th>${label}</th><td>${A ? esc(A[key]) : "—"}</td><td>${B ? esc(B[key]) : "—"}</td></tr>`;
     const raw = (label, key) => `<tr><th>${label}</th><td>${A ? A[key] : "—"}</td><td>${B ? B[key] : "—"}</td></tr>`;
+    const hours = km != null ? km / CRUISE_KMH + 0.5 : 0;
+    const keep = body.scrollTop;
     body.innerHTML =
-      `<div class="cmp-pick">` +
-      `<div class="cmp-slot${nextSlot === "a" ? " next" : ""}" data-slot="a">${a ? flag(a) : "❓"}<select data-sel="a">${options(a)}</select></div>` +
-      `<button type="button" class="tc-btn cmp-swap" data-act="swap" title="左右交換">⇄</button>` +
-      `<div class="cmp-slot${nextSlot === "b" ? " next" : ""}" data-slot="b">${b ? flag(b) : "❓"}<select data-sel="b">${options(b)}</select></div></div>` +
-      `<div class="cmp-hint">👉 也可以<b>直接點地球上的國家</b>,會填進${nextSlot === "a" ? "左" : "右"}邊(發光的那一格)</div>` +
-      (km != null ? `<div class="cmp-dist">✈️ 首都相距 <b>${Math.round(km).toLocaleString("en-US")}</b> 公里 · 直飛約 <b>${Math.floor(km / CRUISE_KMH + 0.5)} 小時 ${Math.round(((km / CRUISE_KMH + 0.5) % 1) * 60)} 分</b></div>` : "") +
-      `<table class="cmp-table"><thead><tr><th></th><th>${A ? esc(A.name) : "—"}</th><th>${B ? esc(B.name) : "—"}</th></tr></thead><tbody>` +
-      txt("🏛️ 首都", "cap") +
-      row("👥 人口", "pop", fmtPop, Math.max) +
-      row("🗺️ 面積", "area", fmtArea, Math.max) +
-      row("🏘️ 人口密度", "dens", (v) => (Number.isFinite(v) ? `${Math.round(v).toLocaleString("en-US")} 人/km²` : "—"), Math.max) +
-      txt("🗣️ 語言", "lang") + txt("🙏 宗教", "rel") + txt("💰 貨幣", "cur") + txt("⚖️ 政體", "gov") +
-      txt("🕐 現在時間", "time") + raw("⚠️ 旅遊警示", "alert") + txt("🌸 最佳旅遊月份", "months") +
-      raw("🆘 緊急電話", "em") + txt("💁 小費", "tip") +
-      `</tbody></table>` +
+      `<div class="cmp-pick">${slotHtml("a", a)}<button type="button" class="tc-btn cmp-swap" data-act="swap" title="左右交換">⇄</button>${slotHtml("b", b)}</div>` +
+      `<div class="cmp-search"><input type="search" placeholder="🔎 輸入國家名稱(中/英),填進發光的那一格" value="${esc(query)}" aria-label="搜尋要比較的國家">` +
+      `<button type="button" class="tc-btn cmp-globe" data-act="pick-globe" title="面板縮小,直接點地球上的國家">🌍 從地球點選</button></div>` +
+      suggestions() +
+      `<div class="cmp-quick">${QUICK.filter((c) => c !== a && c !== b).map((c) => `<button type="button" data-pick="${c}">${flag(c)}${esc(nameOf(c))}</button>`).join("")}</div>` +
+      (km != null ? `<div class="cmp-dist">✈️ 首都相距 <b>${Math.round(km).toLocaleString("en-US")}</b> 公里 · 直飛約 <b>${Math.floor(hours)} 小時 ${Math.round((hours % 1) * 60)} 分</b></div>` : "") +
+      (A || B
+        ? `<table class="cmp-table"><thead><tr><th></th><th>${A ? esc(A.name) : "—"}</th><th>${B ? esc(B.name) : "—"}</th></tr></thead><tbody>` +
+          txt("🏛️ 首都", "cap") +
+          row("👥 人口", "pop", fmtPop, Math.max) +
+          row("🗺️ 面積", "area", fmtArea, Math.max) +
+          txt("🕐 現在時間", "time") + raw("⚠️ 旅遊警示", "alert") + txt("💰 貨幣", "cur") + txt("🗣️ 語言", "lang") +
+          (showMore
+            ? row("🏘️ 人口密度", "dens", (v) => (Number.isFinite(v) ? `${Math.round(v).toLocaleString("en-US")} 人/km²` : "—"), Math.max) +
+              txt("🌸 最佳旅遊月份", "months") + raw("🆘 緊急電話", "em") + txt("💁 小費", "tip") + txt("🙏 宗教", "rel") + txt("⚖️ 政體", "gov")
+            : "") +
+          `</tbody></table>` +
+          `<button type="button" class="cmp-more" data-act="more">${showMore ? "收起 ▴" : "顯示更多項目(人口密度、旅遊月份、緊急電話、小費…)▾"}</button>`
+        : "") +
       `<div class="quiz-actions cmp-actions">${a ? `<button type="button" class="tc-btn" data-open="${a}">📖 看${esc(nameOf(a))}</button>` : ""}` +
       `${b ? `<button type="button" class="tc-btn" data-open="${b}">📖 看${esc(nameOf(b))}</button>` : ""}</div>` +
-      `<div class="sat-caption">🚓 報警 · 🚒 消防 · 🚑 救護;人口、面積等為概略數字,僅供參考</div>`;
+      (showMore ? `<div class="sat-caption">🚓 報警 · 🚒 消防 · 🚑 救護;人口、面積等為概略數字,僅供參考</div>` : "");
+    body.scrollTop = keep;
   }
 
-  body.addEventListener("change", (e) => {
-    const s = e.target.closest("[data-sel]");
-    if (!s) return;
-    if (s.dataset.sel === "a") { a = s.value || null; nextSlot = "b"; } else { b = s.value || null; }
+  function fill(code) {
+    if (!code || !regions?.[code]) return;
+    // 左邊通常是台灣:預設一直換右邊的國家;要換左邊先點一下左邊那格
+    if (nextSlot === "a") { a = code; nextSlot = "b"; } else { b = code; }
+    query = "";
     render();
+  }
+
+  body.addEventListener("input", (e) => {
+    if (!e.target.matches(".cmp-search input")) return;
+    query = e.target.value;
+    const old = body.querySelector(".cmp-sug");
+    const html = suggestions();
+    if (old) old.outerHTML = html || "";
+    else if (html) body.querySelector(".cmp-search").insertAdjacentHTML("afterend", html);
+  });
+  body.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" && e.target.matches(".cmp-search input")) body.querySelector(".cmp-sug [data-pick]")?.click();
   });
   body.addEventListener("click", (e) => {
+    const clr = e.target.closest("[data-clear]");
+    if (clr) { if (clr.dataset.clear === "a") a = null; else b = null; nextSlot = clr.dataset.clear; render(); return; }
     const slot = e.target.closest("[data-slot]");
-    if (slot && e.target.tagName !== "SELECT" && e.target.tagName !== "OPTION") { nextSlot = slot.dataset.slot; render(); return; }
-    if (e.target.closest("[data-act='swap']")) { [a, b] = [b, a]; render(); return; }
+    if (slot) { nextSlot = slot.dataset.slot; render(); body.querySelector(".cmp-search input")?.focus(); return; }
+    const p = e.target.closest("[data-pick]");
+    if (p) { fill(p.dataset.pick); return; }
+    const act = e.target.closest("[data-act]")?.dataset.act;
+    if (act === "swap") { [a, b] = [b, a]; render(); return; }
+    if (act === "more") { showMore = !showMore; render(); return; }
+    if (act === "pick-globe") { picking = true; render(); return; }
+    if (act === "cancel-pick") { picking = false; render(); return; }
     const o = e.target.closest("[data-open]");
     if (o) openCountryByCode(o.dataset.open);
   });
@@ -145,6 +196,8 @@ export function createCompare({ openCountryByCode, onClose }) {
   async function setEnabled(v) {
     enabled = !!v;
     panel.hidden = !enabled;
+    picking = false;
+    panel.classList.remove("picking");
     if (!enabled) return;
     body.innerHTML = `<div class="ap-empty">準備比較資料中…</div>`;
     if (!regions) regions = await fetch("data/country-regions.json").then((r) => (r.ok ? r.json() : {})).catch(() => ({}));
@@ -155,12 +208,12 @@ export function createCompare({ openCountryByCode, onClose }) {
   return {
     setEnabled,
     isEnabled: () => enabled,
-    isPicking: () => enabled,
+    // 電腦:面板開著時點地球就直接填入;手機:按「從地球點選」後才算(不然面板蓋住地球也點不到)
+    isPicking: () => enabled && (picking || window.innerWidth > 640),
     pick(code) {
       if (!code || !regions?.[code]) return;
-      // 左邊通常是台灣:點地球預設一直換右邊的國家;要換左邊先點一下左邊那格
-      if (nextSlot === "a") { a = code; nextSlot = "b"; } else { b = code; }
-      render();
+      picking = false;
+      fill(code);
     },
   };
 }
