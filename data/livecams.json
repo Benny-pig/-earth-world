@@ -1,5 +1,5 @@
 {
- "built": "2026-09-26",
+ "built": "2026-09-28",
  "source": "YouTube 公開直播(各頻道)",
  "cams": [
   {
@@ -46,9 +46,9 @@
    "lon": 139.7005,
    "cc": "JP",
    "tz": "Asia/Tokyo",
-   "v": "8H3nRCFVR6Y",
-   "t": "【ライブ】渋谷スクランブル交差点 / Shibuya Scramble Crossing Live Camera【LIVE】ANN/テレ朝",
-   "ch": "ANNnewsCH"
+   "v": "dfVK7ld38Ys",
+   "t": "【ライブ】いまの渋谷・スクランブル交差点　ライブカメラ　Shibuya Scramble Crossing - Tokyo, Japan　 Live Cam",
+   "ch": "FNNプライムオンライン"
   },
   {
    "id": "fuji",
@@ -58,9 +58,9 @@
    "lon": 138.7274,
    "cc": "JP",
    "tz": "Asia/Tokyo",
-   "v": "5fTImqMp3y8",
-   "t": "【富士山ライブカメラ】赤富士パワーを毎日お届け。\"Mt. Fuji live camera\" World heritage of JAPAN #富士山ライブ #山中湖ライブカメラ#",
-   "ch": "VICENTE AGEMATSU"
+   "v": "Sv9hcJ3k5h4",
+   "t": "【4K】富士山ライブカメラ / 4K Live Camera Mt.FUJI　～河口湖～富士山パノラマロープウェイ",
+   "ch": "フジヤマNAVI"
   },
   {
    "id": "dotonbori",
@@ -70,9 +70,9 @@
    "lon": 135.5013,
    "cc": "JP",
    "tz": "Asia/Tokyo",
-   "v": "czJhGgFsp38",
-   "t": "【LIVE】大阪・道頓堀ライブカメラ　グリコ看板前の様子は？ Osaka Dotonbori #道頓堀 #ライブカメラ",
-   "ch": "MBS NEWS"
+   "v": "i2PpmC1IeKk",
+   "t": "【LIVE】大阪 道頓堀 ライブカメラ　osaka Dotonbori LiveCamera",
+   "ch": "ラジカルビデオジョッキー RVJJP"
   },
   {
    "id": "sapporo",
@@ -154,9 +154,9 @@
    "lon": 39.8262,
    "cc": "SA",
    "tz": "Asia/Riyadh",
-   "v": "eC4LfEVxvKg",
-   "t": "بث مباشر || قناة القرآن الكريم Makkah Live",
-   "ch": "قناة القران الكريم"
+   "v": "52J3GgPc7AY",
+   "t": "🔴 Makkah Live | بث مباشر مكة المكرمة الآن | Live Kaaba HD 24/7",
+   "ch": "Ar Rahman"
   },
   {
    "id": "jerusalem",
@@ -168,18 +168,6 @@
    "tz": "Asia/Jerusalem",
    "v": "77akujLn4k8",
    "t": "EarthCam Live - Western Wall  (Jerusalem, Israel)",
-   "ch": "EarthCam"
-  },
-  {
-   "id": "abbeyroad",
-   "zh": "倫敦 艾比路斑馬線",
-   "ico": "🎸",
-   "lat": 51.532,
-   "lon": -0.1779,
-   "cc": "GB",
-   "tz": "Europe/London",
-   "v": "zMCea32gpmg",
-   "t": "EarthCam Live:  Abbey Road Crossing (London, England)",
    "ch": "EarthCam"
   },
   {
@@ -203,7 +191,7 @@
    "cc": "FR",
    "tz": "Europe/Paris",
    "v": "-xzg3wujOVM",
-   "t": "Sacré-Cœur de Montmartre - Live Webcam 24/7 | visite du pape Léon XIV  | PARIS TV",
+   "t": "Sacré-Cœur de Montmartre - Live Webcam 24/7 | PARIS TV",
    "ch": "PARIS TV"
   },
   {
@@ -226,9 +214,9 @@
    "lon": 12.4964,
    "cc": "IT",
    "tz": "Europe/Rome",
-   "v": "gXm3PGF4z0s",
-   "t": "Rome Live Cam - St. Peter's Dome, Prati district",
-   "ch": "Webcam Italia"
+   "v": "89d3tEaqImM",
+   "t": "REALVIEWCAM360 - ROME Live Cam - Italy - RAMSAT HQ  Vatican & St. Peter’s Basilica Night V",
+   "ch": "RMS - RAMSAT Multimedia "
   },
   {
    "id": "amsterdam",
@@ -274,9 +262,9 @@
    "lon": -22.27,
    "cc": "IS",
    "tz": "Atlantic/Reykjavik",
-   "v": "qkSvU9j4kqM",
-   "t": "🔴 Live Now: 24/7 Iceland Volcano Watch (Multi-cams)",
-   "ch": "afarTV"
+   "v": "2qj5fiaShzY",
+   "t": "🔴 LIVE 24/7 | Iceland Earthquake Map & Volcano Monitor 🌋 Reykjanes Peninsula | Real-Time D",
+   "ch": "Volcoholics - Wild Horizons"
   },
   {
    "id": "aurora",
@@ -346,9 +334,9 @@
    "lon": -115.1728,
    "cc": "US",
    "tz": "America/Los_Angeles",
-   "v": "KJuGU7v5oYw",
-   "t": "EarthCam Live: Bellagio Conservatory & Botanical Gardens (Las Vegas, NV)",
-   "ch": "EarthCam"
+   "v": "V7_orOtu-oo",
+   "t": "LAS Vegas Airport LIVE 24/7 with views of 26R & 26L",
+   "ch": "Flightradar24"
   },
   {
    "id": "kilauea",
@@ -361,18 +349,6 @@
    "v": "HggWKlZv9yk",
    "t": "[V1cam] Kīlauea volcano, Hawaii (west Halemaʻumaʻu crater)",
    "ch": "USGS"
-  },
-  {
-   "id": "waikiki",
-   "zh": "夏威夷 威基基海灘",
-   "ico": "🏄",
-   "lat": 21.2766,
-   "lon": -157.8278,
-   "cc": "US",
-   "tz": "Pacific/Honolulu",
-   "v": "4CK0CsimBHs",
-   "t": "Waikiki Beach LIVE Cam | Waikiki Beach Marriott Resort & Spa, Hawaii",
-   "ch": "Ozolio Live"
   },
   {
    "id": "katmai",
@@ -433,6 +409,18 @@
    "v": "XsOU8JnEpNM",
    "t": "ol Donyo Lodge | Wildlife Live Stream – Kenya",
    "ch": "Africam"
+  },
+  {
+   "id": "sydney",
+   "zh": "雪梨港 歌劇院",
+   "ico": "🦘",
+   "lat": -33.8568,
+   "lon": 151.2153,
+   "cc": "AU",
+   "tz": "Australia/Sydney",
+   "v": "5uZa3-RMFos",
+   "t": "WebcamSydney 1 Live Stream of Harbour 24/7 (~4K)",
+   "ch": "WebcamSydney"
   },
   {
    "id": "newzealand",
