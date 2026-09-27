@@ -505,26 +505,31 @@
     border: 1px solid rgba(255,201,77,.5); background: rgba(255,201,77,.1); color: #ffd98a; font: 700 12px system-ui, "Microsoft JhengHei", sans-serif; }
   #ro-toggle[aria-pressed="true"] { background: rgba(255,201,77,.28); border-color: rgba(255,201,77,.9); }
   #ro-panel {
-    position: fixed; left: 18px; bottom: 70px; z-index: 44; width: 380px; max-width: calc(100vw - 36px);
-    max-height: calc(100vh - 140px); display: flex; flex-direction: column; overflow: hidden;
-    padding: 10px; border-radius: 14px; background: rgba(10, 12, 22, 0.95); backdrop-filter: blur(10px);
+    position: fixed; left: 18px; bottom: 70px; z-index: 44; width: 356px; max-width: calc(100vw - 36px);
+    display: flex; flex-direction: column; overflow: hidden;
+    padding: 8px; border-radius: 12px; background: rgba(10, 12, 22, 0.95); backdrop-filter: blur(10px);
     border: 1px solid rgba(255,201,77,.5); color: #e7edfb; box-shadow: 0 10px 32px rgba(0,0,0,.5);
     font: 13px system-ui, "Microsoft JhengHei", sans-serif;
   }
   #ro-panel[hidden] { display: none; }
-  #ro-panel .sat-head { display: flex; align-items: center; gap: 6px; margin-bottom: 6px; cursor: move; }
-  #ro-panel .sat-title { font-weight: 800; font-size: 15px; margin-right: auto; color: #ffd98a; }
-  .ro-frame { position: relative; width: 100%; aspect-ratio: 16 / 9; min-height: 200px; border-radius: 10px; overflow: hidden; background: #000; flex-shrink: 0; }
+  #ro-panel .sat-head { display: flex; align-items: center; gap: 4px; margin-bottom: 6px; cursor: move; }
+  #ro-panel .sat-title { font-weight: 800; font-size: 14px; margin-right: auto; color: #ffd98a; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  /* YouTube 規定播放器至少 200×200 */
+  .ro-frame { position: relative; width: 100%; aspect-ratio: 16 / 9; min-height: 200px; border-radius: 8px; overflow: hidden; background: #000; flex-shrink: 0; }
   .ro-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-  .ro-list { overflow-y: auto; margin-top: 8px; display: flex; flex-direction: column; gap: 4px; min-height: 0; }
-  .ro-row { display: flex; flex-direction: column; align-items: flex-start; gap: 1px; padding: 7px 10px; border-radius: 9px; cursor: pointer; text-align: left;
-    border: 1px solid transparent; background: rgba(255,255,255,.04); color: inherit; font: 600 13px system-ui, "Microsoft JhengHei", sans-serif; }
-  .ro-row small { font-weight: 500; font-size: 11.5px; opacity: .7; }
-  .ro-row:hover { background: rgba(255,201,77,.1); }
-  .ro-row.on { border-color: rgba(255,201,77,.8); background: rgba(255,201,77,.14); }
+  .ro-list { margin-top: 6px; }
+  .ro-list select { width: 100%; padding: 6px 8px; border-radius: 8px; border: 1px solid rgba(255,201,77,.4); background: rgba(255,255,255,.06);
+    color: inherit; font: 600 13px system-ui, "Microsoft JhengHei", sans-serif; }
+  .ro-list select option { background: #101a30; color: #e7edfb; }
+  /* 迷你:200×200 的小播放器,只留標題列,幾乎不擋地球 */
+  #ro-panel.mini { width: 200px; padding: 6px; }
+  #ro-panel.mini .ro-frame { width: 200px; height: 200px; aspect-ratio: auto; }
+  #ro-panel.mini .ro-list { display: none; }
+  #ro-panel.mini .sat-title { font-size: 12.5px; }
   body[data-theme="journal"] #ro-panel .sat-title { color: #a6572e; }
+  body[data-theme="journal"] .ro-list select option { background: #f3ede0; color: #3b332a; }
   @media (max-width: 640px) {
-    #ro-panel { left: 8px; right: 8px; bottom: 116px; width: auto; max-width: none; max-height: 62vh; z-index: 45; }
+    #ro-panel { left: 8px; bottom: 116px; width: min(356px, calc(100vw - 16px)); max-width: none; z-index: 45; }
     #ro-toggle { padding: 4px 8px; }
   }
   /* 📺 世界即時景點直播:地球上的直播標記 + 播放面板 */
@@ -2230,13 +2235,13 @@
     <div id="weather-body"></div>
   </div>
   <div id="ro-panel" hidden>
-    <div class="sat-head">
+    <div class="sat-head" title="《仙境傳說》Theme of Prontera ©Gravity Corp. · 以版權方/原作相關頻道在 YouTube 上的官方影片播放">
       <span class="sat-title">🎵 RO 懷舊原聲</span>
+      <button id="ro-size" class="rp-head-btn" type="button" aria-label="縮小播放器" title="縮小播放器">▁</button>
       <button id="ro-close" class="rp-head-btn" type="button" aria-label="關閉">×</button>
     </div>
     <div id="ro-frame" class="ro-frame"></div>
     <div id="ro-list" class="ro-list"></div>
-    <div class="sat-caption">《仙境傳說》Theme of Prontera ©Gravity Corp. · 以版權方/原作相關頻道在 YouTube 上的官方影片播放</div>
   </div>
   <div id="livecam-labels" hidden></div>
   <div id="livecam-panel" hidden>

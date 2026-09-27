@@ -14,15 +14,22 @@ const VIDEOS = [
 
 export function createRoPlayer({ music }) {
   const $ = (id) => document.getElementById(id);
-  const panel = $("ro-panel"), frame = $("ro-frame"), list = $("ro-list"), btn = $("ro-toggle");
+  const panel = $("ro-panel"), frame = $("ro-frame"), list = $("ro-list"), btn = $("ro-toggle"), sizeBtn = $("ro-size");
   if (!panel || !frame || !list || !btn) return { setOpen() {}, isOpen: () => false };
   makeDraggable(panel, panel.querySelector(".sat-head"), { disableBelow: 641 });
 
   let open = false, current = VIDEOS[0], musicWasPlaying = false;
+  // 手機預設迷你(200×200,幾乎不擋地球);電腦預設精簡(356×200 + 版本下拉選單)
+  let mini = window.innerWidth <= 640;
 
   function renderList() {
-    list.innerHTML = VIDEOS.map((v) => `<button type="button" class="ro-row${v === current ? " on" : ""}" data-id="${esc(v.id)}">` +
-      `${v === current ? "▶ " : ""}${esc(v.title)}<small>${esc(v.by)}</small></button>`).join("");
+    list.innerHTML = `<select aria-label="選擇版本">${VIDEOS.map((v) =>
+      `<option value="${esc(v.id)}"${v === current ? " selected" : ""}>${esc(v.title)} · ${esc(v.by)}</option>`).join("")}</select>`;
+  }
+  function setMini(v) {
+    mini = !!v;
+    panel.classList.toggle("mini", mini);
+    if (sizeBtn) { sizeBtn.textContent = mini ? "▢" : "▁"; sizeBtn.title = sizeBtn.ariaLabel = mini ? "放大播放器" : "縮小播放器"; }
   }
   function play(v) {
     current = v;
@@ -37,6 +44,7 @@ export function createRoPlayer({ music }) {
     panel.hidden = !open;
     btn.setAttribute("aria-pressed", String(open));
     if (open) {
+      setMini(mini);
       musicWasPlaying = music.isPlaying();
       music.hold(true);
       if (window.__earth?.radio?.isPlaying()) $("radio-stop")?.click();   // 電台也先停,免得兩個聲音疊在一起
@@ -57,11 +65,11 @@ export function createRoPlayer({ music }) {
 
   btn.addEventListener("click", () => setOpen(!open));
   $("ro-close")?.addEventListener("click", () => setOpen(false));
-  list.addEventListener("click", (e) => {
-    const row = e.target.closest("[data-id]");
-    const v = row && VIDEOS.find((x) => x.id === row.dataset.id);
+  list.addEventListener("change", (e) => {
+    const v = VIDEOS.find((x) => x.id === e.target.value);
     if (v && v !== current) play(v);
   });
+  sizeBtn?.addEventListener("click", () => setMini(!mini));
 
   return { setOpen, isOpen: () => open };
 }
