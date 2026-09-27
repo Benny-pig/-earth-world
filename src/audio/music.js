@@ -48,8 +48,10 @@ export function createMusic({ defaultVolume = 0.55 } = {}) {
     }, 40);
   }
 
+  // held:別的播放器(例如 RO 懷舊原聲)正在播,背景音樂先讓位——點畫面也不會自己開始播
+  let held = false;
   function play() {
-    if (!ok) return;
+    if (!ok || held) return;
     audio.play().then(() => {
       if (!muted) fadeTo(targetVolume);
     }).catch((e) => {
@@ -59,7 +61,7 @@ export function createMusic({ defaultVolume = 0.55 } = {}) {
   }
 
   function start() {
-    if (started || !ok) return;
+    if (started || !ok || held) return;
     started = true;
     play();
   }
@@ -113,5 +115,6 @@ export function createMusic({ defaultVolume = 0.55 } = {}) {
     getVolume() { return targetVolume; },
     pause() { audio.pause(); },
     resume() { if (started) play(); },
+    hold(v) { held = !!v; if (held) audio.pause(); },
   };
 }

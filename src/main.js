@@ -33,6 +33,7 @@ import { createFlightSim } from "./scene/flight-sim.js";
 import { createLiveCams } from "./scene/livecams.js";
 import { shouldPlayIntro, createIntro } from "./ui/intro.js";
 import { LITE } from "./lib/device.js";
+import { createRoPlayer } from "./ui/ro-player.js";
 import { createShare } from "./ui/share.js";
 import { setupPwa } from "./ui/pwa.js";
 import { createNaturePopup } from "./ui/nature-popup.js";
@@ -473,6 +474,9 @@ export function start() {
     music.setVolume(v);
     if (radio.isPlaying()) radio.setVolume(v);
   });
+
+  // 🎵 RO 懷舊原聲(下方音樂列的「🎵 RO」按鈕)
+  window.__earth.roPlayer = createRoPlayer({ music });
 
   const audioTrack = document.getElementById("audio-track");
   if (audioTrack) {
