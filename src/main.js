@@ -36,6 +36,7 @@ import { LITE } from "./lib/device.js";
 import { createRoPlayer } from "./ui/ro-player.js";
 import { createWeatherLayer } from "./scene/weather.js";
 import { createCompare } from "./ui/compare.js";
+import { createMoon } from "./scene/moon.js";
 import { createTour } from "./ui/tour.js";
 import { setupI18n } from "./lib/i18n.js";
 import { createShare } from "./ui/share.js";
@@ -492,6 +493,17 @@ export function start() {
     });
   }
 
+  // 🌙 月亮(一直都在地球旁邊;選單「月亮與月相」或點月亮打開月相面板)
+  const moonToggle = document.getElementById("moon-toggle");
+  const moon = createMoon({ parent: globe.lightRig, camera, renderer, onClose: () => setMoon(false) });
+  window.__earth.moon = moon;
+  function setMoon(on) {
+    if (moonToggle) moonToggle.setAttribute("aria-pressed", String(on));
+    moon.setEnabled(on);
+  }
+  moon.onOpen(() => setMoon(true));
+  if (moonToggle) moonToggle.addEventListener("click", () => setMoon(moonToggle.getAttribute("aria-pressed") !== "true"));
+
   // ⚖️ 國家比較
   const compareToggle = document.getElementById("compare-toggle");
   const compare = createCompare({ openCountryByCode, onClose: () => setCompare(false) });
@@ -643,6 +655,8 @@ export function start() {
     if (traffic.isEnabled() && traffic.pickAt(e.clientX, e.clientY)) return;
     // 衛星開著:先看有沒有點到衛星(點地球表面的國家不受影響,只有剛好點在衛星圓點上才算)
     if (orbits.isEnabled() && orbits.pickAt(e.clientX, e.clientY)) return;
+    // 點到月亮:打開月相面板
+    if (moon.pickAt(e.clientX, e.clientY)) { setMoon(true); return; }
     pointer.x = (e.clientX / window.innerWidth) * 2 - 1;
     pointer.y = -(e.clientY / window.innerHeight) * 2 + 1;
     raycaster.setFromCamera(pointer, camera);
@@ -762,6 +776,7 @@ export function start() {
     orbits.update();
     launches.update();
     liveCams.update();
+    moon.update();
     traffic.update();
     if (window.__earth.countryLabels) window.__earth.countryLabels.update();
 

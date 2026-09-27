@@ -58,13 +58,31 @@ export function tzOffsetHours(timeZone, date = new Date()) {
 }
 
 // 太陽此刻直射的地表點(近似,忽略均時差)。lon:UTC 正午時在 0°,每小時西移 15°;lat:太陽赤緯。
+// 天文計算共用:距 J2000.0 的日數、格林威治恆星時(度)
+export const daysSinceJ2000 = (date) => date.getTime() / 86400000 + 2440587.5 - 2451545.0;
+export const gmstDeg = (d) => (((280.46061837 + 360.98564736629 * d) % 360) + 360) % 360;
+const RAD = Math.PI / 180;
+const wrap180 = (x) => ((((x + 180) % 360) + 360) % 360) - 180;
+
+// 太陽的黃經(度)——天文年曆的低精度公式,誤差約 0.01°
+export function sunEclipticLon(d) {
+  const g = (357.529 + 0.98560028 * d) * RAD;
+  return 280.459 + 0.98564736 * d + 1.915 * Math.sin(g) + 0.020 * Math.sin(2 * g);
+}
+
+// 黃道座標 → 地面正下方那一點的經緯度(赤經減去恆星時)
+export function eclipticToSubPoint(lonDeg, latDeg, d) {
+  const e = (23.439 - 0.00000036 * d) * RAD, l = lonDeg * RAD, b = latDeg * RAD;
+  const ra = Math.atan2(Math.sin(l) * Math.cos(e) - Math.tan(b) * Math.sin(e), Math.cos(l)) / RAD;
+  const dec = Math.asin(Math.sin(b) * Math.cos(e) + Math.cos(b) * Math.sin(e) * Math.sin(l)) / RAD;
+  return { lat: dec, lon: wrap180(ra - gmstDeg(d)) };
+}
+
+// 太陽直射點(照亮地球的方向)。以前用「中午 12 點在經度 0」的簡化算法,誤差最多約 4°;
+// 改成跟月亮同一套天文公式,月相(太陽、月亮的相對角度)才會對
 export function subsolarPoint(date = new Date()) {
-  const utcH = date.getUTCHours() + date.getUTCMinutes() / 60 + date.getUTCSeconds() / 3600;
-  const rawLon = -15 * (utcH - 12);
-  const startOfYear = Date.UTC(date.getUTCFullYear(), 0, 0);
-  const dayOfYear = Math.floor((date.getTime() - startOfYear) / 86400000);
-  const lat = -23.44 * Math.cos((2 * Math.PI / 365) * (dayOfYear + 10));
-  return { lat, lon: ((rawLon + 540) % 360) - 180 };
+  const d = daysSinceJ2000(date);
+  return eclipticToSubPoint(sunEclipticLon(d), 0, d);
 }
 
 export function weekdayFromISODate(iso) {
