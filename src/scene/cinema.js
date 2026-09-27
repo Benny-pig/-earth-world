@@ -6,8 +6,10 @@ import { isEn } from "../lib/i18n.js";
 // 選單「電影巡航」立刻開始;畫面放著不動 90 秒(而且沒有開著其他功能)也會自動開始,
 // 適合放在電視、大螢幕或當螢幕保護程式。點任何地方、按任何鍵就結束,停在當下的畫面。
 const IDLE_MS = 90 * 1000;
-const FLY_S = 5.5;      // 飛到下一個地點
-const HOLD_S = 11;      // 在這個地點慢慢漂移
+const FLY_S = 4.5;      // 飛到下一個地點
+const HOLD_S = 6;       // 在這個地點停留、慢慢漂移(原本 11 秒,讀者覺得太久)
+// 下面地點表的漂移量是照 11 秒設計的;停留縮短後等比例縮小,漂移速度維持一樣從容
+const DRIFT = HOLD_S / 11;
 const AUTO_KEY = "earth-world.cinema-auto";
 
 // [緯度, 經度, 開始距離, 結束距離, 經度漂移, 緯度漂移, 中文, 中文副標, English]
@@ -52,7 +54,7 @@ export function createCinema({ camera, rig, globeObject, canAutoStart, onStart, 
     const p = latLonToXYZ(lat, lon, 1);
     return out.set(p.x, p.y, p.z).normalize().applyQuaternion(globeObject.quaternion);
   }
-  const shotStart = (s, out) => worldDir(s[0], s[1] - s[4] / 2, out);
+  const shotStart = (s, out) => worldDir(s[0], s[1] - (s[4] * DRIFT) / 2, out);
 
   function beginFly() {
     phase = "fly"; t = 0;
@@ -89,10 +91,10 @@ export function createCinema({ camera, rig, globeObject, canAutoStart, onStart, 
     // 慢慢漂移:經度往東、緯度微調,同時緩緩拉近
     const k = Math.min(1, t / HOLD_S);
     const e = k * k * (3 - 2 * k) * 0.4 + k * 0.6;   // 大致等速,頭尾稍微柔和
-    worldDir(s[0] + s[5] * e, s[1] - s[4] / 2 + s[4] * e, a);
-    camera.position.copy(a).multiplyScalar(THREE.MathUtils.lerp(s[2], s[3], e));
+    worldDir(s[0] + s[5] * DRIFT * e, s[1] + s[4] * DRIFT * (e - 0.5), a);
+    camera.position.copy(a).multiplyScalar(THREE.MathUtils.lerp(s[2], s[2] + (s[3] - s[2]) * DRIFT, e));
     camera.lookAt(0, 0, 0);
-    if (t >= HOLD_S - 1.2) cap.classList.remove("show");
+    if (t >= HOLD_S - 1) cap.classList.remove("show");
     if (t >= HOLD_S) { shot = (shot + 1) % SHOTS.length; beginFly(); }
   }
 
