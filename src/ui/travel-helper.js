@@ -77,11 +77,18 @@ export function createTravelHelper({ getContent, nameOf, flyTo, onClose }) {
     const content = getContent() || {};
     return Object.keys(content).filter((c) => /^[A-Z]{2}$/.test(c) && c !== "TW").map((c) => ({ c, zh: nameOf(c) }));
   }
-  function pickerHtml() {
+  function hitsHtml() {
     const norm = (s) => String(s || "").replace(/臺/g, "台").toLowerCase();
-    const hits = q ? countries().filter((x) => norm(x.zh).includes(norm(q)) || x.c.toLowerCase() === norm(q)).slice(0, 8) : [];
+    const k = norm(q);
+    // 開頭就對上的排前面(打「日」先出日本),再來名字短的
+    const hits = q ? countries().filter((x) => norm(x.zh).includes(k) || x.c.toLowerCase() === k)
+      .sort((a, b) => (norm(b.zh).startsWith(k) - norm(a.zh).startsWith(k)) || a.zh.length - b.zh.length).slice(0, 8) : [];
+    return hits.map((x) => `<button type="button" data-go="${x.c}">${esc(x.zh)}</button>`).join("") ||
+      (q ? `<span class="au-dim">找不到「${esc(q)}」</span>` : "");
+  }
+  function pickerHtml() {
     return `<div class="tp-pick"><input type="search" class="tp-q" placeholder="🔍 要去哪一國?(例如 日本、泰國)" value="${esc(q)}">` +
-      (hits.length ? `<div class="tp-hits">${hits.map((x) => `<button type="button" data-go="${x.c}">${esc(x.zh)}</button>`).join("")}</div>` : "") +
+      `<div class="tp-hits">${hitsHtml()}</div>` +
       `<div class="tp-pop">${POPULAR.map((c) => `<button type="button" data-go="${c}" class="${c === code ? "on" : ""}">${esc(nameOf(c))}</button>`).join("")}</div></div>`;
   }
 
@@ -220,19 +227,21 @@ export function createTravelHelper({ getContent, nameOf, flyTo, onClose }) {
       speechSynthesis.speak(u);
     }
   });
+  // 搜尋:只更新下面的結果,輸入框本身不動——注音、倉頡、拼音輸入法選字時(組字中)也不處理,
+  // 不然組字會被打斷,只留下注音符號
+  function onSearch(e) {
+    if (e.isComposing || !e.target.classList.contains("tp-q")) return;
+    q = e.target.value.trim();
+    const box = body.querySelector(".tp-hits");
+    if (box) box.innerHTML = hitsHtml();
+  }
+  body.addEventListener("compositionend", onSearch);
+  body.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" && !e.isComposing && e.target.classList.contains("tp-q")) body.querySelector(".tp-hits [data-go]")?.click();
+  });
   body.addEventListener("input", (e) => {
-    if (e.target.classList.contains("tp-q")) {
-      q = e.target.value.trim();
-      const pos = e.target.selectionStart;
-      const pick = body.querySelector(".tp-pick");
-      if (pick) {
-        const tmp = document.createElement("div");
-        tmp.innerHTML = pickerHtml();
-        pick.replaceWith(tmp.firstElementChild);
-        const inp = body.querySelector(".tp-q");
-        if (inp) { inp.focus(); try { inp.setSelectionRange(pos, pos); } catch { /* 有些輸入框不支援 */ } }
-      }
-    } else if (e.target.classList.contains("tp-fx-in")) {
+    if (e.target.classList.contains("tp-q")) onSearch(e);
+    else if (e.target.classList.contains("tp-fx-in")) {
       const out = body.querySelector(".tp-fx-out");
       if (out) out.textContent = trim((Number(e.target.value) || 0) * Number(out.dataset.rate));
     }

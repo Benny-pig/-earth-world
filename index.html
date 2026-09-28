@@ -15,7 +15,7 @@
 }
 </script>
 <!-- modulepreload:start(tools/build-preload.py 自動產生,不要手動改) -->
-<meta name="app-version" content="b654a0e7de">
+<meta name="app-version" content="993b1907ff">
 <link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/earcut@3.0.1/+esm">
 <link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js">
 <link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/controls/OrbitControls.js">
@@ -895,6 +895,9 @@
   .dg-nodata { font-size: 10.5px; opacity: .6; margin-top: 2px; }
   .dg-nodata i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; background: #4a5060; vertical-align: -1px; margin-right: 4px; }
   .dg-tw { padding: 7px 10px; border-radius: 10px; background: rgba(150,220,130,.1); border: 1px solid rgba(150,220,130,.3); font-size: 13px; }
+  .dg-search { margin: 8px 0 4px; }
+  .dg-q { width: 100%; box-sizing: border-box; padding: 6px 10px; border-radius: 10px; border: 1px solid rgba(150,220,130,.4); background: rgba(255,255,255,.06); color: inherit; font: inherit; }
+  .dg-hits:not(:empty) { margin-top: 4px; padding: 4px; border-radius: 10px; background: rgba(255,255,255,.04); }
   .dg-lists { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
   .dg-row { display: flex; align-items: baseline; gap: 5px; width: 100%; padding: 3px 4px; border: none; border-radius: 6px; background: none; color: inherit; font: inherit; font-size: 12px; text-align: left; cursor: pointer; }
   .dg-row:hover { background: rgba(255,255,255,.07); }
@@ -908,6 +911,7 @@
   .tp-hits, .tp-pop { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 6px; }
   .tp-hits button, .tp-pop button { padding: 4px 10px; border-radius: 99px; border: 1px solid rgba(255,190,110,.35); background: rgba(255,255,255,.04); color: inherit; font: inherit; font-size: 12.5px; cursor: pointer; }
   .tp-hits button { border-color: rgba(255,190,110,.8); }
+  .tp-hits:empty { display: none; }
   .tp-pop button.on { background: rgba(255,190,110,.25); border-color: rgba(255,190,110,.85); font-weight: 700; }
   .tp-head { display: flex; align-items: center; gap: 10px; margin: 8px 0; }
   .tp-head img { width: 44px; border-radius: 4px; box-shadow: 0 1px 4px rgba(0,0,0,.4); }
@@ -2483,7 +2487,7 @@
   #tw-controls .layer-row[aria-pressed="true"] { background: rgba(255,196,80,.16); }
   /* 🎛️ 功能卡:四個分頁 + 一格一格的圖示(原本四十幾列排成一長串要一直捲);分頁上的數字 = 那一頁開著幾個 */
   @media (min-width: 641px) { #layer-controls:has(#lc-body:not([hidden])) { width: 318px; } }
-  .lc-tabs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 3px; margin: 0 2px 6px; padding: 3px; border-radius: 10px; background: rgba(255,255,255,.05); }
+  .lc-tabs { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 3px; margin: 0 2px 6px; padding: 3px; border-radius: 10px; background: rgba(255,255,255,.05); }
   .lc-tab { position: relative; display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 5px 2px 4px; border: none; border-radius: 8px;
     background: none; color: #aebbdc; font: 12px system-ui, "Microsoft JhengHei", sans-serif; cursor: pointer; transition: background .15s, color .15s; }
   .lc-tab:hover { background: rgba(120,170,255,.1); }
@@ -3483,6 +3487,7 @@
           <button type="button" role="tab" class="lc-tab" data-cat="live" aria-selected="false"><span class="lc-tab-i">🌐</span><span class="lc-tab-t">即時世界</span><b class="lc-tab-n" hidden></b></button>
           <button type="button" role="tab" class="lc-tab" data-cat="space" aria-selected="false"><span class="lc-tab-i">🚀</span><span class="lc-tab-t">太空天象</span><b class="lc-tab-n" hidden></b></button>
           <button type="button" role="tab" class="lc-tab" data-cat="explore" aria-selected="false"><span class="lc-tab-i">🧭</span><span class="lc-tab-t">探索遊戲</span><b class="lc-tab-n" hidden></b></button>
+          <button type="button" role="tab" class="lc-tab" data-cat="travel" aria-selected="false"><span class="lc-tab-i">🧳</span><span class="lc-tab-t">旅人百科</span><b class="lc-tab-n" hidden></b></button>
           <button type="button" role="tab" class="lc-tab" data-cat="sound" aria-selected="false"><span class="lc-tab-i">🎵</span><span class="lc-tab-t">聲音</span><b class="lc-tab-n" hidden></b></button>
         </div>
         <div class="lc-pane" data-cat="live" role="tabpanel">
@@ -3495,8 +3500,17 @@
           <button id="temp-toggle" class="layer-row" type="button" aria-pressed="false">
             <span class="layer-icon">🌡️</span>世界溫度排行
           </button>
+          <button id="stats-toggle" class="layer-row" type="button" aria-pressed="false" title="人口、壽命、生育率、所得、碳排放…整顆地球依數值上色,拖時間軸看七十年的變化">
+            <span class="layer-icon">📊</span>數據地球
+          </button>
           <button id="quake-toggle" class="layer-row" type="button" aria-pressed="true">
             <span class="layer-icon">📳</span>全球地震顯示<span id="quake-severe-badge" class="layer-badge" hidden title="偵測到規模 6 以上地震">⚠</span>
+          </button>
+          <button id="plates-toggle" class="layer-row" type="button" aria-pressed="false" title="全球板塊邊界、環太平洋火環帶,還有台灣為什麼地震這麼多">
+            <span class="layer-icon">🧩</span>板塊與地震帶
+          </button>
+          <button id="layers-toggle" class="layer-row" type="button" aria-pressed="false" title="把地球切開四分之一,從大氣層一路看到地心">
+            <span class="layer-icon">🌍</span>地球剖面:大氣到地心
           </button>
           <button id="satellite-toggle" class="layer-row" type="button" aria-pressed="false">
             <span class="layer-icon">☁️</span>颱風衛星雲圖
@@ -3553,12 +3567,6 @@
           </button>
         </div>
         <div class="lc-pane" data-cat="explore" role="tabpanel">
-          <button id="plates-toggle" class="layer-row" type="button" aria-pressed="false" title="全球板塊邊界、環太平洋火環帶,還有台灣為什麼地震這麼多">
-            <span class="layer-icon">🧩</span>板塊與地震帶
-          </button>
-          <button id="layers-toggle" class="layer-row" type="button" aria-pressed="false" title="把地球切開四分之一,從大氣層一路看到地心">
-            <span class="layer-icon">🌍</span>地球剖面:大氣到地心
-          </button>
           <button id="bday-toggle" class="layer-row" type="button" aria-pressed="false">
             <span class="layer-icon">🎂</span>生日那天的天空
           </button>
@@ -3567,12 +3575,6 @@
           </button>
           <button id="quiz-toggle" class="layer-row" type="button" aria-pressed="false">
             <span class="layer-icon">🎯</span>地理猜謎遊戲
-          </button>
-          <button id="stats-toggle" class="layer-row" type="button" aria-pressed="false" title="人口、壽命、生育率、所得、碳排放…整顆地球依數值上色,拖時間軸看七十年的變化">
-            <span class="layer-icon">📊</span>數據地球
-          </button>
-          <button id="trip-toggle" class="layer-row" type="button" aria-pressed="false" title="簽證、插座電壓、時差、匯率、小費、緊急電話,一頁看完">
-            <span class="layer-icon">🧳</span>出國小幫手
           </button>
           <button id="passport-toggle" class="layer-row" type="button" aria-pressed="false">
             <span class="layer-icon">🛂</span>旅行護照集章
@@ -3585,6 +3587,11 @@
           </button>
           <button id="otd-toggle" class="layer-row" type="button" aria-pressed="false">
             <span class="layer-icon">📜</span>歷史上的今天
+          </button>
+        </div>
+        <div class="lc-pane" data-cat="travel" role="tabpanel">
+          <button id="trip-toggle" class="layer-row" type="button" aria-pressed="false" title="簽證、插座電壓、時差、匯率、小費、緊急電話,一頁看完">
+            <span class="layer-icon">🧳</span>出國小幫手
           </button>
         </div>
         <div class="lc-pane" data-cat="sound" role="tabpanel">

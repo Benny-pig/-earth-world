@@ -88,14 +88,17 @@ export function createTempRank({ getContent, nameOf, openCountryByCode, onClose 
     const r = e.target.closest(".tr-row");
     if (r) openCountryByCode(r.dataset.code);
   });
-  body.addEventListener("input", (e) => {
-    if (!e.target.classList.contains("tr-q")) return;
+  // 注音等輸入法組字中不要重畫(會把組字打斷,只剩注音符號),選完字再更新
+  const onSearch = (e) => {
+    if (e.isComposing || !e.target.classList.contains("tr-q")) return;
     q = e.target.value.trim();
     const pos = e.target.selectionStart;
     render();
     const inp = body.querySelector(".tr-q");
     if (inp) { inp.focus(); try { inp.setSelectionRange(pos, pos); } catch { /* 有些輸入框不支援 */ } }
-  });
+  };
+  body.addEventListener("input", onSearch);
+  body.addEventListener("compositionend", onSearch);
 
   async function setEnabled(v) {
     enabled = !!v;

@@ -42,7 +42,7 @@ export function createDataGlobe({ globeObject, countryLayer, rig, nameOf, onClos
   group.visible = false;
   globeObject.add(group);
   const meshes = new Map();   // code → mesh
-  let enabled = false, hidden = false, index = null, cur = null, year = 0, playing = null;
+  let enabled = false, hidden = false, index = null, cur = null, year = 0, playing = null, q = "", pin = null;
   const cache = new Map();
 
   async function loadIndex() {
@@ -130,9 +130,33 @@ export function createDataGlobe({ globeObject, countryLayer, rig, nameOf, onClos
   }
   const row = (r, i) => `<button type="button" class="dg-row" data-code="${r.code}"><span class="dg-rk">${i}</span>` +
     `<span class="dg-nm">${esc(nameOf(r.code))}</span><b>${fmt(cur.meta.id, r.v)}</b>${r.y !== year ? `<small>(${r.y})</small>` : ""}</button>`;
-  // 台灣排在後半段就說「倒數第幾名」,比較好懂
-  const twLine = (tw, i, n) => `📍 台灣:<b>${fmt(cur.meta.id, tw.v)}</b>${tw.y !== year ? `(${tw.y} 年)` : ""},` +
-    (i + 1 > n / 2 ? `全球<b>倒數第 ${n - i}</b> 名` : `全球第 <b>${i + 1}</b> 名`) + `(共 ${n} 個國家與地區)`;
+  // 排在後半段就說「倒數第幾名」,比較好懂
+  function rankLine(label, code, rows) {
+    const i = rows.findIndex((r) => r.code === code), n = rows.length;
+    if (i < 0) return `📍 ${esc(label)}:這一年沒有資料`;
+    const r = rows[i];
+    return `📍 ${esc(label)}:<b>${fmt(cur.meta.id, r.v)}</b>${r.y !== year ? `(${r.y} 年)` : ""},` +
+      (i + 1 > n / 2 ? `全球<b>倒數第 ${n - i}</b> 名` : `全球第 <b>${i + 1}</b> 名`) + `(共 ${n} 個國家與地區)`;
+  }
+  const statusHtml = (rows) => rankLine("台灣", "TW", rows) + (pin && pin !== "TW" ? `<br>${rankLine(nameOf(pin), pin, rows)}` : "");
+  const listsHtml = (rows) => `<div><div class="mt-h">最高</div>${rows.slice(0, 5).map((r, i) => row(r, i + 1)).join("")}</div>` +
+    `<div><div class="mt-h">最低</div>${rows.slice(-5).reverse().map((r, i) => row(r, rows.length - i)).join("")}</div>`;
+  // 找國家:名稱或代碼有包含打的字就列出來(連同數值和名次)
+  function hitsHtml(rows) {
+    if (!q) return "";
+    const norm = (x) => String(x || "").replace(/臺/g, "台").toLowerCase();
+    const k = norm(q);
+    // 開頭就對上的排前面(打「德」先出德國,不是維德角),再來名字短的
+    const hits = [...meshes.keys()].filter((code) => norm(nameOf(code)).includes(k) || code.toLowerCase() === k)
+      .sort((a, b) => (norm(nameOf(b)).startsWith(k) - norm(nameOf(a)).startsWith(k)) || nameOf(a).length - nameOf(b).length)
+      .slice(0, 8);
+    if (!hits.length) return `<div class="au-dim">找不到「${esc(q)}」</div>`;
+    return hits.map((code) => {
+      const i = rows.findIndex((r) => r.code === code);
+      return `<button type="button" class="dg-row" data-pin="${code}"><span class="dg-rk">${i >= 0 ? i + 1 : "—"}</span>` +
+        `<span class="dg-nm">${esc(nameOf(code))}</span><b>${i >= 0 ? fmt(cur.meta.id, rows[i].v) : "沒有資料"}</b></button>`;
+    }).join("");
+  }
   function render() {
     if (!body) return;
     if (!index) { body.innerHTML = `<div class="ap-empty">讀取資料中…</div>`; return; }
@@ -140,8 +164,6 @@ export function createDataGlobe({ globeObject, countryLayer, rig, nameOf, onClos
     if (!cur) { body.innerHTML = chips + `<div class="ap-empty">讀取資料中…</div>`; return; }
     const m = cur.meta;
     const rows = ranking();
-    const twI = rows.findIndex((r) => r.code === "TW");
-    const tw = rows[twI];
     body.innerHTML = chips +
       `<div class="dg-title">${esc(m.zh)} <span>${year} 年</span></div>` +
       `<div class="dg-note">${esc(m.note)}</div>` +
@@ -149,27 +171,28 @@ export function createDataGlobe({ globeObject, countryLayer, rig, nameOf, onClos
       `<input type="range" class="dg-slider" min="${cur.y0}" max="${cur.y1}" step="1" value="${year}" aria-label="年份">` +
       `<b class="dg-y">${year}</b></div>` +
       legend() +
-      (tw ? `<div class="dg-tw">${twLine(tw, twI, rows.length)}</div>` : "") +
-      `<div class="dg-lists"><div><div class="mt-h">最高</div>${rows.slice(0, 5).map((r, i) => row(r, i + 1)).join("")}</div>` +
-      `<div><div class="mt-h">最低</div>${rows.slice(-5).reverse().map((r, i) => row(r, rows.length - i)).join("")}</div></div>` +
-      `<div class="sat-caption">滑鼠移到國家上看數值;點排行榜的國家飛過去。資料:<a href="${esc(m.url)}" target="_blank" rel="noopener">Our World in Data</a>` +
+      `<div class="dg-tw">${statusHtml(rows)}</div>` +
+      `<div class="dg-search"><input type="search" class="dg-q" placeholder="🔍 找國家(例如 日本、德國)" value="${esc(q)}"><div class="dg-hits">${hitsHtml(rows)}</div></div>` +
+      `<div class="dg-lists">${listsHtml(rows)}</div>` +
+      `<div class="sat-caption">滑鼠移到國家上看數值;點排行榜或搜尋結果的國家會飛過去,並跟台灣一起顯示名次。資料:<a href="${esc(m.url)}" target="_blank" rel="noopener">Our World in Data</a>` +
       `(CC BY 4.0),原始來源:${esc(m.src)}。某年沒有資料的國家,用最近 ${LOOKBACK} 年內的數字(括號標年份)。</div>`;
   }
-  // 拖年份時只更新會變的部分,不要整個重畫(拉桿才不會被換掉)
+  // 換年份(拖拉桿、播放)時只更新會變的部分,拉桿和搜尋框不會被換掉
   function refreshYear() {
     paint();
     if (!body || !cur) return;
+    if (!body.querySelector(".dg-lists")) { render(); return; }
+    const rows = ranking();
+    body.querySelector(".dg-title span").textContent = `${year} 年`;
+    body.querySelector(".dg-y").textContent = year;
     const slider = body.querySelector(".dg-slider");
-    if (slider && document.activeElement === slider) {
-      const rows = ranking(), twI = rows.findIndex((r) => r.code === "TW"), tw = rows[twI];
-      body.querySelector(".dg-title span").textContent = `${year} 年`;
-      body.querySelector(".dg-y").textContent = year;
-      const twEl = body.querySelector(".dg-tw");
-      if (twEl && tw) twEl.innerHTML = twLine(tw, twI, rows.length);
-      const lists = body.querySelector(".dg-lists");
-      if (lists) lists.innerHTML = `<div><div class="mt-h">最高</div>${rows.slice(0, 5).map((r, i) => row(r, i + 1)).join("")}</div>` +
-        `<div><div class="mt-h">最低</div>${rows.slice(-5).reverse().map((r, i) => row(r, rows.length - i)).join("")}</div>`;
-    } else render();
+    if (slider && document.activeElement !== slider) slider.value = year;
+    const play = body.querySelector(".dg-play");
+    if (play) play.textContent = playing ? "⏸" : "▶";
+    body.querySelector(".dg-tw").innerHTML = statusHtml(rows);
+    body.querySelector(".dg-lists").innerHTML = listsHtml(rows);
+    const hits = body.querySelector(".dg-hits");
+    if (hits && q) hits.innerHTML = hitsHtml(rows);
   }
 
   async function choose(id) {
@@ -184,35 +207,48 @@ export function createDataGlobe({ globeObject, countryLayer, rig, nameOf, onClos
   }
   function stop() { if (playing) { clearInterval(playing); playing = null; } }
   function play() {
-    if (playing) { stop(); render(); return; }
+    if (playing) { stop(); refreshYear(); return; }
     if (year >= cur.y1) year = cur.y0;
     playing = setInterval(() => {
-      if (year >= cur.y1) { stop(); render(); return; }
+      if (year >= cur.y1) { stop(); refreshYear(); return; }
       year++;
-      paint();
-      render();
+      refreshYear();
     }, 180);
-    render();
+    refreshYear();
+  }
+  function flyToCode(code) {
+    const w = cl()?.meshByCode.get(code);
+    const [lo, la] = w?.userData.centroidLatLon || [];   // 注意:國家質心存成 [經度, 緯度]
+    if (la != null) { if (window.innerWidth <= 640) setMin(true); rig.flyTo(la, lo, { distance: 2.3, ms: 1400 }); }
   }
 
   body?.addEventListener("click", (e) => {
     const ind = e.target.closest("[data-ind]");
     if (ind) { choose(ind.dataset.ind); return; }
     if (e.target.closest("[data-act=play]")) { play(); return; }
-    const r = e.target.closest(".dg-row");
-    if (r) {
-      const w = cl()?.meshByCode.get(r.dataset.code);
-      const [lo, la] = w?.userData.centroidLatLon || [];   // 注意:國家質心存成 [經度, 緯度]
-      if (la != null) { if (window.innerWidth <= 640) setMin(true); rig.flyTo(la, lo, { distance: 2.3, ms: 1400 }); }
-    }
+    const p = e.target.closest("[data-pin]");
+    if (p) { pin = p.dataset.pin; q = ""; const inp = body.querySelector(".dg-q"); if (inp) inp.value = ""; refreshYear(); body.querySelector(".dg-hits").innerHTML = ""; flyToCode(pin); return; }
+    const r = e.target.closest(".dg-row[data-code]");
+    if (r) { pin = r.dataset.code; refreshYear(); flyToCode(pin); }
+  });
+  // 搜尋框:注音等輸入法組字中不處理(不然組字會被打斷),選完字再更新結果
+  function onSearch(e) {
+    if (e.isComposing || !e.target.classList.contains("dg-q")) return;
+    q = e.target.value.trim();
+    const hits = body.querySelector(".dg-hits");
+    if (hits && cur) hits.innerHTML = hitsHtml(ranking());
+  }
+  body?.addEventListener("compositionend", onSearch);
+  body?.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" && !e.isComposing && e.target.classList.contains("dg-q")) body.querySelector(".dg-hits [data-pin]")?.click();
   });
   body?.addEventListener("input", (e) => {
+    if (e.target.classList.contains("dg-q")) { onSearch(e); return; }
     if (!e.target.classList.contains("dg-slider")) return;
     stop();
     year = Number(e.target.value);
     refreshYear();
   });
-  body?.addEventListener("change", (e) => { if (e.target.classList.contains("dg-slider")) render(); });
 
   async function setEnabled(v) {
     enabled = !!v;

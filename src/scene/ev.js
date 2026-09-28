@@ -141,18 +141,24 @@ export function createEvLayer({ globeObject, rig, onClose }) {
   }
 
   // 打字時只重畫清單(不重建整個面板,輸入框才不會失焦)
-  let typing = null;
-  body.addEventListener("input", (e) => {
-    if (!e.target.matches(".ev-q")) return;
+  // 注音等輸入法組字中不處理(重畫會把組字打斷,只剩注音符號),選完字再更新
+  let typing = null, composing = false;
+  body.addEventListener("compositionstart", () => { composing = true; });
+  const onSearch = (e) => {
+    if (e.type === "compositionend") composing = false;
+    if (e.isComposing || composing || !e.target.matches(".ev-q")) return;
     q = e.target.value; limit = MAX_ROWS;
     clearTimeout(typing);
     typing = setTimeout(() => {
+      if (composing) return;   // 讀者又開始打下一個字了,等選完字再更新
       const pos = e.target.selectionStart;
       render();
       const inp = body.querySelector(".ev-q");
       inp?.focus(); inp?.setSelectionRange(pos, pos);
     }, 200);
-  });
+  };
+  body.addEventListener("input", onSearch);
+  body.addEventListener("compositionend", onSearch);
   body.addEventListener("change", (e) => {
     if (e.target.matches(".ev-county")) { county = e.target.value; limit = MAX_ROWS; render(); }
   });
