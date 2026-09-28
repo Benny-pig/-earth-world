@@ -44,11 +44,13 @@ export function setupFontSize({ toast } = {}) {
     }
     if (announce && toast) toast(isEn ? `Text size: ${st.en}` : `🔤 字體大小:${st.zh}`);
   }
-  btn?.addEventListener("click", () => {
-    const i = STEPS.findIndex((s) => s.k === cur);
-    cur = STEPS[(i + 1) % STEPS.length].k;
+  function set(k, announce = true) {
+    if (!STEPS.some((s) => s.k === k)) return;
+    cur = k;
     try { localStorage.setItem(KEY, cur); } catch { /* 存不了就算了 */ }
-    apply(true);
-  });
+    apply(announce);
+  }
+  btn?.addEventListener("click", () => set(STEPS[(STEPS.findIndex((s) => s.k === cur) + 1) % STEPS.length].k));
   apply(false);
+  return { steps: STEPS, current: () => cur, set };
 }

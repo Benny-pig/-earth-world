@@ -45,6 +45,7 @@ import { createCinema } from "./scene/cinema.js";
 import { createFavorites } from "./ui/favorites.js";
 import { createHomeCompass } from "./ui/home-compass.js";
 import { setupFontSize } from "./ui/font-size.js";
+import { createSettings } from "./ui/settings.js";
 import { createRecent } from "./ui/recent.js";
 import { createConstellations } from "./scene/constellations.js";
 import { createSunInfo } from "./scene/sun-info.js";
@@ -342,7 +343,7 @@ export function start() {
   // 🕘 最近看過的國家(搜尋框打開時列在最上面)
   const recent = createRecent();
   // 🔤 字體大小(右上角 Aa)
-  setupFontSize({
+  const fontSize = setupFontSize({
     toast: (msg) => {
       let el = document.getElementById("share-toast");
       if (!el) { el = document.createElement("div"); el.id = "share-toast"; document.body.appendChild(el); }
@@ -350,13 +351,8 @@ export function start() {
       clearTimeout(el._t); el._t = setTimeout(() => el.classList.remove("show"), 1600);
     },
   });
-  // 手機右上角:主題鈕只留前面的圖示(🌙/☀/⚜/◎),文字換主題時跟著更新
-  const themeBtn = document.getElementById("theme-toggle");
-  if (themeBtn) {
-    const syncShort = () => { themeBtn.dataset.short = themeBtn.textContent.trim().split(/\s+/)[0] || "🌙"; };
-    syncShort();
-    new MutationObserver(syncShort).observe(themeBtn, { childList: true, characterData: true, subtree: true });
-  }
+  // ⚙️ 右上角的設定選單:字體、主題、語言、導覽、安裝 App
+  createSettings({ fontSize });
   // 🧭 指北針 + 🏠 回到台灣
   const homeCompass = createHomeCompass({ camera, rig });
 

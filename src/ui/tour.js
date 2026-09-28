@@ -13,7 +13,7 @@ const STEPS = [
   { sel: "#layer-controls", title: "🎛️ 功能選單", text: "地震、天氣、航班、衛星、直播、猜謎遊戲…都在這裡,<b>按一下打開、再按一下關掉</b>。" },
   { sel: "#tw-controls", title: "🚦 台灣交通", text: "台灣機場即時航班、國道路況與監視器、高鐵台鐵時刻。" },
   { sel: "#audio-ui", title: "🎵 音樂", text: "背景音樂可以換曲子;按「🎵 RO」可以聽仙境傳說的懷舊原聲。" },
-  { sel: "#top-tools", title: "🔗 分享與主題", text: "把現在的畫面分享給朋友、換版面風格,或把網站安裝成 App。看不懂的時候按「❓」再看一次導覽。" },
+  { sel: "#top-tools", title: "🔗 分享、收藏、設定", text: "把現在的畫面分享給朋友、打開我的收藏;「⚙️ 設定」裡可以調字體大小、換版面主題、切換中英文、重看這個導覽。" },
 ];
 
 const STEPS_EN = [
@@ -23,7 +23,7 @@ const STEPS_EN = [
   { sel: "#layer-controls", title: "🎛️ Features", text: "Earthquakes, weather, flights, satellites, live cams, games… <b>tap to turn on, tap again to turn off</b>." },
   { sel: "#tw-controls", title: "🚦 Taiwan transport", text: "Live flights at Taiwan's airports, freeway traffic and cameras, and train timetables." },
   { sel: "#audio-ui", title: "🎵 Music", text: "Pick the background music, or tap “🎵 RO” for the Ragnarok Online soundtrack." },
-  { sel: "#top-tools", title: "🔗 Share & settings", text: "Share this view, change the theme, switch language (EN / 中) or install the site as an app. Tap “❓” to see this tour again." },
+  { sel: "#top-tools", title: "🔗 Share, saved & settings", text: "Share this view or open your saved places. “⚙️ Settings” has text size, theme, language (EN / 中) and this tour." },
 ];
 
 // 功能第一次打開時的一句話說明

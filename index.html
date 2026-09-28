@@ -2377,11 +2377,37 @@
   }
   /* 版面風格切換:移到右上角(原本「將滑鼠移到國家」提示的位置),不用點進大百科才能選 */
   #top-tools { position: fixed; top: 18px; right: 18px; z-index: 43; display: flex; gap: 6px; }
+  #top-tools .tt-hidden { display: none; }
+  #top-tools.pop-open { z-index: 70; }
+  #top-tools { align-items: flex-start; }
+  #settings-btn[aria-expanded="true"] { background: rgba(77,163,255,.25); border-color: rgba(120,170,255,.7); }
+  /* ⚙️ 設定選單 */
+  #settings-pop { position: absolute; top: calc(100% + 8px); right: 0; width: 290px; padding: 10px; border-radius: 12px; z-index: 60;
+    background: rgba(8,12,24,.96); backdrop-filter: blur(12px); border: 1px solid rgba(120,170,255,.35); color: #e7edfb;
+    box-shadow: 0 12px 32px rgba(0,0,0,.55); font: 13px system-ui, "Microsoft JhengHei", sans-serif; display: flex; flex-direction: column; gap: 8px; }
+  #settings-pop[hidden] { display: none; }
+  .set-row { display: flex; align-items: center; gap: 8px; }
+  .set-k { width: 64px; flex: none; font-weight: 700; font-size: 12.5px; opacity: .85; }
+  .set-seg { flex: 1; display: flex; border: 1px solid rgba(120,170,255,.3); border-radius: 8px; overflow: hidden; }
+  .set-seg button { flex: 1; padding: 6px 2px; border: 0; border-left: 1px solid rgba(120,170,255,.2); background: rgba(255,255,255,.03);
+    color: inherit; font: inherit; font-size: 12.5px; cursor: pointer; white-space: nowrap; }
+  .set-seg button:first-child { border-left: 0; }
+  .set-seg button:hover { background: rgba(120,170,255,.14); }
+  .set-seg button.on { background: rgba(77,163,255,.35); font-weight: 700; }
+  .set-item { text-align: left; padding: 7px 10px; border-radius: 8px; border: 1px solid rgba(120,170,255,.25); background: rgba(255,255,255,.04);
+    color: inherit; font: inherit; cursor: pointer; }
+  .set-item:hover { background: rgba(120,170,255,.14); }
+  body[data-theme="journal"] #settings-pop { background: #f3ede0; color: #3b332a; border-color: rgba(120,90,50,.3); }
+  body[data-theme="journal"] .set-seg button.on { background: #a6572e; color: #fff; }
+  body[data-theme="fantasy"] #settings-pop { background: linear-gradient(180deg,#332714,#1c150c); border-color: #c9a227; color: #f0dfab; }
+  body[data-theme="fantasy"] .set-seg button.on { background: rgba(201,162,39,.4); }
+  body[data-theme="hud"] #settings-pop { background: linear-gradient(180deg,#0e2226,#04121a); border-color: #00e5ff; color: #cdf3ff; border-radius: 3px; }
+  body[data-theme="hud"] .set-seg button.on { background: rgba(0,229,255,.3); }
   @media (max-width: 640px) {
-    #top-tools { gap: 4px; }
-    #top-tools button[data-short] { font-size: 0 !important; padding-left: 8px; padding-right: 8px; }
-    #top-tools button[data-short]::before { content: attr(data-short); font-size: 13px; }
-    #top-tools button { padding-left: 7px !important; padding-right: 7px !important; }
+    #top-tools { gap: 5px; }
+    #top-tools button[data-short] { font-size: 0 !important; padding-left: 9px; padding-right: 9px; }
+    #top-tools button[data-short]::before { content: attr(data-short); font-size: 14px; }
+    #settings-pop { position: fixed; top: 56px; right: 8px; left: 8px; width: auto; }
   }
   #share-toast {
     position: fixed; left: 50%; bottom: 90px; transform: translateX(-50%) translateY(10px); z-index: 60;
@@ -2398,7 +2424,7 @@
   }
   #install-ios b { color: #8fd4ff; }
   #install-ios button { margin-top: 6px; padding: 4px 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,.3); background: none; color: inherit; cursor: pointer; }
-  #theme-toggle, #share-btn, #fav-btn, #font-btn, #install-btn, #tour-btn, #lang-btn {
+  #theme-toggle, #share-btn, #fav-btn, #font-btn, #settings-btn, #install-btn, #tour-btn, #lang-btn {
     cursor: pointer;
     padding: 5px 10px; font-size: 11px; border-radius: 8px;
     background: rgba(4, 6, 12, 0.88); backdrop-filter: blur(10px);
@@ -2800,13 +2826,18 @@
   </div>
   <div id="side-panel"><button class="close" aria-label="關閉">×</button><div id="side-panel-body"></div></div>
   <div id="top-tools">
-    <button id="install-btn" type="button" hidden aria-label="把地球世界安裝成 App" title="安裝到手機/電腦,像 App 一樣全螢幕開啟">📲 安裝 App</button>
-    <button id="share-btn" type="button" data-short="🔗" aria-label="分享目前畫面" title="分享目前畫面(複製連結)">🔗 分享</button>
-    <button id="fav-btn" type="button" data-short="⭐" aria-pressed="false" aria-label="我的收藏" title="我的收藏">⭐ 收藏</button>
-    <button id="font-btn" type="button" data-short="Aa" aria-label="字體大小">Aa 標準</button>
-    <button id="theme-toggle" type="button" aria-label="切換版面主題">🌙 星空</button>
-    <button id="lang-btn" type="button" aria-label="English / 中文">EN</button>
-    <button id="tour-btn" type="button" aria-label="重看新手導覽" title="新手導覽">❓</button>
+    <button id="share-btn" type="button" aria-label="分享目前畫面" title="分享目前畫面(複製連結)">🔗 分享</button>
+    <button id="fav-btn" type="button" aria-pressed="false" aria-label="我的收藏" title="我的收藏">⭐ 收藏</button>
+    <button id="settings-btn" type="button" data-short="⚙️" aria-expanded="false" aria-haspopup="true" aria-label="設定" title="設定:字體大小、主題、語言、導覽">⚙️ 設定</button>
+    <div id="settings-pop" hidden></div>
+    <!-- 以下按鈕收進「⚙️ 設定」:藏起來但保留,設定選單按下去就轉給它們處理 -->
+    <span class="tt-hidden">
+      <button id="install-btn" type="button" hidden aria-label="把地球世界安裝成 App">📲 安裝 App</button>
+      <button id="font-btn" type="button" aria-label="字體大小">Aa 標準</button>
+      <button id="theme-toggle" type="button" aria-label="切換版面主題">🌙 星空</button>
+      <button id="lang-btn" type="button" aria-label="English / 中文">EN</button>
+      <button id="tour-btn" type="button" aria-label="重看新手導覽">❓</button>
+    </span>
   </div>
   <div id="clock-weather" hidden></div>
   <div id="audio-ui">
