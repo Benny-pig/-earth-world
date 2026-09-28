@@ -676,6 +676,15 @@
   .tr-sum { padding: 7px 10px; border-radius: 10px; background: rgba(255,170,100,.1); font-size: 12.5px; line-height: 1.55; }
   .tr-hot { color: #ff8a5c; } .tr-cold { color: #7cc4ff; }
   .tr-tw { margin: 6px 2px; font-size: 12.5px; }
+  #temp-panel .fx-body { display: flex; flex-direction: column; }
+  .tr-metric { display: flex; gap: 4px; margin-bottom: 6px; }
+  .tr-metric button { flex: 1; padding: 5px 2px; border-radius: 8px; border: 1px solid rgba(255,170,100,.35); background: rgba(255,255,255,.04);
+    color: inherit; font: inherit; font-size: 12px; cursor: pointer; white-space: nowrap; }
+  .tr-metric button.on { background: rgba(255,170,100,.3); font-weight: 700; }
+  .tr-q { width: 100%; box-sizing: border-box; margin-top: 6px; padding: 6px 10px; border-radius: 8px; border: 1px solid rgba(255,170,100,.35);
+    background: rgba(255,255,255,.06); color: inherit; font: 13px system-ui, "Microsoft JhengHei", sans-serif; }
+  .tr-list { overflow-y: auto; min-height: 0; flex: 1; max-height: 52vh; }
+  .tr-row.tr-me { background: rgba(255,170,100,.14); }
   .tr-tabs { display: flex; gap: 6px; margin: 8px 0 4px; }
   .tr-tabs button { flex: 1; padding: 5px; border-radius: 8px; border: 1px solid rgba(255,170,100,.35); background: rgba(255,255,255,.04); color: inherit; font: inherit; font-size: 12.5px; cursor: pointer; }
   .tr-tabs button.on { background: rgba(255,170,100,.25); font-weight: 700; }
@@ -820,10 +829,12 @@
   body[data-theme="hud"] #country-search li.cs-sep { color: #00e5ff; border-top-color: rgba(0,229,255,.25); }
   /* 🎬 電影巡航:介面全部淡出,只留地球和字幕 */
   body.cinema > :not(#app):not(#cinema-caption) { opacity: 0 !important; pointer-events: none !important; transition: opacity .9s ease !important; }
-  #cinema-caption { position: fixed; left: 6vw; bottom: 9vh; z-index: 70; pointer-events: none; color: #fff; opacity: 0; transition: opacity .8s ease;
+  #cinema-caption { position: fixed; left: 6vw; bottom: 9vh; z-index: 70; pointer-events: none; color: #fff;
     text-shadow: 0 2px 18px rgba(0,0,0,.85); font-family: "Noto Serif TC", "Microsoft JhengHei", serif; display: none; }
   body.cinema #cinema-caption { display: block; }
-  #cinema-caption.show { opacity: 1; }
+  /* 字幕、📍、連線跟著每一站淡入淡出;右下角的旁白開關一直都在 */
+  #cinema-caption .cm-text, #cinema-caption .cm-pin, #cinema-caption .cm-link { opacity: 0; transition: opacity .8s ease; }
+  #cinema-caption.show .cm-text, #cinema-caption.show .cm-pin, #cinema-caption.show .cm-link { opacity: 1; }
   #cinema-caption .cm-title { font-size: clamp(28px, 4.6vw, 56px); font-weight: 700; letter-spacing: .08em; }
   #cinema-caption .cm-sub { font-size: clamp(14px, 1.7vw, 20px); margin-top: 6px; opacity: .92; letter-spacing: .06em; }
   #cinema-caption .cm-en { font: 500 clamp(11px, 1.1vw, 14px) system-ui, sans-serif; margin-top: 8px; opacity: .6; letter-spacing: .3em; text-transform: uppercase; }
@@ -845,6 +856,12 @@
     opacity: 0; animation: cmHint 7s ease forwards; pointer-events: auto; white-space: nowrap; text-shadow: none; color: rgba(255,255,255,.75);
     padding: 5px 12px; border-radius: 99px; background: rgba(0,0,0,.35); }
   #cinema-caption .cm-auto { border: 0; background: none; color: #9fd0ff; text-decoration: underline; cursor: pointer; font: inherit; padding: 0; }
+  /* 🔊 巡航的導覽旁白開關:右下角一直都在 */
+  #cinema-caption .cm-voice { position: fixed; right: 18px; bottom: 18px; pointer-events: auto; cursor: pointer; padding: 8px 14px; border-radius: 99px;
+    border: 1px solid rgba(255,255,255,.35); background: rgba(0,0,0,.45); color: #fff; font: 700 13px system-ui, "Microsoft JhengHei", sans-serif;
+    text-shadow: none; backdrop-filter: blur(6px); }
+  #cinema-caption .cm-voice[aria-pressed="true"] { border-color: rgba(255,217,138,.8); color: #ffe2a8; }
+  #cinema-caption .cm-voice:hover { background: rgba(255,255,255,.12); }
   @keyframes cmHint { 0% { opacity: 0; } 10%, 75% { opacity: 1; } 100% { opacity: .0; } }
   /* 🌙 月亮:地球旁的月亮標籤 + 月相面板 */
   .moon-label { position: fixed; left: 0; top: 0; z-index: 38; padding: 2px 9px; border-radius: 99px; cursor: pointer; white-space: nowrap;

@@ -12,7 +12,8 @@ const DEFAULTS = { on: false, country: true, cinema: true, flight: true, quake: 
 const PITCH = 1.06;
 // 聲音自不自然,最大的差別在瀏覽器提供的語音:Edge 的「自然」神經語音最像真人,其次是 Chrome 的 Google 語音
 const isNatural = (v) => /natural|online|neural|premium|enhanced/i.test(v.name);
-const KINDS = [["country", "🌍 打開國家時的介紹"], ["cinema", "🎬 電影巡航的地名"], ["flight", "✈️ 飛行模擬的機長廣播"], ["quake", "📳 規模 6 以上的地震快報"]];
+// 電影巡航的旁白改由巡航畫面右下角自己的開關控制
+const KINDS = [["country", "🌍 打開國家時的介紹"], ["flight", "✈️ 飛行模擬的機長廣播"], ["quake", "📳 規模 6 以上的地震快報"]];
 
 function loadSettings() {
   try { return { ...DEFAULTS, ...JSON.parse(localStorage.getItem(KEY) || "{}") }; } catch { return { ...DEFAULTS }; }

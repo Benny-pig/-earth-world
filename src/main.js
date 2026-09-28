@@ -1005,16 +1005,18 @@ export function start() {
   const AMBIENT = new Set(["quake-toggle", "sun-toggle", "aurora-toggle", "constellation-toggle", "voice-toggle"]);
   const cinema = createCinema({
     camera, rig, globeObject: globe.object, renderer,
-    onShot: ({ title, sub, narration }) => voice.speak(narration || (sub ? `${title}。${sub}` : title), { kind: "cinema" }),
+    // 巡航自己的「導覽旁白」開關(畫面右下角):開著就唸,不受人聲播報總開關影響
+    onShot: ({ title, sub, narration, voice: on }) => (on ? voice.speak(narration || (sub ? `${title}。${sub}` : title), { force: true }) : false),
+    onVoiceChange: (on) => { if (!on) voice.stop(); },
     canAutoStart: () => !document.body.classList.contains("intro-playing") && !(intro && intro.isActive()) && !tour.isActive() &&
       !sidePanel.isOpen() && !encyclopedia.isOpen() && !favorites.isOpen() && !flightSim.isEnabled?.() &&
       !/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName || "") &&
       ![...document.querySelectorAll('#ctrl-dock .layer-row[aria-pressed="true"]')].some((b) => !AMBIENT.has(b.id)),
     // 巡航時國界線也先藏起來,畫面像紀錄片一樣乾淨
-    onStart: () => { tooltip.hide(); globe.setSpinPaused(true); clouds.setSpinPaused(false); if (window.__earth.borders) window.__earth.borders.visible = false; },
+    onStart: () => { tooltip.hide(); globe.setSpinPaused(true); clouds.setSpinPaused(false); setGroundLines(false); },
     onStop: () => {
       voice.stop();
-      if (window.__earth.borders) window.__earth.borders.visible = true;
+      setGroundLines(true);
       const keep = traffic.isEnabled() || ev.isEnabled() || sidePanel.isOpen();
       globe.setSpinPaused(keep);
       clouds.setSpinPaused(keep);
