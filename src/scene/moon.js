@@ -90,7 +90,7 @@ function loadMoonTextures(mat) {
 
 // 月相小圖(面板用):用真實月面、照太陽角度逐點打光,看起來跟望遠鏡看到的一樣。
 // 北半球看的樣子:漸盈右邊亮、漸虧左邊亮;月面圖還沒載好時先畫簡單的明暗兩色。
-function drawPhase(canvas, ph) {
+export function drawPhase(canvas, ph) {
   const g = canvas.getContext("2d"), s = canvas.width, r = s / 2 - 2, c = s / 2;
   g.clearRect(0, 0, s, s);
   if (!moonPixels) {
@@ -139,7 +139,7 @@ export function createMoon({ parent, camera, renderer, onClose }) {
   label.className = "moon-label";
   document.body.appendChild(label);
 
-  let phase = moonPhase(), enabled = false, onOpen = null;
+  let phase = moonPhase(), enabled = false, onOpen = null, forceVisible = false;
   function place(date = simNow(), { quick = false } = {}) {
     const m = moonEcliptic(date);
     const sub = eclipticToSubPoint(m.lon, m.lat, m.d);
@@ -196,7 +196,7 @@ export function createMoon({ parent, camera, renderer, onClose }) {
   function update() {
     mesh.getWorldPosition(wp);
     const dCam = camera.position.distanceTo(wp);
-    mesh.visible = dCam > 2.5;
+    mesh.visible = dCam > 2.5 || forceVisible;   // 「從月球看地球」時鏡頭就在月面上,要一直畫
     ndc.copy(wp).project(camera);
     // 被地球擋住:鏡頭到月亮的線有穿過地球
     camTo.copy(wp).sub(camera.position);
@@ -227,6 +227,7 @@ export function createMoon({ parent, camera, renderer, onClose }) {
 
   return {
     setEnabled, isEnabled: () => enabled, update, pickAt, place,
+    mesh, setForceVisible(v) { forceVisible = !!v; },
     onOpen(fn) { onOpen = fn; },
     phase: () => phase,
     dispose() { clearInterval(timer); label.remove(); },

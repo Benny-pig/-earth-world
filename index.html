@@ -506,6 +506,12 @@
   #time-panel { --acc: #9fd0ff; --acc-b: rgba(120,180,255,.5); width: 470px; top: auto; bottom: 70px; left: calc(50% - 235px); }
   #typhoon-panel { --acc: #ff9a8a; --acc-b: rgba(255,120,100,.5); width: 350px; }
   #hazard-panel { --acc: #ffae6b; --acc-b: rgba(255,150,80,.5); width: 340px; }
+  #bday-panel { --acc: #ff9ecf; --acc-b: rgba(255,150,200,.5); width: 350px; }
+  #temp-panel { --acc: #ffb36b; --acc-b: rgba(255,170,100,.5); width: 350px; }
+  #neo-panel { --acc: #b8c8ff; --acc-b: rgba(170,190,255,.5); width: 360px; }
+  body[data-theme="journal"] #bday-panel { --acc: #b0407a; }
+  body[data-theme="journal"] #temp-panel { --acc: #b3541e; }
+  body[data-theme="journal"] #neo-panel { --acc: #3d4fa8; }
   body[data-theme="journal"] #hazard-panel { --acc: #b3541e; }
   body[data-theme="journal"] #planet-panel { --acc: #8a5a14; }
   body[data-theme="journal"] #time-panel { --acc: #2d5f9a; }
@@ -516,7 +522,7 @@
   body[data-theme="journal"] #meteor-panel { --acc: #a0621a; }
   body[data-theme="journal"] #fav-panel { --acc: #9a7400; }
   @media (max-width: 640px) {
-    #aurora-panel, #meteor-panel, #fav-panel, #voice-panel, #sun-panel, #planet-panel, #time-panel, #typhoon-panel, #hazard-panel { top: auto; bottom: 116px; left: 8px; right: 8px; width: auto; max-width: none; max-height: 56vh; z-index: 45; }
+    #aurora-panel, #meteor-panel, #fav-panel, #voice-panel, #sun-panel, #planet-panel, #time-panel, #typhoon-panel, #hazard-panel, #bday-panel, #temp-panel, #neo-panel { top: auto; bottom: 116px; left: 8px; right: 8px; width: auto; max-width: none; max-height: 56vh; z-index: 45; }
   }
   /* 極光 */
   #aurora-panel.min .fx-body { display: none; }
@@ -621,6 +627,66 @@
   .tm-jumps span { opacity: .7; }
   .tm-jumps button { padding: 3px 9px; border-radius: 99px; border: 1px solid rgba(120,170,255,.35); background: rgba(255,255,255,.04); color: inherit; font: inherit; cursor: pointer; }
   .tm-jumps button:hover { background: rgba(120,170,255,.16); }
+  /* 🎥 特別視角(太空站、月球):地球上的文字標籤先收起來,畫面上只留資訊列 */
+  body.pov #country-labels, body.pov #ocean-labels, body.pov #physical-labels, body.pov #earthquake-labels, body.pov #radio-labels,
+  body.pov #flight-labels, body.pov #livecam-labels, body.pov #constellation-labels, body.pov #typhoon-labels, body.pov #hazard-labels,
+  body.pov .moon-label, body.pov .meteor-radiant, body.pov #home-dock { display: none !important; }
+  #pov-hud { position: fixed; left: 50%; top: 70px; transform: translateX(-50%); z-index: 50; min-width: 300px; max-width: calc(100vw - 24px);
+    padding: 10px 14px; border-radius: 14px; background: rgba(6,10,20,.78); backdrop-filter: blur(10px); border: 1px solid rgba(150,190,255,.35);
+    color: #e7edfb; font: 13px system-ui, "Microsoft JhengHei", sans-serif; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,.45); }
+  #pov-hud[hidden] { display: none; }
+  .pov-t { font-size: 15px; font-weight: 700; }
+  .pov-t b { color: #ffd98a; }
+  .pov-s { margin-top: 3px; opacity: .85; font-size: 12.5px; }
+  .pov-fast { color: #9fd0ff; }
+  .pov-b { display: flex; justify-content: center; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .pov-b button { padding: 5px 12px; border-radius: 99px; border: 1px solid rgba(150,190,255,.4); background: rgba(255,255,255,.05); color: inherit; font: inherit; cursor: pointer; }
+  .pov-b button.on { background: rgba(111,182,255,.3); border-color: rgba(111,182,255,.85); font-weight: 700; }
+  .pov-b .pov-exit { border-color: rgba(255,140,120,.6); }
+  .pov-h { margin-top: 6px; font-size: 11px; opacity: .6; }
+  @media (max-width: 640px) { #pov-hud { top: 150px; min-width: 0; width: calc(100vw - 24px); } }
+  /* 🎂 生日天空 */
+  .bd-form { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; align-items: end; }
+  .bd-form label { display: flex; flex-direction: column; gap: 3px; font-size: 12px; opacity: .9; }
+  .bd-form input, .bd-form select { padding: 6px 8px; border-radius: 8px; border: 1px solid rgba(255,150,200,.4); background: rgba(255,255,255,.06); color: inherit; font: 13px system-ui, "Microsoft JhengHei", sans-serif; }
+  .bd-form select option { background: #101626; color: #e7edfb; }
+  .bd-go { grid-column: 1 / -1; padding: 7px; font-size: 13px; font-weight: 700; }
+  .bd-out { margin-top: 10px; }
+  .bd-head { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+  .bd-date-big { font-size: 17px; font-weight: 800; color: var(--acc); }
+  .bd-moon-t { font-size: 12.5px; margin-top: 3px; }
+  .bd-ev { font-size: 12px; line-height: 1.55; margin: 3px 0; opacity: .9; }
+  .bd-ev b { color: var(--acc); margin-right: 4px; }
+  .bd-btns { display: flex; gap: 6px; margin-top: 10px; }
+  .bd-btns .tc-btn { flex: 1; padding: 6px; font-size: 12.5px; }
+  /* 🌡️ 溫度排行、☄️ 小行星 */
+  .tr-sum { padding: 7px 10px; border-radius: 10px; background: rgba(255,170,100,.1); font-size: 12.5px; line-height: 1.55; }
+  .tr-hot { color: #ff8a5c; } .tr-cold { color: #7cc4ff; }
+  .tr-tw { margin: 6px 2px; font-size: 12.5px; }
+  .tr-tabs { display: flex; gap: 6px; margin: 8px 0 4px; }
+  .tr-tabs button { flex: 1; padding: 5px; border-radius: 8px; border: 1px solid rgba(255,170,100,.35); background: rgba(255,255,255,.04); color: inherit; font: inherit; font-size: 12.5px; cursor: pointer; }
+  .tr-tabs button.on { background: rgba(255,170,100,.25); font-weight: 700; }
+  .tr-row { display: grid; grid-template-columns: 18px 22px 1fr 22px 42px 50px; align-items: center; gap: 6px; width: 100%; padding: 5px 4px; border: 0;
+    border-radius: 8px; background: none; color: inherit; font: inherit; font-size: 12.5px; text-align: left; cursor: pointer; }
+  .tr-row:hover { background: rgba(255,170,100,.1); }
+  .tr-rank { opacity: .55; text-align: right; }
+  .tr-flag { width: 20px; height: 14px; object-fit: cover; border-radius: 2px; }
+  .tr-name { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .tr-name small { margin-left: 5px; opacity: .6; font-size: 11px; }
+  .tr-lt { opacity: .6; font-size: 11px; text-align: right; }
+  .tr-t { text-align: right; font-size: 13.5px; }
+  .neo-scale { width: 100%; height: auto; margin: 8px 0 4px; }
+  .neo-axis, .neo-tick { stroke: rgba(180,200,255,.45); stroke-width: 1; }
+  .neo-tt, .neo-lab { fill: rgba(220,230,255,.75); font: 9px system-ui, "Microsoft JhengHei", sans-serif; text-anchor: middle; }
+  .neo-earth { fill: #3b82f6; } .neo-moon { fill: #d6d3c9; }
+  .neo-dot { fill: #ffd98a; opacity: .85; } .neo-pha { fill: #ff7a5c; }
+  .neo-row { display: block; padding: 7px 6px; border-radius: 8px; color: inherit; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.06); }
+  .neo-row:hover { background: rgba(170,190,255,.1); }
+  .neo-name { display: flex; align-items: center; gap: 6px; font-weight: 700; font-size: 13px; }
+  .neo-tag { padding: 0 6px; border-radius: 99px; background: rgba(255,122,92,.3); font-size: 10.5px; font-weight: 700; }
+  .neo-d { display: block; font-size: 12.5px; margin-top: 2px; }
+  .neo-d b { color: var(--acc); }
+  .neo-m { display: block; font-size: 11.5px; opacity: .7; margin-top: 1px; }
   /* 🌋 火山與野火 */
   #hazard-labels[hidden] { display: none; }
   #hazard-panel.min .fx-body { display: none; }
@@ -2692,6 +2758,27 @@
     </div>
     <div id="time-body" class="fx-body"></div>
   </div>
+  <div id="bday-panel" class="fx-panel" hidden>
+    <div class="sat-head">
+      <span class="sat-title">🎂 生日那天的天空</span>
+      <button id="bday-close" class="rp-head-btn" type="button" aria-label="關閉">×</button>
+    </div>
+    <div id="bday-body" class="fx-body"></div>
+  </div>
+  <div id="temp-panel" class="fx-panel" hidden>
+    <div class="sat-head">
+      <span class="sat-title">🌡️ 世界溫度排行</span>
+      <button id="temp-close" class="rp-head-btn" type="button" aria-label="關閉">×</button>
+    </div>
+    <div id="temp-body" class="fx-body"></div>
+  </div>
+  <div id="neo-panel" class="fx-panel" hidden>
+    <div class="sat-head">
+      <span class="sat-title">☄️ 小行星掠過地球</span>
+      <button id="neo-close" class="rp-head-btn" type="button" aria-label="關閉">×</button>
+    </div>
+    <div id="neo-body" class="fx-body"></div>
+  </div>
   <div id="hazard-panel" class="fx-panel" hidden>
     <div class="sat-head">
       <span class="sat-title">🌋 火山與野火</span>
@@ -3028,6 +3115,9 @@
         <button id="weather-toggle" class="layer-row" type="button" aria-pressed="false">
           <span class="layer-dot"></span>全球氣溫與降雨
         </button>
+        <button id="temp-toggle" class="layer-row" type="button" aria-pressed="false">
+          <span class="layer-dot"></span>世界溫度排行
+        </button>
         <button id="quake-toggle" class="layer-row" type="button" aria-pressed="true">
           <span class="layer-dot"></span>全球地震顯示<span id="quake-severe-badge" class="layer-badge" hidden title="偵測到規模 6 以上地震">⚠</span>
         </button>
@@ -3049,6 +3139,15 @@
         <div class="lc-group">🚀 太空與天象</div>
         <button id="moon-toggle" class="layer-row" type="button" aria-pressed="false">
           <span class="layer-dot"></span>月亮與月相
+        </button>
+        <button id="iss-ride-toggle" class="layer-row" type="button" aria-pressed="false" title="鏡頭搬到國際太空站的真實位置,往下看地球流過">
+          <span class="layer-dot"></span>搭上國際太空站
+        </button>
+        <button id="moonview-toggle" class="layer-row" type="button" aria-pressed="false" title="站在月球上看地球從月平線升起">
+          <span class="layer-dot"></span>從月球看地球
+        </button>
+        <button id="neo-toggle" class="layer-row" type="button" aria-pressed="false">
+          <span class="layer-dot"></span>小行星掠過地球
         </button>
         <button id="timemachine-toggle" class="layer-row" type="button" aria-pressed="false" title="拖日期時間,太陽、月亮、星空、行星一起照那個時間動">
           <span class="layer-dot"></span>時光機
@@ -3075,6 +3174,9 @@
           <span class="layer-dot"></span>太空發射日曆
         </button>
         <div class="lc-group">🧭 探索與遊戲</div>
+        <button id="bday-toggle" class="layer-row" type="button" aria-pressed="false">
+          <span class="layer-dot"></span>生日那天的天空
+        </button>
         <button id="cinema-toggle" class="layer-row" type="button" aria-pressed="false" title="介面淡出,鏡頭像紀錄片一樣飛過世界各地(點任何地方結束)">
           <span class="layer-dot"></span>電影巡航
         </button>

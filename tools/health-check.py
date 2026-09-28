@@ -146,6 +146,15 @@ def _():
     return ("ok", f"{n} 座 · {age} 天前更新") if age <= 21 else ("warn", f"{n} 座,但已 {age} 天沒更新")
 
 
+@check("近地小行星(NASA NeoWs)")
+def _():
+    d = date.today().isoformat()
+    s, b = get(f"https://api.nasa.gov/neo/rest/v1/feed?start_date={d}&end_date={d}&api_key=DEMO_KEY", timeout=45)
+    if s == 429: return "warn", "示範金鑰的查詢次數暫時用完(網站上讀者各自有額度,不影響)"
+    n = json.loads(b).get("element_count", 0) if s == 200 else 0
+    return ("ok", f"今天 {n} 顆") if s == 200 else ("fail", f"HTTP {s}")
+
+
 @check("太空發射(Launch Library 2)")
 def _():
     s, b = get("https://ll.thespacedevs.com/2.3.0/launches/upcoming/?limit=3&mode=list")

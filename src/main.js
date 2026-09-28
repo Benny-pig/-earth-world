@@ -52,6 +52,10 @@ import { createSunInfo } from "./scene/sun-info.js";
 import { createPlanets } from "./scene/planets.js";
 import { createTyphoons } from "./scene/typhoons.js";
 import { createHazards } from "./scene/hazards.js";
+import { createPov } from "./scene/pov.js";
+import { createBirthday } from "./ui/birthday.js";
+import { createTempRank } from "./ui/temp-rank.js";
+import { createAsteroids } from "./ui/asteroids.js";
 import { createTimeMachine } from "./ui/time-machine.js";
 import { createViewOffset } from "./lib/view-offset.js";
 import { latLonToXYZ } from "./lib/geo.js";
@@ -146,6 +150,9 @@ export function start() {
   const loading = setupLoadingScreen();
   // 用分享連結打開(網址帶參數)的讀者是來看分享的畫面,不自動跳新手導覽(參數等一下會被清掉,先記下來)
   const openedWithParams = [...new URLSearchParams(location.search).keys()].some((k) => k !== "intro" && k !== "nointro");
+  // 🎂 生日天空的分享連結(?bday=YYYY-MM-DD&bt=21):分享參數等一下會被清掉,先記下來
+  const bdayParam = new URLSearchParams(location.search).get("bday");
+  const bdayHour = Number(new URLSearchParams(location.search).get("bt") || 21);
 
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1500);
@@ -897,6 +904,64 @@ export function start() {
   }
   hazardToggle?.addEventListener("click", () => setHazards(hazardToggle.getAttribute("aria-pressed") !== "true"));
 
+  // 🎥 特別視角:搭上國際太空站、從月球看地球(鏡頭暫時離開一般的繞地球模式)
+  const issToggle = document.getElementById("iss-ride-toggle");
+  const moonViewToggle = document.getElementById("moonview-toggle");
+  const pov = createPov({
+    camera, rig, globeObject: globe.object, moon, sunDir: () => globe.sun.position,
+    codeAt: (lat, lon) => window.__earth.countryLayer?.codeAt(lat, lon),
+    nameOf: (c) => window.__earth.countryLayer?.meshByCode.get(c)?.userData?.names?.zh || c,
+    onExit: () => { issToggle?.setAttribute("aria-pressed", "false"); moonViewToggle?.setAttribute("aria-pressed", "false"); },
+  });
+  window.__earth.pov = pov;
+  issToggle?.addEventListener("click", () => {
+    if (pov.mode() === "iss") { pov.exit(); return; }
+    moonViewToggle?.setAttribute("aria-pressed", "false");
+    issToggle.setAttribute("aria-pressed", "true");
+    pov.startIss();
+  });
+  moonViewToggle?.addEventListener("click", () => {
+    if (pov.mode() === "moon") { pov.exit(); return; }
+    issToggle?.setAttribute("aria-pressed", "false");
+    moonViewToggle.setAttribute("aria-pressed", "true");
+    pov.startMoon();
+  });
+
+  // 🎂 生日那天的天空
+  const bdayToggle = document.getElementById("bday-toggle");
+  const birthday = createBirthday({
+    rig, onClose: () => setBirthday(false),
+    onOpen: () => { if (timeMachine.isEnabled()) setTimeMachine(false); },   // 兩個都在改模擬時間,只留一個
+  });
+  function setBirthday(on) {
+    bdayToggle?.setAttribute("aria-pressed", String(on));
+    birthday.setEnabled(on);
+  }
+  bdayToggle?.addEventListener("click", () => setBirthday(bdayToggle.getAttribute("aria-pressed") !== "true"));
+  if (bdayParam) dataReady.then(() => { setBirthday(true); birthday.openWith(bdayParam, bdayHour); });
+
+  // 🌡️ 全球此刻最熱/最冷
+  const tempToggle = document.getElementById("temp-toggle");
+  const tempRank = createTempRank({
+    getContent: () => window.__earth.content,
+    nameOf: (c) => window.__earth.countryLayer?.meshByCode.get(c)?.userData?.names?.zh || c,
+    openCountryByCode, onClose: () => setTempRank(false),
+  });
+  function setTempRank(on) {
+    tempToggle?.setAttribute("aria-pressed", String(on));
+    tempRank.setEnabled(on);
+  }
+  tempToggle?.addEventListener("click", () => setTempRank(tempToggle.getAttribute("aria-pressed") !== "true"));
+
+  // ☄️ 小行星掠過地球
+  const neoToggle = document.getElementById("neo-toggle");
+  const asteroids = createAsteroids({ onClose: () => setNeo(false) });
+  function setNeo(on) {
+    neoToggle?.setAttribute("aria-pressed", String(on));
+    asteroids.setEnabled(on);
+  }
+  neoToggle?.addEventListener("click", () => setNeo(neoToggle.getAttribute("aria-pressed") !== "true"));
+
   // ☀️ 太陽:地球旁的「☀️ 太陽」標籤 + 太陽與節氣面板
   const sunInfoToggle = document.getElementById("sunpanel-toggle");
   const sunInfo = createSunInfo({
@@ -1106,10 +1171,14 @@ export function start() {
       !window.__earth.traffic?.isEnabled() && !window.__earth.ev?.isEnabled() && !cinema.isActive()) {
       resumeTimer = setTimeout(() => { globe.setSpinPaused(false); clouds.setSpinPaused(false); resumeTimer = null; }, 1500);
     }
-    cinema.update(dt);
-    // 閒置時鏡頭慢慢繞地球轉(取代以前的地球自轉;滑到地球上、看國家、路況、巡航、時光機時停)
-    rig.setAutoSpin(!globe.isSpinPaused() && !cinema.isActive() && !timeMachine.isEnabled() && !(intro && intro.isActive()));
-    rig.update(dt);
+    if (pov.isActive()) {
+      pov.update(dt);   // 搭太空站、站在月球上:鏡頭交給特別視角
+    } else {
+      cinema.update(dt);
+      // 閒置時鏡頭慢慢繞地球轉(取代以前的地球自轉;滑到地球上、看國家、路況、巡航、時光機時停)
+      rig.setAutoSpin(!globe.isSpinPaused() && !cinema.isActive() && !timeMachine.isEnabled() && !(intro && intro.isActive()));
+      rig.update(dt);
+    }
     homeCompass.update();
     flightSim.update(dt);
     aurora.update(clock.elapsedTime, dt);

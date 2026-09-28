@@ -45,6 +45,11 @@ const SYNONYMS = {
   "timemachine-toggle": "時光機 時間 時光 過去 未來 夏至 冬至 time machine",
   "typhoon-toggle": "颱風 路徑 颶風 熱帶風暴 暴風圈 typhoon hurricane cyclone track",
   "hazard-toggle": "火山 噴發 野火 森林大火 冰山 災害 volcano eruption wildfire iceberg",
+  "temp-toggle": "溫度 氣溫 最熱 最冷 排行 首都 temperature hottest coldest",
+  "iss-ride-toggle": "太空站 ISS 太空人 視角 搭乘 astronaut",
+  "moonview-toggle": "月球 月亮 地出 阿波羅 從月球 earthrise",
+  "neo-toggle": "小行星 隕石 彗星 近地 撞地球 asteroid meteor",
+  "bday-toggle": "生日 出生 那一天 紀念日 星座 birthday",
   "fav-btn": "收藏 最愛 書籤 我的 favorite bookmark",
   "tour-btn": "導覽 教學 說明 怎麼用 help tour",
   "theme-toggle": "主題 版面 風格 theme",
@@ -53,7 +58,7 @@ const SYNONYMS = {
 const ICONS = {
   "weather-toggle": "🌡️", "quake-toggle": "📳", "satellite-toggle": "🌀", "flight-toggle": "✈️", "livecam-toggle": "📺", "moon-toggle": "🌙",
   "orbit-toggle": "🛰️", "launch-toggle": "🚀", "sun-toggle": "🌗", "quiz-toggle": "🎯", "passport-toggle": "🛂", "flightsim-toggle": "🛫",
-  "compare-toggle": "⚖️", "otd-toggle": "📜", "radio-toggle": "📻", "aurora-toggle": "🌌", "meteor-toggle": "🌠", "cinema-toggle": "🎬", "voice-toggle": "🗣️", "constellation-toggle": "✨", "sunpanel-toggle": "☀️", "planet-toggle": "🪐", "timemachine-toggle": "🕰️", "typhoon-toggle": "🌀", "hazard-toggle": "🌋",
+  "compare-toggle": "⚖️", "otd-toggle": "📜", "radio-toggle": "📻", "aurora-toggle": "🌌", "meteor-toggle": "🌠", "cinema-toggle": "🎬", "voice-toggle": "🗣️", "constellation-toggle": "✨", "sunpanel-toggle": "☀️", "planet-toggle": "🪐", "timemachine-toggle": "🕰️", "typhoon-toggle": "🌀", "hazard-toggle": "🌋", "temp-toggle": "🌡️", "iss-ride-toggle": "🛰️", "moonview-toggle": "🌙", "neo-toggle": "☄️", "bday-toggle": "🎂",
   "fav-btn": "⭐", "tour-btn": "❓", "theme-toggle": "🎨", "share-btn": "🔗",
 };
 const GEO_ICONS = { mountain: "⛰️", peak: "🏔️", river: "🌊", desert: "🏜️", plateau: "🗻", plain: "🌾", lake: "💧", other: "📍" };

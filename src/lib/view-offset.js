@@ -12,7 +12,7 @@ export function createViewOffset({ camera }) {
     const W = window.innerWidth, H = window.innerHeight;
     tx = 0; ty = 0;
     const b = document.body.classList;
-    if (!W || !H || b.contains("cinema") || b.contains("intro-playing")) return;
+    if (!W || !H || b.contains("cinema") || b.contains("intro-playing") || b.contains("pov")) return;
     let left = 0, right = 0, bottomTop = H;
     for (const el of document.querySelectorAll(SEL)) {
       const r = el.getBoundingClientRect();
