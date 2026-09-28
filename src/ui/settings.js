@@ -50,5 +50,28 @@ export function createSettings({ fontSize }) {
   window.addEventListener("keydown", (e) => { if (e.key === "Escape" && open) setOpen(false); });
   onThemeChange(() => { if (open) render(); });
 
+  // 第一次來的讀者:載入後 8 秒(新手導覽沒在跑時)在 ⚙️ 下面提示一次,按過設定或關掉就不再出現
+  const HINT_KEY = "earth-world.settings-hint";
+  const seen = () => { try { return localStorage.getItem(HINT_KEY) === "1"; } catch { return true; } };
+  const markSeen = () => { try { localStorage.setItem(HINT_KEY, "1"); } catch { /* 存不了就算了 */ } };
+  let hint = null;
+  function hideHint() { hint?.remove(); hint = null; }
+  function showHint() {
+    if (seen() || open || hint) return;
+    if (document.getElementById("tour") || document.body.classList.contains("intro-playing") || document.body.classList.contains("cinema")) {
+      setTimeout(showHint, 5000);   // 導覽或開場還在跑:晚一點再提示
+      return;
+    }
+    hint = document.createElement("div");
+    hint.id = "settings-hint";
+    hint.innerHTML = `${isEn ? "Text size, theme and language are here" : "🔤 字體大小、🎨 版面主題、🌐 English 都在「⚙️ 設定」裡"}<button type="button" aria-label="關閉">×</button>`;
+    hint.addEventListener("click", (e) => { e.stopPropagation(); hideHint(); markSeen(); });
+    btn.parentElement.appendChild(hint);
+    markSeen();
+    setTimeout(hideHint, 10000);
+  }
+  btn.addEventListener("click", () => { hideHint(); markSeen(); });
+  setTimeout(showHint, 8000);
+
   return { close: () => setOpen(false) };
 }

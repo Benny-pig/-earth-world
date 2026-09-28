@@ -3,6 +3,7 @@ import { latLonToXYZ, daysSinceJ2000, sunEclipticLon, eclipticToSubPoint } from 
 import { canvasRect } from "../lib/view-rect.js";
 import { makeDraggable } from "../ui/draggable.js";
 import { simNow, onSimTimeChange } from "../lib/sim-time.js";
+import { LITE } from "../lib/device.js";
 
 // 🌙 月亮:放在「現在真實的方向」(跟太陽同一套天文公式),被太陽照亮的一半自然形成月相,
 // 而且永遠同一面朝向地球。真實距離約 60 倍地球半徑、大小 0.27 倍,照比例會小到看不見,
@@ -60,71 +61,75 @@ export function moonPhase(date = new Date(), { quick = false } = {}) {
     nextFull: quick ? null : nextCrossing(date, 180), nextNew: quick ? null : nextCrossing(date, 0) };
 }
 
-// 月球表面紋理:灰色底 + 近地面的主要月海(位置大致照真實) + 隨機隕石坑 + 第谷坑亮紋
-function moonTexture() {
-  const W = 1024, H = 512;
-  const c = document.createElement("canvas");
-  c.width = W; c.height = H;
-  const g = c.getContext("2d");
-  g.fillStyle = "#a9a7a2"; g.fillRect(0, 0, W, H);
-  const px = (lon) => ((lon + 180) / 360) * W, py = (lat) => ((90 - lat) / 180) * H;
-  let seed = 7;
-  const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
-  // 細緻斑駁
-  for (let i = 0; i < 9000; i++) {
-    const x = rnd() * W, y = rnd() * H, r = 1 + rnd() * 3;
-    g.fillStyle = `rgba(${rnd() < 0.5 ? "70,70,68" : "215,213,208"},${0.05 + rnd() * 0.08})`;
-    g.beginPath(); g.arc(x, y, r, 0, Math.PI * 2); g.fill();
-  }
-  // 月海(經度、緯度、半徑度數、橫向拉伸)
-  const MARIA = [[-57, 18, 26, 1.1], [-16, 33, 13, 1.1], [17, 28, 9, 1], [31, 8, 10, 1.1], [59, 17, 6, 1.2], [51, -8, 8, 1],
-    [-17, -21, 9, 1.2], [0, 56, 6, 3], [35, -15, 5, 1], [-39, -24, 5, 1], [-5, 8, 5, 1.3], [-25, -5, 6, 1.4]];
-  g.filter = "blur(10px)";
-  for (const [lon, lat, r, sx] of MARIA) {
-    g.fillStyle = "rgba(62,62,66,0.62)";
-    g.beginPath(); g.ellipse(px(lon), py(lat), (r / 360) * W * sx, (r / 180) * H, 0, 0, Math.PI * 2); g.fill();
-  }
-  g.filter = "none";
-  // 隕石坑:亮邊 + 暗底
-  for (let i = 0; i < 700; i++) {
-    const x = rnd() * W, y = H * 0.08 + rnd() * H * 0.84, r = 1.5 + Math.pow(rnd(), 3) * 14;
-    g.strokeStyle = `rgba(230,228,222,${0.25 + rnd() * 0.3})`; g.lineWidth = Math.max(1, r * 0.25);
-    g.beginPath(); g.arc(x, y, r, 0, Math.PI * 2); g.stroke();
-    g.fillStyle = `rgba(80,80,80,${0.15 + rnd() * 0.2})`;
-    g.beginPath(); g.arc(x + r * 0.15, y + r * 0.15, r * 0.75, 0, Math.PI * 2); g.fill();
-  }
-  // 第谷坑與放射亮紋
-  const tx = px(-11), ty = py(-43);
-  g.strokeStyle = "rgba(245,245,240,0.18)"; g.lineWidth = 2;
-  for (let i = 0; i < 26; i++) {
-    const a = rnd() * Math.PI * 2, len = 60 + rnd() * 180;
-    g.beginPath(); g.moveTo(tx, ty); g.lineTo(tx + Math.cos(a) * len, ty + Math.sin(a) * len * 0.6); g.stroke();
-  }
-  g.fillStyle = "rgba(250,250,245,0.85)";
-  g.beginPath(); g.arc(tx, ty, 5, 0, Math.PI * 2); g.fill();
-  const t = new THREE.CanvasTexture(c);
-  t.colorSpace = THREE.SRGBColorSpace;
-  t.anisotropy = 4;
-  return t;
+// 🌕 月球表面:NASA 月球勘測軌道器(LRO)的真實彩色月面圖 + 地形起伏圖(公有領域,NASA SVS CGI Moon Kit)。
+// 手機用 1K、電腦用 2K;不擋載入畫面,載好才換上(之前先用素色月球)。
+const MOON_MAP = LITE ? "assets/moon-1k.jpg" : "assets/moon-2k.jpg";
+const MOON_BUMP = "assets/moon-bump-1k.jpg";
+let moonPixels = null;   // 月相小圖取樣用:{ data, w, h }
+const moonReady = new Set();
+function loadMoonTextures(mat) {
+  const loader = new THREE.TextureLoader(new THREE.LoadingManager());
+  loader.load(MOON_MAP, (t) => {
+    t.colorSpace = THREE.SRGBColorSpace;
+    t.anisotropy = 4;
+    mat.map = t;
+    mat.color.set(0xffffff);
+    mat.needsUpdate = true;
+    // 面板的月相圖要從月面圖取顏色:縮成 512×256 放進記憶體就夠了
+    try {
+      const c = document.createElement("canvas");
+      c.width = 512; c.height = 256;
+      const g = c.getContext("2d", { willReadFrequently: true });
+      g.drawImage(t.image, 0, 0, 512, 256);
+      moonPixels = { data: g.getImageData(0, 0, 512, 256).data, w: 512, h: 256 };
+      moonReady.forEach((fn) => fn());
+    } catch { /* 取不到像素就用簡單的月相圖 */ }
+  });
+  loader.load(MOON_BUMP, (t) => { mat.bumpMap = t; mat.bumpScale = 1.2; mat.needsUpdate = true; });
 }
 
-// 月相小圖(面板用):北半球看到的樣子,漸盈右邊亮、漸虧左邊亮
+// 月相小圖(面板用):用真實月面、照太陽角度逐點打光,看起來跟望遠鏡看到的一樣。
+// 北半球看的樣子:漸盈右邊亮、漸虧左邊亮;月面圖還沒載好時先畫簡單的明暗兩色。
 function drawPhase(canvas, ph) {
-  const g = canvas.getContext("2d"), s = canvas.width, r = s / 2 - 3, c = s / 2;
+  const g = canvas.getContext("2d"), s = canvas.width, r = s / 2 - 2, c = s / 2;
   g.clearRect(0, 0, s, s);
-  g.fillStyle = "#1c2233"; g.beginPath(); g.arc(c, c, r, 0, Math.PI * 2); g.fill();
-  const lit = "#f1ead2";
-  g.fillStyle = lit;
-  g.beginPath(); g.arc(c, c, r, -Math.PI / 2, Math.PI / 2, !ph.waxing); g.fill();   // 亮的半邊
-  const k = Math.cos(ph.D * RAD);            // 明暗界線橢圓的寬度比例
-  g.fillStyle = ph.illum > 0.5 ? lit : "#1c2233";
-  g.beginPath(); g.ellipse(c, c, Math.abs(k) * r, r, 0, 0, Math.PI * 2); g.fill();
-  g.strokeStyle = "rgba(255,255,255,.25)"; g.lineWidth = 1.5;
-  g.beginPath(); g.arc(c, c, r, 0, Math.PI * 2); g.stroke();
+  if (!moonPixels) {
+    g.fillStyle = "#1c2233"; g.beginPath(); g.arc(c, c, r, 0, Math.PI * 2); g.fill();
+    const lit = "#f1ead2";
+    g.fillStyle = lit;
+    g.beginPath(); g.arc(c, c, r, -Math.PI / 2, Math.PI / 2, !ph.waxing); g.fill();
+    const k = Math.cos(ph.D * RAD);
+    g.fillStyle = ph.illum > 0.5 ? lit : "#1c2233";
+    g.beginPath(); g.ellipse(c, c, Math.abs(k) * r, r, 0, 0, Math.PI * 2); g.fill();
+    return;
+  }
+  const img = g.createImageData(s, s), out = img.data, { data, w, h } = moonPixels;
+  // 太陽從哪邊照過來(看月亮的座標:x 往右、y 往上、z 朝向地球的我們)
+  const Lx = Math.sin(ph.D * RAD), Lz = -Math.cos(ph.D * RAD);
+  for (let py = 0; py < s; py++) {
+    for (let px = 0; px < s; px++) {
+      const x = (px + 0.5 - c) / r, y = (c - py - 0.5) / r, rr = x * x + y * y;
+      if (rr > 1) continue;
+      const z = Math.sqrt(1 - rr);
+      const lon = Math.atan2(x, z), lat = Math.asin(y);
+      const u = Math.min(w - 1, Math.floor(((lon / Math.PI) * 0.5 + 0.5) * w));
+      const v = Math.min(h - 1, Math.floor((0.5 - lat / Math.PI) * h));
+      const k = (v * w + u) * 4;
+      const ndl = x * Lx + z * Lz;
+      const light = 0.05 + 0.95 * Math.min(1, Math.max(0, (ndl + 0.04) / 0.2)) * (0.75 + 0.25 * z);   // 明暗交界柔和、邊緣稍暗
+      const edge = Math.min(1, (1 - Math.sqrt(rr)) * r * 0.9);                                        // 邊緣抗鋸齒
+      const o = (py * s + px) * 4;
+      out[o] = data[k] * light * 1.08; out[o + 1] = data[k + 1] * light * 1.08; out[o + 2] = data[k + 2] * light * 1.1;
+      out[o + 3] = 255 * Math.max(0, edge);
+    }
+  }
+  g.putImageData(img, 0, 0);
 }
 
 export function createMoon({ parent, camera, renderer, onClose }) {
-  const mat = new THREE.MeshStandardMaterial({ map: moonTexture(), color: 0xc8c6c0, roughness: 1, metalness: 0 });
+  const mat = new THREE.MeshStandardMaterial({ color: 0x9a9892, roughness: 1, metalness: 0 });
+  loadMoonTextures(mat);
+  moonReady.add(() => { if (enabled) renderPanel(); });   // 月面圖載好了:面板的月相圖換成真實月面
   const mesh = new THREE.Mesh(new THREE.SphereGeometry(RADIUS, 64, 32), mat);
   parent.add(mesh);
   const dir = new THREE.Vector3();
@@ -167,7 +172,7 @@ export function createMoon({ parent, camera, renderer, onClose }) {
     if (!body) return;
     const ph = phase;
     body.innerHTML =
-      `<div class="moon-top"><canvas width="96" height="96" class="moon-pic"></canvas><div>` +
+      `<div class="moon-top"><canvas width="192" height="192" class="moon-pic" style="width:96px;height:96px"></canvas><div>` +
       `<div class="moon-name">${ph.emoji} ${ph.name}</div>` +
       `<div>照亮 <b>${Math.round(ph.illum * 100)}%</b> · 月齡 <b>${ph.age.toFixed(1)}</b> 天</div>` +
       `<div class="moon-sub">${ph.waxing ? "漸盈:一天比一天圓" : "漸虧:一天比一天缺"}</div></div></div>` +
@@ -181,7 +186,7 @@ export function createMoon({ parent, camera, renderer, onClose }) {
   function setEnabled(v) {
     enabled = !!v;
     if (panel) panel.hidden = !enabled;
-    if (enabled) renderPanel();
+    if (enabled) place();   // 關著時只算了簡易月相(沒有下次滿月/新月),打開時完整算一次再畫
   }
   document.getElementById("moon-close")?.addEventListener("click", () => onClose && onClose());
   label.addEventListener("click", (e) => { e.stopPropagation(); onOpen && onOpen(); });

@@ -52,6 +52,7 @@ import { createSunInfo } from "./scene/sun-info.js";
 import { createPlanets } from "./scene/planets.js";
 import { createTyphoons } from "./scene/typhoons.js";
 import { createTimeMachine } from "./ui/time-machine.js";
+import { createViewOffset } from "./lib/view-offset.js";
 import { createTour } from "./ui/tour.js";
 import { setupI18n, isEn } from "./lib/i18n.js";
 import { createVoice } from "./audio/voice.js";
@@ -248,6 +249,8 @@ export function start() {
   composer.addPass(new OutputPass());
 
   window.__earth = { scene, camera, renderer };
+  // 面板打開時地球移到沒被擋住的地方(每幀在畫面輸出前更新)
+  const viewOffset = createViewOffset({ camera });
   window.__earth.globe = globe;
   window.__earth.clouds = clouds;
   window.__earth.composer = composer;
@@ -1094,6 +1097,7 @@ export function start() {
     traffic.update();
     if (window.__earth.countryLabels) window.__earth.countryLabels.update();
 
+    viewOffset.update(dt);
     composer.render();
     requestAnimationFrame(loop);
   }

@@ -77,6 +77,13 @@ export function createTyphoons({ globeObject, camera, renderer, rig, onClose }) 
   const body = document.getElementById("typhoon-body");
   if (panel) makeDraggable(panel, panel.querySelector(".sat-head"), { disableBelow: 641 });
   document.getElementById("typhoon-close")?.addEventListener("click", () => onClose && onClose());
+  // 收合:只留標題列,整片地球讓出來看路徑
+  const minBtn = document.getElementById("typhoon-min");
+  function setMin(on) {
+    panel?.classList.toggle("min", on);
+    if (minBtn) { minBtn.textContent = on ? "▴" : "▾"; minBtn.title = on ? "展開面板" : "收合面板"; }
+  }
+  minBtn?.addEventListener("click", () => setMin(!panel.classList.contains("min")));
 
   let enabled = false, timer = null, storms = [], others = [], labels = [], loadedAt = null;
 
@@ -198,27 +205,28 @@ export function createTyphoons({ globeObject, camera, renderer, rig, onClose }) 
       const d = Math.round(distKm(s.center, TAIPEI));
       const closest = [{ h: 0, c: s.center }, ...s.forecast].map((f) => ({ ...f, km: distKm(f.c, TAIPEI) })).reduce((a, b) => (b.km < a.km ? b : a));
       const scale = twScale(s.wind);
+      // 精簡卡片:名稱、分級、一行數據、離台北多遠;細節收在「詳細資料」
       return `<div class="ty-card">` +
-        `<div class="ty-title">🌀 ${/^\d{4}$/.test(s.no || "") ? `20${s.no.slice(0, 2)} 年第 ${Number(s.no.slice(2))} 號颱風` : ""} <b>${esc(s.name.toUpperCase())}</b></div>` +
-        `<div class="ty-tags">${scale ? `<span class="ty-tag">${scale}(台灣分級)</span>` : ""}<span class="ty-tag dim">${JP_CAT[s.category] || esc(s.category || "")}${s.intensity ? ` · ${s.intensity}` : ""}</span></div>` +
-        `<div class="mt-grid">` +
-        `<span>中心氣壓</span><b>${esc(s.pressure || "—")} hPa</b>` +
-        `<span>最大風速</span><b>${s.wind ? `${s.wind} m/s` : "—"}${s.gust ? `(陣風 ${s.gust})` : ""}</b>` +
-        `<span>移動</span><b>${esc(s.course || "—")}${s.speed ? ` · 每小時 ${esc(s.speed)} 公里` : ""}</b>` +
-        `<span>位置</span><b>${ll(s.center)}</b>` +
-        `<span>距離台北</span><b>約 ${d.toLocaleString()} 公里</b>` +
-        (closest.h > 0 && closest.km < d - 30 ? `<span>預報最接近</span><b>${closest.h} 小時後約 ${Math.round(closest.km).toLocaleString()} 公里</b>` : "") +
-        `</div><button type="button" class="tc-btn ty-go" data-i="${i}">🔎 飛過去看</button></div>`;
+        `<div class="ty-title">🌀 <b>${esc(s.name.toUpperCase())}</b>${/^\d{4}$/.test(s.no || "") ? `<small>20${s.no.slice(0, 2)} 年第 ${Number(s.no.slice(2))} 號</small>` : ""}` +
+        `${scale ? `<span class="ty-tag">${scale}</span>` : ""}</div>` +
+        `<div class="ty-line">${esc(s.pressure || "—")} hPa · 風速 ${s.wind ? `${s.wind} m/s` : "—"} · ${esc(s.course || "—")}${s.speed ? ` ${esc(s.speed)} km/h` : ""}</div>` +
+        `<div class="ty-line ty-far">📍 距離台北約 <b>${d.toLocaleString()}</b> 公里` +
+        (closest.h > 0 && closest.km < d - 30 ? `,${closest.h} 小時後最接近(約 ${Math.round(closest.km).toLocaleString()} 公里)` : "") + `</div>` +
+        `<details class="ty-more"><summary>詳細資料</summary><div class="mt-grid">` +
+        `<span>分級</span><b>${scale ? `${scale}(台灣)· ` : ""}${JP_CAT[s.category] || esc(s.category || "")}${s.intensity ? ` · ${s.intensity}` : ""}</b>` +
+        `<span>陣風</span><b>${s.gust ? `${s.gust} m/s` : "—"}</b>` +
+        `<span>位置</span><b>${ll(s.center)}</b></div></details>` +
+        `<button type="button" class="tc-btn ty-go" data-i="${i}">🔎 飛過去看</button></div>`;
     }).join("");
     const rest = others.length
       ? `<div class="mt-h">🌍 其他海域</div>` + others.map((o, i) => `<button type="button" class="ty-other-row" data-o="${i}"><span class="ty-dot ty-${String(o.alert || "").toLowerCase()}"></span>` +
         `<b>${esc(o.name)}</b><span>${o.kmh ? `最大風速 ${o.kmh} km/h` : ""}${o.country ? ` · ${esc(o.country)}` : ""}</span></button>`).join("") : "";
     body.innerHTML =
       (storms.length ? cards : `<div class="ty-none">🎉 西北太平洋目前沒有颱風</div>`) + rest +
-      `<div class="ty-legend"><span><i class="lg-red"></i>暴風圈</span><span><i class="lg-yel"></i>強風圈</span><span><i class="lg-white"></i>預報 70% 機率圓</span><span><i class="lg-track"></i>走過的路徑</span></div>` +
-      `<div class="sat-caption">資料:日本氣象廳(西北太平洋)、聯合國 GDACS(其他海域)· ${fmtIssue(storms[0]?.issued || loadedAt)} 更新,每 30 分鐘自動重抓。` +
+      `<div class="ty-legend"><span><i class="lg-red"></i>暴風圈</span><span><i class="lg-yel"></i>強風圈</span><span><i class="lg-white"></i>70% 機率圓</span><span><i class="lg-track"></i>走過的路徑</span></div>` +
+      `<details class="ty-more"><summary>資料來源 · ${fmtIssue(storms[0]?.issued || loadedAt)} 更新</summary><div class="sat-caption">日本氣象廳(西北太平洋)、聯合國 GDACS(其他海域),每 30 分鐘自動重抓。` +
       `台灣的颱風警報以<a href="https://www.cwa.gov.tw/V8/C/P/Typhoon/TY_NEWS.html" target="_blank" rel="noopener">中央氣象署</a>發布為準。</div>` +
-      `<button type="button" class="tc-btn ty-sat">🛰️ 一起看衛星雲圖</button>`;
+      `<button type="button" class="tc-btn ty-sat">🛰️ 一起看衛星雲圖</button></details>`;
   }
   body?.addEventListener("click", (e) => {
     const g = e.target.closest(".ty-go");
@@ -251,6 +259,7 @@ export function createTyphoons({ globeObject, camera, renderer, rig, onClose }) 
   function setEnabled(v) {
     enabled = !!v;
     if (panel) panel.hidden = !enabled;
+    if (enabled) setMin(false);
     group.visible = enabled;
     host.hidden = !enabled;
     clearInterval(timer);
