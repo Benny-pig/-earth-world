@@ -126,7 +126,9 @@ export function createCameraRig({ camera, domElement, globeObject }) {
   // keepDirection:只拉遠回全景距離、不轉回預設方向(例如關掉台灣路況時,地球停在台灣那一面)
   function resetView({ keepDirection = false } = {}) {
     const dist = fitDistanceForAspect(camera.aspect);
-    const toDir = keepDirection ? camera.position.clone().normalize() : new THREE.Vector3(0, 0, 1);
+    const home = latLonToXYZ(23.7, 121, 1);   // 預設視角:台灣在正中間
+    const toDir = keepDirection ? camera.position.clone().normalize()
+      : new THREE.Vector3(home.x, home.y, home.z).applyQuaternion(globeObject ? globeObject.quaternion : new THREE.Quaternion()).normalize();
     tween = { from: camera.position.clone(), toDir, dist, t: 0, ms: 900 };
   }
 
@@ -145,6 +147,12 @@ export function createCameraRig({ camera, domElement, globeObject }) {
     const cur = camera.position.length();
     if (cur > d) tween = { from: camera.position.clone(), toDir: camera.position.clone().normalize(), dist: d, t: 0, ms: 700 };
   }
+
+  // 🌍 閒置時鏡頭慢慢繞著地球轉(約 2 分鐘一圈,方向跟地球真實自轉一樣:地表由左往右移動)。
+  // 地球本身固定在真實方向,所以白天黑夜永遠是對的;拖曳、飛行、有慣性時先停。
+  let autoSpin = false;
+  const setAutoSpin = (v) => { autoSpin = !!v; };
+  controls.autoRotateSpeed = 0.5;
 
   // 保持目前方向,拉遠到剛好看得到半徑 r 的球(r=1 就是整顆地球;手機直向會自動拉得更遠)
   function fitRadius(r, { ms = 1000 } = {}) {
@@ -178,7 +186,8 @@ export function createCameraRig({ camera, domElement, globeObject }) {
     const alt = camera.position.length() - 1;
     controls.rotateSpeed = alt < 0.35 ? BASE_ROTATE_SPEED * Math.max(0.12, alt / 0.35) : BASE_ROTATE_SPEED;
     settle(dt);
-    controls.update();
+    controls.autoRotate = autoSpin && !dragging && !tween && Math.abs(velX) + Math.abs(velY) < 0.05;
+    controls.update(dt);
   }
 
   // 取消進行中的飛行(電影巡航接手鏡頭時用)
@@ -194,5 +203,5 @@ export function createCameraRig({ camera, domElement, globeObject }) {
     flyTo(THREE.MathUtils.clamp(lat, -60, 60), lon, { distance: camera.position.length(), ms: 900 });
   }
 
-  return { controls, flyTo, resetView, setMinDistance, setMaxDistance, fitRadius, cancelTween, northUp, update, MAX_DISTANCE };
+  return { controls, flyTo, resetView, setMinDistance, setMaxDistance, fitRadius, cancelTween, northUp, setAutoSpin, update, MAX_DISTANCE };
 }

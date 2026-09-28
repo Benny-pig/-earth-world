@@ -165,9 +165,10 @@ export function createGlobe({ onAllTexturesFailed } = {}) {
   document.addEventListener("visibilitychange", onVisible);
 
   let paused = false;
-  // 🌗 真實晨昏線:停止裝飾性的自轉,把地球轉回「跟太陽的真實相對位置」(太陽光本來就放在
-  // 當下的直射點,地球轉角 0 時晝夜就是真的)。開著的時候其他地方叫恢復自轉也不理。
-  let realSun = false;
+  // 🌗 真實晨昏線(常駐):地球固定在「跟太陽的真實相對位置」(太陽光放在當下的直射點,
+  // 地球轉角 0 時晝夜就是真的),亮的一面永遠是此刻真正的白天。以前地球會裝飾性地自轉,
+  // 晝夜跟實際時間對不上、容易讓讀者誤會;現在改成鏡頭慢慢繞著地球轉(camera-controls 的 autoSpin)。
+  let realSun = true;
   return {
     object,
     mesh,
@@ -176,6 +177,7 @@ export function createGlobe({ onAllTexturesFailed } = {}) {
     aimSun,
     dispose() { clearInterval(sunTimer); document.removeEventListener("visibilitychange", onVisible); },
     setSpinPaused(v) { paused = v; },
+    isSpinPaused: () => paused,
     setRealSun(v) { realSun = !!v; if (realSun) aimSun(); },
     isRealSun: () => realSun,
     update(dt) {

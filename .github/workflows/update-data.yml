@@ -37,6 +37,9 @@ jobs:
       - name: 全台電動車充電站(交通部 TDX)
         run: python tools/build-ev-chargers.py
         continue-on-error: true
+      - name: 本週活動火山(史密森尼學會 / USGS 每週火山活動報告)
+        run: python tools/build-volcanoes.py
+        continue-on-error: true
       - name: 世界即時景點直播(YouTube 正在直播的景點攝影機)
         run: python tools/build-livecams.py
         continue-on-error: true

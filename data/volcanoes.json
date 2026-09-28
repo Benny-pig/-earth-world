@@ -1,0 +1,227 @@
+{
+ "built": "2026-09-28",
+ "period": "10 September-16 September 2026",
+ "note": "來源:Smithsonian Institution Global Volcanism Program / USGS Weekly Volcanic Activity Report(每週四更新,初步報告)。",
+ "items": [
+  {
+   "name": "Krakatau",
+   "zh": "喀拉喀托火山",
+   "country": "Indonesia",
+   "countryZh": "印尼",
+   "status": "new",
+   "statusZh": "新噴發",
+   "lat": -6.101,
+   "lon": 105.423,
+   "text": "The Pusat Vulkanologi dan Mitigasi Bencana Geologi (PVMBG) reported ongoing eruptive activity at Krakatau during 9-16 September. During 6-11 September there were 14 Strombolian eruptions reported. There was one eruption detected on a seismograph at 0047 on 9 September, but it was not visually confirmed. According to an analysis of a HIMAWARI-9 RGB image taken on that same day, an ash plume rose 2.1 km above the summi…"
+  },
+  {
+   "name": "Aira",
+   "zh": "姶良(櫻島)",
+   "country": "Japan",
+   "countryZh": "日本",
+   "status": "cont",
+   "statusZh": "持續噴發",
+   "lat": 31.577,
+   "lon": 130.659,
+   "text": "The Japan Meteorological Agency (JMA) reported ongoing eruptive activity at Minamidake Crater (Aira Caldera?s Sakurajima volcano) during 8-14 September. Crater incandescence was visible in nighttime webcam images during 11-14 September. An eruptive event at 1246 on 8 September generated an ash plume that rose 1.3 km above the crater rim and drifted S. Volcanologists conducted a field survey on 10 September and measur…"
+  },
+  {
+   "name": "Dukono",
+   "zh": "杜科諾火山",
+   "country": "Indonesia",
+   "countryZh": "印尼",
+   "status": "cont",
+   "statusZh": "持續噴發",
+   "lat": 1.699,
+   "lon": 127.878,
+   "text": "The Pusat Vulkanologi dan Mitigasi Bencana Geologi (PVMBG) reported that eruptive activity at Dukono continued during 10-15 September. White-and-gray ash plumes rose 200-1,100 m above the summit and drifted in different directions during 10-11 and 13-14 September; weather conditions obscured the summit on the other days or no plumes were emitted. The Alert Level remained at Level 2 (on a scale of 1-4) and the public …"
+  },
+  {
+   "name": "Great Sitkin",
+   "zh": "大錫特金火山",
+   "country": "United States",
+   "countryZh": "美國",
+   "status": "cont",
+   "statusZh": "持續噴發",
+   "lat": 52.076,
+   "lon": -176.13,
+   "text": "The Alaska Volcano Observatory (AVO) reported that slow lava effusion continued to feed a thick flow in Great Sitkin?s summit crater during 10-15 September based on webcam and satellite images. Minor earthquakes were detected daily, likely associated with rockfalls on the growing dome. Weather clouds obscured webcam and satellite views during most of the week; though steaming at the lava dome was visible in webcam im…"
+  },
+  {
+   "name": "Ibu",
+   "zh": "伊布火山",
+   "country": "Indonesia",
+   "countryZh": "印尼",
+   "status": "cont",
+   "statusZh": "持續噴發",
+   "lat": 1.494,
+   "lon": 127.632,
+   "text": "The Pusat Vulkanologi dan Mitigasi Bencana Geologi (PVMBG) reported that activity at Ibu continued during 10-17 September, with daily eruptive events recorded by the seismic network. Gray or white-and-gray ash plumes rose as high as 800 m above the summit and drifted in multiple directions. Incandescence at the summit was visible in some nighttime webcam images. The Alert Level remained at 2 (the second lowest level …"
+  },
+  {
+   "name": "Kanlaon",
+   "zh": "坎拉翁火山",
+   "country": "Philippines",
+   "countryZh": "菲律賓",
+   "status": "cont",
+   "statusZh": "持續噴發",
+   "lat": 10.41,
+   "lon": 123.13,
+   "text": "The Philippine Institute of Volcanology and Seismology (PHIVOLCS) reported continuing eruptive activity at Kanlaon during 10-16 September. The seismic network recorded 0-9 daily volcanic earthquakes. Sulfur dioxide emissions ranged from 1,085 to 4,074 tonnes per day. Volcanic emissions generally rose as high as 900 m above the summit and drifted E, NE, and S on most days. A total of six ash emissions were recorded du…"
+  },
+  {
+   "name": "Karangetang",
+   "zh": "卡蘭格坦火山",
+   "country": "Indonesia",
+   "countryZh": "印尼",
+   "status": "cont",
+   "statusZh": "持續噴發",
+   "lat": 2.781,
+   "lon": 125.407,
+   "text": "The Pusat Vulkanologi dan Mitigasi Bencana Geologi (PVMBG) reported that the eruption at Karangetang?s North Crater (Kawah Dua) continued during 10-16 September. Daily white and white-and-gray plumes rose as high as 500 m above the summit and drifted in various directions. Incandescence at the North Crater and from lava flows and/or incandescent avalanches on the flanks was visible in some webcam images throughout th…"
+  },
+  {
+   "name": "Kilauea",
+   "zh": "基拉韋厄火山",
+   "country": "United States",
+   "countryZh": "美國",
+   "status": "cont",
+   "statusZh": "持續噴發",
+   "lat": 19.421,
+   "lon": -155.287,
+   "text": "The Hawaiian Volcano Observatory (HVO) reported that the eruption within Kilauea?s Kaluapele summit caldera, characterized by episodic fountaining, incandescence, and intermittent spatter from craters along the SW margin of Halema`uma`u Crater, continued at variable levels during 10-15 September. Occasional incandescence and flames were observed in webcams images from all three eruptive vents (S, W, and N) at Halema`…"
+  },
+  {
+   "name": "Klyuchevskoy",
+   "zh": "克留赤夫火山",
+   "country": "Russia",
+   "countryZh": "俄羅斯",
+   "status": "cont",
+   "statusZh": "持續噴發",
+   "lat": 56.056,
+   "lon": 160.642,
+   "text": "The Kamchatkan Volcanic Eruption Response Team (KVERT) reported that a thermal anomaly over Klyuchevskoy was identified in satellite images on most days during 10-15 September; weather clouds occasionally obscured views. The Aviation Color Code was lowered to Yellow (the second lowest level on a four-color scale) on 9 September. Dates are based on UTC; specific events are in local time where noted. Source: Kamchatkan…"
+  },
+  {
+   "name": "Krasheninnikov",
+   "zh": "克拉舍寧尼科夫火山",
+   "country": "Russia",
+   "countryZh": "俄羅斯",
+   "status": "cont",
+   "statusZh": "持續噴發",
+   "lat": 54.596,
+   "lon": 160.27,
+   "text": "The Kamchatkan Volcanic Eruption Response Team (KVERT) reported that lava flows at Krasheninnikov continued to effuse onto the E flank of the Northern Cone during 10-15 September. A daily large thermal anomaly was identified in satellite images. Gas-and-steam emissions sometimes contained ash. The Aviation Color Code remained at Yellow (the second lowest level on a four-color scale). Dates and times are provided in C…"
+  },
+  {
+   "name": "Lewotolok",
+   "zh": "勒沃托洛克火山",
+   "country": "Indonesia",
+   "countryZh": "印尼",
+   "status": "cont",
+   "statusZh": "持續噴發",
+   "lat": -8.274,
+   "lon": 123.508,
+   "text": "The Pusat Vulkanologi dan Mitigasi Bencana Geologi (PVMBG) reported continuing eruptive activity at Lewotolok during 10-16 September. Daily gray ash plumes rose 100-700 m above the summit and drifted NW, W, and SW. The lava flows on the SSE and NE flanks did not advance, remaining at 1.8 km and 1.1 km long, respectively. During 11-13 September a new lava flow traveled 300-700 m down the SE flank, over older flows. We…"
+  },
+  {
+   "name": "Mayon",
+   "zh": "馬榮火山",
+   "country": "Philippines",
+   "countryZh": "菲律賓",
+   "status": "cont",
+   "statusZh": "持續噴發",
+   "lat": 13.257,
+   "lon": 123.685,
+   "text": "The Philippine Institute of Volcanology and Seismology (PHIVOLCS) reported ongoing ash emissions and unrest at Mayon during 9-16 September. Each day the seismic network recorded 2-38 volcanic earthquakes; one rockfall was detected on 6 September. Sulfur dioxide emissions (SO?) generally averaged 500-5,363 tonnes per day (t/d). Emissions rose 100-750 m above the crater and drifted in different directions on 12, 13, 15…"
+  },
+  {
+   "name": "Merapi",
+   "zh": "默拉皮火山",
+   "country": "Indonesia",
+   "countryZh": "印尼",
+   "status": "cont",
+   "statusZh": "持續噴發",
+   "lat": -7.54,
+   "lon": 110.446,
+   "text": "The Pusat Vulkanologi dan Mitigasi Bencana Geologi (PVMBG) reported that the eruption at Merapi (on Java) continued during 10-16 September with lava avalanches produced by the active lava dome on the upper SW flank. The seismic network recorded as many as 43 lava avalanches that traveled as far as 2 km down the Sat/Putih drainage on the SW flank during 10-11, 13, and 15-16 September and one lava avalanche that travel…"
+  },
+  {
+   "name": "Purace",
+   "zh": "普拉塞火山",
+   "country": "Colombia",
+   "countryZh": "哥倫比亞",
+   "status": "cont",
+   "statusZh": "持續噴發",
+   "lat": 2.309,
+   "lon": -76.395,
+   "text": "The Servicio Geologico Colombiano (SGC) reported intensifying eruptive activity at Puracé during 10-15 September. Signals associated with fluid movement dominated the seismicity and were characterized as tremor-type signals located beneath Puracé volcano at depths less than 1 km. Seismic activity associated with rock fracturing (volcano-tectonic earthquakes) continued to be recorded, but a majority of signals were lo…"
+  },
+  {
+   "name": "Rincon de la Vieja",
+   "zh": "比耶哈火山",
+   "country": "Costa Rica",
+   "countryZh": "哥斯大黎加",
+   "status": "cont",
+   "statusZh": "持續噴發",
+   "lat": 10.831,
+   "lon": -85.336,
+   "text": "The Observatorio Vulcanológico y Sismológico de Costa Rica-Universidad Nacional (OVSICORI-UNA) reported that a total of 67 small phreatic eruptions at Rincón de la Vieja were recorded daily by the seismic and infrasound networks during 6-16 September. One of the eruptive events at 1032 on 6 September generated a lahar; secondary lahars were recorded on 5 and 6 September after heavy rainfall. On 13 September the sulfu…"
+  },
+  {
+   "name": "Sabancaya",
+   "zh": "薩班卡亞火山",
+   "country": "Peru",
+   "countryZh": "秘魯",
+   "status": "cont",
+   "statusZh": "持續噴發",
+   "lat": -15.787,
+   "lon": -71.857,
+   "text": "The Instituto Geofísico del Perú?s (IGP) Centro Vulcanológico Nacional (CENVUL) reported continuing eruptive activity at Sabancaya during 7-13 September. The seismic network detected 41 seismic events associated with the movement of magmatic fluids, along with earthquakes indicating internal rock fracturing; no volcanic explosions occurred during the period. Gas, steam, and ash emissions periodically rose as high as …"
+  },
+  {
+   "name": "Semeru",
+   "zh": "塞梅魯火山",
+   "country": "Indonesia",
+   "countryZh": "印尼",
+   "status": "cont",
+   "statusZh": "持續噴發",
+   "lat": -8.108,
+   "lon": 112.922,
+   "text": "The Pusat Vulkanologi dan Mitigasi Bencana Geologi (PVMBG) reported that activity continued at Semeru during 10-16 September, with daily eruptive events recorded by the seismic network. White-and-gray ash plumes rose 200-1,000 m above the summit and drifted in multiple directions on most days; no emissions were visible during 10-11 September. The Alert Level remained at 3 (the second highest level on a scale of 1-4) …"
+  },
+  {
+   "name": "Sheveluch",
+   "zh": "希韋盧奇火山",
+   "country": "Russia",
+   "countryZh": "俄羅斯",
+   "status": "cont",
+   "statusZh": "持續噴發",
+   "lat": 56.653,
+   "lon": 161.36,
+   "text": "The Kamchatkan Volcanic Eruption Response Team (KVERT) reported continuing lava effusion and explosive activity at the lava domes along the N crater floor of Young Sheveluch (on the SW flank of Old Sheveluch) during 9-15 September. A thermal anomaly was identified in satellite images on 11, 13, and 15 September; weather clouds occasionally obscured views. The Aviation Color Code remained at Orange (the second highest…"
+  },
+  {
+   "name": "Sinabung",
+   "zh": "錫納朋火山",
+   "country": "Indonesia",
+   "countryZh": "印尼",
+   "status": "cont",
+   "statusZh": "持續噴發",
+   "lat": 3.17,
+   "lon": 98.392,
+   "text": "The Pusat Vulkanologi dan Mitigasi Bencana Geologi (PVMBG) reported that activity at Sinabung was ongoing during 10-16 September. White plumes were visible during the week, rising as high as 600 m above the summit and drifting in multiple directions. The Alert Level remained at 3 (the second highest level on a scale of 1-4). Source: Pusat Vulkanologi dan Mitigasi Bencana Geologi (PVMBG, also known as CVGHM)"
+  },
+  {
+   "name": "Lewotobi",
+   "zh": "勒沃托比火山",
+   "country": "Indonesia",
+   "countryZh": "印尼",
+   "status": "unrest",
+   "statusZh": "其他觀測",
+   "lat": -8.542,
+   "lon": 122.775,
+   "text": "The Pusat Vulkanologi dan Mitigasi Bencana Geologi (PVMBG) reported that the Alert Level was lowered to 2 (on a scale of 1-4) at Lewotobi Laki-Laki on 16 September, and the public was warned to stay 4 km away from the center of Laki-Laki. Source: Pusat Vulkanologi dan Mitigasi Bencana Geologi (PVMBG, also known as CVGHM)"
+  }
+ ]
+}

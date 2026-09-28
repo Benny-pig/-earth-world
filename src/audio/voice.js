@@ -67,12 +67,14 @@ export function createVoice({ music, onClose }) {
     if (v) { u.voice = v; u.lang = v.lang; } else u.lang = isEn ? "en-US" : "zh-TW";
     u.rate = s.rate;
     u.pitch = PITCH;
-    u.onstart = () => { if (speaking++ === 0) duck(true); };
-    const end = () => { speaking = Math.max(0, speaking - 1); if (!speaking) duck(false); };
-    u.onend = end;
-    u.onerror = end;
-    synth.speak(u);
-    return true;
+    // 回傳「唸完」的 Promise:電影巡航會等唸完才飛下一站
+    return new Promise((resolve) => {
+      u.onstart = () => { if (speaking++ === 0) duck(true); };
+      const end = () => { speaking = Math.max(0, speaking - 1); if (!speaking) duck(false); resolve(); };
+      u.onend = end;
+      u.onerror = end;
+      synth.speak(u);
+    });
   }
   function stop() { if (supported) synth.cancel(); speaking = 0; duck(false); }
 

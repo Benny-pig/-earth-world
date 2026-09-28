@@ -28,7 +28,7 @@ const DICT = {
   "收藏只存在這台裝置的瀏覽器裡,不會上傳;清除瀏覽器資料會一起清掉。": "Saved items stay in this browser only — nothing is uploaded. Clearing browser data removes them.",
   "極光即時預報": "Aurora forecast", "🌌 極光即時預報": "🌌 Aurora forecast", "📍 熱門極光地點 · 現在": "📍 Aurora spots · now",
   "流星雨": "Meteor showers", "🌠 流星雨": "🌠 Meteor showers", "▶ 在地球旁看流星雨": "▶ Watch the shower", "⏹ 停止流星雨": "⏹ Stop the shower", "📅 接下來一年": "📅 Next 12 months",
-  "電影巡航": "Cinematic tour", "颱風路徑": "Typhoon tracks", "🌀 颱風路徑": "🌀 Typhoon tracks", "五大行星": "Planets", "🪐 五大行星": "🪐 Planets",
+  "電影巡航": "Cinematic tour", "火山與野火": "Volcanoes & wildfires", "🌋 火山與野火": "🌋 Volcanoes & wildfires", "颱風路徑": "Typhoon tracks", "🌀 颱風路徑": "🌀 Typhoon tracks", "五大行星": "Planets", "🪐 五大行星": "🪐 Planets",
   "時光機": "Time machine", "🕰️ 時光機": "🕰️ Time machine", "📅 日期": "📅 Date", "🕐 時間": "🕐 Time", "▶ 一秒一小時": "▶ 1 hour/sec", "⏩ 一秒一天": "⏩ 1 day/sec",
   "↺ 回到現在": "↺ Now", "跳到:": "Jump to:", "今晚 21:00": "Tonight 21:00", "下次滿月": "Next full moon", "夏至": "June solstice", "冬至": "December solstice",
   "春分": "March equinox", "秋分": "September equinox", "⚙️ 設定": "⚙️ Settings", "設定": "Settings", "🔤 字體": "🔤 Text", "🎨 主題": "🎨 Theme", "🌐 語言": "🌐 Language",

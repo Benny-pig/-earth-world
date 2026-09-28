@@ -51,8 +51,10 @@ import { createConstellations } from "./scene/constellations.js";
 import { createSunInfo } from "./scene/sun-info.js";
 import { createPlanets } from "./scene/planets.js";
 import { createTyphoons } from "./scene/typhoons.js";
+import { createHazards } from "./scene/hazards.js";
 import { createTimeMachine } from "./ui/time-machine.js";
 import { createViewOffset } from "./lib/view-offset.js";
+import { latLonToXYZ } from "./lib/geo.js";
 import { createTour } from "./ui/tour.js";
 import { setupI18n, isEn } from "./lib/i18n.js";
 import { createVoice } from "./audio/voice.js";
@@ -147,7 +149,11 @@ export function start() {
 
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1500);
-  camera.position.set(0, 0, fitDistanceForAspect(window.innerWidth / window.innerHeight));
+  // 一打開就看到台灣(地球固定在真實方向,台灣在經度 121°)
+  {
+    const h = latLonToXYZ(23.7, 121, fitDistanceForAspect(window.innerWidth / window.innerHeight));
+    camera.position.set(h.x, h.y, h.z);
+  }
 
   const starfield = createStarfield();
   loading.done.then(() => starfield.loadBackground());   // 地球出現後才下載銀河背景
@@ -496,13 +502,7 @@ export function start() {
   }
   if (otdToggle) otdToggle.addEventListener("click", () => setOtd(otdToggle.getAttribute("aria-pressed") !== "true"));
 
-  // 🌗 真實晨昏線:地球停止裝飾性自轉、轉回跟太陽的真實相對位置,哪裡是白天/黑夜照現在的真實時間
-  const sunToggle = document.getElementById("sun-toggle");
-  if (sunToggle) sunToggle.addEventListener("click", () => {
-    const on = sunToggle.getAttribute("aria-pressed") !== "true";
-    sunToggle.setAttribute("aria-pressed", String(on));
-    globe.setRealSun(on);
-  });
+  // 🌗 真實晨昏線現在常駐(globe.js 預設就是真實方向),選單不再有開關
   window.__earth.flights = flights;
   const airportBoard = createAirportBoard();
   window.__earth.airportBoard = airportBoard;
@@ -887,6 +887,16 @@ export function start() {
   }
   typhoonToggle?.addEventListener("click", () => setTyphoons(typhoonToggle.getAttribute("aria-pressed") !== "true"));
 
+  // 🌋 火山、野火、冰山
+  const hazardToggle = document.getElementById("hazard-toggle");
+  const hazards = createHazards({ globeObject: globe.object, camera, renderer, rig, naturePopup, onClose: () => setHazards(false) });
+  window.__earth.hazards = hazards;
+  function setHazards(on) {
+    hazardToggle?.setAttribute("aria-pressed", String(on));
+    hazards.setEnabled(on);
+  }
+  hazardToggle?.addEventListener("click", () => setHazards(hazardToggle.getAttribute("aria-pressed") !== "true"));
+
   // ☀️ 太陽:地球旁的「☀️ 太陽」標籤 + 太陽與節氣面板
   const sunInfoToggle = document.getElementById("sunpanel-toggle");
   const sunInfo = createSunInfo({
@@ -1097,6 +1107,8 @@ export function start() {
       resumeTimer = setTimeout(() => { globe.setSpinPaused(false); clouds.setSpinPaused(false); resumeTimer = null; }, 1500);
     }
     cinema.update(dt);
+    // 閒置時鏡頭慢慢繞地球轉(取代以前的地球自轉;滑到地球上、看國家、路況、巡航、時光機時停)
+    rig.setAutoSpin(!globe.isSpinPaused() && !cinema.isActive() && !timeMachine.isEnabled() && !(intro && intro.isActive()));
     rig.update(dt);
     homeCompass.update();
     flightSim.update(dt);
@@ -1105,6 +1117,7 @@ export function start() {
     constellations.update(clock.elapsedTime);
     planets.update();
     typhoons.update();
+    hazards.update();
     timeMachine.update(dt);
     sunInfo.update();
     if (intro) intro.update(dt);

@@ -129,6 +129,23 @@ def _():
     return "ok", f"目前 {n} 個颱風" if n else "目前沒有颱風(資料正常)"
 
 
+@check("火山/野火(NASA EONET)")
+def _():
+    s, b = get("https://eonet.gsfc.nasa.gov/api/v3/events?status=open&category=volcanoes,wildfires,seaLakeIce&days=45", timeout=45)
+    n = len(json.loads(b).get("events", [])) if s == 200 else 0
+    return ("ok", f"{n} 個事件") if s == 200 else ("fail", f"HTTP {s}")
+
+
+@check("本週活動火山資料")
+def _():
+    s, b = get(SITE + "data/volcanoes.json")
+    if s != 200: return "warn", "還沒有資料(等每週自動更新)"
+    d = json.loads(b)
+    age = (date.today() - date.fromisoformat(d.get("built", "2000-01-01"))).days
+    n = len(d.get("items", []))
+    return ("ok", f"{n} 座 · {age} 天前更新") if age <= 21 else ("warn", f"{n} 座,但已 {age} 天沒更新")
+
+
 @check("太空發射(Launch Library 2)")
 def _():
     s, b = get("https://ll.thespacedevs.com/2.3.0/launches/upcoming/?limit=3&mode=list")

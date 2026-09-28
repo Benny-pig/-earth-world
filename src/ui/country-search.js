@@ -44,6 +44,7 @@ const SYNONYMS = {
   "planet-toggle": "行星 五大行星 金星 火星 木星 土星 水星 planet",
   "timemachine-toggle": "時光機 時間 時光 過去 未來 夏至 冬至 time machine",
   "typhoon-toggle": "颱風 路徑 颶風 熱帶風暴 暴風圈 typhoon hurricane cyclone track",
+  "hazard-toggle": "火山 噴發 野火 森林大火 冰山 災害 volcano eruption wildfire iceberg",
   "fav-btn": "收藏 最愛 書籤 我的 favorite bookmark",
   "tour-btn": "導覽 教學 說明 怎麼用 help tour",
   "theme-toggle": "主題 版面 風格 theme",
@@ -52,7 +53,7 @@ const SYNONYMS = {
 const ICONS = {
   "weather-toggle": "🌡️", "quake-toggle": "📳", "satellite-toggle": "🌀", "flight-toggle": "✈️", "livecam-toggle": "📺", "moon-toggle": "🌙",
   "orbit-toggle": "🛰️", "launch-toggle": "🚀", "sun-toggle": "🌗", "quiz-toggle": "🎯", "passport-toggle": "🛂", "flightsim-toggle": "🛫",
-  "compare-toggle": "⚖️", "otd-toggle": "📜", "radio-toggle": "📻", "aurora-toggle": "🌌", "meteor-toggle": "🌠", "cinema-toggle": "🎬", "voice-toggle": "🗣️", "constellation-toggle": "✨", "sunpanel-toggle": "☀️", "planet-toggle": "🪐", "timemachine-toggle": "🕰️", "typhoon-toggle": "🌀",
+  "compare-toggle": "⚖️", "otd-toggle": "📜", "radio-toggle": "📻", "aurora-toggle": "🌌", "meteor-toggle": "🌠", "cinema-toggle": "🎬", "voice-toggle": "🗣️", "constellation-toggle": "✨", "sunpanel-toggle": "☀️", "planet-toggle": "🪐", "timemachine-toggle": "🕰️", "typhoon-toggle": "🌀", "hazard-toggle": "🌋",
   "fav-btn": "⭐", "tour-btn": "❓", "theme-toggle": "🎨", "share-btn": "🔗",
 };
 const GEO_ICONS = { mountain: "⛰️", peak: "🏔️", river: "🌊", desert: "🏜️", plateau: "🗻", plain: "🌾", lake: "💧", other: "📍" };

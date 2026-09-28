@@ -74,6 +74,7 @@ export function createCinema({ camera, rig, globeObject, renderer, canAutoStart,
   paintAuto();
 
   let active = false, shot = 0, phase = "fly", t = 0;
+  let holdLen = HOLD_S, speechPending = false, speechEndT = 0;
   const fromDir = new THREE.Vector3(), toDir = new THREE.Vector3(), q = new THREE.Quaternion(), qI = new THREE.Quaternion();
   let fromDist = 3, hop = 0;
 
@@ -104,7 +105,16 @@ export function createCinema({ camera, rig, globeObject, renderer, canAutoStart,
     const r = $text.getBoundingClientRect();
     textAnchor = { x: r.left + 2, y: r.top - 8 };
     cap.classList.add("show");
-    onShot && onShot({ title: isEn ? s[8] : s[6], sub: isEn ? "" : s[7], narration: isEn ? `Here is ${s[8]}.` : NARRATION[s[6]] });
+    // 有人聲導覽時:這一站停到唸完(再多停 0.8 秒)才飛下一站,旁白不會被下一站切斷
+    const narration = isEn ? `Here is ${s[8]}.` : NARRATION[s[6]];
+    const said = onShot && onShot({ title: isEn ? s[8] : s[6], sub: isEn ? "" : s[7], narration });
+    holdLen = HOLD_S;
+    if (said && typeof said.then === "function") {
+      speechPending = true;
+      holdLen = Math.max(HOLD_S, (narration || "").length / (isEn ? 14 : 4) + 1.5);   // 預估唸多久,鏡頭漂移照這個速度
+      const shotAtStart = shot;
+      said.then(() => { if (shot === shotAtStart) { speechPending = false; speechEndT = t; } });
+    }
   }
 
   // 地球上的 📍:每幀把地點投影到畫面上,連線從字幕左上角拉過去
@@ -141,14 +151,16 @@ export function createCinema({ camera, rig, globeObject, renderer, canAutoStart,
       return;
     }
     // 慢慢漂移:經度往東、緯度微調,同時緩緩拉近
-    const k = Math.min(1, t / HOLD_S);
+    const k = Math.min(1, t / holdLen);
     const e = k * k * (3 - 2 * k) * 0.4 + k * 0.6;   // 大致等速,頭尾稍微柔和
     worldDir(s[0] + s[5] * DRIFT * e, s[1] + s[4] * DRIFT * (e - 0.5), a);
     camera.position.copy(a).multiplyScalar(THREE.MathUtils.lerp(s[2], s[2] + (s[3] - s[2]) * DRIFT, e));
     camera.lookAt(0, 0, 0);
     placePin(s);
-    if (t >= HOLD_S - 1) cap.classList.remove("show");
-    if (t >= HOLD_S) { shot = (shot + 1) % SHOTS.length; beginFly(); }
+    // 什麼時候飛下一站:至少停 holdLen;還在唸就等唸完再 0.8 秒(最多多等 8 秒,免得語音卡住)
+    const leaveAt = speechPending ? holdLen + 8 : Math.max(holdLen, speechEndT + 0.8);
+    if (t >= leaveAt - 0.8) cap.classList.remove("show");
+    if (t >= leaveAt) { speechPending = false; speechEndT = 0; shot = (shot + 1) % SHOTS.length; beginFly(); }
   }
 
   function nearestShot() {
