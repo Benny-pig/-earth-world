@@ -388,20 +388,44 @@ export function start() {
       if (quakeAnnounced.has(q.id)) continue;
       quakeAnnounced.add(q.id);
       if (q.time < openedAt - 60 * 60 * 1000) continue;
-      voice.speak(isEn ? `Earthquake alert. Magnitude ${q.mag.toFixed(1)}, ${q.place}.`
-        : `地震快報。${q.zh || "國外"}發生規模 ${q.mag.toFixed(1)} 的地震。`, { kind: "quake", interrupt: false });
+      const nearTw = /台灣|臺灣|Taiwan/i.test(`${q.zh || ""} ${q.place || ""}`);
+      voice.speak(isEn ? `Quick heads-up: a magnitude ${q.mag.toFixed(1)} earthquake just struck ${q.place}.`
+        : nearTw ? `注意喔,台灣附近剛剛發生規模 ${q.mag.toFixed(1)} 的地震,大家要注意安全。`
+        : `插播一則地震消息,剛剛在${q.zh || "國外"}發生規模 ${q.mag.toFixed(1)} 的地震。`, { kind: "quake", interrupt: false });
     }
   }
   // 國家介紹的播報文字
-  const popSpeech = (n) => (n >= 1e8 ? `${(n / 1e8).toFixed(1)}億` : n >= 1e4 ? `${Math.round(n / 1e4)}萬` : `${n}`);
+  // 人口講成口語:1億2400萬、2350萬、38萬(語音會唸成「一億兩千四百萬」,不會唸成「一點二億」)
+  const popSpeech = (n) => {
+    if (n >= 1e8) { const yi = Math.floor(n / 1e8), wan = Math.round((n % 1e8) / 1e6) * 100; return wan ? `${yi}億${wan}萬` : `${yi}億`; }
+    if (n >= 1e5) return `${Math.round(n / 1e4)}萬`;
+    if (n >= 1e4) return `${(n / 1e4).toFixed(1).replace(/\.0$/, "")}萬`;
+    return `${Math.round(n / 100) * 100}`;
+  };
+  // 當地現在幾點(用說的):晚上8點、清晨6點
+  function localTimeSpeech(tz) {
+    try {
+      const h = Number(new Intl.DateTimeFormat("en-US", { timeZone: tz, hour: "numeric", hourCycle: "h23" }).format(new Date()));
+      const part = h < 5 ? "凌晨" : h < 8 ? "清晨" : h < 11 ? "早上" : h < 13 ? "中午" : h < 17 ? "下午" : h < 19 ? "傍晚" : "晚上";
+      return `${part}${h % 12 || 12}點`;
+    } catch { return null; }
+  }
+  const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
   let countrySpeech = "";
+  // 像導遊帶路一樣介紹:開場白、首都與人口、那邊現在幾點、再分享一個小知識(每次開場白會變)
   function countryNarration(hit, c, pop) {
-    if (isEn) return `${hit.names.en}.${c?.capital_en ? ` Capital: ${c.capital_en}.` : ""}`;
-    const parts = [hit.names.zh];
-    if (c?.capital_zh) parts.push(`首都是${c.capital_zh}`);
-    if (Number(pop) > 0) parts.push(`人口大約${popSpeech(Number(pop))}`);
-    if (Array.isArray(c?.features) && c.features[0]) parts.push(String(c.features[0]));
-    return parts.join("。");
+    const zh = hit.names.zh;
+    if (isEn) return `${pick(["Welcome to", "Here we are in", "Let's take a look at"])} ${hit.names.en}!${c?.capital_en ? ` The capital is ${c.capital_en}.` : ""}`;
+    if (zh === "臺灣" || zh === "台灣") return "歡迎回到台灣,我們的家!" + (c?.features?.[0] ? `跟你分享:${c.features[0]}` : "");
+    let t = pick([`歡迎來到${zh}!`, `我們來到${zh}囉。`, `這裡是${zh}!`, `一起來看看${zh}吧。`]);
+    if (c?.capital_zh && Number(pop) > 0) t += `首都是${c.capital_zh},大約住了${popSpeech(Number(pop))}人。`;
+    else if (c?.capital_zh) t += `首都是${c.capital_zh}。`;
+    else if (Number(pop) > 0) t += `這裡大約住了${popSpeech(Number(pop))}人。`;
+    const now = c?.timezone ? localTimeSpeech(c.timezone) : null;
+    const twNow = localTimeSpeech("Asia/Taipei");
+    if (now) t += now === twNow ? `那邊跟台灣一樣,現在是${now}。` : `那邊現在是${now}。`;
+    if (Array.isArray(c?.features) && c.features[0]) t += pick(["跟你分享一個小知識:", "你知道嗎?", "有個有趣的地方是,"]) + String(c.features[0]);
+    return t;
   }
   document.addEventListener("click", (e) => { if (e.target.closest("[data-read-country]") && countrySpeech) voice.speak(countrySpeech, { force: true }); });
   window.__earth.music = music;
@@ -894,7 +918,7 @@ export function start() {
   const AMBIENT = new Set(["quake-toggle", "sun-toggle", "aurora-toggle", "constellation-toggle", "voice-toggle"]);
   const cinema = createCinema({
     camera, rig, globeObject: globe.object, renderer,
-    onShot: ({ title, sub }) => voice.speak(sub ? `${title}。${sub}` : title, { kind: "cinema" }),
+    onShot: ({ title, sub, narration }) => voice.speak(narration || (sub ? `${title}。${sub}` : title), { kind: "cinema" }),
     canAutoStart: () => !document.body.classList.contains("intro-playing") && !(intro && intro.isActive()) && !tour.isActive() &&
       !sidePanel.isOpen() && !encyclopedia.isOpen() && !favorites.isOpen() && !flightSim.isEnabled?.() &&
       !/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName || "") &&

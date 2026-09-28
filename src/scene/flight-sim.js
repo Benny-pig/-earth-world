@@ -173,7 +173,8 @@ export function createFlightSim({ globeObject, camera, renderer, rig, openCountr
   function announce(html, ms = 5200) {
     if (!caption) return;
     caption.innerHTML = html;
-    onAnnounce && onAnnounce(caption.textContent);
+    // 人聲播報:標題(機長廣播)跟內容中間要停一下,不然會連在一起唸
+    if (onAnnounce) { const head = caption.querySelector(".otd-cap-k")?.textContent || ""; onAnnounce(head + "\n" + caption.textContent.slice(head.length)); }
     caption.hidden = false;
     caption.style.animation = "none"; void caption.offsetWidth; caption.style.animation = "";
     clearTimeout(capTimer);
