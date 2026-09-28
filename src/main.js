@@ -190,6 +190,7 @@ export function start() {
       // 台灣海岸線用醒目的金色粗線,一眼就能在地球上找到
       const twOutline = buildOutline(geojson, "TW");
       if (twOutline) globe.object.add(twOutline);
+      window.__earth.twOutline = twOutline;
       const countryLayer = buildCountryLayer(geojson);
       globe.object.add(countryLayer.group);
       window.__earth.countryLayer = countryLayer;
@@ -904,6 +905,11 @@ export function start() {
   }
   hazardToggle?.addEventListener("click", () => setHazards(hazardToggle.getAttribute("aria-pressed") !== "true"));
 
+  // 國界線、台灣海岸線、國家色塊:貼著地表的圖層(站在地面仰望時要藏起來)
+  function setGroundLines(on) {
+    const e = window.__earth;
+    for (const o of [e.borders, e.twOutline, e.countryLayer?.group]) if (o) o.visible = on;
+  }
   // 🎥 特別視角:搭上國際太空站、從月球看地球(鏡頭暫時離開一般的繞地球模式)
   const issToggle = document.getElementById("iss-ride-toggle");
   const moonViewToggle = document.getElementById("moonview-toggle");
@@ -911,7 +917,7 @@ export function start() {
     camera, rig, globeObject: globe.object, moon, sunDir: () => globe.sun.position,
     codeAt: (lat, lon) => window.__earth.countryLayer?.codeAt(lat, lon),
     nameOf: (c) => window.__earth.countryLayer?.meshByCode.get(c)?.userData?.names?.zh || c,
-    onExit: () => { issToggle?.setAttribute("aria-pressed", "false"); moonViewToggle?.setAttribute("aria-pressed", "false"); },
+    onExit: () => { issToggle?.setAttribute("aria-pressed", "false"); moonViewToggle?.setAttribute("aria-pressed", "false"); setGroundLines(true); },
   });
   window.__earth.pov = pov;
   issToggle?.addEventListener("click", () => {
@@ -931,6 +937,12 @@ export function start() {
   const bdayToggle = document.getElementById("bday-toggle");
   const birthday = createBirthday({
     rig, onClose: () => setBirthday(false),
+    lookUp: (opt) => {
+      issToggle?.setAttribute("aria-pressed", "false"); moonViewToggle?.setAttribute("aria-pressed", "false");
+      pov.startSky(opt);
+      setGroundLines(false);   // 站在地面時,腳邊的國界線、海岸線會被畫進天空,先藏起來
+    },
+    stopLooking: () => { if (pov.mode() === "sky") pov.exit(); },
     onOpen: () => { if (timeMachine.isEnabled()) setTimeMachine(false); },   // 兩個都在改模擬時間,只留一個
   });
   function setBirthday(on) {

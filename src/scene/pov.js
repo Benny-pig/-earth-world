@@ -7,11 +7,13 @@ import { isEn } from "../lib/i18n.js";
 //   🛰️ 搭上國際太空站:鏡頭就在太空站的真實位置(SGP4 軌道模型),面朝前進方向、往下看地平線,
 //       可以加速(時間一起快轉,晝夜也跟著走),拖曳可以左右上下看,滾輪/兩指縮放視野
 //   🌙 從月球看地球:站在月面上,看地球從月平線慢慢升起(模擬阿波羅 8 號拍到的「地出」)
+//   🔭 站在地面看天空:站在某個城市(生日天空用台北)仰望那一刻的夜空——星座、月亮、行星都在真實方向
 // 兩種模式都暫停一般的鏡頭控制,按「離開」或 Esc 回到原本的地球視角。
 const SAT_LIB = "https://cdn.jsdelivr.net/npm/satellite.js@5.0.0/+esm";
 const TLE_URL = "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544&FORMAT=tle";
 const TLE_CACHE = "earth-world.sat-tle.v1";   // 衛星圖層已經抓過的軌道資料可以直接用
 const EARTH_KM = 6371;
+const esc2 = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
 const RAD = Math.PI / 180;
 
 async function issSatrec() {
@@ -44,6 +46,8 @@ export function createPov({ camera, rig, globeObject, moon, sunDir, codeAt, name
   hud.hidden = true;
   document.body.appendChild(hud);
   hud.addEventListener("click", (e) => {
+    // 點標題:縮小的資訊列展開/收起
+    if (e.target.closest(".pov-t") && !e.target.closest("button")) { e.stopPropagation(); hud.classList.toggle("compact"); return; }
     const b = e.target.closest("button");
     if (!b) return;
     e.stopPropagation();
@@ -72,20 +76,26 @@ export function createPov({ camera, rig, globeObject, moon, sunDir, codeAt, name
     rig.controls.enabled = false;
     document.body.classList.add("pov");
     hud.hidden = false;
+    hud.classList.remove("compact");
+    // 資訊列 6 秒後自動縮成一行,不擋住畫面(點標題可以再展開)
+    clearTimeout(compactTimer);
+    compactTimer = setTimeout(() => { if (mode) hud.classList.add("compact"); }, 6000);
     yaw = 0; pitch = 0; fovZoom = 1; elapsed = 0;
   }
+  let compactTimer = null;
   function exit() {
     if (!mode) return;
     const was = mode;
     mode = null;
     hud.hidden = true;
-    document.body.classList.remove("pov");
+    document.body.classList.remove("pov", "pov-sky");
+    for (const c of cardinals) c.el.style.display = "none";
     moon.setForceVisible(false);
-    setSimTime(null);
+    if (was !== "sky") setSimTime(null);   // 看生日天空時,時間由生日面板管(回到地球後還是那一天)
     camera.fov = saved.fov; camera.near = saved.near; camera.updateProjectionMatrix();
     // 回到一般視角:太空站模式回到它正下方那一帶,月球模式回到看得到整顆地球
-    const dir = was === "iss" && iss?.pos ? iss.pos.clone().normalize() : camera.position.clone().normalize();
-    camera.position.copy(dir.multiplyScalar(was === "iss" ? 2.4 : 3.4));
+    const dir = was === "iss" && iss?.pos ? iss.pos.clone().normalize() : was === "sky" ? sky.n.clone() : camera.position.clone().normalize();
+    camera.position.copy(dir.multiplyScalar(was === "iss" ? 2.4 : was === "sky" ? 2.6 : 3.4));
     camera.up.set(0, 1, 0);
     camera.lookAt(0, 0, 0);
     rig.controls.enabled = true;
@@ -180,6 +190,61 @@ export function createPov({ camera, rig, globeObject, moon, sunDir, codeAt, name
     paintHud();
   }
 
+  // ---------- 🔭 站在地面看天空 ----------
+  const RAD2 = Math.PI / 180;
+  const sky = { lat: 25.03, lon: 121.56, az: 180, el: 40, title: "", sub: "", n: new THREE.Vector3(), north: new THREE.Vector3(), east: new THREE.Vector3() };
+  // 東南西北:貼在地平線上的方位字
+  const cardinals = [["北", 0], ["東", 90], ["南", 180], ["西", 270]].map(([t, az]) => {
+    const el = document.createElement("div");
+    el.className = "pov-card";
+    el.textContent = isEn ? { 北: "N", 東: "E", 南: "S", 西: "W" }[t] : t;
+    el.style.display = "none";
+    document.body.appendChild(el);
+    return { el, az };
+  });
+  // target:要看的天體「正下方的地面點」(例如月亮),在地平線上就轉過去看它,不然看南方
+  function startSky({ lat = 25.03, lon = 121.56, title = "", sub = "", target = null } = {}) {
+    if (mode) exit();
+    Object.assign(sky, { lat, lon, title, sub });
+    const toAltAz = (t) => {
+      const phi = lat * RAD2, d = t.lat * RAD2, H = (lon - t.lon) * RAD2;
+      const alt = Math.asin(Math.sin(phi) * Math.sin(d) + Math.cos(phi) * Math.cos(d) * Math.cos(H)) / RAD2;
+      const az = (Math.atan2(Math.sin(H), Math.cos(H) * Math.sin(phi) - Math.tan(d) * Math.cos(phi)) / RAD2 + 180 + 360) % 360;
+      return { alt, az };
+    };
+    const t = target ? toAltAz(target) : null;
+    if (t && t.alt > 8) { sky.az = t.az; sky.el = Math.min(55, Math.max(22, t.alt)); } else { sky.az = 180; sky.el = 38; }
+    mode = "sky";
+    document.body.classList.add("pov-sky");
+    takeOver(72, 0.0005);
+    paintHud(true);
+  }
+  function updateSky() {
+    sky.n.copy(toWorld(sky.lat, sky.lon, 1)).normalize();
+    const Y = new THREE.Vector3(0, 1, 0);
+    sky.north.copy(Y).addScaledVector(sky.n, -Y.dot(sky.n)).normalize();
+    sky.east.crossVectors(sky.north, sky.n).normalize();
+    const dirOf = (azDeg, elDeg) => {
+      const a = azDeg * RAD2, e = elDeg * RAD2;
+      return sky.north.clone().multiplyScalar(Math.cos(e) * Math.cos(a)).addScaledVector(sky.east, Math.cos(e) * Math.sin(a)).addScaledVector(sky.n, Math.sin(e));
+    };
+    camera.position.copy(sky.n).multiplyScalar(1.0012);   // 站在地面上(稍微高一點,地平線才看得到)
+    camera.up.copy(sky.n);
+    const az = sky.az - yaw / RAD2, el = THREE.MathUtils.clamp(sky.el - pitch / RAD2, 2, 88);
+    camera.lookAt(camera.position.clone().add(dirOf(az, el)));
+    camera.fov = 72 * fovZoom; camera.updateProjectionMatrix();
+    // 方位字:地平線上 3° 的地方
+    camera.updateMatrixWorld();
+    const W = window.innerWidth, H = window.innerHeight, v = new THREE.Vector3();
+    for (const c of cardinals) {
+      v.copy(camera.position).add(dirOf(c.az, 3)).project(camera);
+      if (v.z > 1 || Math.abs(v.x) > 1.1 || Math.abs(v.y) > 1.1) { c.el.style.display = "none"; continue; }
+      c.el.style.display = "";
+      c.el.style.transform = `translate(${Math.round((v.x * 0.5 + 0.5) * W)}px, ${Math.round((-v.y * 0.5 + 0.5) * H)}px) translate(-50%, -50%)`;
+    }
+    paintHud();
+  }
+
   // ---------- 資訊列 ----------
   let lastPaint = 0;
   function paintHud(force = false) {
@@ -197,6 +262,12 @@ export function createPov({ camera, rig, globeObject, moon, sunDir, codeAt, name
         `${speed !== 1 ? ` · <span class="pov-fast">${isEn ? "time sped up" : "時間加速中"} ×${speed}</span>` : ""}</div>` +
         `<div class="pov-b">${btn(1)}${btn(10)}${btn(60)}<button type="button" data-act="exit" class="pov-exit">${isEn ? "Leave" : "離開太空站"}</button></div>` +
         `<div class="pov-h">${isEn ? "Drag to look around · scroll to zoom" : "拖曳可以左右上下看 · 滾輪/兩指縮放"}</div>`;
+    } else if (mode === "sky") {
+      hud.innerHTML =
+        `<div class="pov-t">🔭 ${esc2(sky.title || (isEn ? "The night sky" : "仰望夜空"))}</div>` +
+        (sky.sub ? `<div class="pov-s">${esc2(sky.sub)}</div>` : "") +
+        `<div class="pov-b"><button type="button" data-act="exit" class="pov-exit">${isEn ? "Back to the globe" : "回到地球"}</button></div>` +
+        `<div class="pov-h">${isEn ? "Drag to look around · scroll to zoom" : "拖曳可以環顧四周 · 滾輪/兩指縮放 · 點星座名稱看介紹"}</div>`;
     } else if (mode === "moon") {
       const ph = moonPhase(simNow(), { quick: true });
       const earthLit = Math.round((1 - ph.illum) * 100);
@@ -209,9 +280,9 @@ export function createPov({ camera, rig, globeObject, moon, sunDir, codeAt, name
   }
 
   return {
-    startIss, startMoon, exit,
+    startIss, startMoon, startSky, exit,
     isActive: () => !!mode,
     mode: () => mode,
-    update(dt) { if (mode === "iss") updateIss(dt); else if (mode === "moon") updateMoon(dt); },
+    update(dt) { if (mode === "iss") updateIss(dt); else if (mode === "moon") updateMoon(dt); else if (mode === "sky") updateSky(dt); },
   };
 }

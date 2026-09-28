@@ -629,8 +629,19 @@
   .tm-jumps button:hover { background: rgba(120,170,255,.16); }
   /* 🎥 特別視角(太空站、月球):地球上的文字標籤先收起來,畫面上只留資訊列 */
   body.pov #country-labels, body.pov #ocean-labels, body.pov #physical-labels, body.pov #earthquake-labels, body.pov #radio-labels,
-  body.pov #flight-labels, body.pov #livecam-labels, body.pov #constellation-labels, body.pov #typhoon-labels, body.pov #hazard-labels,
-  body.pov .moon-label, body.pov .meteor-radiant, body.pov #home-dock { display: none !important; }
+  body.pov #flight-labels, body.pov #livecam-labels, body.pov:not(.pov-sky) #constellation-labels, body.pov #typhoon-labels, body.pov #hazard-labels,
+  body.pov:not(.pov-sky) .moon-label, body.pov .sun-label, body.pov .meteor-radiant, body.pov #home-dock,
+  body.pov #ctrl-dock, body.pov #country-search { display: none !important; }
+  #bday-panel.min .fx-body { display: none; }
+  #bday-panel.min .sat-head { margin-bottom: 0; }
+  /* 資訊列縮成一行:只留標題和離開鈕 */
+  #pov-hud.compact { padding: 6px 10px; min-width: 0; display: flex; align-items: center; gap: 8px; }
+  #pov-hud.compact .pov-s, #pov-hud.compact .pov-h, #pov-hud.compact .pov-b button:not(.pov-exit) { display: none; }
+  #pov-hud.compact .pov-b { margin-top: 0; }
+  #pov-hud.compact .pov-t { font-size: 13px; cursor: pointer; }
+  #pov-hud .pov-t { cursor: pointer; }
+  .pov-card { position: fixed; left: 0; top: 0; z-index: 31; pointer-events: none; font: 700 15px system-ui, "Microsoft JhengHei", sans-serif;
+    color: #ffd98a; text-shadow: 0 0 6px #000, 0 0 2px #000; }
   #pov-hud { position: fixed; left: 50%; top: 70px; transform: translateX(-50%); z-index: 50; min-width: 300px; max-width: calc(100vw - 24px);
     padding: 10px 14px; border-radius: 14px; background: rgba(6,10,20,.78); backdrop-filter: blur(10px); border: 1px solid rgba(150,190,255,.35);
     color: #e7edfb; font: 13px system-ui, "Microsoft JhengHei", sans-serif; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,.45); }
@@ -644,7 +655,9 @@
   .pov-b button.on { background: rgba(111,182,255,.3); border-color: rgba(111,182,255,.85); font-weight: 700; }
   .pov-b .pov-exit { border-color: rgba(255,140,120,.6); }
   .pov-h { margin-top: 6px; font-size: 11px; opacity: .6; }
-  @media (max-width: 640px) { #pov-hud { top: 150px; min-width: 0; width: calc(100vw - 24px); } }
+  #pov-hud .pov-t, #pov-hud .pov-b button { white-space: nowrap; }
+  /* 手機:資訊列放在時鐘下方(特別視角時搜尋框收起來了),下方留給收起來的面板 */
+  @media (max-width: 640px) { #pov-hud { top: 108px; min-width: 0; width: calc(100vw - 24px); } #pov-hud.compact { width: auto; } }
   /* 🎂 生日天空 */
   .bd-form { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; align-items: end; }
   .bd-form label { display: flex; flex-direction: column; gap: 3px; font-size: 12px; opacity: .9; }
@@ -2761,6 +2774,7 @@
   <div id="bday-panel" class="fx-panel" hidden>
     <div class="sat-head">
       <span class="sat-title">🎂 生日那天的天空</span>
+      <button id="bday-min" class="rp-head-btn" type="button" aria-label="收合面板" title="收合面板">▾</button>
       <button id="bday-close" class="rp-head-btn" type="button" aria-label="關閉">×</button>
     </div>
     <div id="bday-body" class="fx-body"></div>

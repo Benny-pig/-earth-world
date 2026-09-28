@@ -1,5 +1,6 @@
 import { setSimTime } from "../lib/sim-time.js";
-import { moonPhase, drawPhase } from "../scene/moon.js";
+import { moonPhase, drawPhase, moonEcliptic } from "../scene/moon.js";
+import { eclipticToSubPoint } from "../lib/geo.js";
 import { termAt } from "../scene/sun-info.js";
 import { tonight } from "../scene/planets.js";
 import { SHOWERS } from "../scene/meteors.js";
@@ -17,12 +18,19 @@ const ZODIAC = [   // [結束月, 結束日, 星座](前一個星座到這天為
 const zodiacOf = (m, d) => ZODIAC.find(([em, ed]) => m < em || (m === em && d <= ed))[2];
 const DIRS = ["北方", "東北方", "東方", "東南方", "南方", "西南方", "西方", "西北方"];
 
-export function createBirthday({ rig, onClose, onOpen }) {
+export function createBirthday({ rig, onClose, onOpen, lookUp, stopLooking }) {
   const panel = document.getElementById("bday-panel");
   const body = document.getElementById("bday-body");
   if (!panel || !body) return { setEnabled() {}, isEnabled: () => false, openWith() {} };
   makeDraggable(panel, panel.querySelector(".sat-head"), { disableBelow: 641 });
   document.getElementById("bday-close")?.addEventListener("click", () => onClose && onClose());
+  // 收合:只留標題列,把天空讓出來
+  const minBtn = document.getElementById("bday-min");
+  function setMin(on) {
+    panel.classList.toggle("min", on);
+    if (minBtn) { minBtn.textContent = on ? "▴" : "▾"; minBtn.title = on ? "展開面板" : "收合面板"; }
+  }
+  minBtn?.addEventListener("click", () => setMin(!panel.classList.contains("min")));
   let enabled = false, current = null;
 
   const today = new Date();
@@ -41,7 +49,12 @@ export function createBirthday({ rig, onClose, onOpen }) {
     const when = new Date(Date.UTC(y, m - 1, d, hour - 8));   // 台灣時間
     current = { ymd, hour };
     setSimTime(when);
-    rig.flyTo(23.7, 121, { distance: 2.6, ms: 1400 });
+    // 站在台北仰望那一刻的天空(月亮在天上就轉過去看月亮),面板先收起來,把天空讓出來
+    const mo = moonEcliptic(when);
+    const hourText = { 0: "半夜 12 點", 6: "清晨 6 點", 12: "中午 12 點", 18: "傍晚 6 點", 21: "晚上 9 點" }[hour] || `${hour} 點`;
+    if (lookUp) lookUp({ title: `${y}/${m}/${d} ${hourText} · 台北的天空`, sub: "展開「🎂 生日那天的天空」面板,看那天的月相、行星和歷史", target: eclipticToSubPoint(mo.lon, mo.lat, mo.d) });
+    else rig.flyTo(23.7, 121, { distance: 2.6, ms: 1400 });
+    setTimeout(() => setMin(true), 900);
     const days = Math.floor((Date.now() - when) / 86400000);
     const years = Math.floor(days / 365.2425);
     const ph = moonPhase(when);
@@ -62,7 +75,7 @@ export function createBirthday({ rig, onClose, onOpen }) {
       (showers.length ? `<span>流星雨</span><b>剛好是${showers.map((s) => s.zh).join("、")}的活動期間 🌠</b>` : "") +
       `</div>` +
       `<div class="mt-h">📜 歷史上的這一天</div><div class="bd-otd au-dim">讀取中…</div>` +
-      `<div class="bd-btns"><button type="button" class="tc-btn" data-act="share">🔗 分享這一天的天空</button>` +
+      `<div class="bd-btns"><button type="button" class="tc-btn" data-act="sky">🔭 再看一次天空</button><button type="button" class="tc-btn" data-act="share">🔗 分享</button>` +
       `<button type="button" class="tc-btn" data-act="now">↺ 回到現在</button></div>`;
     const cv = $(".bd-moon");
     if (cv) drawPhase(cv, ph);
@@ -85,7 +98,8 @@ export function createBirthday({ rig, onClose, onOpen }) {
     }
     const a = e.target.closest("[data-act]");
     if (!a) return;
-    if (a.dataset.act === "now") { setSimTime(null); current = null; $(".bd-out").innerHTML = `<div class="au-dim">已經回到現在。</div>`; }
+    if (a.dataset.act === "now") { stopLooking && stopLooking(); setSimTime(null); current = null; $(".bd-out").innerHTML = `<div class="au-dim">已經回到現在。</div>`; }
+    else if (a.dataset.act === "sky" && current) show(current.ymd, current.hour);
     else if (a.dataset.act === "share" && current) {
       // 讀者自己按分享才把日期放進網址
       const url = `${location.origin}${location.pathname}?bday=${current.ymd}&bt=${current.hour}`;
@@ -97,8 +111,8 @@ export function createBirthday({ rig, onClose, onOpen }) {
   function setEnabled(v) {
     enabled = !!v;
     panel.hidden = !enabled;
-    if (enabled) onOpen && onOpen();
-    else { setSimTime(null); current = null; }
+    if (enabled) { setMin(false); onOpen && onOpen(); }
+    else { stopLooking && stopLooking(); setSimTime(null); current = null; }
   }
   // 從分享連結打開:?bday=YYYY-MM-DD&bt=21
   function openWith(ymd, hour = 21) {
