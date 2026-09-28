@@ -59,6 +59,15 @@ def _():
     return "fail", "程式改了但 index.html 的程式版本號沒更新,讀者可能拿不到新版程式;請執行 python tools/build-preload.py 後重新提交"
 
 
+@check("全球風場資料")
+def _():
+    s, b = get("https://raw.githubusercontent.com/Benny-pig/-earth-world/wind-data/wind.json")
+    if s != 200: return "warn", f"wind-data 分支讀不到(HTTP {s}),網頁會改用舊的備份;看一下「全球風場資料」自動更新有沒有在跑"
+    valid = datetime.fromisoformat(json.loads(b)["valid"].replace("Z", "+00:00"))
+    hours = (datetime.now(timezone.utc) - valid).total_seconds() / 3600
+    return ("ok", f"{hours:.0f} 小時前的風") if hours < 24 else ("warn", f"風場資料已經 {hours:.0f} 小時沒更新")
+
+
 @check("國家資料")
 def _():
     s, b = get(SITE + "data/countries.content.json")

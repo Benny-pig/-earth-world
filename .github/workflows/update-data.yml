@@ -43,6 +43,9 @@ jobs:
       - name: 世界即時景點直播(YouTube 正在直播的景點攝影機)
         run: python tools/build-livecams.py
         continue-on-error: true
+      - name: 出國小幫手(簽證、插座電壓、行車方向;維基百科)
+        run: python tools/build-travel-helper.py
+        continue-on-error: true
       - name: 有變動就存檔並重新發佈網站
         env:
           GH_TOKEN: ${{ github.token }}

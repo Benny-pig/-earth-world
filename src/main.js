@@ -54,6 +54,9 @@ import { createTyphoons } from "./scene/typhoons.js";
 import { createHazards } from "./scene/hazards.js";
 import { createPlates } from "./scene/plates.js";
 import { createFeatureMenu } from "./ui/feature-menu.js";
+import { createWind } from "./scene/wind.js";
+import { createDataGlobe } from "./scene/data-globe.js";
+import { createTravelHelper } from "./ui/travel-helper.js";
 import { createPov } from "./scene/pov.js";
 import { createBirthday } from "./ui/birthday.js";
 import { createTempRank } from "./ui/temp-rank.js";
@@ -923,11 +926,58 @@ export function start() {
   }
   platesToggle?.addEventListener("click", () => setPlates(platesToggle.getAttribute("aria-pressed") !== "true"));
 
+  const zhName = (c) => window.__earth.countryLayer?.meshByCode.get(c)?.userData?.names?.zh || c;
+  // 🌬️ 全球風場
+  const windToggle = document.getElementById("wind-toggle");
+  const wind = createWind({ globeObject: globe.object, camera, rig, clouds, onClose: () => setWind(false),
+    countryName: (la, lo) => { const c = window.__earth.countryLayer?.codeAt(la, lo); return c ? zhName(c) : null; } });
+  window.__earth.wind = wind;
+  function setWind(on) {
+    windToggle?.setAttribute("aria-pressed", String(on));
+    wind.setEnabled(on);
+  }
+  windToggle?.addEventListener("click", () => setWind(windToggle.getAttribute("aria-pressed") !== "true"));
+
+  // 📊 數據地球
+  const statsToggle = document.getElementById("stats-toggle");
+  const dataGlobe = createDataGlobe({ globeObject: globe.object, countryLayer: () => window.__earth.countryLayer, rig, nameOf: zhName, onClose: () => setStats(false) });
+  window.__earth.dataGlobe = dataGlobe;
+  function setStats(on) {
+    statsToggle?.setAttribute("aria-pressed", String(on));
+    dataGlobe.setEnabled(on);
+  }
+  statsToggle?.addEventListener("click", () => setStats(statsToggle.getAttribute("aria-pressed") !== "true"));
+
+  // 🧳 出國小幫手(國家介紹裡的「🧳 出國小幫手」也會打開它)
+  const tripToggle = document.getElementById("trip-toggle");
+  const flyToCountry = (c) => {
+    const w = window.__earth.countryLayer?.meshByCode.get(c);
+    const cll = (window.__earth.content || {})[c]?.capital_latlon;
+    const [lo, la] = w?.userData.centroidLatLon || [];
+    if (cll) rig.flyTo(cll[0], cll[1], { distance: 2.2, ms: 1400 });
+    else if (la != null) rig.flyTo(la, lo, { distance: 2.2, ms: 1400 });
+  };
+  const trip = createTravelHelper({ getContent: () => window.__earth.content, nameOf: zhName, flyTo: flyToCountry, onClose: () => setTrip(false) });
+  window.__earth.trip = trip;
+  function setTrip(on) {
+    tripToggle?.setAttribute("aria-pressed", String(on));
+    trip.setEnabled(on);
+  }
+  tripToggle?.addEventListener("click", () => setTrip(tripToggle.getAttribute("aria-pressed") !== "true"));
+  document.addEventListener("click", (e) => {
+    const b = e.target.closest("[data-trip]");
+    if (!b) return;
+    tripToggle?.setAttribute("aria-pressed", "true");
+    trip.show(b.dataset.trip);
+  });
+
   // 國界線、台灣海岸線、國家色塊:貼著地表的圖層(站在地面仰望時要藏起來)
   function setGroundLines(on) {
     const e = window.__earth;
     for (const o of [e.borders, e.twOutline, e.countryLayer?.group]) if (o) o.visible = on;
     e.plates?.setHidden(!on);
+    e.wind?.setHidden(!on);
+    e.dataGlobe?.setHidden(!on);
   }
   // 🎥 特別視角:搭上國際太空站、從月球看地球(鏡頭暫時離開一般的繞地球模式)
   const issToggle = document.getElementById("iss-ride-toggle");
@@ -1200,7 +1250,7 @@ export function start() {
       hovered = window.__earth.countryLayer ? window.__earth.countryLayer.pick(raycaster, globe.mesh) : null;
       hitGlobe = !!hovered || raycaster.ray.intersectsSphere(globeSphere);
       if (window.__earth.countryLayer) window.__earth.countryLayer.setHover(hovered ? hovered.code : null);
-      const wx = weather.readout(raycaster);
+      const wx = weather.readout(raycaster) || wind.readout(raycaster) || dataGlobe.readout(hovered && hovered.code);
       if (hovered || wx) tooltip.show(pointerPx.x, pointerPx.y, hovered ? hovered.names : null, wx);
       else tooltip.hide();
     }
@@ -1232,6 +1282,7 @@ export function start() {
     typhoons.update();
     hazards.update();
     plates.update(dt);
+    wind.update(dt);
     timeMachine.update(dt);
     sunInfo.update();
     if (intro) intro.update(dt);

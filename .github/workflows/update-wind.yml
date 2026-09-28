@@ -1,0 +1,30 @@
+# 🌬️ 全球風場資料:每 6 小時抓一次 NOAA GFS 最新預報(離地 10 公尺的風),
+# 推到 wind-data 分支(每次都覆蓋、只留最新一份,不在主分支累積歷史)。
+# 網頁從 raw.githubusercontent.com/…/wind-data/wind.json 讀。也可以在 Actions 頁手動執行。
+name: 全球風場資料
+on:
+  schedule:
+    - cron: "40 4,10,16,22 * * *"   # GFS 每 6 小時一輪,約 4 小時後才抓得到
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  wind:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 抓最新的 GFS 風場
+        run: python tools/build-wind.py out/wind.json
+      - name: 發布到 wind-data 分支
+        run: |
+          cd out
+          git init -q
+          git checkout -q -b wind-data
+          git add wind.json
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            commit -q -m "風場資料 $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push -q -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" wind-data

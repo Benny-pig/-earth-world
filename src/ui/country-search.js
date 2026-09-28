@@ -50,6 +50,9 @@ const SYNONYMS = {
   "moonview-toggle": "月球 月亮 地出 阿波羅 從月球 earthrise",
   "neo-toggle": "小行星 隕石 彗星 近地 撞地球 asteroid meteor",
   "bday-toggle": "生日 出生 那一天 紀念日 星座 birthday",
+  "wind-toggle": "風 風場 風向 風速 季風 颱風 氣流 wind",
+  "stats-toggle": "數據 統計 人口 壽命 生育率 少子化 老化 所得 GDP 碳排放 再生能源 排名 data statistics population",
+  "trip-toggle": "出國 旅行 旅遊 簽證 免簽 插座 插頭 電壓 變壓器 轉接頭 時差 匯率 小費 緊急電話 travel visa plug",
   "plates-toggle": "板塊 板塊構造 地震帶 火環帶 環太平洋 隱沒帶 海溝 中洋脊 斷層 大陸漂移 為什麼台灣地震多 plate tectonics ring of fire subduction",
   "layers-toggle": "地球剖面 地心 地核 地函 地殼 岩漿 大氣層 臭氧層 內部 構造 earth layers core mantle crust atmosphere",
   "fav-btn": "收藏 最愛 書籤 我的 favorite bookmark",
@@ -60,7 +63,7 @@ const SYNONYMS = {
 const ICONS = {
   "weather-toggle": "🌡️", "quake-toggle": "📳", "satellite-toggle": "🌀", "flight-toggle": "✈️", "livecam-toggle": "📺", "moon-toggle": "🌙",
   "orbit-toggle": "🛰️", "launch-toggle": "🚀", "sun-toggle": "🌗", "quiz-toggle": "🎯", "passport-toggle": "🛂", "flightsim-toggle": "🛫",
-  "compare-toggle": "⚖️", "otd-toggle": "📜", "radio-toggle": "📻", "aurora-toggle": "🌌", "meteor-toggle": "🌠", "cinema-toggle": "🎬", "voice-toggle": "🗣️", "constellation-toggle": "✨", "sunpanel-toggle": "☀️", "planet-toggle": "🪐", "timemachine-toggle": "🕰️", "typhoon-toggle": "🌀", "hazard-toggle": "🌋", "temp-toggle": "🌡️", "iss-ride-toggle": "🛰️", "moonview-toggle": "🌙", "neo-toggle": "☄️", "bday-toggle": "🎂", "layers-toggle": "🌍", "plates-toggle": "🧩",
+  "compare-toggle": "⚖️", "otd-toggle": "📜", "radio-toggle": "📻", "aurora-toggle": "🌌", "meteor-toggle": "🌠", "cinema-toggle": "🎬", "voice-toggle": "🗣️", "constellation-toggle": "✨", "sunpanel-toggle": "☀️", "planet-toggle": "🪐", "timemachine-toggle": "🕰️", "typhoon-toggle": "🌀", "hazard-toggle": "🌋", "temp-toggle": "🌡️", "iss-ride-toggle": "🛰️", "moonview-toggle": "🌙", "neo-toggle": "☄️", "bday-toggle": "🎂", "layers-toggle": "🌍", "plates-toggle": "🧩", "wind-toggle": "🌬️", "stats-toggle": "📊", "trip-toggle": "🧳",
   "fav-btn": "⭐", "tour-btn": "❓", "theme-toggle": "🎨", "share-btn": "🔗",
 };
 const GEO_ICONS = { mountain: "⛰️", peak: "🏔️", river: "🌊", desert: "🏜️", plateau: "🗻", plain: "🌾", lake: "💧", other: "📍" };

@@ -1,0 +1,102 @@
+{
+ "asOf": "2026-09-28",
+ "license": "Our World in Data,CC BY 4.0",
+ "indicators": [
+  {
+   "id": "pop",
+   "zh": "人口",
+   "unit": "人",
+   "dec": 0,
+   "scale": "log",
+   "note": "全世界約八十億人,一半以上住在亞洲。拖動年份看看人口怎麼在七十多年間變成三倍。",
+   "src": "聯合國《世界人口展望》(UN WPP)",
+   "url": "https://ourworldindata.org/grapher/population",
+   "y0": 1950,
+   "y1": 2023
+  },
+  {
+   "id": "density",
+   "zh": "人口密度",
+   "unit": "人/平方公里",
+   "dec": 0,
+   "scale": "log",
+   "note": "每平方公里住多少人。台灣是全世界人口最密集的國家之一。",
+   "src": "聯合國《世界人口展望》",
+   "url": "https://ourworldindata.org/grapher/population-density",
+   "y0": 1950,
+   "y1": 2023
+  },
+  {
+   "id": "life",
+   "zh": "平均壽命",
+   "unit": "歲",
+   "dec": 1,
+   "scale": "lin",
+   "note": "剛出生的嬰兒平均能活幾歲。醫療、營養和衛生進步,讓全世界的平均壽命從 1950 年的不到 50 歲提高到 70 多歲。",
+   "src": "聯合國《世界人口展望》",
+   "url": "https://ourworldindata.org/grapher/life-expectancy",
+   "y0": 1950,
+   "y1": 2023
+  },
+  {
+   "id": "fert",
+   "zh": "生育率",
+   "unit": "個孩子/每位女性",
+   "dec": 2,
+   "scale": "lin",
+   "note": "每位女性一生平均生幾個孩子。長期低於 2.1,人口就會開始減少;台灣是全世界最低的地方之一。",
+   "src": "聯合國《世界人口展望》",
+   "url": "https://ourworldindata.org/grapher/children-born-per-woman",
+   "y0": 1950,
+   "y1": 2023
+  },
+  {
+   "id": "median",
+   "zh": "年齡中位數",
+   "unit": "歲",
+   "dec": 1,
+   "scale": "lin",
+   "note": "把全國的人按年齡排隊,站在正中間那個人的年紀。數字越大代表社會越老。",
+   "src": "聯合國《世界人口展望》",
+   "url": "https://ourworldindata.org/grapher/median-age",
+   "y0": 1950,
+   "y1": 2023
+  },
+  {
+   "id": "gdp",
+   "zh": "人均所得",
+   "unit": "國際元(2011 年購買力)",
+   "dec": 0,
+   "scale": "log",
+   "note": "每個人平均一年生產多少價值,已經依各國物價調整,可以跨國、跨年代比較。",
+   "src": "麥迪森計畫(Maddison Project Database)",
+   "url": "https://ourworldindata.org/grapher/gdp-per-capita-maddison-project-database",
+   "y0": 1950,
+   "y1": 2022
+  },
+  {
+   "id": "co2",
+   "zh": "人均碳排放",
+   "unit": "公噸二氧化碳/人",
+   "dec": 1,
+   "scale": "log",
+   "note": "每個人一年平均排放多少二氧化碳(燒煤、石油、天然氣和水泥)。",
+   "src": "全球碳計畫(Global Carbon Project)",
+   "url": "https://ourworldindata.org/grapher/co-emissions-per-capita",
+   "y0": 1950,
+   "y1": 2024
+  },
+  {
+   "id": "renew",
+   "zh": "再生能源發電比例",
+   "unit": "%",
+   "dec": 1,
+   "scale": "lin",
+   "note": "發電量裡有多少來自水力、太陽能、風力等再生能源。",
+   "src": "Ember、Energy Institute",
+   "url": "https://ourworldindata.org/grapher/electricity-mix",
+   "y0": 1985,
+   "y1": 2025
+  }
+ ]
+}
