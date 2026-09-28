@@ -57,6 +57,8 @@ import { createFeatureMenu } from "./ui/feature-menu.js";
 import { createWind } from "./scene/wind.js";
 import { createDataGlobe } from "./scene/data-globe.js";
 import { createTravelHelper } from "./ui/travel-helper.js";
+import { createToday } from "./ui/today.js";
+import { createSurprise } from "./ui/surprise.js";
 import { createPov } from "./scene/pov.js";
 import { createBirthday } from "./ui/birthday.js";
 import { createTempRank } from "./ui/temp-rank.js";
@@ -392,6 +394,9 @@ export function start() {
   // 🗣️ 人聲播報(功能 → 聲音)
   const voiceToggle = document.getElementById("voice-toggle");
   const voice = createVoice({ music, onClose: () => voice.setPanel(false) });
+  // 🎲 驚喜一下(左下角指北針上面):隨機飛到一個國家或自然景觀
+  createSurprise({ rig, getContent: () => window.__earth.content, openCountryByCode, voice,
+    nameOf: (c) => window.__earth.countryLayer?.meshByCode.get(c)?.userData?.names?.zh || c });
   window.__earth.voice = voice;
   const paintVoice = () => voiceToggle?.setAttribute("aria-pressed", String(voice.isOn()));
   voice.onChange(paintVoice);
@@ -1043,6 +1048,29 @@ export function start() {
     tempRank.setEnabled(on);
   }
   tempToggle?.addEventListener("click", () => setTempRank(tempToggle.getAttribute("aria-pressed") !== "true"));
+
+  // 📰 今日地球:每天第一次打開網站時自動跳出(用分享連結打開、新手導覽進行中就不打擾)
+  const todayToggle = document.getElementById("today-toggle");
+  const today = createToday({
+    rig, tempRank, nameOf: zhName, openCountryByCode, onClose: () => setToday(false),
+    codeAt: (la, lo) => window.__earth.countryLayer?.codeAt(la, lo),
+    turnOn: (id) => { const b = document.getElementById(id); if (b && b.getAttribute("aria-pressed") !== "true") b.click(); },
+  });
+  window.__earth.today = today;
+  function setToday(on) {
+    todayToggle?.setAttribute("aria-pressed", String(on));
+    today.setEnabled(on);
+  }
+  todayToggle?.addEventListener("click", () => setToday(todayToggle.getAttribute("aria-pressed") !== "true"));
+  if (!openedWithParams) {
+    loading.done.then(() => {
+      const wait = () => {
+        if ((intro && intro.isActive()) || document.body.classList.contains("intro-playing")) { setTimeout(wait, 500); return; }
+        setTimeout(() => { if (!tour.isActive() && !window.__earth.cinema?.isActive() && today.shouldAutoShow()) setToday(true); }, 1600);
+      };
+      wait();
+    });
+  }
 
   // ☄️ 小行星掠過地球
   const neoToggle = document.getElementById("neo-toggle");

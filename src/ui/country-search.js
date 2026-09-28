@@ -50,6 +50,7 @@ const SYNONYMS = {
   "moonview-toggle": "月球 月亮 地出 阿波羅 從月球 earthrise",
   "neo-toggle": "小行星 隕石 彗星 近地 撞地球 asteroid meteor",
   "bday-toggle": "生日 出生 那一天 紀念日 星座 birthday",
+  "today-toggle": "今日 今天 每日 新聞 重點 摘要 今日地球 today daily",
   "wind-toggle": "風 風場 風向 風速 季風 颱風 氣流 wind",
   "stats-toggle": "數據 統計 人口 壽命 生育率 少子化 老化 所得 GDP 碳排放 再生能源 排名 data statistics population",
   "trip-toggle": "出國 旅行 旅遊 簽證 免簽 插座 插頭 電壓 變壓器 轉接頭 時差 匯率 小費 緊急電話 travel visa plug",
@@ -63,7 +64,7 @@ const SYNONYMS = {
 const ICONS = {
   "weather-toggle": "🌡️", "quake-toggle": "📳", "satellite-toggle": "🌀", "flight-toggle": "✈️", "livecam-toggle": "📺", "moon-toggle": "🌙",
   "orbit-toggle": "🛰️", "launch-toggle": "🚀", "sun-toggle": "🌗", "quiz-toggle": "🎯", "passport-toggle": "🛂", "flightsim-toggle": "🛫",
-  "compare-toggle": "⚖️", "otd-toggle": "📜", "radio-toggle": "📻", "aurora-toggle": "🌌", "meteor-toggle": "🌠", "cinema-toggle": "🎬", "voice-toggle": "🗣️", "constellation-toggle": "✨", "sunpanel-toggle": "☀️", "planet-toggle": "🪐", "timemachine-toggle": "🕰️", "typhoon-toggle": "🌀", "hazard-toggle": "🌋", "temp-toggle": "🌡️", "iss-ride-toggle": "🛰️", "moonview-toggle": "🌙", "neo-toggle": "☄️", "bday-toggle": "🎂", "layers-toggle": "🌍", "plates-toggle": "🧩", "wind-toggle": "🌬️", "stats-toggle": "📊", "trip-toggle": "🧳",
+  "compare-toggle": "⚖️", "otd-toggle": "📜", "radio-toggle": "📻", "aurora-toggle": "🌌", "meteor-toggle": "🌠", "cinema-toggle": "🎬", "voice-toggle": "🗣️", "constellation-toggle": "✨", "sunpanel-toggle": "☀️", "planet-toggle": "🪐", "timemachine-toggle": "🕰️", "typhoon-toggle": "🌀", "hazard-toggle": "🌋", "temp-toggle": "🌡️", "iss-ride-toggle": "🛰️", "moonview-toggle": "🌙", "neo-toggle": "☄️", "bday-toggle": "🎂", "layers-toggle": "🌍", "plates-toggle": "🧩", "wind-toggle": "🌬️", "today-toggle": "📰", "stats-toggle": "📊", "trip-toggle": "🧳",
   "fav-btn": "⭐", "tour-btn": "❓", "theme-toggle": "🎨", "share-btn": "🔗",
 };
 const GEO_ICONS = { mountain: "⛰️", peak: "🏔️", river: "🌊", desert: "🏜️", plateau: "🗻", plain: "🌾", lake: "💧", other: "📍" };

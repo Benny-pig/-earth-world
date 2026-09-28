@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import { esc } from "../lib/esc.js";
 import { makeDraggable } from "./draggable.js";
+import { drawTravelCard, showTravelCard } from "./travel-card.js";
 
 // 🛂 旅行護照集章:記錄讀者「真的去過」的國家。只有讀者自己標記才蓋章——
 // 在國家介紹按「🛂 我去過這裡」、在護照裡從清單新增,或打開「點地球蓋章」模式一次點好幾國;
@@ -181,7 +182,8 @@ export function createPassport({ globeObject, openCountryByCode, onClose }) {
             `${flagImg(code, "pp-flag")}<b>${esc(nameOf(code))}</b><small>${fmtDate(v.t)}</small></button>` +
             `<button type="button" class="pp-del" data-del="${esc(code)}" aria-label="刪除 ${esc(nameOf(code))}" title="從護照刪除">×</button></div>`).join("")}</div>`
         : `<div class="pp-empty">護照還是空的!<br>用上面的清單或「點地球蓋章」,記下你去過的國家 🛂</div>`) +
-      `<div class="quiz-actions pp-actions"><button type="button" class="tc-btn" data-act="share">📣 分享我的護照</button>` +
+      `<div class="quiz-actions pp-actions">` + (list.length ? `<button type="button" class="tc-btn pp-card-btn" data-act="card">🗺️ 做成旅行地圖分享圖</button>` : "") +
+      `<button type="button" class="tc-btn" data-act="share">📣 分享我的護照</button>` +
       (list.length ? `<button type="button" class="tc-btn" data-act="reset">🗑️ 全部清空</button>` : "") + `</div>`;
     body.scrollTop = keep;
   }
@@ -209,6 +211,13 @@ export function createPassport({ globeObject, openCountryByCode, onClose }) {
       stamps = {};
       save(); for (const c of codes) for (const fn of listeners) fn(c);
       syncFootprints(); render();
+    } else if (a.dataset.act === "card") {
+      const geojson = window.__earth?.geojson;
+      if (!geojson) return;
+      const visited = Object.entries(stamps).filter(([c]) => canStamp(c)).sort((x, y) => y[1].t - x[1].t).map(([c]) => c);
+      const s = stats();
+      const cv = drawTravelCard({ geojson, visited, regions: REGIONS, regionOf: (c) => regions[c], stats: s, nameOf });
+      showTravelCard(cv, { title: "我的旅行地圖", text: `我去過 ${s.n} 個國家與地區!你呢?🌍 ${location.origin + location.pathname}` });
     } else if (a.dataset.act === "share") {
       const s = stats();
       const text = `我的「地球世界」旅行護照已經蓋了 ${s.n} 國(全世界的 ${s.total ? Math.round((s.n / s.total) * 100) : 0}%)!🛂 你去過幾國?`;

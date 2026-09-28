@@ -12,7 +12,7 @@ const METRICS = { now: ["🌡️ 現在", "現在氣溫"], max: ["☀️ 今天�
 export function createTempRank({ getContent, nameOf, openCountryByCode, onClose }) {
   const panel = document.getElementById("temp-panel");
   const body = document.getElementById("temp-body");
-  if (!panel || !body) return { setEnabled() {}, isEnabled: () => false };
+  if (!panel || !body) return { setEnabled() {}, isEnabled: () => false, getRows: async () => [] };
   makeDraggable(panel, panel.querySelector(".sat-head"), { disableBelow: 641 });
   document.getElementById("temp-close")?.addEventListener("click", () => onClose && onClose());
   let enabled = false, rows = [], at = 0, tab = "hot", metric = "now", q = "", loading = null;
@@ -109,5 +109,13 @@ export function createTempRank({ getContent, nameOf, openCountryByCode, onClose 
     }
     render();
   }
-  return { setEnabled, isEnabled: () => enabled };
+  // 給其他功能(今日地球)用:拿最近的全球首都氣溫(20 分鐘內抓過就直接用)
+  async function getRows() {
+    if (Date.now() - at > FRESH_MS) {
+      if (!loading) loading = load().catch((e) => console.warn("[temp] 氣溫讀取失敗:", e.message)).finally(() => { loading = null; if (enabled) render(); });
+      await loading;
+    }
+    return rows;
+  }
+  return { setEnabled, isEnabled: () => enabled, getRows };
 }

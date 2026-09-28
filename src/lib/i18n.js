@@ -29,7 +29,7 @@ const DICT = {
   "極光即時預報": "Aurora forecast", "🌌 極光即時預報": "🌌 Aurora forecast", "📍 熱門極光地點 · 現在": "📍 Aurora spots · now",
   "流星雨": "Meteor showers", "🌠 流星雨": "🌠 Meteor showers", "▶ 在地球旁看流星雨": "▶ Watch the shower", "⏹ 停止流星雨": "⏹ Stop the shower", "📅 接下來一年": "📅 Next 12 months",
   "電影巡航": "Cinematic tour", "板塊與地震帶": "Plates & quake belts", "🧩 板塊與地震帶": "🧩 Plates & quake belts",
-  "即時世界": "Live world", "旅人百科": "Travel", "全球風場": "Global winds", "數據地球": "Data globe", "出國小幫手": "Travel helper",
+  "即時世界": "Live world", "今日地球": "Today on Earth", "📰 今日地球": "📰 Today on Earth", "旅人百科": "Travel", "全球風場": "Global winds", "數據地球": "Data globe", "出國小幫手": "Travel helper",
   "🌬️ 全球風場": "🌬️ Global winds", "📊 數據地球": "📊 Data globe", "🧳 出國小幫手": "🧳 Travel helper", "太空天象": "Space & sky", "探索遊戲": "Explore & play", "地球剖面:大氣到地心": "Earth's layers: sky to core", "世界溫度排行": "World temperatures", "🌡️ 世界溫度排行": "🌡️ World temperatures", "搭上國際太空站": "Ride the ISS",
   "從月球看地球": "Earth from the Moon", "小行星掠過地球": "Asteroid flybys", "☄️ 小行星掠過地球": "☄️ Asteroid flybys", "生日那天的天空": "Your birthday sky",
   "🎂 生日那天的天空": "🎂 Your birthday sky", "🔥 最熱": "🔥 Hottest", "❄️ 最冷": "❄️ Coldest", "✨ 看那天的天空": "✨ Show that sky", "火山與野火": "Volcanoes & wildfires", "🌋 火山與野火": "🌋 Volcanoes & wildfires", "颱風路徑": "Typhoon tracks", "🌀 颱風路徑": "🌀 Typhoon tracks", "五大行星": "Planets", "🪐 五大行星": "🪐 Planets",
