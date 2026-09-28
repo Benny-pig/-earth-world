@@ -121,6 +121,14 @@ def _():
     return ("ok", f"{n} 個格點") if n > 60000 else ("fail", f"HTTP {s},格點 {n}")
 
 
+@check("颱風資料(日本氣象廳)")
+def _():
+    s, b = get("https://www.jma.go.jp/bosai/typhoon/data/targetTc.json")
+    if s != 200: return "fail", f"HTTP {s}"
+    n = len(json.loads(b))
+    return "ok", f"目前 {n} 個颱風" if n else "目前沒有颱風(資料正常)"
+
+
 @check("太空發射(Launch Library 2)")
 def _():
     s, b = get("https://ll.thespacedevs.com/2.3.0/launches/upcoming/?limit=3&mode=list")

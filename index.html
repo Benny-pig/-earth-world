@@ -502,13 +502,19 @@
   #fav-panel { --acc: #ffd43b; --acc-b: rgba(255,212,59,.45); left: auto; right: 18px; top: 60px; width: 330px; }
   #voice-panel { --acc: #c3a6ff; --acc-b: rgba(180,150,255,.45); width: 320px; }
   #sun-panel { --acc: #ffd46b; --acc-b: rgba(255,200,90,.5); width: 330px; }
+  #planet-panel { --acc: #ffd9a0; --acc-b: rgba(255,215,150,.45); width: 360px; }
+  #time-panel { --acc: #9fd0ff; --acc-b: rgba(120,180,255,.5); width: 470px; top: auto; bottom: 70px; left: calc(50% - 235px); }
+  #typhoon-panel { --acc: #ff9a8a; --acc-b: rgba(255,120,100,.5); width: 350px; }
+  body[data-theme="journal"] #planet-panel { --acc: #8a5a14; }
+  body[data-theme="journal"] #time-panel { --acc: #2d5f9a; }
+  body[data-theme="journal"] #typhoon-panel { --acc: #b3382c; }
   body[data-theme="journal"] #sun-panel { --acc: #a0621a; }
   body[data-theme="journal"] #voice-panel { --acc: #6a4fb0; }
   body[data-theme="journal"] #aurora-panel { --acc: #1f7a4d; }
   body[data-theme="journal"] #meteor-panel { --acc: #a0621a; }
   body[data-theme="journal"] #fav-panel { --acc: #9a7400; }
   @media (max-width: 640px) {
-    #aurora-panel, #meteor-panel, #fav-panel, #voice-panel, #sun-panel { top: auto; bottom: 116px; left: 8px; right: 8px; width: auto; max-width: none; max-height: 56vh; z-index: 45; }
+    #aurora-panel, #meteor-panel, #fav-panel, #voice-panel, #sun-panel, #planet-panel, #time-panel, #typhoon-panel { top: auto; bottom: 116px; left: 8px; right: 8px; width: auto; max-width: none; max-height: 56vh; z-index: 45; }
   }
   /* 極光 */
   #aurora-panel.min .fx-body { display: none; }
@@ -586,6 +592,64 @@
   @media (max-width: 640px) {
     input[type="text"], input[type="search"], input:not([type]), select, textarea { font-size: max(16px, 1em) !important; }
   }
+  /* 🪐 行星 */
+  .planet-label { position: fixed; left: 0; top: 0; z-index: 31; pointer-events: none; white-space: nowrap; will-change: transform;
+    font: 700 12px system-ui, "Microsoft JhengHei", sans-serif; color: #ffe2a8; text-shadow: 0 0 6px #000, 0 0 2px #000; letter-spacing: .06em; }
+  .pl-h { font-weight: 700; font-size: 12.5px; margin: 0 2px 6px; opacity: .9; }
+  .pl-row { display: grid; grid-template-columns: 14px 86px 1fr; align-items: center; gap: 8px; width: 100%; padding: 7px 6px; border: 0; border-radius: 8px;
+    background: none; color: inherit; font: inherit; font-size: 12.5px; text-align: left; cursor: pointer; }
+  .pl-row:hover { background: rgba(255,215,150,.1); }
+  .pl-row.off { opacity: .55; }
+  .pl-dot { width: 12px; height: 12px; border-radius: 50%; box-shadow: 0 0 8px rgba(255,230,180,.6); }
+  .pl-name { font-weight: 700; font-size: 13.5px; }
+  .pl-name small { display: block; font-weight: 400; font-size: 11px; opacity: .65; }
+  .pl-when b { color: var(--acc); }
+  /* 🕰️ 時光機 */
+  .tm-now { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; margin-bottom: 6px; }
+  .tm-date { font-size: 15px; color: var(--acc); }
+  .tm-info { font-size: 12.5px; opacity: .8; }
+  .tm-row { display: grid; grid-template-columns: 58px 1fr 62px; align-items: center; gap: 8px; font-size: 12.5px; margin: 4px 0; }
+  .tm-row input { width: 100%; accent-color: #6fb6ff; }
+  .tm-row output { text-align: right; font-variant-numeric: tabular-nums; opacity: .85; }
+  .tm-btns { display: flex; gap: 6px; margin: 8px 0 6px; }
+  .tm-btns .tc-btn { flex: 1; padding: 6px; font-size: 12.5px; }
+  .tm-btns .tc-btn.on { background: rgba(111,182,255,.28); border-color: rgba(111,182,255,.8); }
+  .tm-jumps { display: flex; flex-wrap: wrap; align-items: center; gap: 5px; font-size: 12px; }
+  .tm-jumps span { opacity: .7; }
+  .tm-jumps button { padding: 3px 9px; border-radius: 99px; border: 1px solid rgba(120,170,255,.35); background: rgba(255,255,255,.04); color: inherit; font: inherit; cursor: pointer; }
+  .tm-jumps button:hover { background: rgba(120,170,255,.16); }
+  /* 🌀 颱風路徑 */
+  #typhoon-labels[hidden] { display: none; }
+  .ty-pin { position: fixed; left: 0; top: 0; z-index: 34; display: flex; align-items: center; gap: 4px; cursor: pointer; white-space: nowrap; will-change: transform;
+    transform: translate(-9999px, -9999px); }
+  .ty-pin i { font-style: normal; font-size: 22px; margin: -11px 0 0 -11px; display: inline-block; animation: tySpin 2.4s linear infinite; filter: drop-shadow(0 0 6px rgba(255,90,77,.8)); }
+  @keyframes tySpin { to { transform: rotate(-360deg); } }
+  .ty-pin span { padding: 2px 8px; border-radius: 99px; background: rgba(120,20,20,.8); border: 1px solid rgba(255,120,100,.8); color: #fff;
+    font: 700 12px system-ui, "Microsoft JhengHei", sans-serif; }
+  .ty-other span { background: rgba(10,14,26,.8); border-color: rgba(255,255,255,.35); }
+  .ty-other.ty-orange span { border-color: #ffa94d; } .ty-other.ty-red span { border-color: #ff6b6b; }
+  .ty-fc { position: fixed; left: 0; top: 0; z-index: 33; pointer-events: none; white-space: nowrap; will-change: transform; transform: translate(-9999px, -9999px);
+    padding: 1px 6px; border-radius: 6px; background: rgba(0,0,0,.55); color: #fff; font: 700 11px system-ui, "Microsoft JhengHei", sans-serif; }
+  .ty-fc small { font-weight: 400; margin-left: 4px; opacity: .75; }
+  .ty-card { padding: 10px; border-radius: 10px; border: 1px solid rgba(255,120,100,.3); background: rgba(255,90,77,.06); margin-bottom: 8px; }
+  .ty-title { font-size: 13px; margin-bottom: 4px; }
+  .ty-title b { font-size: 16px; color: var(--acc); letter-spacing: .04em; }
+  .ty-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 6px; }
+  .ty-tag { padding: 1px 8px; border-radius: 99px; background: rgba(255,90,77,.25); font-size: 11.5px; font-weight: 700; }
+  .ty-tag.dim { background: rgba(255,255,255,.08); font-weight: 400; }
+  .ty-go { margin-top: 8px; width: 100%; padding: 6px; }
+  .ty-none { padding: 14px 6px; text-align: center; font-size: 14px; }
+  .ty-other-row { display: flex; align-items: center; gap: 8px; width: 100%; padding: 6px; border: 0; border-radius: 8px; background: none; color: inherit;
+    font: inherit; font-size: 12.5px; text-align: left; cursor: pointer; }
+  .ty-other-row:hover { background: rgba(255,255,255,.06); }
+  .ty-other-row span:last-child { opacity: .7; }
+  .ty-dot { width: 10px; height: 10px; border-radius: 50%; background: #8ce99a; flex: none; }
+  .ty-dot.ty-orange { background: #ffa94d; } .ty-dot.ty-red { background: #ff6b6b; }
+  .ty-legend { display: flex; flex-wrap: wrap; gap: 4px 12px; margin: 8px 2px 0; font-size: 11.5px; opacity: .85; }
+  .ty-legend i { display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-right: 4px; vertical-align: -2px; }
+  .lg-red { background: rgba(255,59,48,.55); border: 1px solid #ff3b30; } .lg-yel { background: rgba(255,212,59,.3); border: 1px solid #ffd43b; }
+  .lg-white { background: rgba(255,255,255,.12); border: 1px dashed #fff; } .lg-track { background: #ff5a4d; height: 3px !important; border-radius: 2px !important; vertical-align: 2px !important; }
+  .ty-sat { margin-top: 8px; width: 100%; padding: 6px; }
   /* ☀️ 太陽面板、標籤 */
   .sun-label { border-color: rgba(255,205,110,.6) !important; color: #ffe2a8 !important; }
   .sun-top { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
@@ -2566,6 +2630,27 @@
     </div>
     <div id="meteor-body" class="fx-body"></div>
   </div>
+  <div id="planet-panel" class="fx-panel" hidden>
+    <div class="sat-head">
+      <span class="sat-title">🪐 五大行星</span>
+      <button id="planet-close" class="rp-head-btn" type="button" aria-label="關閉">×</button>
+    </div>
+    <div id="planet-body" class="fx-body"></div>
+  </div>
+  <div id="time-panel" class="fx-panel" hidden>
+    <div class="sat-head">
+      <span class="sat-title">🕰️ 時光機</span>
+      <button id="time-close" class="rp-head-btn" type="button" aria-label="關閉">×</button>
+    </div>
+    <div id="time-body" class="fx-body"></div>
+  </div>
+  <div id="typhoon-panel" class="fx-panel" hidden>
+    <div class="sat-head">
+      <span class="sat-title">🌀 颱風路徑</span>
+      <button id="typhoon-close" class="rp-head-btn" type="button" aria-label="關閉">×</button>
+    </div>
+    <div id="typhoon-body" class="fx-body"></div>
+  </div>
   <div id="sun-panel" class="fx-panel" hidden>
     <div class="sat-head">
       <span class="sat-title">☀️ 太陽與節氣</span>
@@ -2892,6 +2977,9 @@
         <button id="satellite-toggle" class="layer-row" type="button" aria-pressed="false">
           <span class="layer-dot"></span>颱風衛星雲圖
         </button>
+        <button id="typhoon-toggle" class="layer-row" type="button" aria-pressed="false">
+          <span class="layer-dot"></span>颱風路徑
+        </button>
         <button id="flight-toggle" class="layer-row" type="button" aria-pressed="false">
           <span class="layer-dot"></span>世界機場航班
         </button>
@@ -2901,6 +2989,12 @@
         <div class="lc-group">🚀 太空與天象</div>
         <button id="moon-toggle" class="layer-row" type="button" aria-pressed="false">
           <span class="layer-dot"></span>月亮與月相
+        </button>
+        <button id="timemachine-toggle" class="layer-row" type="button" aria-pressed="false" title="拖日期時間,太陽、月亮、星空、行星一起照那個時間動">
+          <span class="layer-dot"></span>時光機
+        </button>
+        <button id="planet-toggle" class="layer-row" type="button" aria-pressed="false">
+          <span class="layer-dot"></span>五大行星
         </button>
         <button id="sunpanel-toggle" class="layer-row" type="button" aria-pressed="false">
           <span class="layer-dot"></span>太陽與節氣

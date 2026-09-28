@@ -49,6 +49,9 @@ import { createSettings } from "./ui/settings.js";
 import { createRecent } from "./ui/recent.js";
 import { createConstellations } from "./scene/constellations.js";
 import { createSunInfo } from "./scene/sun-info.js";
+import { createPlanets } from "./scene/planets.js";
+import { createTyphoons } from "./scene/typhoons.js";
+import { createTimeMachine } from "./ui/time-machine.js";
 import { createTour } from "./ui/tour.js";
 import { setupI18n, isEn } from "./lib/i18n.js";
 import { createVoice } from "./audio/voice.js";
@@ -188,8 +191,13 @@ export function start() {
       window.__earth.countrySearch = createCountrySearch({
         index: searchIndex, onPick: openCountryByCode, content, favorites, recent,
         onFav: (it) => goFavorite(it),
-        sky: () => constellations.searchItems(),
-        onSky: (id) => { constellations.focus(id); document.getElementById("constellation-toggle")?.setAttribute("aria-pressed", "true"); },
+        // 星座 + 五大行星都算「天上」這一組
+        sky: () => [...planets.searchItems().map((p) => ({ ...p, alias: p.en, icon: "🪐" })), ...constellations.searchItems()],
+        onSky: (id) => {
+          if (planets.searchItems().some((p) => p.id === id)) { setPlanets(true); planets.focus(id); return; }
+          constellations.focus(id);
+          document.getElementById("constellation-toggle")?.setAttribute("aria-pressed", "true");
+        },
         onCam: (id) => openCamById(id),
         onGeo: (f) => {
           rig.flyTo(f.lat, f.lon, { distance: 1.8, ms: 1200 });
@@ -822,6 +830,36 @@ export function start() {
     cstToggle.setAttribute("aria-pressed", String(on));
   });
 
+  // 🪐 五大行星(真實位置)+ 今晚看得到哪幾顆
+  const planetToggle = document.getElementById("planet-toggle");
+  const planets = createPlanets({ scene, camera, renderer, globeObject: globe.object, rig, onClose: () => setPlanets(false) });
+  window.__earth.planets = planets;
+  function setPlanets(on) {
+    planetToggle?.setAttribute("aria-pressed", String(on));
+    planets.setEnabled(on);
+  }
+  planetToggle?.addEventListener("click", () => setPlanets(planetToggle.getAttribute("aria-pressed") !== "true"));
+
+  // 🕰️ 時光機:拖時間,太陽、月亮、星空、行星一起動
+  const timeToggle = document.getElementById("timemachine-toggle");
+  const timeMachine = createTimeMachine({ onClose: () => setTimeMachine(false) });
+  window.__earth.timeMachine = timeMachine;
+  function setTimeMachine(on) {
+    timeToggle?.setAttribute("aria-pressed", String(on));
+    timeMachine.setEnabled(on);
+  }
+  timeToggle?.addEventListener("click", () => setTimeMachine(timeToggle.getAttribute("aria-pressed") !== "true"));
+
+  // 🌀 颱風路徑(日本氣象廳 + GDACS)
+  const typhoonToggle = document.getElementById("typhoon-toggle");
+  const typhoons = createTyphoons({ globeObject: globe.object, camera, renderer, rig, onClose: () => setTyphoons(false) });
+  window.__earth.typhoons = typhoons;
+  function setTyphoons(on) {
+    typhoonToggle?.setAttribute("aria-pressed", String(on));
+    typhoons.setEnabled(on);
+  }
+  typhoonToggle?.addEventListener("click", () => setTyphoons(typhoonToggle.getAttribute("aria-pressed") !== "true"));
+
   // ☀️ 太陽:地球旁的「☀️ 太陽」標籤 + 太陽與節氣面板
   const sunInfoToggle = document.getElementById("sunpanel-toggle");
   const sunInfo = createSunInfo({
@@ -1038,6 +1076,9 @@ export function start() {
     aurora.update(clock.elapsedTime, dt);
     meteors.update(dt);
     constellations.update(clock.elapsedTime);
+    planets.update();
+    typhoons.update();
+    timeMachine.update(dt);
     sunInfo.update();
     if (intro) intro.update(dt);
 

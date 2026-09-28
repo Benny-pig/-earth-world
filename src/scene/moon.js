@@ -2,6 +2,7 @@ import * as THREE from "three";
 import { latLonToXYZ, daysSinceJ2000, sunEclipticLon, eclipticToSubPoint } from "../lib/geo.js";
 import { canvasRect } from "../lib/view-rect.js";
 import { makeDraggable } from "../ui/draggable.js";
+import { simNow, onSimTimeChange } from "../lib/sim-time.js";
 
 // 🌙 月亮:放在「現在真實的方向」(跟太陽同一套天文公式),被太陽照亮的一半自然形成月相,
 // 而且永遠同一面朝向地球。真實距離約 60 倍地球半徑、大小 0.27 倍,照比例會小到看不見,
@@ -37,18 +38,26 @@ function nextCrossing(from, target) {
     t += 3600000;
     const cur = elongationAt(new Date(t));
     const crossed = target === 0 ? cur < prev : prev < target && cur >= target;
-    if (crossed) return new Date(t);
+    if (crossed) {
+      // 在這一小時內用二分法找到精確時刻
+      let a = t - 3600000, b = t;
+      const past = (x) => { const d = ((elongationAt(new Date(x)) - target) % 360 + 360) % 360; return d < 180; };
+      for (let i = 0; i < 16; i++) { const m = (a + b) / 2; if (past(m)) b = m; else a = m; }
+      return new Date(b);
+    }
     prev = cur;
   }
   return null;
 }
-export function moonPhase(date = new Date()) {
+// quick:只算月相本身,不往後找下次滿月/新月(時光機連續播放時每格都要算,找日期太花時間)
+export function moonPhase(date = new Date(), { quick = false } = {}) {
   const m = moonEcliptic(date);
   const D = norm360(m.lon - sunEclipticLon(m.d));
   const cosE = Math.cos(m.lat * RAD) * Math.cos(D * RAD);
   const illum = (1 - cosE) / 2;
   const [, emoji, name] = PHASES.find(([lim]) => D < lim);
-  return { D, illum, age: (D / 360) * SYNODIC, waxing: D < 180, emoji, name, km: m.km, nextFull: nextCrossing(date, 180), nextNew: nextCrossing(date, 0) };
+  return { D, illum, age: (D / 360) * SYNODIC, waxing: D < 180, emoji, name, km: m.km,
+    nextFull: quick ? null : nextCrossing(date, 180), nextNew: quick ? null : nextCrossing(date, 0) };
 }
 
 // 月球表面紋理:灰色底 + 近地面的主要月海(位置大致照真實) + 隨機隕石坑 + 第谷坑亮紋
@@ -126,7 +135,7 @@ export function createMoon({ parent, camera, renderer, onClose }) {
   document.body.appendChild(label);
 
   let phase = moonPhase(), enabled = false, onOpen = null;
-  function place(date = new Date()) {
+  function place(date = simNow(), { quick = false } = {}) {
     const m = moonEcliptic(date);
     const sub = eclipticToSubPoint(m.lon, m.lat, m.d);
     const p = latLonToXYZ(sub.lat, sub.lon, 1);
@@ -134,12 +143,19 @@ export function createMoon({ parent, camera, renderer, onClose }) {
     mesh.position.copy(dir).multiplyScalar(DIST);
     // 貼圖經度 0 在 +x:把 +x 轉向地球,近地面(有月海的那面)永遠朝著地球
     mesh.quaternion.setFromUnitVectors(new THREE.Vector3(1, 0, 0), dir.clone().negate());
-    phase = moonPhase(date);
+    phase = moonPhase(date, { quick: quick || !enabled });
     label.textContent = `${phase.emoji} 月亮`;
     if (enabled) renderPanel();
   }
   place();
   const timer = setInterval(() => place(), 2 * 60 * 1000);
+  // 時光機:拖動時先快速擺位置,停下來 0.3 秒後再把下次滿月/新月也算好
+  let settle = null;
+  onSimTimeChange((d) => {
+    place(d, { quick: true });
+    clearTimeout(settle);
+    settle = setTimeout(() => place(simNow()), 300);
+  });
 
   // ---------- 面板 ----------
   const panel = document.getElementById("moon-panel");

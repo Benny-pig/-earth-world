@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import { latLonToXYZ, subsolarPoint } from "../lib/geo.js";
 import { texUrl } from "../lib/device.js";
+import { simNow, onSimTimeChange } from "../lib/sim-time.js";
 
 const SPIN_RATE = (2 * Math.PI) / 120; // 一圈 120 秒 —— 放慢成從容的自轉,看得到晨昏線掃過大陸
 
@@ -147,7 +148,7 @@ export function createGlobe({ onAllTexturesFailed } = {}) {
 
   // 依「當下真實時間」把太陽放到直射點。地球以 SPIN_RATE 在固定的太陽下自轉,
   // 晝夜循環因此是真的;每 5 分鐘重新對齊,跟上太陽本身的緩慢位移。
-  function aimSun(date = new Date()) {
+  function aimSun(date = simNow()) {
     const { lat, lon } = subsolarPoint(date);
     const d = latLonToXYZ(lat, lon, 1);
     sun.position.set(d.x * 5, d.y * 5, d.z * 5);
@@ -156,6 +157,7 @@ export function createGlobe({ onAllTexturesFailed } = {}) {
   }
   aimSun();
   const sunTimer = setInterval(() => aimSun(), 5 * 60 * 1000);
+  onSimTimeChange((d) => aimSun(d));   // 時光機:太陽(晨昏線)跟著模擬時間走
 
   // 分頁在背景太久,瀏覽器會節流/暫停 setInterval,太陽位置停在舊值;
   // 切回分頁時立刻補算一次,不用等下一個 5 分鐘或使用者重新整理。

@@ -1,9 +1,11 @@
 import * as THREE from "three";
-import { latLonToXYZ, xyzToLatLon, daysSinceJ2000, gmstDeg } from "../lib/geo.js";
+import { latLonToXYZ, daysSinceJ2000, gmstDeg } from "../lib/geo.js";
 import { canvasRect } from "../lib/view-rect.js";
 import { placeLabel, hideLabel, drag } from "../lib/label-style.js";
 import { esc } from "../lib/esc.js";
 import { isEn } from "../lib/i18n.js";
+import { simNow, onSimTimeChange } from "../lib/sim-time.js";
+import { flyToSky } from "../lib/sky-focus.js";
 
 // ✨ 真實星空:肉眼看得到的 900 多顆亮星放在真實方向(赤經、赤緯,跟太陽、月亮同一套座標,
 // 會隨時間跟著天球轉),加上 88 星座的連線與名稱、20 多顆著名亮星的中文名。
@@ -65,9 +67,10 @@ export function createConstellations({ scene, camera, renderer, globeObject, rig
   const labels = [];   // { el, dir(天球座標), kind }
 
   // 天球跟著格林威治恆星時轉:赤經 → 地面經度 = 赤經 − 恆星時(跟太陽、月亮同一套)
-  function spin() { group.rotation.y = -gmstDeg(daysSinceJ2000(new Date())) * RAD; }
+  function spin(date = simNow()) { group.rotation.y = -gmstDeg(daysSinceJ2000(date)) * RAD; }
   spin();
-  setInterval(spin, 60 * 1000);
+  setInterval(() => spin(), 60 * 1000);
+  onSimTimeChange((d) => spin(d));   // 時光機拖到別的時間:星空跟著轉
 
   async function load() {
     try {
@@ -147,23 +150,13 @@ export function createConstellations({ scene, camera, renderer, globeObject, rig
   }
 
   // ---------- 飛過去看某個星座(搜尋用):鏡頭擺到星座剛好在地球旁邊 ----------
-  const tmp = new THREE.Vector3();
   function focus(id) {
     const c = data?.cons.find((x) => x.id === id);
     if (!c) return;
     if (!enabled) setEnabled(true);
     group.updateMatrixWorld();
     const C = dirOf(c.at[0], c.at[1]).applyMatrix4(new THREE.Matrix4().extractRotation(group.matrixWorld)).normalize();
-    const dist = 5.2;
-    const alpha = Math.asin(1 / dist) + 15 * RAD;
-    // 橫向螢幕放在地球右邊、直向手機放在地球上方
-    let side = camera.aspect > 1 ? new THREE.Vector3().crossVectors(C, new THREE.Vector3(0, 1, 0)) : new THREE.Vector3(0, 1, 0).addScaledVector(C, -C.y);
-    if (side.lengthSq() < 1e-6) side = new THREE.Vector3(1, 0, 0);
-    side.normalize();
-    const f = C.clone().multiplyScalar(Math.cos(alpha)).addScaledVector(side, -Math.sin(alpha));   // 鏡頭看的方向
-    tmp.copy(f).negate().applyQuaternion(globeObject.quaternion.clone().invert());
-    const { lat, lon } = xyzToLatLon(tmp);
-    rig.flyTo(lat, lon, { distance: dist, ms: 1800 });
+    flyToSky(C, { camera, rig, globeObject });
     // 這個星座的連線暫時加亮
     if (focusLines) { group.remove(focusLines); focusLines.geometry.dispose(); }
     const seg = [];

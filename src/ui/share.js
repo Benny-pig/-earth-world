@@ -9,7 +9,7 @@ import * as THREE from "three";
 // 不需要帳號、不存任何個人資料,資訊都在網址本身。
 const LAYERS = {
   radio: "radio-toggle", typhoon: "satellite-toggle", flights: "flight-toggle", orbit: "orbit-toggle", launch: "launch-toggle", sun: "sun-toggle", otd: "otd-toggle", quiz: "quiz-toggle", passport: "passport-toggle", fly: "flightsim-toggle", cams: "livecam-toggle", weather: "weather-toggle", compare: "compare-toggle", moon: "moon-toggle", ev: "ev-toggle",
-  airport: "airport-toggle", traffic: "traffic-toggle", aurora: "aurora-toggle", meteor: "meteor-toggle",
+  airport: "airport-toggle", traffic: "traffic-toggle", aurora: "aurora-toggle", meteor: "meteor-toggle", tctrack: "typhoon-toggle", planets: "planet-toggle",
 };
 const DEFAULT_ON = new Set(["quake"]);
 const pressed = (id) => document.getElementById(id)?.getAttribute("aria-pressed") === "true";

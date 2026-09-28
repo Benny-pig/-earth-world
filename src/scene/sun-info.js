@@ -3,6 +3,7 @@ import { subsolarPoint, sunEclipticLon, daysSinceJ2000 } from "../lib/geo.js";
 import { canvasRect } from "../lib/view-rect.js";
 import { makeDraggable } from "../ui/draggable.js";
 import { esc } from "../lib/esc.js";
+import { simNow, onSimTimeChange } from "../lib/sim-time.js";
 
 // ☀️ 太陽:地球旁的太陽也跟月亮一樣標上「☀️ 太陽」,點一下(或選單「太陽與節氣」)打開面板:
 // 現在直射哪裡、台北今天幾點日出日落、現在是哪個節氣、下一個節氣是哪天、太陽離地球多遠。
@@ -49,7 +50,28 @@ function solarTerm(now = Date.now()) {
     if (crossed) break;
     prev = cur;
   }
-  return { now: TERMS[idx], next: TERMS[(idx + 1) % 24], nextAt: new Date(t) };
+  return { now: TERMS[idx], next: TERMS[(idx + 1) % 24], nextAt: refineCross(target, t - 3600000, t) };
+}
+
+// 某一刻是哪個節氣(時光機顯示用)
+export const termAt = (date) => TERMS[Math.floor(lambdaAt(+date) / 15)];
+// 從某一刻往後找,太陽黃經第一次到達 target 度的時刻(春分 0、夏至 90、秋分 180、冬至 270)
+// 從 a 到 b 之間,太陽黃經跨過 target 的精確時刻(二分法,精確到幾秒)
+function refineCross(target, a, b) {
+  const past = (t) => { const d = ((lambdaAt(t) - target) % 360 + 360) % 360; return d < 180; };   // 已經過了 target
+  for (let i = 0; i < 16; i++) { const m = (a + b) / 2; if (past(m)) b = m; else a = m; }
+  return new Date(b);
+}
+export function nextSolarLon(target, from = Date.now()) {
+  let t = from, prev = lambdaAt(t);
+  for (let h = 0; h < 24 * 370; h++) {
+    t += 3600000;
+    const cur = lambdaAt(t);
+    const crossed = target === 0 ? cur < prev : prev < target && cur >= target;
+    if (crossed) return refineCross(target, t - 3600000, t);
+    prev = cur;
+  }
+  return null;
 }
 
 // 日地距離(天文單位):地球軌道偏心率造成約 ±1.7% 的變化
@@ -75,7 +97,7 @@ export function createSunInfo({ globe, camera, renderer, codeAt, nameOf, onClose
   const hm = (d) => fmt(d, { hour: "2-digit", minute: "2-digit", hour12: false });
   function render() {
     if (!body) return;
-    const now = new Date();
+    const now = simNow();
     const s = subsolarPoint(now);
     const code = codeAt?.(s.lat, s.lon);
     const where = code ? nameOf(code) : "海面上";
@@ -105,6 +127,8 @@ export function createSunInfo({ globe, camera, renderer, codeAt, nameOf, onClose
     if (enabled) { render(); timer = setInterval(render, 60 * 1000); }
   }
   label.addEventListener("click", (e) => { e.stopPropagation(); onOpen && onOpen(); });
+  let rt = null;
+  onSimTimeChange(() => { if (enabled) { clearTimeout(rt); rt = setTimeout(render, 250); } });
 
   // ---------- 每幀:標籤放在太陽下方;被地球擋住或不在畫面裡就藏起來 ----------
   const wp = new THREE.Vector3(), ndc = new THREE.Vector3(), toS = new THREE.Vector3();
