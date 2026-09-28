@@ -48,6 +48,17 @@ def _():
     return ("ok", "首頁與主程式都讀得到") if s2 == 200 else ("fail", f"主程式 HTTP {s2}")
 
 
+@check("程式版本號")
+def _():
+    # index.html 的程式版本號要跟著程式內容更新(tools/build-preload.py),不然讀者的瀏覽器會一直用快取裡的舊程式
+    import subprocess
+    r = subprocess.run([sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), "build-preload.py"), "--check"],
+                       capture_output=True, text=True, encoding="utf-8", errors="replace",
+                       env={**os.environ, "PYTHONIOENCODING": "utf-8"})
+    if r.returncode == 0: return "ok", r.stdout.strip()
+    return "fail", "程式改了但 index.html 的程式版本號沒更新,讀者可能拿不到新版程式;請執行 python tools/build-preload.py 後重新提交"
+
+
 @check("國家資料")
 def _():
     s, b = get(SITE + "data/countries.content.json")

@@ -3,7 +3,7 @@ import { latLonToXYZ, daysSinceJ2000, sunEclipticLon, eclipticToSubPoint } from 
 import { canvasRect } from "../lib/view-rect.js";
 import { makeDraggable } from "../ui/draggable.js";
 import { simNow, onSimTimeChange } from "../lib/sim-time.js";
-import { LITE } from "../lib/device.js";
+import { LITE, afterReady } from "../lib/device.js";
 
 // 🌙 月亮:放在「現在真實的方向」(跟太陽同一套天文公式),被太陽照亮的一半自然形成月相,
 // 而且永遠同一面朝向地球。真實距離約 60 倍地球半徑、大小 0.27 倍,照比例會小到看不見,
@@ -62,7 +62,7 @@ export function moonPhase(date = new Date(), { quick = false } = {}) {
 }
 
 // 🌕 月球表面:NASA 月球勘測軌道器(LRO)的真實彩色月面圖 + 地形起伏圖(公有領域,NASA SVS CGI Moon Kit)。
-// 手機用 1K、電腦用 2K;不擋載入畫面,載好才換上(之前先用素色月球)。
+// 手機用 1K、電腦用 2K;等地球出現(載入畫面結束)後才下載,不跟首屏搶頻寬,載好才換上(之前先用素色月球)。
 const MOON_MAP = LITE ? "assets/moon-1k.jpg" : "assets/moon-2k.jpg";
 const MOON_BUMP = "assets/moon-bump-1k.jpg";
 let moonPixels = null;   // 月相小圖取樣用:{ data, w, h }
@@ -128,7 +128,7 @@ export function drawPhase(canvas, ph) {
 
 export function createMoon({ parent, camera, renderer, onClose }) {
   const mat = new THREE.MeshStandardMaterial({ color: 0x9a9892, roughness: 1, metalness: 0 });
-  loadMoonTextures(mat);
+  afterReady(() => loadMoonTextures(mat), 100);
   moonReady.add(() => { if (enabled) renderPanel(); });   // 月面圖載好了:面板的月相圖換成真實月面
   const mesh = new THREE.Mesh(new THREE.SphereGeometry(RADIUS, 64, 32), mat);
   parent.add(mesh);

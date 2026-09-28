@@ -4,11 +4,13 @@ import { makeDraggable } from "../ui/draggable.js";
 
 // 🗣️ 人聲播報:用瀏覽器內建的語音合成(Web Speech API)把畫面上的內容唸出來——
 // 打開國家時的介紹、電影巡航的地名、飛行模擬的機長廣播、規模 6 以上的地震快報。
-// 不需要金鑰、文字不會上傳;聲音用裝置內建的中文(台灣)語音,沒有的話退而求其次用其他中文語音。
+// 不需要金鑰、文字不會上傳;預設用 Windows 內建的「Yating(雅婷)」台灣中文語音,
+// 沒有的話(手機、Mac)依序改用自然語音、Google 語音、其他中文語音。
 // 播報時背景音樂自動調小聲,唸完再恢復。設定記在這台瀏覽器。
 const KEY = "earth-world.voice";
 // 語速稍慢、音調稍高一點點,聽起來比較像在跟人聊天,不像在唸稿
-const DEFAULTS = { on: false, country: true, cinema: true, flight: true, quake: true, rate: 0.95, voice: "" };
+const DEFAULTS = { on: false, country: true, cinema: true, flight: true, quake: true, rate: 0.95, voice: "", vv: 2 };
+const isYating = (v) => /yating/i.test(v.name);
 const PITCH = 1.06;
 // 聲音自不自然,最大的差別在瀏覽器提供的語音:Edge 的「自然」神經語音最像真人,其次是 Chrome 的 Google 語音
 const isNatural = (v) => /natural|online|neural|premium|enhanced/i.test(v.name);
@@ -16,7 +18,12 @@ const isNatural = (v) => /natural|online|neural|premium|enhanced/i.test(v.name);
 const KINDS = [["country", "🌍 打開國家時的介紹"], ["flight", "✈️ 飛行模擬的機長廣播"], ["quake", "📳 規模 6 以上的地震快報"]];
 
 function loadSettings() {
-  try { return { ...DEFAULTS, ...JSON.parse(localStorage.getItem(KEY) || "{}") }; } catch { return { ...DEFAULTS }; }
+  try {
+    const s = { ...DEFAULTS, ...JSON.parse(localStorage.getItem(KEY) || "{}") };
+    // 預設聲音改成 Yating:以前存的聲音選擇清掉一次,之後讀者自己再換的會照常記住
+    if (s.vv !== 2) { s.voice = ""; s.vv = 2; }
+    return s;
+  } catch { return { ...DEFAULTS }; }
 }
 
 export function createVoice({ music, onClose }) {
@@ -26,7 +33,7 @@ export function createVoice({ music, onClose }) {
   const save = () => { try { localStorage.setItem(KEY, JSON.stringify(s)); } catch { /* 存不了就算了 */ } };
   let voices = [];
 
-  // 中文模式:優先台灣中文(Edge 的「HsiaoChen/HsiaoYu Online (Natural)」最自然),再來其他中文;英文模式用英文語音
+  // 中文模式:第一順位 Yating(雅婷),再來台灣中文的自然語音、其他中文;英文模式用英文語音
   function listVoices() {
     if (!supported) return [];
     const all = synth.getVoices();
@@ -34,6 +41,7 @@ export function createVoice({ music, onClose }) {
     const score = (v) => {
       let k = 0;
       if (isEn ? /en[-_]US/i.test(v.lang) : /(zh|cmn)[-_](TW|Hant)/i.test(v.lang)) k += 10;
+      if (!isEn && isYating(v)) k += 40;          // Windows「Microsoft Yating」:預設聲音
       if (isNatural(v)) k += 12;                  // Edge「曉臻/曉雨/雲哲 Online (Natural)」
       if (/google/i.test(v.name)) k += 6;         // Chrome「Google 國語(臺灣)」
       if (/HsiaoChen|HsiaoYu|Mei-?Jia|Meijia/i.test(v.name)) k += 2;   // 溫暖的女聲(Edge、iPhone)
@@ -99,11 +107,11 @@ export function createVoice({ music, onClose }) {
       KINDS.map(([k, label]) => `<label class="vo-row"><input type="checkbox" data-kind="${k}"${s[k] ? " checked" : ""}> ${label}</label>`).join("") +
       `<div class="vo-h">聲音</div>` +
       (voices.length
-        ? `<select class="vo-voice">${voices.map((v) => `<option value="${esc(v.voiceURI)}"${cur && v.voiceURI === cur.voiceURI ? " selected" : ""}>${esc(v.name)}(${esc(v.lang)})</option>`).join("")}</select>`
+        ? `<select class="vo-voice">${voices.map((v) => `<option value="${esc(v.voiceURI)}"${cur && v.voiceURI === cur.voiceURI ? " selected" : ""}>${esc(v.name)}(${esc(v.lang)})${!isEn && isYating(v) ? " ⭐ 預設" : ""}</option>`).join("")}</select>`
         : `<div class="au-dim">這台裝置找不到${isEn ? "英文" : "中文"}語音,可能要到系統設定下載語音</div>`) +
       `<label class="vo-rate">語速 <input type="range" min="0.7" max="1.5" step="0.05" value="${s.rate}"> <span>${s.rate.toFixed(2)}×</span></label>` +
       `<button type="button" class="tc-btn vo-test" data-act="test">▶ 試聽</button>` +
-      (cur && !isNatural(cur) && !/google/i.test(cur.name)
+      (cur && !isYating(cur) && !isNatural(cur) && !/google/i.test(cur.name)
         ? `<div class="vo-tip">💡 想要更像真人的聲音:用 <b>Microsoft Edge</b> 開這個網站,聲音選單會多出「曉臻、曉雨、雲哲(Natural)」等自然語音;Chrome 可以選「Google 國語(臺灣)」。</div>` : "") +
       `<div class="sat-caption">用裝置內建的語音合成,文字不會上傳。國家介紹旁邊的「🔊 朗讀」隨時都能按,不受這裡的開關影響。</div>`;
   }

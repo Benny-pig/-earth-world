@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import { latLonToXYZ, subsolarPoint } from "../lib/geo.js";
-import { texUrl } from "../lib/device.js";
+import { LITE, afterReady } from "../lib/device.js";
 import { simNow, onSimTimeChange } from "../lib/sim-time.js";
 
 const SPIN_RATE = (2 * Math.PI) / 120; // 一圈 120 秒 —— 放慢成從容的自轉,看得到晨昏線掃過大陸
@@ -103,24 +103,36 @@ export function createGlobe({ onAllTexturesFailed } = {}) {
   atmosphere.raycast = () => {};   // 不影響點國家
   atmosphere.renderOrder = -0.5;
 
-  // 非同步套貼圖;失敗就保留純色球
+  // 套上貼圖(換成高畫質時舊的那張釋放掉);失敗的保留原樣
+  function apply(color, normal, night) {
+    const put = (slot, t) => { const old = material[slot]; material[slot] = t; if (old && old !== t) old.dispose(); };
+    if (color) { color.anisotropy = 8; put("map", color); material.color.set(0xffffff); }
+    if (normal) { put("normalMap", normal); material.normalScale.set(0.8, 0.8); }
+    if (night) { night.anisotropy = 8; put("emissiveMap", night); material.emissive.set(0xffee88); material.emissiveIntensity = 1.1; }
+    material.needsUpdate = true;
+  }
+  // 先載小張貼圖(2K,總共約 0.4MB;載入畫面只等這些),地球很快就出現;
+  // 電腦再趁地球出現之後,背景下載 4K 高畫質換上去(約 1.5MB,不算進載入畫面)。手機、省流量模式維持小張。
   (async () => {
     const [color, normal, night] = await Promise.all([
-      load(texUrl("earth-color-4k.jpg", "earth-color-2k.jpg"), THREE.SRGBColorSpace),
-      load(texUrl("earth-normal.jpg", "earth-normal-1k.jpg")),
-      load(texUrl("earth-night-4k.jpg", "earth-night-2k.jpg"), THREE.SRGBColorSpace),
+      load("assets/lite/earth-color-2k.jpg", THREE.SRGBColorSpace),
+      load("assets/lite/earth-normal-1k.jpg"),
+      load("assets/lite/earth-night-2k.jpg", THREE.SRGBColorSpace),
     ]);
-    if (color) { material.map = color; material.color.set(0xffffff); color.anisotropy = 8; }
-    if (normal) { material.normalMap = normal; material.normalScale.set(0.8, 0.8); }
-    if (night) {
-      material.emissiveMap = night;
-      material.emissive.set(0xffee88);
-      material.emissiveIntensity = 1.1;
-      night.anisotropy = 8;
-    }
-    material.needsUpdate = true;
+    apply(color, normal, night);
     const loaded = [color, normal, night].filter(Boolean).length;
     if (loaded === 0 && typeof onAllTexturesFailed === "function") onAllTexturesFailed();
+    if (LITE) return;
+    afterReady(async () => {
+      const hd = new THREE.TextureLoader(new THREE.LoadingManager());   // 不經過載入畫面的計數
+      const loadHd = (url, cs = THREE.NoColorSpace) => new Promise((res) => hd.load(url, (t) => { t.colorSpace = cs; res(t); }, undefined, () => res(null)));
+      const [c4, n4, l4] = await Promise.all([
+        loadHd("assets/earth-color-4k.jpg", THREE.SRGBColorSpace),
+        loadHd("assets/earth-normal.jpg"),
+        loadHd("assets/earth-night-4k.jpg", THREE.SRGBColorSpace),
+      ]);
+      apply(c4, n4, l4);
+    });
   })();
 
   // 強烈方向光 + 很低的環境光 → 夜面夠暗、晨昏線俐落有戲劇感,城市燈才明顯。

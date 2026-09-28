@@ -52,6 +52,8 @@ import { createSunInfo } from "./scene/sun-info.js";
 import { createPlanets } from "./scene/planets.js";
 import { createTyphoons } from "./scene/typhoons.js";
 import { createHazards } from "./scene/hazards.js";
+import { createPlates } from "./scene/plates.js";
+import { createFeatureMenu } from "./ui/feature-menu.js";
 import { createPov } from "./scene/pov.js";
 import { createBirthday } from "./ui/birthday.js";
 import { createTempRank } from "./ui/temp-rank.js";
@@ -118,6 +120,8 @@ function setupLoadingScreen() {
     if (pctEl) pctEl.textContent = "載入完成";
     if (el) { el.classList.add("done"); setTimeout(() => el.remove(), 700); }
     resolveDone();
+    window.__earthReady = true;
+    window.dispatchEvent(new Event("earth-ready"));   // 之後才下載的東西(4K 貼圖…)可以開始了
   }
   function maybeFinish() { if (texDone && dataLoaded >= DATA_TOTAL) finish(); }
 
@@ -598,6 +602,8 @@ export function start() {
   }
   setupCollapsible("lc-collapse-toggle", "lc-body", "earth-world.lc-collapsed");
   setupCollapsible("twc-collapse-toggle", "twc-body", "earth-world.twc-collapsed");
+  // 功能卡的四個分頁(即時世界/太空天象/探索遊戲/聲音)
+  window.__earth.featureMenu = createFeatureMenu();
   // 手機畫面小:從選單開/關功能後,自動收起「台灣交通」「功能」兩張卡片,不要擋住地球
   // (功能列自己的點擊先處理,這裡是冒泡上來才收;想再選就點卡片標題展開)
   document.getElementById("ctrl-dock")?.addEventListener("click", (e) => {
@@ -906,10 +912,22 @@ export function start() {
   }
   hazardToggle?.addEventListener("click", () => setHazards(hazardToggle.getAttribute("aria-pressed") !== "true"));
 
+  // 🧩 板塊與地震帶(面板裡可以一鍵疊上地震、火山:直接按選單上的按鈕,狀態才會一致)
+  const platesToggle = document.getElementById("plates-toggle");
+  const plates = createPlates({ globeObject: globe.object, camera, renderer, rig, voice, onClose: () => setPlates(false),
+    toggleLayer: (id) => document.getElementById(id)?.click() });
+  window.__earth.plates = plates;
+  function setPlates(on) {
+    platesToggle?.setAttribute("aria-pressed", String(on));
+    plates.setEnabled(on);
+  }
+  platesToggle?.addEventListener("click", () => setPlates(platesToggle.getAttribute("aria-pressed") !== "true"));
+
   // 國界線、台灣海岸線、國家色塊:貼著地表的圖層(站在地面仰望時要藏起來)
   function setGroundLines(on) {
     const e = window.__earth;
     for (const o of [e.borders, e.twOutline, e.countryLayer?.group]) if (o) o.visible = on;
+    e.plates?.setHidden(!on);
   }
   // 🎥 特別視角:搭上國際太空站、從月球看地球(鏡頭暫時離開一般的繞地球模式)
   const issToggle = document.getElementById("iss-ride-toggle");
@@ -1213,6 +1231,7 @@ export function start() {
     planets.update();
     typhoons.update();
     hazards.update();
+    plates.update(dt);
     timeMachine.update(dt);
     sunInfo.update();
     if (intro) intro.update(dt);

@@ -4,6 +4,113 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>地球世界</title>
+<!-- 外部函式庫(three.js 等)的網址對照;要放在任何程式和預先下載清單之前 -->
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/",
+    "earcut": "https://cdn.jsdelivr.net/npm/earcut@3.0.1/+esm"
+  }
+}
+</script>
+<!-- modulepreload:start(tools/build-preload.py 自動產生,不要手動改) -->
+<meta name="app-version" content="d8a2ef9712">
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/earcut@3.0.1/+esm">
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js">
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/controls/OrbitControls.js">
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/lines/Line2.js">
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/lines/LineGeometry.js">
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/lines/LineMaterial.js">
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/lines/LineSegments2.js">
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/lines/LineSegmentsGeometry.js">
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/postprocessing/EffectComposer.js">
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/postprocessing/OutputPass.js">
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/postprocessing/RenderPass.js">
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/postprocessing/SMAAPass.js">
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/postprocessing/UnrealBloomPass.js">
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/utils/BufferGeometryUtils.js">
+<link rel="modulepreload" href="src/main.js">
+<link rel="modulepreload" href="src/audio/music.js">
+<link rel="modulepreload" href="src/audio/voice.js">
+<link rel="modulepreload" href="src/countries/borders.js">
+<link rel="modulepreload" href="src/countries/country-layer.js">
+<link rel="modulepreload" href="src/countries/country-names.js">
+<link rel="modulepreload" href="src/lib/device.js">
+<link rel="modulepreload" href="src/lib/esc.js">
+<link rel="modulepreload" href="src/lib/geo.js">
+<link rel="modulepreload" href="src/lib/i18n.js">
+<link rel="modulepreload" href="src/lib/label-style.js">
+<link rel="modulepreload" href="src/lib/sim-time.js">
+<link rel="modulepreload" href="src/lib/sky-focus.js">
+<link rel="modulepreload" href="src/lib/view-offset.js">
+<link rel="modulepreload" href="src/lib/view-rect.js">
+<link rel="modulepreload" href="src/scene/aurora.js">
+<link rel="modulepreload" href="src/scene/camera-controls.js">
+<link rel="modulepreload" href="src/scene/cinema.js">
+<link rel="modulepreload" href="src/scene/clouds.js">
+<link rel="modulepreload" href="src/scene/constellations.js">
+<link rel="modulepreload" href="src/scene/country-labels.js">
+<link rel="modulepreload" href="src/scene/earth-layers.js">
+<link rel="modulepreload" href="src/scene/earthquakes.js">
+<link rel="modulepreload" href="src/scene/ev.js">
+<link rel="modulepreload" href="src/scene/flight-sim.js">
+<link rel="modulepreload" href="src/scene/flights.js">
+<link rel="modulepreload" href="src/scene/globe.js">
+<link rel="modulepreload" href="src/scene/hazards.js">
+<link rel="modulepreload" href="src/scene/launches.js">
+<link rel="modulepreload" href="src/scene/livecams.js">
+<link rel="modulepreload" href="src/scene/meteors.js">
+<link rel="modulepreload" href="src/scene/moon.js">
+<link rel="modulepreload" href="src/scene/ocean-labels.js">
+<link rel="modulepreload" href="src/scene/physical-labels.js">
+<link rel="modulepreload" href="src/scene/planets.js">
+<link rel="modulepreload" href="src/scene/plates.js">
+<link rel="modulepreload" href="src/scene/pov.js">
+<link rel="modulepreload" href="src/scene/radio.js">
+<link rel="modulepreload" href="src/scene/satellites.js">
+<link rel="modulepreload" href="src/scene/starfield.js">
+<link rel="modulepreload" href="src/scene/sun-info.js">
+<link rel="modulepreload" href="src/scene/traffic.js">
+<link rel="modulepreload" href="src/scene/typhoons.js">
+<link rel="modulepreload" href="src/scene/weather.js">
+<link rel="modulepreload" href="src/ui/admin-map.js">
+<link rel="modulepreload" href="src/ui/airport-board.js">
+<link rel="modulepreload" href="src/ui/asteroids.js">
+<link rel="modulepreload" href="src/ui/birthday.js">
+<link rel="modulepreload" href="src/ui/clock-weather.js">
+<link rel="modulepreload" href="src/ui/compare.js">
+<link rel="modulepreload" href="src/ui/country-search.js">
+<link rel="modulepreload" href="src/ui/draggable.js">
+<link rel="modulepreload" href="src/ui/encyclopedia.js">
+<link rel="modulepreload" href="src/ui/favorites.js">
+<link rel="modulepreload" href="src/ui/feature-menu.js">
+<link rel="modulepreload" href="src/ui/font-size.js">
+<link rel="modulepreload" href="src/ui/home-compass.js">
+<link rel="modulepreload" href="src/ui/intro.js">
+<link rel="modulepreload" href="src/ui/nature-popup.js">
+<link rel="modulepreload" href="src/ui/news.js">
+<link rel="modulepreload" href="src/ui/on-this-day.js">
+<link rel="modulepreload" href="src/ui/passport.js">
+<link rel="modulepreload" href="src/ui/pwa.js">
+<link rel="modulepreload" href="src/ui/quiz.js">
+<link rel="modulepreload" href="src/ui/radio-panel.js">
+<link rel="modulepreload" href="src/ui/rail-panel.js">
+<link rel="modulepreload" href="src/ui/recent.js">
+<link rel="modulepreload" href="src/ui/ro-player.js">
+<link rel="modulepreload" href="src/ui/satellite.js">
+<link rel="modulepreload" href="src/ui/settings.js">
+<link rel="modulepreload" href="src/ui/share.js">
+<link rel="modulepreload" href="src/ui/side-panel.js">
+<link rel="modulepreload" href="src/ui/temp-rank.js">
+<link rel="modulepreload" href="src/ui/theme.js">
+<link rel="modulepreload" href="src/ui/time-machine.js">
+<link rel="modulepreload" href="src/ui/tooltip.js">
+<link rel="modulepreload" href="src/ui/tour.js">
+<link rel="modulepreload" href="src/ui/traffic-center.js">
+<link rel="modulepreload" href="src/ui/transit-map.js">
+<link rel="modulepreload" href="src/ui/tw-clock.js">
+<!-- modulepreload:end -->
 <meta name="description" content="轉動 3D 地球，探索全世界：各國大百科、即時航班與地震、各國廣播電台、衛星與太空站、世界景點直播、飛行模擬、地理猜謎、台灣交通。">
 <!-- 分享預覽卡:在 LINE、Facebook、X 貼網址時顯示的標題與大圖(圖由 tools/build-og-image.py 產生) -->
 <meta property="og:type" content="website">
@@ -745,6 +852,49 @@
     #layers-panel { bottom: 60px; } body.layers-on #ctrl-dock { display: none; }
     .ly-label { padding: 1px 6px; } .ly-label small { display: none; } .ly-label b { font-size: 11px; }
   }
+  /* 🧩 板塊與地震帶 */
+  #plates-panel { --acc: #ffb36b; --acc-b: rgba(255,160,90,.5); width: 360px; }
+  body[data-theme="journal"] #plates-panel { --acc: #b3541e; }
+  #plates-panel.min .fx-body { display: none; }
+  #plates-panel.min .sat-head { margin-bottom: 0; }
+  @media (max-width: 640px) { #plates-panel { top: auto; bottom: 116px; left: 8px; right: 8px; width: auto; max-width: none; max-height: 42vh; z-index: 45; } }
+  #plate-labels[hidden] { display: none; }
+  body.pov #plate-labels, body.layers-on #plate-labels { display: none; }
+  .pl-intro { font-size: 12.5px; line-height: 1.65; opacity: .92; }
+  .pl-legend { display: flex; flex-direction: column; gap: 4px; }
+  .pl-kind { display: flex; align-items: flex-start; gap: 9px; padding: 6px 8px; border-radius: 9px; border: 1px solid rgba(255,255,255,.1);
+    background: rgba(255,255,255,.03); color: inherit; font: inherit; text-align: left; cursor: pointer; transition: opacity .15s; }
+  .pl-kind:hover { background: rgba(255,170,100,.1); }
+  .pl-kind i { flex: none; width: 22px; height: 5px; margin-top: 7px; border-radius: 3px; }
+  .pl-kind b { display: block; font-size: 13px; }
+  .pl-kind small { display: block; font-size: 11.5px; opacity: .72; line-height: 1.45; }
+  .pl-kind:not(.on) { opacity: .42; }
+  .pl-kind:not(.on) i { box-shadow: none !important; }
+  .pl-sec { margin-top: 10px; padding: 9px 10px; border-radius: 10px; background: rgba(255,170,100,.07); border: 1px solid rgba(255,170,100,.22); font-size: 12.5px; line-height: 1.65; }
+  .pl-sec p { margin: 4px 0; }
+  .pl-sec ul { margin: 4px 0; padding-left: 18px; }
+  .pl-sec li { margin: 2px 0; }
+  .pl-h { font-weight: 800; font-size: 14px; color: var(--acc); }
+  .pl-btns { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+  .pl-btns .tc-btn { flex: 1 1 auto; padding: 6px 10px; font-size: 12.5px; }
+  .pl-btns .tc-btn.on { background: rgba(255,170,100,.22); border-color: rgba(255,170,100,.7); }
+  #plate-cap { position: fixed; top: 72px; left: 50%; transform: translateX(-50%); z-index: 46; width: max-content; max-width: min(520px, calc(100vw - 24px));
+    padding: 8px 14px; border-radius: 12px; background: rgba(20,10,6,.88); border: 1px solid rgba(255,140,80,.55); color: #ffe9d6;
+    font: 13px/1.55 system-ui, "Microsoft JhengHei", sans-serif; box-shadow: 0 8px 24px rgba(0,0,0,.5); backdrop-filter: blur(6px); pointer-events: none; }
+  #plate-cap[hidden] { display: none; }
+  #plate-cap b { display: block; color: #ffb37a; font-size: 14px; }
+  @media (max-width: 640px) { #plate-cap { top: 146px; } }
+  /* 電腦:左邊有板塊面板時,說明字卡跟著地球往右移(地球被面板推到右半邊) */
+  @media (min-width: 641px) { body.plates-on #plate-cap { left: calc(50% + 195px); max-width: min(440px, calc(100vw - 440px)); } }
+  .pl-name, .pl-arrow { position: fixed; left: 0; top: 0; z-index: 31; pointer-events: none; will-change: transform; }
+  .pl-name > span, .pl-arrow > span { display: flex; flex-direction: column; align-items: center; transform: translate(-50%, -50%); }
+  .pl-name > span { color: rgba(255,236,210,.95); font: 700 12.5px/1 system-ui, "Microsoft JhengHei", sans-serif; letter-spacing: .18em; white-space: nowrap;
+    text-shadow: 0 0 4px #000, 0 0 10px rgba(0,0,0,.9); }
+  .pl-ar { display: block; width: 46px; height: 16px; }
+  .pl-ar svg { display: block; width: 100%; height: 100%; animation: pl-flow 1.8s ease-in-out infinite; filter: drop-shadow(0 0 3px rgba(0,0,0,.9)); }
+  @keyframes pl-flow { 0% { transform: translateX(-6px); opacity: .35; } 55% { opacity: 1; } 100% { transform: translateX(7px); opacity: .25; } }
+  @media (prefers-reduced-motion: reduce) { .pl-ar svg { animation: none; } }
+  .pl-arrow small { margin-top: 3px; color: #ffe3b0; font: 600 11px/1.2 system-ui, "Microsoft JhengHei", sans-serif; white-space: nowrap; text-shadow: 0 0 4px #000, 0 0 8px #000; }
   /* 🌋 火山與野火 */
   #hazard-labels[hidden] { display: none; }
   #hazard-panel.min .fx-body { display: none; }
@@ -2202,14 +2352,6 @@
   .lc-body { display: flex; flex-direction: column; gap: 2px; }
   /* 每張卡片的列前面自動編號(CSS counter),加功能不用手動改編號 */
   .lc-body { counter-reset: lc-count; }
-  /* 功能卡片分類的小標題;每一類重新編號 */
-  .lc-group { counter-set: lc-count 0; margin: 10px 4px 4px; padding-bottom: 3px; font-size: 12.5px; font-weight: 800; letter-spacing: .06em;
-    color: #9fd0ff; border-bottom: 1px solid rgba(120,190,255,.28); }
-  .lc-group:first-child { margin-top: 2px; }
-  /* 各主題都要清楚看得到分類標題(原本半透明,在史詩、星空主題太暗) */
-  body[data-theme="fantasy"] .lc-group { color: #f2cf6b; border-bottom-color: rgba(242,207,107,.35); }
-  body[data-theme="journal"] .lc-group { color: #7a4f22; border-bottom-color: rgba(122,79,34,.3); }
-  body[data-theme="hud"] .lc-group { color: #5ff0ff; border-bottom-color: rgba(95,240,255,.35); text-shadow: 0 0 6px rgba(95,240,255,.5); }
   /* 加一寫在列本身(寫在 ::before 上時,分類標題的歸零不會生效,編號會一路往下數) */
   .lc-body > .layer-row { counter-increment: lc-count; }
   .lc-body > .layer-row::before {
@@ -2248,6 +2390,42 @@
   #tw-controls .layer-icon { filter: none; opacity: .9; }
   #tw-controls .layer-row[aria-pressed="false"] { opacity: .8; }
   #tw-controls .layer-row[aria-pressed="true"] { background: rgba(255,196,80,.16); }
+  /* 🎛️ 功能卡:四個分頁 + 一格一格的圖示(原本四十幾列排成一長串要一直捲);分頁上的數字 = 那一頁開著幾個 */
+  @media (min-width: 641px) { #layer-controls:has(#lc-body:not([hidden])) { width: 318px; } }
+  .lc-tabs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 3px; margin: 0 2px 6px; padding: 3px; border-radius: 10px; background: rgba(255,255,255,.05); }
+  .lc-tab { position: relative; display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 5px 2px 4px; border: none; border-radius: 8px;
+    background: none; color: #aebbdc; font: 12px system-ui, "Microsoft JhengHei", sans-serif; cursor: pointer; transition: background .15s, color .15s; }
+  .lc-tab:hover { background: rgba(120,170,255,.1); }
+  .lc-tab-i { font-size: 17px; line-height: 1.2; }
+  .lc-tab[aria-selected="true"] { background: rgba(120,170,255,.24); color: #fff; font-weight: 700; }
+  .lc-tab-n { position: absolute; top: 2px; right: 4px; min-width: 16px; height: 16px; padding: 0 4px; box-sizing: border-box; border-radius: 8px;
+    background: #f2994a; color: #16110a; font-size: 10.5px; line-height: 16px; font-weight: 800; }
+  .lc-tab-n[hidden] { display: none; }
+  .lc-pane { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; }
+  .lc-pane[hidden] { display: none; }
+  #layer-controls .layer-row { position: relative; flex-direction: column; justify-content: flex-start; gap: 5px; min-height: 68px; padding: 9px 4px 7px;
+    text-align: center; font-size: 12.5px; line-height: 1.25; border: 1px solid rgba(120,170,255,.12); background: rgba(255,255,255,.03); }
+  #layer-controls .layer-row:hover { background: rgba(120,170,255,.12); }
+  #layer-controls .layer-row .layer-icon { font-size: 23px; }
+  #layer-controls .layer-row[aria-pressed="false"] .layer-icon { filter: grayscale(.6); opacity: .75; }
+  #layer-controls .layer-row[aria-pressed="false"] { opacity: .82; }
+  #layer-controls .layer-row[aria-pressed="true"] { background: rgba(120,170,255,.2); border-color: rgba(150,195,255,.65); box-shadow: inset 0 0 12px rgba(120,170,255,.18); }
+  #layer-controls .layer-badge { position: absolute; top: 4px; right: 5px; margin: 0; }
+  body[data-theme="fantasy"] .lc-tab { color: #cdb57a; }
+  body[data-theme="fantasy"] .lc-tab[aria-selected="true"], body[data-theme="fantasy"] #layer-controls .layer-row[aria-pressed="true"] { background: rgba(201,162,39,.2); border-color: rgba(242,207,107,.6); color: #fff3cf; box-shadow: none; }
+  body[data-theme="journal"] .lc-tabs { background: rgba(122,79,34,.08); }
+  body[data-theme="journal"] .lc-tab { color: #7a5a3a; }
+  body[data-theme="journal"] #layer-controls .layer-row { border-color: rgba(122,79,34,.18); background: rgba(255,255,255,.25); }
+  body[data-theme="journal"] .lc-tab[aria-selected="true"], body[data-theme="journal"] #layer-controls .layer-row[aria-pressed="true"] { background: rgba(166,87,46,.16); border-color: rgba(166,87,46,.5); color: #3b332a; box-shadow: none; }
+  body[data-theme="hud"] .lc-tab { color: #7fbac4; }
+  body[data-theme="hud"] .lc-tab[aria-selected="true"], body[data-theme="hud"] #layer-controls .layer-row[aria-pressed="true"] { background: rgba(0,229,255,.16); border-color: rgba(0,229,255,.6); color: #e8fdff; }
+  @media (max-width: 640px) {
+    /* 手機:功能卡展開時佔滿整個寬度,一排四格 */
+    #ctrl-dock:has(#lc-body:not([hidden])) { left: 8px; max-width: none; }
+    .lc-pane { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    #layer-controls .layer-row { min-height: 62px; font-size: 12px; padding: 8px 2px 6px; gap: 4px; }
+    #layer-controls .layer-row .layer-icon { font-size: 21px; }
+  }
   body[data-theme="fantasy"] .ctrl-card {
     background: linear-gradient(180deg,#332714,#1c150c); border: 1px solid #c9a227;
   }
@@ -2846,6 +3024,14 @@
     </div>
     <div id="neo-body" class="fx-body"></div>
   </div>
+  <div id="plates-panel" class="fx-panel" hidden>
+    <div class="sat-head">
+      <span class="sat-title">🧩 板塊與地震帶</span>
+      <button id="plates-min" class="rp-head-btn" type="button" aria-label="收合面板" title="收合面板">▾</button>
+      <button id="plates-close" class="rp-head-btn" type="button" aria-label="關閉">×</button>
+    </div>
+    <div id="plates-body" class="fx-body"></div>
+  </div>
   <div id="hazard-panel" class="fx-panel" hidden>
     <div class="sat-head">
       <span class="sat-title">🌋 火山與野火</span>
@@ -3178,113 +3364,117 @@
         <span class="lc-cute-icon">🎛️</span>功能<span class="lc-collapse-arrow">▾</span>
       </button>
       <div id="lc-body" class="lc-body">
-        <div class="lc-group">🌍 即時世界</div>
-        <button id="weather-toggle" class="layer-row" type="button" aria-pressed="false">
-          <span class="layer-dot"></span>全球氣溫與降雨
-        </button>
-        <button id="temp-toggle" class="layer-row" type="button" aria-pressed="false">
-          <span class="layer-dot"></span>世界溫度排行
-        </button>
-        <button id="quake-toggle" class="layer-row" type="button" aria-pressed="true">
-          <span class="layer-dot"></span>全球地震顯示<span id="quake-severe-badge" class="layer-badge" hidden title="偵測到規模 6 以上地震">⚠</span>
-        </button>
-        <button id="satellite-toggle" class="layer-row" type="button" aria-pressed="false">
-          <span class="layer-dot"></span>颱風衛星雲圖
-        </button>
-        <button id="typhoon-toggle" class="layer-row" type="button" aria-pressed="false">
-          <span class="layer-dot"></span>颱風路徑
-        </button>
-        <button id="hazard-toggle" class="layer-row" type="button" aria-pressed="false">
-          <span class="layer-dot"></span>火山與野火
-        </button>
-        <button id="flight-toggle" class="layer-row" type="button" aria-pressed="false">
-          <span class="layer-dot"></span>世界機場航班
-        </button>
-        <button id="livecam-toggle" class="layer-row" type="button" aria-pressed="false">
-          <span class="layer-dot"></span>世界即時景點直播
-        </button>
-        <div class="lc-group">🚀 太空與天象</div>
-        <button id="moon-toggle" class="layer-row" type="button" aria-pressed="false">
-          <span class="layer-dot"></span>月亮與月相
-        </button>
-        <button id="iss-ride-toggle" class="layer-row" type="button" aria-pressed="false" title="鏡頭搬到國際太空站的真實位置,往下看地球流過">
-          <span class="layer-dot"></span>搭上國際太空站
-        </button>
-        <button id="moonview-toggle" class="layer-row" type="button" aria-pressed="false" title="站在月球上看地球從月平線升起">
-          <span class="layer-dot"></span>從月球看地球
-        </button>
-        <button id="neo-toggle" class="layer-row" type="button" aria-pressed="false">
-          <span class="layer-dot"></span>小行星掠過地球
-        </button>
-        <button id="timemachine-toggle" class="layer-row" type="button" aria-pressed="false" title="拖日期時間,太陽、月亮、星空、行星一起照那個時間動">
-          <span class="layer-dot"></span>時光機
-        </button>
-        <button id="planet-toggle" class="layer-row" type="button" aria-pressed="false">
-          <span class="layer-dot"></span>五大行星
-        </button>
-        <button id="sunpanel-toggle" class="layer-row" type="button" aria-pressed="false">
-          <span class="layer-dot"></span>太陽與節氣
-        </button>
-        <button id="constellation-toggle" class="layer-row" type="button" aria-pressed="true" title="星座連線與名稱(亮星本身一直都在)">
-          <span class="layer-dot"></span>星座與亮星
-        </button>
-        <button id="aurora-toggle" class="layer-row" type="button" aria-pressed="false">
-          <span class="layer-dot"></span>極光即時預報
-        </button>
-        <button id="meteor-toggle" class="layer-row" type="button" aria-pressed="false">
-          <span class="layer-dot"></span>流星雨
-        </button>
-        <button id="orbit-toggle" class="layer-row" type="button" aria-pressed="false">
-          <span class="layer-dot"></span>衛星與太空站
-        </button>
-        <button id="launch-toggle" class="layer-row" type="button" aria-pressed="false">
-          <span class="layer-dot"></span>太空發射日曆
-        </button>
-        <div class="lc-group">🧭 探索與遊戲</div>
-        <button id="layers-toggle" class="layer-row" type="button" aria-pressed="false" title="把地球切開四分之一,從大氣層一路看到地心">
-          <span class="layer-dot"></span>地球剖面:大氣到地心
-        </button>
-        <button id="bday-toggle" class="layer-row" type="button" aria-pressed="false">
-          <span class="layer-dot"></span>生日那天的天空
-        </button>
-        <button id="cinema-toggle" class="layer-row" type="button" aria-pressed="false" title="介面淡出,鏡頭像紀錄片一樣飛過世界各地(點任何地方結束)">
-          <span class="layer-dot"></span>電影巡航
-        </button>
-        <button id="quiz-toggle" class="layer-row" type="button" aria-pressed="false">
-          <span class="layer-dot"></span>地理猜謎遊戲
-        </button>
-        <button id="passport-toggle" class="layer-row" type="button" aria-pressed="false">
-          <span class="layer-dot"></span>旅行護照集章
-        </button>
-        <button id="flightsim-toggle" class="layer-row" type="button" aria-pressed="false">
-          <span class="layer-dot"></span>飛行旅程模擬
-        </button>
-        <button id="compare-toggle" class="layer-row" type="button" aria-pressed="false">
-          <span class="layer-dot"></span>國家比較
-        </button>
-        <button id="otd-toggle" class="layer-row" type="button" aria-pressed="false">
-          <span class="layer-dot"></span>歷史上的今天
-        </button>
-        <div class="lc-group">🎵 聲音</div>
-        <button id="voice-toggle" class="layer-row" type="button" aria-pressed="false" title="用語音播報國家介紹、電影巡航地名、機長廣播、地震快報">
-          <span class="layer-dot"></span>人聲播報
-        </button>
-        <button id="radio-toggle" class="layer-row" type="button" aria-pressed="false">
-          <span class="layer-dot"></span>當地廣播電台
-        </button>
+        <div class="lc-tabs" role="tablist" aria-label="功能分類">
+          <button type="button" role="tab" class="lc-tab" data-cat="live" aria-selected="false"><span class="lc-tab-i">🌐</span><span class="lc-tab-t">即時世界</span><b class="lc-tab-n" hidden></b></button>
+          <button type="button" role="tab" class="lc-tab" data-cat="space" aria-selected="false"><span class="lc-tab-i">🚀</span><span class="lc-tab-t">太空天象</span><b class="lc-tab-n" hidden></b></button>
+          <button type="button" role="tab" class="lc-tab" data-cat="explore" aria-selected="false"><span class="lc-tab-i">🧭</span><span class="lc-tab-t">探索遊戲</span><b class="lc-tab-n" hidden></b></button>
+          <button type="button" role="tab" class="lc-tab" data-cat="sound" aria-selected="false"><span class="lc-tab-i">🎵</span><span class="lc-tab-t">聲音</span><b class="lc-tab-n" hidden></b></button>
+        </div>
+        <div class="lc-pane" data-cat="live" role="tabpanel">
+          <button id="weather-toggle" class="layer-row" type="button" aria-pressed="false">
+            <span class="layer-icon">🌦️</span>全球氣溫與降雨
+          </button>
+          <button id="temp-toggle" class="layer-row" type="button" aria-pressed="false">
+            <span class="layer-icon">🌡️</span>世界溫度排行
+          </button>
+          <button id="quake-toggle" class="layer-row" type="button" aria-pressed="true">
+            <span class="layer-icon">📳</span>全球地震顯示<span id="quake-severe-badge" class="layer-badge" hidden title="偵測到規模 6 以上地震">⚠</span>
+          </button>
+          <button id="satellite-toggle" class="layer-row" type="button" aria-pressed="false">
+            <span class="layer-icon">☁️</span>颱風衛星雲圖
+          </button>
+          <button id="typhoon-toggle" class="layer-row" type="button" aria-pressed="false">
+            <span class="layer-icon">🌀</span>颱風路徑
+          </button>
+          <button id="hazard-toggle" class="layer-row" type="button" aria-pressed="false">
+            <span class="layer-icon">🌋</span>火山與野火
+          </button>
+          <button id="flight-toggle" class="layer-row" type="button" aria-pressed="false">
+            <span class="layer-icon">✈️</span>世界機場航班
+          </button>
+          <button id="livecam-toggle" class="layer-row" type="button" aria-pressed="false">
+            <span class="layer-icon">📺</span>世界即時景點直播
+          </button>
+        </div>
+        <div class="lc-pane" data-cat="space" role="tabpanel">
+          <button id="moon-toggle" class="layer-row" type="button" aria-pressed="false">
+            <span class="layer-icon">🌙</span>月亮與月相
+          </button>
+          <button id="iss-ride-toggle" class="layer-row" type="button" aria-pressed="false" title="鏡頭搬到國際太空站的真實位置,往下看地球流過">
+            <span class="layer-icon">🛰️</span>搭上國際太空站
+          </button>
+          <button id="moonview-toggle" class="layer-row" type="button" aria-pressed="false" title="站在月球上看地球從月平線升起">
+            <span class="layer-icon">🌏</span>從月球看地球
+          </button>
+          <button id="neo-toggle" class="layer-row" type="button" aria-pressed="false">
+            <span class="layer-icon">☄️</span>小行星掠過地球
+          </button>
+          <button id="timemachine-toggle" class="layer-row" type="button" aria-pressed="false" title="拖日期時間,太陽、月亮、星空、行星一起照那個時間動">
+            <span class="layer-icon">🕰️</span>時光機
+          </button>
+          <button id="planet-toggle" class="layer-row" type="button" aria-pressed="false">
+            <span class="layer-icon">🪐</span>五大行星
+          </button>
+          <button id="sunpanel-toggle" class="layer-row" type="button" aria-pressed="false">
+            <span class="layer-icon">☀️</span>太陽與節氣
+          </button>
+          <button id="constellation-toggle" class="layer-row" type="button" aria-pressed="true" title="星座連線與名稱(亮星本身一直都在)">
+            <span class="layer-icon">✨</span>星座與亮星
+          </button>
+          <button id="aurora-toggle" class="layer-row" type="button" aria-pressed="false">
+            <span class="layer-icon">🌌</span>極光即時預報
+          </button>
+          <button id="meteor-toggle" class="layer-row" type="button" aria-pressed="false">
+            <span class="layer-icon">🌠</span>流星雨
+          </button>
+          <button id="orbit-toggle" class="layer-row" type="button" aria-pressed="false">
+            <span class="layer-icon">📡</span>衛星與太空站
+          </button>
+          <button id="launch-toggle" class="layer-row" type="button" aria-pressed="false">
+            <span class="layer-icon">🚀</span>太空發射日曆
+          </button>
+        </div>
+        <div class="lc-pane" data-cat="explore" role="tabpanel">
+          <button id="plates-toggle" class="layer-row" type="button" aria-pressed="false" title="全球板塊邊界、環太平洋火環帶,還有台灣為什麼地震這麼多">
+            <span class="layer-icon">🧩</span>板塊與地震帶
+          </button>
+          <button id="layers-toggle" class="layer-row" type="button" aria-pressed="false" title="把地球切開四分之一,從大氣層一路看到地心">
+            <span class="layer-icon">🌍</span>地球剖面:大氣到地心
+          </button>
+          <button id="bday-toggle" class="layer-row" type="button" aria-pressed="false">
+            <span class="layer-icon">🎂</span>生日那天的天空
+          </button>
+          <button id="cinema-toggle" class="layer-row" type="button" aria-pressed="false" title="介面淡出,鏡頭像紀錄片一樣飛過世界各地(點任何地方結束)">
+            <span class="layer-icon">🎬</span>電影巡航
+          </button>
+          <button id="quiz-toggle" class="layer-row" type="button" aria-pressed="false">
+            <span class="layer-icon">🎯</span>地理猜謎遊戲
+          </button>
+          <button id="passport-toggle" class="layer-row" type="button" aria-pressed="false">
+            <span class="layer-icon">🛂</span>旅行護照集章
+          </button>
+          <button id="flightsim-toggle" class="layer-row" type="button" aria-pressed="false">
+            <span class="layer-icon">🛫</span>飛行旅程模擬
+          </button>
+          <button id="compare-toggle" class="layer-row" type="button" aria-pressed="false">
+            <span class="layer-icon">⚖️</span>國家比較
+          </button>
+          <button id="otd-toggle" class="layer-row" type="button" aria-pressed="false">
+            <span class="layer-icon">📜</span>歷史上的今天
+          </button>
+        </div>
+        <div class="lc-pane" data-cat="sound" role="tabpanel">
+          <button id="voice-toggle" class="layer-row" type="button" aria-pressed="false" title="用語音播報國家介紹、電影巡航地名、機長廣播、地震快報">
+            <span class="layer-icon">🗣️</span>人聲播報
+          </button>
+          <button id="radio-toggle" class="layer-row" type="button" aria-pressed="false">
+            <span class="layer-icon">📻</span>當地廣播電台
+          </button>
+        </div>
       </div>
     </div>
   </div>
 
-  <script type="importmap">
-  {
-    "imports": {
-      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
-      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/",
-      "earcut": "https://cdn.jsdelivr.net/npm/earcut@3.0.1/+esm"
-    }
-  }
-  </script>
   <script type="module">
     import { start } from "./src/main.js";
     start();
