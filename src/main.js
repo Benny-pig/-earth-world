@@ -56,6 +56,7 @@ import { createPov } from "./scene/pov.js";
 import { createBirthday } from "./ui/birthday.js";
 import { createTempRank } from "./ui/temp-rank.js";
 import { createAsteroids } from "./ui/asteroids.js";
+import { createEarthLayers } from "./scene/earth-layers.js";
 import { createTimeMachine } from "./ui/time-machine.js";
 import { createViewOffset } from "./lib/view-offset.js";
 import { latLonToXYZ } from "./lib/geo.js";
@@ -952,6 +953,16 @@ export function start() {
   bdayToggle?.addEventListener("click", () => setBirthday(bdayToggle.getAttribute("aria-pressed") !== "true"));
   if (bdayParam) dataReady.then(() => { setBirthday(true); birthday.openWith(bdayParam, bdayHour); });
 
+  // 🌋 地球剖面:從大氣層到地心(切開四分之一 + 導覽旅程)
+  const layersToggle = document.getElementById("layers-toggle");
+  const earthLayers = createEarthLayers({ scene, camera, renderer, rig, globe, clouds, voice, setGroundLines, onClose: () => setLayers(false) });
+  window.__earth.earthLayers = earthLayers;
+  function setLayers(on) {
+    layersToggle?.setAttribute("aria-pressed", String(on));
+    earthLayers.setEnabled(on);
+  }
+  layersToggle?.addEventListener("click", () => setLayers(layersToggle.getAttribute("aria-pressed") !== "true"));
+
   // 🌡️ 全球此刻最熱/最冷
   const tempToggle = document.getElementById("temp-toggle");
   const tempRank = createTempRank({
@@ -1190,8 +1201,9 @@ export function start() {
     } else {
       cinema.update(dt);
       // 閒置時鏡頭慢慢繞地球轉(取代以前的地球自轉;滑到地球上、看國家、路況、巡航、時光機時停)
-      rig.setAutoSpin(!globe.isSpinPaused() && !cinema.isActive() && !timeMachine.isEnabled() && !(intro && intro.isActive()));
+      rig.setAutoSpin(!globe.isSpinPaused() && !cinema.isActive() && !timeMachine.isEnabled() && !earthLayers.isEnabled() && !(intro && intro.isActive()));
       rig.update(dt);
+      earthLayers.update(dt);   // 剖面導覽旅程會接手鏡頭(要在 rig 之後)
     }
     homeCompass.update();
     flightSim.update(dt);

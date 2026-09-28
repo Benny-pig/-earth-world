@@ -709,6 +709,42 @@
   .neo-d { display: block; font-size: 12.5px; margin-top: 2px; }
   .neo-d b { color: var(--acc); }
   .neo-m { display: block; font-size: 11.5px; opacity: .7; margin-top: 1px; }
+  /* 🌍 地球剖面 */
+  body.layers-on #country-labels, body.layers-on #ocean-labels, body.layers-on #physical-labels, body.layers-on #earthquake-labels,
+  body.layers-on #radio-labels, body.layers-on #flight-labels, body.layers-on #livecam-labels, body.layers-on #typhoon-labels,
+  body.layers-on #hazard-labels { display: none !important; }
+  #layer-labels[hidden], #layers-panel[hidden], #layer-pop[hidden] { display: none; }
+  .ly-label { position: fixed; left: 0; top: 0; z-index: 34; display: flex; flex-direction: column; align-items: center; padding: 2px 8px; border-radius: 8px;
+    border: 1px solid rgba(255,255,255,.35); background: rgba(8,10,18,.72); color: #fff; font: 12px/1.3 system-ui, "Microsoft JhengHei", sans-serif;
+    cursor: pointer; white-space: nowrap; will-change: transform; backdrop-filter: blur(4px); }
+  .ly-label b { font-size: 12.5px; }
+  .ly-label small { font-size: 10px; opacity: .7; }
+  .ly-label:hover, .ly-label.on { border-color: #ffd98a; box-shadow: 0 0 12px rgba(255,217,138,.6); }
+  .ly-label.on { background: rgba(60,40,10,.85); }
+  .ly-inner b, .ly-outer b { color: #ffd98a; } .ly-lower b, .ly-upper b, .ly-astheno b { color: #ffb08a; } .ly-crust b { color: #e8d4b8; }
+  .ly-tropo b, .ly-strato b, .ly-meso b, .ly-thermo b, .ly-exo b { color: #a9d1ff; }
+  #layer-pop { position: fixed; z-index: 60; width: 280px; padding: 10px 12px; border-radius: 12px; background: rgba(10,12,22,.95); border: 1px solid rgba(255,217,138,.5);
+    color: #e7edfb; font: 12.5px/1.6 system-ui, "Microsoft JhengHei", sans-serif; box-shadow: 0 10px 28px rgba(0,0,0,.5); cursor: pointer; }
+  #layer-pop b { font-size: 15px; color: #ffd98a; }
+  #layer-pop small { display: block; opacity: .5; margin-top: 4px; }
+  .ly-r { opacity: .8; font-size: 12px; }
+  .ly-t { margin: 2px 0 4px; color: #ffb08a; font-size: 12.5px; }
+  #layers-panel { position: fixed; left: 50%; bottom: 70px; transform: translateX(-50%); z-index: 46; width: min(560px, calc(100vw - 24px));
+    padding: 12px 14px; border-radius: 14px; background: rgba(8,10,20,.9); backdrop-filter: blur(10px); border: 1px solid rgba(255,190,120,.45);
+    color: #e7edfb; font: 13px/1.6 system-ui, "Microsoft JhengHei", sans-serif; box-shadow: 0 12px 32px rgba(0,0,0,.5); }
+  .ly-h { font-size: 17px; font-weight: 800; color: #ffd98a; }
+  .ly-step { float: right; opacity: .6; font-size: 12px; }
+  .ly-p { font-size: 12.5px; opacity: .9; margin-top: 2px; }
+  .ly-b { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .ly-b button { padding: 6px 12px; border-radius: 99px; border: 1px solid rgba(255,190,120,.45); background: rgba(255,255,255,.05); color: inherit;
+    font: inherit; font-size: 12.5px; cursor: pointer; }
+  .ly-b button:hover:not([disabled]) { background: rgba(255,190,120,.16); }
+  .ly-b button[disabled] { opacity: .4; cursor: default; }
+  .ly-b .ly-go { font-weight: 700; border-color: rgba(255,217,138,.85); background: rgba(255,190,120,.18); }
+  @media (max-width: 640px) {
+    #layers-panel { bottom: 60px; } body.layers-on #ctrl-dock { display: none; }
+    .ly-label { padding: 1px 6px; } .ly-label small { display: none; } .ly-label b { font-size: 11px; }
+  }
   /* 🌋 火山與野火 */
   #hazard-labels[hidden] { display: none; }
   #hazard-panel.min .fx-body { display: none; }
@@ -3205,6 +3241,9 @@
           <span class="layer-dot"></span>太空發射日曆
         </button>
         <div class="lc-group">🧭 探索與遊戲</div>
+        <button id="layers-toggle" class="layer-row" type="button" aria-pressed="false" title="把地球切開四分之一,從大氣層一路看到地心">
+          <span class="layer-dot"></span>地球剖面:大氣到地心
+        </button>
         <button id="bday-toggle" class="layer-row" type="button" aria-pressed="false">
           <span class="layer-dot"></span>生日那天的天空
         </button>

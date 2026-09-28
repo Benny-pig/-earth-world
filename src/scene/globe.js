@@ -174,6 +174,8 @@ export function createGlobe({ onAllTexturesFailed } = {}) {
     mesh,
     sun,
     lightRig,
+    atmosphere,   // 地球剖面切開時要先藏起來的大氣層光暈
+    material,     // 地表材質(剖面要加切割平面)
     aimSun,
     dispose() { clearInterval(sunTimer); document.removeEventListener("visibilitychange", onVisible); },
     setSpinPaused(v) { paused = v; },
