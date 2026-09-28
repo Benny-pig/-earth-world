@@ -501,12 +501,14 @@
   #meteor-panel { --acc: #ffd98a; --acc-b: rgba(255,210,120,.45); width: 380px; }
   #fav-panel { --acc: #ffd43b; --acc-b: rgba(255,212,59,.45); left: auto; right: 18px; top: 60px; width: 330px; }
   #voice-panel { --acc: #c3a6ff; --acc-b: rgba(180,150,255,.45); width: 320px; }
+  #sun-panel { --acc: #ffd46b; --acc-b: rgba(255,200,90,.5); width: 330px; }
+  body[data-theme="journal"] #sun-panel { --acc: #a0621a; }
   body[data-theme="journal"] #voice-panel { --acc: #6a4fb0; }
   body[data-theme="journal"] #aurora-panel { --acc: #1f7a4d; }
   body[data-theme="journal"] #meteor-panel { --acc: #a0621a; }
   body[data-theme="journal"] #fav-panel { --acc: #9a7400; }
   @media (max-width: 640px) {
-    #aurora-panel, #meteor-panel, #fav-panel, #voice-panel { top: auto; bottom: 116px; left: 8px; right: 8px; width: auto; max-width: none; max-height: 56vh; z-index: 45; }
+    #aurora-panel, #meteor-panel, #fav-panel, #voice-panel, #sun-panel { top: auto; bottom: 116px; left: 8px; right: 8px; width: auto; max-width: none; max-height: 56vh; z-index: 45; }
   }
   /* 極光 */
   #aurora-panel.min .fx-body { display: none; }
@@ -579,6 +581,27 @@
   .vo-rate input { flex: 1; accent-color: #b197fc; }
   .vo-test { margin-top: 8px; width: 100%; padding: 6px; font-size: 12.5px; }
   body[data-theme="journal"] .vo-voice option { background: #f3ede0; color: #3b332a; }
+  /* iPhone Safari:輸入框/下拉選單的字小於 16px 時,一點下去整頁會自動拉近放大——手機上一律至少 16px。
+     用 max() 而不是純 px,字體大小設定(Aa)縮小時也不會低於 16px */
+  @media (max-width: 640px) {
+    input[type="text"], input[type="search"], input:not([type]), select, textarea { font-size: max(16px, 1em) !important; }
+  }
+  /* ☀️ 太陽面板、標籤 */
+  .sun-label { border-color: rgba(255,205,110,.6) !important; color: #ffe2a8 !important; }
+  .sun-top { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+  .sun-ball { width: 46px; height: 46px; border-radius: 50%; flex: none;
+    background: radial-gradient(circle at 40% 38%, #fffbe8, #ffd46b 45%, #ff9d2e 80%); box-shadow: 0 0 22px 6px rgba(255,190,80,.45); }
+  .sun-term { font-size: 15px; }
+  .sun-term b { font-size: 20px; margin-left: 4px; color: var(--acc); }
+  #sun-panel .moon-grid small { font-weight: 400; opacity: .7; }
+  /* ✨ 星座、亮星名稱 */
+  #constellation-labels[hidden] { display: none; }
+  .cst-label { position: fixed; left: 0; top: 0; z-index: 30; cursor: pointer; white-space: nowrap; will-change: transform;
+    font: 600 12px system-ui, "Microsoft JhengHei", sans-serif; letter-spacing: .12em; color: rgba(170,196,255,.9); text-shadow: 0 0 6px #000, 0 0 2px #000; }
+  .cst-label:hover { color: #ffe08a; }
+  .star-label { position: fixed; left: 0; top: 0; z-index: 30; pointer-events: none; white-space: nowrap; will-change: transform;
+    font: 11px system-ui, "Microsoft JhengHei", sans-serif; color: rgba(255,236,196,.85); text-shadow: 0 0 5px #000; }
+  body.quiz-mode #constellation-labels { display: none; }
   /* 🧭 指北針 + 🏠 回到台灣 */
   #home-dock { position: fixed; left: 18px; bottom: 64px; z-index: 42; display: flex; flex-direction: column; gap: 6px; }
   .hd-btn { width: 38px; height: 38px; border-radius: 50%; padding: 0; display: grid; place-items: center; cursor: pointer; font-size: 17px;
@@ -2517,6 +2540,13 @@
     </div>
     <div id="meteor-body" class="fx-body"></div>
   </div>
+  <div id="sun-panel" class="fx-panel" hidden>
+    <div class="sat-head">
+      <span class="sat-title">☀️ 太陽與節氣</span>
+      <button id="sun-close" class="rp-head-btn" type="button" aria-label="關閉">×</button>
+    </div>
+    <div id="sun-body" class="fx-body"></div>
+  </div>
   <div id="voice-panel" class="fx-panel" hidden>
     <div class="sat-head">
       <span class="sat-title">🗣️ 人聲播報</span>
@@ -2840,6 +2870,12 @@
         <div class="lc-group">🚀 太空與天象</div>
         <button id="moon-toggle" class="layer-row" type="button" aria-pressed="false">
           <span class="layer-dot"></span>月亮與月相
+        </button>
+        <button id="sunpanel-toggle" class="layer-row" type="button" aria-pressed="false">
+          <span class="layer-dot"></span>太陽與節氣
+        </button>
+        <button id="constellation-toggle" class="layer-row" type="button" aria-pressed="true" title="星座連線與名稱(亮星本身一直都在)">
+          <span class="layer-dot"></span>星座與亮星
         </button>
         <button id="aurora-toggle" class="layer-row" type="button" aria-pressed="false">
           <span class="layer-dot"></span>極光即時預報

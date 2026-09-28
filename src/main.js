@@ -46,6 +46,8 @@ import { createFavorites } from "./ui/favorites.js";
 import { createHomeCompass } from "./ui/home-compass.js";
 import { setupFontSize } from "./ui/font-size.js";
 import { createRecent } from "./ui/recent.js";
+import { createConstellations } from "./scene/constellations.js";
+import { createSunInfo } from "./scene/sun-info.js";
 import { createTour } from "./ui/tour.js";
 import { setupI18n, isEn } from "./lib/i18n.js";
 import { createVoice } from "./audio/voice.js";
@@ -185,6 +187,8 @@ export function start() {
       window.__earth.countrySearch = createCountrySearch({
         index: searchIndex, onPick: openCountryByCode, content, favorites, recent,
         onFav: (it) => goFavorite(it),
+        sky: () => constellations.searchItems(),
+        onSky: (id) => { constellations.focus(id); document.getElementById("constellation-toggle")?.setAttribute("aria-pressed", "true"); },
         onCam: (id) => openCamById(id),
         onGeo: (f) => {
           rig.flyTo(f.lat, f.lon, { distance: 1.8, ms: 1200 });
@@ -811,6 +815,33 @@ export function start() {
   }
   if (auroraToggle) auroraToggle.addEventListener("click", () => setAurora(auroraToggle.getAttribute("aria-pressed") !== "true"));
 
+  // ✨ 真實星空:亮星(真實方向)+ 星座連線與名稱
+  const cstToggle = document.getElementById("constellation-toggle");
+  const constellations = createConstellations({ scene, camera, renderer, globeObject: globe.object, rig, naturePopup });
+  window.__earth.constellations = constellations;
+  cstToggle?.setAttribute("aria-pressed", String(constellations.isEnabled()));
+  cstToggle?.addEventListener("click", () => {
+    const on = !constellations.isEnabled();
+    constellations.setEnabled(on);
+    cstToggle.setAttribute("aria-pressed", String(on));
+  });
+
+  // ☀️ 太陽:地球旁的「☀️ 太陽」標籤 + 太陽與節氣面板
+  const sunInfoToggle = document.getElementById("sunpanel-toggle");
+  const sunInfo = createSunInfo({
+    globe, camera, renderer,
+    codeAt: (lat, lon) => window.__earth.countryLayer?.codeAt(lat, lon),
+    nameOf: (c) => window.__earth.countryLayer?.meshByCode.get(c)?.userData?.names?.zh || c,
+    onClose: () => setSunInfo(false),
+  });
+  window.__earth.sunInfo = sunInfo;
+  function setSunInfo(on) {
+    sunInfoToggle?.setAttribute("aria-pressed", String(on));
+    sunInfo.setEnabled(on);
+  }
+  sunInfo.onOpen(() => setSunInfo(true));
+  sunInfoToggle?.addEventListener("click", () => setSunInfo(sunInfoToggle.getAttribute("aria-pressed") !== "true"));
+
   // 🌠 流星(平常偶爾一顆)+ 流星雨面板
   const meteorToggle = document.getElementById("meteor-toggle");
   const meteors = createMeteors({ scene, camera, renderer, globeObject: globe.object, rig, onClose: () => setMeteors(false) });
@@ -822,7 +853,8 @@ export function start() {
   if (meteorToggle) meteorToggle.addEventListener("click", () => setMeteors(meteorToggle.getAttribute("aria-pressed") !== "true"));
 
   // 🎬 電影巡航:選單按下立刻開始;放著不動 90 秒、而且沒有開著其他功能時自動開始
-  const AMBIENT = new Set(["quake-toggle", "sun-toggle", "aurora-toggle"]);
+  // 這些開著也可以自動巡航(背景類的圖層,或預設就開著的星座、人聲播報)
+  const AMBIENT = new Set(["quake-toggle", "sun-toggle", "aurora-toggle", "constellation-toggle", "voice-toggle"]);
   const cinema = createCinema({
     camera, rig, globeObject: globe.object, renderer,
     onShot: ({ title, sub }) => voice.speak(sub ? `${title}。${sub}` : title, { kind: "cinema" }),
@@ -1009,6 +1041,8 @@ export function start() {
     flightSim.update(dt);
     aurora.update(clock.elapsedTime, dt);
     meteors.update(dt);
+    constellations.update(clock.elapsedTime);
+    sunInfo.update();
     if (intro) intro.update(dt);
 
     oceanLabels.update();

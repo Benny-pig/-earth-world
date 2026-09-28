@@ -14,7 +14,7 @@ const BASE_ROTATE_SPEED = 0.45;
 // 先算地球在桌機橫向畫面(aspect >= 1,垂直方向才是限制)佔垂直視角的比例當基準,
 // 直向時改用「被裁的那個水平視角」乘上同一比例反推距離,讓直向的取景觀感跟橫向一致。
 export function fitDistanceForAspect(aspect, { fovDeg = 45, base = 3.2, max = MAX_DISTANCE } = {}) {
-  if (aspect >= 1) return base;
+  if (!(aspect > 0) || aspect >= 1) return base;   // 視窗大小還是 0(背景分頁、還沒排版)時 aspect 是 NaN
   const halfV = (fovDeg / 2) * (Math.PI / 180);
   const marginRatio = Math.asin(1 / base) / halfV;
   const halfH = Math.atan(Math.tan(halfV) * aspect);
@@ -105,11 +105,11 @@ export function createCameraRig({ camera, domElement, globeObject }) {
     if (dragging || Math.abs(velX) + Math.abs(velY) > 0.05) return;
     const p = camera.position;
     const lat = Math.asin(THREE.MathUtils.clamp(p.y / p.length(), -1, 1));
-    if (Math.abs(lat) > 65 * Math.PI / 180) return;
+    if (!Number.isFinite(lat) || Math.abs(lat) > 65 * Math.PI / 180) return;
     fwd.copy(p).negate().normalize();
     want.copy(Y).addScaledVector(fwd, -Y.dot(fwd)).normalize();   // 北方朝上時的 up
     const ang = Math.atan2(cross.crossVectors(camera.up, want).dot(fwd), camera.up.dot(want));
-    if (Math.abs(ang) < 1e-4) return;
+    if (!Number.isFinite(ang) || Math.abs(ang) < 1e-4) return;
     const step = Math.abs(ang) < 0.002 ? ang : ang * Math.min(1, dt * 4);
     camera.up.applyAxisAngle(fwd, step).normalize();
     camera.lookAt(controls.target);
@@ -154,11 +154,15 @@ export function createCameraRig({ camera, domElement, globeObject }) {
 
   function update(dt) {
     // 保險:鏡頭座標萬一變成無效值(NaN),整個地球會變黑、再也轉不回來——直接回到全景
-    const p = camera.position;
-    if (!Number.isFinite(p.x + p.y + p.z) || p.lengthSq() < 1e-6) {
+    // 鏡頭的「上方」也要一起檢查、一起重設:只重設位置的話,上方是無效值時畫面會一直壞下去
+    // (在背景分頁打開、視窗大小還是 0 的時候就會發生)
+    const p = camera.position, u = camera.up;
+    if (!Number.isFinite(p.x + p.y + p.z) || p.lengthSq() < 1e-6 || !Number.isFinite(u.x + u.y + u.z) || u.lengthSq() < 1e-6) {
       p.set(0, 0, fitDistanceForAspect(camera.aspect));
+      u.set(0, 1, 0);
       camera.lookAt(0, 0, 0);
       tween = null;
+      velX = velY = 0;
     }
     if (tween) {
       tween.t = Math.min(1, tween.t + (dt * 1000) / tween.ms);

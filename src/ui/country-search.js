@@ -4,11 +4,12 @@ import { isEn } from "../lib/i18n.js";
 // 🔍 萬用搜尋:國家、首都城市、功能(打「地震」「充電站」「高鐵」直接打開)、景點直播、
 // 山脈河流等地理、我的收藏,全部在同一個框搜尋。方向鍵 + Enter 或點選;Ctrl+K 或 / 快速叫出。
 const MAX_RESULTS = 14;
-const KIND_ORDER = { recent: -1, fav: 0, feature: 1, country: 2, capital: 3, cam: 4, geo: 5 };
+const KIND_ORDER = { recent: -1, fav: 0, feature: 1, country: 2, capital: 3, cam: 4, geo: 5, sky: 6 };
 // 結果分組的標題(組跟組之間有分隔線)
 const GROUP = {
   recent: ["🕘 最近看過", "🕘 Recent"], fav: ["⭐ 我的收藏", "⭐ Saved"], feature: ["🎛️ 功能", "🎛️ Features"], country: ["🌍 國家", "🌍 Countries"],
   capital: ["🏙️ 首都城市", "🏙️ Capitals"], cam: ["📺 景點直播", "📺 Live cams"], geo: ["⛰️ 山川地理", "⛰️ Nature"],
+  sky: ["✨ 星座", "✨ Constellations"],
 };
 const PER_GROUP = 6;
 
@@ -38,6 +39,8 @@ const SYNONYMS = {
   "meteor-toggle": "流星 流星雨 英仙座 雙子座 獅子座 meteor",
   "cinema-toggle": "電影 巡航 螢幕保護 自動播放 cinema",
   "voice-toggle": "人聲 播報 語音 朗讀 念 說話 voice speech narration",
+  "constellation-toggle": "星座 星空 星星 恆星 獵戶座 北斗七星 constellation star",
+  "sunpanel-toggle": "太陽 節氣 日出 日落 直射 sun sunrise sunset",
   "fav-btn": "收藏 最愛 書籤 我的 favorite bookmark",
   "tour-btn": "導覽 教學 說明 怎麼用 help tour",
   "theme-toggle": "主題 版面 風格 theme",
@@ -46,13 +49,13 @@ const SYNONYMS = {
 const ICONS = {
   "weather-toggle": "🌡️", "quake-toggle": "📳", "satellite-toggle": "🌀", "flight-toggle": "✈️", "livecam-toggle": "📺", "moon-toggle": "🌙",
   "orbit-toggle": "🛰️", "launch-toggle": "🚀", "sun-toggle": "🌗", "quiz-toggle": "🎯", "passport-toggle": "🛂", "flightsim-toggle": "🛫",
-  "compare-toggle": "⚖️", "otd-toggle": "📜", "radio-toggle": "📻", "aurora-toggle": "🌌", "meteor-toggle": "🌠", "cinema-toggle": "🎬", "voice-toggle": "🗣️",
+  "compare-toggle": "⚖️", "otd-toggle": "📜", "radio-toggle": "📻", "aurora-toggle": "🌌", "meteor-toggle": "🌠", "cinema-toggle": "🎬", "voice-toggle": "🗣️", "constellation-toggle": "✨", "sunpanel-toggle": "☀️",
   "fav-btn": "⭐", "tour-btn": "❓", "theme-toggle": "🎨", "share-btn": "🔗",
 };
 const GEO_ICONS = { mountain: "⛰️", peak: "🏔️", river: "🌊", desert: "🏜️", plateau: "🗻", plain: "🌾", lake: "💧", other: "📍" };
 const HOT = ["quake-toggle", "weather-toggle", "livecam-toggle", "aurora-toggle", "meteor-toggle", "traffic-toggle", "cinema-toggle"];
 
-export function createCountrySearch({ index, onPick, content = {}, favorites = null, recent = null, onFav, onCam, onGeo }) {
+export function createCountrySearch({ index, onPick, content = {}, favorites = null, recent = null, onFav, onCam, onGeo, sky, onSky }) {
   const box = document.getElementById("country-search");
   if (!box || !Array.isArray(index) || !index.length) return { destroy() {} };
   const input = box.querySelector("input");
@@ -113,7 +116,8 @@ export function createCountrySearch({ index, onPick, content = {}, favorites = n
     const n = normZh(q);
     if (!n) return [];
     const scored = [];
-    for (const it of [...favItems(), ...features(), ...countries, ...capitals, ...cams, ...geo]) {
+    const stars = (sky ? sky() : []).map((c) => ({ kind: "sky", zh: c.zh, en: c.en, keys: c.alias, icon: "✨", go: () => onSky && onSky(c.id) }));
+    for (const it of [...favItems(), ...features(), ...countries, ...capitals, ...cams, ...geo, ...stars]) {
       const zh = normZh(it.zh), en = norm(it.en), keys = normZh(it.keys);
       let s = -1;
       if (zh === n || en === n || norm(it.code) === n) s = 0;
