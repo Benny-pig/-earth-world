@@ -11,7 +11,11 @@ const STATIONS_URL = "data/rail/stations.json";
 const DEFAULT_OD = { thsr: ["1000", "1070"], tra: ["1000", "3300"] };   // 台北→左營、臺北→臺中
 const STORE_KEY = "earth-world.rail-od";
 const LIVE_REFRESH_MS = 60 * 1000;
-const SEAT_LABEL = { Available: ["尚有座位", "ok"], Limited: ["座位有限", "warn"], Full: ["已售完", "bad"] };
+// 高鐵剩餘座位:TDX 實際回傳 O(尚有座位)/ L(座位有限)/ X(已售完),文件寫法的英文單字也一併接受
+const SEAT_LABEL = {
+  O: ["尚有座位", "ok"], L: ["座位有限", "warn"], X: ["已售完", "bad"],
+  Available: ["尚有座位", "ok"], Limited: ["座位有限", "warn"], Full: ["已售完", "bad"],
+};
 const TRIP_LINE = { 1: "經山線", 2: "經海線", 3: "經成追線" };
 
 // 台灣時間的今天/明天日期字串(YYYY-MM-DD)與現在分鐘數

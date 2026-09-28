@@ -75,12 +75,19 @@ export async function wikiNewsFor(code, zh) {
 
 // 回傳 { items } 或 null(Worker 還沒部署新聞路線 / 暫時失敗)
 export async function googleNewsFor(zh) {
-  try {
-    const r = await fetch(`${WORKER}/?news=${encodeURIComponent(zh)}`);
-    if (!r.ok) return null;
-    const j = await r.json();
-    return Array.isArray(j.items) ? j : null;
-  } catch { return null; }
+  // Google 新聞偶爾會暫時拒絕(Worker 回 502):等 1.5 秒再試一次,還是不行才只顯示維基百科新聞
+  for (let attempt = 0; attempt < 2; attempt++) {
+    try {
+      const r = await fetch(`${WORKER}/?news=${encodeURIComponent(zh)}`);
+      if (r.ok) {
+        const j = await r.json();
+        return Array.isArray(j.items) ? j : null;
+      }
+      if (r.status !== 502) return null;   // 400 = Worker 還是舊版,重試也沒用
+    } catch { /* 連不上就再試一次 */ }
+    if (attempt === 0) await new Promise((res) => setTimeout(res, 1500));
+  }
+  return null;
 }
 
 export const googleNewsLink = (zh) => `https://news.google.com/search?q=${encodeURIComponent(zh)}%20when%3A1d&hl=zh-TW&gl=TW&ceid=TW%3Azh-Hant`;

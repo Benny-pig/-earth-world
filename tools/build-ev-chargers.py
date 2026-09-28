@@ -32,11 +32,27 @@ def fetch(path):
     if os.path.exists(cf) and time.time() - os.path.getmtime(cf) < 20 * 3600:
         return json.load(open(cf, encoding="utf-8"))
     data = None
-    try:
-        with urllib.request.urlopen(urllib.request.Request(f"{WORKER}/?ev={urllib.parse.quote(path, safe='/')}", headers=UA), timeout=60) as r:
-            data = json.loads(r.read())
-    except Exception:
-        data = None
+    worker_has_route = True
+    # Worker 有金鑰,但 TDX 仍有「短時間查太多次」的限速(429):慢慢查、被擋就等 30 秒再試,最多 4 次
+    for attempt in range(4):
+        try:
+            with urllib.request.urlopen(urllib.request.Request(f"{WORKER}/?ev={urllib.parse.quote(path, safe='/')}", headers=UA), timeout=60) as r:
+                data = json.loads(r.read())
+            break
+        except urllib.error.HTTPError as e:
+            if e.code == 400:            # Worker 還是舊版(沒有 ev 路線):改用免金鑰
+                worker_has_route = False
+                break
+            if attempt < 3:
+                print(f"  {path}:Worker 回 {e.code}(TDX 限速),等 30 秒再試…", flush=True)
+                time.sleep(30)
+                continue
+        except Exception:
+            if attempt < 3:
+                time.sleep(10)
+                continue
+    if data is None and worker_has_route:
+        raise RuntimeError("Worker 多次重試仍查不到")
     if data is None:
         for attempt in range(3):
             try:
@@ -50,7 +66,7 @@ def fetch(path):
                     continue
                 raise
     json.dump(data, open(cf, "w", encoding="utf-8"), ensure_ascii=False)
-    time.sleep(2)
+    time.sleep(4)   # 每次查詢間隔 4 秒,不要觸發 TDX 限速
     return data
 
 
