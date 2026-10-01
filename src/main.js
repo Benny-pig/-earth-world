@@ -60,6 +60,7 @@ import { createTravelHelper } from "./ui/travel-helper.js";
 import { createToday } from "./ui/today.js";
 import { createSurprise } from "./ui/surprise.js";
 import { createPanelManager } from "./ui/panel-manager.js";
+import { createAlerts } from "./ui/alerts.js";
 import { createPov } from "./scene/pov.js";
 import { createBirthday } from "./ui/birthday.js";
 import { createTempRank } from "./ui/temp-rank.js";
@@ -314,10 +315,19 @@ export function start() {
   function syncQuakeSevereBadge() {
     if (quakeSevereBadge) quakeSevereBadge.hidden = !(quakeSevere && !earthquakes.isEnabled());
   }
+  // 🔔 重要事件提醒(台灣附近地震、大地震、颱風接近、流星雨極大期):要在地震圖層之前建好,第一筆地震資料才收得到
+  const alerts = createAlerts({
+    rig,
+    codeAt: (la, lo) => window.__earth.countryLayer?.codeAt(la, lo),
+    nameOf: (c) => window.__earth.countryLayer?.meshByCode.get(c)?.userData?.names?.zh || c,
+    turnOn: (id) => { const b = document.getElementById(id); if (b && b.getAttribute("aria-pressed") !== "true") b.click(); },
+  });
+  window.__earth.alerts = alerts;
   const earthquakes = createEarthquakesLayer({
     globeObject: globe.object, camera, renderer, naturePopup,
     onSevereChange: (v) => { quakeSevere = v; syncQuakeSevereBadge(); },
     onStrong: (list) => announceQuakes(list),
+    onData: (features) => alerts.onQuakes(features),
   });
   window.__earth.earthquakes = earthquakes;
   const quakeToggle = document.getElementById("quake-toggle");
@@ -1073,6 +1083,8 @@ export function start() {
       };
       wait();
     });
+    // 導覽(或「最近的新功能」)看完、略過之後再跳今日地球,不要兩個疊在一起
+    tour.onEnd(() => setTimeout(() => { if (!window.__earth.cinema?.isActive() && today.shouldAutoShow()) setToday(true); }, 600));
   }
 
   // ☄️ 小行星掠過地球

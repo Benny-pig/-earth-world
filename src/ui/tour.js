@@ -6,24 +6,46 @@ import { isEn } from "../lib/i18n.js";
 const KEY = "earth-world.tour";
 const SEEN_KEY = "earth-world.hints";
 
+// 新讀者看完整的導覽;看過舊版導覽的老讀者,只看一段「最近的新功能」(NEW_VERSION 換了就會再看一次)
+const NEW_VERSION = "2026-10";
 const STEPS = [
   { sel: null, title: "👋 歡迎來到地球世界!", text: "用手指或滑鼠<b>拖曳</b>就能轉動地球,<b>滾輪或兩指</b>可以放大縮小。" },
-  { sel: null, title: "🌏 點任何一個國家", text: "會打開這個國家的介紹:當地時間、天氣、緊急電話、今日新聞,還有更詳細的國家大百科。" },
+  { sel: null, title: "🌏 點任何一個國家", text: "會打開這個國家的介紹:當地時間、天氣、緊急電話、今日新聞、國家大百科;要出國的話按「🧳 出國小幫手」,簽證、插座、匯率一頁看完。" },
   { sel: "#country-search", title: "🔎 萬用搜尋", text: "國家、城市、功能(例如「地震」「充電站」)、景點直播都搜得到;電腦按 Ctrl+K 就能叫出來。" },
-  { sel: "#layer-controls", title: "🎛️ 功能選單", text: "地震、天氣、航班、衛星、直播、猜謎遊戲…都在這裡,<b>按一下打開、再按一下關掉</b>。" },
-  { sel: "#tw-controls", title: "🚦 台灣交通", text: "台灣機場即時航班、國道路況與監視器、高鐵台鐵時刻。" },
-  { sel: "#audio-ui", title: "🎵 音樂", text: "背景音樂可以換曲子;按「🎵 RO」可以聽仙境傳說的懷舊原聲。" },
+  { sel: "#layer-controls", title: "🎛️ 功能選單", text: "四十幾個功能分成五頁:<b>即時世界、太空天象、探索遊戲、旅人百科、聲音</b>。按一下打開、再按一下關掉;分頁上的小數字是那一頁開著幾個。" },
+  { sel: null, title: "📰 今日地球", text: "每天第一次打開網站,會跳出今天的地球重點:最大的地震、颱風、全球最熱最冷的首都、今晚的天象…點一項就飛過去。" },
+  { sel: "#home-dock", title: "🎲 不知道看什麼?", text: "按左下角的<b>骰子</b>,隨機飛到世界上某個地方,附一句冷知識。指北針讓北方朝上,🏠 一鍵回到台灣。" },
+  { sel: "#tw-controls", title: "🚦 台灣交通", text: "台灣機場即時航班、國道路況與監視器、高鐵台鐵時刻、電動車充電站。" },
   { sel: "#top-tools", title: "🔗 分享、收藏、設定", text: "把現在的畫面分享給朋友、打開我的收藏;「⚙️ 設定」裡可以調字體大小、換版面主題、切換中英文、重看這個導覽。" },
+  { sel: null, title: "💡 兩個小技巧", text: "同時開好幾個功能時,面板旁邊會出現<b>小分頁</b>,點一下就能切換。手機按<b>「返回」</b>會先關掉面板,不會直接離開網站。" },
 ];
 
 const STEPS_EN = [
   { sel: null, title: "👋 Welcome to Earth World!", text: "<b>Drag</b> to spin the globe; use the <b>scroll wheel or two fingers</b> to zoom." },
-  { sel: null, title: "🌏 Tap any country", text: "See its local time, weather, emergency numbers and today's news, plus a detailed encyclopedia." },
+  { sel: null, title: "🌏 Tap any country", text: "See its local time, weather, emergency numbers, today's news and a detailed encyclopedia. Travelling? Tap “🧳 Travel helper”." },
   { sel: "#country-search", title: "🔎 Search everything", text: "Countries, cities, features (try “earthquake” or “aurora”) and live cams. On a computer, press Ctrl+K." },
-  { sel: "#layer-controls", title: "🎛️ Features", text: "Earthquakes, weather, flights, satellites, live cams, games… <b>tap to turn on, tap again to turn off</b>." },
-  { sel: "#tw-controls", title: "🚦 Taiwan transport", text: "Live flights at Taiwan's airports, freeway traffic and cameras, and train timetables." },
-  { sel: "#audio-ui", title: "🎵 Music", text: "Pick the background music, or tap “🎵 RO” for the Ragnarok Online soundtrack." },
+  { sel: "#layer-controls", title: "🎛️ Features", text: "Forty-odd features in five tabs. <b>Tap to turn on, tap again to turn off</b>; the small number on a tab shows how many are on." },
+  { sel: null, title: "📰 Today on Earth", text: "The first time you open the site each day you get today's highlights: the biggest earthquake, typhoons, the hottest and coldest capitals, tonight's sky…" },
+  { sel: "#home-dock", title: "🎲 Not sure where to look?", text: "Tap the <b>dice</b> at the bottom left to fly somewhere random with a fun fact. The compass turns north up; 🏠 flies home." },
+  { sel: "#tw-controls", title: "🚦 Taiwan transport", text: "Live flights at Taiwan's airports, freeway traffic and cameras, train timetables and EV chargers." },
   { sel: "#top-tools", title: "🔗 Share, saved & settings", text: "Share this view or open your saved places. “⚙️ Settings” has text size, theme, language (EN / 中) and this tour." },
+  { sel: null, title: "💡 Two tips", text: "With several features open, <b>small tabs</b> appear beside the panel to switch between them. On a phone, <b>Back</b> closes the panel instead of leaving the site." },
+];
+
+// 老讀者看的「最近的新功能」
+const STEPS_NEW = [
+  { sel: null, title: "🆕 地球世界有新東西!", text: "這陣子加了不少功能,花 30 秒看一下(可以按「略過」)。" },
+  { sel: "#layer-controls", title: "🎛️ 功能選單換新了", text: "分成五頁:<b>即時世界、太空天象、探索遊戲、旅人百科、聲音</b>。新功能有 🌬️ 全球風場、📊 數據地球、🧩 板塊與地震帶、🧳 出國小幫手。" },
+  { sel: null, title: "📰 今日地球", text: "每天第一次打開網站,會跳出今天的地球重點;不想看可以在面板下面關掉。" },
+  { sel: "#home-dock", title: "🎲 驚喜一下", text: "左下角多了骰子:隨機飛到世界上某個地方,附一句冷知識。" },
+  { sel: null, title: "💡 更好用了", text: "同時開好幾個功能時,面板旁邊會出現<b>小分頁</b>切換;手機按「返回」會先關掉面板。旅行護照也能做成<b>分享圖</b>了。" },
+];
+const STEPS_NEW_EN = [
+  { sel: null, title: "🆕 What's new", text: "Quite a few things were added recently. Take 30 seconds (or skip)." },
+  { sel: "#layer-controls", title: "🎛️ A new feature menu", text: "Five tabs now. New: 🌬️ Global winds, 📊 Data globe, 🧩 Plates, 🧳 Travel helper." },
+  { sel: null, title: "📰 Today on Earth", text: "Today's highlights pop up the first time you open the site each day; you can turn that off in the panel." },
+  { sel: "#home-dock", title: "🎲 Surprise me", text: "The dice at the bottom left flies you somewhere random with a fun fact." },
+  { sel: null, title: "💡 Easier to use", text: "Small tabs switch between open panels; on a phone, Back closes the panel first. Your travel passport can now become a shareable map." },
 ];
 
 // 功能第一次打開時的一句話說明
@@ -109,14 +131,17 @@ const HINTS_ZH = {
   "meteor-toggle": "一年主要的流星雨:極大期是哪天、台灣幾點最好看、月光干不干擾。按「在地球旁看流星雨」,流星會從輻射點噴出來。",
 };
 
-const STEPS_USE = () => (isEn ? STEPS_EN : STEPS);
+let mode = "full";
+const STEPS_USE = () => (mode === "new" ? (isEn ? STEPS_NEW_EN : STEPS_NEW) : (isEn ? STEPS_EN : STEPS));
 const HINTS = () => (isEn ? HINTS_EN : HINTS_ZH);
 
 export function createTour() {
   let i = 0, active = false, overlay = null, spot = null, card = null;
 
   const done = () => { try { return localStorage.getItem(KEY) === "done"; } catch { return true; } };
-  const markDone = () => { try { localStorage.setItem(KEY, "done"); } catch { /* 存不了就算了 */ } };
+  const seenNew = () => { try { return localStorage.getItem(`${KEY}.new`) === NEW_VERSION; } catch { return true; } };
+  const markDone = () => { try { localStorage.setItem(KEY, "done"); localStorage.setItem(`${KEY}.new`, NEW_VERSION); } catch { /* 存不了就算了 */ } };
+  const endListeners = [];
 
   function build() {
     overlay = document.createElement("div");
@@ -184,8 +209,9 @@ export function createTour() {
     }
   }
 
-  function start() {
+  function start(m = "full") {
     if (active) return;
+    mode = m;
     active = true;
     if (!overlay) build();
     overlay.hidden = false;
@@ -196,9 +222,10 @@ export function createTour() {
     active = false;
     markDone();
     if (overlay) overlay.hidden = true;
+    for (const fn of endListeners) fn();
   }
   window.addEventListener("resize", () => { if (active) go(i); });
-  document.getElementById("tour-btn")?.addEventListener("click", () => start());
+  document.getElementById("tour-btn")?.addEventListener("click", () => start("full"));
 
   // ---------- 功能第一次打開的一句話說明 ----------
   let seen = new Set();
@@ -227,5 +254,11 @@ export function createTour() {
     setTimeout(() => { if (row.getAttribute("aria-pressed") === "true") showHint(row.id); }, 0);
   });
 
-  return { start, maybeStart: () => { if (!done()) start(); }, isActive: () => active };
+  return {
+    start,
+    // 第一次來:完整導覽;看過舊版導覽、還沒看過這一版新功能:只看新功能
+    maybeStart: () => { if (!done()) start("full"); else if (!seenNew()) start("new"); },
+    isActive: () => active,
+    onEnd: (fn) => endListeners.push(fn),
+  };
 }

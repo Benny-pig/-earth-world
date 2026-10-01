@@ -60,7 +60,7 @@ function zhOfPlace(place, countryMap) {
 // 拆開:抓資料/檢查規模永遠跑(不受開關影響),畫面上的圓點/字卡才受開關控制。
 const SEVERE_MAG = 6;
 
-export function createEarthquakesLayer({ globeObject, camera, renderer, naturePopup, onSevereChange, onStrong }) {
+export function createEarthquakesLayer({ globeObject, camera, renderer, naturePopup, onSevereChange, onStrong, onData }) {
   const host = document.getElementById("earthquake-labels");
   if (!host) return { update() {}, dispose() {}, setEnabled() {}, isEnabled: () => false };
 
@@ -84,6 +84,7 @@ export function createEarthquakesLayer({ globeObject, camera, renderer, naturePo
       if (!Array.isArray(data.features)) return;
 
       setSevere(data.features.some((f) => typeof f.properties?.mag === "number" && f.properties.mag >= SEVERE_MAG));
+      onData?.(data.features);   // 給「重要事件提醒」用(不管圖層有沒有開)
       if (onStrong) {
         const cm = buildCountryNameMap();
         onStrong(data.features.filter((f) => f.properties?.mag >= SEVERE_MAG).map((f) => ({
