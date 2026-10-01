@@ -1,11 +1,13 @@
-# 🧪 上線前自動檢查 + 🚀 部署網站
-# 每次推上 master:先用無頭瀏覽器真的打開網站(tools/smoke-test.py),網站起不來或按功能會出錯就停在這裡、不上線;
-# 檢查通過才部署到 GitHub Pages。
+# 🧪 上線前自動檢查 + 🚀 打包 + 部署網站
+# 每次推上 master:
+#   1. 把要上線的檔案放進 _site,用 esbuild 把八十幾個程式檔打包成一兩個(tools/bundle-site.py)
+#   2. 用無頭瀏覽器打開「打包後」的網站(tools/smoke-test.py),網站起不來或按功能會出錯就停在這裡、不上線
+#   3. 檢查通過,把同一份 _site 部署到 GitHub Pages(測過什麼就上線什麼)
 #
 # ⚙️ 要讓「沒過就不上線」生效,需要在 GitHub 設定一次:
 #    Settings → Pages → Build and deployment → Source 選「GitHub Actions」。
-#    還沒切換之前(Source 是「Deploy from a branch」),網站照舊由 GitHub 直接從 master 發佈,
-#    這裡只做檢查、會跳過部署步驟,不影響現在的網站。
+#    還沒切換之前(Source 是「Deploy from a branch」),網站照舊由 GitHub 直接從 master 發佈(沒有打包),
+#    這裡只做檢查、會跳過部署,不影響現在的網站。
 name: 上線前自動檢查與部署
 on:
   push:
@@ -19,50 +21,53 @@ concurrency:
   group: pages
   cancel-in-progress: false
 jobs:
-  smoke-test:
+  build-and-test:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
+    outputs:
+      mode: ${{ steps.mode.outputs.type }}
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-      - name: 安裝無頭瀏覽器
-        run: |
-          pip install playwright
-          python -m playwright install --with-deps chromium
-      - name: 打開網站、逐一按功能
-        run: python tools/smoke-test.py
-  deploy:
-    needs: smoke-test
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
       - name: 看 Pages 現在用哪一種發佈方式
         id: mode
         env:
           GH_TOKEN: ${{ github.token }}
         run: echo "type=$(gh api repos/${{ github.repository }}/pages --jq .build_type 2>/dev/null || echo unknown)" >> "$GITHUB_OUTPUT"
-      - name: 還是「從分支發佈」:跳過部署
-        if: steps.mode.outputs.type != 'workflow'
-        run: echo "Pages 的 Source 還是「Deploy from a branch」(${{ steps.mode.outputs.type }}),網站由 GitHub 直接從 master 發佈,這裡不部署。"
-      - uses: actions/checkout@v4
-        if: steps.mode.outputs.type == 'workflow'
-      - name: 只放網站需要的檔案
-        if: steps.mode.outputs.type == 'workflow'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: 準備要上線的檔案
         run: |
           mkdir _site
           rsync -a --exclude '.git*' --exclude '_site' --exclude 'tools' --exclude 'test' --exclude 'docs' \
             --exclude 'cloudflare-worker' --exclude '*.py' --exclude '*.ps1' --exclude '.worktrees' ./ _site/
           touch _site/.nojekyll
+      - name: 打包程式
+        run: python tools/bundle-site.py _site
+      - name: 安裝無頭瀏覽器
+        run: |
+          pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: 打開打包後的網站、逐一按功能
+        env:
+          SITE_ROOT: _site
+        run: python tools/smoke-test.py
       - uses: actions/configure-pages@v5
         if: steps.mode.outputs.type == 'workflow'
       - uses: actions/upload-pages-artifact@v3
         if: steps.mode.outputs.type == 'workflow'
         with:
           path: _site
+  deploy:
+    needs: build-and-test
+    if: needs.build-and-test.outputs.mode == 'workflow'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - id: deployment
-        if: steps.mode.outputs.type == 'workflow'
         uses: actions/deploy-pages@v4

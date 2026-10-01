@@ -68,6 +68,20 @@ def _():
     return ("ok", f"{hours:.0f} 小時前的風") if hours < 24 else ("warn", f"風場資料已經 {hours:.0f} 小時沒更新")
 
 
+@check("讀者端的程式錯誤")
+def _():
+    # 網站前端發生程式錯誤時會匿名回報到 Worker(src/lib/error-report.js),這裡列出最近兩天的
+    s, b = get(f"{WORKER}/?errors", timeout=30)
+    if s != 200: return "warn", f"Worker 還沒部署錯誤回報功能(HTTP {s})"
+    d = json.loads(b)
+    if not d.get("kv"): return "warn", "Worker 已有錯誤回報,但還沒綁 KV(ERRORS),看不到歷史紀錄"
+    recent = sorted({i["day"] for i in d.get("items", [])}, reverse=True)[:2]
+    items = [i for i in d.get("items", []) if i.get("day") in recent]
+    if not items: return "ok", "最近兩天沒有讀者回報程式錯誤"
+    top = sorted(items, key=lambda i: -i.get("n", 0))[:3]
+    return "warn", "最近兩天有讀者遇到程式錯誤:" + ";".join(f"{i['msg'][:60]}({i.get('src', '')}:{i.get('line', 0)},{i.get('br', '')},{i.get('n', 1)} 次)" for i in top)
+
+
 @check("國家資料")
 def _():
     s, b = get(SITE + "data/countries.content.json")

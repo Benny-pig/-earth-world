@@ -2,7 +2,7 @@
 //
 // 快取原則(重點:網站更新後讀者要馬上拿到新版,不能被舊快取卡住):
 //   - 網頁、資料(同網域的 html/json):先抓網路上的最新版,網路不通才用快取
-//   - 程式(src/*.js):照「程式版本號」分開快取。版本號寫在 index.html 的 <meta name="app-version">
+//   - 程式(src/*.js,部署時打包成 dist/*.js):照「程式版本號」分開快取。版本號寫在 index.html 的 <meta name="app-version">
 //     (tools/build-preload.py 依程式內容算出來,程式一改就變)。版本沒變 → 直接用快取,
 //     不用八十幾個檔案一個一個跟伺服器確認;版本變了 → 全部重新下載,不會新舊檔混在一起。
 //     本機開發(localhost)不用這個快取,改了程式重新整理就看得到。
@@ -108,7 +108,8 @@ self.addEventListener("fetch", (e) => {
     if (req.headers.has("range")) return;
     if (url.pathname.includes("/assets/")) { e.respondWith(staleWhileRevalidate(req)); return; }
     if (req.mode === "navigate") { e.respondWith(navigate(req)); return; }
-    if (!IS_DEV && url.pathname.includes("/src/") && url.pathname.endsWith(".js")) { e.respondWith(codeByVersion(req)); return; }
+    // 程式:開發版是 src/,部署時打包成 dist/(兩種都照版本號快取)
+    if (!IS_DEV && (url.pathname.includes("/src/") || url.pathname.includes("/dist/")) && url.pathname.endsWith(".js")) { e.respondWith(codeByVersion(req)); return; }
     e.respondWith(networkFirst(req));
     return;
   }

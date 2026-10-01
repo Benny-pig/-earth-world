@@ -284,13 +284,63 @@ function fetchTdxPassthrough(env, key) {
   return fetchTdxPath(env, spec.path, spec.ttl);
 }
 
+// ---------- 📮 錯誤回報 ----------
+const ERR_TTL = 14 * 86400;   // 保留 14 天
+function browserOf(ua) {
+  const mobile = /Mobile|Android|iPhone|iPad/.test(ua) ? " 手機" : "";
+  if (/Edg\//.test(ua)) return "Edge" + mobile;
+  if (/Firefox\//.test(ua)) return "Firefox" + mobile;
+  if (/Chrome\//.test(ua)) return "Chrome" + mobile;
+  if (/Safari\//.test(ua)) return "Safari" + mobile;
+  return "其他" + mobile;
+}
+async function handleErrorReport(request, env) {
+  let d = {};
+  try { d = JSON.parse((await request.text()).slice(0, 2000)); } catch { /* 格式不對就當空的 */ }
+  const clean = (v, n) => String(v || "").replace(/[\u0000-\u001f]/g, " ").slice(0, n);
+  const rec = {
+    msg: clean(d.msg, 200), src: clean(d.src, 120).replace(/[?#].*$/, ""), line: Number(d.line) || 0,
+    ver: clean(d.ver, 20), lang: d.lang === "en" ? "en" : "zh", br: browserOf(request.headers.get("User-Agent") || ""),
+  };
+  if (!rec.msg) return new Response("", { status: 204, headers: CORS_HEADERS });
+  console.log("[error-report]", JSON.stringify(rec));
+  if (env.ERRORS) {
+    const day = new Date().toISOString().slice(0, 10);
+    const sig = await crypto.subtle.digest("SHA-1", new TextEncoder().encode(`${rec.msg}|${rec.src}|${rec.line}|${rec.br}`));
+    const key = `e:${day}:${[...new Uint8Array(sig)].slice(0, 8).map((b) => b.toString(16).padStart(2, "0")).join("")}`;
+    const old = await env.ERRORS.get(key, "json");
+    await env.ERRORS.put(key, JSON.stringify({ ...rec, day, n: (old?.n || 0) + 1 }), { expirationTtl: ERR_TTL });
+  }
+  return new Response("", { status: 204, headers: CORS_HEADERS });
+}
+async function listErrorReports(env) {
+  const headers = { ...CORS_HEADERS, "Content-Type": "application/json", "Cache-Control": "no-store" };
+  if (!env.ERRORS) return new Response(JSON.stringify({ kv: false, items: [] }), { headers });
+  const list = await env.ERRORS.list({ prefix: "e:", limit: 200 });
+  const items = (await Promise.all(list.keys.map((k) => env.ERRORS.get(k.name, "json")))).filter(Boolean);
+  items.sort((a, b) => (b.day > a.day ? 1 : b.day < a.day ? -1 : b.n - a.n));
+  return new Response(JSON.stringify({ kv: true, items }), { headers });
+}
+
 export default {
   async fetch(request, env) {
     if (request.method === "OPTIONS") {
-      return new Response(null, { headers: CORS_HEADERS });
+      return new Response(null, { headers: { ...CORS_HEADERS, "Access-Control-Allow-Methods": "GET, POST, OPTIONS" } });
     }
 
     const url = new URL(request.url);
+
+    // 📮 錯誤回報(2026/10 加):網站前端發生程式錯誤時,匿名回報「什麼錯誤、哪個檔案第幾行、哪種瀏覽器、哪一版程式」。
+    // 不存任何個人資料(不記 IP、不記網址參數)。
+    // 要能事後查看:到 Worker 的 Settings → Bindings 加一個 KV namespace,變數名稱填 ERRORS
+    // (KV 要先在 Storage & Databases → KV 建一個,名字隨意,例如 earth-world-errors)。
+    // 沒綁 KV 也能用,只是錯誤只會出現在 Worker 的 Logs 裡。每日健康檢查會讀 /?errors 列出最近的錯誤。
+    if (url.searchParams.has("report") && request.method === "POST") {
+      return handleErrorReport(request, env);
+    }
+    if (url.searchParams.has("errors")) {
+      return listErrorReports(env);
+    }
 
     // 📰 各國今日新聞:Google 新聞(台灣繁體中文版)搜尋「國名」最近一天的頭條,轉成 JSON。
     // 只接受短的關鍵字;結果快取 20 分鐘,同一國不會每個讀者都去打一次 Google。

@@ -12,7 +12,8 @@ import functools, http.server, json, os, socketserver, sys, threading, time
 
 from playwright.sync_api import sync_playwright
 
-ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+# 預設測專案本身;部署時設 SITE_ROOT=_site 測「打包後要上線的那一份」
+ROOT = os.path.abspath(os.environ.get("SITE_ROOT") or os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 PORT = 8765
 # 會接管畫面、或要一直點才能結束的功能,不在自動測試裡開關
 SKIP = {"cinema-toggle", "iss-ride-toggle", "moonview-toggle", "quake-toggle", "constellation-toggle"}

@@ -62,6 +62,7 @@ import { createSurprise } from "./ui/surprise.js";
 import { createPanelManager } from "./ui/panel-manager.js";
 import { createAlerts } from "./ui/alerts.js";
 import { setupMenuExtras } from "./ui/menu-extras.js";
+import { setupErrorReport } from "./lib/error-report.js";
 import { createPov } from "./scene/pov.js";
 import { createBirthday } from "./ui/birthday.js";
 import { createTempRank } from "./ui/temp-rank.js";
@@ -157,6 +158,7 @@ export function start() {
     reportedGlobalError = true;
     showError("發生未預期的錯誤,詳情請看主控台。");
   }
+  setupErrorReport();   // 📮 讀者那邊的程式錯誤匿名回報給我們(不含個人資料)
   window.addEventListener("error", reportGlobalError);
   window.addEventListener("unhandledrejection", reportGlobalError);
 
