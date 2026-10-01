@@ -61,6 +61,7 @@ import { createToday } from "./ui/today.js";
 import { createSurprise } from "./ui/surprise.js";
 import { createPanelManager } from "./ui/panel-manager.js";
 import { createAlerts } from "./ui/alerts.js";
+import { setupMenuExtras } from "./ui/menu-extras.js";
 import { createPov } from "./scene/pov.js";
 import { createBirthday } from "./ui/birthday.js";
 import { createTempRank } from "./ui/temp-rank.js";
@@ -282,6 +283,11 @@ export function start() {
   window.__earth.composer = composer;
 
   const rig = createCameraRig({ camera, domElement: renderer.domElement, globeObject: globe.object });
+  // 國名:中文模式用中文、英文模式用英文(新功能的面板、提醒共用)
+  function placeName(c) {
+    const n = window.__earth.countryLayer?.meshByCode.get(c)?.userData?.names;
+    return (isEn ? n?.en : n?.zh) || n?.zh || c;
+  }
   window.__earth.rig = rig;
 
   // 🎬 開場運鏡(每天第一次打開):鏡頭先擺到遠方,載入畫面結束後飛向台灣;播放時其他介面先藏起來
@@ -319,7 +325,7 @@ export function start() {
   const alerts = createAlerts({
     rig,
     codeAt: (la, lo) => window.__earth.countryLayer?.codeAt(la, lo),
-    nameOf: (c) => window.__earth.countryLayer?.meshByCode.get(c)?.userData?.names?.zh || c,
+    nameOf: placeName,
     turnOn: (id) => { const b = document.getElementById(id); if (b && b.getAttribute("aria-pressed") !== "true") b.click(); },
   });
   window.__earth.alerts = alerts;
@@ -398,7 +404,7 @@ export function start() {
     },
   });
   // ⚙️ 右上角的設定選單:字體、主題、語言、導覽、安裝 App
-  createSettings({ fontSize });
+  createSettings({ fontSize, simple: { get: () => !!window.__earth.menuExtras?.isSimple(), set: (v) => window.__earth.menuExtras?.setSimple(v) } });
   // 🧭 指北針 + 🏠 回到台灣
   const homeCompass = createHomeCompass({ camera, rig });
 
@@ -407,7 +413,7 @@ export function start() {
   const voice = createVoice({ music, onClose: () => voice.setPanel(false) });
   // 🎲 驚喜一下(左下角指北針上面):隨機飛到一個國家或自然景觀
   createSurprise({ rig, getContent: () => window.__earth.content, openCountryByCode, voice,
-    nameOf: (c) => window.__earth.countryLayer?.meshByCode.get(c)?.userData?.names?.zh || c });
+    nameOf: placeName });
   window.__earth.voice = voice;
   const paintVoice = () => voiceToggle?.setAttribute("aria-pressed", String(voice.isOn()));
   voice.onChange(paintVoice);
@@ -623,6 +629,8 @@ export function start() {
   setupCollapsible("twc-collapse-toggle", "twc-body", "earth-world.twc-collapsed");
   // 功能卡的四個分頁(即時世界/太空天象/探索遊戲/聲音)
   window.__earth.featureMenu = createFeatureMenu();
+  // 🆕 新功能的 NEW 標記、👴 簡易模式(要在分頁建好之後)
+  window.__earth.menuExtras = setupMenuExtras({ fontSize });
   // 手機畫面小:從選單開/關功能後,自動收起「台灣交通」「功能」兩張卡片,不要擋住地球
   // (功能列自己的點擊先處理,這裡是冒泡上來才收;想再選就點卡片標題展開)
   document.getElementById("ctrl-dock")?.addEventListener("click", (e) => {
@@ -942,7 +950,7 @@ export function start() {
   }
   platesToggle?.addEventListener("click", () => setPlates(platesToggle.getAttribute("aria-pressed") !== "true"));
 
-  const zhName = (c) => window.__earth.countryLayer?.meshByCode.get(c)?.userData?.names?.zh || c;
+  const zhName = placeName;   // 英文模式時是英文國名
   // 🌬️ 全球風場
   const windToggle = document.getElementById("wind-toggle");
   const wind = createWind({ globeObject: globe.object, camera, rig, clouds, onClose: () => setWind(false),

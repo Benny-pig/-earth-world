@@ -2,6 +2,7 @@ import * as THREE from "three";
 import { LITE } from "../lib/device.js";
 import { makeDraggable } from "../ui/draggable.js";
 import { esc } from "../lib/esc.js";
+import { isEn } from "../lib/i18n.js";
 
 // 🌬️ 全球風場:幾千條細線沿著真實的風流動(NOAA GFS 預報,離地 10 公尺的風,1° 網格),
 // 顏色代表風速。資料由 GitHub Actions 每 6 小時更新一次(tools/build-wind.py)。
@@ -15,13 +16,21 @@ const K = 12;                 // 每條尾巴幾段
 const TICK = 0.06;            // 每隔多久記一段尾巴(秒)
 const SPEED = 0.45;           // 1 m/s 的風,畫面上每秒移動幾度
 const DEG = Math.PI / 180;
-// 風速色階(m/s)
-const STOPS = [[0, 0x4a6fe3], [3, 0x3fb6e8], [6, 0x5fe08a], [9, 0xe8e45a], [13, 0xf5a142], [18, 0xf0523d], [25, 0xd63ad6], [35, 0xffffff]];
+// 風速色階(m/s):viridis 色系(紫 → 藍 → 綠 → 黃 → 白),亮度一路遞增,色盲也分得出強弱;最弱的那端調亮一點,在深色地球上才看得到
+const STOPS = [[0, 0x6a5bb0], [3, 0x3e6fb0], [6, 0x2a8f9e], [9, 0x26a982], [13, 0x5cc863], [18, 0xaadc32], [25, 0xfde725], [35, 0xffffff]];
 const STOP_COLORS = STOPS.map(([, h]) => new THREE.Color(h));
 const BEAUFORT = [0.3, 1.6, 3.4, 5.5, 8.0, 10.8, 13.9, 17.2, 20.8, 24.5, 28.5, 32.7];
-const BF_NAME = ["無風", "軟風", "輕風", "微風", "和風", "清風", "強風", "疾風", "大風", "烈風", "狂風", "暴風", "颶風"];
-const DIRS = ["北", "北北東", "東北", "東北東", "東", "東南東", "東南", "南南東", "南", "南南西", "西南", "西南西", "西", "西北西", "西北", "北北西"];
-const SPOTS = {
+const BF_NAME = isEn
+  ? ["calm", "light air", "light breeze", "gentle breeze", "moderate breeze", "fresh breeze", "strong breeze", "near gale", "gale", "strong gale", "storm", "violent storm", "hurricane force"]
+  : ["無風", "軟風", "輕風", "微風", "和風", "清風", "強風", "疾風", "大風", "烈風", "狂風", "暴風", "颶風"];
+const DIRS = isEn
+  ? ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"]
+  : ["北", "北北東", "東北", "東北東", "東", "東南東", "東南", "南南東", "南", "南南西", "西南", "西南西", "西", "西北西", "西北", "北北西"];
+const SPOTS = isEn ? {
+  tw: [23.7, 121, 2.3, "📍 Around Taiwan", "The northeast monsoon blows in autumn and winter, the southwest monsoon in summer; when a typhoon comes close, the lines here curl into a huge swirl."],
+  trade: [15, -40, 2.7, "⛵ Trade winds", "Steady easterly winds on both sides of the equator all year round. Sailing ships rode them across the Atlantic in the Age of Discovery."],
+  roaring: [-50, 40, 2.7, "🌊 Roaring Forties", "Between 40° and 60° south there is almost no land in the way, so strong westerlies blow all year — sailors called them the Roaring Forties and Furious Fifties."],
+} : {
   tw: [23.7, 121, 2.3, "📍 台灣附近", "秋冬吹東北季風、夏天吹西南季風;颱風接近時,這裡的線會繞成一個大漩渦。"],
   trade: [15, -40, 2.7, "⛵ 信風帶", "赤道兩側一年到頭從東邊吹來的風。大航海時代的帆船就是順著它橫渡大西洋。"],
   roaring: [-50, 40, 2.7, "🌊 咆哮西風帶", "南緯 40 到 60 度一整圈幾乎沒有陸地擋,西風終年強勁,水手叫它「咆哮四十度、狂暴五十度」。"],
@@ -189,28 +198,33 @@ export function createWind({ globeObject, camera, rig, clouds, countryName, onCl
   function describe(la, lo) {
     const [u, v] = sample(la, lo, [0, 0]);
     const s = Math.hypot(u, v), b = beaufort(s);
+    if (isEn) return `${s < 0.3 ? "Almost calm" : `${windFrom(u, v)} wind`} <b>${s.toFixed(1)} m/s</b> (${Math.round(s * 3.6)} km/h) · force ${b}, ${BF_NAME[b]}`;
     return `${s < 0.3 ? "幾乎沒有風" : `${windFrom(u, v)}風`} <b>${s.toFixed(1)} m/s</b>(時速 ${Math.round(s * 3.6)} 公里)· ${b} 級${BF_NAME[b]}`;
   }
   const legend = () => `<div class="wd-legend"><div class="wd-bar" style="background:linear-gradient(90deg,${STOPS.map(([s, h]) => `#${h.toString(16).padStart(6, "0")} ${Math.round((s / 35) * 100)}%`).join(",")})"></div>` +
-    `<div class="wd-ticks">${[0, 5, 10, 15, 20, 25, 30, 35].map((s) => `<span style="left:${(s / 35) * 100}%">${s}</span>`).join("")}</div><div class="wd-unit">風速 m/s(公尺/秒)</div></div>`;
+    `<div class="wd-ticks">${[0, 5, 10, 15, 20, 25, 30, 35].map((s) => `<span style="left:${(s / 35) * 100}%">${s}</span>`).join("")}</div><div class="wd-unit">${isEn ? "Wind speed (m/s)" : "風速 m/s(公尺/秒)"}</div></div>`;
   function render() {
     if (!body) return;
-    if (!grid) { body.innerHTML = `<div class="ap-empty">${loading ? "讀取全球風場資料中…" : "風場資料暫時讀不到,稍後再試"}</div>`; return; }
+    if (!grid) { body.innerHTML = `<div class="ap-empty">${loading ? (isEn ? "Loading global winds…" : "讀取全球風場資料中…") : (isEn ? "Wind data is unavailable right now. Please try again later." : "風場資料暫時讀不到,稍後再試")}</div>`; return; }
     const age = (Date.now() - new Date(grid.valid)) / 3600000;
     const [mla, mlo, ms] = grid.maxAt;
     body.innerHTML =
-      `<div class="wd-time">🕘 ${fmtTime(grid.valid)}(台灣時間)的風${age > 18 ? `<span class="wd-old">資料有點舊</span>` : ""}</div>` +
-      `<div class="wd-here"><small>📍 畫面中央 <span class="wd-place"></span></small><div class="wd-read"></div></div>` +
+      `<div class="wd-time">🕘 ${isEn ? `Winds at ${fmtTime(grid.valid)} (Taiwan time)` : `${fmtTime(grid.valid)}(台灣時間)的風`}${age > 18 ? `<span class="wd-old">${isEn ? "older data" : "資料有點舊"}</span>` : ""}</div>` +
+      `<div class="wd-here"><small>📍 ${isEn ? "Centre of view" : "畫面中央"} <span class="wd-place"></span></small><div class="wd-read"></div></div>` +
       legend() +
-      `<div class="mt-h">去看看</div><div class="pl-btns">` +
-      `<button type="button" class="tc-btn" data-spot="max">🌀 現在風最強的地方(${ms.toFixed(0)} m/s)</button>` +
+      `<div class="mt-h">${isEn ? "Go and see" : "去看看"}</div><div class="pl-btns">` +
+      `<button type="button" class="tc-btn" data-spot="max">${isEn ? `🌀 Strongest wind right now (${ms.toFixed(0)} m/s)` : `🌀 現在風最強的地方(${ms.toFixed(0)} m/s)`}</button>` +
       Object.entries(SPOTS).map(([k, s]) => `<button type="button" class="tc-btn" data-spot="${k}">${s[3]}</button>`).join("") + `</div>` +
       `<div class="wd-note"${spot ? "" : " hidden"}>${spot ? spot : ""}</div>` +
-      `<div class="sat-caption">資料:美國 NOAA GFS 全球預報模式(離地 10 公尺的風,1° 網格),每 6 小時更新。線越長越亮代表風越強;` +
-      `最強風多半在颱風、溫帶氣旋或南大洋。預報模式不是實際觀測,颱風中心的風速會比實際低一些。</div>`;
+      `<div class="sat-caption">${isEn
+        ? "Data: US NOAA GFS global forecast model (wind 10 m above ground, 1° grid), updated every 6 hours. Longer, brighter lines mean stronger wind; the strongest winds are usually in typhoons, extratropical storms or the Southern Ocean. A model is not an observation — winds near a typhoon's centre are underestimated."
+        : "資料:美國 NOAA GFS 全球預報模式(離地 10 公尺的風,1° 網格),每 6 小時更新。線越長越亮代表風越強;最強風多半在颱風、溫帶氣旋或南大洋。預報模式不是實際觀測,颱風中心的風速會比實際低一些。"}</div>`;
     centerReadout();
   }
-  const latLonText = (la, lo) => `${la >= 0 ? "北緯" : "南緯"} ${Math.abs(la).toFixed(0)}°、${lo >= 0 ? "東經" : "西經"} ${Math.abs(((lo + 540) % 360) - 180).toFixed(0)}°`;
+  const latLonText = (la, lo) => {
+    const L = Math.abs(la).toFixed(0), G = Math.abs(((lo + 540) % 360) - 180).toFixed(0);
+    return isEn ? `${L}°${la >= 0 ? "N" : "S"} ${G}°${lo >= 0 ? "E" : "W"}` : `${la >= 0 ? "北緯" : "南緯"} ${L}°、${lo >= 0 ? "東經" : "西經"} ${G}°`;
+  };
   function centerLatLon() {
     const d = camera.position.clone().normalize().applyQuaternion(globeObject.quaternion.clone().invert());
     return [Math.asin(THREE.MathUtils.clamp(d.y, -1, 1)) / DEG, Math.atan2(-d.z, d.x) / DEG];
@@ -231,9 +245,15 @@ export function createWind({ globeObject, camera, rig, clouds, countryName, onCl
     if (k === "max") {
       const [la, lo, s] = grid.maxAt;
       rig.flyTo(la, lo, { distance: 2.2, ms: 1600 });
-      const where = countryName?.(la, lo) ? `${countryName(la, lo)}附近` : `${latLonText(la, lo)}的海上`;
-      spot = `<b>🌀 現在風最強的地方</b>${esc(where)},約 ${s.toFixed(0)} m/s(${beaufort(s)} 級${BF_NAME[beaufort(s)]})。` +
-        `這麼強的風多半是颱風(颶風)或很強的溫帶氣旋。`;
+      if (isEn) {
+        const where = countryName?.(la, lo) ? `near ${countryName(la, lo)}` : `over the sea at ${latLonText(la, lo)}`;
+        spot = `<b>🌀 Strongest wind right now</b>${esc(where)}, about ${s.toFixed(0)} m/s (force ${beaufort(s)}, ${BF_NAME[beaufort(s)]}). ` +
+          `Winds this strong usually mean a typhoon (hurricane) or a deep extratropical storm.`;
+      } else {
+        const where = countryName?.(la, lo) ? `${countryName(la, lo)}附近` : `${latLonText(la, lo)}的海上`;
+        spot = `<b>🌀 現在風最強的地方</b>${esc(where)},約 ${s.toFixed(0)} m/s(${beaufort(s)} 級${BF_NAME[beaufort(s)]})。` +
+          `這麼強的風多半是颱風(颶風)或很強的溫帶氣旋。`;
+      }
     } else {
       const [la, lo, dist, title, text] = SPOTS[k];
       rig.flyTo(la, lo, { distance: dist, ms: 1600 });
@@ -280,6 +300,7 @@ export function createWind({ globeObject, camera, rig, clouds, countryName, onCl
     const la = Math.asin(THREE.MathUtils.clamp(hit.y, -1, 1)) / DEG, lo = Math.atan2(-hit.z, hit.x) / DEG;
     const [u, v] = sample(la, lo, [0, 0]);
     const s = Math.hypot(u, v);
+    if (isEn) return `🌬️ ${s < 0.3 ? "Almost calm" : `${windFrom(u, v)} ${s.toFixed(1)} m/s · force ${beaufort(s)}`}`;
     return `🌬️ ${s < 0.3 ? "幾乎沒有風" : `${windFrom(u, v)}風 ${s.toFixed(1)} m/s · ${beaufort(s)} 級`}`;
   }
 

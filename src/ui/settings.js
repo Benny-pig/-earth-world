@@ -4,7 +4,7 @@ import { isEn } from "../lib/i18n.js";
 // ⚙️ 設定(右上角):字體大小、版面主題、語言、新手導覽、安裝 App 收在同一個小選單裡,
 // 右上角只留「分享、收藏、設定」三顆,不再擠成一排。
 // 原本的主題/語言/導覽/安裝按鈕還在(藏起來),這裡按下去就轉給它們處理,原本的功能不用重寫。
-export function createSettings({ fontSize }) {
+export function createSettings({ fontSize, simple }) {
   const btn = document.getElementById("settings-btn");
   const pop = document.getElementById("settings-pop");
   if (!btn || !pop) return { close() {} };
@@ -21,6 +21,8 @@ export function createSettings({ fontSize }) {
       `<div class="set-row"><span class="set-k">🔤 字體</span>${seg("font", fontSize.steps.map((s) => [s.k, isEn ? s.en : s.zh]), fontSize.current())}</div>` +
       `<div class="set-row"><span class="set-k">🎨 主題</span>${seg("theme", THEMES.map((t) => [t, THEME_LABEL[t].split(" ")[1] || THEME_LABEL[t]]), getTheme())}</div>` +
       `<div class="set-row"><span class="set-k">🌐 語言</span>${seg("lang", [["zh", "中文"], ["en", "English"]], isEn ? "en" : "zh")}</div>` +
+      (simple ? `<div class="set-row" title="${isEn ? "Bigger text and only the most-used features" : "字放大,功能選單只留最常用的幾個"}"><span class="set-k">👴 簡易</span>` +
+        `${seg("simple", [["off", isEn ? "Off" : "關"], ["on", isEn ? "On" : "開"]], simple.get() ? "on" : "off")}</div>` : "") +
       `<button type="button" class="set-item" data-act="tour">❓ 新手導覽</button>` +
       (installBtn && !installBtn.hidden ? `<button type="button" class="set-item" data-act="install">📲 安裝成 App</button>` : "");
   }
@@ -41,6 +43,7 @@ export function createSettings({ fontSize }) {
     const set = b.closest("[data-set]")?.dataset.set;
     if (set === "font") { fontSize.set(b.dataset.v); render(); }
     else if (set === "theme") { applyTheme(b.dataset.v); render(); }
+    else if (set === "simple") { simple.set(b.dataset.v === "on"); render(); }
     else if (set === "lang") { if ((b.dataset.v === "en") !== isEn) $("lang-btn")?.click(); }
     else if (b.dataset.act === "tour") { setOpen(false); $("tour-btn")?.click(); }
     else if (b.dataset.act === "install") { setOpen(false); $("install-btn")?.click(); }

@@ -15,7 +15,7 @@
 }
 </script>
 <!-- modulepreload:start(tools/build-preload.py 自動產生,不要手動改) -->
-<meta name="app-version" content="2ad35655e8">
+<meta name="app-version" content="f800417979">
 <link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/earcut@3.0.1/+esm">
 <link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js">
 <link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/controls/OrbitControls.js">
@@ -91,6 +91,7 @@
 <link rel="modulepreload" href="src/ui/font-size.js">
 <link rel="modulepreload" href="src/ui/home-compass.js">
 <link rel="modulepreload" href="src/ui/intro.js">
+<link rel="modulepreload" href="src/ui/menu-extras.js">
 <link rel="modulepreload" href="src/ui/nature-popup.js">
 <link rel="modulepreload" href="src/ui/news.js">
 <link rel="modulepreload" href="src/ui/on-this-day.js">
@@ -860,6 +861,17 @@
     #layers-panel { bottom: 60px; } body.layers-on #ctrl-dock { display: none; }
     .ly-label { padding: 1px 6px; } .ly-label small { display: none; } .ly-label b { font-size: 11px; }
   }
+  /* 🆕 NEW 標記 */
+  .new-badge { position: absolute; top: 4px; left: 5px; padding: 0 5px; border-radius: 6px; background: #ff4f7b; color: #fff;
+    font: 800 9px/15px system-ui, sans-serif; letter-spacing: .04em; box-shadow: 0 0 8px rgba(255,79,123,.6); pointer-events: none; }
+  #tw-controls .layer-row { position: relative; }
+  #tw-controls .new-badge { top: 50%; left: auto; right: 8px; transform: translateY(-50%); }
+  .lc-tab.has-new::after { content: ""; position: absolute; top: 4px; left: 6px; width: 7px; height: 7px; border-radius: 50%; background: #ff4f7b; box-shadow: 0 0 6px #ff4f7b; }
+  /* 👴 簡易模式:選單只留最常用的功能 */
+  body.simple #layer-controls .layer-row:not(.simple-keep), body.simple #tw-controls .layer-row:not(.simple-keep) { display: none; }
+  body.simple .lc-tabs { display: flex; }
+  body.simple .lc-tab { flex: 1; }
+  .lc-tab[hidden] { display: none; }
   /* 🔔 重要事件提醒 */
   #alert-bar { position: fixed; top: 64px; left: 50%; transform: translateX(-50%); z-index: 47; width: min(520px, calc(100vw - 24px));
     display: flex; flex-direction: column; gap: 6px; }
