@@ -1083,7 +1083,7 @@
   .pl-sec p { margin: 4px 0; }
   .pl-sec ul { margin: 4px 0; padding-left: 18px; }
   .pl-sec li { margin: 2px 0; }
-  .pl-h { font-weight: 800; font-size: 14px; color: var(--acc); }
+  #plates-panel .pl-h { font-weight: 800; font-size: 14px; color: var(--acc); }
   .pl-btns { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
   .pl-btns .tc-btn { flex: 1 1 auto; padding: 6px 10px; font-size: 12.5px; }
   .pl-btns .tc-btn.on { background: rgba(255,170,100,.22); border-color: rgba(255,170,100,.7); }
@@ -1095,9 +1095,10 @@
   @media (max-width: 640px) { #plate-cap { top: 146px; } }
   /* 電腦:左邊有板塊面板時,說明字卡跟著地球往右移(地球被面板推到右半邊) */
   @media (min-width: 641px) { body.plates-on #plate-cap { left: calc(50% + 195px); max-width: min(440px, calc(100vw - 440px)); } }
-  .pl-name, .pl-arrow { position: fixed; left: 0; top: 0; z-index: 31; pointer-events: none; will-change: transform; }
-  .pl-name > span, .pl-arrow > span { display: flex; flex-direction: column; align-items: center; transform: translate(-50%, -50%); }
-  .pl-name > span { color: rgba(255,236,210,.95); font: 700 12.5px/1 system-ui, "Microsoft JhengHei", sans-serif; letter-spacing: .18em; white-space: nowrap;
+  /* 板塊名稱、箭頭標籤只限 #plate-labels 裡(五大行星面板也有 .pl-name,不能影響到它) */
+  #plate-labels .pl-name, #plate-labels .pl-arrow { position: fixed; left: 0; top: 0; z-index: 31; pointer-events: none; will-change: transform; }
+  #plate-labels .pl-name > span, #plate-labels .pl-arrow > span { display: flex; flex-direction: column; align-items: center; transform: translate(-50%, -50%); }
+  #plate-labels .pl-name > span { color: rgba(255,236,210,.95); font: 700 12.5px/1 system-ui, "Microsoft JhengHei", sans-serif; letter-spacing: .18em; white-space: nowrap;
     text-shadow: 0 0 4px #000, 0 0 10px rgba(0,0,0,.9); }
   .pl-ar { display: block; width: 46px; height: 16px; }
   .pl-ar svg { display: block; width: 100%; height: 100%; animation: pl-flow 1.8s ease-in-out infinite; filter: drop-shadow(0 0 3px rgba(0,0,0,.9)); }
