@@ -9,6 +9,7 @@ on:
 permissions:
   contents: write
   pages: write
+  actions: write
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -57,3 +58,5 @@ jobs:
           git commit -m "chore(資料): 每週自動更新 $(date +%Y-%m-%d)"
           git push
           gh api -X POST "repos/${{ github.repository }}/pages/builds" || echo "請求 Pages 重新發佈失敗(之後的推送也會觸發)"
+          # 機器人推的提交不會自動觸發其他工作流程:Pages 改成「GitHub Actions」發佈後,要自己叫一次檢查與部署
+          gh workflow run deploy.yml --ref master || echo "沒辦法觸發「上線前自動檢查與部署」"

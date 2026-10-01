@@ -15,7 +15,7 @@
 }
 </script>
 <!-- modulepreload:start(tools/build-preload.py 自動產生,不要手動改) -->
-<meta name="app-version" content="1f16f9d437">
+<meta name="app-version" content="ef53469688">
 <link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/earcut@3.0.1/+esm">
 <link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js">
 <link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/controls/OrbitControls.js">
@@ -93,6 +93,7 @@
 <link rel="modulepreload" href="src/ui/nature-popup.js">
 <link rel="modulepreload" href="src/ui/news.js">
 <link rel="modulepreload" href="src/ui/on-this-day.js">
+<link rel="modulepreload" href="src/ui/panel-manager.js">
 <link rel="modulepreload" href="src/ui/passport.js">
 <link rel="modulepreload" href="src/ui/pwa.js">
 <link rel="modulepreload" href="src/ui/quiz.js">
@@ -858,6 +859,24 @@
     #layers-panel { bottom: 60px; } body.layers-on #ctrl-dock { display: none; }
     .ly-label { padding: 1px 6px; } .ly-label small { display: none; } .ly-label b { font-size: 11px; }
   }
+  /* 🗂️ 面板管家:同一區開了好幾個面板時,只顯示最新的,其他收成旁邊的分頁 */
+  .pm-bg { display: none !important; }
+  #panel-tabs { position: fixed; z-index: 46; display: flex; flex-direction: column; gap: 6px; }
+  #panel-tabs[hidden] { display: none; }
+  .pm-tab { display: flex; flex-direction: column; align-items: center; gap: 1px; width: 52px; padding: 6px 2px 5px; border-radius: 12px; cursor: pointer;
+    border: 1px solid rgba(140,190,255,.35); background: rgba(8,12,24,.88); color: #cfd8ee; font: 10.5px system-ui, "Microsoft JhengHei", sans-serif;
+    box-shadow: 0 4px 14px rgba(0,0,0,.4); backdrop-filter: blur(6px); transition: background .15s, border-color .15s, transform .15s; }
+  .pm-tab span { font-size: 19px; line-height: 1.2; }
+  .pm-tab small { max-width: 48px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+  .pm-tab:hover { transform: translateX(2px); border-color: rgba(160,205,255,.75); }
+  .pm-tab.on { background: rgba(70,110,190,.55); border-color: rgba(170,210,255,.9); color: #fff; font-weight: 700; }
+  #panel-tabs.pm-phone { flex-direction: row; right: 8px; overflow-x: auto; scrollbar-width: none; }
+  #panel-tabs.pm-phone .pm-tab { flex: none; flex-direction: row; width: auto; gap: 4px; padding: 5px 10px; border-radius: 99px; font-size: 12px; }
+  #panel-tabs.pm-phone .pm-tab span { font-size: 15px; }
+  #panel-tabs.pm-phone .pm-tab small { max-width: none; }
+  body[data-theme="journal"] .pm-tab { background: #f3ede0; color: #3b332a; border-color: rgba(120,90,50,.3); }
+  body[data-theme="journal"] .pm-tab.on { background: #e2d3b4; color: #2a231b; }
+  body.cinema #panel-tabs, body.pov #panel-tabs, body.intro-playing #panel-tabs { display: none; }
   /* 📰 今日地球 */
   #today-panel { --acc: #ffd98a; --acc-b: rgba(255,210,120,.5); width: 380px; }
   body[data-theme="journal"] #today-panel { --acc: #8a5a14; }

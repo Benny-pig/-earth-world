@@ -59,6 +59,7 @@ import { createDataGlobe } from "./scene/data-globe.js";
 import { createTravelHelper } from "./ui/travel-helper.js";
 import { createToday } from "./ui/today.js";
 import { createSurprise } from "./ui/surprise.js";
+import { createPanelManager } from "./ui/panel-manager.js";
 import { createPov } from "./scene/pov.js";
 import { createBirthday } from "./ui/birthday.js";
 import { createTempRank } from "./ui/temp-rank.js";
@@ -1062,6 +1063,8 @@ export function start() {
     today.setEnabled(on);
   }
   todayToggle?.addEventListener("click", () => setToday(todayToggle.getAttribute("aria-pressed") !== "true"));
+  // 🗂️ 面板管家:好幾個面板同時開時排成分頁;手機返回鍵先關面板
+  window.__earth.panels = createPanelManager();
   if (!openedWithParams) {
     loading.done.then(() => {
       const wait = () => {

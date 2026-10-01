@@ -209,6 +209,7 @@ export function createTravelHelper({ getContent, nameOf, flyTo, onClose }) {
     q = "";
     if (!enabled) { setEnabled(true); return; }
     setMin(false);
+    panel.dispatchEvent(new CustomEvent("panel:front", { bubbles: true }));   // 收在分頁裡的話拿到最前面
     render();
   }
   body.addEventListener("click", (e) => {
