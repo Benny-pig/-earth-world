@@ -1,5 +1,5 @@
 {
- "built": "2026-09-28",
+ "built": "2026-10-05",
  "source": "YouTube 公開直播(各頻道)",
  "cams": [
   {
@@ -13,18 +13,6 @@
    "v": "z_fY1pj1VBw",
    "t": "【Taipei 4k Live Cam】Overlooking Taipei at the top of Xiangshan｜Taipei 101 | Taiwan | Taipe",
    "ch": "Taipei Travel Live Cam  台北觀光即時影像 "
-  },
-  {
-   "id": "sunmoonlake",
-   "zh": "日月潭",
-   "ico": "🏞️",
-   "lat": 23.857,
-   "lon": 120.915,
-   "cc": "TW",
-   "tz": "Asia/Taipei",
-   "v": "W8y4AjMNbf8",
-   "t": "Ⓒ-02-🔴日月潭 以及 南投縣 重要路口即時影像輪播24H》 24/7, 365 天氣、地震、車流人流狀況 爵士音樂中文 Jazz-🅣Ⓣ44",
-   "ch": "禿鷹 x TUI Hz"
   },
   {
    "id": "kenting",
@@ -46,9 +34,9 @@
    "lon": 139.7005,
    "cc": "JP",
    "tz": "Asia/Tokyo",
-   "v": "dfVK7ld38Ys",
-   "t": "【ライブ】いまの渋谷・スクランブル交差点　ライブカメラ　Shibuya Scramble Crossing - Tokyo, Japan　 Live Cam",
-   "ch": "FNNプライムオンライン"
+   "v": "Xy2sLEMEj5Y",
+   "t": "渋谷センター街　井の頭通りライブカメラ",
+   "ch": "渋谷センター商店街"
   },
   {
    "id": "fuji",
@@ -58,9 +46,9 @@
    "lon": 138.7274,
    "cc": "JP",
    "tz": "Asia/Tokyo",
-   "v": "Sv9hcJ3k5h4",
-   "t": "【4K】富士山ライブカメラ / 4K Live Camera Mt.FUJI　～河口湖～富士山パノラマロープウェイ",
-   "ch": "フジヤマNAVI"
+   "v": "aLUNCeB_ptk",
+   "t": "【富士山ライブカメラ】赤富士パワーを毎日お届け。\"Mt. Fuji live camera\" World heritage of JAPAN #富士山ライブ #山中湖ライブカメラ#",
+   "ch": "VICENTE AGEMATSU"
   },
   {
    "id": "dotonbori",
@@ -70,9 +58,9 @@
    "lon": 135.5013,
    "cc": "JP",
    "tz": "Asia/Tokyo",
-   "v": "i2PpmC1IeKk",
-   "t": "【LIVE】大阪 道頓堀 ライブカメラ　osaka Dotonbori LiveCamera",
-   "ch": "ラジカルビデオジョッキー RVJJP"
+   "v": "soT0yMSldwI",
+   "t": "【LIVE】大阪・道頓堀ライブカメラ　グリコ看板前の様子は？ Osaka Dotonbori #道頓堀 #ライブカメラ",
+   "ch": "MBS NEWS"
   },
   {
    "id": "sapporo",
@@ -82,9 +70,9 @@
    "lon": 141.3545,
    "cc": "JP",
    "tz": "Asia/Tokyo",
-   "v": "r_2F1Nw_0F0",
-   "t": "【LIVE】札幌もいわ山ロープウェイ-山頂ライブカメラ/24時間リアルタイム配信／SAPPORO Mt.MOIWA ROPEWAY-Summit Live Camera",
-   "ch": "札幌もいわ山ロープウェイ【公式】"
+   "v": "UQBED1DREUE",
+   "t": "［LIVE CAMERA］札幌 狸小路 ライブカメラ（４丁目） Tanukikoji Shopping Street in Sapporo, Hokkaido, Japan.",
+   "ch": "たぬきやLIVE"
   },
   {
    "id": "seoul",
@@ -94,8 +82,8 @@
    "lon": 126.978,
    "cc": "KR",
    "tz": "Asia/Seoul",
-   "v": "0v8x5wyXeB8",
-   "t": "🔴 Seoul 4K LIVE | Namsan Tower | 서울 라이브 | ソウルライブ | 首尔直播",
+   "v": "5gVrWGRZo9s",
+   "t": "🔴 Seoul 4K LIVE | Han River | 서울 한강 라이브 | ソウル漢江ライブ | 首尔汉江直播",
    "ch": "한강 라이브 365"
   },
   {
@@ -119,7 +107,7 @@
    "cc": "SG",
    "tz": "Asia/Singapore",
    "v": "0mCvOcMW82w",
-   "t": "Singapore CBD Live Stream 4K Webcam",
+   "t": "Singapore Haze CBD Live Stream 4K Webcam (Heavy Smog)",
    "ch": "Christoph Burgdorfer"
   },
   {
@@ -142,9 +130,9 @@
    "lon": 115.1686,
    "cc": "ID",
    "tz": "Asia/Makassar",
-   "v": "L1duJDAqbJY",
-   "t": "Bali Weather Live Webcam | Wide 4K Panorama from Bukit Jimbaran",
-   "ch": "Bali Weather Live Stream"
+   "v": "1avu7zP4dnU",
+   "t": "Bali 🏝 Tropical Beach (LIVE 24/7). Ocean Sounds & Rolling Waves For Deep Sleeping",
+   "ch": "Luxury Island"
   },
   {
    "id": "makkah",
@@ -154,9 +142,9 @@
    "lon": 39.8262,
    "cc": "SA",
    "tz": "Asia/Riyadh",
-   "v": "52J3GgPc7AY",
-   "t": "🔴 Makkah Live | بث مباشر مكة المكرمة الآن | Live Kaaba HD 24/7",
-   "ch": "Ar Rahman"
+   "v": "eC4LfEVxvKg",
+   "t": "بث مباشر || قناة القرآن الكريم Makkah Live",
+   "ch": "قناة القران الكريم"
   },
   {
    "id": "jerusalem",
@@ -171,6 +159,18 @@
    "ch": "EarthCam"
   },
   {
+   "id": "istanbul",
+   "zh": "伊斯坦堡",
+   "ico": "🕌",
+   "lat": 41.0082,
+   "lon": 28.9784,
+   "cc": "TR",
+   "tz": "Europe/Istanbul",
+   "v": "w9zAnWhUj2o",
+   "t": "Istanbul Walking Tour 4K 🇹🇷 LIVE — Hagia Sophia, Blue Mosque & Old Town | Turkey",
+   "ch": "SGK Walks"
+  },
+  {
    "id": "london",
    "zh": "倫敦",
    "ico": "💂",
@@ -178,9 +178,9 @@
    "lon": -0.1246,
    "cc": "GB",
    "tz": "Europe/London",
-   "v": "YUP57y2iye8",
-   "t": "Walworth Road, London, England | Live Camera Stream",
-   "ch": "Randomly Entertained"
+   "v": "AoWlXqIXNZ8",
+   "t": "London Bridge / River Thames Live Webcam @ The Golden Hinde (4K)",
+   "ch": "Beach Life Cams - 3"
   },
   {
    "id": "paris",
@@ -190,9 +190,9 @@
    "lon": 2.3522,
    "cc": "FR",
    "tz": "Europe/Paris",
-   "v": "-xzg3wujOVM",
-   "t": "Sacré-Cœur de Montmartre - Live Webcam 24/7 | PARIS TV",
-   "ch": "PARIS TV"
+   "v": "5dsrqrzTPEo",
+   "t": "Paris Walking Tour 4K 🇫🇷 LIVE — Eiffel Tower, Seine & Old Streets | France",
+   "ch": "SGK Walks"
   },
   {
    "id": "venice",
@@ -226,9 +226,9 @@
    "lon": 4.8926,
    "cc": "NL",
    "tz": "Europe/Amsterdam",
-   "v": "Gd9d4q6WvUY",
-   "t": "Now4Rent.NL | Amsterdam De Dam | Pan Tilt Zoom Camera | Ultra HD (4K)",
-   "ch": "Now4Rent"
+   "v": "9Pm6Ji6tm7s",
+   "t": "Movenpick Hotel Amsterdam Livestream | Panoramic Rooftop View - Amsterdam Central Station",
+   "ch": "Mövenpick Hotel Amsterdam City Centre"
   },
   {
    "id": "prague",
@@ -238,21 +238,21 @@
    "lon": 14.4208,
    "cc": "CZ",
    "tz": "Europe/Prague",
-   "v": "tmlE1ct0cYk",
-   "t": "🔴 4K LIVE: Trainspotting on Prague Main Station | 24/7 LIVE",
+   "v": "Deo_lcwn8lk",
+   "t": "🔴 LIVE: Planespotting at Prague Vaclav Havel Airport, Prague | 24/7 LIVE",
    "ch": "SlowTV"
   },
   {
-   "id": "jungfrau",
-   "zh": "瑞士 少女峰",
-   "ico": "🏔️",
-   "lat": 46.5475,
-   "lon": 7.9853,
-   "cc": "CH",
-   "tz": "Europe/Zurich",
-   "v": "RBbSItqtFFQ",
-   "t": "Berner Oberland Live: Eiger, Mönch, Jungfrau & Thunersee – Webcam Chalet Hinkelstein Beate",
-   "ch": "Tour-Tips"
+   "id": "barcelona",
+   "zh": "巴塞隆納",
+   "ico": "⚽",
+   "lat": 41.3851,
+   "lon": 2.1734,
+   "cc": "ES",
+   "tz": "Europe/Madrid",
+   "v": "d1Hqy8eNi9w",
+   "t": "Barcelona Spain live cam from Baix Guinardo skyline internet eye",
+   "ch": "NicusNicusNicus(mil_house23)"
   },
   {
    "id": "iceland",
@@ -262,9 +262,9 @@
    "lon": -22.27,
    "cc": "IS",
    "tz": "Atlantic/Reykjavik",
-   "v": "2qj5fiaShzY",
-   "t": "🔴 LIVE 24/7 | Iceland Earthquake Map & Volcano Monitor 🌋 Reykjanes Peninsula | Real-Time D",
-   "ch": "Volcoholics - Wild Horizons"
+   "v": "qkSvU9j4kqM",
+   "t": "🔴 Live Now: 24/7 Iceland Volcano Watch (Multi-cams)",
+   "ch": "afarTV"
   },
   {
    "id": "aurora",
@@ -274,9 +274,9 @@
    "lon": -147.7164,
    "cc": "US",
    "tz": "America/Anchorage",
-   "v": "O52zDyxg5QI",
-   "t": "Fairbanks Aurora Camera powered by EXPLORE.org",
-   "ch": "Explore Northern Lights & Nature Meditat"
+   "v": "puyAmquK868",
+   "t": "Fairbanks Aurora Camera-Aurora Camp",
+   "ch": "Aurora Camp"
   },
   {
    "id": "timessquare",
@@ -286,9 +286,9 @@
    "lon": -73.9855,
    "cc": "US",
    "tz": "America/New_York",
-   "v": "JQ_jwk_7OVE",
-   "t": "EarthCam Live:  Times Square North 4K",
-   "ch": "EarthCam"
+   "v": "VGnFLdQW39A",
+   "t": "🔴 24/7 NYC Live Cam | Times Square, skyline, streets, more",
+   "ch": "FOX 5 New York"
   },
   {
    "id": "banff",
@@ -298,9 +298,9 @@
    "lon": -115.5708,
    "cc": "CA",
    "tz": "America/Edmonton",
-   "v": "OVBu4ZAmc90",
-   "t": "Live Streaming - Rimrock Banff, EMBLEMS Collection",
-   "ch": "Rimrock Banff"
+   "v": "lQs7yujAnAU",
+   "t": "Aurora Cam",
+   "ch": "Banff Sunshine Village"
   },
   {
    "id": "niagara",
@@ -327,18 +327,6 @@
    "ch": "Teleport.camera"
   },
   {
-   "id": "lasvegas",
-   "zh": "拉斯維加斯",
-   "ico": "🎰",
-   "lat": 36.1147,
-   "lon": -115.1728,
-   "cc": "US",
-   "tz": "America/Los_Angeles",
-   "v": "V7_orOtu-oo",
-   "t": "LAS Vegas Airport LIVE 24/7 with views of 26R & 26L",
-   "ch": "Flightradar24"
-  },
-  {
    "id": "kilauea",
    "zh": "夏威夷 基拉韋亞火山",
    "ico": "🌋",
@@ -349,6 +337,18 @@
    "v": "HggWKlZv9yk",
    "t": "[V1cam] Kīlauea volcano, Hawaii (west Halemaʻumaʻu crater)",
    "ch": "USGS"
+  },
+  {
+   "id": "waikiki",
+   "zh": "夏威夷 威基基海灘",
+   "ico": "🏄",
+   "lat": 21.2766,
+   "lon": -157.8278,
+   "cc": "US",
+   "tz": "Pacific/Honolulu",
+   "v": "kCPppYpcY_s",
+   "t": "Park Shore Waikiki Hotel Live Cam | Waikiki Beach, Honolulu",
+   "ch": "Ozolio Plus"
   },
   {
    "id": "katmai",
@@ -370,7 +370,7 @@
    "lon": -43.2105,
    "cc": "BR",
    "tz": "America/Sao_Paulo",
-   "v": "Hr7c0XuEgm0",
+   "v": "sq5zvrWpXPk",
    "t": "Webcam Rio de Janeiro Copacabana Posto 6",
    "ch": "Homes in Rio"
   },
@@ -382,8 +382,8 @@
    "lon": 15.9167,
    "cc": "NA",
    "tz": "Africa/Windhoek",
-   "v": "ydYDqZQpim8",
-   "t": "Namibia: Live stream in the Namib Desert",
+   "v": "AeMUdOPFcXI",
+   "t": "Namibia: Live stream at the Okaukuejo waterhole in Etosha National Park, Namibia",
    "ch": "NamibiaCam"
   },
   {
@@ -418,9 +418,9 @@
    "lon": 151.2153,
    "cc": "AU",
    "tz": "Australia/Sydney",
-   "v": "5uZa3-RMFos",
-   "t": "WebcamSydney 1 Live Stream of Harbour 24/7 (~4K)",
-   "ch": "WebcamSydney"
+   "v": "kMlDawzYOEI",
+   "t": "Sydney Harbour LIVE 🇦🇺 Bridge & Opera House 24/7 — McMahons Point, Australia",
+   "ch": "Sydney Harbour LIVE"
   },
   {
    "id": "newzealand",
@@ -430,9 +430,9 @@
    "lon": 174.7762,
    "cc": "NZ",
    "tz": "Pacific/Auckland",
-   "v": "AajdfhglWd8",
-   "t": "Lyall Bay, Wellington, New Zealand - Live Stream",
-   "ch": "John Young"
+   "v": "nLCMw_Fh0u0",
+   "t": "Auckland Live Cam · Viaduct Harbour & Harbour Bridge · 4K 24/7 🔴",
+   "ch": "Auckland Viaduct View"
   }
  ]
 }
