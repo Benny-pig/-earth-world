@@ -1,7 +1,19 @@
 {
- "built": "2026-10-12",
+ "built": "2026-10-19",
  "source": "YouTube 公開直播(各頻道)",
  "cams": [
+  {
+   "id": "kenting",
+   "zh": "墾丁海灘",
+   "ico": "🏖️",
+   "lat": 21.948,
+   "lon": 120.7797,
+   "cc": "TW",
+   "tz": "Asia/Taipei",
+   "v": "qcmzOd1WjBU",
+   "t": "【墾丁LIVE】恆春關山「海景、夕陽、星空、閃電、月光海」24小時不間斷即時影像 / 半島秘境達人工作坊提供/ Hengchun Guanshan Live Camera Taiw",
+   "ch": "半島秘境達人工作坊"
+  },
   {
    "id": "fuji",
    "zh": "富士山",
@@ -10,9 +22,9 @@
    "lon": 138.7274,
    "cc": "JP",
    "tz": "Asia/Tokyo",
-   "v": "rW5aaFv8oxs",
-   "t": "【富士山ライブカメラ】～河口湖～富士山パノラマロープウェイ展望台　提供：UTYテレビ山梨【Mt.Fuji Live Cam in Japan】",
-   "ch": "UTYテレビ山梨公式チャンネル"
+   "v": "UFuSQq-9maE",
+   "t": "富士山ライブカメラ[山梨]　live Camera Mt,Fuji",
+   "ch": "M.M.R 鉄道倉庫"
   },
   {
    "id": "dotonbori",
@@ -22,7 +34,7 @@
    "lon": 135.5013,
    "cc": "JP",
    "tz": "Asia/Tokyo",
-   "v": "soT0yMSldwI",
+   "v": "6OgYfTMOmhY",
    "t": "【LIVE】大阪・道頓堀ライブカメラ　グリコ看板前の様子は？ Osaka Dotonbori #道頓堀 #ライブカメラ",
    "ch": "MBS NEWS"
   },
@@ -34,7 +46,7 @@
    "lon": 141.3545,
    "cc": "JP",
    "tz": "Asia/Tokyo",
-   "v": "ncvEMktxVd4",
+   "v": "b2Ve2fudoHM",
    "t": "［LIVE CAMERA］札幌 狸小路 ライブカメラ（４丁目） Tanukikoji Shopping Street in Sapporo, Hokkaido, Japan.",
    "ch": "たぬきやLIVE"
   },
@@ -46,21 +58,9 @@
    "lon": 126.978,
    "cc": "KR",
    "tz": "Asia/Seoul",
-   "v": "GhNscofIqHU",
-   "t": "🔴 Seoul 4K LIVE | Namsan Tower | 서울 라이브 | ソウルライブ | 首尔直播",
-   "ch": "한강 라이브 365"
-  },
-  {
-   "id": "hongkong",
-   "zh": "香港 維多利亞港",
-   "ico": "🌃",
-   "lat": 22.293,
-   "lon": 114.1694,
-   "cc": "HK",
-   "tz": "Asia/Hong_Kong",
-   "v": "DMEHBuEixY0",
-   "t": "🔴【LIVE】 Hong Kong's ONLY 24/7 LIVE camera from The Peak with Relaxing Music BGM 24/7 實景直播 ",
-   "ch": "HK360VR"
+   "v": "elT43I__DHk",
+   "t": "🔴 Seoul Train Live Cam 24/7 | Korea KTX, Metro & Freight Trains | 영등포역 기차 라이브",
+   "ch": "Seoul Rail Live"
   },
   {
    "id": "singapore",
@@ -70,21 +70,9 @@
    "lon": 103.852,
    "cc": "SG",
    "tz": "Asia/Singapore",
-   "v": "YDUJPJL4mBA",
-   "t": "Singapore Haze CBD Live Stream 4K Webcam (Heavy Smog)",
-   "ch": "Christoph Burgdorfer"
-  },
-  {
-   "id": "bangkok",
-   "zh": "曼谷",
-   "ico": "🛺",
-   "lat": 13.7563,
-   "lon": 100.5018,
-   "cc": "TH",
-   "tz": "Asia/Bangkok",
-   "v": "w8QCbgRo6FY",
-   "t": "🔴 LIVE Bangkok Street View 24/7 | Vibhavadi Rangsit Soi 3 | ถนนวิภาวดีรังสิต ซอย 3 สดกรุงเ",
-   "ch": "The Sunday Running BKK"
+   "v": "y2P7ZERGcb0",
+   "t": "🔴 LIVE Singapore Haze 2026 – Marina Bay Skyline & Real-Time PSI",
+   "ch": "Singapore LiveStreams"
   },
   {
    "id": "makkah",
@@ -94,9 +82,9 @@
    "lon": 39.8262,
    "cc": "SA",
    "tz": "Asia/Riyadh",
-   "v": "lLvhvGsOhkg",
-   "t": "🔴 Makkah Live | بث مباشر مكة المكرمة الآن | Live Kaaba HD 24/7",
-   "ch": "Ar Rahman"
+   "v": "qrOxR_1o3yY",
+   "t": "🔴 Makkah Live HD 24/7 Live | بث مباشر مكة المكرمة | الحرم المكي مباشر | قناة القرآن الكريم",
+   "ch": "Al Taqwa TV"
   },
   {
    "id": "jerusalem",
@@ -111,6 +99,18 @@
    "ch": "הכותל המערבי "
   },
   {
+   "id": "istanbul",
+   "zh": "伊斯坦堡",
+   "ico": "🕌",
+   "lat": 41.0082,
+   "lon": 28.9784,
+   "cc": "TR",
+   "tz": "Europe/Istanbul",
+   "v": "zZ6Pa4yfkN4",
+   "t": "Istanbul:Galata & Kız Kulesi Live Stream Istanbul #Bosphorus #Istanbul #boğaz #live #kizku",
+   "ch": "Istanbul: Golden Horn Live: Galata & Kız"
+  },
+  {
    "id": "london",
    "zh": "倫敦",
    "ico": "💂",
@@ -118,9 +118,33 @@
    "lon": -0.1246,
    "cc": "GB",
    "tz": "Europe/London",
-   "v": "2A20GPyGtVo",
+   "v": "Lsy8ifN4hWg",
    "t": "🔴LIVE Notting Hill Gate Station - London 4K Webcam",
    "ch": "Notting Hill Gate Cam"
+  },
+  {
+   "id": "amsterdam",
+   "zh": "阿姆斯特丹",
+   "ico": "🚲",
+   "lat": 52.3731,
+   "lon": 4.8926,
+   "cc": "NL",
+   "tz": "Europe/Amsterdam",
+   "v": "gqLcgUWIU3I",
+   "t": "IJmuiden Port Live Webcam - the gateway to Amsterdam",
+   "ch": "SHIPM8"
+  },
+  {
+   "id": "iceland",
+   "zh": "冰島 火山",
+   "ico": "🌋",
+   "lat": 63.88,
+   "lon": -22.27,
+   "cc": "IS",
+   "tz": "Atlantic/Reykjavik",
+   "v": "dNr9uDnyFGg",
+   "t": "🔴 LIVE 24/7 | Iceland Earthquake Map & Volcano Monitor 🌋 Reykjanes Peninsula | Real-Time D",
+   "ch": "Volcoholics - Wild Horizons"
   },
   {
    "id": "aurora",
@@ -130,9 +154,21 @@
    "lon": -147.7164,
    "cc": "US",
    "tz": "America/Anchorage",
-   "v": "wmQzW_o_iCM",
+   "v": "wiN9Ymr4Mvg",
    "t": "Fairbanks Aurora Camera-Aurora Camp",
    "ch": "Aurora Camp"
+  },
+  {
+   "id": "niagara",
+   "zh": "尼加拉瀑布",
+   "ico": "💦",
+   "lat": 43.0799,
+   "lon": -79.0747,
+   "cc": "CA",
+   "tz": "America/Toronto",
+   "v": "PS46DvoJY-c",
+   "t": "🔴 Niagara Falls LIVE Cam",
+   "ch": "The Currie’s"
   },
   {
    "id": "kilauea",
@@ -142,45 +178,9 @@
    "lon": -155.2834,
    "cc": "US",
    "tz": "Pacific/Honolulu",
-   "v": "gXKuUyKt8mc",
-   "t": "[V3cam] Kīlauea volcano, Hawaii (south Halemaʻumaʻu crater)",
-   "ch": "USGS"
-  },
-  {
-   "id": "waikiki",
-   "zh": "夏威夷 威基基海灘",
-   "ico": "🏄",
-   "lat": 21.2766,
-   "lon": -157.8278,
-   "cc": "US",
-   "tz": "Pacific/Honolulu",
-   "v": "xfKMn-2BiUk",
-   "t": "🔴 LIVE: Ultimate Oahu Webcam Tour 🌺 Waikiki Beach, North Shore Surf & Diamond Head | NOW!",
-   "ch": "AlohaLiveCam"
-  },
-  {
-   "id": "katmai",
-   "zh": "阿拉斯加 棕熊抓鮭魚",
-   "ico": "🐻",
-   "lat": 58.5549,
-   "lon": -155.778,
-   "cc": "US",
-   "tz": "America/Anchorage",
-   "v": "JfyPFTyfau4",
-   "t": "🔴 LIVE Brooks Falls Bears 24/7 | Katmai Alaska Brown Bears · Nature Sounds",
-   "ch": "this_endless_grace"
-  },
-  {
-   "id": "rio",
-   "zh": "里約熱內盧",
-   "ico": "🏖️",
-   "lat": -22.9519,
-   "lon": -43.2105,
-   "cc": "BR",
-   "tz": "America/Sao_Paulo",
-   "v": "wyEi0OPai5g",
-   "t": "Webcam Rio de Janeiro Copacabana Posto 6",
-   "ch": "Homes in Rio"
+   "v": "ygQ1iv8iZr8",
+   "t": "Kilauea Volcano Eruption Live, 24/7 Live USGS Cams and Data",
+   "ch": "Lava Watchers"
   },
   {
    "id": "africam",
@@ -190,9 +190,21 @@
    "lon": 31.5,
    "cc": "ZA",
    "tz": "Africa/Johannesburg",
-   "v": "u045SmxLbVs",
+   "v": "NGJlhTeslvw",
    "t": "🔴 LIVE African Safari | 6 Maasai Mara Wildlife Cameras | Kenya 24/7",
    "ch": "SBC-TV | Maasai Mara Live Safari"
+  },
+  {
+   "id": "sydney",
+   "zh": "雪梨港 歌劇院",
+   "ico": "🦘",
+   "lat": -33.8568,
+   "lon": 151.2153,
+   "cc": "AU",
+   "tz": "Australia/Sydney",
+   "v": "4ufvR5o1-9E",
+   "t": "Sydney Weather Live 🌧 24/7 Australia Temperature, Hourly Forecast & Conditions",
+   "ch": "Cast 247"
   },
   {
    "id": "newzealand",
@@ -202,9 +214,9 @@
    "lon": 174.7762,
    "cc": "NZ",
    "tz": "Pacific/Auckland",
-   "v": "dZoMDEs3t6g",
-   "t": "🟢 24/7 LIVE: Beach Haven in Auckland New Zealand | Sea Views, Coastal Birds & Sunsets | NO",
-   "ch": "Pablo Stockto"
+   "v": "HIB-zfyeYBA",
+   "t": "新西兰后院乌鸫孵蛋直播 | Live: Blackbird Nest Cam in New Zealand",
+   "ch": "小鸣哥"
   }
  ]
 }

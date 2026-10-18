@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-12",
+  "as_of": "2026-10-19",
   "source": "中華民國外交部領事事務局 全球旅遊警示 https://www.boca.gov.tw/sp-trwa-list-1.html",
   "disclaimer": "警示等級會隨情勢變動,僅供參考,出發前請至外交部官網查詢最新狀態。",
   "countries": {
@@ -1131,11 +1131,11 @@
       "reason": "與鄰國邊境地區局勢緊張。"
     },
     "SA": {
-      "level": 3,
-      "label": "橙色：避免非必要旅行",
-      "color": "#f5a524",
+      "level": 4,
+      "label": "紅色：儘速離境",
+      "color": "#e5484d",
       "note": null,
-      "reason": "邊境地區無人機/飛彈攻擊風險。"
+      "reason": "安全情勢嚴峻,不宜前往,已在當地者宜儘速離境。"
     },
     "SB": {
       "level": 3,
