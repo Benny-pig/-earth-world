@@ -1,5 +1,5 @@
 {
- "built": "2026-10-26",
+ "built": "2026-11-02",
  "source": "YouTube 公開直播(各頻道)",
  "cams": [
   {
@@ -46,9 +46,9 @@
    "lon": 139.7005,
    "cc": "JP",
    "tz": "Asia/Tokyo",
-   "v": "dfVK7ld38Ys",
-   "t": "【ライブ】いまの渋谷・スクランブル交差点　ライブカメラ　Shibuya Scramble Crossing - Tokyo, Japan　 Live Cam",
-   "ch": "FNNプライムオンライン"
+   "v": "5B4LmH4JbnY",
+   "t": "【ライブ】渋谷スクランブル交差点 / Shibuya Scramble Crossing Live Camera【LIVE】ANN/テレ朝",
+   "ch": "ANNnewsCH"
   },
   {
    "id": "fuji",
@@ -58,7 +58,7 @@
    "lon": 138.7274,
    "cc": "JP",
    "tz": "Asia/Tokyo",
-   "v": "GYKZL-IzYuM",
+   "v": "oTwbnOQ28no",
    "t": "【富士山ライブカメラ】赤富士パワーを毎日お届け。\"Mt. Fuji live camera\" World heritage of JAPAN #富士山ライブ #山中湖ライブカメラ#",
    "ch": "VICENTE AGEMATSU"
   },
@@ -82,9 +82,9 @@
    "lon": 141.3545,
    "cc": "JP",
    "tz": "Asia/Tokyo",
-   "v": "DWTW3yqK5kU",
-   "t": "ライブカメラ 北海道(ＳＴＶ札幌テレビ放送)/LiveCamera Hokkaido Japan",
-   "ch": "STV札幌テレビ放送 公式"
+   "v": "1xekzFCh854",
+   "t": "【LIVE】札幌もいわ山ロープウェイ-山頂ライブカメラ/24時間リアルタイム配信／SAPPORO Mt.MOIWA ROPEWAY-Summit Live Camera",
+   "ch": "札幌もいわ山ロープウェイ【公式】"
   },
   {
    "id": "seoul",
@@ -154,9 +154,9 @@
    "lon": 39.8262,
    "cc": "SA",
    "tz": "Asia/Riyadh",
-   "v": "eC4LfEVxvKg",
-   "t": "بث مباشر || قناة القرآن الكريم Makkah Live",
-   "ch": "قناة القران الكريم"
+   "v": "D6UqW6TuY74",
+   "t": "🔴Live Makkah Today | بث مباشر | قناة القرآن الكريم Makkah Live TV",
+   "ch": "القرآن الكريم AlQuran4K"
   },
   {
    "id": "jerusalem",
@@ -169,18 +169,6 @@
    "v": "77akujLn4k8",
    "t": "EarthCam Live - Western Wall  (Jerusalem, Israel)",
    "ch": "EarthCam"
-  },
-  {
-   "id": "istanbul",
-   "zh": "伊斯坦堡",
-   "ico": "🕌",
-   "lat": 41.0082,
-   "lon": 28.9784,
-   "cc": "TR",
-   "tz": "Europe/Istanbul",
-   "v": "w9zAnWhUj2o",
-   "t": "Istanbul Walking Tour 4K 🇹🇷 LIVE — Hagia Sophia, Blue Mosque & Old Town | Turkey",
-   "ch": "SGK Walks"
   },
   {
    "id": "abbeyroad",
@@ -202,7 +190,7 @@
    "lon": -0.1246,
    "cc": "GB",
    "tz": "Europe/London",
-   "v": "Y6gzQmbSpEg",
+   "v": "U-XyMFyX4x0",
    "t": "🔴LIVE Notting Hill Gate Station - London 4K Webcam",
    "ch": "Notting Hill Gate Cam"
   },
@@ -238,9 +226,9 @@
    "lon": 12.4964,
    "cc": "IT",
    "tz": "Europe/Rome",
-   "v": "89d3tEaqImM",
-   "t": "REALVIEWCAM360 - ROME Live Cam - Italy - RAMSAT HQ  Vatican & St. Peter’s Basilica Night V",
-   "ch": "RMS - RAMSAT Multimedia "
+   "v": "VfH8gQJQnBE",
+   "t": "Roma Five Suites - Piazza Venezia - Live Webcam from Rome",
+   "ch": "Roma Five Suites"
   },
   {
    "id": "amsterdam",
@@ -286,8 +274,8 @@
    "lon": 2.1734,
    "cc": "ES",
    "tz": "Europe/Madrid",
-   "v": "d1Hqy8eNi9w",
-   "t": "Barcelona Spain live cam from Baix Guinardo skyline internet eye",
+   "v": "J-UBf0pd2sE",
+   "t": "​Barcelona Directo 24/7 Live Cam  🔴 Webcam Baix Guinardó Skyline ( España Spain) Vistas ​ ",
    "ch": "NicusNicusNicus(mil_house23)"
   },
   {
@@ -322,9 +310,9 @@
    "lon": -73.9855,
    "cc": "US",
    "tz": "America/New_York",
-   "v": "VGnFLdQW39A",
-   "t": "🔴 24/7 NYC Live Cam | Times Square, skyline, streets, more",
-   "ch": "FOX 5 New York"
+   "v": "KHy_n-EMWY8",
+   "t": "EarthCam Live:  Times Square Crossroads (New York City, NY)",
+   "ch": "EarthCam"
   },
   {
    "id": "banff",
@@ -334,9 +322,9 @@
    "lon": -115.5708,
    "cc": "CA",
    "tz": "America/Edmonton",
-   "v": "HghxOQ12dy4",
-   "t": "Banff Centre Spray Valley",
-   "ch": "Banff Centre for Arts and Creativity"
+   "v": "F-QLs9aKPvE",
+   "t": "Live Streaming - Rimrock Banff, EMBLEMS Collection",
+   "ch": "Rimrock Banff"
   },
   {
    "id": "niagara",
@@ -382,9 +370,9 @@
    "lon": -157.8278,
    "cc": "US",
    "tz": "Pacific/Honolulu",
-   "v": "kCPppYpcY_s",
-   "t": "Park Shore Waikiki Hotel Live Cam | Waikiki Beach, Honolulu",
-   "ch": "Ozolio Plus"
+   "v": "pv2RBs3PwCs",
+   "t": "Waikiki Live Cam",
+   "ch": "uberjeph"
   },
   {
    "id": "katmai",
@@ -406,9 +394,9 @@
    "lon": -43.2105,
    "cc": "BR",
    "tz": "America/Sao_Paulo",
-   "v": "5Xl6pSgiy3A",
-   "t": "Balneário Camboriú ao vivo - Avenida Atlântica",
-   "ch": "CLIMA BC Brazil"
+   "v": "wyEi0OPai5g",
+   "t": "Webcam Rio de Janeiro Copacabana Posto 6",
+   "ch": "Homes in Rio"
   },
   {
    "id": "namib",
