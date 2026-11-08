@@ -1,5 +1,5 @@
 {
- "built": "2026-11-02",
+ "built": "2026-11-09",
  "source": "YouTube 公開直播(各頻道)",
  "cams": [
   {
@@ -34,9 +34,9 @@
    "lon": 120.7797,
    "cc": "TW",
    "tz": "Asia/Taipei",
-   "v": "hrpwltQqtq0",
-   "t": "墾丁大街即時影像2(南下)4K",
-   "ch": "墾丁國家公園"
+   "v": "miLHWPexR3w",
+   "t": "【墾丁LIVE】萬里桐即時影像 / 萬里桐浮潛中心提供/ Kenting Wanlitong Live Camera Taiwan",
+   "ch": "我愛墾丁旅遊票券中心"
   },
   {
    "id": "shibuya",
@@ -46,9 +46,9 @@
    "lon": 139.7005,
    "cc": "JP",
    "tz": "Asia/Tokyo",
-   "v": "5B4LmH4JbnY",
-   "t": "【ライブ】渋谷スクランブル交差点 / Shibuya Scramble Crossing Live Camera【LIVE】ANN/テレ朝",
-   "ch": "ANNnewsCH"
+   "v": "dfVK7ld38Ys",
+   "t": "【ライブ】いまの渋谷・スクランブル交差点　ライブカメラ　Shibuya Scramble Crossing - Tokyo, Japan　 Live Cam",
+   "ch": "FNNプライムオンライン"
   },
   {
    "id": "fuji",
@@ -58,7 +58,7 @@
    "lon": 138.7274,
    "cc": "JP",
    "tz": "Asia/Tokyo",
-   "v": "oTwbnOQ28no",
+   "v": "0vOXP6LUgwg",
    "t": "【富士山ライブカメラ】赤富士パワーを毎日お届け。\"Mt. Fuji live camera\" World heritage of JAPAN #富士山ライブ #山中湖ライブカメラ#",
    "ch": "VICENTE AGEMATSU"
   },
@@ -82,9 +82,9 @@
    "lon": 141.3545,
    "cc": "JP",
    "tz": "Asia/Tokyo",
-   "v": "1xekzFCh854",
-   "t": "【LIVE】札幌もいわ山ロープウェイ-山頂ライブカメラ/24時間リアルタイム配信／SAPPORO Mt.MOIWA ROPEWAY-Summit Live Camera",
-   "ch": "札幌もいわ山ロープウェイ【公式】"
+   "v": "Lh77fsvfiAs",
+   "t": "［LIVE CAMERA］札幌 狸小路 ライブカメラ（４丁目） Tanukikoji Shopping Street in Sapporo, Hokkaido, Japan.",
+   "ch": "たぬきやLIVE"
   },
   {
    "id": "seoul",
@@ -118,9 +118,9 @@
    "lon": 103.852,
    "cc": "SG",
    "tz": "Asia/Singapore",
-   "v": "rQ3VvxadJeo",
-   "t": "【LIVE CAMERA】Downtown Singapore　シンガポール　ライブカメラ",
-   "ch": "SingReef"
+   "v": "6fdFZUqi0oU",
+   "t": "Universal Studios Live Worldwide Virtual Webcam Stream - Hollywood, Orlando, Singapore, an",
+   "ch": "WorldscapeScenery"
   },
   {
    "id": "bangkok",
@@ -154,9 +154,9 @@
    "lon": 39.8262,
    "cc": "SA",
    "tz": "Asia/Riyadh",
-   "v": "D6UqW6TuY74",
-   "t": "🔴Live Makkah Today | بث مباشر | قناة القرآن الكريم Makkah Live TV",
-   "ch": "القرآن الكريم AlQuran4K"
+   "v": "eC4LfEVxvKg",
+   "t": "بث مباشر || قناة القرآن الكريم Makkah Live",
+   "ch": "قناة القران الكريم"
   },
   {
    "id": "jerusalem",
@@ -190,7 +190,7 @@
    "lon": -0.1246,
    "cc": "GB",
    "tz": "Europe/London",
-   "v": "U-XyMFyX4x0",
+   "v": "0rzoyxlx66w",
    "t": "🔴LIVE Notting Hill Gate Station - London 4K Webcam",
    "ch": "Notting Hill Gate Cam"
   },
@@ -219,18 +219,6 @@
    "ch": "I Love You Venice"
   },
   {
-   "id": "rome",
-   "zh": "羅馬",
-   "ico": "🏛️",
-   "lat": 41.9028,
-   "lon": 12.4964,
-   "cc": "IT",
-   "tz": "Europe/Rome",
-   "v": "VfH8gQJQnBE",
-   "t": "Roma Five Suites - Piazza Venezia - Live Webcam from Rome",
-   "ch": "Roma Five Suites"
-  },
-  {
    "id": "amsterdam",
    "zh": "阿姆斯特丹",
    "ico": "🚲",
@@ -250,9 +238,9 @@
    "lon": 14.4208,
    "cc": "CZ",
    "tz": "Europe/Prague",
-   "v": "kvYMIaXclIE",
-   "t": "Creative Live streaming from Prague (Czech Republic) by CamStreamer",
-   "ch": "CamStreamer"
+   "v": "tmlE1ct0cYk",
+   "t": "🔴 4K LIVE: Trainspotting on Prague Main Station | 24/7 LIVE",
+   "ch": "SlowTV"
   },
   {
    "id": "jungfrau",
@@ -274,7 +262,7 @@
    "lon": 2.1734,
    "cc": "ES",
    "tz": "Europe/Madrid",
-   "v": "J-UBf0pd2sE",
+   "v": "GUyBYyFmEiA",
    "t": "​Barcelona Directo 24/7 Live Cam  🔴 Webcam Baix Guinardó Skyline ( España Spain) Vistas ​ ",
    "ch": "NicusNicusNicus(mil_house23)"
   },
@@ -370,7 +358,7 @@
    "lon": -157.8278,
    "cc": "US",
    "tz": "Pacific/Honolulu",
-   "v": "pv2RBs3PwCs",
+   "v": "BpPJ2GHddYI",
    "t": "Waikiki Live Cam",
    "ch": "uberjeph"
   },
@@ -394,8 +382,8 @@
    "lon": -43.2105,
    "cc": "BR",
    "tz": "America/Sao_Paulo",
-   "v": "wyEi0OPai5g",
-   "t": "Webcam Rio de Janeiro Copacabana Posto 6",
+   "v": "WEl_I5vmuSs",
+   "t": "Rio de Janeiro Cam - Copacabana Posto 3",
    "ch": "Homes in Rio"
   },
   {
@@ -454,9 +442,9 @@
    "lon": 174.7762,
    "cc": "NZ",
    "tz": "Pacific/Auckland",
-   "v": "AajdfhglWd8",
-   "t": "Lyall Bay, Wellington, New Zealand - Live Stream",
-   "ch": "John Young"
+   "v": "nLCMw_Fh0u0",
+   "t": "Auckland Live Camera · Viaduct Harbour & Harbour Bridge, New Zealand · 4K 24/7 🔴",
+   "ch": "Auckland Viaduct View"
   }
  ]
 }
