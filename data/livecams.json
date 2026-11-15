@@ -1,5 +1,5 @@
 {
- "built": "2026-11-09",
+ "built": "2026-11-16",
  "source": "YouTube 公開直播(各頻道)",
  "cams": [
   {
@@ -58,9 +58,9 @@
    "lon": 138.7274,
    "cc": "JP",
    "tz": "Asia/Tokyo",
-   "v": "0vOXP6LUgwg",
-   "t": "【富士山ライブカメラ】赤富士パワーを毎日お届け。\"Mt. Fuji live camera\" World heritage of JAPAN #富士山ライブ #山中湖ライブカメラ#",
-   "ch": "VICENTE AGEMATSU"
+   "v": "1cnReFAU04k",
+   "t": "【LIVE】河口湖からの「富士山ライブカメラ」\"mount fuji live camera\" from Lake Kawaguchiko (Yamanashi Japan)",
+   "ch": "【KTV】ケーブルテレビ河口湖"
   },
   {
    "id": "dotonbori",
@@ -82,9 +82,9 @@
    "lon": 141.3545,
    "cc": "JP",
    "tz": "Asia/Tokyo",
-   "v": "Lh77fsvfiAs",
-   "t": "［LIVE CAMERA］札幌 狸小路 ライブカメラ（４丁目） Tanukikoji Shopping Street in Sapporo, Hokkaido, Japan.",
-   "ch": "たぬきやLIVE"
+   "v": "wRYonRnKsKw",
+   "t": "【LIVE】いまの札幌・すすきの交差点　| 24時間ライブカメラ",
+   "ch": "SODANEチャンネル"
   },
   {
    "id": "seoul",
@@ -118,9 +118,9 @@
    "lon": 103.852,
    "cc": "SG",
    "tz": "Asia/Singapore",
-   "v": "6fdFZUqi0oU",
-   "t": "Universal Studios Live Worldwide Virtual Webcam Stream - Hollywood, Orlando, Singapore, an",
-   "ch": "WorldscapeScenery"
+   "v": "rQ3VvxadJeo",
+   "t": "【LIVE CAMERA】Downtown Singapore　シンガポール　ライブカメラ",
+   "ch": "SingReef"
   },
   {
    "id": "bangkok",
@@ -147,6 +147,18 @@
    "ch": "Bali Weather Live Stream"
   },
   {
+   "id": "everest",
+   "zh": "聖母峰",
+   "ico": "🏔️",
+   "lat": 27.9881,
+   "lon": 86.925,
+   "cc": "NP",
+   "tz": "Asia/Kathmandu",
+   "v": "AndDG9BO6wo",
+   "t": "🔴 LIVE 4K: Mount Everest, Lhotse & Ama Dablam — 24/7 Himalayas, Nepal",
+   "ch": "afarTV"
+  },
+  {
    "id": "makkah",
    "zh": "麥加 禁寺",
    "ico": "🕋",
@@ -154,7 +166,7 @@
    "lon": 39.8262,
    "cc": "SA",
    "tz": "Asia/Riyadh",
-   "v": "eC4LfEVxvKg",
+   "v": "IsJTAdC3-Jw",
    "t": "بث مباشر || قناة القرآن الكريم Makkah Live",
    "ch": "قناة القران الكريم"
   },
@@ -190,9 +202,9 @@
    "lon": -0.1246,
    "cc": "GB",
    "tz": "Europe/London",
-   "v": "0rzoyxlx66w",
-   "t": "🔴LIVE Notting Hill Gate Station - London 4K Webcam",
-   "ch": "Notting Hill Gate Cam"
+   "v": "MXmzsjABC-U",
+   "t": "London Webcam LIVE 4K | London Bridge & River Thames | Golden Hinde",
+   "ch": "Beach Life Cams"
   },
   {
    "id": "paris",
@@ -219,6 +231,18 @@
    "ch": "I Love You Venice"
   },
   {
+   "id": "rome",
+   "zh": "羅馬",
+   "ico": "🏛️",
+   "lat": 41.9028,
+   "lon": 12.4964,
+   "cc": "IT",
+   "tz": "Europe/Rome",
+   "v": "wwkVJ-jL3CI",
+   "t": "Roma Five Suites - Piazza Venezia - Live Webcam from Rome",
+   "ch": "Roma Five Suites"
+  },
+  {
    "id": "amsterdam",
    "zh": "阿姆斯特丹",
    "ico": "🚲",
@@ -238,9 +262,9 @@
    "lon": 14.4208,
    "cc": "CZ",
    "tz": "Europe/Prague",
-   "v": "tmlE1ct0cYk",
-   "t": "🔴 4K LIVE: Trainspotting on Prague Main Station | 24/7 LIVE",
-   "ch": "SlowTV"
+   "v": "kvYMIaXclIE",
+   "t": "Creative Live streaming from Prague (Czech Republic) by CamStreamer",
+   "ch": "CamStreamer"
   },
   {
    "id": "jungfrau",
@@ -262,7 +286,7 @@
    "lon": 2.1734,
    "cc": "ES",
    "tz": "Europe/Madrid",
-   "v": "GUyBYyFmEiA",
+   "v": "nefnkjc1yVs",
    "t": "​Barcelona Directo 24/7 Live Cam  🔴 Webcam Baix Guinardó Skyline ( España Spain) Vistas ​ ",
    "ch": "NicusNicusNicus(mil_house23)"
   },
@@ -298,8 +322,8 @@
    "lon": -73.9855,
    "cc": "US",
    "tz": "America/New_York",
-   "v": "KHy_n-EMWY8",
-   "t": "EarthCam Live:  Times Square Crossroads (New York City, NY)",
+   "v": "ZxCeWQ3Lcig",
+   "t": "EarthCam Live:  Times Square North 4K",
    "ch": "EarthCam"
   },
   {
@@ -334,9 +358,9 @@
    "lon": -122.4177,
    "cc": "US",
    "tz": "America/Los_Angeles",
-   "v": "BSWhGNXxT9A",
-   "t": "🔴 Mersea Restaurant LIVE Bay View · San Francisco Skyline, Golden Gate & Luxury Waterfront",
-   "ch": "Teleport.camera"
+   "v": "CXYr04BWvmc",
+   "t": "San Francisco-Oakland Bay Bridge Live Camera | 24/7 Stream",
+   "ch": "ABC7 News Bay Area"
   },
   {
    "id": "kilauea",
@@ -370,9 +394,9 @@
    "lon": -155.778,
    "cc": "US",
    "tz": "America/Anchorage",
-   "v": "J7ZrIDvqlic",
-   "t": "LIVE Brooks Falls - Katmai National Park, Alaska 2026 | explore.org",
-   "ch": "Explore Live Nature Cams"
+   "v": "vu7I315gQpU",
+   "t": "LIVE Underwater Salmon Cam - Katmai National Park, Alaska | explore.org",
+   "ch": "Explore Bears"
   },
   {
    "id": "rio",
@@ -382,8 +406,8 @@
    "lon": -43.2105,
    "cc": "BR",
    "tz": "America/Sao_Paulo",
-   "v": "WEl_I5vmuSs",
-   "t": "Rio de Janeiro Cam - Copacabana Posto 3",
+   "v": "Bz9Hkrk1NcY",
+   "t": "Panorama Webcam Rio de Janeiro - Copacabana beach - Posto 6",
    "ch": "Homes in Rio"
   },
   {
@@ -418,9 +442,9 @@
    "lon": 36.899,
    "cc": "KE",
    "tz": "Africa/Nairobi",
-   "v": "XsOU8JnEpNM",
-   "t": "ol Donyo Lodge | Wildlife Live Stream – Kenya",
-   "ch": "Africam"
+   "v": "7x5kRo1B84Y",
+   "t": "LIVE African River Wildlife - Kenya Hippo & Crocodile Cam - MPALA | explore.org",
+   "ch": "Explore African Wildlife"
   },
   {
    "id": "sydney",
@@ -442,9 +466,9 @@
    "lon": 174.7762,
    "cc": "NZ",
    "tz": "Pacific/Auckland",
-   "v": "nLCMw_Fh0u0",
-   "t": "Auckland Live Camera · Viaduct Harbour & Harbour Bridge, New Zealand · 4K 24/7 🔴",
-   "ch": "Auckland Viaduct View"
+   "v": "AajdfhglWd8",
+   "t": "Lyall Bay, Wellington, New Zealand - Live Stream",
+   "ch": "John Young"
   }
  ]
 }
