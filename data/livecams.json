@@ -1,5 +1,5 @@
 {
- "built": "2026-11-16",
+ "built": "2026-11-23",
  "source": "YouTube 公開直播(各頻道)",
  "cams": [
   {
@@ -34,9 +34,9 @@
    "lon": 120.7797,
    "cc": "TW",
    "tz": "Asia/Taipei",
-   "v": "miLHWPexR3w",
-   "t": "【墾丁LIVE】萬里桐即時影像 / 萬里桐浮潛中心提供/ Kenting Wanlitong Live Camera Taiwan",
-   "ch": "我愛墾丁旅遊票券中心"
+   "v": "hrpwltQqtq0",
+   "t": "墾丁大街即時影像2(南下)4K",
+   "ch": "墾丁國家公園"
   },
   {
    "id": "shibuya",
@@ -58,9 +58,9 @@
    "lon": 138.7274,
    "cc": "JP",
    "tz": "Asia/Tokyo",
-   "v": "1cnReFAU04k",
-   "t": "【LIVE】河口湖からの「富士山ライブカメラ」\"mount fuji live camera\" from Lake Kawaguchiko (Yamanashi Japan)",
-   "ch": "【KTV】ケーブルテレビ河口湖"
+   "v": "PxzwnWh1dKk",
+   "t": "世界遺産富士山ライブカメラ(忍野八海から)[4K] - [4K]Mount Fuji webcams (Oshino Hakkai) from Japan. 【world heri",
+   "ch": "FujiyamaTV - FujigokoTV"
   },
   {
    "id": "dotonbori",
@@ -106,9 +106,9 @@
    "lon": 114.1694,
    "cc": "HK",
    "tz": "Asia/Hong_Kong",
-   "v": "ScBtCcGZMDk",
-   "t": "🔴 HONGKONG LIVE 24/7 | 香港即時直播",
-   "ch": "World Live Cam 24"
+   "v": "XN-ArdUrqtc",
+   "t": "【香港直播】實時東九龍維港 hk live camera , hong kong live stream, Country & Folk bgm, 輕鬆音樂",
+   "ch": "Marcus Wong"
   },
   {
    "id": "singapore",
@@ -135,18 +135,6 @@
    "ch": "The Real Samui Webcam"
   },
   {
-   "id": "bali",
-   "zh": "峇里島",
-   "ico": "🌺",
-   "lat": -8.718,
-   "lon": 115.1686,
-   "cc": "ID",
-   "tz": "Asia/Makassar",
-   "v": "L1duJDAqbJY",
-   "t": "Bali Weather Live Webcam | Wide 4K Panorama from Bukit Jimbaran",
-   "ch": "Bali Weather Live Stream"
-  },
-  {
    "id": "everest",
    "zh": "聖母峰",
    "ico": "🏔️",
@@ -166,21 +154,9 @@
    "lon": 39.8262,
    "cc": "SA",
    "tz": "Asia/Riyadh",
-   "v": "IsJTAdC3-Jw",
-   "t": "بث مباشر || قناة القرآن الكريم Makkah Live",
-   "ch": "قناة القران الكريم"
-  },
-  {
-   "id": "jerusalem",
-   "zh": "耶路撒冷 西牆",
-   "ico": "🕍",
-   "lat": 31.7767,
-   "lon": 35.2345,
-   "cc": "IL",
-   "tz": "Asia/Jerusalem",
-   "v": "77akujLn4k8",
-   "t": "EarthCam Live - Western Wall  (Jerusalem, Israel)",
-   "ch": "EarthCam"
+   "v": "MJo_WrDVjGQ",
+   "t": "🔴 Makkah Live HD | بث مباشر مكة المكرمة | الحرم المكي مباشر | قناة القرآن الكريم السعودية",
+   "ch": "القرآن الکریم"
   },
   {
    "id": "abbeyroad",
@@ -202,9 +178,9 @@
    "lon": -0.1246,
    "cc": "GB",
    "tz": "Europe/London",
-   "v": "MXmzsjABC-U",
-   "t": "London Webcam LIVE 4K | London Bridge & River Thames | Golden Hinde",
-   "ch": "Beach Life Cams"
+   "v": "Qno7wrid-uw",
+   "t": "🔴LIVE Notting Hill Gate Station - London 4K Webcam",
+   "ch": "Notting Hill Gate Cam"
   },
   {
    "id": "paris",
@@ -214,9 +190,9 @@
    "lon": 2.3522,
    "cc": "FR",
    "tz": "Europe/Paris",
-   "v": "-xzg3wujOVM",
-   "t": "Sacré-Cœur de Montmartre - Live Webcam 24/7 | PARIS TV",
-   "ch": "PARIS TV"
+   "v": "QI-PPEW2Bgc",
+   "t": "Live Webcam - Vue de Paris avec la Tour Eiffel et la Tour Montparnasse",
+   "ch": "Paris75Webcam"
   },
   {
    "id": "venice",
@@ -267,18 +243,6 @@
    "ch": "CamStreamer"
   },
   {
-   "id": "jungfrau",
-   "zh": "瑞士 少女峰",
-   "ico": "🏔️",
-   "lat": 46.5475,
-   "lon": 7.9853,
-   "cc": "CH",
-   "tz": "Europe/Zurich",
-   "v": "UcfudevG7v8",
-   "t": "Berner Oberland Live: Eiger, Mönch, Jungfrau & Thunersee – Webcam Chalet Hinkelstein Beate",
-   "ch": "Tour-Tips"
-  },
-  {
    "id": "barcelona",
    "zh": "巴塞隆納",
    "ico": "⚽",
@@ -322,8 +286,8 @@
    "lon": -73.9855,
    "cc": "US",
    "tz": "America/New_York",
-   "v": "ZxCeWQ3Lcig",
-   "t": "EarthCam Live:  Times Square North 4K",
+   "v": "KHy_n-EMWY8",
+   "t": "EarthCam Live:  Times Square Crossroads (New York City, NY)",
    "ch": "EarthCam"
   },
   {
@@ -358,9 +322,9 @@
    "lon": -122.4177,
    "cc": "US",
    "tz": "America/Los_Angeles",
-   "v": "CXYr04BWvmc",
-   "t": "San Francisco-Oakland Bay Bridge Live Camera | 24/7 Stream",
-   "ch": "ABC7 News Bay Area"
+   "v": "BSWhGNXxT9A",
+   "t": "🔴 Mersea Restaurant LIVE Bay View · San Francisco Skyline, Golden Gate & Luxury Waterfront",
+   "ch": "Teleport.camera"
   },
   {
    "id": "kilauea",
@@ -382,7 +346,7 @@
    "lon": -157.8278,
    "cc": "US",
    "tz": "Pacific/Honolulu",
-   "v": "BpPJ2GHddYI",
+   "v": "cU5qRVlQVOs",
    "t": "Waikiki Live Cam",
    "ch": "uberjeph"
   },
@@ -394,21 +358,9 @@
    "lon": -155.778,
    "cc": "US",
    "tz": "America/Anchorage",
-   "v": "vu7I315gQpU",
-   "t": "LIVE Underwater Salmon Cam - Katmai National Park, Alaska | explore.org",
-   "ch": "Explore Bears"
-  },
-  {
-   "id": "rio",
-   "zh": "里約熱內盧",
-   "ico": "🏖️",
-   "lat": -22.9519,
-   "lon": -43.2105,
-   "cc": "BR",
-   "tz": "America/Sao_Paulo",
-   "v": "Bz9Hkrk1NcY",
-   "t": "Panorama Webcam Rio de Janeiro - Copacabana beach - Posto 6",
-   "ch": "Homes in Rio"
+   "v": "J7ZrIDvqlic",
+   "t": "LIVE Brooks Falls - Katmai National Park, Alaska 2026 | explore.org",
+   "ch": "Explore Live Nature Cams"
   },
   {
    "id": "namib",
@@ -433,18 +385,6 @@
    "v": "qpukdDslCjk",
    "t": "Wild Africa Live!  24/7 Safari Cam | Watch Lions, Elephants & More",
    "ch": "Africam"
-  },
-  {
-   "id": "kenya",
-   "zh": "肯亞 動物水源",
-   "ico": "🐘",
-   "lat": 0.293,
-   "lon": 36.899,
-   "cc": "KE",
-   "tz": "Africa/Nairobi",
-   "v": "7x5kRo1B84Y",
-   "t": "LIVE African River Wildlife - Kenya Hippo & Crocodile Cam - MPALA | explore.org",
-   "ch": "Explore African Wildlife"
   },
   {
    "id": "sydney",
